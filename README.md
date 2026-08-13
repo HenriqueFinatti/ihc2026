@@ -18,28 +18,28 @@ Leia obrigatoriamente o [Guia para definir o escopo de IHC a partir do tema do T
 ## Identificação
 
 **Título do projeto de IHC:** {{TÍTULO DO PROJETO}}  
-**TCC/projeto de origem:** {{TÍTULO ORIGINAL DO TCC}}  
-**Orientador(a):** {{NOME}}  
+**TCC/projeto de origem:** Segmentação Semântica Em Vias Off-Road
+**Orientador(a):** Isaac Jesus
 **Disciplina:** Interação Humano-Computador  
-**Instituição:** {{INSTITUIÇÃO}}  
-**Semestre:** {{ANO/SEMESTRE}}
+**Instituição:** FEI  
+**Semestre:** 2026/2° semestre
 
 ### Equipe
 
 | Nome completo | Matrícula | GitHub | Responsabilidade principal |
 |---|---:|---|---|
-| Henrique Finatti Silveira Belo Trebbi | 22.123.030-3 | [https://github.com/HenriqueFinatti](@HenriqueFinatti) |  |
-| Mateus Marana Assuena | 22.123.026-1 | [https://github.com/MatMarana](@MatMarana) |  |
-| Tiago Fagundes dos Santos | 22.123.017-0 |[https://github.com/TiagoFagundes19](@TiagoFagundes19) | |
+| Henrique Finatti Silveira Belo Trebbi | 22.123.030-3 | [@HenriqueFinatti](https://github.com/HenriqueFinatti) |  |
+| Mateus Marana Assuena | 22.123.026-1 | [@MatMarana](https://github.com/MatMarana) |  |
+| Tiago Fagundes dos Santos | 22.123.017-0 |[@TiagoFagundes19](https://github.com/TiagoFagundes19) | |
 
 ## Relação entre TCC e projeto de IHC
 
 | Item | Descrição |
 |---|---|
-| Tema central do TCC | {{...}} |
+| Tema central do TCC | Realizar um estudo de desempenho de diferentes modelos visando a segmentação semântica em vias off-road em conjunto com o projeto Baja |
 | Resultado técnico esperado do TCC | {{algoritmo, estudo, sistema, modelo, análise, API...}} |
-| O TCC já previa interface? | sim / não / parcialmente |
-| Capacidade técnica que pode gerar valor para pessoas | {{...}} |
+| O TCC já previa interface? | sim |
+| Capacidade técnica que pode gerar valor para pessoas | Facilitar a compreensão do resultado da segmentação pela equipe do Baja |
 | Usuário principal adotado em IHC | {{...}} |
 | Objetivo principal desse usuário | {{...}} |
 | Interface/recorte explorado na disciplina | {{...}} |
