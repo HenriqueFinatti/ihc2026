@@ -28,8 +28,9 @@ Leia obrigatoriamente o [Guia para definir o escopo de IHC a partir do tema do T
 
 | Nome completo | Matrícula | GitHub | Responsabilidade principal |
 |---|---:|---|---|
-| {{Nome 1}} | {{matrícula}} | {{@usuario}} | {{...}} |
-| {{Nome 2}} | {{matrícula}} | {{@usuario}} | {{...}} |
+| Henrique Finatti Silveira Belo Trebbi | 22.123.030-3 | [https://github.com/HenriqueFinatti](@HenriqueFinatti) |  |
+| Mateus Marana Assuena | 22.123.026-1 | [https://github.com/MatMarana](@MatMarana) |  |
+| Tiago Fagundes dos Santos | 22.123.017-0 |[https://github.com/TiagoFagundes19](@TiagoFagundes19) | |
 
 ## Relação entre TCC e projeto de IHC
 
