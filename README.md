@@ -39,9 +39,9 @@ Leia obrigatoriamente o [Guia para definir o escopo de IHC a partir do tema do T
 | Tema central do TCC | Realizar um estudo de desempenho de diferentes modelos visando a segmentação semântica em vias off-road em conjunto com o projeto Baja |
 | Resultado técnico esperado do TCC | {{algoritmo, estudo, sistema, modelo, análise, API...}} |
 | O TCC já previa interface? | sim |
-| Capacidade técnica que pode gerar valor para pessoas | Facilitar a compreensão do resultado da segmentação pela equipe do Baja |
-| Usuário principal adotado em IHC | {{...}} |
-| Objetivo principal desse usuário | {{...}} |
+| Capacidade técnica que pode gerar valor para pessoas | Facilitar a compreensão do resultado da segmentação pela equipe do Baja ?|
+| Usuário principal adotado em IHC | Estudantes do projeto Baja |
+| Objetivo principal desse usuário | Comprender e comparar modelos e resultados da segmentação nos percusos do baja|
 | Interface/recorte explorado na disciplina | {{...}} |
 | Relação com o escopo formal do TCC | parte prevista / extensão conceitual / protótipo demonstrativo / outra |
 
