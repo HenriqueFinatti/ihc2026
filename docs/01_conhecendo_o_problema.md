@@ -1,7 +1,7 @@
 # Entrega 1 — Conhecendo o projeto, o usuário e o problema
 
-**Data:** {{dd/mm/aaaa}}  
-**Status:** ⬜ não iniciada  
+**Data:** {{17/08/2026}}  
+**Status:** 🟨 em andamento 
 **Responsabilidade:** 1 solução consolidada por equipe
 
 ## Objetivo da atividade
@@ -113,13 +113,7 @@ O desenvolvimento de um carro autônomo pra equipe do Baja Fei
 
 ## 1.3 Qual é a **capacidade/contribuição central** produzida pelo TCC?
 
-Complete, se ajudar:
-
-> “Nosso TCC produz, melhora, analisa ou permite `{{capacidade}}`.”
-
-Exemplos: otimizar consultas; classificar imagens; detectar anomalias; comparar modelos; identificar padrões; prever demanda; analisar desempenho; gerar resumos; recomendar configurações.
-
-{{...}}
+Segmentar imagens; comparar modelos; analisar resultados
 
 ## 1.4 O que se espera que esteja diferente **para pessoas, organizações ou processos** se essa contribuição for bem-sucedida?
 
@@ -128,8 +122,9 @@ Exemplos: otimizar consultas; classificar imagens; detectar anomalias; comparar 
 ## 1.5 O que é mérito técnico/científico do TCC e o que seria uma possível aplicação prática?
 
 | Mérito/contribuição técnica | Possível aplicação/valor em uso |
-|---|---|
-| {{...}} | {{...}} |
+| Modelo de IA para segmentação semântica| Apoiar sistemas de percepção de veículos autônomos em ambientes off-road|
+| Métricas de desempenho dos modelos | Facilitar a comparação entre modelos e a compreensão da qualidade das segmentações   |
+| Visualização dos resultados da segmentação | Tornar mais fácil para os estudantes do Baja FEI analisar e validar os resultados gerados pelo modelo |
 
 ---
 
@@ -137,9 +132,9 @@ Exemplos: otimizar consultas; classificar imagens; detectar anomalias; comparar 
 
 ## 2.1 Quem interage diretamente com o produto, se já existe interface prevista?
 
-Se não houver interface prevista no TCC, escreva `NÃO SE APLICA AO ESCOPO ORIGINAL` e prossiga para 2.2.
+Estudantes do projeto Baja FEI
 
-{{[F/H/?] ...}}
+{{[F]}}
 
 ## 2.2 Quem poderia **usar, configurar, administrar, operar, interpretar ou tomar decisões** a partir da contribuição técnica?
 
