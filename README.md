@@ -37,23 +37,19 @@ Leia obrigatoriamente o [Guia para definir o escopo de IHC a partir do tema do T
 | Item | Descrição |
 |---|---|
 | Tema central do TCC | Realizar um estudo de desempenho de diferentes modelos visando a segmentação semântica em vias off-road em conjunto com o projeto Baja |
-| Resultado técnico esperado do TCC | {{algoritmo, estudo, sistema, modelo, análise, API...}} |
-| O TCC já previa interface? | sim |
-| Capacidade técnica que pode gerar valor para pessoas | Facilitar a compreensão do resultado da segmentação pela equipe do Baja ?|
+| Resultado técnico esperado do TCC | Estudo, Sistema e Modelo |
+| O TCC já previa interface? | Sim |
+| Capacidade técnica que pode gerar valor para pessoas | Facilitar a compreensão do resultado da segmentação pela equipe do Baja |
 | Usuário principal adotado em IHC | Estudantes do projeto Baja |
-| Objetivo principal desse usuário | Comprender e comparar modelos e resultados da segmentação nos percusos do baja|
-| Interface/recorte explorado na disciplina | {{...}} |
-| Relação com o escopo formal do TCC | parte prevista / extensão conceitual / protótipo demonstrativo / outra |
+| Objetivo principal desse usuário | Comprender e comparar modelos e resultados da segmentação nos percusos do Baja |
+| Interface/recorte explorado na disciplina | ? |
+| Relação com o escopo formal do TCC | Parte Prevista |
 
 > **Importante:** a tabela acima explica a relação entre os dois trabalhos. Ela não altera o compromisso formal do TCC.
 
 ## Resumo do projeto pela perspectiva do usuário
 
-Escreva **um parágrafo curto e concreto** explicando: quem é o usuário escolhido, o que precisa alcançar, qual problema enfrenta ou qual atividade precisa executar, em qual contexto e como a contribuição do TCC se relaciona com essa situação.
-
-Evite começar pela tecnologia.
-
-> **Estrutura sugerida:** “`{{tipo de usuário}}` precisa `{{objetivo}}` em `{{contexto}}`. Atualmente enfrenta `{{problema/limitação}}` e utiliza `{{processo/alternativa atual}}`. O tema do TCC investiga `{{contribuição técnica}}`. Para fins da disciplina de IHC, será explorada uma interface que permita `{{forma de uso da contribuição}}`.”
+Os estudantes integrantes do projeto Baja FEI precisam compreender e analisar as vias off-road em que o veículo está inserido durante o desenvolvimento do projeto. Atualmente, enfrentam dificuldades na identificação e segmentação dos diferentes elementos presentes nessas vias, como pista e vegetação, sendo essa análise realizada principalmente a partir da observação das imagens do ambiente. O tema do TCC investiga o uso de segmentação semântica para identificar automaticamente esses elementos em imagens de vias off-road. Para fins da disciplina de IHC, será explorada uma interface que permita aos estudantes visualizar as imagens, os resultados da segmentação e comparar de forma clara a identificação realizada pelo modelo.
 
 Se alguma afirmação ainda não estiver sustentada por evidência, registre-a como hipótese na [Entrega 1](docs/01_conhecendo_o_problema.md).
 
