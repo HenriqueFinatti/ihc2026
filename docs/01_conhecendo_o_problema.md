@@ -116,8 +116,9 @@ O desenvolvimento de um carro autônomo pra equipe do Baja Fei
 Segmentar imagens; comparar modelos; analisar resultados
 
 ## 1.4 O que se espera que esteja diferente **para pessoas, organizações ou processos** se essa contribuição for bem-sucedida?
+disponibilidade da análise da rota segmentada por diferentes modelos e suas respectivas métricas.
 
-{{[F/H/?] ...}}
+[H]
 
 ## 1.5 O que é mérito técnico/científico do TCC e o que seria uma possível aplicação prática?
 
