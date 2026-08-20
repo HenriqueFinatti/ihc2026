@@ -42,7 +42,7 @@ Leia obrigatoriamente o [Guia para definir o escopo de IHC a partir do tema do T
 | Capacidade técnica que pode gerar valor para pessoas | Facilitar a compreensão do resultado da segmentação pela equipe do Baja |
 | Usuário principal adotado em IHC | Estudantes do projeto Baja |
 | Objetivo principal desse usuário | Comprender e comparar modelos e resultados da segmentação nos percusos do Baja |
-| Interface/recorte explorado na disciplina | ? |
+| Interface/recorte explorado na disciplina | Segmentação Semântica |
 | Relação com o escopo formal do TCC | Parte Prevista |
 
 > **Importante:** a tabela acima explica a relação entre os dois trabalhos. Ela não altera o compromisso formal do TCC.
