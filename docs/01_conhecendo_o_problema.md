@@ -162,40 +162,41 @@ Considere conhecimento do domínio, experiência tecnológica, frequência de us
 # 3. Entendendo objetivos e atividades
 
 ## 3.1 O que o usuário está tentando conseguir no mundo real?
+<!--Não responda “usar o algoritmo”, “clicar no sistema” ou “ver o dashboard”. -->
+No mundo real o usuário tem como objetivo visualizar a via segmentada para futuramente usar a aplicação para desenvolver carros autônomos.
 
-Não responda “usar o algoritmo”, “clicar no sistema” ou “ver o dashboard”.
-
-{{[F/H/?] ...}}
+[F]
 
 ## 3.2 Quais são as atividades mais importantes?
 
 | ID | Atividade/objetivo | Quem realiza | Frequência/criticidade inicial | Status/evidência |
 |---|---|---|---|---|
-| A01 | {{...}} | {{...}} | {{...}} | {{...}} |
-| A02 | {{...}} | {{...}} | {{...}} | {{...}} |
-| A03 | {{...}} | {{...}} | {{...}} | {{...}} |
+| A01 | Escolha de imagem ou vídeo para realizar segmentação | Estudantes baja FEI | Conforme a necessidade | {{...}} |
+| A02 | Processamento de imagem ou vídeo | Sistema | Conforme a necessidade | {{...}} |
+| A03 | Analisar e validar resultados | Estudantes baja FEI | Conforme a necessidade | {{...}} |
 
 ## 3.3 Qual atividade parece mais frequente? Por quê?
-
-{{[F/H/?] ...}}
+Ambas atividades possuem a mesma frequência, visto que para cada imagem ou vídeo resultado é necessário que os estudantes analisem os resultados, uma atividade ocorre logo após a outra.
+[F]
 
 ## 3.4 Qual parece mais crítica? Que consequência existe se for mal executada?
-
-{{[F/H/?] ...}}
+A atividade mais crítica é o processamento das imagens ou dos vídeos, pois é nessa etapa que são gerados os resultados da segmentação semântica. Caso ela seja mal executada, o sistema poderá classificar incorretamente os elementos presentes na via off-road, produzindo resultados imprecisos ou difíceis de interpretar. Consequentemente, a imagem segmentada não agregará valor ao usuário final e poderá comprometer a análise e a tomada de decisões no contexto do projeto Baja FEI.
+[F]
 
 ---
 
 # 4. Entendendo o problema ou processo atual
 
 ## 4.1 Como essas atividades são realizadas hoje, antes da interface imaginada na disciplina?
+<!--Pode existir software concorrente, linha de comando, planilha, notebook, script, painel técnico, processo manual, consulta a logs, análise visual, troca de mensagens, decisão por especialista etc.-->
+Atualmente, o processamento e a segmentação das imagens são realizados por meio de scripts e ferramentas técnicas, sem uma interface gráfica voltada aos integrantes do Baja FEI. Para executar o modelo e visualizar os resultados, é necessário configurar parâmetros, selecionar arquivos e executar códigos, o que exige conhecimento técnico de programação
 
-Pode existir software concorrente, linha de comando, planilha, notebook, script, painel técnico, processo manual, consulta a logs, análise visual, troca de mensagens, decisão por especialista etc.
-
-{{[F/H/?] ...}}
+[H]
 
 ## 4.2 O que é difícil, demorado, confuso, repetitivo, arriscado ou pouco transparente?
+O principal problema é a dificuldade enfrentada por pessoas que não conhecem o código ou não possuem conhecimentos técnicos de programação. Sem uma interface gráfica, o processo de selecionar uma imagem ou um vídeo, executar o modelo e visualizar o resultado da segmentação não é intuitivo nem transparente.
 
-{{[F/H/?] ...}}
+[H]
 
 ## 4.3 Que informações o profissional precisa interpretar para tomar decisão?
 
