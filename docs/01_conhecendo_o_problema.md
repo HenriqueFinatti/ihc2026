@@ -266,29 +266,41 @@ Sim, um erro na segmentação pode fazer com que uma região não transitável s
 
 | Alternativa atual | Quem usa | Para quê | Status/evidência |
 |---|---|---|---|
-| {{...}} | {{...}} | {{...}} | {{...}} |
+| Scripts em Python e notebooks | Desenvolvedores e pesquisadores de IA | Executar modelos, processar imagens e visualizar máscaras de segmentação | [F] Processo atualmente utilizado no projeto |
+| CVAT | Equipes de visão computacional | Anotar imagens e criar máscaras para treinamento de modelos | [F] Possui ferramentas de anotação por polígonos |
+| Roboflow | Desenvolvedores e equipes de visão computacional | Anotar dados, treinar modelos e executar segmentação | [F] Oferece um fluxo para segmentação semântica |
+| Supervisely | Pesquisadores e profissionais de visão computacional | Organizar dados, realizar anotações, treinar modelos e analisar resultados | [F] Plataforma voltada a projetos de visão computacional |
+
 
 ## 6.2 Existem produtos que atuam na mesma área, mesmo sem serem equivalentes ao TCC?
+Existem produtos relacionados à visão computacional e a segmentação semântica, como os exemplos citados acima. Essas ferramentas permitem realizar atividades como anotação de imagens, organização de conjuntos de dados, treinamento de modelos e visualização de resultados.
 
-{{[F/H/?] ...}}
+[F]
 
 ## 6.3 Quais interfaces profissionais esse público já conhece?
+<!-Exemplos possíveis: ferramentas de banco, IDEs, consoles de nuvem, dashboards, plataformas de dados, ferramentas de monitoramento, painéis de IA, sistemas administrativos.** -->
 
-Exemplos possíveis: ferramentas de banco, IDEs, consoles de nuvem, dashboards, plataformas de dados, ferramentas de monitoramento, painéis de IA, sistemas administrativos.
-
-{{[F/H/?] ...}}
+Os integrantes do Baja FEI com noções básicas de programação devem estar familiarizados com interfaces como VScode, terminais de linha de comando e GitHub. Também podem conhecer alguns sistemas de telemetria e ferramentas utilizadas para análise de dados e acompanhamento dos testes do veículo.
+[H]}
 
 ## 6.4 O que essas soluções parecem fazer bem?
+As soluções pesquisadas centralizam atividades relacionadas à visão computacional, como envio e organização de imagens, anotação, treinamento e visualização dos resultados.Esses recursos podem facilitar a compreensão dos resultados e reduzir a necessidade de executar comandos manualmente.
 
-{{[F/H/?] ...}}
+[F]
 
 ## 6.5 O que parecem fazer mal, dificultar ou não atender?
+Por serem ferramentas genéricas e profissionais, essas soluções podem apresentar muitas funcionalidades, configurações e termos técnicos desnecessários para um integrante do Baja FEI que deseja apenas processar uma imagem ou um vídeo e visualizar o resultado
 
-{{[F/H/?] ...}}
+[H]
 
 ## 6.6 Que padrões de interface ou vocabulário parecem familiares a esse público?
+Alguns padrões que podem ser familiares aos integrantes da equipe são:
+- Seleção ou envio de imagens e vídeos
+- Botão para iniciar o processamento
+- Barra de progresso durante a segmentação
+- Comparação entre a imagem original e a imagem segmentada
 
-{{[F/H/?] ...}}
+[H]
 
 ---
 
@@ -382,13 +394,18 @@ Marque apenas as que parecem plausíveis e explique o objetivo correspondente.
 
 | Benefício esperado | Problema/necessidade | Usuário | Status/evidência |
 |---|---|---|---|
-| {{...}} | {{...}} | {{...}} | {{...}} |
+| Facilitar a execução da segmentação sem exigir interação direta com o código | Atualmente, é necessário executar scripts e possuir conhecimento técnico | Integrantes do Baja FEI | Processo atual do projeto [F] |
+|Apresentar o resultado da segmentação de maneira clara e compreensível|Dificuldade para identificar e interpretar as classes do terreno|Integrantes do Baja FEI|Deve ser validado com os usuários [H]|
+|Permitir a comparação entre a imagem original e a imagem segmentada|Necessidade de verificar visualmente como o modelo classificou o terreno|Integrantes do Baja FEI e pesquisadores|Levantamento inicial [H]|
 
 ## 9.2 Que ações o usuário deverá conseguir realizar?
 
 | ID | O usuário precisa conseguir... | Para alcançar... | Prioridade inicial |
 |---|---|---|---|
-| F01 | {{ação}} | {{objetivo}} | alta/média/baixa |
+| F01 | Selecionar e enviar uma imagem ou um vídeo | Inserir o arquivo que será analisado pelo modelo | alta |
+| F02 | Iniciar o processamento da imagem ou do vídeo | Gerar o resultado da segmentação sem executar scripts manualmente | alta |
+| F03 | Visualizar a imagem original e o resultado segmentado| Comparar a entrada com a classificação produzida pelo modelo | alta |
+| F04 | Visualizar informações e métricas do resultado | Avaliar o desempenho e a confiabilidade do modelo | alta |
 
 ## 9.3 Tecnologias/restrições já definidas no TCC
 
@@ -396,7 +413,9 @@ A tecnologia aparece **agora**, depois do entendimento do uso.
 
 | Tecnologia/restrição | Por que existe | Possível impacto na interação |
 |---|---|---|
-| {{...}} | {{...}} | {{...}} |
+| Python | É a linguagem utilizada no desenvolvimento e na execução do modelo | A interface deverá se comunicar com o código responsável pelo processamento |
+| DeepLabv3+ | É a arquitetura responsável por realizar a segmentação semântica e classificar cada região da imagem | O processamento pode levar algum tempo, exigindo que a interface apresente um indicador de carregamento e informe quando o resultado estiver pronto |
+| ResNet152 | É o backbone utilizado pelo DeepLabv3+ para extrair características das imagens | Pode aumentar o tempo de processamento e o consumo de memória, especialmente em computadores sem GPU |
 
 ---
 
