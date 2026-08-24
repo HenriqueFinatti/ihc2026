@@ -199,56 +199,62 @@ O principal problema é a dificuldade enfrentada por pessoas que não conhecem o
 [H]
 
 ## 4.3 Que informações o profissional precisa interpretar para tomar decisão?
+O profissional precisa interpretar o resultado da segmentação, identificando quais regiões da imagem foram classificadas como áreas transitáveis ou não transitáveis pelo veículo.
 
-{{[F/H/?] ...}}
+[H]
 
 ## 4.4 O que acontece quando a atividade falha ou quando o resultado é interpretado incorretamente?
+Quando o processamento falha ou o resultado é interpretado incorretamente, regiões transitáveis e não transitáveis podem ser identificadas de forma errada. Isso pode levar o usuário a tomar decisões inadequadas sobre o percurso do veículo, além de dificultar a avaliação do modelo.
 
-{{[F/H/?] ...}}
+[H]
 
 ## 4.5 Conte uma situação concreta.
+<!--Escreva uma pequena narrativa com pessoa, objetivo, atividade, contexto, dificuldade e consequência. **Não descreva ainda a futura solução.** -->
+Um integrante da equipe Baja FEI precisa analisar uma imagem de uma via off-road para identificar as regiões transitáveis pelo veículo. Para isso, ele executa o modelo de segmentação por meio de scripts, mas possui pouco conhecimento técnico sobre o código e seus parâmetros. Durante o processo, ocorre uma configuração incorreta, gerando uma segmentação imprecisa. Como o resultado não apresenta informações claras sobre a confiabilidade do processamento, o estudante interpreta algumas áreas não transitáveis como seguras, comprometendo a análise do percurso e a avaliação do desempenho do modelo.
 
-Escreva uma pequena narrativa com pessoa, objetivo, atividade, contexto, dificuldade e consequência. **Não descreva ainda a futura solução.**
-
-{{[F/H/?] narrativa...}}
+[H]
 
 ## 4.6 Que evidência existe hoje?
 
 | Evidência/fonte | O que sustenta | Limitação |
 |---|---|---|
-| {{...}} | {{...}} | {{...}} |
+| Scripts utilizados atualmente no projeto| Mostram que a execução do modelo exige conhecimento técnico para configurar arquivos, parâmetros e comandos. | Não demonstram diretamente as dificuldades enfrentadas pelos usuários. |
+| Observação do processo de segmentação pela equipe| Indica que a execução e a interpretação dos resultados dependem de conhecimentos prévios sobre o modelo. | Baseia-se na experiência da própria equipe e envolve poucos usuários.|
 
 ---
 
 # 5. Entendendo o contexto de uso
 
 ## 5.1 Onde e em quais situações a interação poderia ocorrer?
+A interação poderia ocorrer nos laboratórios FEI ou nas pista off-road da FEI, onde são realizados os testes do veículo. O sistema seria utilizado principalmente para analisar imagens e vídeos capturados durante esses percursos, permitindo que os integrantes da equipe avaliem a segmentação do terreno e identifiquem regiões transitáveis e não transitáveis.
 
-{{[F/H/?] ...}}
+[F]
 
 ## 5.2 Em quais dispositivos/equipamentos?
-
-{{[F/H/?] ...}}
+A interação ocorreria principalmente em computadores ou notebooks capazes de executar o software e processar as imagens ou os vídeos. Também seriam utilizadas câmeras instaladas no veículo Baja ou dispositivos móveis para registrar o percurso off-road.
+[F]
 
 ## 5.3 Existem condições físicas relevantes?
+<!--Considere iluminação, ruído, mobilidade, conexão, privacidade, uso compartilhado, interrupções, pressão de tempo etc. -->
+Uma boa iluminação se faz necessário para conseguir registrar imagens e videos de ótima qualidade. 
 
-Considere iluminação, ruído, mobilidade, conexão, privacidade, uso compartilhado, interrupções, pressão de tempo etc.
-
-{{[F/H/?] ...}}
+[F]
 
 ## 5.4 Existem fatores sociais ou organizacionais?
+<!--Considere papéis, chefias, equipes, permissões, aprovação, responsabilidade profissional, auditoria, turnos e colaboração. -->
+A aplicação poderia ser executada por qualquer membro da equipe Baja FEI.
 
-Considere papéis, chefias, equipes, permissões, aprovação, responsabilidade profissional, auditoria, turnos e colaboração.
-
-{{[F/H/?] ...}}
+[H]
 
 ## 5.5 Existe necessidade de histórico, rastreabilidade ou auditoria?
+Existe a necessidade de manter o histórico das images e vídeos processado, junto com os resultados da segementação, com o objetivo de comparar diferentes registros, assim sendo possivel identificar possíveis falhas e acompanhar a evolução do modelo ao longo dos testes realizados pela equipe Baja FEI.
 
-{{[F/H/?] ...}}
+[H]
 
 ## 5.6 Um erro pode produzir consequência relevante? Qual?
+Sim, um erro na segmentação pode fazer com que uma região não transitável seja classificada como via para o veículo, isso pode comprometer a análise do percurso, gerar decisões inadequadas pela equipe e prejudicar a avaliação do modelo.  
 
-{{[F/H/?] ...}}
+[H]
 
 ---
 
