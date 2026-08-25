@@ -310,9 +310,7 @@ Alguns padrões que podem ser familiares aos integrantes da equipe são:
 
 ### Caminho A — TCC já possui interface
 
-Explique qual parte da interface será usada como recorte da disciplina e por que esse fluxo é relevante.
-
-{{...}}
+O recorte da disciplina será o fluxo de envio, processamento e visualização de imagens ou vídeos de vias off-road. O usuário deverá selecionar um arquivo, iniciar a segmentação e visualizar a comparação entre a imagem original e o resultado produzido pelo modelo, com uma legenda indicando as classes identificadas. A interface pretende tornar o processo mais acessível e facilitar a compreensão dos resultados, sem exigir que o usuário interaja diretamente com o código.
 
 ### Caminho B — TCC não possui interface prevista
 
@@ -322,20 +320,18 @@ Faça o exercício de transferência de uso:
 
 Responda:
 
-1. quem poderia contratar/adotar a solução? {{...}}
-2. quem seria o usuário direto? {{...}}
-3. quem administraria/configuraria? {{...}}
-4. quem interpretaria resultados? {{...}}
-5. quem tomaria decisões? {{...}}
-6. quais dados/entradas seriam necessários? {{...}}
-7. quais resultados deveriam ser compreendidos? {{...}}
-8. que erros/rupturas seriam possíveis? {{...}}
+1. quem poderia contratar/adotar a solução? A equipe Baja FEI e possíveis grupos de pesquisas em veículos autônomos que realizam testes em ambiente off-road.
+2. quem seria o usuário direto? Equipe Baja FEI
+3. quem administraria/configuraria? A ideia com a interface também é que além dos desenvolvedores da aplicação, os participantes do Baja FEI com conhecimento de programação também conseguir configurar os diferentes tipos de modelos.
+4. quem interpretaria resultados? Integrantes do Baja FEI e grupos de pesquisas para analisar como modelo classificou as diferentes regiões do terreno
+5. quem tomaria decisões? Os integrantes do Baja FEI
+6. quais dados/entradas seriam necessários? Imagens ou vídeos de vias off-road capturados por câmeras durante os testes do veículo. Também se necessário os usuários poderiam inserir um novo modelo, visto que atualmente temos apenas o DeepLabv3+ e ResNet.
+7. quais resultados deveriam ser compreendidos? Os usuários deverão compreender quais regiões foram classificadas como transitáveis ou não transitáveis, além de interpretar a acurácia apresentada pelo modelo.
+8. que erros/rupturas seriam possíveis? Poderiam ocorrer envio de arquivos inválidos, formatos não suportados, imagens com baixa qualidade, processamento demorado, interrupção durante a análise ou classificação incorreta do terreno.
 
 ## 7.2 Qual perfil será priorizado no projeto de IHC?
 
-{{...}}
-
-**Por que esse perfil foi escolhido?** {{...}}
+O perfil priorizado será o dos integrantes da equipe Baja FEI, pois a proposta inicial do TCC é desenvolver um sistema de segmentação semântica de vias off-road voltado às necessidades da equipe Baja.
 
 ## 7.3 Qual objetivo desse usuário será priorizado?
 
