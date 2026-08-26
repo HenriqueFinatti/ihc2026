@@ -1,7 +1,7 @@
 # Entrega 1 — Conhecendo o projeto, o usuário e o problema
 
-**Data:** {{17/08/2026}}  
-**Status:** 🟨 em andamento 
+**Data:** {{17/08/2026}}
+**Status:** 🟨 em andamento
 **Responsabilidade:** 1 solução consolidada por equipe
 
 ## Objetivo da atividade
@@ -236,7 +236,7 @@ A interação ocorreria principalmente em computadores ou notebooks capazes de e
 
 ## 5.3 Existem condições físicas relevantes?
 <!--Considere iluminação, ruído, mobilidade, conexão, privacidade, uso compartilhado, interrupções, pressão de tempo etc. -->
-Uma boa iluminação se faz necessário para conseguir registrar imagens e videos de ótima qualidade. 
+Uma boa iluminação se faz necessário para conseguir registrar imagens e videos de ótima qualidade.
 
 [F]
 
@@ -252,7 +252,7 @@ Existe a necessidade de manter o histórico das images e vídeos processado, jun
 [H]
 
 ## 5.6 Um erro pode produzir consequência relevante? Qual?
-Sim, um erro na segmentação pode fazer com que uma região não transitável seja classificada como via para o veículo, isso pode comprometer a análise do percurso, gerar decisões inadequadas pela equipe e prejudicar a avaliação do modelo.  
+Sim, um erro na segmentação pode fazer com que uma região não transitável seja classificada como via para o veículo, isso pode comprometer a análise do percurso, gerar decisões inadequadas pela equipe e prejudicar a avaliação do modelo.
 
 [H]
 
@@ -335,19 +335,17 @@ O perfil priorizado será o dos integrantes da equipe Baja FEI, pois a proposta 
 
 ## 7.3 Qual objetivo desse usuário será priorizado?
 
-{{...}}
+Segmentar a trilha das corridas off-road que eles particibarem.
 
 ## 7.4 Que interface será explorada na disciplina?
 
 Complete:
 
-> **Para fins da disciplina de IHC, será projetada uma interface que permita a `{{perfil}}` utilizar `{{capacidade/resultado do TCC}}` para `{{objetivo}}`, no contexto de `{{situação}}`.**
-
-{{...}}
+> **Para fins da disciplina de IHC, será projetada uma interface que permita a `{{equipe baja}}` utilizar `{{O modelo e analise de segmentações semânticas}}` para `{{segmentar os caminhos}}`, no contexto de `{{corridas baja}}`.**
 
 ## 7.5 Qual é a relação dessa interface com o TCC?
 
-- [ ] Já fazia parte do TCC.
+- [X] Já fazia parte do TCC.
 - [ ] É um aprofundamento de algo parcialmente previsto.
 - [ ] É uma extensão conceitual criada para a disciplina.
 - [ ] É um protótipo demonstrativo de aplicação potencial.
@@ -365,20 +363,20 @@ Marque apenas as que parecem plausíveis e explique o objetivo correspondente.
 
 | Possibilidade | Pode fazer sentido? | Objetivo/tarefa que justificaria | Evidência atual |
 |---|---|---|---|
-| Dashboard/visão geral | sim/não/talvez | {{...}} | {{...}} |
-| Configuração/parametrização | sim/não/talvez | {{...}} | {{...}} |
-| Entrada/upload/seleção de dados | sim/não/talvez | {{...}} | {{...}} |
-| Acompanhamento de processamento | sim/não/talvez | {{...}} | {{...}} |
-| Relatório/resultados | sim/não/talvez | {{...}} | {{...}} |
-| Histórico com busca/filtros | sim/não/talvez | {{...}} | {{...}} |
-| Comparação de resultados | sim/não/talvez | {{...}} | {{...}} |
-| Explicabilidade/detalhamento | sim/não/talvez | {{...}} | {{...}} |
-| Administração/configurações globais | sim/não/talvez | {{...}} | {{...}} |
-| Usuários/perfis/permissões | sim/não/talvez | {{...}} | {{...}} |
-| CRUD de entidade do domínio | sim/não/talvez | {{...}} | {{...}} |
-| Auditoria/logs | sim/não/talvez | {{...}} | {{...}} |
-| Alertas/ocorrências | sim/não/talvez | {{...}} | {{...}} |
-| Ajuda/documentação | sim/não/talvez | {{...}} | {{...}} |
+| Dashboard/visão geral | talvez | Comparar o desempenho de diferentes modelos e diferentes treinamentos | {{...}} |
+| Configuração/parametrização | talvez | Configurar quais datasets e quais modelos serão usados no treinamento e segmentação | {{...}} |
+| Entrada/upload/seleção de dados | sim | Fazer o upload de vídeos a serem treinados | {{...}} |
+| Acompanhamento de processamento | sim | Acompanhar o treinamento dos modelos | {{...}} |
+| Relatório/resultados | sim | Registrar a métricas do treinamento e da segmentação | {{...}} |
+| Histórico com busca/filtros | não | Não há necessidade de busca | {{...}} |
+| Comparação de resultados | não | A comparação irá acontecer, mas por parte do usuário, considerando que os resultados dependem do contexto que o usuário estiver | {{...}} |
+| Explicabilidade/detalhamento | sim/não/talvez | NÃO ENTENDI| {{...}} |
+| Administração/configurações globais | sim/não/talvez | NÃO ENTENDI | {{...}} |
+| Usuários/perfis/permissões | não | Não há necessidade de perfis considerando que apenas um software para análise, não vamos guardar informações individuais | {{...}} |
+| CRUD de entidade do domínio | não | Não há necessidade de CRUD | {{...}} |
+| Auditoria/logs | sim/não/talvez | NÃO ENTENDI | {{...}} |
+| Alertas/ocorrências | não | não há necessidade de alertas no uso | {{...}} |
+| Ajuda/documentação | talvez | O sistema é simples de usar, mas ter documentação é sempre bom | {{...}} |
 
 > **Atenção:** “login + dashboard + CRUD” não é uma solução universal. Cada padrão deve surgir de uma tarefa real.
 
@@ -444,9 +442,9 @@ Registre em [`../RASTREABILIDADE.md`](../RASTREABILIDADE.md).
 
 ### Delimitação
 
-**Dentro do escopo de IHC:** {{...}}  
-**Fora do escopo de IHC:** {{...}}  
-**Dentro do escopo formal do TCC:** {{...}}  
+**Dentro do escopo de IHC:** {{...}}
+**Fora do escopo de IHC:** {{...}}
+**Dentro do escopo formal do TCC:** {{...}}
 **Interface da disciplina será implementada no TCC?** não definido / sim / não — {{justificativa, se houver}}
 
 ---
@@ -481,21 +479,21 @@ Essa síntese ajuda a apresentar o projeto para público não especializado sem 
 
 # Checklist de qualidade
 
-- [ ] Está clara a diferença entre tema do TCC, escopo formal do TCC e escopo de IHC.
-- [ ] A equipe declarou se o TCC já previa interface.
+- [X] Está clara a diferença entre tema do TCC, escopo formal do TCC e escopo de IHC.
+- [X] A equipe declarou se o TCC já previa interface.
 - [ ] Se não previa, foi derivado um usuário plausível e um objetivo de uso.
-- [ ] A interface de IHC não foi apresentada como obrigação automática do TCC.
-- [ ] A contribuição do TCC foi descrita sem começar por tecnologias de implementação.
-- [ ] Usuários diretos e stakeholders foram diferenciados.
-- [ ] Foram considerados profissionais que configuram, administram, interpretam ou decidem, quando pertinente.
-- [ ] Objetivo do usuário não foi confundido com objetivo do projeto.
-- [ ] Processo/problema atual foi descrito antes da solução.
-- [ ] Existe situação concreta de uso/problema.
-- [ ] Contexto físico, social/organizacional, dispositivos e consequências de erro foram considerados.
-- [ ] Mercado/alternativas existentes foram levantados inicialmente.
-- [ ] Possibilidades como dashboard, relatório, histórico, filtros e CRUD foram tratadas como hipóteses de solução, não como requisitos automáticos.
-- [ ] Cada possibilidade de interface tem um objetivo/tarefa que poderia justificá-la.
-- [ ] Afirmações relevantes estão marcadas `[F]`, `[H]` ou `[?]`.
+- [X] A interface de IHC não foi apresentada como obrigação automática do TCC.
+- [X] A contribuição do TCC foi descrita sem começar por tecnologias de implementação.
+- [X] Usuários diretos e stakeholders foram diferenciados.
+- [X] Foram considerados profissionais que configuram, administram, interpretam ou decidem, quando pertinente.
+- [X] Objetivo do usuário não foi confundido com objetivo do projeto.
+- [X] Processo/problema atual foi descrito antes da solução.
+- [X] Existe situação concreta de uso/problema.
+- [X] Contexto físico, social/organizacional, dispositivos e consequências de erro foram considerados.
+- [X] Mercado/alternativas existentes foram levantados inicialmente.
+- [X] Possibilidades como dashboard, relatório, histórico, filtros e CRUD foram tratadas como hipóteses de solução, não como requisitos automáticos.
+- [X] Cada possibilidade de interface tem um objetivo/tarefa que poderia justificá-la.
+- [X] Afirmações relevantes estão marcadas `[F]`, `[H]` ou `[?]`.
 - [ ] Hipóteses prioritárias receberam IDs e foram para a rastreabilidade.
-- [ ] O recorte de IHC é viável para modelar, prototipar e avaliar no semestre.
-- [ ] A equipe consegue explicar problema humano → contribuição computacional → forma de uso.
+- [X] O recorte de IHC é viável para modelar, prototipar e avaliar no semestre.
+- [X] A equipe consegue explicar problema humano → contribuição computacional → forma de uso.
