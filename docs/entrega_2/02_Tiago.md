@@ -42,10 +42,6 @@ Se uma hipótese da Entrega 1 for confirmada ou refutada durante esta análise, 
 
 ### Análise C01 — {{produto}}
 
-- [Entrega Tiago](entrega_2/02_Tiago.md)
-- [Entrega Henrique](entrega_2/02_Henrique.md)
-- [Entrega Metus](entrega_2/02_Mateus.md)
-
 **Autor(a):** {{nome — matrícula}}  
 **Tipo:** direto / indireto / análogo  
 **Link oficial:** {{URL}}  
