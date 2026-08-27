@@ -143,19 +143,24 @@ Considere perfis profissionais e stakeholders, não apenas consumidores finais.
 
 | Perfil | Relação com a contribuição | O que faria | Status/evidência |
 |---|---|---|---|
-| {{DBA / analista / gestor / técnico / pesquisador / usuário final...}} | {{...}} | {{...}} | F / H / ? |
+| Equipe do Baja | Interpretar | Utilizaria a segmentação e as análises para melhores resultados nas competições | F |
+| Equipe do Baja | Usar | Produção do Baja autônomo | F |
+|  Analista | analisar e comparar | Comparar os resultados da segmentação com outros modelos | H |
+|  Empresas do agro | analisar e comparar | Utilizar a segmentação para desenvolver robôs off-road autônomos | F |
 
 ## 2.3 Existem pessoas afetadas que não usariam a interface diretamente?
 
 | Stakeholder | Como é afetado | Usa interface? | Status/evidência |
 |---|---|---|---|
-| {{...}} | {{...}} | sim/não | {{...}} |
+| Mecânicos do Baja | utilizar a segmentação para desenvolver o carro autônomo | não | F |
+| Pilotos do Baja | utilizar as métricas de análise para melhorar sua performance | não | H |
 
 ## 2.4 Que características desses perfis podem influenciar a interação?
 
 Considere conhecimento do domínio, experiência tecnológica, frequência de uso, necessidades de acessibilidade, responsabilidade profissional, familiaridade com métricas, linguagem técnica, urgência etc.
 
-{{[F/H/?] ...}}
+Frequência de uso, responsabilidade profissional e familiaridade com métricas.
+[H]
 
 ---
 
@@ -171,9 +176,9 @@ No mundo real o usuário tem como objetivo visualizar a via segmentada para futu
 
 | ID | Atividade/objetivo | Quem realiza | Frequência/criticidade inicial | Status/evidência |
 |---|---|---|---|---|
-| A01 | Escolha de imagem ou vídeo para realizar segmentação | Estudantes baja FEI | Conforme a necessidade | {{...}} |
-| A02 | Processamento de imagem ou vídeo | Sistema | Conforme a necessidade | {{...}} |
-| A03 | Analisar e validar resultados | Estudantes baja FEI | Conforme a necessidade | {{...}} |
+| A01 | Escolha de imagem ou vídeo para realizar segmentação | Estudantes baja FEI | Conforme a necessidade | [F] |
+| A02 | Processamento de imagem ou vídeo | Sistema | Conforme a necessidade | [F] |
+| A03 | Analisar e validar resultados | Estudantes baja FEI | Conforme a necessidade | [F] |
 
 ## 3.3 Qual atividade parece mais frequente? Por quê?
 Ambas atividades possuem a mesma frequência, visto que para cada imagem ou vídeo resultado é necessário que os estudantes analisem os resultados, uma atividade ocorre logo após a outra.
@@ -417,7 +422,7 @@ A tecnologia aparece **agora**, depois do entendimento do uso.
 
 | ID | Hipótese/dúvida | Por que importa | Como poderá ser investigada |
 |---|---|---|---|
-| H01 | {{...}} | {{...}} | Entrega 2/3/7/... |
+| H01 | O que se espera que esteja diferente **para pessoas, organizações ou processos** se essa contribuição for bem-sucedida? | Principal motivo de uso da nossa aplicação | Entrega 4 |
 | H02 | {{...}} | {{...}} | {{...}} |
 | H03 | {{...}} | {{...}} | {{...}} |
 
@@ -429,15 +434,15 @@ Registre em [`../RASTREABILIDADE.md`](../RASTREABILIDADE.md).
 
 | Pergunta | Síntese atual |
 |---|---|
-| Qual é a contribuição central do TCC? | {{...}} |
-| O TCC já previa interface? | {{...}} |
-| Quem é o usuário prioritário de IHC? | {{...}} |
-| O que ele precisa alcançar? | {{...}} |
-| Qual problema/atividade será estudado? | {{...}} |
-| Como isso acontece hoje? | {{...}} |
-| Qual é o contexto de uso? | {{...}} |
-| Que interface/recorte será explorado? | {{...}} |
-| Como a interface se relaciona ao TCC? | {{...}} |
+| Qual é a contribuição central do TCC? | Realizar a segmentação semântica de vias off-road por dois modelos e compará-los |
+| O TCC já previa interface? | Sim |
+| Quem é o usuário prioritário de IHC? | A Equipe do Baja FEI |
+| O que ele precisa alcançar? | Precisa realizar a segmentação da via com o modelo selecionado e aprensentar métricas de resultados |
+| Qual problema/atividade será estudado? | A segmentação das vias off-road e a comparação entre modelos de segmentação |
+| Como isso acontece hoje? | Atráves de scripts python |
+| Qual é o contexto de uso? | Carros e robôs autônomos off-road |
+| Que interface/recorte será explorado? |  |
+| Como a interface se relaciona ao TCC? | Através da seleção de novos vídeos pela equipe do Baja e realizando a segmentação dos mesmos |
 | Quais pontos ainda são hipóteses? | {{H01...}} |
 
 ### Delimitação
