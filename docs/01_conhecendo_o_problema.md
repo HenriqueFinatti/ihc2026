@@ -368,20 +368,20 @@ Marque apenas as que parecem plausíveis e explique o objetivo correspondente.
 
 | Possibilidade | Pode fazer sentido? | Objetivo/tarefa que justificaria | Evidência atual |
 |---|---|---|---|
-| Dashboard/visão geral | talvez | Comparar o desempenho de diferentes modelos e diferentes treinamentos | {{...}} |
-| Configuração/parametrização | talvez | Configurar quais datasets e quais modelos serão usados no treinamento e segmentação | {{...}} |
-| Entrada/upload/seleção de dados | sim | Fazer o upload de vídeos a serem treinados | {{...}} |
-| Acompanhamento de processamento | sim | Acompanhar o treinamento dos modelos | {{...}} |
-| Relatório/resultados | sim | Registrar a métricas do treinamento e da segmentação | {{...}} |
-| Histórico com busca/filtros | não | Não há necessidade de busca | {{...}} |
-| Comparação de resultados | não | A comparação irá acontecer, mas por parte do usuário, considerando que os resultados dependem do contexto que o usuário estiver | {{...}} |
-| Explicabilidade/detalhamento | sim/não/talvez | NÃO ENTENDI| {{...}} |
-| Administração/configurações globais | sim/não/talvez | NÃO ENTENDI | {{...}} |
-| Usuários/perfis/permissões | não | Não há necessidade de perfis considerando que apenas um software para análise, não vamos guardar informações individuais | {{...}} |
-| CRUD de entidade do domínio | não | Não há necessidade de CRUD | {{...}} |
-| Auditoria/logs | sim/não/talvez | NÃO ENTENDI | {{...}} |
-| Alertas/ocorrências | não | não há necessidade de alertas no uso | {{...}} |
-| Ajuda/documentação | talvez | O sistema é simples de usar, mas ter documentação é sempre bom | {{...}} |
+| Dashboard/visão geral | talvez | Comparar o desempenho de diferentes modelos e diferentes treinamentos | F |
+| Configuração/parametrização | talvez | Configurar quais datasets e quais modelos serão usados no treinamento e segmentação | F |
+| Entrada/upload/seleção de dados | sim | Fazer o upload de vídeos a serem treinados | F |
+| Acompanhamento de processamento | sim | Acompanhar o treinamento dos modelos | F |
+| Relatório/resultados | sim | Registrar a métricas do treinamento e da segmentação | F |
+| Histórico com busca/filtros | não | Não há necessidade de busca | F |
+| Comparação de resultados | não | A comparação irá acontecer, mas por parte do usuário, considerando que os resultados dependem do contexto que o usuário estiver | F |
+| Explicabilidade/detalhamento | talvez | Apenas caso necessite de uma tela mais detalhada dos resultados | F |
+| Administração/configurações globais | sim | O usuário pode selecionar um dos dois modelos pré-treinados | F |
+| Usuários/perfis/permissões | não | Não há necessidade de perfis considerando que apenas um software para análise, não vamos guardar informações individuais | F |
+| CRUD de entidade do domínio | não | Não há necessidade de CRUD | F |
+| Auditoria/logs | talvez | Caso for necessário mostrar o erro dos modelos para o usuário | F |
+| Alertas/ocorrências | não | não há necessidade de alertas no uso | F |
+| Ajuda/documentação | talvez | O sistema é simples de usar, mas ter documentação é sempre bom | F |
 
 > **Atenção:** “login + dashboard + CRUD” não é uma solução universal. Cada padrão deve surgir de uma tarefa real.
 
@@ -451,16 +451,16 @@ Registre em [`../RASTREABILIDADE.md`](../RASTREABILIDADE.md).
 | Qual problema/atividade será estudado? | A segmentação das vias off-road e a comparação entre modelos de segmentação |
 | Como isso acontece hoje? | Atráves de scripts python |
 | Qual é o contexto de uso? | Carros e robôs autônomos off-road |
-| Que interface/recorte será explorado? |  |
+| Que interface/recorte será explorado? | Entrada/upload/seleção de dados, Acompanhamento de processamento, Relatório/resultados e Administração/configurações globais|
 | Como a interface se relaciona ao TCC? | Através da seleção de novos vídeos pela equipe do Baja e realizando a segmentação dos mesmos |
-| Quais pontos ainda são hipóteses? | {{H01...}} |
+| Quais pontos ainda são hipóteses? | 1.4, 2.1, 4.1, 4.2, 5.4, 5.5, 6.3, 6.5, 6.6|
 
 ### Delimitação
 
 **Dentro do escopo de IHC:** {{...}}
 **Fora do escopo de IHC:** {{...}}
 **Dentro do escopo formal do TCC:** {{...}}
-**Interface da disciplina será implementada no TCC?** não definido / sim / não — {{justificativa, se houver}}
+**Interface da disciplina será implementada no TCC?** sim — Foi previsto a interface
 
 ---
 
