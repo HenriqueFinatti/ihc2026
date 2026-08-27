@@ -135,7 +135,7 @@ disponibilidade da análise da rota segmentada por diferentes modelos e suas res
 
 Estudantes do projeto Baja FEI
 
-{{[F]}}
+[F]
 
 ## 2.2 Quem poderia **usar, configurar, administrar, operar, interpretar ou tomar decisões** a partir da contribuição técnica?
 
@@ -206,18 +206,18 @@ O principal problema é a dificuldade enfrentada por pessoas que não conhecem o
 ## 4.3 Que informações o profissional precisa interpretar para tomar decisão?
 O profissional precisa interpretar o resultado da segmentação, identificando quais regiões da imagem foram classificadas como áreas transitáveis ou não transitáveis pelo veículo.
 
-[H]
+[F]
 
 ## 4.4 O que acontece quando a atividade falha ou quando o resultado é interpretado incorretamente?
 Quando o processamento falha ou o resultado é interpretado incorretamente, regiões transitáveis e não transitáveis podem ser identificadas de forma errada. Isso pode levar o usuário a tomar decisões inadequadas sobre o percurso do veículo, além de dificultar a avaliação do modelo.
 
-[H]
+[F]
 
 ## 4.5 Conte uma situação concreta.
 <!--Escreva uma pequena narrativa com pessoa, objetivo, atividade, contexto, dificuldade e consequência. **Não descreva ainda a futura solução.** -->
 Um integrante da equipe Baja FEI precisa analisar uma imagem de uma via off-road para identificar as regiões transitáveis pelo veículo. Para isso, ele executa o modelo de segmentação por meio de scripts, mas possui pouco conhecimento técnico sobre o código e seus parâmetros. Durante o processo, ocorre uma configuração incorreta, gerando uma segmentação imprecisa. Como o resultado não apresenta informações claras sobre a confiabilidade do processamento, o estudante interpreta algumas áreas não transitáveis como seguras, comprometendo a análise do percurso e a avaliação do desempenho do modelo.
 
-[H]
+[F]
 
 ## 4.6 Que evidência existe hoje?
 
@@ -259,7 +259,7 @@ Existe a necessidade de manter o histórico das images e vídeos processado, jun
 ## 5.6 Um erro pode produzir consequência relevante? Qual?
 Sim, um erro na segmentação pode fazer com que uma região não transitável seja classificada como via para o veículo, isso pode comprometer a análise do percurso, gerar decisões inadequadas pela equipe e prejudicar a avaliação do modelo.
 
-[H]
+[F]
 
 ---
 
@@ -423,8 +423,18 @@ A tecnologia aparece **agora**, depois do entendimento do uso.
 | ID | Hipótese/dúvida | Por que importa | Como poderá ser investigada |
 |---|---|---|---|
 | H01 | O que se espera que esteja diferente **para pessoas, organizações ou processos** se essa contribuição for bem-sucedida? | Principal motivo de uso da nossa aplicação | Entrega 4 |
-| H02 | {{...}} | {{...}} | {{...}} |
-| H03 | {{...}} | {{...}} | {{...}} |
+| H02 | Perfil de usuário (Analista) | Precisamos definir quem poderá usar a interface | Entrega 3 | Que características desses perfis podem influenciar a interação?
+| H03 | Perfil de usuário (Piloto Baja FEI) | Precisamos definir quem será afetado pela interface sem usá-la interface | Entrega 3 |
+| H04 | Que características desses perfis podem influenciar a interação? | Precisamos definir as características dos perfis de usuários que influenciam na interface | Entrega 3 |
+| H05 | Como essas atividades são realizadas hoje, antes da interface imaginada na disciplina? | Não sabemos como é realizado as atividades | Entrega 2 |
+| H06 | O que é difícil, demorado, confuso, repetitivo, arriscado ou pouco transparente? | Não sabemos cos problemas existentes | Entrega 4 |
+| H07 | Existem fatores sociais ou organizacionais? | Pesquisar melhor os fatores sociais e organizacionais | Entrega 7 |
+| H08 | Existe necessidade de histórico, rastreabilidade ou auditoria? | Não sabemos se existe a necessidade | Entrega 8 |
+| H09 | Quais interfaces profissionais esse público já conhece? | Não temos certeza de quais ferramentas ele já conhecem | Entrega 7 |
+| H10 | O que parecem fazer mal, dificultar ou não atender? | Não temos certeza de quais ferramentas ele já conhecem | Entrega 7 |
+| H10 | Que padrões de interface ou vocabulário parecem familiares a esse público? | Não conhecemos os familiares desse público | Entrega 7 |
+| H11 | Que padrões de interface ou vocabulário parecem familiares a esse público? | Não conhecemos os familiares desse público | Entrega 7 |
+| H12 | Qual benefício concreto o projeto de IHC pretende oferecer? | Não sabemos quais os benefícios o projeto pode oferecer| Entrega 13 |
 
 Registre em [`../RASTREABILIDADE.md`](../RASTREABILIDADE.md).
 
