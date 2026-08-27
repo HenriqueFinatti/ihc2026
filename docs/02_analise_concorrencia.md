@@ -26,60 +26,30 @@ A pergunta é: **“que convenções esse perfil já conhece para executar taref
 
 ## Entrada obrigatória da Entrega 1
 
-Retome o mapa inicial de alternativas e produtos citado na Entrega 1. Aqui a equipe deixa de trabalhar apenas com impressão inicial e passa a **investigar sistematicamente** cada solução.
+| Item citado na Entrega 1 | Resposta no arquivo                     |
+|--------------------------|-----------------------------------------|
+| CVAT                     |[2_Tiago.md](entrega_2/02_Tiago.md)      |
+| Roboflow                 |[2_Henrique.md](entrega_2/02_Henrique.md)|
+| Supervisely              |[2_Mateus.md](entrega_2/02_Mateus.md)    |
 
-| Item citado na Entrega 1 | Tipo | Por que foi citado | Status inicial | Decisão nesta entrega |
-|---|---|---|---|---|
-| {{...}} | concorrente / análogo / ferramenta cotidiana / processo manual | {{...}} | F / H / ? | analisar / descartar com justificativa |
-
-Se uma hipótese da Entrega 1 for confirmada ou refutada durante esta análise, atualize `H01`, `H02`... em [`../RASTREABILIDADE.md`](../RASTREABILIDADE.md).
 
 ## 1. Público-alvo desta análise
 
-{{descrever e ligar à Entrega 1}}
+| Item citado na Entrega 1 | Resposta no arquivo                     |
+|--------------------------|-----------------------------------------|
+| CVAT                     |[2_Tiago.md](entrega_2/02_Tiago.md)      |
+| Roboflow                 |[2_Henrique.md](entrega_2/02_Henrique.md)|
+| Supervisely              |[2_Mateus.md](entrega_2/02_Mateus.md)    |
+
 
 ## 2. Concorrentes diretos/indiretos
 
-### Análise C01 — {{produto}}
+| Concorrente Analisado    | Resposta no arquivo                     |
+|--------------------------|-----------------------------------------|
+| CVAT                     |[2_Tiago.md](entrega_2/02_Tiago.md)      |
+| Roboflow                 |[2_Henrique.md](entrega_2/02_Henrique.md)|
+| Supervisely              |[2_Mateus.md](entrega_2/02_Mateus.md)    |
 
-- [Entrega Tiago](entrega_2/02_Tiago.md)
-- [Entrega Henrique](entrega_2/02_Henrique.md)
-- [Entrega Metus](entrega_2/02_Mateus.md)
-
-**Autor(a):** {{nome — matrícula}}  
-**Tipo:** direto / indireto / análogo  
-**Link oficial:** {{URL}}  
-**Data de acesso:** {{dd/mm/aaaa}}
-
-#### Contexto e proposta
-
-{{...}}
-
-#### Funcionalidades relevantes
-
-| Funcionalidade | Como é realizada | Evidência/print | Observação de IHC |
-|---|---|---|---|
-| {{...}} | {{...}} | `../assets/02_concorrencia/...` | {{...}} |
-
-#### Experiência do usuário e opiniões
-
-Use avaliações públicas, relatos, estudos, testes próprios ou outra fonte identificável. Não trate opinião isolada como verdade universal.
-
-#### Preço/modelo de negócio
-
-{{...}}
-
-#### Padrões e tendências percebidos
-
-{{...}}
-
-#### Pontos positivos, limitações e lições
-
-| Ponto | Evidência | Implicação para nosso projeto |
-|---|---|---|
-| {{...}} | {{...}} | {{...}} |
-
-> Repita a subseção para C02, C03... até atender à quantidade da equipe.
 
 ## 3. Softwares que o público-alvo usa no cotidiano
 
