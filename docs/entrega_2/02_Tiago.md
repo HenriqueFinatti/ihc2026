@@ -53,7 +53,8 @@ O CVAT está inserido no contexto do desenvolvimento de soluções de inteligên
 
 | Funcionalidade | Como é realizada | Evidência/print | Observação de IHC |
 |---|---|---|---|
-| {{...}} | {{...}} | `../assets/02_concorrencia/...` | {{...}} |
+| Seleção de Modelos | Através de lista suspensa | `assets/02_concorrencia/cvat_selecao_modelo.png` | Vamos permitir o usuário selecionar entre os modelos que nós montamos através de uma lista suspensa também. |
+| Análise de Métricas | Através de dashboads e gráficos contendo informações sobre a análise. | `assets/02_concorrencia/cvat_metricas.png` | Para nossa interface, seria interessante incluir métricas e gráficos que facilitem a avaliação e a comparação do desempenho dos modelos. |
 
 #### Experiência do usuário e opiniões
 
