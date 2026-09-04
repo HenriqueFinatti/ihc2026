@@ -63,7 +63,7 @@ Use avaliações públicas, relatos, estudos, testes próprios ou outra fonte id
 
 #### Padrões e tendências percebidos
 
-{{...}}
+É um sistema pago e bem abrangente. Permite muita liberdade ao usuário, montar projetos, selecionar modelos, diferentes formas de entrar dados etc.
 
 #### Pontos positivos, limitações e lições
 
