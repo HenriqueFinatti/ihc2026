@@ -28,8 +28,8 @@ A grande vantagem da ferramenta é ser low code, permitindo que e empresas criem
 
 | Funcionalidade | Como é realizada | Evidência/print | Observação de IHC |
 |---|---|---|---|
-| Upload de imagens | Através de um botão ao lado de um resultado prévio | `assets/02_concorrencia/roboflow_input_imagens.png` | Vamos precisar receber o upload de imagens que o usuário quer segmentar |
-Seleção de modelos | Através de prompt | `assets/02_concorrencia/roboflow_selecionar_modelos.png` | Vamos permitir o usuário selecionar entre os modelos que nós montamos, mas será por uma lista |
+| Upload de imagens | Através de um botão ao lado de um resultado prévio | `assets/02_concorrencia/roboflow_input_imagens.png` | O botão na parte superior esquerda da tela, usando o ícone de upload de imagem deixa bem claro pro usuário como usar e para que serve |
+Seleção de modelos | Através de prompt | `assets/02_concorrencia/roboflow_selecionar_modelos.png` | A seleção de diferentes modelos através do chat é bem limitada e pouco intuitiva, usuários que não sabem dessa característica não conseguirão entender essa funcionalidade |
 
 
 #### Experiência do usuário e opiniões
@@ -44,4 +44,5 @@ Use avaliações públicas, relatos, estudos, testes próprios ou outra fonte id
 
 | Ponto | Evidência | Implicação para nosso projeto |
 |---|---|---|
-| {{...}} | {{...}} | {{...}} |
+| O input de imagens | `assets/02_concorrencia/roboflow_input_imagens.png` | No nosso projeto iremos precisar permitir ao usuário carregar imagens/vídeos a serem segmentados |
+| Seleção de modelos | `assets/02_concorrencia/roboflow_selecionar_modelos.png` | Nosso projeto irá permitir a seleção de diferentes modelos, porém usando algum tipo de lista, considerando que o chat é pouco intuitivo |
