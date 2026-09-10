@@ -1,4 +1,4 @@
-# Entrega 2 — Respostas 1, 2 e 3 sobre o Roboflow
+# Entrega 2 — Respostas 1 e 2 sobre o Roboflow
 
 ## Entrada obrigatória da Entrega 1
 
@@ -21,7 +21,8 @@ Empresas que precisam de modelos para reconhecimento de objetos em imagens para 
 
 #### Contexto e proposta
 
-{{...}}
+O Roboflow funciona como um ecossistema completo para projetos de visão computacional, cobrindo todo o ciclo de vida de um modelo de IA desde a imagem bruta até o aplicativo final.
+A grande vantagem da ferramenta é ser low code, permitindo que e empresas criem soluções de IA de forma rápida, sem a necessidade de construir toda a infraestrutura do zero.
 
 #### Funcionalidades relevantes
 
