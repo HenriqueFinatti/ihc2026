@@ -45,4 +45,5 @@ Use avaliações públicas, relatos, estudos, testes próprios ou outra fonte id
 
 | Ponto | Evidência | Implicação para nosso projeto |
 |---|---|---|
-| {{...}} | {{...}} | {{...}} |
+|Seleção de Modelos| `assets/02_concorrencia/cvat_selecao_modelo.png` |Desejamos implementar uma tela de seleção de modelos. A referência mostra uma forma clara de apresentar os modelos disponíveis e permitir que o usuário escolha qual deseja utilizar no processo de segmentação. |
+|Análise de métricas| `assets/02_concorrencia/cvat_metricas.png` | A tela apresenta métricas de forma visual, utilizando gráficos e indicadores numéricos para facilitar a interpretação dos resultados.|
