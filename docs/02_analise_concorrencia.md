@@ -57,7 +57,9 @@ Analise interfaces que moldam a expectativa do público, mesmo que não sejam co
 
 | Software | Por que o público usa | Padrões relevantes | Prints | O que aprender |
 |---|---|---|---|---|
-| {{...}} | {{...}} | {{...}} | {{link local}} | {{...}} |
+| CVAT | Utilizado para anotação de imagens e vídeos, incluindo segmentação e ferramentas de anotação automática com modelos de IA. | Seleção de modelos, automação da anotação, configuração de parâmetros, feedback de progresso, filtros e visualização de métricas. | `assets/02_concorrencia/` |Apresentar os modelos disponíveis de forma clara e permitir que o usuário escolha o modelo utilizado. Utilizar gráficos e indicadores para facilitar a interpretação e comparação dos resultados. |
+| Roboflow | Utilizado para criação e gerenciamento de datasets, anotação, treinamento, avaliação e implantação de modelos de visão computacional. | Interface integrada de dataset → anotação → treinamento → avaliação; ferramentas de anotação assistida por IA; gráficos e métricas; comparação entre versões dos modelos | `assets/02_concorrencia/` |A comparação entre versões/modelos é especialmente relevante para permitir que o usuário identifique qual modelo apresenta melhor desempenho. |
+| Supervisely | Utilizado para anotação, gerenciamento de datasets, treinamento, avaliação e implantação de modelos de visão computacional. | Auto Labeling, assistência por IA, workflows personalizados, métricas de qualidade e comparação de desempenho entre modelos/checkpoints. | `assets/02_concorrencia/` |Facilitar a utilização de modelos de IA para usuários que não precisam interagir diretamente com código, além de apresentar a comparação de desempenho de diferentes modelos de maneira visual e objetiva. |
 
 ## 3.1 Padrões de interface relevantes ao escopo de IHC
 
@@ -65,11 +67,11 @@ Registre somente padrões encontrados nas soluções analisadas e que possam ter
 
 | Padrão observado | Produto(s) | Para qual tarefa serve | Vantagem percebida | Risco/limitação | Aplicável ao nosso escopo? |
 |---|---|---|---|---|---|
-| dashboard | {{...}} | {{...}} | {{...}} | {{...}} | sim/não/talvez |
-| relatório | {{...}} | {{...}} | {{...}} | {{...}} | {{...}} |
-| histórico + filtros | {{...}} | {{...}} | {{...}} | {{...}} | {{...}} |
-| administração/CRUD | {{...}} | {{...}} | {{...}} | {{...}} | {{...}} |
-| comparação de resultados | {{...}} | {{...}} | {{...}} | {{...}} | {{...}} |
+| dashboard | CVAT, Roboflow e Supervisely | Visualizar métricas e informações do modelo | Facilita a compreensão dos resultados.  | Excesso de informações pode dificultar a interpretação. | sim |
+| relatório | CVAT, Roboflow e Supervisely | Consultar resultados e desempenho dos modelos. | Centraliza informações importantes para análise. | Relatórios muito técnicos podem dificultar o entendimento por usuários não especialistas. | sim |
+| histórico + filtros | CVAT, Roboflow e Supervisely | Localizar tarefas, imagens, modelos ou resultados anteriores. | Facilita a organização e recuperação de informações. | Muitos filtros ou opções podem aumentar a complexidade da interface. | sim |
+| administração/CRUD | CVAT, Roboflow, Supervisely | Gerenciar projetos, datasets, tarefas e modelos. | Permite organizar e manter os dados utilizados pela equipe. | Pode adicionar funcionalidades desnecessárias ao escopo inicial. | Talvez |
+| comparação de resultados | CVAT, Roboflow e Supervisely | Comparar desempenho e resultados de diferentes modelos. | Facilita identificar qual modelo apresenta melhor desempenho. | Comparações com muitas métricas podem dificultar a interpretação. | sim |
 
 > O objetivo não é concluir “todo concorrente tem dashboard, então teremos um”. O padrão só será adotado se apoiar uma tarefa rastreável.
 
