@@ -1,7 +1,7 @@
 # Entrega 2 — Público-alvo e análise de concorrência
 
-**Data:** {{27/08/2026}}  
-**Status:** 🟨 Em andamento  
+**Data:** {{16/09/2026}}  
+**Status:** 🟩 concluída  
 **Responsabilidade mínima:** cada integrante analisa pelo menos 1 concorrente/interface representativa; a equipe produz síntese comparativa.
 
 ## Objetivo da atividade
@@ -79,34 +79,44 @@ Registre somente padrões encontrados nas soluções analisadas e que possam ter
 
 | Critério | C01 | C02 | C03 | Oportunidade para o projeto |
 |---|---|---|---|---|
-| Navegação |  |  |  |  |
-| Feedback/estado |  |  |  |  |
-| Prevenção/recuperação de erro |  |  |  |  |
-| Terminologia |  |  |  |  |
-| Acessibilidade |  |  |  |  |
-| Eficiência |  |  |  |  |
+|Navegação | Orientada a tarefas, com menus densos | Navegação um pouco confusa, leva tempo para se acostumar | Baseada em workspaces que deixam as coisas mais organizadas | Criar uma interface simples, semelhante a um único workspace.
+| Feedback/estado | Barras de progresso para tarefas automáticas | Feedback bom e constante vindo do bot e das interações com a interface. | Dashboards em tempo real com métricas sobre a execução. | Utilizar indicadores visuais claros, como dashboards, durante o processamento do modelo. |
+| Prevenção/recuperação de erro | Permite desfazer anotações facilmente. | Uma vez gerado o modelo fica salvo, porém é difícil desfazer mudanças | Gerenciamento de checkpoints dos modelos, permitindo reverter versões. | Seria bom guardar um histórico dos modelos gerados |
+| Terminologia | Mais técnica | É mais simples por conta do chat | Mais técnica | Podemos usar termos mais simples considerando que não teremos usuários tão profissionais/corporativos |
+| Acessibilidade | Interface bastante densa, contraste ruim no modo escuro em algumas telas. | Poucos atalhos e interface mais confusa. | Alta dependência de gráficos visuais complexos que podem ser difíceis de ler. | Garantir cores simples e permitir a visualização dos dados em tabelas como alternativas a gráficos |
+| Eficiência | Excelente suporte a atalhos de teclado para tarefas repetitivas. | Automação rápida e IA assistida reduzem o tempo de trabalho manual. | Permite criar automações que automatizam rotinas inteiras | Aplicar atalhos de teclado. |
 
 ## 5. Recomendações derivadas
 
 Liste recomendações com origem explícita.
 
-- **RC01:** {{recomendação}} — derivada de {{C01/C02/evidência}}.
-- **RC02:** {{...}}
+- **RC01:** Incluir tooltips explicativos ao lado de métricas de desempenho e gráficos complexos.
+Derivada da análise do CVAT (C01) e Supervisely (C03), onde a terminologia é mais técnica
+
+- **RC02:** Implementar um sistema de versionamento ou histórico de modelos.
+Derivada do Supervisely (C03), que guarda um histórico de execuções.
+
+- **RC03:** Fornecer visualizações em formato de tabela como alternativa aos gráficos dos dashboards.
+Derivada C03 que as vezes dificulta visualizações com gráficos muito densos.
+
+- **RC04:** Traduzir os estados de processamento (treinando, extraindo, gerando) em barras de progresso visuais e não apenas em logs textuais.
+Derivada do CVAT (C01) e Roboflow (C02).
 
 ## Referências
 
-{{fontes dos produtos, avaliações e literatura}}
+**Roboflow:** https://roboflow.com/  
+**Supervisely:** https://supervisely.com/  
+**CVAT:** https://www.cvat.ai/
 
 ## Checklist
 
-- [ ] O mapa inicial de alternativas da Entrega 1 foi revisitado e aprofundado.
-- [ ] Hipóteses relevantes sobre mercado/padrões foram atualizadas na rastreabilidade quando surgiram evidências.
-- [ ] Há pelo menos uma análise completa por integrante.
-- [ ] Cada análise contém prints legíveis da interface.
-- [ ] Prints mostram telas/estados relevantes, não apenas logos/homepage.
-- [ ] Foram analisados concorrentes e/ou interfaces representativas ao público.
-- [ ] Em TCC sem interface original, foram investigadas ferramentas profissionais análogas às atividades do usuário escolhido.
-- [ ] Padrões como dashboard, relatório, filtros e CRUD foram analisados como soluções para tarefas, não como requisitos automáticos.
-- [ ] Opiniões de UX têm fonte.
-- [ ] A síntese compara critérios comuns e produz recomendações.
-- [ ] Não há “copiar porque o concorrente faz”; há justificativa de adequação ao público/contexto.
+- [X] O mapa inicial de alternativas da Entrega 1 foi revisitado e aprofundado.
+- [X] Hipóteses relevantes sobre mercado/padrões foram atualizadas na rastreabilidade quando surgiram evidências.
+- [X] Há pelo menos uma análise completa por integrante.
+- [X] Cada análise contém prints legíveis da interface.
+- [X] Prints mostram telas/estados relevantes, não apenas logos/homepage.
+- [X] Foram analisados concorrentes e/ou interfaces representativas ao público.
+- [X] Padrões como dashboard, relatório, filtros e CRUD foram analisados como soluções para tarefas, não como requisitos automáticos.
+- [X] Opiniões de UX têm fonte.
+- [X] A síntese compara critérios comuns e produz recomendações.
+- [X] Não há “copiar porque o concorrente faz”; há justificativa de adequação ao público/contexto.
