@@ -8,14 +8,14 @@ Para projetos cujo TCC não previa interface, esta matriz é especialmente impor
 
 | Elemento | Registro da equipe | Evidência/justificativa | Estado |
 |---|---|---|---|
-| Tema do TCC | {{...}} | {{documento/TCC}} | definido |
-| Resultado técnico esperado | {{algoritmo, análise, sistema, modelo, API...}} | {{...}} | definido |
-| O TCC previa interface? | sim / não / parcialmente | {{...}} | definido |
-| Capacidade/contribuição central | {{o que a tecnologia permite}} | {{...}} | definido |
-| Possíveis beneficiários/stakeholders | {{...}} | {{fonte ou hipótese}} | F / H / ? |
-| Usuário escolhido para IHC | {{...}} | {{por que esse perfil}} | F / H / ? |
-| Objetivo principal do usuário | {{...}} | {{...}} | F / H / ? |
-| Contexto de uso adotado | {{...}} | {{...}} | F / H / ? |
+| Tema do TCC | Segmentação Semântica em vias off-road | {{documento/TCC}} | definido |
+| Resultado técnico esperado |Sistema / Modelo | - | definido |
+| O TCC previa interface? | sim  | - | definido |
+| Capacidade/contribuição central | Segmentar vias off-road | {{...}} | definido |
+| Possíveis beneficiários/stakeholders | Equipe Baja FEI | fonte | F |
+| Usuário escolhido para IHC | Estudante FEI | Esse perfil tem interesse e curiosidade de participar do projeto Baja FEI | F |
+| Objetivo principal do usuário | Segmentar vias off-road | {{...}} | F  |
+| Contexto de uso adotado | A interação poderia ocorrer nos laboratórios FEI ou nas pista off-road da FEI, onde são realizados os testes do veículo. O sistema seria utilizado principalmente para analisar imagens e vídeos capturados durante esses percursos, permitindo que os integrantes da equipe avaliem a segmentação do terreno e identifiquem regiões transitáveis e não transitáveis. |  | F |
 | Interface/recorte de IHC | {{...}} | {{como deriva dos itens acima}} | proposta / revisada |
 | Relação com o TCC | parte prevista / extensão conceitual / protótipo demonstrativo / outra | {{...}} | definido |
 
