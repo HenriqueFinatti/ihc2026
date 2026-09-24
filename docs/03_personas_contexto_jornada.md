@@ -1,7 +1,7 @@
 # Entrega 3 — Personas, mapa de empatia, contexto de uso e jornada
 
-**Data:** {{dd/mm/aaaa}}  
-**Status:** ⬜ não iniciada  
+**Data:** {{23/09/2026}}  
+**Status:** 🟨 Em andamento  
 **Responsabilidade:** 1 persona por integrante; 1 mapa de empatia, 1 contexto de uso consolidado e 1 jornada por equipe (salvo orientação diferente do docente).
 
 ## Objetivo da atividade
@@ -34,7 +34,7 @@ Antes de criar personas, retome os tipos de usuários, características relevant
 
 ### Persona P01 — {{nome fictício}}
 
-**Autor(a):** {{nome — matrícula}}  
+**Autor(a):** {{Tiago — 22.123.017-0}}  
 **Tipo:** primária / secundária  
 **Base de evidências:** entrevista / questionário / literatura / observação / proto-persona a validar / combinação  
 **Hipóteses da Entrega 1 relacionadas:** {{H01, H02 ou —}}
