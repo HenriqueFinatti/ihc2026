@@ -32,32 +32,50 @@ Antes de criar personas, retome os tipos de usuários, características relevant
 
 ## 1. Personas
 
-### Persona P01 — {{nome fictício}}
+### Persona P01 — Rafael Pereira
 
 **Autor(a):** {{Tiago — 22.123.017-0}}  
-**Tipo:** primária / secundária  
-**Base de evidências:** entrevista / questionário / literatura / observação / proto-persona a validar / combinação  
-**Hipóteses da Entrega 1 relacionadas:** {{H01, H02 ou —}}
+**Tipo:** primária 
+**Base de evidências:** observação  
+**Hipóteses da Entrega 1 relacionadas:** {H02, H03 ou H04}
 
 ![Persona P01](../assets/03_personas/persona_p01.svg)
 
 | Campo | Descrição |
 |---|---|
-| Faixa etária / contexto relevante | {{somente o que impacta o uso}} |
-| Ocupação/papel | {{...}} |
-| Conhecimento do domínio | {{...}} |
-| Experiência tecnológica | {{...}} |
-| Objetivos | {{...}} |
-| Necessidades | {{...}} |
-| Dores/frustrações | {{...}} |
-| Motivadores | {{...}} |
-| Restrições/acessibilidade | {{...}} |
-| Ambiente típico de uso | {{...}} |
-| Comportamentos relevantes | {{...}} |
+| Faixa etária / contexto relevante | Rafael tem 22 anos, cursa Engenharia Mecânica na FEI e é membro ativo da equipe Baja FEI, participando de testes de campo e manutenção nos fins de semana. Trabalha na mecânica do pai desde os 15 anos, o que despertou seu interesse pelo Baja. No ensino médio fez curso técnico e participou de projetos práticos que integravam mecânica e tecnologia, o que o deixou curioso por automações e integrações entre sensores e software.   |
+| Ocupação/papel | Mecânico |
+| Conhecimento do domínio | Bom conhecimento prático de off‑road, dinâmica do veículo e noções básicas de visão computacional. |
+| Experiência tecnológica | Intermediária, confortável com scripts em Python (projetos de automação no ensino técnico), mas não é desenvolvedor prefere resolver tarefas por interface a escrever/depurar código toda vez. |
+| Objetivos |  Validar rapidamente se a segmentação identifica corretamente áreas transitáveis e gerar evidências visuais para reuniões da equipe e relatórios do Baja. |
+| Necessidades | Visualização lado a lado (original × segmentação) e exportar imagens e relatórios simples. |
+| Dores/frustrações | Dependência de scripts para cada visualização, perda de tempo quando o código quebra e o fato do ter que gerar relatórios manuais. |
+| Motivadores | Entregar resultados rápidos e confiáveis para a equipe e automatizar tarefas repetitivas. |
+| Restrições/acessibilidade | Prefere atalhos de teclado e workflows com poucos cliques. |
+| Ambiente típico de uso | Laboratório da FEI (análises detalhadas) e espaco off-road dentro da FEI. |
+| Comportamentos relevantes | Testa várias imagens em sequência/vídeos, salva versões e anota observações e compartilhamento dos resultados entre a equipe. |
 
 **Decisões de design influenciadas por P01:**
 
-- {{...}}
+**1. Tela principal: comparação lado a lado com controles de opacidade e zoom**
+- **Descrição:** imagem original e máscara de segmentação exibidas simultaneamente; controles de opacidade e zoom integrados.
+- **Justificativa:** permite inspeção rápida de detalhes de terrenos irregulares sem trocar de tela, atendendo ao objetivo de validar rapidamente áreas transitáveis e obstáculos.
+
+**2. Legenda com cores consistentes e destaque textual "transitável × não transitável"**
+- **Descrição:** paleta fixa entre execuções; rótulo textual sempre visível e de alto contraste.
+- **Justificativa:** reduz carga cognitiva ao testar várias imagens em sequência e evita reinterpretação da legenda a cada execução.
+
+**3. Painel de comparação de modelos com métricas essenciais e gráficos rápidos**
+- **Descrição:** exibe IoU por classe, acurácia global e gráficos comparativos simples (barras/linhas); números acompanhados de visualização gráfica.
+- **Justificativa:** facilita comparar variantes do DeepLabv3+ e gera evidências visuais para reuniões, sem exigir conhecimento avançado em ML.
+
+**4. Fluxo sem código: upload por arrastar e soltar, processamento com um clique, histórico e exportação PNG/PDF**
+- **Descrição:** upload intuitivo, botão único para executar a segmentação, lista de execuções anteriores e exportação direta de imagens/relatórios.
+- **Justificativa:** elimina a dependência de scripts, reduz fricção operacional e acelera a geração de evidências para a equipe.
+
+**5. Modo offline, mensagens de erro claras, atalhos de teclado e presets de visualização**
+- **Descrição:** operação local quando necessário; mensagens orientam solução rápida; atalhos e presets para visualizações frequentes.
+- **Justificativa:** atende à conectividade limitada em campo e à preferência por workflows rápidos, mitigando problemas quando não há suporte técnico disponível.
 
 > Repita para P02, P03... Cada integrante deve produzir ao menos uma persona.
 
