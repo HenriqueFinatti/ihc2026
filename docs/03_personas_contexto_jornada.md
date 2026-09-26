@@ -59,7 +59,7 @@ Antes de criar personas, retome os tipos de usuários, características relevant
 
 **1. Tela principal: comparação lado a lado com controles de opacidade e zoom**
 - **Descrição:** imagem original e máscara de segmentação exibidas simultaneamente; controles de opacidade e zoom integrados.
-- **Justificativa:** permite inspeção rápida de detalhes de terrenos irregulares sem trocar de tela, atendendo ao objetivo de validar rapidamente áreas transitáveis e obstáculos.
+- **Justificativa:** permite inspeção rápida de detalhes de terrenos irregulares sem trocar de tela, atendendo ao objetivo de validar rapidamente áreas transitáveis.
 
 **2. Legenda com cores consistentes e destaque textual "transitável × não transitável"**
 - **Descrição:** paleta fixa entre execuções; rótulo textual sempre visível e de alto contraste.
@@ -85,12 +85,21 @@ Explique diferenças entre os perfis e qual persona é prioritária. Evite perso
 
 ## 2. Mapa de empatia — equipe
 
-**Persona escolhida:** **Rafael Pereira**<br>
-**Justificativa:** **Rafael é o usuário primário do sistema de visualização de segmentação semântica. Ele representa o perfil de estudante de engenharia mecânica da equipe Baja FEI, que precisa validar rapidamente resultados de modelos sem depender de código.**
+**Persona escolhida:** **Rafael Pereira**
+**Justificativa:** Rafael é o usuário primário do sistema de visualização de segmentação semântica. Ele representa o perfil de estudante de engenharia mecânica da equipe Baja FEI, que precisa validar rapidamente resultados de modelos sem depender de código.
 
-![Mapa de empatia](../assets/03_personas/mapa_empatia.svg)
+![Mapa de empatia](../assets/03_personas/Mapa_de_Empatia_Rafael.svg)
 
-Documente também em texto: o que vê; ouve; diz/faz; pensa/sente; dores; ganhos. Diferencie **evidência** de **hipótese**.
+<!--Documente também em texto: o que vê; ouve; diz/faz; pensa/sente; dores; ganhos. Diferencie **evidência** de **hipótese**. -->
+
+| Dimensão | Descrição | Evidência |
+|---|---|---|
+| O que pensa e sente | Quer eficiência e clareza nas análises; sente frustração quando precisa recorrer a scripts ou quando o sistema demora a processar; valoriza soluções práticas e visuais; sente orgulho em contribuir tecnicamente para o projeto Baja. | H01; H02 |
+| O que vê | Imagens off‑road com terrenos irregulares e poeira; colegas testando o carro e discutindo resultados; dashboards e planilhas com métricas; ambiente de laboratório e oficina. | H03; H04 |
+| O que ouve | Feedback de professores e colegas sobre desempenho dos modelos; discussões sobre melhorias no sistema; comentários sobre tempo de execução e precisão das segmentações. | H01; H04|
+| O que fala e faz | Compartilha resultados e capturas com a equipe; sugere ajustes; busca automatizar tarefas repetitivas; usa ferramentas gráficas sempre que possível; evita depender de código. | H04; H05|
+| Dores | Processos lentos e dependentes de scripts; legendas confusas; dificuldade de comparar modelos; falta de conectividade em campo. | H01; H05 |
+| Necessidades / ganhos | Interface intuitiva e visual; comparação lado a lado; legenda clara "transitável × não transitável"; exportação rápida de resultados; modo offline para uso em campo. | H01|
 
 ## 3. Contexto de uso — consolidação
 
@@ -106,19 +115,29 @@ Documente também em texto: o que vê; ouve; diz/faz; pensa/sente; dores; ganhos
 
 ## 4. Jornada do usuário — equipe
 
-**Persona:** {{P01}}  
-**Objetivo da jornada:** {{...}}  
-**Início e fim da jornada:** {{...}}
+**Persona:** **Rafael Pereira**
+**Objetivo da jornada:** Validar rapidamente se a segmentação identifica corretamente áreas transitáveis, comparar modelos e gerar evidências visuais para a equipe.  
+**Início e fim da jornada:** Do momento em que Rafael coleta imagens em campo até a exportação dos resultados para discussão em reunião.
 
 | Etapa | Situação/ação | Objetivo | Pensamento/emoção | Dor | Oportunidade de design | Evidência |
 |---|---|---|---|---|---|---|
-| 1 | {{...}} | {{...}} | {{...}} | {{...}} | {{...}} | {{...}} |
+| 1 | Rafael coleta imagens em campo off-road | Obter dados reais para validar segmentação | "Preciso garantir que o modelo funciona em terreno real" | Conectividade limitada | Modo offline | Fotos capturadas no Baja |
+| 2 | Faz upload das imagens por arrastar e soltar | Iniciar processamento sem depender de código | "Quero rapidez, sem scripts" | Fricção com reexecução manual | Fluxo sem código, botão único | Histórico de execuções |
+| 3 | Compara imagem original e máscara lado a lado | Validar áreas transitáveis vs não transitáveis | "Consigo ver claramente os obstáculos" | Troca de telas atrapalha | Comparação com opacidade/zoom | Visualização simultânea |
+| 4 | Consulta legenda fixa com cores consistentes | Interpretar rapidamente classes críticas | "Não preciso reaprender a legenda" | Cores variando entre execuções | Legenda fixa + texto "transitável × não transitável" | Paleta consistente |
+| 5 | Analisa painel de métricas (IoU, acurácia) com gráficos | Comparar modelos e versões | "Entendo melhor com gráficos simples" | Métricas cruas difíceis de interpretar | Painel visual com gráficos rápidos | Comparação DeepLabv3+ |
+| 6 | Exporta resultados em PNG/PDF para reunião | Compartilhar evidências com equipe | "Agora posso mostrar para todos" | Perda de tempo em conversões | Exportação direta | Arquivos prontos para reunião |
 
-> A jornada pode incluir etapas **antes, durante e depois** do uso do produto. Não transforme a jornada em lista de telas.
+<!-- A jornada pode incluir etapas **antes, durante e depois** do uso do produto. Não transforme a jornada em lista de telas. -->
 
 ## Síntese
 
-Quais necessidades e objetivos devem obrigatoriamente aparecer nos cenários e nas tarefas seguintes?
+As necessidades e objetivos que devem aparecer nos cenários e tarefas seguintes são: 
+* Validação rápida da segmentação em campo.
+* Interface sem código para reduzir fricção.
+* Visualização clara e consistente (lado a lado, legenda fixa).
+* Comparação de modelos com métricas gráficas.
+* Exportação simples de resultados.
 
 ## Checklist
 
