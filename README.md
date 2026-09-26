@@ -17,7 +17,7 @@ Leia obrigatoriamente o [Guia para definir o escopo de IHC a partir do tema do T
 
 ## Identificação
 
-**Título do projeto de IHC:** {{TÍTULO DO PROJETO}}  
+**Título do projeto de IHC:** Equipe 17, Segmentação Semântica  
 **TCC/projeto de origem:** Segmentação Semântica Em Vias Off-Road
 **Orientador(a):** Isaac Jesus
 **Disciplina:** Interação Humano-Computador  
