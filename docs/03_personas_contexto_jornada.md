@@ -85,7 +85,7 @@ Explique diferenças entre os perfis e qual persona é prioritária. Evite perso
 
 ## 2. Mapa de empatia — equipe
 
-**Persona escolhida:** **Rafael Pereira**
+**Persona escolhida:** **Rafael Pereira**<br>
 **Justificativa:** Rafael é o usuário primário do sistema de visualização de segmentação semântica. Ele representa o perfil de estudante de engenharia mecânica da equipe Baja FEI, que precisa validar rapidamente resultados de modelos sem depender de código.
 
 ![Mapa de empatia](../assets/03_personas/Mapa_de_Empatia_Rafael.svg)
@@ -115,7 +115,7 @@ Explique diferenças entre os perfis e qual persona é prioritária. Evite perso
 
 ## 4. Jornada do usuário — equipe
 
-**Persona:** **Rafael Pereira**
+**Persona:** **Rafael Pereira**<br>
 **Objetivo da jornada:** Validar rapidamente se a segmentação identifica corretamente áreas transitáveis, comparar modelos e gerar evidências visuais para a equipe.  
 **Início e fim da jornada:** Do momento em que Rafael coleta imagens em campo até a exportação dos resultados para discussão em reunião.
 
