@@ -8,14 +8,14 @@ Para projetos cujo TCC não previa interface, esta matriz é especialmente impor
 
 | Elemento | Registro da equipe | Evidência/justificativa | Estado |
 |---|---|---|---|
-| Tema do TCC | {{...}} | {{documento/TCC}} | definido |
-| Resultado técnico esperado | {{algoritmo, análise, sistema, modelo, API...}} | {{...}} | definido |
-| O TCC previa interface? | sim / não / parcialmente | {{...}} | definido |
-| Capacidade/contribuição central | {{o que a tecnologia permite}} | {{...}} | definido |
-| Possíveis beneficiários/stakeholders | {{...}} | {{fonte ou hipótese}} | F / H / ? |
-| Usuário escolhido para IHC | {{...}} | {{por que esse perfil}} | F / H / ? |
-| Objetivo principal do usuário | {{...}} | {{...}} | F / H / ? |
-| Contexto de uso adotado | {{...}} | {{...}} | F / H / ? |
+| Tema do TCC | Segmentação Semântica em vias off-road | {{documento/TCC}} | definido |
+| Resultado técnico esperado |Sistema / Modelo | - | definido |
+| O TCC previa interface? | sim  | - | definido |
+| Capacidade/contribuição central | Segmentar vias off-road | {{...}} | definido |
+| Possíveis beneficiários/stakeholders | Equipe Baja FEI | fonte | F |
+| Usuário escolhido para IHC | Estudante FEI | Esse perfil tem interesse e curiosidade de participar do projeto Baja FEI | F |
+| Objetivo principal do usuário | Segmentar vias off-road | {{...}} | F  |
+| Contexto de uso adotado | A interação poderia ocorrer nos laboratórios FEI ou nas pista off-road da FEI, onde são realizados os testes do veículo. O sistema seria utilizado principalmente para analisar imagens e vídeos capturados durante esses percursos, permitindo que os integrantes da equipe avaliem a segmentação do terreno e identifiquem regiões transitáveis e não transitáveis. |  | F |
 | Interface/recorte de IHC | {{...}} | {{como deriva dos itens acima}} | proposta / revisada |
 | Relação com o TCC | parte prevista / extensão conceitual / protótipo demonstrativo / outra | {{...}} | definido |
 
@@ -28,11 +28,11 @@ Use esta tabela para itens importantes marcados como `[H]` ou `[?]`. Preserve o 
 | ID | Afirmação / dúvida inicial | Tipo | Por que importa | Como/onde investigar | Evidência obtida | Estado atual | Impacto no projeto |
 |---|---|---|---|---|---|---|---|
 | H00 (EXEMPLO)| {{...}} | H / ? | {{...}} | Entrega 2 / 3 / 7 / outra | {{link/fonte ou PENDENTE}} | aberta / sustentada / refutada / refinada | {{...}} |
-| H01 | O que se espera que esteja diferente **para pessoas, organizações ou processos** se essa contribuição for bem-sucedida? | Principal motivo de uso da nossa aplicação | Entrega 4 | {{link/fonte ou PENDENTE}} | aberta / sustentada / refutada / refinada | {{...}} |
-| H02 | Perfil de usuário (Analista) | Precisamos definir quem poderá usar a interface | Entrega 3 | Que características desses perfis podem influenciar a interação? {{link/fonte ou PENDENTE}} | aberta / sustentada / refutada / refinada | {{...}} |
-| H03 | Perfil de usuário (Piloto Baja FEI) | Precisamos definir quem será afetado pela interface sem usá-la interface | Entrega 3 | {{link/fonte ou PENDENTE}} | aberta / sustentada / refutada / refinada | {{...}} |
-| H04 | Que características desses perfis podem influenciar a interação? | Precisamos definir as características dos perfis de usuários que influenciam na interface | Entrega 3 | {{link/fonte ou PENDENTE}} | aberta / sustentada / refutada / refinada | {{...}} |
-| H05 | Como essas atividades são realizadas hoje, antes da interface imaginada na disciplina? | Não sabemos como é realizado as atividades | Entrega 2 | {{link/fonte ou PENDENTE}} | aberta / sustentada / refutada / refinada | {{...}} |
+| H01 | O que se espera que esteja diferente **para pessoas, organizações ou processos** se essa contribuição for bem-sucedida? | H |A aplicação deve facilitar a interpretação dos resultados da segmentação semântica de imagens off-road, reduzindo a dependência de código e conhecimento técnico para visualizar e comparar os resultados. | Entrega 4 | sustentada | sustentada | Direciona o projeto para uma interface que prioriza visualização, comparação e compreensão dos resultados da segmentação.
+| H02 | Perfil de usuário (Analista) | H | Usuário com conhecimento sobre o contexto do Baja e interesse em analisar imagens/resultados de segmentação, mas que pode não possuir conhecimento aprofundado sobre implementação dos modelos de IA. | Entrega 3 | aberta  | aberta | A interface deve apresentar os resultados de forma visual e objetiva, sem exigir que o usuário interaja diretamente com código.
+| H03 | Perfil de usuário (Piloto Baja FEI) | H | O piloto é um usuário indireto: pode ser beneficiado pelos resultados da análise das condições do terreno, mas a utilização principal da interface está relacionada à equipe responsável pela análise dos dados/imagens. 3 | Entrega 3 | aberta  | aberta | O piloto não será tratado como usuário principal da interface, suas necessidades podem ser consideradas como impacto indireto do sistema.
+| H04 | Que características desses perfis podem influenciar a interação? | H | Diferenças no conhecimento técnico, experiência com imagens off-road e familiaridade com métricas/modelos de IA podem influenciar a compreensão dos resultados. | Entrega 3 | aberta | aberta | A interface deve utilizar visualizações, legendas e informações de apoio para facilitar a interpretação dos resultados por usuários com diferentes níveis de conhecimento técnico.
+| H05 | Como essas atividades são realizadas hoje, antes da interface imaginada na disciplina? | H | Precisamos entender o processo atual para identificar dificuldades e oportunidades de melhoria na interação. | Entrega 2 |  sustentada | sustentada | A nova interface deverá centralizar o fluxo de análise, permitindo enviar imagens, executar a segmentação e visualizar/comparar os resultados de forma mais intuitiva, reduzindo a dependência de interação direta com código.
 | H06 | O que é difícil, demorado, confuso, repetitivo, arriscado ou pouco transparente? | Não sabemos cos problemas existentes | Entrega 4 | {{link/fonte ou PENDENTE}} | aberta / sustentada / refutada / refinada | {{...}} |
 | H07 | Existem fatores sociais ou organizacionais? | Pesquisar melhor os fatores sociais e organizacionais | Entrega 7 | {{link/fonte ou PENDENTE}} | aberta / sustentada / refutada / refinada | {{...}} |
 | H08 | Existe necessidade de histórico, rastreabilidade ou auditoria? | Não sabemos se existe a necessidade | Entrega 8 | {{link/fonte ou PENDENTE}} | aberta / sustentada / refutada / refinada | {{...}} |
