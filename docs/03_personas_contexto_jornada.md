@@ -35,8 +35,7 @@ Antes de criar personas, retome os tipos de usuários, características relevant
 ### Persona P01 — Rafael Pereira
 
 **Autor(a):** {{Tiago — 22.123.017-0}}  
-**Tipo:** primária 
-
+**Tipo:** primária <br>
 **Base de evidências:** observação  
 **Hipóteses da Entrega 1 relacionadas:** {H02, H03 ou H04}
 
@@ -80,9 +79,9 @@ Antes de criar personas, retome os tipos de usuários, características relevant
 
 ### Persona P02 - Andreia Silva
 
-**Autor(a):** Mateus Marana - 22.123.026-1
-**Tipo:** Primária
-**Base de evidências:**
+**Autor(a):** Mateus Marana - 22.123.026-1 <br>
+**Tipo:** Primária <br>
+**Base de evidências:** <br>
 **Hipóteses da Entrega 1 relacionadas:** H01, H02, H04
 
 ![Foto Andreia Silva](../assets/03_personas/Andreia-silva.png)
