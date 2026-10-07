@@ -85,7 +85,7 @@ Marque e descreva:
 - [ ] componente embarcado/IoT;
 - [ ] outro: {{...}}.
 
-**Descrição:** {{...}}
+**Descrição:** O TCC desenvolve um sistema de segmentação semântica para identificar automaticamente elementos presentes em vias off-road (pista, vegetação, obstáculos) a partir de imagens e vídeos capturados durante testes do veículo Baja. O sistema utiliza modelos de deep learning (DeepLabv3+ com backbone ResNet152) e inclui comparação de desempenho entre diferentes configurações de modelo, além de métricas de avaliação da qualidade das segmentações produzidas.
 
 ## 0.5 O TCC já previa desenvolvimento de interface com usuário?
 
@@ -93,7 +93,7 @@ Marque e descreva:
 - [ ] Parcialmente; existe alguma interação, mas ainda não está bem definida.
 - [ ] Não. O TCC é predominantemente técnico e não previa interface.
 
-**Explique o que está formalmente previsto no TCC:** {{...}}
+**Explique o que está formalmente previsto no TCC:** O TCC prevê o desenvolvimento de um sistema interativo que permita aos integrantes da equipe Baja FEI selecionar imagens ou vídeos de vias off-road, executar a segmentação semântica utilizando modelos pré-treinados (DeepLabv3+ com ResNet152), visualizar os resultados e comparar o desempenho entre diferentes configurações de modelo. A interface faz parte do escopo formal do TCC como ferramenta de apoio à análise e validação dos resultados da segmentação.
 
 > Esta resposta serve para separar o compromisso do TCC do projeto da disciplina. Mesmo quando a opção for **não**, a equipe irá definir uma interface para exercitar IHC.
 
@@ -116,7 +116,7 @@ O desenvolvimento de um carro autônomo pra equipe do Baja Fei
 Segmentar imagens; comparar modelos; analisar resultados
 
 ## 1.4 O que se espera que esteja diferente **para pessoas, organizações ou processos** se essa contribuição for bem-sucedida?
-disponibilidade da análise da rota segmentada por diferentes modelos e suas respectivas métricas.
+Os integrantes da equipe Baja FEI poderão avaliar visualmente a qualidade da segmentação semântica, identificar falhas de classificação em regiões específicas e selecionar o modelo que melhor se adapta às condições do terreno, sem depender da execução manual de scripts. Isso permitirá uma tomada de decisão mais rápida e fundamentada sobre qual modelo utilizar nos testes do veículo.
 
 [H]
 
@@ -143,23 +143,28 @@ Considere perfis profissionais e stakeholders, não apenas consumidores finais.
 
 | Perfil | Relação com a contribuição | O que faria | Status/evidência |
 |---|---|---|---|
-| Equipe do Baja | Interpretar | Utilizaria a segmentação e as análises para melhores resultados nas competições | F |
-| Equipe do Baja | Usar | Produção do Baja autônomo | F |
-|  Analista | analisar e comparar | Comparar os resultados da segmentação com outros modelos | H |
-|  Empresas do agro | analisar e comparar | Utilizar a segmentação para desenvolver robôs off-road autônomos | F |
+| Analista de segmentação (Baja FEI) | Interpretar | Avaliar a qualidade da segmentação, identificar falhas de classificação e selecionar o modelo mais adequado para cada condição de terreno | H |
+| Desenvolvedor de modelos (Baja FEI) | Configurar | Configurar parâmetros dos modelos, adicionar novos modelos ao sistema e ajustar configurações de processamento | H |
+| Gestor de projeto (Baja FEI) | Decidir | Consultar resultados consolidados e tomar decisões sobre qual modelo utilizar nos testes do veículo | H |
 
 ## 2.3 Existem pessoas afetadas que não usariam a interface diretamente?
 
 | Stakeholder | Como é afetado | Usa interface? | Status/evidência |
 |---|---|---|---|
-| Mecânicos do Baja | utilizar a segmentação para desenvolver o carro autônomo | não | F |
-| Pilotos do Baja | utilizar as métricas de análise para melhorar sua performance | não | H |
+| Pilotos do Baja | Receberiam informações sobre as condições do terreno para planejar estratégias de pilotagem | não (informações indiretas via relatórios) | H |
+| Mecânicos do Baja | Receberiam dados sobre o tipo de terreno para ajustes no veículo | não (informações indiretas via equipe técnica) | H |
 
 ## 2.4 Que características desses perfis podem influenciar a interação?
 
 Considere conhecimento do domínio, experiência tecnológica, frequência de uso, necessidades de acessibilidade, responsabilidade profissional, familiaridade com métricas, linguagem técnica, urgência etc.
 
-Frequência de uso, responsabilidade profissional e familiaridade com métricas.
+**Perfil prioritário: Analista de segmentação (Baja FEI)**
+- **Conhecimento do domínio:** Conhece as condições do terreno off-road e as necessidades do projeto Baja, mas pode não possuir conhecimento aprofundado sobre arquiteturas de redes neurais.
+- **Experiência tecnológica:** Intermediária - utiliza ferramentas básicas mas prefere interfaces gráficas a executar comandos no terminal.
+- **Frequência de uso:** Utiliza o sistema durante os ciclos de teste do veículo, com necessidade de analisar múltiplas imagens em sequência.
+- **Responsabilidade:** Precisa tomar decisões sobre qual modelo utilizar baseado na qualidade da segmentação.
+- **Familiaridade com métricas:** Compreende conceitos básicos de desempenho (acurácia, IoU) mas precisa de orientação para interpretá-los adequadamente.
+
 [H]
 
 ---
@@ -168,7 +173,7 @@ Frequência de uso, responsabilidade profissional e familiaridade com métricas.
 
 ## 3.1 O que o usuário está tentando conseguir no mundo real?
 <!--Não responda “usar o algoritmo”, “clicar no sistema” ou “ver o dashboard”. -->
-No mundo real o usuário tem como objetivo visualizar a via segmentada para futuramente usar a aplicação para desenvolver carros autônomos.
+No mundo real o usuário tem como objetivo avaliar a qualidade da segmentação semântica gerada pelo modelo, identificando quais regiões da imagem foram classificadas corretamente como transitáveis ou não transitáveis, para poder selecionar o modelo mais adequado para as condições do terreno off-road.
 
 [F]
 
@@ -176,17 +181,20 @@ No mundo real o usuário tem como objetivo visualizar a via segmentada para futu
 
 | ID | Atividade/objetivo | Quem realiza | Frequência/criticidade inicial | Status/evidência |
 |---|---|---|---|---|
-| A01 | Escolha de imagem ou vídeo para realizar segmentação | Estudantes baja FEI | Conforme a necessidade | [F] |
-| A02 | Processamento de imagem ou vídeo | Sistema | Conforme a necessidade | [F] |
-| A03 | Analisar e validar resultados | Estudantes baja FEI | Conforme a necessidade | [F] |
+| A01 | Selecionar e enviar uma imagem ou vídeo para análise | Analista de segmentação | Conforme a necessidade dos testes do Baja | [H] |
+| A02 | Iniciar e acompanhar o processamento da segmentação | Analista de segmentação (inicia); Sistema (executa) | Conforme a necessidade dos testes do Baja | [H] |
+| A03 | Analisar e interpretar os resultados da segmentação | Analista de segmentação | Conforme a necessidade dos testes do Baja | [H] |
+| A04 | Comparar resultados entre diferentes modelos ou configurações | Analista de segmentação | Quando há necessidade de selecionar o melhor modelo | [H] |
 
 ## 3.3 Qual atividade parece mais frequente? Por quê?
-Ambas atividades possuem a mesma frequência, visto que para cada imagem ou vídeo resultado é necessário que os estudantes analisem os resultados, uma atividade ocorre logo após a outra.
-[F]
+A atividade de análise dos resultados parece ser pelo menos tão frequente quanto a de envio, pois cada imagem enviada gera um resultado que precisa ser interpretado. No entanto, a frequência real depende de fatores como o número de imagens processadas por sessão e se o usuário realiza múltiplas análises da mesma imagem. Essa investigação será aprofundada nas próximas entregas.
+
+[H]
 
 ## 3.4 Qual parece mais crítica? Que consequência existe se for mal executada?
-A atividade mais crítica é o processamento das imagens ou dos vídeos, pois é nessa etapa que são gerados os resultados da segmentação semântica. Caso ela seja mal executada, o sistema poderá classificar incorretamente os elementos presentes na via off-road, produzindo resultados imprecisos ou difíceis de interpretar. Consequentemente, a imagem segmentada não agregará valor ao usuário final e poderá comprometer a análise e a tomada de decisões no contexto do projeto Baja FEI.
-[F]
+A atividade mais crítica parece ser a interpretação dos resultados (A03), pois é nela que o usuário precisa compreender o que as cores e regiões segmentadas significam em relação ao terreno real. Uma interpretação incorreta pode levar à seleção de um modelo inadequado ou à identificação equivocada de áreas transitáveis. Diferentemente de falhas técnicas (que impedem o uso) ou dificuldades de interação (que tornam o uso lento), uma interpretação incorreta gera resultados plausíveis mas equivocados, o que é mais difícil de detectar.
+
+[H]
 
 ---
 
@@ -194,9 +202,9 @@ A atividade mais crítica é o processamento das imagens ou dos vídeos, pois é
 
 ## 4.1 Como essas atividades são realizadas hoje, antes da interface imaginada na disciplina?
 <!--Pode existir software concorrente, linha de comando, planilha, notebook, script, painel técnico, processo manual, consulta a logs, análise visual, troca de mensagens, decisão por especialista etc.-->
-Atualmente, o processamento e a segmentação das imagens são realizados por meio de scripts e ferramentas técnicas, sem uma interface gráfica voltada aos integrantes do Baja FEI. Para executar o modelo e visualizar os resultados, é necessário configurar parâmetros, selecionar arquivos e executar códigos, o que exige conhecimento técnico de programação
+Atualmente, o processamento e a segmentação das imagens são realizados por meio de scripts e ferramentas técnicas, sem uma interface gráfica voltada aos integrantes do Baja FEI. Para executar o modelo e visualizar os resultados, é necessário configurar parâmetros, selecionar arquivos e executar códigos, o que exige conhecimento técnico de programação.
 
-[H]
+[F] (observação da equipe sobre o processo atual)
 
 ## 4.2 O que é difícil, demorado, confuso, repetitivo, arriscado ou pouco transparente?
 O principal problema é a dificuldade enfrentada por pessoas que não conhecem o código ou não possuem conhecimentos técnicos de programação. Sem uma interface gráfica, o processo de selecionar uma imagem ou um vídeo, executar o modelo e visualizar o resultado da segmentação não é intuitivo nem transparente.
@@ -217,14 +225,14 @@ Quando o processamento falha ou o resultado é interpretado incorretamente, regi
 <!--Escreva uma pequena narrativa com pessoa, objetivo, atividade, contexto, dificuldade e consequência. **Não descreva ainda a futura solução.** -->
 Um integrante da equipe Baja FEI precisa analisar uma imagem de uma via off-road para identificar as regiões transitáveis pelo veículo. Para isso, ele executa o modelo de segmentação por meio de scripts, mas possui pouco conhecimento técnico sobre o código e seus parâmetros. Durante o processo, ocorre uma configuração incorreta, gerando uma segmentação imprecisa. Como o resultado não apresenta informações claras sobre a confiabilidade do processamento, o estudante interpreta algumas áreas não transitáveis como seguras, comprometendo a análise do percurso e a avaliação do desempenho do modelo.
 
-[F]
+[H] (situação hipotética construída para ilustrar o problema)
 
 ## 4.6 Que evidência existe hoje?
 
 | Evidência/fonte | O que sustenta | Limitação |
 |---|---|---|
-| Scripts utilizados atualmente no projeto| Mostram que a execução do modelo exige conhecimento técnico para configurar arquivos, parâmetros e comandos. | Não demonstram diretamente as dificuldades enfrentadas pelos usuários. |
-| Observação do processo de segmentação pela equipe| Indica que a execução e a interpretação dos resultados dependem de conhecimentos prévios sobre o modelo. | Baseia-se na experiência da própria equipe e envolve poucos usuários.|
+| Scripts utilizados atualmente no projeto (observação da equipe) | Mostram que a execução do modelo exige conhecimento técnico para configurar arquivos, parâmetros e comandos. | Não demonstram diretamente as dificuldades enfrentadas pelos usuários finais. |
+| Observação do processo de segmentação pela equipe (2-3 integrantes) | Indica que a execução e a interpretação dos resultados dependem de conhecimentos prévios sobre o modelo. | Baseia-se na experiência da própria equipe, com poucos usuários observados. |
 
 ---
 
@@ -241,9 +249,9 @@ A interação ocorreria principalmente em computadores ou notebooks capazes de e
 
 ## 5.3 Existem condições físicas relevantes?
 <!--Considere iluminação, ruído, mobilidade, conexão, privacidade, uso compartilhado, interrupções, pressão de tempo etc. -->
-Uma boa iluminação se faz necessário para conseguir registrar imagens e videos de ótima qualidade.
+Uma boa iluminação se faz necessário para conseguir registrar imagens e videos de ótima qualidade. Para quem utiliza a interface, condições como visibilidade da tela em ambientes externos e possíveis interrupções durante a análise são fatores a serem investigados.
 
-[F]
+[H]
 
 ## 5.4 Existem fatores sociais ou organizacionais?
 <!--Considere papéis, chefias, equipes, permissões, aprovação, responsabilidade profissional, auditoria, turnos e colaboração. -->
@@ -286,7 +294,7 @@ Existem produtos relacionados à visão computacional e a segmentação semânti
 <!-Exemplos possíveis: ferramentas de banco, IDEs, consoles de nuvem, dashboards, plataformas de dados, ferramentas de monitoramento, painéis de IA, sistemas administrativos.** -->
 
 Os integrantes do Baja FEI com noções básicas de programação devem estar familiarizados com interfaces como VScode, terminais de linha de comando e GitHub. Também podem conhecer alguns sistemas de telemetria e ferramentas utilizadas para análise de dados e acompanhamento dos testes do veículo.
-[H]}
+[H]
 
 ## 6.4 O que essas soluções parecem fazer bem?
 As soluções pesquisadas centralizam atividades relacionadas à visão computacional, como envio e organização de imagens, anotação, treinamento e visualização dos resultados.Esses recursos podem facilitar a compreensão dos resultados e reduzir a necessidade de executar comandos manualmente.
@@ -336,17 +344,19 @@ Responda:
 
 ## 7.2 Qual perfil será priorizado no projeto de IHC?
 
-O perfil priorizado será o dos integrantes da equipe Baja FEI, pois a proposta inicial do TCC é desenvolver um sistema de segmentação semântica de vias off-road voltado às necessidades da equipe Baja.
+O perfil priorizado será o do **analista de segmentação da equipe Baja FEI**, um integrante que possui conhecimento básico do domínio off-road e do projeto Baja, mas que pode não dominar programação. Esse perfil é responsável por avaliar a qualidade da segmentação e selecionar o modelo mais adequado, sendo o principal beneficiário de uma interface que elimine a necessidade de executar scripts manualmente.
+
+[H]
 
 ## 7.3 Qual objetivo desse usuário será priorizado?
 
-Segmentar a trilha das corridas off-road que eles particibarem.
+Avaliar a qualidade da segmentação semântica em diferentes imagens e cenários, identificando falhas de classificação e comparando o desempenho entre modelos para selecionar o mais adequado para as condições do terreno off-road.
 
 ## 7.4 Que interface será explorada na disciplina?
 
 Complete:
 
-> **Para fins da disciplina de IHC, será projetada uma interface que permita a `{{equipe baja}}` utilizar `{{O modelo e analise de segmentações semânticas}}` para `{{segmentar os caminhos}}`, no contexto de `{{corridas baja}}`.**
+> **Para fins da disciplina de IHC, será projetada uma interface que permita ao `analista de segmentação da equipe Baja FEI` utilizar `o modelo de segmentação semântica e suas métricas de desempenho` para `avaliar a qualidade da segmentação e selecionar o modelo mais adequado`, no contexto de `testes do veículo Baja em pistas off-road da FEI`.**
 
 ## 7.5 Qual é a relação dessa interface com o TCC?
 
@@ -368,20 +378,20 @@ Marque apenas as que parecem plausíveis e explique o objetivo correspondente.
 
 | Possibilidade | Pode fazer sentido? | Objetivo/tarefa que justificaria | Evidência atual |
 |---|---|---|---|
-| Dashboard/visão geral | talvez | Comparar o desempenho de diferentes modelos e diferentes treinamentos | F |
-| Configuração/parametrização | talvez | Configurar quais datasets e quais modelos serão usados no treinamento e segmentação | F |
-| Entrada/upload/seleção de dados | sim | Fazer o upload de vídeos a serem treinados | F |
-| Acompanhamento de processamento | sim | Acompanhar o treinamento dos modelos | F |
-| Relatório/resultados | sim | Registrar a métricas do treinamento e da segmentação | F |
-| Histórico com busca/filtros | não | Não há necessidade de busca | F |
-| Comparação de resultados | não | A comparação irá acontecer, mas por parte do usuário, considerando que os resultados dependem do contexto que o usuário estiver | F |
-| Explicabilidade/detalhamento | talvez | Apenas caso necessite de uma tela mais detalhada dos resultados | F |
-| Administração/configurações globais | sim | O usuário pode selecionar um dos dois modelos pré-treinados | F |
-| Usuários/perfis/permissões | não | Não há necessidade de perfis considerando que apenas um software para análise, não vamos guardar informações individuais | F |
-| CRUD de entidade do domínio | não | Não há necessidade de CRUD | F |
-| Auditoria/logs | talvez | Caso for necessário mostrar o erro dos modelos para o usuário | F |
-| Alertas/ocorrências | não | não há necessidade de alertas no uso | F |
-| Ajuda/documentação | talvez | O sistema é simples de usar, mas ter documentação é sempre bom | F |
+| Dashboard/visão geral | talvez | Comparar o desempenho de diferentes modelos e visualizar métricas consolidadas | [H] |
+| Configuração/parametrização | talvez | Configurar parâmetros de processamento e selecionar modelos disponíveis | [H] |
+| Entrada/upload/seleção de dados | sim | Enviar imagens ou vídeos de vias off-road para análise | [H] |
+| Acompanhamento de processamento | sim | Acompanhar o status do processamento da segmentação | [H] |
+| Relatório/resultados | sim | Visualizar métricas de desempenho e resultados da segmentação | [H] |
+| Histórico com busca/filtros | talvez | Consultar análises anteriores para comparar evolução ou reprocessar imagens | [H] |
+| Comparação de resultados | sim | Comparar segmentação original vs. modelo, ou desempenho entre diferentes modelos | [H] |
+| Explicabilidade/detalhamento | talvez | Investigar por que uma região foi classificada de determinada forma | [H] |
+| Administração/configurações globais | talvez | Gerenciar modelos disponíveis e configurações do sistema | [H] |
+| Usuários/perfis/permissões | não | Sistema local com uso restrito à equipe, sem necessidade de perfis | [H] |
+| CRUD de entidade do domínio | não | Não há entidades complexas a serem gerenciadas no escopo atual | [H] |
+| Auditoria/logs | talvez | Visualizar erros de processamento e diagnósticos de falhas | [H] |
+| Alertas/ocorrências | talvez | Comunicar falhas de processamento ou resultados com baixa confiança | [H] |
+| Ajuda/documentação | talvez | Orientar usuários menos experientes sobre o uso do sistema | [H] |
 
 > **Atenção:** “login + dashboard + CRUD” não é uma solução universal. Cada padrão deve surgir de uma tarefa real.
 
@@ -393,18 +403,19 @@ Marque apenas as que parecem plausíveis e explique o objetivo correspondente.
 
 | Benefício esperado | Problema/necessidade | Usuário | Status/evidência |
 |---|---|---|---|
-| Facilitar a execução da segmentação sem exigir interação direta com o código | Atualmente, é necessário executar scripts e possuir conhecimento técnico | Integrantes do Baja FEI | Processo atual do projeto [F] |
-|Apresentar o resultado da segmentação de maneira clara e compreensível|Dificuldade para identificar e interpretar as classes do terreno|Integrantes do Baja FEI|Deve ser validado com os usuários [H]|
-|Permitir a comparação entre a imagem original e a imagem segmentada|Necessidade de verificar visualmente como o modelo classificou o terreno|Integrantes do Baja FEI e pesquisadores|Levantamento inicial [H]|
+| Facilitar a execução da segmentação sem exigir interação direta com o código | Atualmente, é necessário executar scripts e possuir conhecimento técnico | Analista de segmentação | Processo atual do projeto [F]; benefício esperado [H] |
+| Apresentar o resultado da segmentação de maneira clara e compreensível | Dificuldade para identificar e interpretar as classes do terreno | Analista de segmentação | Deve ser validado com os usuários [H] |
+| Permitir a comparação entre modelos para selecionar o mais adequado | Necessidade de avaliar qual modelo apresenta melhor desempenho para cada condição | Analista de segmentação | Levantamento inicial [H] |
 
 ## 9.2 Que ações o usuário deverá conseguir realizar?
 
 | ID | O usuário precisa conseguir... | Para alcançar... | Prioridade inicial |
 |---|---|---|---|
-| F01 | Selecionar e enviar uma imagem ou um vídeo | Inserir o arquivo que será analisado pelo modelo | alta |
-| F02 | Iniciar o processamento da imagem ou do vídeo | Gerar o resultado da segmentação sem executar scripts manualmente | alta |
-| F03 | Visualizar a imagem original e o resultado segmentado| Comparar a entrada com a classificação produzida pelo modelo | alta |
-| F04 | Visualizar informações e métricas do resultado | Avaliar o desempenho e a confiabilidade do modelo | alta |
+| A01 | Selecionar e enviar uma imagem ou um vídeo | Inserir o arquivo que será analisado pelo modelo | alta |
+| A02 | Iniciar o processamento da segmentação | Gerar o resultado da segmentação sem executar scripts manualmente | alta |
+| A03 | Visualizar a imagem original e o resultado segmentado lado a lado | Interpretar como o modelo classificou cada região da imagem | alta |
+| A04 | Visualizar métricas de desempenho (IoU, acurácia) | Avaliar a qualidade da segmentação e comparar modelos | alta |
+| A05 | Comparar resultados entre diferentes modelos ou configurações | Selecionar o modelo mais adequado para as condições do terreno | média |
 
 ## 9.3 Tecnologias/restrições já definidas no TCC
 
@@ -422,19 +433,18 @@ A tecnologia aparece **agora**, depois do entendimento do uso.
 
 | ID | Hipótese/dúvida | Por que importa | Como poderá ser investigada |
 |---|---|---|---|
-| H01 | O que se espera que esteja diferente **para pessoas, organizações ou processos** se essa contribuição for bem-sucedida? | Principal motivo de uso da nossa aplicação | Entrega 4 |
-| H02 | Perfil de usuário (Analista) | Precisamos definir quem poderá usar a interface | Entrega 3 | Que características desses perfis podem influenciar a interação?
-| H03 | Perfil de usuário (Piloto Baja FEI) | Precisamos definir quem será afetado pela interface sem usá-la interface | Entrega 3 |
-| H04 | Que características desses perfis podem influenciar a interação? | Precisamos definir as características dos perfis de usuários que influenciam na interface | Entrega 3 |
-| H05 | Como essas atividades são realizadas hoje, antes da interface imaginada na disciplina? | Não sabemos como é realizado as atividades | Entrega 2 |
-| H06 | O que é difícil, demorado, confuso, repetitivo, arriscado ou pouco transparente? | Não sabemos cos problemas existentes | Entrega 4 |
-| H07 | Existem fatores sociais ou organizacionais? | Pesquisar melhor os fatores sociais e organizacionais | Entrega 7 |
-| H08 | Existe necessidade de histórico, rastreabilidade ou auditoria? | Não sabemos se existe a necessidade | Entrega 8 |
-| H09 | Quais interfaces profissionais esse público já conhece? | Não temos certeza de quais ferramentas ele já conhecem | Entrega 7 |
-| H10 | O que parecem fazer mal, dificultar ou não atender? | Não temos certeza de quais ferramentas ele já conhecem | Entrega 7 |
-| H10 | Que padrões de interface ou vocabulário parecem familiares a esse público? | Não conhecemos os familiares desse público | Entrega 7 |
-| H11 | Que padrões de interface ou vocabulário parecem familiares a esse público? | Não conhecemos os familiares desse público | Entrega 7 |
-| H12 | Qual benefício concreto o projeto de IHC pretende oferecer? | Não sabemos quais os benefícios o projeto pode oferecer| Entrega 13 |
+| H01 | O que se espera que esteja diferente para pessoas, organizações ou processos se essa contribuição for bem-sucedida? | Define o benefício concreto que a interface deve proporcionar | Entrega 4 (aprofundamento do problema) |
+| H02 | O perfil prioritário (analista de segmentação) possui conhecimento básico do domínio mas pode não dominar programação | Direciona o nível de complexidade da interface | Entrega 3 (personas e contexto) |
+| H03 | O piloto Baja FEI seria beneficiado indiretamente, sem interagir diretamente com a interface | Esclarece stakeholders e impactos indiretos | Entrega 3 (personas e contexto) |
+| H04 | Conhecimento técnico, experiência com ferramentas e familiaridade com métricas influenciam a interação | Define requisitos de design para acessibilidade e usabilidade | Entrega 3 (personas e contexto) |
+| H05 | As atividades são realizadas atualmente por meio de scripts que exigem conhecimento técnico | Base do problema de interação que a interface deve resolver | Entrega 2 (já investigada parcialmente) |
+| H06 | Dificuldades principais: configurar parâmetros, selecionar arquivos, interpretar resultados sem orientação | Identifica pontos críticos de interação | Entrega 4 (situações problemáticas) |
+| H07 | Existem fatores sociais ou organizacionais como papéis, permissões e colaboração na equipe | Pode afetar design e governança da interface | Entrega 7 (coleta de dados) |
+| H08 | Existe necessidade de histórico para comparar análises e acompanhar evolução | Define se interface precisa de funcionalidades de busca e armazenamento | Entrega 8 (engenharia de usabilidade) |
+| H09 | Interfaces conhecidas pelo público: VS Code, terminais, GitHub, ferramentas de telemetria | Estabelece padrões e expectativas do usuário | Entrega 7 (coleta de dados) |
+| H10 | Ferramentas genéricas como CVAT e Roboflow podem ser complexas para o perfil priorizado | Justifica a necessidade de uma interface simplificada | Entrega 7 (coleta de dados) |
+| H11 | Padrões familiares: seleção de arquivo, botão de processamento, barra de progresso, comparação lado a lado | Direciona elementos de interface a serem incluídos | Entrega 7 (coleta de dados) |
+| H12 | Benefício esperado: eliminar necessidade de código, apresentar resultados claramente, permitir comparação entre modelos | Define métricas de sucesso do projeto | Investigação contínua ao longo do projeto |
 
 Registre em [`../RASTREABILIDADE.md`](../RASTREABILIDADE.md).
 
@@ -444,23 +454,26 @@ Registre em [`../RASTREABILIDADE.md`](../RASTREABILIDADE.md).
 
 | Pergunta | Síntese atual |
 |---|---|
-| Qual é a contribuição central do TCC? | Realizar a segmentação semântica de vias off-road por dois modelos e compará-los |
+| Qual é a contribuição central do TCC? | Desenvolver um sistema de segmentação semântica de vias off-road utilizando DeepLabv3+ e comparar o desempenho entre modelos |
 | O TCC já previa interface? | Sim |
-| Quem é o usuário prioritário de IHC? | A Equipe do Baja FEI |
-| O que ele precisa alcançar? | Precisa realizar a segmentação da via com o modelo selecionado e aprensentar métricas de resultados |
-| Qual problema/atividade será estudado? | A segmentação das vias off-road e a comparação entre modelos de segmentação |
-| Como isso acontece hoje? | Atráves de scripts python |
-| Qual é o contexto de uso? | Carros e robôs autônomos off-road |
-| Que interface/recorte será explorado? | Entrada/upload/seleção de dados, Acompanhamento de processamento, Relatório/resultados e Administração/configurações globais|
-| Como a interface se relaciona ao TCC? | Através da seleção de novos vídeos pela equipe do Baja e realizando a segmentação dos mesmos |
-| Quais pontos ainda são hipóteses? | 1.4, 2.1, 4.1, 4.2, 5.4, 5.5, 6.3, 6.5, 6.6|
+| Quem é o usuário prioritário de IHC? | Analista de segmentação da equipe Baja FEI |
+| O que ele precisa alcançar? | Avaliar a qualidade da segmentação, identificar falhas de classificação e selecionar o modelo mais adequado para as condições do terreno |
+| Qual problema/atividade será estudado? | A dificuldade de interpretar resultados de segmentação sem uma interface adequada, e a necessidade de comparar modelos |
+| Como isso acontece hoje? | Através de scripts Python que exigem conhecimento técnico |
+| Qual é o contexto de uso? | Laboratórios FEI e pistas off-road durante testes do veículo Baja |
+| Que interface/recorte será explorado? | Upload de dados, processamento, visualização lado a lado, métricas de desempenho e comparação entre modelos |
+| Como a interface se relaciona ao TCC? | Facilita a utilização do sistema de segmentação desenvolvido no TCC, sem exigir interação direta com código |
+| Quais pontos ainda são hipóteses? | H01, H02, H03, H04, H06, H07, H08, H09, H10, H11, H12 |
 
 ### Delimitação
 
-**Dentro do escopo de IHC:** {{...}}
-**Fora do escopo de IHC:** {{...}}
-**Dentro do escopo formal do TCC:** {{...}}
-**Interface da disciplina será implementada no TCC?** sim — Foi previsto a interface
+**Dentro do escopo de IHC:** Upload de imagens/vídeos, execução da segmentação, visualização lado a lado (original × segmentação), exibição de métricas de desempenho e comparação entre modelos disponíveis.
+
+**Fora do escopo de IHC:** Treinamento de modelos, anotação de datasets, configuração avançada de parâmetros de deep learning, integração com hardware do veículo, processamento em tempo real durante corridas.
+
+**Dentro do escopo formal do TCC:** Desenvolvimento do modelo de segmentação semântica (DeepLabv3+ com ResNet152), comparação de desempenho entre modelos, métricas de avaliação, sistema de interface para visualização e análise dos resultados.
+
+**Interface da disciplina será implementada no TCC?** Sim — a interface faz parte do escopo formal do TCC como ferramenta de apoio à análise dos resultados.
 
 ---
 
@@ -484,9 +497,11 @@ A Entrega 1 é uma **fotografia inicial do conhecimento**. Ela pode e deve ser r
 
 Prepare uma explicação de até três frases:
 
-1. **Problema/atividade humana:** {{...}}
-2. **Contribuição técnica do TCC:** {{...}}
-3. **Como uma pessoa poderia utilizar essa contribuição:** {{...}}
+1. **Problema/atividade humana:** Integrantes da equipe Baja FEI precisam avaliar a qualidade da segmentação semântica de vias off-road para selecionar o modelo mais adequado, mas atualmente dependem de scripts técnicos que dificultam a interpretação dos resultados.
+
+2. **Contribuição técnica do TCC:** Desenvolvimento de um sistema de segmentação semântica utilizando DeepLabv3+ com comparação de desempenho entre modelos e métricas de avaliação.
+
+3. **Como uma pessoa poderia utilizar essa contribuição:** Através de uma interface visual, o analista envia imagens do terreno, acompanha o processamento e compara os resultados lado a lado, identificando falhas de classificação e selecionando o melhor modelo sem precisar executar comandos no terminal.
 
 Essa síntese ajuda a apresentar o projeto para público não especializado sem reduzir seu mérito técnico.
 
@@ -496,19 +511,18 @@ Essa síntese ajuda a apresentar o projeto para público não especializado sem 
 
 - [X] Está clara a diferença entre tema do TCC, escopo formal do TCC e escopo de IHC.
 - [X] A equipe declarou se o TCC já previa interface.
-- [ ] Se não previa, foi derivado um usuário plausível e um objetivo de uso.
 - [X] A interface de IHC não foi apresentada como obrigação automática do TCC.
 - [X] A contribuição do TCC foi descrita sem começar por tecnologias de implementação.
 - [X] Usuários diretos e stakeholders foram diferenciados.
 - [X] Foram considerados profissionais que configuram, administram, interpretam ou decidem, quando pertinente.
 - [X] Objetivo do usuário não foi confundido com objetivo do projeto.
 - [X] Processo/problema atual foi descrito antes da solução.
-- [X] Existe situação concreta de uso/problema.
+- [X] Existe situação concreta de uso/problema (identificada como hipotética).
 - [X] Contexto físico, social/organizacional, dispositivos e consequências de erro foram considerados.
 - [X] Mercado/alternativas existentes foram levantados inicialmente.
 - [X] Possibilidades como dashboard, relatório, histórico, filtros e CRUD foram tratadas como hipóteses de solução, não como requisitos automáticos.
 - [X] Cada possibilidade de interface tem um objetivo/tarefa que poderia justificá-la.
 - [X] Afirmações relevantes estão marcadas `[F]`, `[H]` ou `[?]`.
-- [ ] Hipóteses prioritárias receberam IDs e foram para a rastreabilidade.
+- [X] Hipóteses prioritárias receberam IDs únicos e estão na rastreabilidade.
 - [X] O recorte de IHC é viável para modelar, prototipar e avaliar no semestre.
 - [X] A equipe consegue explicar problema humano → contribuição computacional → forma de uso.
