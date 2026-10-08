@@ -156,6 +156,20 @@ Explique diferenças entre os perfis e qual persona é prioritária. Evite perso
 | Dores | Processos lentos e dependentes de scripts; legendas confusas; dificuldade de comparar modelos; falta de conectividade em campo. | H01; H05 |
 | Necessidades / ganhos | Interface intuitiva e visual; comparação lado a lado; legenda clara "transitável × não transitável"; exportação rápida de resultados; modo offline para uso em campo. | H01|
 
+**Persona escolhida:** Andreia Silva <br>
+**Justificativa:** Andreia é a usuária primária do sistema de visualização e análise de segmentação semântica. Como professora e coordenadora da equipe Baja, possui conhecimento avançado em Engenharia Mecânica e Visão Computacional e busca utilizar essas áreas para contribuir com o desenvolvimento de um veículo Baja autônomo. Apesar de possuir experiência com Python e desenvolvimento de modelos, seu tempo é limitado e seu conhecimento em desenvolvimento de interfaces é menor. Dessa forma, o sistema deve facilitar a execução, comparação e análise dos modelos, centralizando as principais funcionalidades em uma interface intuitiva.
+
+![Mapa de empatia](../assets/03_personas/mapa_empatia_Andreia.jpeg)
+
+| Dimensão | Descrição | Evidência |
+|---|---|---|
+| **O que pensa e sente** | Quer utilizar a visão computacional para gerar inovação no projeto Baja e contribuir para o desenvolvimento de um veículo autônomo. Sente-se motivada e orgulhosa ao ver a evolução da pesquisa. Valoriza soluções práticas, intuitivas e visuais que permitam analisar resultados sem perder acesso às informações técnicas. Preocupa-se com o tempo limitado devido à carga de aulas e aos compromissos com a equipe. | **H01; H02** |
+| **O que vê** | Imagens e vídeos provenientes do ambiente off-road, com terrenos irregulares e poeira; alunos e membros da equipe testando o carro e discutindo resultados; métricas e gráficos de desempenho dos modelos; ambiente de laboratório, oficina e computadores utilizados na pesquisa. | **H04** |
+| **O que ouve** | Feedback de alunos, professores e membros da equipe Baja sobre os resultados dos modelos; discussões sobre melhorias no sistema e no veículo; comentários sobre precisão das segmentações, métricas e desempenho dos modelos. | **H01; H04** |
+| **O que fala e faz** | Compartilha resultados e análises com a equipe; registra observações e sugestões de melhorias; testa diferentes modelos de segmentação; busca comparar resultados e métricas; utiliza scripts em Python quando necessário; procura ferramentas que reduzam o tempo gasto com tarefas repetitivas e centralizem o processo de análise. | **H02; H04** |
+| **Dores** | Possui pouco tempo para desenvolver e treinar seus próprios modelos devido às aulas e responsabilidades com a equipe. Precisa lidar com diferentes etapas e ferramentas para realizar análises. Possui pouco conhecimento em desenvolvimento de interfaces, o que pode dificultar a criação de uma ferramenta própria. Também pode perder tempo configurando diferentes fluxos para imagens, vídeos e câmera. | **H01; H02; H04** |
+| **Necessidades / ganhos** | Precisa de uma interface intuitiva que centralize o processamento de imagens, vídeos e câmera. Necessita selecionar e comparar diferentes modelos de segmentação, visualizar imagens originais, máscaras e sobreposições, além de consultar métricas como IoU e acurácia. Busca registrar observações, manter histórico dos experimentos e exportar resultados para documentação e apresentação à equipe. | **H01; H02; H04** |
+
 ## 3. Contexto de uso — consolidação
 
 | Dimensão | Descrição | Implicação de design |
@@ -171,7 +185,7 @@ Explique diferenças entre os perfis e qual persona é prioritária. Evite perso
 ## 4. Jornada do usuário — equipe
 
 **Persona:** **Rafael Pereira**<br>
-**Objetivo da jornada:** Validar rapidamente se a segmentação identifica corretamente áreas transitáveis, comparar modelos e gerar evidências visuais para a equipe.  
+**Objetivo da jornada:** Validar rapidamente se a segmentação identifica corretamente áreas transitáveis, comparar modelos e gerar evidências visuais para a equipe.<br>
 **Início e fim da jornada:** Do momento em que Rafael coleta imagens em campo até a exportação dos resultados para discussão em reunião.
 
 | Etapa | Situação/ação | Objetivo | Pensamento/emoção | Dor | Oportunidade de design | Evidência |
@@ -184,6 +198,19 @@ Explique diferenças entre os perfis e qual persona é prioritária. Evite perso
 | 6 | Exporta resultados em PNG/PDF para reunião | Compartilhar evidências com equipe | "Agora posso mostrar para todos" | Perda de tempo em conversões | Exportação direta | Arquivos prontos para reunião |
 
 <!-- A jornada pode incluir etapas **antes, durante e depois** do uso do produto. Não transforme a jornada em lista de telas. -->
+
+**Persona:** Andreia Silva <br>
+**Objetivo da jornada:** Processar imagens, vídeos e dados de câmera com diferentes modelos de segmentação, comparar seus resultados e registrar evidências para apoiar o desenvolvimento de um veículo Baja autônomo.<br>
+**Início e fim da jornada:** Desde a seleção dos dados e dos modelos de segmentação até a análise, o registro e a exportação dos resultados para documentação da pesquisa e discussão com a equipe.
+
+| Etapa | Situação/ação | Objetivo | Pensamento/emoção | Dor | Oportunidade de design | Evidência | 
+| --- | --- | --- | --- | --- | --- | --- |
+| 1   | Andreia seleciona imagens, vídeos gravados ou a entrada de câmera para análise | Obter dados para avaliar o comportamento da segmentação em diferentes condições do ambiente off-road | "Preciso testar o modelo em situações reais para avaliar sua aplicação no Baja autônomo" | Utilização de diferentes ferramentas e fluxos para processar cada tipo de entrada  | Centralizar o processamento de imagens, vídeos e câmera em uma única interface, com modos de entrada acessíveis por botões | Imagens e vídeos do ambiente off-road; resultados de testes com câmera |
+| 2   | Seleciona um ou mais modelos de segmentação e inicia o processamento | Avaliar diferentes modelos sem precisar alterar scripts constantemente | "Quero testar os modelos disponíveis rapidamente e manter as mesmas condições de comparação" | Tempo limitado para desenvolver e treinar modelos, além do trabalho repetitivo de configurar execuções  | Disponibilizar seleção de modelos, parâmetros de execução e um botão para iniciar o processamento | Histórico de execuções com modelos e configurações utilizados |
+| 3 | Analisa a imagem original, a máscara segmentada e a sobreposição entre ambas | Identificar erros de segmentação e verificar quais regiões do terreno foram classificadas como transitáveis ou não transitáveis | "Preciso identificar visualmente onde o modelo está acertando e onde precisa melhorar" | Alternar entre diferentes telas dificulta a análise e a identificação de erros | Apresentar as três visualizações na mesma tela, com alternância rápida, controle de opacidade e recursos de zoom | Imagens originais, máscaras e sobreposições geradas pelos modelos |
+| 4 | Consulta a legenda e interpreta as classes identificadas na segmentação | Compreender rapidamente as regiões classificadas e verificar a consistência dos resultados | "Preciso interpretar as classes com clareza para avaliar se a segmentação é útil para o veículo autônomo" | Legendas inconsistentes ou cores difíceis de distinguir podem prejudicar a interpretação | Manter uma paleta de cores consistente, com legenda fixa e identificação textual das classes transitável e não transitável | Máscaras com cores padronizadas e legenda consistente entre execuções |
+| 5 | Compara modelos e execuções por meio de métricas e gráficos | Avaliar objetivamente o desempenho dos modelos e identificar possibilidades de melhoria | "Quero descobrir qual modelo apresenta os melhores resultados e em quais situações ele falha" | Métricas isoladas dificultam a comparação e a interpretação do desempenho por classe | Disponibilizar painel com IoU, acurácia e métricas por classe, além de gráficos comparativos entre modelos e versões | Relatórios de métricas, gráficos comparativos e resultados de diferentes modelos |
+| 6 | Registra observações sobre os resultados e exporta as evidências da análise | Documentar os experimentos e compartilhar conclusões com alunos e membros da equipe Baja | "Preciso guardar o que observei e apresentar os resultados para orientar as próximas melhorias do projeto" | Anotações dispersas e conversões manuais de arquivos consomem tempo e dificultam a rastreabilidade dos experimentos | Manter histórico com modelo, entrada, parâmetros, métricas e campo para observações; permitir exportação de imagens e relatórios em PNG e PDF | Histórico de experimentos, observações registradas e arquivos exportados para documentação e reuniões |
 
 ## Síntese
 
