@@ -61,7 +61,7 @@ Uma hipótese explicitada é melhor do que uma suposição escondida.
 |---|---:|---|---|
 | Henrique Finatti Silveira Belo Trebbi | 22.123.030-3 | [@HenriqueFinatti](https://github.com/HenriqueFinatti) |  |
 | Mateus Marana Assuena | 22.123.026-1 | [@MatMarana](https://github.com/MatMarana) |  |
-| Tiago Fagundes dos Santos | 22.123.017-0 |[@TiagoFagundes19](https://github.com/TiagoFagundes19) | |
+| Tiago Fagundes dos Santos | 22.123.017-0 |[@TiagoFagundes19](https://github.com/TiagoFagundes19) |  |
 
 ## 0.2 Título atual do TCC
 
@@ -322,7 +322,7 @@ Alguns padrões que podem ser familiares aos integrantes da equipe são:
 
 ### Caminho A — TCC já possui interface
 
-O recorte da disciplina será o fluxo de envio, processamento e visualização de imagens ou vídeos de vias off-road. O usuário deverá selecionar um arquivo, iniciar a segmentação e visualizar a comparação entre a imagem original e o resultado produzido pelo modelo, com uma legenda indicando as classes identificadas. A interface pretende tornar o processo mais acessível e facilitar a compreensão dos resultados, sem exigir que o usuário interaja diretamente com o código.
+O recorte da disciplina será o fluxo de envio, processamento e visualização de imagens ou vídeos de vias off-road. O usuário deverá selecionar um arquivo, iniciar a segmentação com um dos **modelos já disponíveis** no sistema (DeepLabv3+ e FCN, conforme previsto no TCC), e visualizar a comparação entre a imagem original e o resultado produzido pelo modelo, com uma legenda indicando as classes identificadas. A interface pretende tornar o processo mais acessível e facilitar a compreensão dos resultados, sem exigir que o usuário interaja diretamente com o código ou insira novos modelos.
 
 ## 7.2 Qual perfil será priorizado no projeto de IHC?
 
