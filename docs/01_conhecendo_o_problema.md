@@ -1,6 +1,6 @@
 # Entrega 1 — Conhecendo o projeto, o usuário e o problema
 
-**Data:** {{17/08/2026}}
+**Data:** 17/08/2026
 **Status:** 🟩 concluída
 **Responsabilidade:** 1 solução consolidada por equipe
 
@@ -123,6 +123,7 @@ Os integrantes da equipe Baja FEI poderão avaliar visualmente a qualidade da se
 ## 1.5 O que é mérito técnico/científico do TCC e o que seria uma possível aplicação prática?
 
 | Mérito/contribuição técnica | Possível aplicação/valor em uso |
+|-|-|
 | Modelo de IA para segmentação semântica| Apoiar sistemas de percepção de veículos autônomos em ambientes off-road|
 | Métricas de desempenho dos modelos | Facilitar a comparação entre modelos e a compreensão da qualidade das segmentações   |
 | Visualização dos resultados da segmentação | Tornar mais fácil para os estudantes do Baja FEI analisar e validar os resultados gerados pelo modelo |
@@ -155,8 +156,6 @@ Considere perfis profissionais e stakeholders, não apenas consumidores finais.
 | Mecânicos do Baja | Receberiam dados sobre o tipo de terreno para ajustes no veículo | não (informações indiretas via equipe técnica) | H |
 
 ## 2.4 Que características desses perfis podem influenciar a interação?
-
-Considere conhecimento do domínio, experiência tecnológica, frequência de uso, necessidades de acessibilidade, responsabilidade profissional, familiaridade com métricas, linguagem técnica, urgência etc.
 
 **Perfil prioritário: Analista de segmentação (Baja FEI)**
 - **Conhecimento do domínio:** Conhece as condições do terreno off-road e as necessidades do projeto Baja, mas pode não possuir conhecimento aprofundado sobre arquiteturas de redes neurais.
@@ -291,13 +290,13 @@ Existem produtos relacionados à visão computacional e a segmentação semânti
 [F]
 
 ## 6.3 Quais interfaces profissionais esse público já conhece?
-<!-Exemplos possíveis: ferramentas de banco, IDEs, consoles de nuvem, dashboards, plataformas de dados, ferramentas de monitoramento, painéis de IA, sistemas administrativos.** -->
+<!--Exemplos possíveis: ferramentas de banco, IDEs, consoles de nuvem, dashboards, plataformas de dados, ferramentas de monitoramento, painéis de IA, sistemas administrativos.** -->
 
 Os integrantes do Baja FEI com noções básicas de programação devem estar familiarizados com interfaces como VScode, terminais de linha de comando e GitHub. Também podem conhecer alguns sistemas de telemetria e ferramentas utilizadas para análise de dados e acompanhamento dos testes do veículo.
 [H]
 
 ## 6.4 O que essas soluções parecem fazer bem?
-As soluções pesquisadas centralizam atividades relacionadas à visão computacional, como envio e organização de imagens, anotação, treinamento e visualização dos resultados.Esses recursos podem facilitar a compreensão dos resultados e reduzir a necessidade de executar comandos manualmente.
+As soluções pesquisadas centralizam atividades relacionadas à visão computacional, como envio e organização de imagens, anotação, treinamento e visualização dos resultados. Esses recursos podem facilitar a compreensão dos resultados e reduzir a necessidade de executar comandos manualmente.
 
 [F]
 
@@ -324,23 +323,6 @@ Alguns padrões que podem ser familiares aos integrantes da equipe são:
 ### Caminho A — TCC já possui interface
 
 O recorte da disciplina será o fluxo de envio, processamento e visualização de imagens ou vídeos de vias off-road. O usuário deverá selecionar um arquivo, iniciar a segmentação e visualizar a comparação entre a imagem original e o resultado produzido pelo modelo, com uma legenda indicando as classes identificadas. A interface pretende tornar o processo mais acessível e facilitar a compreensão dos resultados, sem exigir que o usuário interaja diretamente com o código.
-
-### Caminho B — TCC não possui interface prevista
-
-Faça o exercício de transferência de uso:
-
-> **Imagine que o TCC foi concluído com sucesso e uma empresa, laboratório ou organização quer transformar a contribuição em algo utilizável. Quem precisaria interagir com ela e para quê?**
-
-Responda:
-
-1. quem poderia contratar/adotar a solução? A equipe Baja FEI e possíveis grupos de pesquisas em veículos autônomos que realizam testes em ambiente off-road.
-2. quem seria o usuário direto? Equipe Baja FEI
-3. quem administraria/configuraria? A ideia com a interface também é que além dos desenvolvedores da aplicação, os participantes do Baja FEI com conhecimento de programação também conseguir configurar os diferentes tipos de modelos.
-4. quem interpretaria resultados? Integrantes do Baja FEI e grupos de pesquisas para analisar como modelo classificou as diferentes regiões do terreno
-5. quem tomaria decisões? Os integrantes do Baja FEI
-6. quais dados/entradas seriam necessários? Imagens ou vídeos de vias off-road capturados por câmeras durante os testes do veículo. Também se necessário os usuários poderiam inserir um novo modelo, visto que atualmente temos apenas o DeepLabv3+ e ResNet.
-7. quais resultados deveriam ser compreendidos? Os usuários deverão compreender quais regiões foram classificadas como transitáveis ou não transitáveis, além de interpretar a acurácia apresentada pelo modelo.
-8. que erros/rupturas seriam possíveis? Poderiam ocorrer envio de arquivos inválidos, formatos não suportados, imagens com baixa qualidade, processamento demorado, interrupção durante a análise ou classificação incorreta do terreno.
 
 ## 7.2 Qual perfil será priorizado no projeto de IHC?
 
