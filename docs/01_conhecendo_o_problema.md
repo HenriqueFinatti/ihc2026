@@ -172,9 +172,9 @@ Considere perfis profissionais e stakeholders, não apenas consumidores finais.
 
 ## 3.1 O que o usuário está tentando conseguir no mundo real?
 <!--Não responda “usar o algoritmo”, “clicar no sistema” ou “ver o dashboard”. -->
-No mundo real o usuário tem como objetivo avaliar a qualidade da segmentação semântica gerada pelo modelo, identificando quais regiões da imagem foram classificadas corretamente como transitáveis ou não transitáveis, para poder selecionar o modelo mais adequado para as condições do terreno off-road.
+No mundo real, o usuário tem como objetivo avaliar a qualidade da segmentação semântica gerada pelo modelo, interpretar as classes apresentadas e comparar métricas e resultados entre configurações, para selecionar a mais adequada às condições do terreno off-road.
 
-[F]
+[H]
 
 ## 3.2 Quais são as atividades mais importantes?
 
@@ -211,18 +211,18 @@ O principal problema é a dificuldade enfrentada por pessoas que não conhecem o
 [H]
 
 ## 4.3 Que informações o profissional precisa interpretar para tomar decisão?
-O profissional precisa interpretar o resultado da segmentação, identificando quais regiões da imagem foram classificadas como áreas transitáveis ou não transitáveis pelo veículo.
+O profissional precisa interpretar as classes apresentadas pela segmentação e as métricas de desempenho para avaliar o resultado do modelo. Esse resultado serve à análise do modelo; ele não autoriza, por si só, uma conclusão operacional sobre a segurança ou a transitabilidade de um trajeto.
 
-[F]
+[H]
 
 ## 4.4 O que acontece quando a atividade falha ou quando o resultado é interpretado incorretamente?
-Quando o processamento falha ou o resultado é interpretado incorretamente, regiões transitáveis e não transitáveis podem ser identificadas de forma errada. Isso pode levar o usuário a tomar decisões inadequadas sobre o percurso do veículo, além de dificultar a avaliação do modelo.
+Quando o processamento falha ou o resultado é interpretado incorretamente, a equipe pode comparar configurações com base em uma leitura inadequada ou registrar uma avaliação incorreta do modelo. Isso prejudica a análise e a seleção do modelo, mas não permite concluir que um trajeto é seguro ou inseguro.
 
-[F]
+[H]
 
 ## 4.5 Conte uma situação concreta.
 <!--Escreva uma pequena narrativa com pessoa, objetivo, atividade, contexto, dificuldade e consequência. **Não descreva ainda a futura solução.** -->
-Um integrante da equipe Baja FEI precisa analisar uma imagem de uma via off-road para identificar as regiões transitáveis pelo veículo. Para isso, ele executa o modelo de segmentação por meio de scripts, mas possui pouco conhecimento técnico sobre o código e seus parâmetros. Durante o processo, ocorre uma configuração incorreta, gerando uma segmentação imprecisa. Como o resultado não apresenta informações claras sobre a confiabilidade do processamento, o estudante interpreta algumas áreas não transitáveis como seguras, comprometendo a análise do percurso e a avaliação do desempenho do modelo.
+Um integrante da equipe Baja FEI precisa analisar uma imagem de uma via off-road para avaliar o resultado de uma segmentação. Para isso, ele executa o modelo por meio de scripts, mas possui pouco conhecimento técnico sobre o código e seus parâmetros. Durante o processo, ocorre uma configuração incorreta, gerando uma segmentação imprecisa. Como o resultado não apresenta informações claras sobre a confiabilidade do processamento, o estudante registra uma avaliação inadequada e tem dificuldade para comparar o desempenho das configurações do modelo.
 
 [H] (situação hipotética construída para ilustrar o problema)
 
@@ -264,9 +264,9 @@ Existe a necessidade de manter o histórico das images e vídeos processado, jun
 [H]
 
 ## 5.6 Um erro pode produzir consequência relevante? Qual?
-Sim, um erro na segmentação pode fazer com que uma região não transitável seja classificada como via para o veículo, isso pode comprometer a análise do percurso, gerar decisões inadequadas pela equipe e prejudicar a avaliação do modelo.
+Sim. Um erro de processamento ou de interpretação pode comprometer a avaliação e a comparação entre configurações do modelo. A consequência operacional no percurso não foi demonstrada e não deve ser inferida apenas da segmentação ou de suas métricas.
 
-[F]
+[H]
 
 ---
 
@@ -322,7 +322,7 @@ Alguns padrões que podem ser familiares aos integrantes da equipe são:
 
 ### Caminho A — TCC já possui interface
 
-O recorte da disciplina será o fluxo de envio, processamento e visualização de imagens ou vídeos de vias off-road. O usuário deverá selecionar um arquivo, iniciar a segmentação com um dos **modelos já disponíveis** no sistema (DeepLabv3+ e FCN, conforme previsto no TCC), e visualizar a comparação entre a imagem original e o resultado produzido pelo modelo, com uma legenda indicando as classes identificadas. A interface pretende tornar o processo mais acessível e facilitar a compreensão dos resultados, sem exigir que o usuário interaja diretamente com o código ou insira novos modelos.
+O recorte da disciplina será o fluxo de envio, processamento e visualização de imagens ou vídeos de vias off-road. O usuário deverá selecionar um arquivo, iniciar a segmentação com uma das **configurações já disponibilizadas pelo TCC** e visualizar a comparação entre a imagem original e o resultado produzido, com uma legenda indicando as classes identificadas. A interface pretende tornar o processo mais acessível e facilitar a compreensão dos resultados, sem exigir que o usuário interaja diretamente com o código ou insira novos modelos.
 
 ## 7.2 Qual perfil será priorizado no projeto de IHC?
 
