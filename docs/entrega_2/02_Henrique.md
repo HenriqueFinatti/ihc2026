@@ -52,9 +52,9 @@ As afirmações abaixo são **opiniões de terceiros**, com fonte registrada.
 
 | Opinião | Fonte | O que sugere para o nosso projeto |
 |---|---|---|
-| O Roboflow é bem avaliado quanto a facilidade de uso e é descrito como acessível a usuários não especialistas; nota agregada ~4,7–4,8/5 em 146–161 avaliações | G2 — https://www.g2.com/products/roboflow/reviews (acesso 28/09/2026; números republicados por Oryndex, Toolradar e SearchTools) | É o **análogo mais próximo do nosso perfil de usuário** entre os três produtos. Apoia a plausibilidade de que uma interface sem código é compreensível para o analista do Baja. |
+| O Roboflow é descrito em avaliações públicas como fácil de usar e acessível a usuários não especialistas | G2 — https://www.g2.com/products/roboflow/reviews (acesso 28/09/2026) | É o **análogo mais próximo do nosso perfil de usuário** entre os três produtos. Isso gera uma hipótese de design; não comprova que o analista do Baja compreenda uma interface sem código. |
 | Usuários elogiam a **versionação de datasets**, que permite reverter a um conjunto de anotações anterior | SearchTools.ai — https://searchtools.ai/t/roboflow (acesso 28/09/2026), reunindo avaliações do G2 | Dá origem observável a parte de **RC02 (histórico/versionamento)** no Roboflow, e não no Supervisely. |
-| Pre-roteulagem assistida por IA é apontada como o principal diferencial | G2 — alguns usuários relatam que a rotulagem pré-anotada por modelos reduzem bastante o trabalho manual | Confirma que o usuário **não precisa executar** a tarefa manualmente — princípio alinhado ao nosso objetivo de remover o script do fluxo. |
+| Pre-roteulagem assistida por IA é apontada como diferencial | G2 — alguns usuários relatam que a rotulagem pré-anotada por modelos reduz trabalho manual | É uma referência para automatizar etapas quando isso fizer sentido; não confirma o processo nem a necessidade do público Baja. |
 | Há relatos de **lentidão no carregamento de imagens** e de instabilidade da interface de anotação com conjuntos grandes (acima de alguns milhares de imagens) | SearchTools.ai (reunindo avaliações do G2); AppCritica — https://www.appcritica.com/review/roboflow/ | Alerta de desempenho. Se o nosso usuário carregar vídeos longos ou lotes grandes, o feedback de espera precisa ser bem desenhado. |
 | Abstrações pesadas "podem esconder os fundamentos" para quem está aprendendo | AppCritica | Alerta: uma interface que esconde o modelo pode tanto ajudar (usuário técnico) quanto atrapalhar (quem precisa entender o resultado). Relevante para a escolha de nível de transparência. |
 | Política de dados públicos por padrão no plano gratuito e cobrança baseada em créditos são queixas recorrentes | Oryndex — https://oryndex.co/tools/roboflow | Questão de **modelo de negócio**, não de tela. Para o nosso recorte, o produto é gratuito e local, o que evita esse custo de entrada. |
@@ -75,19 +75,17 @@ As afirmações abaixo são **opiniões de terceiros**, com fonte registrada.
 - Receptor típico: equipes de desenvolvedores e pequenas empresas que precisam chegar rápido a um modelo implantado.
 - **Implicação para o nosso projeto:** o nosso recorte é local, gratuito e de escopo restrito (executar modelos já disponíveis). Não há dependência de créditos, e isso é um diferencial de adoptabilidade frente ao Roboflow.
 
-> `[?]` As faixas de preço divergem entre as fontes consultadas (Starter em torno de US$ 79/mês ou US$ 249/mês, dependendo da fonte e do plano). Os valores **não foram confirmados** e devem ser verificados em https://roboflow.com/pricing antes da entrega. Registramos a divergência em vez de escolher um valor.
-
 #### Pontos positivos, limitações e lições
 
 | Ponto | Tipo | Evidência | Implicação para o nosso projeto |
 |---|---|---|---|
-| Upload como ação primária, com ícone visível | Padrão observado (positivo) | [Figura E3](../../assets/02_concorrencia/roboflow_input_imagens.png) | O nosso usuário precisa de uma entrada de dados óbvia e em linguagem simples. |
+| Upload como ação primária, com ícone visível | Padrão observado (positivo) | [Figura E3](../../assets/02_concorrencia/roboflow_input_imagens.png) | Referência para uma entrada de dados clara e em linguagem simples; validar a necessidade do público Baja. |
 | Seleção de modelo acessível, com justificativas por trilha | Padrão observado (positivo, com ressalva) | [Figura E4](../../assets/02_concorrencia/roboflow_selecionar_modelos.png) | **Oferecer a escolha de modelo com justificativa**, mas em lista explícita, e não apenas por descoberta conversacional. |
 | Versionamento de datasets e capacidade de reverter anotações | Padrão observado (positivo, com fonte pública) | SearchTools.ai / G2 | É a origem mais clara para **RC02**. Aplicável apenas se o nosso recorte incluir recuperação de análises anteriores. |
-| Acerto de métricas de desempenho do modelo com filtros e visualizações | Relato de usuário | G2 — "the evaluation graphs show how well the model is performing" | Requisito confirmado: o nosso usuário precisa de métricas do modelo, e não apenas do trabalho de anotação. |
+| Métricas de desempenho do modelo com filtros e visualizações | Relato de usuário | G2 — avaliação a confirmar na fonte primária | Mostra um padrão de avaliação de modelos no produto. Para o nosso projeto, é uma referência de design; a necessidade do público Baja continua como hipótese. |
 | Seleção de modelo depende de o usuário descobrir o chat | Limitação (auto-observação da equipe) | [Figura E4](../../assets/02_concorrencia/roboflow_selecionar_modelos.png) | Uma **lista explícita** reduz dependência de descoberta. Decisão de projeto: adotar lista, não chat. |
 | Evidência visual é insuficiente para avaliar o fluxo completo | Limite de interpretação | [Figura E3](../../assets/02_concorrencia/roboflow_input_imagens.png) | A equipe deve ampliar esta captura (sem recorte) antes de citar o fluxo. |
-| Lentidão em conjuntos grandes | Limitação (com fonte pública) | SearchTools.ai; AppCritica | Feedback de progresso e tolerância a espera precisam ser tratados como requisito. |
+| Lentidão em conjuntos grandes | Limitação (com fonte pública) | SearchTools.ai; AppCritica | Sugere investigar feedback de progresso e tolerância à espera caso o fluxo envolva arquivos grandes. |
 | Versionamento só se aplica se o recorte incluir histórico | Limite de escopo | seção 2.1 — rastreabilidade | Não assumir treinamento nem versionamento de modelos: nosso recorte é **executar** modelos disponíveis, não treiná-los. |
 
 ## Referências desta análise
@@ -100,4 +98,4 @@ As afirmações abaixo são **opiniões de terceiros**, com fonte registrada.
 
 ---
 
-**Rastreabilidade:** as observações desta análise alimentam as hipóteses **H09** (interfaces conhecidas), **H10** (complexidade das ferramentas) e **H11** (padrões familiares) em [`../../RASTREABILIDADE.md`](../../RASTREABILIDADE.md). O padrão "seleção de modelo com justificativa" alimenta a recomendação **RC01** verificada em [`../02_analise_concorrencia.md`](../02_analise_concorrencia.md).
+**Rastreabilidade:** as observações desta análise alimentam as hipóteses **H09** (interfaces conhecidas), **H10** (complexidade das ferramentas) e **H11** (padrões familiares) em [`../../RASTREABILIDADE.md`](../../RASTREABILIDADE.md). O padrão de seleção explícita de modelo sustenta o fluxo **F01**; a recomendação **RC01** trata separadamente da explicação contextual de termos.

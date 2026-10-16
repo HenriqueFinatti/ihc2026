@@ -54,7 +54,7 @@ As afirmações abaixo são **opiniões de terceiros**, não observações próp
 
 | Opinião | Fonte | O que sugere para o nosso projeto |
 |---|---|---|
-| Usuários avaliam o CVAT positivamente quanto à profundidade de anotação e ao controle granular; nota agregada ~4,6–4,8/5 em 18–19 avaliações | G2 — https://www.g2.com/products/cvat/reviews (acesso 28/09/2026; números também republicados por Oryndex e Toolradar) | O CVAT é percebido como **poderoso e completo**, o que confirma que existe bastante terminologia e configuração. Reforça a necessidade de simplificar para o nosso perfil. |
+| Usuários avaliam o CVAT positivamente quanto à profundidade de anotação e ao controle granular | G2 — https://www.g2.com/products/cvat/reviews (acesso 28/09/2026) | O CVAT é percebido como **poderoso e completo**. Isso é referência para investigar a quantidade de terminologia e configuração adequada ao nosso perfil; não confirma a necessidade de simplificação para o Baja. |
 | "Interface densa em funcionalidades" e "curva de aprendizado íngreme" são queixas recorrentes | Oryndex — https://oryndex.co/tools/cvat (acesso 28/09/2026), sintetizando avaliações do G2 | Apoia a hipótese **H10** (ferramentas genéricas são complexas para o perfil priorizado). |
 | O **sistema de atalhos é descrito como complexo** e demanda tempo para ser dominado por novos anotadores | Oryndex (sintetizando o G2) | **Corrige uma suposição da equipe:** a equipe havia atribuído "excelente suporte a atalhos" como oportunidade. A evidência pública sugere o contrário para usuários novos. Não devemos prometer atalhos como diferencial. |
 | Relatos de lentidão da interface com vídeos muito grandes ou anotações densas | Francis Okafor — https://www.francisokafor.com/tools/cvat (acesso 28/09/2026) | Alerta de desempenho para conteúdos grandes — relevante se o nosso usuário carregar vídeos longos. |
@@ -98,4 +98,4 @@ As afirmações abaixo são **opiniões de terceiros**, não observações próp
 
 ---
 
-**Rastreabilidade:** as observações desta análise alimentam as hipóteses **H09** (interfaces conhecidas), **H10** (complexidade das ferramentas) e **H11** (padrões familiares) em [`../../RASTREABILIDADE.md`](../../RASTREABILIDADE.md). O padrão "seleção de modelo por lista explícita" alimenta a recomendação **RC01** verificada em [`../02_analise_concorrencia.md`](../02_analise_concorrencia.md).
+**Rastreabilidade:** as observações desta análise alimentam as hipóteses **H09** (interfaces conhecidas), **H10** (complexidade das ferramentas) e **H11** (padrões familiares) em [`../../RASTREABILIDADE.md`](../../RASTREABILIDADE.md). O padrão de seleção de modelo por lista explícita sustenta o fluxo **F01**; a recomendação **RC01** trata separadamente da explicação contextual de termos.

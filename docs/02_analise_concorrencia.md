@@ -1,7 +1,7 @@
 # Entrega 2 — Público-alvo e análise de concorrência
 
-**Data:** 16/09/2026 (primeira versão) · 28/09/2026 (revisão após feedback)
-**Status:** 🟦 revisada após feedback
+**Data:** 16/09/2026 (primeira versão) · 28/09/2026 (revisão após feedback)  
+**Status:** 🟨 em andamento — revisada após feedback; aguardando capturas estáticas e confirmação das citações de avaliações.
 **Responsabilidade mínima:** cada integrante analisa pelo menos 1 concorrente/interface representativa; a equipe produz síntese comparativa.
 
 ## Objetivo da atividade
@@ -12,33 +12,24 @@ Compreender soluções do mesmo domínio **e também interfaces familiares ao p�
 
 ## Histórico de revisões
 
-**Revisão de 28/09/2026 — a partir do feedback do professor sobre a Entrega 02:**
-
-| Correção solicitada | O que foi feito |
-|---|---|
-| As análises individuais não foram disponibilizadas | Os três arquivos foram reescritos e agora estão completos: [`entrega_2/02_Tiago.md`](entrega_2/02_Tiago.md) (CVAT), [`entrega_2/02_Henrique.md`](entrega_2/02_Henrique.md) (Roboflow) e [`entrega_2/02_Mateus.md`](entrega_2/02_Mateus.md) (Supervisely). Cada um contém autoria, classificação, contexto, funcionalidades com evidência, opiniões de UX com fonte, modelo de negócio e lições. |
-| Evidências visuais não foram vinculadas aos argumentos | A seção 3 agora descreve **cada** arquivo de `assets/02_concorrencia/`, indicando o que comprova, o que **não** comprova e a origem. Cada análise individual traz legenda de figura. |
-| RC01–RC04 sem origem observável, objetivo e adaptação | A seção 5 foi reescrita com a cadeia **observação → dificuldade/oportunidade → objetivo do usuário → recomendação**. RC02 foi rebaixada a pendente; RC03 foi corrigida pela própria evidência; RC04 teve a origem corrigida. |
-| Afirmações não comprovadas na síntese ("poucos atalhos", "contraste ruim", "difícil desfazer") | Removidas ou reescritas com fonte verificável na seção 4. |
-| Público-alvo repetia a lista de produtos | A seção 1 agora descreve o público e a sua relação com o nosso usuário. |
-| Mudanças de escopo e hipóteses não registradas | Registradas em [`../RASTREABILIDADE.md`](../RASTREABILIDADE.md), seção 5, e vinculadas às hipóteses na seção 6. |
-| Faltavam datas de acesso e módulo analisado | Cada análise individual agora registra módulo/versão, data de acesso e módulo exato. |
+- **28/09/2026:** corrigidas atribuições de evidências e recomendações após feedback; RC02 foi rebaixada a pendência e RC03/RC04 foram recalibradas.
+- **15/10/2026:** registrada a pendência de capturas estáticas e removidas conclusões que tratavam observações de concorrentes como confirmação sobre o público Baja.
 
 ## Entrada obrigatória da Entrega 1
 
 | Item citado na Entrega 1 | Onde foi analisado | Decisão |
 |---|---|---|
-| CVAT | [`entrega_2/02_Tiago.md`](entrega_2/02_Tiago.md) | Mantido como **análogo** — referência de padrões (seleção de modelo, indicadores de progresso) |
-| Roboflow | [`entrega_2/02_Henrique.md`](entrega_2/02_Henrique.md) | Mantido como **análogo** — o mais próximo do nosso perfil de usuário |
-| Supervisely | [`entrega_2/02_Mateus.md`](entrega_2/02_Mateus.md) | Mantido como **análogo** — contraponto de densidade funcional |
+| CVAT | [`entrega_2/02_Tiago.md`](entrega_2/02_Tiago.md) | **análogo** — referência de padrões (seleção de modelo, indicadores de progresso) |
+| Roboflow | [`entrega_2/02_Henrique.md`](entrega_2/02_Henrique.md) | **análogo** — o mais próximo do nosso perfil de usuário |
+| Supervisely | [`entrega_2/02_Mateus.md`](entrega_2/02_Mateus.md) | **análogo** — contraponto de densidade funcional |
 
 ## 1. Público-alvo desta análise
 
 O público-alvo do **nosso projeto** é o *analista de segmentação da equipe Baja FEI* — um integrante que conhece o domínio off-road e o projeto Baja, mas que pode não dominar programação (ver [`01_conhecendo_o_problema.md`](01_conhecendo_o_problema.md), seção 7.2).
 
-**Este ponto foi corrigido nesta revisão.** A versão anterior escrevia "Estudante FEI" na rastreabilidade e descrevia o perfil por "interesse em participar do projeto Baja". Houve uma **imprecisão de redação, e não uma mudança de escolha**: o perfil sempre foi um integrante da equipe Baja que executa a análise de segmentação. Interessar-se pelo projeto não equivale a executar a atividade de análise.
+**Esta correção foi registrada na rastreabilidade.** A versão anterior utilizava "Estudante FEI" em parte da documentação, o que foi padronizado para "analista de segmentação da equipe Baja FEI". Ver [`../RASTREABILIDADE.md`](../RASTREABILIDADE.md), seção 5.
 
-> **Registro de imprecisão:** a Entrega 1 e a matriz de rastreabilidade usavam formulações diferentes para o mesmo perfil. Optamos por "analista de segmentação da equipe Baja FEI" em ambos os arquivos. Ver [`../RASTREABILIDADE.md`](../RASTREABILIDADE.md), seção 5.
+> **Imprecisão de redação registrada:** a Entrega 1 e a matriz de rastreabilidade usavam formulações diferentes para o mesmo perfil. Optamos por "analista de segmentação da equipe Baja FEI". Ver [`../RASTREABILIDADE.md`](../RASTREABILIDADE.md), seção 5.
 
 Os três produtos analisados têm **públicos próprios, diferentes do nosso**:
 
@@ -167,9 +158,9 @@ Cada recomendação segue a cadeia **observação → dificuldade/oportunidade �
 | **H09** — quais interfaces o público conhece | Descobrimos que o CVAT exige Docker e a Supervisely tem curva íngreme; a Roboflow é a mais acessível. Mas **isso descreve os produtos, não o nosso usuário**. | **Aberta** — nenhum destes três é software conhecido pelo Baja. |
 | **H08** — necessidade de histórico | A Roboflow mostra versionamento como prática madura, mas **não** define o que o nosso usuário precisaria recuperar. | **Aberta** — RC02 virou pendência vinculada a esta hipótese. |
 | **H04** — familiaridade com métricas influencia a interação | RC03 (tabela) e RC01 (tradução de termos) decorrem diretamente desta hipótese. | **Aberta** — sustentada como hipótese de projeto, ainda sem teste. |
-| **H01 / H05** — benefício esperado e processo atual | Ver [`../RASTREABILIDADE.md`](../RASTREABILIDADE.md): a análise de concorrência **não** confirma H01 nem H05, e os estados foram corrigidos. | **Corrigidas** — sem evidência suficiente. |
+| **H01 / H05** — benefício esperado e processo atual | A análise de concorrência não confirma nenhuma das duas hipóteses para o público Baja. H01 permanece aberta; H05 continua sustentada apenas pela observação interna do processo atual, cuja limitação está registrada na matriz. | **Sem confirmação pela análise de concorrência.** |
 
-> **Ponto de honestidade epistemológica:** encontrar uma funcionalidade em um concorrente **não** confirma, por si só, um benefício para o nosso usuário nem o processo atual dos integrantes do Baja. É por isso que H01 e H05 foram rebaixadas na matriz de rastreabilidade.
+> **Ponto de honestidade epistemológica:** encontrar uma funcionalidade em um concorrente **não** confirma, por si só, um benefício para o nosso usuário nem o processo atual dos integrantes do Baja. Por isso, H01 continua aberta e H05 mantém apenas a evidência interna limitada registrada na matriz.
 
 ## 7. Referências
 
@@ -194,7 +185,7 @@ Cada recomendação segue a cadeia **observação → dificuldade/oportunidade �
 - [X] O mapa inicial de alternativas da Entrega 1 foi revisado e aprofundado.
 - [X] Há pelo menos uma análise completa por integrante, com os três arquivos depositados no repositório.
 - [X] Cada análise identifica autoria, classificação da alternativa, módulo analisado, contexto, funcionalidades com evidência, opiniões de UX com fonte, modelo de negócio e lições.
-- [X] Cada análise contém prints legíveis da interface.
+- [ ] Cada análise contém prints legíveis da interface.
 - [ ] Prints mostram telas/estados relevantes **e há captura estática do Supervisely**. As duas gravações de vídeo precisam ser convertidas em prints estáticos dos estados citados (E5, E6). **Pendente.**
 - [X] Foram analisados concorrentes e/ou interfaces representativas ao público.
 - [X] Cada padrão foi atribuído **apenas** ao produto em que foi verificado, com marcação "não observado" quando o recorte não permite concluir.
