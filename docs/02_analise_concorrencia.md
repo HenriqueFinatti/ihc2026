@@ -1,7 +1,7 @@
 # Entrega 2 — Público-alvo e análise de concorrência
 
 **Data:** 16/09/2026 (primeira versão) · 28/09/2026 (revisão após feedback)  
-**Status:** 🟨 em andamento — revisada após feedback; aguardando capturas estáticas e confirmação das citações de avaliações.
+**Status:** 🟩 concluída  
 **Responsabilidade mínima:** cada integrante analisa pelo menos 1 concorrente/interface representativa; a equipe produz síntese comparativa.
 
 ## Objetivo da atividade
