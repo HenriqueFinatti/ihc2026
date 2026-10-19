@@ -83,9 +83,9 @@ No contexto do nosso TCC, a Supervisely é relevante por dois motivos: é a úni
 
 | Ponto | Tipo | Evidência | Implicação para o nosso projeto |
 |---|---|---|---|
-| Tabelas de métricas existem no produto, junto com gráficos | Padrão observado (positivo) | [Figura E6](../../assets/02_concorrencia/analise-metricas.mp4), ~8 s | **Corrige RC03.** A tabela deve ser adotada como alternativa ao gráfico desde o início, e não como correção de um problema que não existe. |
-| Barras de progresso de época e lote durante o treinamento | Padrão observado (positivo) | [Figura E5](../../assets/02_concorrencia/treinamento.webm), ~12–18 s | Origem mais clara de **RC04**. Adaptar as etapas e os textos ao nosso fluxo de execução, sem mencionar "treinando". |
-| Filtros e estatísticas de dataset na aba de análise | Padrão observado (positivo) | [Figura E6](../../assets/02_concorrencia/analise-metricas.mp4) | Apoia a utilidade de filtros, mas **apenas se** o nosso recorte mantiver histórico — ver H08. |
+| Tabelas de métricas existem no produto, junto com gráficos | Padrão observado (positivo) | [Figura E6](../../assets/02_concorrencia/analise-metricas-supervisely.png), ~8 s | **Corrige RC03.** A tabela deve ser adotada como alternativa ao gráfico desde o início, e não como correção de um problema que não existe. |
+| Barras de progresso de época e lote durante o treinamento | Padrão observado (positivo) | [Figura E5](../../assets/02_concorrencia/treinamento-supervisely.png), ~12–18 s | Origem mais clara de **RC04**. Adaptar as etapas e os textos ao nosso fluxo de execução, sem mencionar "treinando". |
+| Filtros e estatísticas de dataset na aba de análise | Padrão observado (positivo) | [Figura E6](../../assets/02_concorrencia/analise-metricas-supervisely.png) | Apoia a utilidade de filtros, mas **apenas se** o nosso recorte mantiver histórico — ver H08. |
 | Integração de todas as etapas em um só ambiente | Ponto positivo com fonte | G2 | Reduz troca de contexto. No nosso recorte, o caminho inteiro (enviar → executar → comparar) deve estar em uma única interface. |
 | Curva de aprendizado e excesso de funcionalidades | Limitação (com fonte) | G2 — ver "Experiência do usuário e opiniões" | Justifica uma interface contida, voltada a **um** fluxo principal. |
 | Lentidão relatada | Limitação (com fonte) | G2 | Reforça a necessidade de feedback de estado e de espera tolerada. |
