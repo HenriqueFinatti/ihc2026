@@ -24,15 +24,15 @@ Se o integrante escolher um novo problema/situação, explique por que ele passo
 
 ## Cenário C01 — {{título}}
 
-**Autor(a):** {{nome — matrícula}}  
-**Persona(s) relacionada(s):** {{P01}}  
-**Necessidade relacionada:** {{R01}}  
-**Situação concreta da Entrega 1 relacionada:** {{seção 4.4 / H01 / outra ou “nova situação justificada”}}  
-**Hipóteses ainda presentes:** {{H01, H02 ou —}}
+**Autor(a):** Tiago - 22.123.017-0
+**Persona(s) relacionada(s):** Rafael Pereira  
+**Necessidade relacionada:** {{R01}}?  
+**Situação concreta da Entrega 1 relacionada:** {{seção 4.4 / H01 / outra ou “nova situação justificada”}}?  
+**Hipóteses ainda presentes:** {{H01, H02 ou —}}?
 
 ### 1. Cenário inicial
 
-{{narrativa}}
+Rafael acompanha os testes do Baja em terrenos off‑road dentro da FEI. Ele coleta imagens com câmeras acopladas ao veículo e precisa validar se o modelo de segmentação está identificando corretamente áreas transitáveis e obstáculos. Atualmente, esse processo depende de scripts em Python, Rafael precisa abrir cada imagem, rodar o código manualmente e gerar a máscara de segmentação. Quando o script quebra ou apresenta erro, ele perde tempo depurando, mesmo não sendo desenvolvedor. Além disso, cada execução gera arquivos separados que precisam ser organizados manualmente em pastas. Para comparar modelos, Rafael exporta métricas em planilhas e gráficos feitos à mão, o que consome muito tempo. Essa rotina gera frustração, ele sente que perde tempo com tarefas repetitivas e que a análise não é clara o suficiente para apoiar decisões rápidas da equipe.
 
 ### 2. Questões de refinamento
 
@@ -40,7 +40,11 @@ Use os tipos de questões/taxonomia definidos na aula. As perguntas devem revela
 
 | # | Questão | Por que precisa ser respondida | Fonte/forma de obter resposta |
 |---|---|---|---|
-| Q1 | {{...}} | {{...}} | {{...}} |
+| Q1 | Por que Rafael precisa validar rapidamente as segmentações em campo? | Para entender as pressões de tempo e contexto que tornam a atividade crítica. | Entrevista com Rafael e equipe Baja FEI |
+| Q2 | Quais problemas surgem quando o script falha em campo? | Para detalhar erros, consequências e estratégias alternativas. | logs de execução. |
+| Q3 | Como Rafael organiza atualmente os arquivos gerados pelos scripts? | Para revelar detalhes da sequência de ações e dificuldades com gestão de dados. | Análise dos diretórios. |
+| Q4 | Quem depende diretamente dos resultados das análises de Rafael? | Para mapear atores que consomem as informações e precisam ser notificados. | Equipe Baja FEI. |
+| Q5 | Como Rafael decide qual modelo ou versão comparar em cada teste? | Para entender o planejamento e critérios de escolha. | Discussões técnicas na equipe Baja FEI. |
 
 ### 3. Cenário refinado
 
