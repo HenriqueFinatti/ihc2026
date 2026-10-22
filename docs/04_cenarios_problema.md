@@ -22,7 +22,7 @@ A interface da disciplina aparecerá somente depois, nos cenários de interaçã
 
 Se o integrante escolher um novo problema/situação, explique por que ele passou a ser relevante e indique a evidência que motivou sua inclusão.
 
-## Cenário C01 — {{título}}
+## Cenário C01 — Validação manual de segmentação em campo
 
 **Autor(a):** Tiago - 22.123.017-0
 **Persona(s) relacionada(s):** Rafael Pereira  
@@ -40,10 +40,10 @@ Use os tipos de questões/taxonomia definidos na aula. As perguntas devem revela
 
 | # | Questão | Por que precisa ser respondida | Fonte/forma de obter resposta |
 |---|---|---|---|
-| Q1 | Por que Rafael precisa validar rapidamente as segmentações em campo? | Para entender as pressões de tempo e contexto que tornam a atividade crítica. | Entrevista com Rafael e equipe Baja FEI |
+| Q1 | Por que Rafael precisa validar rapidamente as segmentações em campo? | Para entender as pressões de tempo e contexto que tornam a atividade crítica. | Entrevista com equipe Baja FEI. |
 | Q2 | Quais problemas surgem quando o script falha em campo? | Para detalhar erros, consequências e estratégias alternativas. | logs de execução. |
 | Q3 | Como Rafael organiza atualmente os arquivos gerados pelos scripts? | Para revelar detalhes da sequência de ações e dificuldades com gestão de dados. | Análise dos diretórios. |
-| Q4 | Quem depende diretamente dos resultados das análises de Rafael? | Para mapear atores que consomem as informações e precisam ser notificados. | Equipe Baja FEI. |
+| Q4 | Quem depende diretamente dos resultados das análises de Rafael? | Para mapear atores que consomem as informações e precisam ser notificados. | Entrevista com equipe Baja FEI. |
 | Q5 | Como Rafael decide qual modelo ou versão comparar em cada teste? | Para entender o planejamento e critérios de escolha. | Discussões técnicas na equipe Baja FEI. |
 
 ### 3. Cenário refinado
