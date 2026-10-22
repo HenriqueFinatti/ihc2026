@@ -1,7 +1,7 @@
 # Entrega 4 — Cenários de análise/problema
 
-**Data:** {{dd/mm/aaaa}}  
-**Status:** ⬜ não iniciada  
+**Data:** 20/10/2026  
+**Status:** 🟨 em andamento 
 **Responsabilidade:** 1 solução completa por integrante
 
 ## Objetivo da atividade
@@ -76,6 +76,8 @@ Rafael acompanha os testes do Baja em terrenos off-road dentro da FEI e coleta i
 | **T01** | Avaliar a qualidade da segmentação de uma imagem | C01; Q1, Q7; R01 | É o núcleo da validação: comparar imagem e máscara, interpretar classes/métricas e decidir se o resultado é confiável. A ausência de informação de confiança e de critério explícito torna a tarefa crítica. | Alta |
 | **T02** | Executar a segmentação de imagens com uma configuração disponível | C01; Q2, Q8; R02 | É a entrada da atividade: abrir cada imagem, rodar o script, gerar a máscara e lidar com falhas. A depuração interrompe o fluxo e consome tempo. | Alta |
 | **T03** | Comparar resultados entre configurações/modelos | C01; Q4, Q5, Q7; R03 | Sustenta a decisão da equipe sobre qual configuração usar. Hoje a comparação é manual, as métricas ficam dispersas e Rafael perde o fio da comparação. | Alta |
+
+#### Informações que precisam ser coletadas
 
 | Informação | Origem | Para que serve | Como coletar |
 |---|---|---|---|
