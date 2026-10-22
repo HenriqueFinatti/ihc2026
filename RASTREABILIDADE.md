@@ -42,13 +42,13 @@ Use esta tabela para itens importantes marcados como `[H]` ou `[?]`. Preserve o 
 
 ## 3. Rastreabilidade entre contribuição técnica, necessidades e artefatos
 
-> **Estado atual:** parcialmente preenchido a partir da Entrega 3. As colunas de cenário, HTA/GOMS/CTT, MoLIC, Figma, heurística, teste e decisão seguem `PENDENTE` e serão preenchidas nas entregas correspondentes (E4, E5, E9, E10, E11, E13, E14). As personas (E3) já estão registradas.
+> **Estado atual:** parcialmente preenchido. Personas (E3) já registradas; cenário problema com **C01** (P01) e **C02** (P03) — falta o cenário da P02. As colunas de HTA/GOMS/CTT, MoLIC, Figma, heurística, teste e decisão seguem `PENDENTE` e serão preenchidas nas entregas correspondentes (E5, E9, E10, E11, E13, E14).
 
 | ID | Capacidade do TCC utilizada | Necessidade/problema | Persona | Cenário problema | Objetivo/tarefa | HTA/GOMS/CTT | Cenário de interação / signos | MoLIC | Tela(s) Figma | Heurística / problema | Tarefa no teste | Decisão/melhoria |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| R01 | Segmentar vias off-road (DeepLabv3+ + ResNet152) | H06, H05 — dificuldade de interpretar o resultado sem apoio visual | **P01** (Rafael — avaliar qualidade) | PENDENTE (E4) | T01 — avaliar a qualidade da segmentação | PENDENTE (E5) | PENDENTE (E9) | PENDENTE (E10) | PENDENTE (E11) | PENDENTE (E13) | PENDENTE (E14) | PENDENTE |
-| R02 | Executar a segmentação sem depender de script | H05 — processo atual exige execução de scripts | **P01** (Rafael — executar a análise) | PENDENTE (E4) | T02 — enviar imagem e iniciar a execução | PENDENTE (E5) | PENDENTE (E9) | PENDENTE (E10) | PENDENTE (E11) | PENDENTE (E13) | PENDENTE (E14) | PENDENTE |
-| R03 | Comparar desempenho entre modelos | H01, H12 — selecionar o modelo adequado | **P01** (Rafael — comparar); **P02** (Andreia — experimentar); **P03** (Larissa — decidir) | PENDENTE (E4) | T03 — comparar métricas entre modelos | PENDENTE (E5) | PENDENTE (E9) | PENDENTE (E10) | PENDENTE (E11) | PENDENTE (E13) | PENDENTE (E14) | PENDENTE |
+| R01 | Segmentar vias off-road (DeepLabv3+ + ResNet152) | H06, H05 — dificuldade de interpretar o resultado sem apoio visual | **P01** (Rafael — avaliar qualidade) | C01 | T01 — avaliar a qualidade da segmentação | PENDENTE (E5) | PENDENTE (E9) | PENDENTE (E10) | PENDENTE (E11) | PENDENTE (E13) | PENDENTE (E14) | PENDENTE |
+| R02 | Executar a segmentação sem depender de script | H05 — processo atual exige execução de scripts | **P01** (Rafael — executar a análise) | C01 | T02 — enviar imagem e iniciar a execução | PENDENTE (E5) | PENDENTE (E9) | PENDENTE (E10) | PENDENTE (E11) | PENDENTE (E13) | PENDENTE (E14) | PENDENTE |
+| R03 | Comparar desempenho entre modelos | H01, H12 — selecionar o modelo adequado | **P01** (Rafael — comparar); **P02** (Andreia — experimentar); **P03** (Larissa — decidir) | C01, C02 | T03 — comparar métricas entre modelos (C01); T04 — comparar entre configurações/modelos (C02); T05 — decidir e justificar a adoção (C02) | PENDENTE (E5) | PENDENTE (E9) | PENDENTE (E10) | PENDENTE (E11) | PENDENTE (E13) | PENDENTE (E14) | PENDENTE |
 
 ## 4. Rastreabilidade de padrões de interface
 
