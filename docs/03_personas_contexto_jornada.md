@@ -53,7 +53,7 @@ Antes de criar personas, retome os tipos de usuários, características relevant
 
 ### Persona P01 — Rafael Pereira
 
-**Autor(a):** Tiago — 22.123.017-0  
+**Autor(a):** Tiago Fagundes dos Santos — 22.123.017-0  
 **Tipo:** primária  
 **Base de evidências:** perfil "Analista de segmentação" adotado pela equipe na Entrega 1 (§2.2, §2.4) `[H]` + observação interna do processo atual por scripts (§4.1, §4.6) `[F]`, que **não** cobre usuários finais. **Proto-persona a validar:** não há observação do uso por terceiros nem entrevista.  
 **Hipóteses da Entrega 1 relacionadas:** H02, H04, H05, H06
@@ -103,7 +103,7 @@ Antes de criar personas, retome os tipos de usuários, características relevant
 
 ### Persona P02 - Andreia Silva
 
-**Autor(a):** Mateus Marana - 22.123.026-1  
+**Autor(a):** Mateus Marana Assuena — 22.123.026-1  
 **Tipo:** Primária  
 **Base de evidências:** perfil "Desenvolvedor de modelos" adotado pela equipe na Entrega 1 (§2.2) `[H]`. **Proto-persona a validar:** não há observação de uso nem entrevista. A hipótese H02 ("pode não dominar programação") **não se sustenta** neste perfil — Andreia implementa modelos e escreve Python, como registrado no campo Experiência tecnológica.  
 **Hipóteses da Entrega 1 relacionadas:** H01, H04
@@ -163,7 +163,7 @@ Antes de criar personas, retome os tipos de usuários, características relevant
 
 ### Persona P03 — Larissa Camargo
 
-**Autor(a):** Henrique — 22.123.030-3 <br>
+**Autor(a):** Henrique Finatti Silveira Belo Trebbi — 22.123.030-3 <br>
 **Tipo:** primária <br>
 **Base de evidências:** perfil "Gestor de projeto" adotado pela própria equipe na Entrega 1 (seção 2.2) + recorte do TCC. **Proto-persona a validar**: não existe observação de uso nem entrevista que a sustente. <br>
 **Hipóteses da Entrega 1 relacionadas:** H01, H04, H06, H12
@@ -215,7 +215,7 @@ As três personas cobrem **três tarefas diferentes** do mesmo produto — não 
 
 | Persona | Papel | Tarefa central | Dor que orienta o design | Rastreabilidade |
 |---|---|---|---|---|
-| **P01 — Rafael Pereira** | **analista de segmentação — perfil prioritário** | **T01, T02 e T03** — executar a segmentação, avaliar a qualidade e comparar modelos | Scripts que quebram e métricas sem referência | **R01, R03**, H05, H06 |
+| **P01 — Rafael Pereira** | **analista de segmentação — perfil prioritário** | **T01, T02 e T03** — executar a segmentação, avaliar a qualidade e comparar o resultado de uma imagem entre configurações | Scripts que quebram e métricas sem referência | **R01, R03**, H05, H06 |
 | **P02 — Andreia Silva** | pesquisadora / coordenadora | experimentar modelos e acompanhar a evolução da pesquisa | Pouco tempo para treinar modelos e nenhuma interface própria | **R03**, H04 |
 | **P03 — Larissa Camargo** | gestora de projeto | **decisão** — consultar resultados consolidados e decidir qual modelo adotar nos testes | Números soltos, sem interpretação, e dependência de colegas técnicos | **R03** (decisão), H01, H12 |
 
@@ -246,7 +246,7 @@ Consolidação a partir da seção 5 da Entrega 1 (§5.1–§5.6) e das três pe
 | Dimensão | Descrição | Implicação de design |
 |---|---|---|
 | **Usuários** | Três perfis da própria equipe Baja FEI, sem usuários externos: **P01 (perfil prioritário)** executa a análise e avalia a qualidade, **P02** pesquisa e coordena, **P03** consulta os resultados consolidados e decide. Qualquer membro pode executar — 01 §5.4 `[H]`. O piloto é stakeholder indireto (H03) e **não** interage com a interface. | Interface única, **sem login** (01 §8 descartou usuários/perfis/permissões — F06, F07). Não criar modos "iniciante/especialista" sem evidência; priorizar o que P01 precisa e deixar o avançado acessível sem atrapalhar. |
-| **Tarefas** | Três, derivadas de R01–R03: **T01** avaliar a qualidade da segmentação; **T02** enviar imagem e iniciar a execução sem código; **T03** comparar métricas entre modelos. | Um fluxo principal único — **enviar → executar → comparar → exportar** — com a comparação acessível em um passo, não escondida em navegação profunda. |
+| **Tarefas** | Três, derivadas de R01–R03: **T01** avaliar a qualidade da segmentação; **T02** enviar imagem e iniciar a execução sem código; **T03** comparar o resultado de uma imagem entre configurações. | Um fluxo principal único — **enviar → executar → comparar → exportar** — com a comparação acessível em um passo, não escondida em navegação profunda. |
 | **Equipamentos** | Computadores e notebooks capazes de processar imagens e vídeos, no laboratório FEI ou em PCs pessoais — 01 §5.2 `[F]`. Câmeras do veículo e dispositivos móveis **apenas capturam** os dados; a análise acontece no computador. | Desktop primeiro. Entrada por arquivo local. Nada que exija tela grande ou resolução alta. **Uso móvel fica fora do recorte** — não derivar requisito de quem só captura. |
 | **Ambiente físico** | Laboratório FEI e pistas off-road da FEI — 01 §5.1 `[F]`. Boa iluminação é necessária para **capturar** imagens boas; visibilidade da tela em ambiente externo e interrupções durante a análise estão registradas como `[H]` a investigar (01 §5.3) — inclusive por P01 e P03, que citam uso fora do laboratório. | Contraste alto (leitura em ambiente com luz forte) e **capacidade de retomar de onde parou** após interrupção. Não exigir conexão durante a análise. Nada disso está confirmado — é para checar na Entrega 7. |
 | **Ambiente social/organizacional** | Equipe Baja FEI, com encontros semanais no laboratório. A decisão de **qual modelo adotar** é discutida com a coordenação (objetivo de P03) e as conclusões vão para reuniões e relatórios. | A interface precisa funcionar como **argumento para quem não estava na tela**: a saída exportável é parte do produto, não extra. Metade do valor de P03 está no que ela leva para a reunião. |

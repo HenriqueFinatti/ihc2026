@@ -22,9 +22,22 @@ A interface da disciplina aparecerá somente depois, nos cenários de interaçã
 
 Se o integrante escolher um novo problema/situação, explique por que ele passou a ser relevante e indique a evidência que motivou sua inclusão.
 
+## Convenção de marcação do refinamento
+
+Vale para todos os cenários desta entrega. O objetivo é mostrar, no próprio texto, **o que cada questão de refinamento acrescentou ou alterou** em relação ao cenário inicial.
+
+| Marcação | Significado |
+|---|---|
+| `[Qn]` antes do trecho | O trecho responde à questão de refinamento Qn. |
+| Texto normal | Mantido do cenário inicial, sem alteração de conteúdo. |
+| **Negrito** | Informação **nova**, trazida pela resposta à questão. |
+| *Itálico* | Trecho do cenário inicial **reescrito ou especificado** pela resposta. |
+
+Depois do cenário refinado, uma tabela **Resumo do refinamento** indica, para cada questão, se ela trouxe informação nova, alterou um trecho ou não acrescentou nada. Questões "sem acréscimo" devem ser reformuladas ou investigadas na Entrega 7.
+
 ## Cenário C01 — Validação manual de segmentação em campo
 
-**Autor(a):** Tiago - 22.123.017-0
+**Autor(a):** Tiago Fagundes dos Santos — 22.123.017-0  
 **Persona(s) relacionada(s):** Rafael Pereira  
 **Necessidade relacionada:** {{R01}}?  
 **Situação concreta da Entrega 1 relacionada:** {{seção 4.4 / H01 / outra ou “nova situação justificada”}}?  
@@ -75,7 +88,7 @@ Rafael acompanha os testes do Baja em terrenos off-road dentro da FEI e coleta i
 |---|---|---|---|---|
 | **T01** | Avaliar a qualidade da segmentação de uma imagem | C01; Q1, Q7; R01 | É o núcleo da validação: comparar imagem e máscara, interpretar classes/métricas e decidir se o resultado é confiável. A ausência de informação de confiança e de critério explícito torna a tarefa crítica. | Alta |
 | **T02** | Executar a segmentação de imagens com uma configuração disponível | C01; Q2, Q8; R02 | É a entrada da atividade: abrir cada imagem, rodar o script, gerar a máscara e lidar com falhas. A depuração interrompe o fluxo e consome tempo. | Alta |
-| **T03** | Comparar resultados entre configurações/modelos | C01; Q4, Q5, Q7; R03 | Sustenta a decisão da equipe sobre qual configuração usar. Hoje a comparação é manual, as métricas ficam dispersas e Rafael perde o fio da comparação. | Alta |
+| **T03** | Comparar o resultado de uma imagem entre configurações | C01; Q4, Q5, Q7; R03 | Sustenta a decisão da equipe sobre qual configuração usar. Hoje a comparação é manual, as métricas ficam dispersas e Rafael perde o fio da comparação. | Alta |
 
 #### Informações que precisam ser coletadas
 
@@ -92,7 +105,7 @@ Rafael acompanha os testes do Baja em terrenos off-road dentro da FEI e coleta i
 
 ## Cenário C02 — Decisão de modelo a partir de resultados dispersos
 
-**Autor(a):** Henrique — 22.123.030-3  
+**Autor(a):** Henrique Finatti Silveira Belo Trebbi — 22.123.030-3  
 **Persona(s) relacionada(s):** P03 — Larissa Camargo  
 **Necessidade relacionada:** R03 — comparar desempenho entre modelos (P03: decidir)  
 **Situação concreta da Entrega 1 relacionada:** **Nova situação justificada** — perfil "Gestor de projeto" (01 §2.2 `[H]`) e contexto organizacional (01 §5.4); a E1 não registra situação observada da P03.  
@@ -112,20 +125,37 @@ Quando precisa levar a decisão à coordenação, ela tem dificuldade de explica
 
 | # | Questão | Por que precisa ser respondida | Fonte/forma de obter resposta |
 |---|---|---|---|
-| Q10 | Por que a decisão precisa ocorrer antes do teste e o que se espera dela? | Entender o objetivo real da decisão e o que seria uma escolha bem-sucedida. | Entrevista com Larissa e coordenação. |
-| Q11 | Como os resultados chegam até Larissa hoje: formato, quem envia e com que frequência? | Revelar o fluxo atual de informação e as dependências entre os atores. | Entrevista com Larissa + análise das planilhas e mensagens. |
-| Q12 | Quem participa da decisão e qual é a autoridade de Larissa em relação à coordenação? | Mapear papéis, responsabilidades e quem tem a palavra final. | Entrevista com Larissa e coordenação. |
+| Q10 | Por que a decisão precisa ocorrer antes do teste e o que se espera dela? | Entender o objetivo real da decisão e o que seria uma escolha bem-sucedida. | Entrevista com integrante de gestão (perfil P03) e com a coordenação. |
+| Q11 | Como os resultados chegam até Larissa hoje: formato, quem envia e com que frequência? | Revelar o fluxo atual de informação e as dependências entre os atores. | Entrevista com integrante de gestão (perfil P03) + análise das planilhas e mensagens. |
+| Q12 | Quem participa da decisão e qual é a autoridade de Larissa em relação à coordenação? | Mapear papéis, responsabilidades e quem tem a palavra final. | Entrevista com integrante de gestão (perfil P03) e com a coordenação. |
 | Q13 | Quais métricas ela recebe e como interpreta cada uma? | Identificar o que ela entende e onde precisa de apoio. | Entrevista + análise das saídas de segmentação. |
 | Q14 | Como ela compara modelos ou versões e define qual é o "melhor"? | Entender o critério atual de comparação e suas limitações. | Observação da reunião + entrevista. |
-| Q15 | Que termos técnicos ela não entende e precisa que alguém explique? | Delimitar a barreira de terminologia (RC01). | Entrevista com Larissa. |
-| Q16 | O que acontece quando a decisão é adiada ou errada? | Dimensionar a consequência e a criticidade da decisão. | Entrevista com Larissa e coordenação. |
+| Q15 | Que termos técnicos ela não entende e precisa que alguém explique? | Delimitar a barreira de terminologia (RC01). | Entrevista com integrante de gestão (perfil P03). |
+| Q16 | O que acontece quando a decisão é adiada ou errada? | Dimensionar a consequência e a criticidade da decisão. | Entrevista com integrante de gestão (perfil P03) e com a coordenação. |
 | Q17 | O que ela leva para a reunião e como justifica a escolha? | Entender o material de apoio e a dificuldade de sustentar a recomendação. | Observação + análise dos materiais levados. |
 
 ### 3. Cenário refinado
 
 > P03 é proto-persona: as respostas abaixo são **hipóteses de trabalho**, não relatos. Precisam ser validadas na Entrega 7.
+>
+> Marcação conforme a [convenção de refinamento](#convenção-de-marcação-do-refinamento): texto normal = mantido; **negrito** = novo; *itálico* = reescrito/especificado.
 
-Larissa Camargo é gestora de projeto da equipe Baja FEI. [Q10] A decisão precisa ocorrer antes de cada ciclo de testes porque a configuração escolhida será usada no veículo; o que se espera é uma escolha defensável, não apenas o maior número. [Q12] A decisão é compartilhada com a coordenação: Larissa reúne e recomenda, e a palavra final é discutida no grupo. [Q11] Hoje os resultados chegam por mensagens e planilhas separadas, enviados pelo integrante que executa os modelos, cada configuração em uma execução. [Q13] Ela recebe IoU e acurácia, mas não tem referência de comparação nem explicação do que cada valor significa na prática. **[NOVO: quando a diferença entre dois modelos é pequena, ela não sabe dizer se é relevante.]** [Q14] Para comparar, abre as planilhas lado a lado e escolhe pelo número maior quando não há outro critério. [Q15] Termos como IoU, acurácia por classe e "transitável × não transitável" geram dúvida e dependem de um colega para serem explicados. [Q17] Na reunião, leva os números e tenta justificar a escolha, mas tem dificuldade de sustentar a recomendação. [Q16] Quando adia ou escolhe sem critério, o teste pode usar um modelo inadequado e a equipe precisa refazer a análise depois. Larissa sente que depende dos colegas técnicos e que decide sem segurança.
+Larissa Camargo é gestora de projeto da equipe Baja FEI e não escreve código nem domina machine learning ou estatística. [Q10] **A decisão precisa ocorrer antes de cada ciclo de testes porque a configuração escolhida será usada no veículo; o que se espera é uma escolha defensável, não apenas o maior número.** [Q12] **A decisão é compartilhada com a coordenação: Larissa reúne os resultados e recomenda, e a palavra final é discutida no grupo.** [Q11] Os resultados chegam por mensagens e planilhas separadas, enviados pelo integrante que executa os modelos, cada configuração em uma execução. [Q13] Ela recebe IoU e acurácia, mas não tem referência de comparação nem explicação do que cada valor significa na prática. [Q14] Para comparar, **abre as planilhas lado a lado**; *quando a diferença entre dois modelos é pequena, não sabe dizer se é relevante* e escolhe pelo número maior, por falta de outro critério. [Q15] **Termos como IoU, acurácia por classe e "transitável × não transitável" geram dúvida e dependem de um colega para serem explicados.** [Q17] Na reunião, **leva os números das planilhas** e tenta justificar a escolha, mas tem dificuldade de sustentar a recomendação. [Q16] Quando adia ou escolhe sem critério, o teste pode usar um modelo inadequado e a equipe precisa refazer a análise depois. Larissa sente que depende dos colegas técnicos e que decide sem segurança.
+
+#### Resumo do refinamento
+
+| Questão | Resultado | O que mudou no cenário |
+|---|---|---|
+| Q10 | Novo | Motivo de a decisão ocorrer antes do teste e o que se espera dela (escolha defensável). |
+| Q11 | Sem acréscimo | Repete o fluxo já descrito no cenário inicial (mensagens e planilhas enviadas pelo integrante técnico). |
+| Q12 | Novo | Divisão de papéis: Larissa reúne e recomenda; a palavra final é discutida com a coordenação. |
+| Q13 | Sem acréscimo | Repete que ela recebe IoU e acurácia sem referência nem explicação. |
+| Q14 | Novo e reescrito | Novo: a comparação é feita abrindo as planilhas lado a lado. Reescrito: a dúvida sobre relevância da diferença passa a ser associada a diferenças **pequenas**. |
+| Q15 | Novo | Termos específicos que geram dúvida e a dependência de um colega para explicá-los. |
+| Q16 | Sem acréscimo | Repete a consequência já descrita (modelo inadequado e retrabalho). |
+| Q17 | Novo | O que ela leva para a reunião: os números das planilhas. |
+
+> Q11, Q13 e Q16 não acrescentaram informação. Ficam registradas para investigação na Entrega 7 (ver `PENDENCIAS.md`, INC-51).
 
 ### 4. Elementos extraídos
 
@@ -145,19 +175,19 @@ Larissa Camargo é gestora de projeto da equipe Baja FEI. [Q10] A decisão preci
 
 | ID | Tarefa | Origem no cenário | Por que merece análise | Prioridade |
 |---|---|---|---|---|
-| **T04** | Comparar resultados entre configurações/modelos | C02; Q13, Q14; R03 | É a base da decisão da gestora. Hoje a comparação é manual, os números vêm dispersos e sem referência, e ela não consegue avaliar se a diferença é relevante. | Alta |
+| **T04** | Comparar o desempenho consolidado entre modelos | C02; Q13, Q14; R03 | É a base da decisão da gestora. Hoje a comparação é manual, os números vêm dispersos e sem referência, e ela não consegue avaliar se a diferença é relevante. | Alta |
 | **T05** | Decidir e justificar a adoção de um modelo | C02; Q12, Q16, Q17; R03 | A decisão é o objetivo central da P03 e envolve autoridade compartilhada com a coordenação; será detalhada na Entrega 5. | Alta |
 
 #### Informações que precisam ser coletadas
 
 | Informação | Origem | Para que serve | Como coletar |
 |---|---|---|---|
-| Quem decide, com quem e qual a autoridade de Larissa | Q12 | Entender a governança da decisão e o que cabe à gestora | Entrevista com Larissa e coordenação |
+| Quem decide, com quem e qual a autoridade de Larissa | Q12 | Entender a governança da decisão e o que cabe à gestora | Entrevista com integrante de gestão (perfil P03) e com a coordenação |
 | Formato, frequência e autoria dos resultados que ela recebe | Q11 | Dimensionar a dependência dos colegas técnicos e o fluxo atual | Entrevista + análise das planilhas/mensagens |
 | Quais métricas ela usa, como lê e o que não entende | Q13, Q15 | Delimitar a barreira de interpretação e terminologia | Entrevista + análise das saídas |
 | Critério atual para considerar um modelo "melhor" e como lida com diferenças pequenas | Q14 | Revelar o critério implícito e onde ele falha | Observação da reunião + entrevista |
 | O que ela leva para a reunião e como sustenta a escolha | Q17 | Entender as necessidades de justificativa perante a coordenação | Observação + análise dos materiais |
-| Consequências de uma decisão adiada ou errada | Q16 | Dimensionar impacto e criticidade | Entrevista com Larissa e coordenação |
+| Consequências de uma decisão adiada ou errada | Q16 | Dimensionar impacto e criticidade | Entrevista com integrante de gestão (perfil P03) e com a coordenação |
 | Antecedência e momento em que a decisão precisa estar tomada | Q10 | Definir o contexto temporal da tarefa | Entrevista + calendário de testes |
 
 ## Checklist
