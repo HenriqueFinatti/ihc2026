@@ -18,14 +18,14 @@ Externalizar rapidamente ideias de interação em baixa fidelidade para explorar
 
 Escolha apenas o que for coerente com tarefas e cenários. Para TCCs técnicos, o protótipo pode explorar:
 
-**Selecionados**: 
-- **dashboard** para monitoramento e tomada de decisão;
-- **configuração/parametrização** para preparar algoritmo/modelo/processo;
-- **entrada/seleção de dados** com validação;
+<!-- **Selecionados**:  -->
+<!-- - **dashboard** para monitoramento e tomada de decisão; -->
+<!-- - **configuração/parametrização** para preparar algoritmo/modelo/processo; -->
+<!-- - **entrada/seleção de dados** com validação; -->
 <!-- - **acompanhamento de execução** com progresso, fila, cancelamento e recuperação; -->
-- **relatório/resultados** com explicação, gráficos e exportação;
+<!-- - **relatório/resultados** com explicação, gráficos e exportação; -->
 <!-- - **histórico** com busca, filtros, ordenação e detalhes; -->
-- **comparação** entre execuções, versões, algoritmos ou períodos;
+<!-- - **comparação** entre execuções, versões, algoritmos ou períodos; -->
 <!-- - **administração** de usuários, papéis, permissões ou entidades do domínio; -->
 <!-- - **auditoria/logs** traduzidos para o perfil; -->
 <!-- - **alertas/ocorrências** com ação de resposta. -->
@@ -48,11 +48,17 @@ Escolha apenas o que for coerente com tarefas e cenários. Para TCCs técnicos, 
 
 ![Protótipo](../assets/06_prototipos/prototipo_fluxo_01.svg) -->
 
-| Protótipo | imagem |
-| Input dados + Configuração | ![Protótipo](../assets/06_prototipos/input_config.jfif) |
-| Resultado Segmentação | ![Protótipo](../assets/06_prototipos/resultado_segmentacao.jfif) |
-| Comparação Modelos | ![Protótipo](../assets/06_prototipos/comparacao_modelo.jfif) |
+### 3.1. Input de dados e configuração
 
+![Protótipo de entrada de dados e configuração](../assets/06_prototipos/input_config.jfif)
+
+### 3.2. Resultado da segmentação
+
+![Protótipo de resultado da segmentação](../assets/06_prototipos/resultado_segmentacao.jfif)
+
+### 3.3. Comparação entre modelos
+
+![Protótipo de comparação entre modelos](../assets/06_prototipos/comparacao_modelo.jfif)
 ## 4. Simulação / walkthrough
 
 Realize uma simulação com uma pessoa que não participou da elaboração dessas telas. Um colega pode ser usado **para essa iteração formativa**, mas isso não substitui os participantes finais da Entrega 14.
