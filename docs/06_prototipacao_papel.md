@@ -18,14 +18,14 @@ Externalizar rapidamente ideias de interação em baixa fidelidade para explorar
 
 Escolha apenas o que for coerente com tarefas e cenários. Para TCCs técnicos, o protótipo pode explorar:
 
-<!-- **Selecionados**:  -->
-<!-- - **dashboard** para monitoramento e tomada de decisão; -->
-<!-- - **configuração/parametrização** para preparar algoritmo/modelo/processo; -->
-<!-- - **entrada/seleção de dados** com validação; -->
+**Selecionados**: 
+- **dashboard** para monitoramento e tomada de decisão;
+- **configuração/parametrização** para preparar algoritmo/modelo/processo;
+- **entrada/seleção de dados** com validação;
 <!-- - **acompanhamento de execução** com progresso, fila, cancelamento e recuperação; -->
-<!-- - **relatório/resultados** com explicação, gráficos e exportação; -->
+- **relatório/resultados** com explicação, gráficos e exportação;
 <!-- - **histórico** com busca, filtros, ordenação e detalhes; -->
-<!-- - **comparação** entre execuções, versões, algoritmos ou períodos; -->
+- **comparação** entre execuções, versões, algoritmos ou períodos;
 <!-- - **administração** de usuários, papéis, permissões ou entidades do domínio; -->
 <!-- - **auditoria/logs** traduzidos para o perfil; -->
 <!-- - **alertas/ocorrências** com ação de resposta. -->
