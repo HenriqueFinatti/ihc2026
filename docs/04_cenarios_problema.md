@@ -190,6 +190,108 @@ Larissa Camargo é gestora de projeto da equipe Baja FEI e não escreve código 
 | Consequências de uma decisão adiada ou errada | Q16 | Dimensionar impacto e criticidade | Entrevista com integrante de gestão (perfil P03) e com a coordenação |
 | Antecedência e momento em que a decisão precisa estar tomada | Q10 | Definir o contexto temporal da tarefa | Entrevista + calendário de testes |
 
+## Cenário C03 - Exeperimentação e análises de modelos para segmentação
+
+**Autor(a):** Mateus Marana Assuena — 22.123.026-1  
+**Persona(s) relacionada(s):** P02 — Andreia Silva  
+**Necessidade relacionada:** R03 - Experimentar modelos e acompanhar a evolução da pesquisa.  
+**Situação concreta da Entrega 1 relacionada:** Perfil de desenvolvedor de modelos (§2.2) e decisões de design relacionadas à análise e comparação de segmentações.
+**Hipóteses ainda presentes:** H01, H04.
+
+### 1. Cenário inicial
+
+Andreia é professora e coordenadora da equipe Baja FEI, onde acompanha pesquisas e desenvolvimentos voltados à construção de um veículo Baja autônomo. Com formação avançada em Engenharia Mecânica e experiência em Visão Computacional, ela utiliza seus conhecimentos para desenvolver e avaliar modelos de inteligência artificial capazes de interpretar o ambiente off-road.
+
+Durante suas pesquisas, Andreia precisa analisar imagens e vídeos gravados durante os testes do veículo, verificando se diferentes modelos de segmentação conseguem identificar corretamente as áreas transitáveis. Para isso, utiliza modelos pré-treinados e scripts em Python, executando os modelos e visualizando as máscaras geradas para avaliar seus resultados.
+
+Entretanto, quando deseja experimentar diferentes modelos, precisa realizar configurações e execuções separadamente, utilizando ferramentas e códigos que nem sempre oferecem uma forma prática de visualizar e comparar os resultados. Para analisar uma mesma imagem com modelos diferentes, precisa executar cada um individualmente e alternar entre as saídas geradas, dificultando a identificação de diferenças na segmentação.
+
+Além disso, embora tenha conhecimento para implementar modelos e trabalhar com métricas de Visão Computacional, Andreia não possui muita experiência no desenvolvimento de interfaces. Por isso, organizar todas essas funcionalidades em uma ferramenta própria demandaria tempo adicional de desenvolvimento, que poderia ser direcionado às pesquisas e melhorias do projeto.
+
+Sua rotina como professora e coordenadora também limita o tempo disponível para desenvolver e treinar novos modelos do zero. Assim, ela gostaria de aproveitar modelos pré-treinados e concentrar seus esforços na experimentação, análise e identificação de oportunidades de melhoria.
+
+Em uma de suas análises, Andreia precisa verificar qual modelo apresenta melhores resultados para determinada entrada. Para isso, executa os modelos separadamente, observa as máscaras geradas e consulta métricas para avaliar o desempenho de cada um. Entretanto, a ausência de uma interface que reúna as imagens originais, as máscaras, as sobreposições e as métricas dificulta a comparação dos resultados e torna a análise menos prática.
+
+Esse processo fragmentado consome parte do tempo que Andreia poderia dedicar à pesquisa e ao desenvolvimento do veículo autônomo. Ela gostaria de contar com uma ferramenta centralizada, que permitisse selecionar diferentes modelos, processar imagens e vídeos e analisar seus resultados em uma mesma interface, sem precisar desenvolver toda a estrutura de interação por conta própria.
+
+### 2. Questões de refinamento
+
+| # | Questão | Por que precisa ser respondida | Fonte/forma de obter resposta |
+|---|---|---|---|
+| Q18 | Quais características Andreia considera mais importantes ao escolher um modelo de segmentação para determinado experimento? | Para identificar os critérios utilizados na seleção dos modelos. | Entrevista com Andreia. |
+| Q19 | Como Andreia realiza atualmente a comparação entre diferentes modelos e quais dificuldades encontra nesse processo? | Para compreender o fluxo atual de experimentação e comparação. | Entrevista e observação das execuções. |
+| Q20 | Quais métricas Andreia utiliza para avaliar a qualidade da segmentação e como interpreta seus resultados? | Para identificar quais informações técnicas precisam ser apresentadas pela ferramenta. | Entrevista e análise das métricas utilizadas. |
+| Q21 | Quais formatos, resoluções e características os vídeos e imagens utilizados nos experimentos apresentam? | Para identificar requisitos e possíveis limitações do processamento das entradas. | Entrevista e análise dos arquivos utilizados. |
+| Q22 | Como Andreia identifica que um modelo apresenta resultados insatisfatórios e quais ações realiza após identificar esses problemas? | Para compreender como os resultados orientam as melhorias nos modelos. | Entrevista e observação. |
+| Q23 | Como Andreia organiza e registra os resultados dos experimentos para consultá-los posteriormente? | Para entender se existe uma necessidade real de histórico e registro de observações. | Entrevista e análise dos registros de pesquisa. |
+| Q24 | Quais informações Andreia precisa visualizar simultaneamente para analisar uma segmentação de maneira eficiente? | Para identificar as necessidades de visualização e apresentação dos resultados. | Entrevista e observação. |
+| Q25 | Como Andreia utiliza os resultados das segmentações no desenvolvimento do veículo Baja autônomo e quem participa das decisões relacionadas à pesquisa? | Para compreender como as análises influenciam o projeto e quais atores dependem dos resultados. | Entrevista com Andreia e equipe Baja FEI. |
+| Q26 | Quais etapas e configurações são necessárias para executar os modelos sobre imagens e vídeos, e quais dificuldades técnicas podem ocorrer durante o processamento? | Para identificar pré-condições, dependências e possíveis falhas durante a execução. | Entrevista, observação e análise dos scripts. |
+
+### 3. Cenário refinado
+
+Andreia é professora em tempo integral e coordenadora da equipe Baja FEI, onde acompanha pesquisas voltadas ao desenvolvimento de um veículo autônomo para terrenos off-road. Com formação avançada em Engenharia Mecânica e especialização em Visão Computacional, possui conhecimentos para desenvolver modelos próprios e implementar scripts em Python. Entretanto, sua rotina de aulas e compromissos com a equipe limita o tempo disponível para desenvolver e treinar novos modelos. [Contexto da P02]
+
+Durante suas pesquisas, Andreia precisa utilizar modelos de segmentação para analisar imagens e vídeos gravados durante os testes do veículo, buscando identificar quais modelos apresentam melhores resultados para o projeto. [Necessidade da P02] Para isso, utiliza modelos pré-treinados e realiza execuções individuais por meio de scripts em Python. [P02]
+
+Quando deseja experimentar diferentes modelos, precisa configurá-los e executá-los separadamente, o que dificulta a comparação dos resultados. [Q1] [Q2] Além disso, precisa analisar as imagens originais e as máscaras geradas para identificar possíveis erros na segmentação. A ausência de uma visualização conjunta dificulta essa análise, pois precisa alternar entre diferentes saídas para observar as diferenças. [Q7]
+
+Após as execuções, Andreia consulta métricas para avaliar a qualidade das segmentações e identificar quais modelos apresentam resultados mais adequados. [Q3] Quando encontra resultados insatisfatórios, precisa investigar as possíveis causas e considerar melhorias para os próximos experimentos. [Q5]
+
+Apesar de possuir conhecimento técnico para desenvolver essas soluções, Andreia tem pouca experiência na construção de interfaces. Dessa forma, criar uma ferramenta própria que reúna execução, visualização e comparação dos modelos exigiria um esforço adicional de desenvolvimento. [P02]
+
+Esse processo dificulta a experimentação e consome parte do tempo disponível para suas pesquisas. Andreia gostaria de utilizar uma ferramenta centralizada, com navegação intuitiva e acesso às informações técnicas, que permitisse selecionar diferentes modelos pré-treinados, processar imagens e vídeos e analisar os resultados das segmentações em um mesmo ambiente. [Necessidade da P02]
+
+**Resumo do refinamento**
+
+| Questão | Resultado | O que mudou no cenário |
+|---|---|---|
+| Q18 | Novo | Acrescenta a necessidade de compreender os critérios utilizados por Andreia para escolher os modelos de segmentação em cada experimento. |
+| Q19 | Sem acréscimo | O cenário inicial já descreve a execução individual dos modelos e a dificuldade de comparar os resultados. A pergunta busca aprofundar esse fluxo, mas não acrescenta uma nova situação concreta. |
+| Q20 | Novo | Acrescenta a necessidade de identificar quais métricas são utilizadas e como Andreia interpreta os indicadores para avaliar os modelos. |
+| Q21 | Novo | Acrescenta a investigação dos formatos, resoluções e características das imagens e vídeos utilizados nos experimentos, permitindo identificar possíveis limitações de processamento. |
+| Q22 | Novo | Acrescenta a investigação sobre como Andreia identifica resultados insatisfatórios e quais ações realiza para buscar melhorias nos modelos. |
+| Q23 | Novo | Acrescenta a investigação sobre como os resultados dos experimentos são organizados e registrados, permitindo verificar se existe uma necessidade real de histórico. |
+| Q24 | Novo e reescrito | A necessidade de visualizar imagem original, máscara e sobreposição já aparece nas decisões de design. A questão foi direcionada para descobrir quais informações Andreia realmente precisa visualizar simultaneamente durante a análise. |
+| Q25 | Novo | Acrescenta a investigação sobre como os resultados das segmentações contribuem para o desenvolvimento do veículo autônomo e quais pessoas participam das decisões da pesquisa. |
+| Q26 | Novo | Acrescenta o detalhamento das etapas, configurações, pré-condições e possíveis dificuldades técnicas durante a execução dos modelos sobre imagens e vídeos. |
+
+### 4. Elementos extraídos
+
+| Elemento | Evidência no cenário |
+|---|---|
+| **Ator(es)** | Andreia Silva e equipe Baja FEI. |
+| **Objetivo(s)** | Avaliar diferentes modelos de segmentação para identificar aqueles que apresentam melhores resultados e contribuir para o desenvolvimento de um veículo Baja autônomo. |
+| **Contexto** | Pesquisas e testes da equipe Baja FEI voltados à construção de um veículo autônomo para terrenos off-road. Andreia utiliza modelos pré-treinados e scripts em Python, mas possui tempo limitado para desenvolver ferramentas auxiliares. |
+| **Recursos/informações** | Imagens, vídeos gravados, modelos pré-treinados, scripts em Python, máscaras de segmentação e métricas de avaliação. |
+| **Ações** | Selecionar modelos; configurar execuções; processar imagens e vídeos; visualizar máscaras; analisar métricas; comparar resultados; identificar possíveis melhorias. |
+| **Problemas/rupturas** | Execuções individuais para experimentar diferentes modelos; dificuldade para comparar resultados; necessidade de alternar entre diferentes saídas; falta de uma interface centralizada; pouco tempo disponível para desenvolver ferramentas próprias. |
+| **Consequências** | Andreia gasta tempo com atividades operacionais, encontra dificuldades para comparar os resultados e possui menos tempo disponível para se dedicar à pesquisa e ao desenvolvimento do veículo autônomo. |
+
+### 5. Implicações para as próximas entregas
+
+**Tarefas que merecem análise**
+
+| ID | Tarefa | Origem no cenário | Por que merece análise | Prioridade |
+|---|---|---|---|---|
+| T07 | Executar a segmentação de imagens e vídeos utilizando modelos pré-treinados | C02; P02; Q18, Q21, Q26 | É a atividade central da experimentação. Andreia precisa executar diferentes modelos sobre entradas para avaliar seus resultados. | Alta |
+| T08 | Analisar visualmente os resultados da segmentação | C02; P02; Q22, Q24 | Permite identificar erros e verificar se o modelo está identificando corretamente as regiões de interesse. A visualização da imagem original, máscara e sobreposição pode facilitar essa atividade. | Alta |
+| T09 | Comparar os resultados de diferentes modelos de segmentação | C02; P02; Q18, Q19, Q20 | É fundamental para identificar quais modelos apresentam melhor desempenho e podem contribuir para o desenvolvimento do veículo autônomo. | Alta |
+
+**Informações que precisam ser coletadas**
+
+| Informação | Origem | Para que serve | Como coletar |
+|---|---|---|---|
+| Critérios utilizados para selecionar os modelos de segmentação | Q18 | Identifica os fatores considerados na escolha dos modelos. | Entrevista com Andreia. |
+| Processo atual de execução e comparação dos modelos | Q19, Q26 | Compreende as etapas, configurações e dificuldades da experimentação. | Entrevista + observação dos scripts. |
+| Métricas utilizadas e critérios de avaliação dos resultados | Q20 | Define quais indicadores devem ser apresentados para apoiar a análise. | Entrevista + análise dos resultados existentes. |
+| Formatos, resoluções e características das imagens e vídeos utilizados | Q21 | Identifica requisitos e limitações das entradas aceitas pelo sistema. | Entrevista + análise dos arquivos. |
+| Como identifica resultados insatisfatórios e quais melhorias realiza | Q22 | Compreende como a análise dos resultados orienta novas experimentações. | Entrevista + observação. |
+| Como registra e recupera resultados de experimentos anteriores | Q23 | Verifica se existe necessidade de histórico, armazenamento e registro de observações. | Entrevista + análise dos registros existentes. |
+| Informações visuais necessárias para analisar uma segmentação | Q24 | Define os elementos que precisam estar disponíveis na interface de análise. | Entrevista + prototipação e avaliação. |
+| Como os resultados são utilizados nas decisões do projeto Baja | Q25 | Identifica a importância dos resultados para a pesquisa e os demais envolvidos. | Entrevista com Andreia e equipe. |
+| Recursos computacionais e dependências necessárias para executar os modelos | Q26 | Identifica possíveis limitações técnicas durante o processamento. | Análise dos scripts e ambiente de execução. |
+
 ## Checklist
 
 - [ ] Há um cenário completo por integrante.
@@ -201,3 +303,4 @@ Larissa Camargo é gestora de projeto da equipe Baja FEI e não escreve código 
 - [ ] O refinamento mostra claramente o que foi adicionado/alterado.
 - [ ] Cenários são diferentes o suficiente para cobrir objetivos/problemas relevantes.
 - [ ] Cada cenário está ligado a persona/necessidade na matriz de rastreabilidade.
+
