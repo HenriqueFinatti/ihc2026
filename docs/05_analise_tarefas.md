@@ -313,8 +313,6 @@ Os modelos são **propostas a validar**, derivadas de C02 e da P03:
 
 ![HTA T03 — comparar o resultado de uma imagem entre configurações](../assets/05_tarefas/hta_t03_comparar_configuracoes.svg)
 
-*Figura 3 — HTA de T03, por Tiago Fagundes dos Santos. Visão geral e expansões dos objetivos 1 a 4. [SVG](../assets/05_tarefas/hta_t03_comparar_configuracoes.svg) gerado por [`scripts/diagramas/hta_t03.py`](../scripts/diagramas/hta_t03.py).*
-
 Retângulos representam objetivos; operações (folhas) têm traço duplo abaixo. Os planos usam `>` para sequência e `/` para seleção condicionada. A tabela completa os planos abreviados do diagrama com as condições de cada escolha.
 
 #### Decomposição e planos
@@ -416,8 +414,6 @@ GOAL 0: avaliar se a segmentação de uma imagem identifica corretamente as regi
 #### Diagrama
 
 ![CTT T03 — visão geral: motivação e sessão](../assets/05_tarefas/ctt_t03_comparar_configuracoes_visao_geral.svg)
-
-*Figura 4 — CTT de T03, visão geral, por Tiago Fagundes dos Santos. Os detalhamentos abaixo são recortes da mesma árvore, com os mesmos IDs e relações. [SVG completo](../assets/05_tarefas/ctt_t03_comparar_configuracoes.svg) gerado por [`scripts/diagramas/ctt_t03.py`](../scripts/diagramas/ctt_t03.py).*
 
 <details>
 <summary>T03: detalhamento 1 — preparar e repetir por configuração</summary>
