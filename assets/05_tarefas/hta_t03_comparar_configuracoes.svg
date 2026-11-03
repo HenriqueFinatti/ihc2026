@@ -1,0 +1,318 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="2500" viewBox="0 0 1440 2500" role="img" aria-labelledby="title desc">
+<title id="title">HTA — T03: Comparar o resultado de uma imagem entre configurações</title>
+<desc id="desc">HTA da tarefa T03 por Tiago Fagundes dos Santos. Objetivos retangulares, operações com traço duplo e planos. Uso proposto pelo analista de segmentação (P01) a partir do cenário C01. Inclui T02 (objetivo 2) e T01 (objetivo 3). Condições completas na tabela da Entrega 5.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#333"/></marker></defs>
+<rect width="1440" height="2500" fill="white"/>
+<g font-family="DejaVu Sans, Arial, sans-serif" fill="#222">
+<text x="40" y="40" text-anchor="start" font-size="25" font-weight="700">HTA — T03: Comparar o resultado de uma imagem entre configurações</text>
+<text x="40" y="73" text-anchor="start" font-size="16" font-weight="400">Tiago Fagundes dos Santos · 22.123.017-0 · P01, Rafael Pereira · C01 · Uso proposto [H]</text>
+<path d="M40 100 H1400" fill="none" stroke="#333" stroke-width="1.6"/>
+<text x="40" y="130" text-anchor="start" font-size="18" font-weight="700">Visão geral</text>
+<g data-box="b1">
+<rect x="420.0" y="152" width="600.0" height="98" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="720.0" y="178" text-anchor="middle" font-size="16" font-weight="400">0. Comparar o resultado de uma imagem</text>
+<text x="720.0" y="201" text-anchor="middle" font-size="16" font-weight="400">entre configurações</text>
+<text x="720.0" y="235" text-anchor="middle" font-size="14" font-weight="700">Plano 0: 1 &gt; (2 &gt; 3) &gt; 4; repetir 2 &gt; 3 por configuração</text>
+</g>
+<path d="M720.0 250 V281" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M196.5 281 H1243.5" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M196.5 281 V320" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<g data-box="b2">
+<rect x="40.0" y="320" width="313.0" height="98" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="196.5" y="346" text-anchor="middle" font-size="16" font-weight="400">1. Preparar a</text>
+<text x="196.5" y="369" text-anchor="middle" font-size="16" font-weight="400">comparação</text>
+<text x="196.5" y="403" text-anchor="middle" font-size="14" font-weight="700">1.1 &gt; 1.2</text>
+</g>
+<path d="M545.5 281 V320" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<g data-box="b3">
+<rect x="389.0" y="320" width="313.0" height="98" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="545.5" y="346" text-anchor="middle" font-size="16" font-weight="400">2. Obter o resultado de</text>
+<text x="545.5" y="369" text-anchor="middle" font-size="16" font-weight="400">uma configuração (T02)</text>
+<text x="545.5" y="403" text-anchor="middle" font-size="14" font-weight="700">2.1 &gt; 2.2 &gt; 2.3</text>
+</g>
+<path d="M894.5 281 V320" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<g data-box="b4">
+<rect x="738.0" y="320" width="313.0" height="98" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="894.5" y="346" text-anchor="middle" font-size="16" font-weight="400">3. Avaliar o</text>
+<text x="894.5" y="369" text-anchor="middle" font-size="16" font-weight="400">resultado (T01)</text>
+<text x="894.5" y="403" text-anchor="middle" font-size="14" font-weight="700">3.1 &gt; 3.2 &gt; 3.3</text>
+</g>
+<path d="M1243.5 281 V320" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<g data-box="b5">
+<rect x="1087.0" y="320" width="313.0" height="98" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="1243.5" y="346" text-anchor="middle" font-size="16" font-weight="400">4. Concluir a</text>
+<text x="1243.5" y="369" text-anchor="middle" font-size="16" font-weight="400">comparação</text>
+<text x="1243.5" y="403" text-anchor="middle" font-size="14" font-weight="700">4.1 &gt; 4.2 &gt; 4.3</text>
+</g>
+<text x="40" y="452" text-anchor="start" font-size="14" font-weight="400">Planos abreviados; condições, repetições e término na tabela da Entrega 5, seção 2.1.</text>
+<text x="40" y="472" text-anchor="start" font-size="14" font-weight="400">3 só ocorre para a configuração cuja execução terminou com resultado pronto (2.3.1).</text>
+<path d="M40 502 H1400" fill="none" stroke="#333" stroke-width="1.6"/>
+<text x="40" y="532" text-anchor="start" font-size="18" font-weight="700">Expansões dos objetivos 1 e 2 — preparar e obter o resultado (T02)</text>
+<g data-box="b6">
+<rect x="90.0" y="554" width="360.0" height="75" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="270.0" y="580" text-anchor="middle" font-size="16" font-weight="400">1. Preparar a comparação</text>
+<text x="270.0" y="614" text-anchor="middle" font-size="14" font-weight="700">Plano 1: 1.1 &gt; 1.2</text>
+</g>
+<path d="M270.0 629 V660" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M147.5 660 H392.5" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M147.5 660 V699" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<g data-box="b7">
+<rect x="40.0" y="699" width="215.0" height="99" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="147.5" y="725" text-anchor="middle" font-size="16" font-weight="400">1.1. Selecionar a</text>
+<text x="147.5" y="748" text-anchor="middle" font-size="16" font-weight="400">imagem de campo</text>
+</g>
+<path d="M40.0 803 H255.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M40.0 807 H255.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M392.5 660 V699" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<g data-box="b8">
+<rect x="285.0" y="699" width="215.0" height="99" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="392.5" y="725" text-anchor="middle" font-size="16" font-weight="400">1.2. Escolher as</text>
+<text x="392.5" y="748" text-anchor="middle" font-size="16" font-weight="400">configurações</text>
+<text x="392.5" y="771" text-anchor="middle" font-size="16" font-weight="400">a comparar</text>
+</g>
+<path d="M285.0 803 H500.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M285.0 807 H500.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<g data-box="b9">
+<rect x="720.0" y="554" width="520.0" height="75" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="980.0" y="580" text-anchor="middle" font-size="16" font-weight="400">2. Obter o resultado de uma configuração (T02)</text>
+<text x="980.0" y="614" text-anchor="middle" font-size="14" font-weight="700">Plano 2: 2.1 &gt; 2.2 &gt; 2.3</text>
+</g>
+<path d="M980.0 629 V660" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M692.0 660 H1268.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M692.0 660 V699" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<g data-box="b10">
+<rect x="560.0" y="699" width="264.0" height="121" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="692.0" y="725" text-anchor="middle" font-size="16" font-weight="400">2.1. Iniciar a</text>
+<text x="692.0" y="748" text-anchor="middle" font-size="16" font-weight="400">segmentação com</text>
+<text x="692.0" y="771" text-anchor="middle" font-size="16" font-weight="400">a configuração</text>
+</g>
+<path d="M560.0 825 H824.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M560.0 829 H824.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M980.0 660 V699" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<g data-box="b11">
+<rect x="848.0" y="699" width="264.0" height="121" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="980.0" y="725" text-anchor="middle" font-size="16" font-weight="400">2.2. Acompanhar o</text>
+<text x="980.0" y="748" text-anchor="middle" font-size="16" font-weight="400">processamento</text>
+</g>
+<path d="M848.0 825 H1112.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M848.0 829 H1112.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M1268.0 660 V699" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<g data-box="b12">
+<rect x="1136.0" y="699" width="264.0" height="121" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="1268.0" y="725" text-anchor="middle" font-size="16" font-weight="400">2.3. Conferir o</text>
+<text x="1268.0" y="748" text-anchor="middle" font-size="16" font-weight="400">desfecho da execução</text>
+<text x="1268.0" y="805" text-anchor="middle" font-size="14" font-weight="700">2.3.1 / 2.3.2</text>
+</g>
+<g data-box="b13">
+<rect x="130.0" y="854" width="460.0" height="75" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="360.0" y="880" text-anchor="middle" font-size="16" font-weight="400">2.3. Conferir o desfecho da execução</text>
+<text x="360.0" y="914" text-anchor="middle" font-size="14" font-weight="700">Plano 2.3: 2.3.1 / 2.3.2</text>
+</g>
+<path d="M360.0 929 V960" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M192.5 960 H527.5" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M192.5 960 V999" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<g data-box="b14">
+<rect x="40.0" y="999" width="305.0" height="98" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="192.5" y="1025" text-anchor="middle" font-size="16" font-weight="400">2.3.1. Reconhecer o</text>
+<text x="192.5" y="1048" text-anchor="middle" font-size="16" font-weight="400">resultado pronto</text>
+</g>
+<path d="M40.0 1102 H345.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M40.0 1106 H345.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M527.5 960 V999" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<g data-box="b15">
+<rect x="375.0" y="999" width="305.0" height="98" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="527.5" y="1025" text-anchor="middle" font-size="16" font-weight="400">2.3.2. Tratar a falha</text>
+<text x="527.5" y="1048" text-anchor="middle" font-size="16" font-weight="400">da execução</text>
+<text x="527.5" y="1082" text-anchor="middle" font-size="14" font-weight="700">2.3.2.1 &gt; 2.3.2.2</text>
+</g>
+<g data-box="b16">
+<rect x="840.0" y="854" width="460.0" height="75" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="1070.0" y="880" text-anchor="middle" font-size="16" font-weight="400">2.3.2. Tratar a falha da execução</text>
+<text x="1070.0" y="914" text-anchor="middle" font-size="14" font-weight="700">Plano 2.3.2: 2.3.2.1 &gt; 2.3.2.2</text>
+</g>
+<path d="M1070.0 929 V960" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M897.5 960 H1242.5" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M897.5 960 V999" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<g data-box="b17">
+<rect x="740.0" y="999" width="315.0" height="76" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="897.5" y="1025" text-anchor="middle" font-size="16" font-weight="400">2.3.2.1. Ler a causa</text>
+<text x="897.5" y="1048" text-anchor="middle" font-size="16" font-weight="400">da falha</text>
+</g>
+<path d="M740.0 1080 H1055.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M740.0 1084 H1055.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M1242.5 960 V999" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<g data-box="b18">
+<rect x="1085.0" y="999" width="315.0" height="76" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="1242.5" y="1025" text-anchor="middle" font-size="16" font-weight="400">2.3.2.2. Decidir repetir</text>
+<text x="1242.5" y="1048" text-anchor="middle" font-size="16" font-weight="400">ou retirar a configuração</text>
+</g>
+<path d="M1085.0 1080 H1400.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M1085.0 1084 H1400.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M40 1131 H1400" fill="none" stroke="#333" stroke-width="1.6"/>
+<text x="40" y="1161" text-anchor="start" font-size="18" font-weight="700">Expansão do objetivo 3 — avaliar o resultado (detalhada no GOMS de T01)</text>
+<g data-box="b19">
+<rect x="440.0" y="1183" width="560.0" height="75" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="720.0" y="1209" text-anchor="middle" font-size="16" font-weight="400">3. Avaliar o resultado (T01)</text>
+<text x="720.0" y="1243" text-anchor="middle" font-size="14" font-weight="700">Plano 3: 3.1 &gt; 3.2 &gt; 3.3</text>
+</g>
+<path d="M720.0 1258 V1289" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M253.3 1289 H1186.7" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M253.3 1289 V1328" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<g data-box="b20">
+<rect x="40.0" y="1328" width="426.7" height="98" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="253.33333333333334" y="1354" text-anchor="middle" font-size="16" font-weight="400">3.1. Visualizar o resultado</text>
+<text x="253.33333333333334" y="1377" text-anchor="middle" font-size="16" font-weight="400">sobre a imagem</text>
+<text x="253.33333333333334" y="1411" text-anchor="middle" font-size="14" font-weight="700">3.1.1 / 3.1.2</text>
+</g>
+<path d="M720.0 1289 V1328" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<g data-box="b21">
+<rect x="506.7" y="1328" width="426.7" height="98" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="720.0" y="1354" text-anchor="middle" font-size="16" font-weight="400">3.2. Interpretar as</text>
+<text x="720.0" y="1377" text-anchor="middle" font-size="16" font-weight="400">classes pela legenda</text>
+</g>
+<path d="M506.7 1431 H933.3" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M506.7 1435 H933.3" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M1186.7 1289 V1328" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<g data-box="b22">
+<rect x="973.3" y="1328" width="426.7" height="98" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="1186.6666666666667" y="1354" text-anchor="middle" font-size="16" font-weight="400">3.3. Julgar a qualidade</text>
+<text x="1186.6666666666667" y="1377" text-anchor="middle" font-size="16" font-weight="400">da segmentação</text>
+<text x="1186.6666666666667" y="1411" text-anchor="middle" font-size="14" font-weight="700">3.3.1 / 3.3.2 / 3.3.3</text>
+</g>
+<g data-box="b23">
+<rect x="80.0" y="1460" width="480.0" height="75" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="320.0" y="1486" text-anchor="middle" font-size="16" font-weight="400">3.1. Visualizar o resultado sobre a imagem</text>
+<text x="320.0" y="1520" text-anchor="middle" font-size="14" font-weight="700">Plano 3.1: 3.1.1 / 3.1.2</text>
+</g>
+<path d="M320.0 1535 V1566" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M172.5 1566 H467.5" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M172.5 1566 V1605" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<g data-box="b24">
+<rect x="40.0" y="1605" width="265.0" height="76" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="172.5" y="1631" text-anchor="middle" font-size="16" font-weight="400">3.1.1. Comparar</text>
+<text x="172.5" y="1654" text-anchor="middle" font-size="16" font-weight="400">lado a lado</text>
+</g>
+<path d="M40.0 1686 H305.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M40.0 1690 H305.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M467.5 1566 V1605" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<g data-box="b25">
+<rect x="335.0" y="1605" width="265.0" height="76" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="467.5" y="1631" text-anchor="middle" font-size="16" font-weight="400">3.1.2. Sobrepor a</text>
+<text x="467.5" y="1654" text-anchor="middle" font-size="16" font-weight="400">máscara com opacidade</text>
+</g>
+<path d="M335.0 1686 H600.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M335.0 1690 H600.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<g data-box="b26">
+<rect x="790.0" y="1460" width="480.0" height="75" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="1030.0" y="1486" text-anchor="middle" font-size="16" font-weight="400">3.3. Julgar a qualidade da segmentação</text>
+<text x="1030.0" y="1520" text-anchor="middle" font-size="14" font-weight="700">Plano 3.3: 3.3.1 / 3.3.2 / 3.3.3</text>
+</g>
+<path d="M1030.0 1535 V1566" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M775.3 1566 H1284.7" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M775.3 1566 V1605" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<g data-box="b27">
+<rect x="660.0" y="1605" width="230.7" height="99" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="775.3333333333334" y="1631" text-anchor="middle" font-size="16" font-weight="400">3.3.1. Julgar pela</text>
+<text x="775.3333333333334" y="1654" text-anchor="middle" font-size="16" font-weight="400">inspeção visual</text>
+</g>
+<path d="M660.0 1709 H890.7" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M660.0 1713 H890.7" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M1030.0 1566 V1605" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<g data-box="b28">
+<rect x="914.7" y="1605" width="230.7" height="99" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="1030.0" y="1631" text-anchor="middle" font-size="16" font-weight="400">3.3.2. Consultar a</text>
+<text x="1030.0" y="1654" text-anchor="middle" font-size="16" font-weight="400">confiança do</text>
+<text x="1030.0" y="1677" text-anchor="middle" font-size="16" font-weight="400">modelo [H]</text>
+</g>
+<path d="M914.7 1709 H1145.3" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M914.7 1713 H1145.3" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M1284.7 1566 V1605" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<g data-box="b29">
+<rect x="1169.3" y="1605" width="230.7" height="99" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="1284.6666666666667" y="1631" text-anchor="middle" font-size="16" font-weight="400">3.3.3. Conferir as</text>
+<text x="1284.6666666666667" y="1654" text-anchor="middle" font-size="16" font-weight="400">métricas por</text>
+<text x="1284.6666666666667" y="1677" text-anchor="middle" font-size="16" font-weight="400">classe</text>
+</g>
+<path d="M1169.3 1709 H1400.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M1169.3 1713 H1400.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M40 1738 H1400" fill="none" stroke="#333" stroke-width="1.6"/>
+<text x="40" y="1768" text-anchor="start" font-size="18" font-weight="700">Expansão do objetivo 4 — concluir a comparação</text>
+<g data-box="b30">
+<rect x="440.0" y="1790" width="560.0" height="75" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="720.0" y="1816" text-anchor="middle" font-size="16" font-weight="400">4. Concluir a comparação</text>
+<text x="720.0" y="1850" text-anchor="middle" font-size="14" font-weight="700">Plano 4: 4.1 &gt; 4.2 &gt; 4.3</text>
+</g>
+<path d="M720.0 1865 V1896" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M253.3 1896 H1186.7" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M253.3 1896 V1935" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<g data-box="b31">
+<rect x="40.0" y="1935" width="426.7" height="121" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="253.33333333333334" y="1961" text-anchor="middle" font-size="16" font-weight="400">4.1. Comparar as</text>
+<text x="253.33333333333334" y="1984" text-anchor="middle" font-size="16" font-weight="400">configurações na</text>
+<text x="253.33333333333334" y="2007" text-anchor="middle" font-size="16" font-weight="400">mesma região</text>
+</g>
+<path d="M40.0 2061 H466.7" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M40.0 2065 H466.7" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M720.0 1896 V1935" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<g data-box="b32">
+<rect x="506.7" y="1935" width="426.7" height="121" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="720.0" y="1961" text-anchor="middle" font-size="16" font-weight="400">4.2. Registrar a</text>
+<text x="720.0" y="1984" text-anchor="middle" font-size="16" font-weight="400">conclusão</text>
+<text x="720.0" y="2041" text-anchor="middle" font-size="14" font-weight="700">4.2.1 / 4.2.2 / 4.2.3</text>
+</g>
+<path d="M1186.7 1896 V1935" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<g data-box="b33">
+<rect x="973.3" y="1935" width="426.7" height="121" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="1186.6666666666667" y="1961" text-anchor="middle" font-size="16" font-weight="400">4.3. Comunicar a</text>
+<text x="1186.6666666666667" y="1984" text-anchor="middle" font-size="16" font-weight="400">conclusão à equipe</text>
+</g>
+<path d="M973.3 2061 H1400.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M973.3 2065 H1400.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<g data-box="b34">
+<rect x="480.0" y="2090" width="480.0" height="75" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="720.0" y="2116" text-anchor="middle" font-size="16" font-weight="400">4.2. Registrar a conclusão</text>
+<text x="720.0" y="2150" text-anchor="middle" font-size="14" font-weight="700">Plano 4.2: 4.2.1 / 4.2.2 / 4.2.3</text>
+</g>
+<path d="M720.0 2165 V2196" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M485.3 2196 H954.7" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M485.3 2196 V2235" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<g data-box="b35">
+<rect x="380.0" y="2235" width="210.7" height="99" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="485.3333333333333" y="2261" text-anchor="middle" font-size="16" font-weight="400">4.2.1. Indicar a</text>
+<text x="485.3333333333333" y="2284" text-anchor="middle" font-size="16" font-weight="400">configuração mais</text>
+<text x="485.3333333333333" y="2307" text-anchor="middle" font-size="16" font-weight="400">adequada</text>
+</g>
+<path d="M380.0 2339 H590.7" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M380.0 2343 H590.7" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M720.0 2196 V2235" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<g data-box="b36">
+<rect x="614.7" y="2235" width="210.7" height="99" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="720.0" y="2261" text-anchor="middle" font-size="16" font-weight="400">4.2.2. Registrar que</text>
+<text x="720.0" y="2284" text-anchor="middle" font-size="16" font-weight="400">nenhuma é adequada</text>
+</g>
+<path d="M614.7 2339 H825.3" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M614.7 2343 H825.3" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M954.7 2196 V2235" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<g data-box="b37">
+<rect x="849.3" y="2235" width="210.7" height="99" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="954.6666666666666" y="2261" text-anchor="middle" font-size="16" font-weight="400">4.2.3. Registrar</text>
+<text x="954.6666666666666" y="2284" text-anchor="middle" font-size="16" font-weight="400">resultado</text>
+<text x="954.6666666666666" y="2307" text-anchor="middle" font-size="16" font-weight="400">inconclusivo</text>
+</g>
+<path d="M849.3 2339 H1060.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M849.3 2343 H1060.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M40 2358 H1400" fill="none" stroke="#333" stroke-width="1.6"/>
+<text x="40" y="2388" text-anchor="start" font-size="18" font-weight="700">Legenda (Barbosa e Silva, 2010)</text>
+<g data-box="b38">
+<rect x="50.0" y="2410" width="180.0" height="50" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="140" y="2436" text-anchor="middle" font-size="16" font-weight="400">objetivo</text>
+</g>
+<g data-box="b39">
+<rect x="270.0" y="2410" width="180.0" height="50" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="360" y="2436" text-anchor="middle" font-size="16" font-weight="400">operação</text>
+</g>
+<path d="M270.0 2465 H450.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M270.0 2469 H450.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<text x="480" y="2432" text-anchor="start" font-size="14" font-weight="400">Planos: 1 &gt; 2 sequencial · 1 / 2 seleção (depende das circunstâncias) · 1 + 2 paralelo (não usado).</text>
+<text x="480" y="2454" text-anchor="start" font-size="14" font-weight="400">Operações (folhas) têm traço duplo abaixo. [H]: modelo hipotético a validar na Entrega 7.</text>
+</g></svg>

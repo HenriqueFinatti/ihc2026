@@ -48,9 +48,9 @@ Um CRUD pode gerar tarefas relevantes, mas “cadastrar usuário” só merece m
 
 | ID | Tarefa | Persona/cenário de origem | Frequência/criticidade | Técnicas aplicadas | Autor responsável |
 |---|---|---|---|---|---|
-| T01 | Avaliar a qualidade da segmentação de uma imagem | P01 / C01 | `[H]` a cada sessão de validação · alta (E4) | *a definir* | Tiago Fagundes dos Santos |
-| T02 | Executar a segmentação de imagens com uma configuração disponível | P01 / C01 | `[H]` a cada sessão de validação · alta (E4) | *a definir* | Tiago Fagundes dos Santos |
-| T03 | Comparar o resultado de uma imagem entre configurações | P01 / C01 | `[H]` quando há mais de uma configuração a avaliar · alta (E4) | *a definir* | Tiago Fagundes dos Santos |
+| T01 | Avaliar a qualidade da segmentação de uma imagem | P01 / C01 | `[H]` a cada sessão de validação · alta (E4) | GOMS (e objetivo 3 da T03) | Tiago Fagundes dos Santos |
+| T02 | Executar a segmentação de imagens com uma configuração disponível | P01 / C01 | `[H]` a cada sessão de validação · alta (E4) | Objetivo 2 do HTA e do CTT da T03 | Tiago Fagundes dos Santos |
+| T03 | Comparar o resultado de uma imagem entre configurações | P01 / C01 | `[H]` quando há mais de uma configuração a avaliar · alta (E4) | HTA, CTT | Tiago Fagundes dos Santos |
 | T04 | Comparar o desempenho consolidado entre modelos | P03 / C02 | `[H]` antes de cada ciclo de testes · alta (E4) | GOMS | Henrique Finatti Silveira Belo Trebbi |
 | T05 | Decidir e justificar a adoção de um modelo | P03 / C02 | `[H]` antes de cada ciclo de testes · alta (E4) | HTA, CTT | Henrique Finatti Silveira Belo Trebbi |
 | *a definir* | *Tarefa(s) da P02, a derivar do cenário C03* | P02 / C03 (pendente) | — | HTA, GOMS, CTT | Mateus Marana Assuena |
@@ -81,7 +81,7 @@ Um CRUD pode gerar tarefas relevantes, mas “cadastrar usuário” só merece m
 #### Descrição da tarefa
 
 - **Objetivo central [H]:** chegar à reunião com a coordenação com uma recomendação de modelo que Larissa consiga justificar, ou com um adiamento justificado.
-- **Entrada [H]:** ciclo de testes e data da reunião semanal; execuções dos modelos candidatos feitas por P01 sobre o mesmo conjunto de imagens.
+- **Entrada [H]:** ciclo de testes e data da reunião semanal; execuções dos modelos candidatos feitas por P01 sobre o mesmo conjunto de imagens com anotação de referência, necessária para calcular as métricas.
 - **Resultado [H]:** modelo recomendado com métricas, referência e ressalvas; decisão da coordenação registrada.
 - **Exceções [H]:** execução faltante (1.2), dúvida que a explicação não resolve (2.3.3), resultado inconclusivo (3.2 ou 3.3), resumo exportável indisponível (4.1.2).
 - **Término:** decisão da coordenação registrada (4.3), seja a adoção de um modelo, seja o adiamento com o que falta executar.
@@ -132,7 +132,7 @@ O objetivo 0 é uma meta de Larissa no mundo real (decidir e justificar), não "
 
 **Abordagem:** GOMS hierárquico, como no exemplo detalhado da aula. Não se aplica o KLM: a interface ainda não está desenhada, e tempos de operadores seriam inventados.
 
-**Precondições [H]:** a comparação está acessível na interface; os modelos candidatos do ciclo têm execução concluída sobre o mesmo conjunto de imagens (objetivo 1 da T05). As metas 0 e 1 têm um único caminho e não recebem métodos. As metas 2 e 3 correspondem às escolhas 2.2 e 2.3 do HTA e por isso têm métodos e regras de seleção.
+**Precondições [H]:** a comparação está acessível na interface; os modelos candidatos do ciclo têm execução concluída sobre o mesmo conjunto de imagens, com anotação de referência para as métricas (objetivo 1 da T05). As metas 0 e 1 têm um único caminho e não recebem métodos. As metas 2 e 3 correspondem às escolhas 2.2 e 2.3 do HTA e por isso têm métodos e regras de seleção.
 
 ```text
 GOAL 0: identificar o modelo de melhor desempenho e se a diferença entre os modelos é relevante
@@ -285,61 +285,224 @@ Os modelos são **propostas a validar**, derivadas de C02 e da P03:
 ## 2. Tiago Fagundes dos Santos — P01 (Rafael Pereira)
 
 **Autor(a):** Tiago Fagundes dos Santos — 22.123.017-0  
-**Persona:** P01 — Rafael Pereira, analista de segmentação  
-**Cenário de origem:** C01 — Validação manual de segmentação em campo  
-**Tarefas modeladas:** {{escolher entre T01, T02 e T03}}  
-**Hipóteses relacionadas:** {{...}}
+**Persona:** P01 — Rafael Pereira, analista de segmentação (persona prioritária)  
+**Cenário de origem:** C01 — Validação manual de segmentação em campo (processo atual)  
+**Tarefas modeladas:** T03 (HTA e CTT) e T01 (GOMS). A T02 é o objetivo 2 da T03 e a T01 é o objetivo 3: o GOMS detalha esse ramo.  
+**Rastreabilidade:** R01, R02, R03; H02, H04, H05, H06; RC01, RC03, RC04; F01, F03; decisões de design 1, 2 e 3 da P01 (Entrega 3).
 
-### 2.1 HTA — {{Txx nome da tarefa}}
+**Recorte comum aos três modelos [H]:**
+
+- Rafael executa e avalia a segmentação **pela interface**, sem scripts nem terminal, que é o objetivo do recorte (Entrega 1, §7.1). A persona sabe programar, mas o modelo não oferece o caminho por script (ver `PENDENCIAS.md`, INC-35).
+- Ele usa apenas as **configurações já disponibilizadas pelo TCC**; não cria nem treina modelos.
+- Visualização lado a lado, sobreposição com opacidade e legenda fixa vêm das decisões 1 e 2 da P01. A **confiança do modelo** por região vem da ruptura do C01 ("sem informação sobre a confiança do resultado") e é hipótese de design.
+- **Métricas por classe (IoU) só existem quando a imagem tem anotação de referência** (máscara feita à mão). Uma imagem nova de campo normalmente não tem, então a avaliação dela é visual, com apoio da confiança (ver `PENDENCIAS.md`, INC-52).
+- Ficam **fora da interface**: a captura das imagens (câmeras do veículo) e a comunicação à equipe. Ficam **fora do modelo**, por falta de sustentação: histórico (H08), exportação, atalhos de teclado (lição da Entrega 2) e modo offline.
+- Uma segmentação adequada não autoriza concluir que um trajeto é transitável ou seguro (Entrega 1, §4.3).
+
+### 2.1 HTA — T03 Comparar o resultado de uma imagem entre configurações
 
 #### Descrição da tarefa
 
-{{objetivo, ponto de início, conclusão esperada, contexto}}
+- **Objetivo central [H]:** saber qual configuração segmenta melhor uma imagem de campo que gerou dúvida, ou concluir que nenhuma é adequada ou que o resultado é inconclusivo.
+- **Entrada [H]:** imagem coletada no teste de campo; configurações disponibilizadas pelo TCC.
+- **Resultado [H]:** conclusão registrada e comunicada à equipe.
+- **Exceções [H]:** falha na execução (2.3.2), configuração retirada da comparação (2.3.2.2), avaliação inconclusiva (3.3 e 4.2.3), problema na imagem e não no modelo (4.2.2).
+- **Término:** conclusão comunicada à equipe (4.3).
 
 #### Diagrama
 
-{{inserir `../assets/05_tarefas/hta_txx_<descricao>.svg`}}
+![HTA T03 — comparar o resultado de uma imagem entre configurações](../assets/05_tarefas/hta_t03_comparar_configuracoes.svg)
+
+*Figura 3 — HTA de T03, por Tiago Fagundes dos Santos. Visão geral e expansões dos objetivos 1 a 4. [SVG](../assets/05_tarefas/hta_t03_comparar_configuracoes.svg) gerado por [`scripts/diagramas/hta_t03.py`](../scripts/diagramas/hta_t03.py).*
+
+Retângulos representam objetivos; operações (folhas) têm traço duplo abaixo. Os planos usam `>` para sequência e `/` para seleção condicionada. A tabela completa os planos abreviados do diagrama com as condições de cada escolha.
 
 #### Decomposição e planos
 
 | Objetivos / Operações | Problemas e Recomendações |
 |---|---|
-| **0. {{objetivo principal}}** | **Input:** {{...}} **Plano 0:** {{...}} **Feedback:** {{...}} **Problema:** {{...}} **Recomendação:** {{...}} |
-| **1. {{subobjetivo decomposto}}** | **Plano 1:** {{...}} **Recomendação:** {{...}} |
-| 1.1. {{operação}} | **Ação:** {{...}} **Problema:** {{...}} **Recomendação:** {{...}} |
+| **0. Comparar o resultado de uma imagem entre configurações** | **Input:** imagem de campo que gerou dúvida (C01); configurações disponibilizadas pelo TCC; computador do laboratório (Entrega 1, §5.2). **Plano 0:** `1 > (2 > 3) > 4`; repetir `2 > 3` para cada configuração escolhida em 1.2. O objetivo 3 só ocorre se 2 terminar em 2.3.1. **Feedback:** conclusão registrada (configuração mais adequada, nenhuma adequada ou inconclusivo) e comunicada à equipe. **Problema:** hoje cada execução exige script, gera arquivos sem padrão e a comparação se perde entre janelas e planilhas (C01). **Recomendação:** manter a imagem, as configurações e os resultados da mesma comparação reunidos em uma sessão. |
+| **1. Preparar a comparação** | **Plano 1:** `1.1 > 1.2`. **Recomendação:** mostrar só as configurações disponibilizadas pelo TCC. |
+| 1.1. Selecionar a imagem de campo | **Ação:** escolher o arquivo da imagem coletada no teste. **Recomendação:** exibir a imagem selecionada para Rafael confirmar que é a correta. |
+| 1.2. Escolher as configurações a comparar | **Ação:** marcar as configurações a comparar. **Problema [?]:** não se sabe como Rafael decide o que comparar (C01, Q5). **Recomendação:** lista explícita com descrição curta de cada configuração (F01). |
+| **2. Obter o resultado de uma configuração (T02)** | **Plano 2:** `2.1 > 2.2 > 2.3`. **Recomendação:** iniciar a execução com um único comando, sem editar parâmetros nem caminhos. |
+| 2.1. Iniciar a segmentação com a configuração | **Ação:** confirmar a configuração e iniciar. **Problema:** hoje é preciso ajustar parâmetros e caminhos no script a cada execução (C01; jornada, etapa 2). |
+| 2.2. Acompanhar o processamento | **Ação:** acompanhar o estado até a execução concluir ou falhar. **Recomendação:** distinguir processando, concluído e falhou, com indicação de progresso (RC04, F03). Não usar "treinando": Rafael só executa. |
+| **2.3. Conferir o desfecho da execução** | **Plano 2.3:** `2.3.1 / 2.3.2`. 2.3.1 se a execução concluiu; 2.3.2 se falhou. |
+| 2.3.1. Reconhecer o resultado pronto | **Ação:** reconhecer que o resultado está disponível para avaliação. |
+| **2.3.2. Tratar a falha da execução** | **Plano 2.3.2:** `2.3.2.1 > 2.3.2.2`. **Problema:** hoje a falha obriga Rafael a depurar código, mesmo não sendo desenvolvedor (C01). **Recomendação:** dizer o que falhou em linguagem de usuário e o que ele pode fazer. |
+| 2.3.2.1. Ler a causa da falha | **Ação:** ler a causa informada. **Problema [H]:** causas técnicas (memória, formato do arquivo) podem não fazer sentido para Rafael. |
+| 2.3.2.2. Decidir repetir ou retirar a configuração | **Ação:** repetir a execução (volta a 2.1) ou retirar a configuração da comparação. |
+| **3. Avaliar o resultado (T01)** | **Plano 3:** `3.1 > 3.2 > 3.3`. Detalhado no GOMS de T01 (seção 2.2). **Problema:** hoje a máscara é aberta em outra janela e a avaliação não é clara o bastante para apoiar decisões (C01). |
+| **3.1. Visualizar o resultado sobre a imagem** | **Plano 3.1:** `3.1.1 / 3.1.2`. 3.1.1 quando precisa ver a imagem original sem a máscara por cima (iluminação, poeira) ou quer uma visão geral; 3.1.2 quando precisa conferir o limite entre classes. **Recomendação:** zoom nas duas visões (P01, decisão 1). |
+| 3.1.1. Comparar lado a lado | **Ação:** ver a imagem e a máscara lado a lado, na mesma região. |
+| 3.1.2. Sobrepor a máscara com opacidade | **Ação:** sobrepor a máscara à imagem e ajustar a opacidade. |
+| 3.2. Interpretar as classes pela legenda | **Ação:** associar cada cor a uma classe pela legenda. **Problema:** hoje as cores não têm padrão entre execuções (jornada, etapa 5). **Recomendação:** paleta fixa e rótulo textual de cada classe (P01, decisão 2; RC01). Os nomes das classes ainda não estão definidos (INC-12). |
+| **3.3. Julgar a qualidade da segmentação** | **Plano 3.3:** `3.3.1 / 3.3.2 / 3.3.3`. 3.3.1 se o acerto ou o erro é evidente na região de interesse; 3.3.2 se a inspeção é inconclusiva e a imagem não tem anotação de referência; 3.3.3 se a inspeção é inconclusiva e a imagem tem anotação de referência. **Problema:** hoje Rafael não sabe dizer se a falha é do modelo ou da imagem (C01, Q7). |
+| 3.3.1. Julgar pela inspeção visual | **Ação:** comparar a classe atribuída com o terreno visível e decidir. **Problema [?]:** o critério para considerar uma máscara correta ainda não foi levantado (C01, Q7). |
+| 3.3.2. Consultar a confiança do modelo [H] | **Ação:** consultar a confiança do modelo na região duvidosa. **Problema [H]:** a confiança não é calibrada e não equivale a acerto. **Recomendação:** explicar o que a confiança indica e o que não indica (RC01). |
+| 3.3.3. Conferir as métricas por classe | **Ação:** ler o IoU da classe de interesse. **Problema:** o IoU exige anotação de referência, que imagens novas de campo normalmente não têm (INC-52). **Recomendação:** métricas em tabela e em gráfico (RC03; evidência em revisão, INC-22). |
+| **4. Concluir a comparação** | **Plano 4:** `4.1 > 4.2 > 4.3`. **Problema:** hoje as métricas ficam em planilhas diferentes e Rafael "perde o fio da comparação" (C01). |
+| 4.1. Comparar as configurações na mesma região | **Ação:** ver os resultados das configurações lado a lado, na mesma região da imagem. **Recomendação:** reunir todas as configurações tratadas em uma única visão, com a avaliação feita em 3. |
+| **4.2. Registrar a conclusão** | **Plano 4.2:** `4.2.1 / 4.2.2 / 4.2.3`. 4.2.1 se uma configuração se destaca; 4.2.2 se nenhuma é adequada; 4.2.3 se não há elementos para decidir. **Problema [H]:** onde a conclusão fica guardada depende da necessidade de histórico (H08). |
+| 4.2.1. Indicar a configuração mais adequada | **Ação:** indicar a configuração e o motivo. |
+| 4.2.2. Registrar que nenhuma é adequada | **Ação:** registrar que nenhuma serve e se o problema parece estar na imagem (captura) ou no modelo. |
+| 4.2.3. Registrar resultado inconclusivo | **Ação:** registrar o que impediu a conclusão. |
+| 4.3. Comunicar a conclusão à equipe | **Ação:** enviar a conclusão à equipe, fora da interface (C01, Q4). **Problema [H]:** exportar uma imagem comparativa (P01, decisão 4) ajudaria, mas não está no recorte da Entrega 1 até decisão da equipe. |
 
-### 2.2 GOMS — {{Txx nome da tarefa}}
+#### Verificação do HTA
 
-#### Descrição da tarefa
+O objetivo 0 é uma meta de Rafael no mundo real (saber qual configuração serve para a imagem), não "usar o sistema". Cada objetivo decomposto tem dois ou mais filhos e um plano; as folhas são operações. As escolhas (`/`) estão em 2.3, 3.1, 3.3 e 4.2, todas com condição explícita; a repetição por configuração está no Plano 0. Não há paralelismo (`+`). A decomposição para no nível em que a ação passa a depender do desenho da tela, que é tarefa da Entrega 6.
 
-{{...}}
+### 2.2 GOMS — T01 Avaliar a qualidade da segmentação de uma imagem
 
-#### Modelo
+**Abordagem:** GOMS hierárquico, como no exemplo detalhado da aula. Não se aplica o KLM: a interface ainda não está desenhada.
+
+**Precondições [H]:** a execução terminou com resultado pronto (2.3.1 da T03); a interface exibe a imagem, a máscara e a legenda. A meta 0 não tem método. A meta 2 tem um único caminho e é descrita direto por operadores. As metas 1 e 3 correspondem às escolhas 3.1 e 3.3 do HTA e por isso têm métodos e regras de seleção.
 
 ```text
-GOAL 0: {{meta do usuário}}
-  ...
+GOAL 0: avaliar se a segmentação de uma imagem identifica corretamente as regiões do terreno
+  GOAL 1: visualizar o resultado sobre a imagem
+    METHOD 1.A: comparar lado a lado
+    (SEL. RULE: precisa ver a imagem original sem a máscara por cima
+     ou quer uma visão geral do resultado)
+      OP. 1.A.1: selecionar a visualização lado a lado
+      OP. 1.A.2: ampliar a região de interesse
+      OP. 1.A.3: localizar a mesma região na imagem e na máscara
+      OP. 1.A.4: verificar que a mesma região está visível nas duas
+    METHOD 1.B: sobrepor a máscara com opacidade
+    (SEL. RULE: precisa conferir o limite entre classes em uma região específica)
+      OP. 1.B.1: selecionar a sobreposição
+      OP. 1.B.2: ampliar a região de interesse
+      OP. 1.B.3: ajustar a opacidade da máscara
+      OP. 1.B.4: verificar que o terreno e o limite entre as classes estão visíveis ao mesmo tempo
+  GOAL 2: interpretar as classes da máscara
+    OP. 2.1: ler a legenda
+    OP. 2.2: associar cada cor da região de interesse a uma classe
+    OP. 2.3: verificar que todas as cores da região de interesse têm classe na legenda
+  GOAL 3: julgar a qualidade da segmentação
+    METHOD 3.A: julgar pela inspeção visual
+    (SEL. RULE: o acerto ou o erro é evidente na região de interesse)
+      OP. 3.A.1: comparar a classe atribuída com o terreno visível na imagem
+      OP. 3.A.2: examinar a imagem original em busca de problema de captura
+      OP. 3.A.3: decidir se o resultado é adequado ou inadequado
+      OP. 3.A.4: verificar que a decisão distingue erro do modelo de problema da imagem
+    METHOD 3.B: consultar a confiança do modelo
+    (SEL. RULE: inspeção visual inconclusiva e a imagem não tem anotação de referência)
+      OP. 3.B.1: acionar a exibição da confiança
+      OP. 3.B.2: localizar a região duvidosa
+      OP. 3.B.3: ler a confiança do modelo nessa região
+      OP. 3.B.4: decidir se o resultado é adequado, inadequado ou inconclusivo
+      OP. 3.B.5: verificar que a decisão não trata confiança alta como acerto garantido
+    METHOD 3.C: conferir as métricas por classe
+    (SEL. RULE: inspeção visual inconclusiva e a imagem tem anotação de referência)
+      OP. 3.C.1: abrir as métricas da execução
+      OP. 3.C.2: localizar a classe de interesse
+      OP. 3.C.3: ler o IoU da classe
+      OP. 3.C.4: comparar o IoU com a impressão da inspeção visual
+      OP. 3.C.5: decidir se o resultado é adequado, inadequado ou inconclusivo
+      OP. 3.C.6: verificar que a decisão se apoia na classe de interesse, e não só na média
+  OP. 0.1: verificar que a avaliação indica se o resultado é adequado, inadequado ou inconclusivo, e por quê
 ```
 
-#### Interpretação
+**Regras e repetições:** a meta 1 pode ser repetida com o outro método (ex.: ver lado a lado e, com dúvida no limite da pista, passar à sobreposição). Na meta 3, Rafael sempre começa pela inspeção visual; os métodos 3.B e 3.C só são selecionados quando ela é inconclusiva, e a escolha entre eles depende de a imagem ter anotação de referência. A comparação **entre** configurações não faz parte da T01: acontece no objetivo 4 da T03.
 
-{{...}}
+**Correspondência com o HTA da T03:** GOAL 1 ↔ 3.1 (1.A ↔ 3.1.1, 1.B ↔ 3.1.2); GOAL 2 ↔ 3.2; GOAL 3 ↔ 3.3 (3.A ↔ 3.3.1, 3.B ↔ 3.3.2, 3.C ↔ 3.3.3). Ler, localizar e examinar são operadores perceptivos; selecionar, ampliar e ajustar são motores; associar, decidir e verificar são cognitivos.
 
-### 2.3 CTT — {{Txx nome da tarefa}}
+### 2.3 CTT — T03 Comparar o resultado de uma imagem entre configurações
 
-#### Descrição
-
-{{...}}
+**Fronteira dos sistemas:** seleção da imagem, escolha das configurações, execução, visualização, legenda, confiança, métricas e comparação na interface proposta; captura da imagem e comunicação à equipe fora dela. O sistema processa e exibe; não decide qual configuração é a melhor.
 
 #### Diagrama
 
-{{inserir `../assets/05_tarefas/ctt_txx_<descricao>.svg`}}
+![CTT T03 — visão geral: motivação e sessão](../assets/05_tarefas/ctt_t03_comparar_configuracoes_visao_geral.svg)
 
-#### Tipos de tarefa e relações temporais usadas
+*Figura 4 — CTT de T03, visão geral, por Tiago Fagundes dos Santos. Os detalhamentos abaixo são recortes da mesma árvore, com os mesmos IDs e relações. [SVG completo](../assets/05_tarefas/ctt_t03_comparar_configuracoes.svg) gerado por [`scripts/diagramas/ctt_t03.py`](../scripts/diagramas/ctt_t03.py).*
 
-| Operador/relação ou tipo | Significado no diagrama | Exemplo no modelo |
+<details>
+<summary>T03: detalhamento 1 — preparar e repetir por configuração</summary>
+
+![CTT T03, detalhamento 1](../assets/05_tarefas/ctt_t03_comparar_configuracoes_detalhe_01.svg)
+
+</details>
+
+<details>
+<summary>T03: detalhamento 2 — obter o resultado (T02)</summary>
+
+![CTT T03, detalhamento 2](../assets/05_tarefas/ctt_t03_comparar_configuracoes_detalhe_02.svg)
+
+</details>
+
+<details>
+<summary>T03: detalhamento 3 — avaliar o resultado (T01)</summary>
+
+![CTT T03, detalhamento 3](../assets/05_tarefas/ctt_t03_comparar_configuracoes_detalhe_03.svg)
+
+</details>
+
+<details>
+<summary>T03: detalhamento 4 — concluir a comparação e legenda</summary>
+
+![CTT T03, detalhamento 4](../assets/05_tarefas/ctt_t03_comparar_configuracoes_detalhe_04.svg)
+
+</details>
+
+#### Leitura da árvore
+
+Os IDs numéricos seguem o HTA. As letras marcam nós que só existem no CTT: `M` (motivação externa), `R` (sessão), `V` (repetição por configuração), `C` (uma configuração), `F` (fim da repetição), `P` (processamento), `Q` (abrir a comparação) e `S1`–`S4` (tarefas do sistema).
+
+1. **Motivação e sessão:** `T03 = M []>> R`. No teste de campo, uma segmentação parece errada (ex.: a pista coberta por uma única cor, C01), e Rafael decide comparar configurações. A imagem e a dúvida passam para a sessão.
+2. **Sessão:** `R = 1 []>> V []>> 4`.
+3. **Preparar:** `1 = 1.1 []>> S1 []>> 1.2`. O sistema exibe as configurações disponíveis (S1) depois que a imagem é selecionada.
+4. **Repetir por configuração:** `V = C* [> F`. C se repete para cada configuração escolhida; F (reconhecer que todas foram tratadas) desativa a repetição.
+5. **Uma configuração:** `C = 2 []>> 3`. O ramo 3 só é habilitado se 2 terminar com resultado pronto (2.3.1).
+6. **Obter o resultado:** `2 = 2.1 []>> P []>> 2.3`, com `P = S2 |[]| 2.2`. O sistema processa a imagem (S2) e, ao mesmo tempo, informa o estado a Rafael, que acompanha (2.2). Depois, `2.3 = 2.3.1 [] 2.3.2` e `2.3.2 = 2.3.2.1 []>> 2.3.2.2`; repetir volta a 2.1, retirar encerra C sem avaliação.
+7. **Avaliar:** `3 = S3 []>> 3.1 []>> 3.2 []>> 3.3`, com `3.1 = 3.1.1 [] 3.1.2` e `3.3 = 3.3.1 [] 3.3.2 [] 3.3.3`.
+8. **Concluir:** `4 = Q []>> S4 []>> 4.1 []>> 4.2 []>> 4.3`, com `4.2 = 4.2.1 [] 4.2.2 [] 4.2.3`. A comunicação (4.3) acontece fora da interface.
+
+#### Legenda e relações temporais usadas
+
+| Relação CTT | Notação | Ocorrência em T03 |
 |---|---|---|
-| {{...}} | {{...}} | {{...}} |
+| Ativação com passagem de informação | `T1 []>> T2` | M passa a imagem e a dúvida a R; a imagem passa às configurações (1); o resultado passa à avaliação (C); as avaliações passam à conclusão (4). |
+| Escolha | `T1 [] T2` | Resultado pronto ou falha (2.3); lado a lado ou sobreposição (3.1); visual, confiança ou métricas (3.3); as três conclusões (4.2). |
+| Concorrência com comunicação | `T1 \|[]\| T2` | S2 processa enquanto Rafael acompanha o estado (2.2), e o sistema comunica processando, concluído ou falhou. |
+| Desativação | `T1 [> T2` | F encerra a repetição de C. |
+| Iteração | `T*` | C* repete-se para cada configuração. |
+
+Não há suspensão (`|>`): interrupções durante a análise (Entrega 1, §5.3) ainda são hipótese e não foram modeladas.
+
+#### Tipos de tarefas
+
+| Símbolo no diagrama | Tipo | Tarefas no modelo |
+|---|---|---|
+| Nuvem | Abstrata | T03, R, V, C, P, ramos 1 a 4, 2.3, 2.3.2, 3.1, 3.3 e 4.2. |
+| Pessoa | Usuário | M (fora da interface); F; 2.3.1 e 2.3.2.2; 3.3.1; 4.2.1 a 4.2.3; 4.3 (fora da interface). |
+| Pessoa e computador, com seta dupla | Interação | 1.1, 1.2, 2.1, 2.2, 2.3.2.1, 3.1.1, 3.1.2, 3.2, 3.3.2, 3.3.3, Q e 4.1. |
+| Computador | Sistema | S1 (exibir configurações), S2 (processar a imagem), S3 (exibir imagem, máscara e legenda) e S4 (exibir resultados lado a lado). |
+
+### 2.4 Correspondência entre os três modelos
+
+| Escolha ou repetição no HTA | Métodos no GOMS (T01) | Relação no CTT |
+|---|---|---|
+| Plano 0: repetir `2 > 3` por configuração | Fora do GOMS (a T01 avalia uma execução) | `V = C* [> F` |
+| 2.3: `2.3.1 / 2.3.2` | Fora do GOMS (precondição: resultado pronto) | `2.3.1 [] 2.3.2` |
+| 3.1: `3.1.1 / 3.1.2` | 1.A / 1.B | `3.1.1 [] 3.1.2` |
+| 3.3: `3.3.1 / 3.3.2 / 3.3.3` | 3.A / 3.B / 3.C | `3.3.1 [] 3.3.2 [] 3.3.3` |
+| 4.2: `4.2.1 / 4.2.2 / 4.2.3` | Fora do GOMS | `4.2.1 [] 4.2.2 [] 4.2.3` |
+
+As sequências (`>`) do HTA não recebem métodos no GOMS e aparecem como `[]>>` no CTT. Uma diferença deliberada: no HTA, acompanhar o processamento (2.2) vem depois de iniciar (2.1); no CTT, ele acontece **ao mesmo tempo** que o processamento do sistema (`S2 |[]| 2.2`), o que o HTA não consegue representar porque não modela o sistema.
+
+### 2.5 Síntese e implicações para o projeto
+
+Os modelos são **propostas a validar**, derivadas de C01 e da P01:
+
+1. **Execução sem script, com estado claro:** o ramo 2 só funciona se a interface distinguir processando, concluído e falhou, e explicar a falha em linguagem de usuário (RC04).
+2. **Imagem ou modelo:** a ruptura central do C01 é não saber se o erro vem do modelo ou da captura. Ela aparece em 3.A.2 (examinar a imagem original) e em 4.2.2 (registrar onde parece estar o problema).
+3. **Métricas dependem de anotação:** para imagens novas de campo, a avaliação é visual, com apoio da confiança `[H]`. A interface não deve prometer IoU para toda imagem (INC-52).
+4. **Comparação reunida:** reunir as configurações na mesma visão (4.1) responde ao "perder o fio da comparação" do C01.
+
+**Continuidade da investigação [?]:** na Entrega 7, verificar com um integrante que faz a análise de segmentação (perfil P01) como escolhe as configurações a comparar (C01, Q5); qual critério usa para considerar a máscara correta (Q7); se as imagens de campo costumam ter anotação de referência; se a confiança do modelo ajudaria a decidir; e quantas imagens e configurações avalia por sessão (Q9).
 
 ---
 
@@ -414,7 +577,7 @@ Quais problemas de interação, oportunidades e requisitos apareceram a partir d
 
 | Tarefa | Necessidade | Persona / cenário | Modelos | Atualizar em `RASTREABILIDADE.md` |
 |---|---|---|---|---|
-| T01–T03 | R01, R02, R03 | P01 / C01 | {{seção 2}} | Coluna HTA/GOMS/CTT de R01–R03 |
+| T01–T03 | R01, R02, R03 | P01 / C01 | HTA T03, GOMS T01, CTT T03 (seção 2) | Coluna HTA/GOMS/CTT de R01–R03 — atualizada |
 | T04, T05 | R03 | P03 / C02 | HTA T05, GOMS T04, CTT T05 (seção 1) | Coluna HTA/GOMS/CTT de R03 — atualizada |
 | {{a definir}} | {{...}} | P02 / C03 | {{seção 3}} | {{...}} |
 
