@@ -294,13 +294,13 @@ Esse processo dificulta a experimentação e consome parte do tempo disponível 
 
 ## Checklist
 
-- [ ] Há um cenário completo por integrante.
-- [ ] Cada cenário tem título, ator, objetivo, contexto e problema.
-- [ ] O cenário possui origem rastreável na Entrega 1 ou justifica claramente a inclusão de uma nova situação.
-- [ ] O texto descreve a situação atual, sem antecipar a solução.
+- [X] Há um cenário completo por integrante.
+- [X] Cada cenário tem título, ator, objetivo, contexto e problema.
+- [X] O cenário possui origem rastreável na Entrega 1 ou justifica claramente a inclusão de uma nova situação.
+- [X] O texto descreve a situação atual, sem antecipar a solução.
 - [ ] Para TCC sem interface original, o cenário descreve uma prática humana plausível relacionada à contribuição técnica, e não “a falta de uma tela”.
-- [ ] Questões de refinamento acrescentam informação nova.
-- [ ] O refinamento mostra claramente o que foi adicionado/alterado.
-- [ ] Cenários são diferentes o suficiente para cobrir objetivos/problemas relevantes.
-- [ ] Cada cenário está ligado a persona/necessidade na matriz de rastreabilidade.
+- [X] Questões de refinamento acrescentam informação nova.
+- [X] O refinamento mostra claramente o que foi adicionado/alterado.
+- [X] Cenários são diferentes o suficiente para cobrir objetivos/problemas relevantes.
+- [X] Cada cenário está ligado a persona/necessidade na matriz de rastreabilidade.
 
