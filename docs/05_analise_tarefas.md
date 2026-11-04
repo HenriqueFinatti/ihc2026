@@ -53,11 +53,11 @@ Um CRUD pode gerar tarefas relevantes, mas “cadastrar usuário” só merece m
 | T03 | Comparar o resultado de uma imagem entre configurações | P01 / C01 | `[H]` quando há mais de uma configuração a avaliar · alta (E4) | HTA, CTT | Tiago Fagundes dos Santos |
 | T04 | Comparar o desempenho consolidado entre modelos | P03 / C02 | `[H]` antes de cada ciclo de testes · alta (E4) | GOMS | Henrique Finatti Silveira Belo Trebbi |
 | T05 | Decidir e justificar a adoção de um modelo | P03 / C02 | `[H]` antes de cada ciclo de testes · alta (E4) | HTA, CTT | Henrique Finatti Silveira Belo Trebbi |
-| *a definir* | *Tarefa(s) da P02, a derivar do cenário C03* | P02 / C03 (pendente) | — | HTA, GOMS, CTT | Mateus Marana Assuena |
+| T06 | Executar a segmentação de imagem e vídeos utlizando modelos pré-treinados | P02 / C03 | `[H]` a cada sessão de experimentação · alta (E4) | HTA | Mateus Marana Assuena |
+| T07 | Decidir e justificar a adoção de um modelo | P02 / C03 | `[H]` após cada execução de segmentação· alta (E4) | GOMS | Mateus Marana Assuena |
+| T08 | Decidir e justificar a adoção de um modelo | P02 / C03 | `[H]` quando houver dois ou mais modelos a avaliar · alta (E4) | HTA e CTT | Mateus Marana Assuena |
 
 > Priorize tarefas necessárias para que o usuário alcance objetivos centrais. Não desperdice a modelagem em ações triviais isoladas, como “clicar em login”, se o objetivo relevante é maior. Da mesma forma, não modele o funcionamento interno do algoritmo como se fosse uma tarefa humana.
-
-> **Pendência:** as tarefas da P02 dependem do cenário C03, que ainda não existe na Entrega 4 (ver `PENDENCIAS.md`, INC-43).
 
 ---
 
@@ -506,9 +506,9 @@ Os modelos são **propostas a validar**, derivadas de C01 e da P01:
 
 **Autor(a):** Mateus Marana Assuena — 22.123.026-1  
 **Persona:** P02 — Andreia Silva  
-**Cenário de origem:** C03 — {{pendente na Entrega 4}}  
-**Tarefas modeladas:** {{a derivar do C03}}  
-**Hipóteses relacionadas:** {{...}}
+**Cenário de origem:** C03 — Exeperimentação e análises de modelos para segmentação 
+**Tarefas modeladas:** T06, T07 e T08 
+**Hipóteses relacionadas:** {{...}} 
 
 ### 3.1 HTA — {{Txx nome da tarefa}}
 
