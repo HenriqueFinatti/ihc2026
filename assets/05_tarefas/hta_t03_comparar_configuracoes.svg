@@ -302,7 +302,7 @@
 <path d="M849.3 2339 H1060.0" fill="none" stroke="#333" stroke-width="1.6"/>
 <path d="M849.3 2343 H1060.0" fill="none" stroke="#333" stroke-width="1.6"/>
 <path d="M40 2358 H1400" fill="none" stroke="#333" stroke-width="1.6"/>
-<text x="40" y="2388" text-anchor="start" font-size="18" font-weight="700">Legenda (Barbosa e Silva, 2010)</text>
+
 <g data-box="b38">
 <rect x="50.0" y="2410" width="180.0" height="50" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
 <text x="140" y="2436" text-anchor="middle" font-size="16" font-weight="400">objetivo</text>
