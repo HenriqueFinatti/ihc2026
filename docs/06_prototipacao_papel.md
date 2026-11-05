@@ -59,6 +59,12 @@ Escolha apenas o que for coerente com tarefas e cenários. Para TCCs técnicos, 
 ### 3.3. Comparação entre modelos
 
 ![Protótipo de comparação entre modelos](../assets/06_prototipos/comparacao_modelo.jfif)
+
+**Fluxo:**
+P01 (Tela: Input de dados + Configurações)
+P01 Clicar em "Executar Segmentação" --> P02 (Tela: Resultado da Segmentação)
+P02 Clicar em "Comparar Modelo" --> P03 (Tela: Comparação de Modelos)
+
 ## 4. Simulação / walkthrough
 
 Realize uma simulação com uma pessoa que não participou da elaboração dessas telas. Um colega pode ser usado **para essa iteração formativa**, mas isso não substitui os participantes finais da Entrega 14.
@@ -72,14 +78,15 @@ Realize uma simulação com uma pessoa que não participou da elaboração dessa
 
 | Antes | Problema | Depois | Justificativa |
 |---|---|---|---|
-| {{...}} | {{...}} | {{...}} | {{...}} |
+| Na tela de comparação entre modelos, na parte de métrica comparativas estamos utilizando as nomenclaturas Modelo A e Modelo B. | Essa nomenclatura não fica tão claro de qual modelo estamos analisando. | Trocarmos esses nomes, pelo nome real do modelo, então nesse exemplo seria FCN e DeepLabV3+.  | Melhora a experiência do usuário e deixa mais claro. |
+| Na tela de input de dados e configurações temos a opção de selecionar o modelo, mas nao temos a opção de selecionar mais de um modelo para rodar de uma vez. | O problema nesse cenário é ter que esperar um modelo terminar para outro começar a rodar.| Iremos incluir a opção do usuário selecionar mais de um modelo de uma vez.| Fica mais prático para o usuário pensando no cotidiano dele.|
 
 ## Checklist
 
-- [ ] O protótipo cobre tarefas relevantes da Entrega 5.
-- [ ] Cada tela/estado pode ser justificado por uma tarefa, decisão ou informação necessária.
+- [X] O protótipo cobre tarefas relevantes da Entrega 5.
+- [X] Cada tela/estado pode ser justificado por uma tarefa, decisão ou informação necessária.
 - [ ] O projeto não criou dashboard/CRUD/login apenas para parecer “completo”.
-- [ ] Telas/estados estão numerados e navegáveis na documentação.
-- [ ] Há pelo menos uma simulação/walkthrough documentado.
-- [ ] Críticas não foram apenas listadas: geraram decisão de revisão.
-- [ ] O protótipo continua em baixa fidelidade; detalhes visuais não mascaram problemas de fluxo.
+- [X] Telas/estados estão numerados e navegáveis na documentação.
+- [X] Há pelo menos uma simulação/walkthrough documentado.
+- [X] Críticas não foram apenas listadas: geraram decisão de revisão.
+- [X] O protótipo continua em baixa fidelidade; detalhes visuais não mascaram problemas de fluxo.
