@@ -55,7 +55,7 @@ Um CRUD pode gerar tarefas relevantes, mas “cadastrar usuário” só merece m
 | T05 | Decidir e justificar a adoção de um modelo | P03 / C02 | `[H]` antes de cada ciclo de testes · alta (E4) | HTA, CTT | Henrique Finatti Silveira Belo Trebbi |
 | T06 | Executar a segmentação de imagem e vídeos utlizando modelos pré-treinados | P02 / C03 | `[H]` a cada sessão de experimentação · alta (E4) | HTA | Mateus Marana Assuena |
 | T07 | Decidir e justificar a adoção de um modelo | P02 / C03 | `[H]` após cada execução de segmentação· alta (E4) | GOMS | Mateus Marana Assuena |
-| T08 | Decidir e justificar a adoção de um modelo | P02 / C03 | `[H]` quando houver dois ou mais modelos a avaliar · alta (E4) | HTA e CTT | Mateus Marana Assuena |
+| T08 | Decidir e justificar a adoção de um modelo | P02 / C03 | `[H]` quando houver dois ou mais modelos a avaliar · alta (E4) | CTT | Mateus Marana Assuena |
 
 > Priorize tarefas necessárias para que o usuário alcance objetivos centrais. Não desperdice a modelagem em ações triviais isoladas, como “clicar em login”, se o objetivo relevante é maior. Da mesma forma, não modele o funcionamento interno do algoritmo como se fosse uma tarefa humana.
 
@@ -508,48 +508,110 @@ Os modelos são **propostas a validar**, derivadas de C01 e da P01:
 **Persona:** P02 — Andreia Silva  
 **Cenário de origem:** C03 — Exeperimentação e análises de modelos para segmentação 
 **Tarefas modeladas:** T06, T07 e T08 
-**Hipóteses relacionadas:** {{...}} 
+**Rastreabilidade:** R03; H01, H04; Q18, Q21, Q26. R03; H01, H04; Q22, Q24; decisões de design relacionadas à visualização. R03; H01, H04; Q18, Q19, Q20; decisões de design relacionadas à comparação.
 
-### 3.1 HTA — {{Txx nome da tarefa}}
+**Recorte comum aos três modelos [H]:**
+
+- Andreia executa, analisa e compara os resultados da segmentação **pela interface**, sem precisar recorrer a scripts ou ao terminal. Embora tenha conhecimento de Python e visão computacional, o objetivo do sistema é centralizar essas atividades em uma interface.
+- Ela utiliza apenas **modelos pré-treinados disponibilizados pelo sistema**; não cria, treina ou modifica modelos.
+- As entradas consideradas são **imagens e vídeos gravados**. A captura de imagens pelas câmeras do veículo fica fora do escopo da interface.
+- A análise visual considera a imagem original, as máscaras geradas e as sobreposições, permitindo inspecionar os resultados e identificar diferenças entre modelos.
+- A comparação considera a mesma entrada processada por diferentes modelos, para que as diferenças observadas sejam atribuídas aos modelos, e não a arquivos distintos.
+- **Métricas são consideradas somente quando estiverem disponíveis** para a execução. Não se presume que todas as imagens possuam anotações de referência ou que todos os indicadores possam ser calculados.
+- A avaliação dos resultados combina inspeção visual e indicadores disponíveis, sem presumir que uma métrica isolada determine a qualidade da segmentação.
+- Ficam **fora do escopo**: treinamento de modelos, captura de imagens pelo veículo, comunicação dos resultados à equipe, histórico persistente, exportação e modo offline, enquanto não houver requisitos que sustentem essas funcionalidades.
+- Uma segmentação adequada não permite concluir, isoladamente, que um terreno ou trajeto é transitável ou seguro para o veículo Baja.
+
+### 3.1 HTA — T07: Executar a segmentação de imagens e vídeos utilizando modelos pré-treinadosi
 
 #### Descrição da tarefa
-
-{{objetivo, ponto de início, conclusão esperada, contexto}}
+- **Objetivo centrali[H]**: executar um ou mais modelos pré-treinados sobre uma imagem ou vídeo gravado para obter resultados de segmentação que possam ser analisados posteriormente.
+- **Entrada[H]**: imagem ou vídeo gravado e modelo de segmentação disponível.
+- **Resultado[H]**: segmentação processada, com máscara gerada e informações sobre o modelo utilizado.
+- **Pré-condições[H]**: existência de um arquivo de entrada compatível e de pelo menos um modelo disponível.
+- **Exceções[H]**: arquivo incompatível, modelo indisponível, configuração inválida ou falha durante o processamento.
+- **Término[H]**: resultado da segmentação disponibilizado para análise.
 
 #### Diagrama
 
-{{inserir `../assets/05_tarefas/hta_txx_<descricao>.svg`}}
+![HTA - Tarefa 06](../assets/05_tarefas/hta-task-06.svg)
 
 #### Decomposição e planos
 
 | Objetivos / Operações | Problemas e Recomendações |
 |---|---|
-| **0. {{objetivo principal}}** | **Input:** {{...}} **Plano 0:** {{...}} **Feedback:** {{...}} **Problema:** {{...}} **Recomendação:** {{...}} |
-| **1. {{subobjetivo decomposto}}** | **Plano 1:** {{...}} **Recomendação:** {{...}} |
-| 1.1. {{operação}} | **Ação:** {{...}} **Problema:** {{...}} **Recomendação:** {{...}} |
+| **0. Comparar resultados de diferentes modelos** | **Input:** imagens ou vídeos e modelos pré-treinados (C03). **Plano 0:** `1 > 2`, conforme o HTA enviado. **Problema:** as execuções são realizadas em scripts separados, dificultando a comparação dos resultados (C03, Q19). **Recomendação:** centralizar as etapas de experimentação e visualização em uma única interface. |
+| **1. Selecionar a entrada** | **Plano 1:** `1.1 + 1.2`. **Recomendação:** permitir selecionar e carregar arquivos diretamente pela interface. |
+| 1.1. Selecionar imagem ou vídeo | **Ação:** escolher o arquivo que será utilizado na segmentação. **Recomendação:** disponibilizar a seleção de imagens e vídeos gravados. |
+| 1.2. Carregar o arquivo | **Ação:** carregar o arquivo selecionado. **Problema [H]:** arquivos incompatíveis podem impedir o processamento. **Recomendação:** informar se o carregamento foi concluído ou se ocorreu algum erro. |
+| **2. Selecionar o modelo** | **Plano 2:** `2.1 + 2.2`. **Recomendação:** apresentar os modelos pré-treinados disponíveis de forma organizada. |
+| 2.1. Consultar modelos disponíveis | **Ação:** consultar os modelos disponíveis. **Recomendação:** apresentar o nome e uma breve descrição de cada modelo. |
+| 2.2. Selecionar modelo desejado | **Ação:** escolher o modelo que será utilizado. **Recomendação:** permitir selecionar o modelo diretamente pela interface. |
+| **3. Executar a segmentação** | **Ação:** iniciar a segmentação utilizando o arquivo e o modelo selecionados. **Problema:** atualmente, são necessários scripts Python separados para executar os modelos (C03, Q26). **Recomendação:** permitir iniciar o processamento pela interface e informar seu estado. |
+| **4. Visualizar o resultado** | **Ação:** consultar o resultado produzido pela segmentação. **Problema:** a alternância entre diferentes saídas dificulta a análise (C03, Q19). **Recomendação:** apresentar a máscara junto à imagem ou ao vídeo original, permitindo consultar a sobreposição (Q24). |
 
-### 3.2 GOMS — {{Txx nome da tarefa}}
+**Verificação do HTA**
+O objetivo 0 representa uma meta da Andreia no contexto real de pesquisa: comparar diferentes modelos de segmentação para identificar quais apresentam resultados mais adequados, e não simplesmente utilizar o sistema. Cada objetivo decomposto possui duas ou mais subtarefas e um plano associado; as folhas representam operações. A seleção da entrada e do modelo ocorre conforme os planos definidos em 1 e 2. A decomposição contempla a execução da segmentação e a visualização dos resultados, necessárias para atingir o objetivo. Não há paralelismo (+) nem escolhas condicionais explicitamente representadas no plano atual. A repetição de execuções para diferentes modelos e o retorno à T07, caso faltem resultados, devem ser explicitados no Plano 0. A decomposição termina no nível em que as ações passam a depender do desenho da interface, responsabilidade da Entrega 6.
 
-#### Descrição da tarefa
+### 3.2 GOMS — T08 Analisar visualmente os resultados da segmentação
 
-{{...}}
+**Abordagem:** GOMS hierárquico, como no exemplo detalhado da aula. Não se aplica o KLM: a interface ainda não está desenhada.
 
-#### Modelo
+**Precondições [H]:** a execução da segmentação foi concluída com sucesso; os resultados estão disponíveis para consulta; a interface apresenta a imagem original e as saídas da segmentação, como máscara e sobreposição. A meta 0 não possui método próprio. A meta 2 possui três métodos alternativos, escolhidos conforme o tipo de visualização necessário para analisar o resultado.
 
 ```text
-GOAL 0: {{meta do usuário}}
-  ...
+GOAL 0: analisar visualmente os resultados da segmentação
+  GOAL 1: acessar o resultado da segmentação
+    OP. 1.1: localizar a execução que deseja analisar
+    OP. 1.2: abrir os resultados da execução
+    OP. 1.3: identificar a imagem ou o vídeo processado
+    OP. 1.4: verificar que os resultados correspondem à entrada selecionada
+
+  GOAL 2: examinar as visualizações do resultado
+    METHOD 2.A: analisar a imagem original
+    (SEL. RULE: precisa compreender as características da entrada
+     ou verificar possíveis problemas na imagem)
+      OP. 2.A.1: selecionar a visualização da imagem original
+      OP. 2.A.2: observar as regiões de interesse
+      OP. 2.A.3: identificar características relevantes do terreno
+      OP. 2.A.4: verificar se há problemas visíveis na imagem
+
+    METHOD 2.B: analisar a máscara
+    (SEL. RULE: precisa identificar as classes atribuídas pelo modelo
+     e verificar a distribuição das regiões segmentadas)
+      OP. 2.B.1: selecionar a visualização da máscara
+      OP. 2.B.2: observar as regiões segmentadas
+      OP. 2.B.3: identificar as cores e regiões representadas
+      OP. 2.B.4: verificar a distribuição das classes na máscara
+
+    METHOD 2.C: analisar a sobreposição
+    (SEL. RULE: precisa relacionar as regiões segmentadas com a imagem original
+     ou verificar os limites entre as classes)
+      OP. 2.C.1: selecionar a visualização sobreposta
+      OP. 2.C.2: observar a correspondência entre imagem e máscara
+      OP. 2.C.3: identificar regiões com possíveis inconsistências
+      OP. 2.C.4: verificar se os limites das classes correspondem ao terreno visível
+
+  GOAL 3: identificar possíveis problemas na segmentação
+    OP. 3.1: localizar regiões com possíveis erros
+    OP. 3.2: comparar as regiões segmentadas com as características da imagem original
+    OP. 3.3: identificar classes atribuídas incorretamente ou regiões não segmentadas
+    OP. 3.4: verificar se o problema observado pode estar relacionado à imagem de entrada
+
+  GOAL 4: concluir a análise visual
+    OP. 4.1: avaliar se o resultado apresenta problemas visíveis
+    OP. 4.2: determinar se a segmentação parece adequada ou inadequada
+    OP. 4.3: registrar os aspectos que justificam a avaliação
+    OP. 4.4: verificar que a conclusão está fundamentada nas evidências visuais
+    
 ```
+**Regras e repetições:** na meta 2, os métodos 2.A, 2.B e 2.C podem ser utilizados em conjunto e repetidos conforme a necessidade da análise. A pessoa pode começar pela imagem original, consultar a máscara e, em seguida, utilizar a sobreposição para investigar uma região específica. Na meta 3, a identificação de problemas pode levar à consulta de outra visualização para confirmar a inconsistência. Caso seja necessário executar novamente a segmentação com outra configuração ou modelo, essa atividade fica fora do escopo da T08 e deve retornar à tarefa de execução correspondente.
 
-#### Interpretação
-
-{{...}}
+**Correspondência com o HTA da T08:** GOAL 0 ↔ objetivo principal de analisar visualmente os resultados; GOAL 1 ↔ acesso aos resultados da execução; GOAL 2 ↔ análise das visualizações disponíveis; GOAL 3 ↔ identificação de possíveis problemas; GOAL 4 ↔ conclusão da análise. Observar e localizar são operadores perceptivos; selecionar e abrir são motores; identificar, comparar, avaliar e concluir são cognitivos.
 
 ### 3.3 CTT — {{Txx nome da tarefa}}
 
-#### Descrição
-
-{{...}}
+**Fronteira do sistema:** acesso aos resultados da segmentação, seleção das visualizações, exibição da imagem original, máscara, sobreposição e legenda, além da consulta às informações necessárias para a análise, ocorrem na interface proposta. A identificação de regiões suspeitas, a interpretação das classes e o julgamento da qualidade da segmentação são realizados pelo usuário. A execução da segmentação pertence à T07, enquanto a comparação entre diferentes configurações pertence à T03. A comunicação dos resultados à equipe também fica fora da interface.
 
 #### Diagrama
 
@@ -557,9 +619,37 @@ GOAL 0: {{meta do usuário}}
 
 #### Tipos de tarefa e relações temporais usadas
 
-| Operador/relação ou tipo | Significado no diagrama | Exemplo no modelo |
+##### Leitura da árvore
+
+Os IDs numéricos identificam as tarefas da T08. As letras marcam nós adicionais do CTT: `R` (acessar os resultados), `V` (examinar as visualizações), `A` (analisar uma região de interesse) e `S1`–`S3` (tarefas do sistema).
+
+1. **Acessar os resultados:** `T08 = R []>> V`. O usuário inicia a análise acessando os resultados de uma execução já concluída.
+2. **Abrir os resultados:** `R = 1.1 []>> S1 []>> 1.2`. O usuário localiza a execução (1.1), o sistema apresenta os resultados disponíveis (S1) e o usuário abre o resultado desejado (1.2).
+3. **Examinar as visualizações:** `V = 2.1 []>> 2.2 []>> 2.3`. O usuário consulta a imagem original (2.1), a máscara (2.2) e a sobreposição (2.3), conforme a necessidade da análise. As visualizações podem ser revisitadas para investigar regiões específicas.
+4. **Exibir as visualizações:** `2 = S2 []>> 2.1`, com `S2` representando a apresentação da imagem original, da máscara e da sobreposição. A legenda é disponibilizada para auxiliar a interpretação das classes.
+5. **Identificar problemas:** `A = 3.1 []>> 3.2 []>> 3.3`. O usuário localiza regiões suspeitas (3.1), compara as classes atribuídas com o terreno visível na imagem original (3.2) e identifica possíveis inconsistências (3.3).
+6. **Concluir a análise:** `4 = 4.1 []>> 4.2`. O usuário avalia se existem problemas visíveis (4.1) e conclui se o resultado parece adequado ou inadequado, justificando sua avaliação (4.2).
+
+##### Legenda e relações temporais usadas
+
+| Relação CTT | Notação | Ocorrência em T08 |
 |---|---|---|
-| {{...}} | {{...}} | {{...}} |
+| Ativação com passagem de informação | `T1 []>> T2` | O acesso aos resultados permite iniciar a análise; as visualizações fornecem informações para identificar problemas; a análise fundamenta a conclusão. |
+| Escolha | `T1 [] T2` | Escolha entre diferentes visualizações ou regiões a serem examinadas, conforme a necessidade da análise. |
+| Concorrência com comunicação | `T1 \|[]\| T2` | Não há concorrência explicitamente modelada nesta tarefa. |
+| Desativação | `T1 [> T2` | Não há desativação explicitamente modelada nesta tarefa. |
+| Iteração | `T*` | A consulta às visualizações e a inspeção das regiões podem ser repetidas durante a análise. |
+
+Não há suspensão (`|>`): interrupções durante a análise não foram modeladas.
+
+##### Tipos de tarefas
+
+| Símbolo no diagrama | Tipo | Tarefas no modelo |
+|---|---|---|
+| Nuvem | Abstrata | T08, R, V, A e tarefas 1 a 4. |
+| Pessoa | Usuário | 1.1, 1.2, 2.1, 2.2, 2.3, 3.1, 3.2, 3.3, 4.1 e 4.2. |
+| Pessoa e computador, com seta dupla | Interação | Ações de abrir resultados, selecionar visualizações e consultar a legenda. |
+| Computador | Sistema | S1 (apresentar os resultados) e S2 (exibir imagem original, máscara, sobreposição e legenda). |
 
 ---
 
