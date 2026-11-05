@@ -1,7 +1,7 @@
 # Entrega 6 — Prototipação em papel
 
 **Data:** 01/11/2026  
-**Status:** 🟨 em andamento 
+**Status:** 🟩 concluída 
 **Responsabilidade:** 1 solução integrada por equipe
 
 ## Objetivo da atividade
