@@ -1,6 +1,6 @@
 # Entrega 6 — Prototipação em papel
 
-**Data:** {{01/11/2026}}  
+**Data:** 01/11/2026  
 **Status:** 🟨 em andamento 
 **Responsabilidade:** 1 solução integrada por equipe
 
@@ -10,7 +10,7 @@ Externalizar rapidamente ideias de interação em baixa fidelidade para explorar
 
 ## 1. Escopo do protótipo
 
-**Personas:** {Rafael Pereira e Larissa Camargo}  
+**Personas:** Rafael Pereira e Larissa Camargo  
 **Cenários/tarefas cobertos:** {Cenário 01: Validação Manual de segmentação em campo (T01;T02) | Cenário C02 — Decisão de modelo a partir de resultados dispersos (T04) }  
 **Objetivos principais:** Os objetivos deste protótipo são disponibilizar uma tela inicial que permita ao usuário selecionar imagens ou vídeos para análise e escolher o modelo de segmentação que será utilizado na execução. Além disso, a interface deve facilitar a geração e visualização dos resultados da segmentação, apresentando as métricas de desempenho de forma clara e intuitiva para apoiar a avaliação da qualidade dos resultados. O sistema também deve possibilitar a comparação entre diferentes modelos e configurações, permitindo identificar qual deles apresenta melhor desempenho na segmentação de imagens e vídeos em ambientes off-road, auxiliando a equipe Baja FEI na tomada de decisões durante os testes e análises
 
@@ -65,7 +65,8 @@ Realize uma simulação com uma pessoa que não participou da elaboração dessa
 
 | Observação | Tela/ação | Evidência | Consequência para o design |
 |---|---|---|---|
-| {{...}} | {{...}} | {{...}} | {{...}} |
+| "É muito confuso ler modelo A e modelo B ao invés dos nomes" | Tela de comparacao de modelos | A tela de comparação de modelos apelida os modelos de modelo A e B | Remover essa label e usar os nomes de verdade |
+| "Eu gostaria de conseguir rodar mais de um modelos ao mesmo tempo" | Tela incial | A Tela incial obriga o usuário a escolher um modelo | Alterar a lista para ser uma lista de seleção múltipla |
 
 ## 5. Alterações após a simulação
 
