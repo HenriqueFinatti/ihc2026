@@ -504,7 +504,7 @@ Os modelos são **propostas a validar**, derivadas de C01 e da P01:
 **Autor(a):** Mateus Marana Assuena — 22.123.026-1  
 **Persona:** P02 — Andreia Silva  
 **Cenário de origem:** C03 — Exeperimentação e análises de modelos para segmentação 
-**Tarefas modeladas:** T06, T07 e T08 
+**Tarefas modeladas:** T06 e T07
 **Rastreabilidade:** R03; H01, H04; Q18, Q21, Q26. R03; H01, H04; Q22, Q24; decisões de design relacionadas à visualização. R03; H01, H04; Q18, Q19, Q20; decisões de design relacionadas à comparação.
 
 **Recorte comum aos três modelos [H]:**
@@ -602,13 +602,13 @@ GOAL 0: analisar visualmente os resultados da segmentação
     OP. 4.4: verificar que a conclusão está fundamentada nas evidências visuais
     
 ```
-**Regras e repetições:** na meta 2, os métodos 2.A, 2.B e 2.C podem ser utilizados em conjunto e repetidos conforme a necessidade da análise. A pessoa pode começar pela imagem original, consultar a máscara e, em seguida, utilizar a sobreposição para investigar uma região específica. Na meta 3, a identificação de problemas pode levar à consulta de outra visualização para confirmar a inconsistência. Caso seja necessário executar novamente a segmentação com outra configuração ou modelo, essa atividade fica fora do escopo da T08 e deve retornar à tarefa de execução correspondente.
+**Regras e repetições:** na meta 2, os métodos 2.A, 2.B e 2.C podem ser utilizados em conjunto e repetidos conforme a necessidade da análise. A pessoa pode começar pela imagem original, consultar a máscara e, em seguida, utilizar a sobreposição para investigar uma região específica. Na meta 3, a identificação de problemas pode levar à consulta de outra visualização para confirmar a inconsistência.
 
 **Correspondência com o HTA da T07:** GOAL 0 ↔ objetivo principal de analisar visualmente os resultados; GOAL 1 ↔ acesso aos resultados da execução; GOAL 2 ↔ análise das visualizações disponíveis; GOAL 3 ↔ identificação de possíveis problemas; GOAL 4 ↔ conclusão da análise. Observar e localizar são operadores perceptivos; selecionar e abrir são motores; identificar, comparar, avaliar e concluir são cognitivos.
 
 ### 3.3 CTT — T07 Comparar o resultado de diferentes modelos
 
-**Fronteira do sistema:** a seleção e o carregamento da imagem ou do vídeo, a consulta e a seleção dos modelos pré-treinados, o início e o acompanhamento da segmentação, e a exibição do resultado (máscara junto à imagem ou ao vídeo original e sobreposição) ocorrem na interface proposta. A escolha da entrada, a decisão de quais modelos testar e a comparação dos resultados entre modelos são realizadas pelo usuário. A análise detalhada de um resultado, como a identificação de regiões suspeitas e o julgamento da qualidade da segmentação, pertence à T08, enquanto a comparação entre diferentes configurações pertence à T03. O treinamento ou a obtenção dos modelos pré-treinados e a comunicação dos resultados à equipe ficam fora da interface.
+**Fronteira do sistema:** a seleção e o carregamento da imagem ou do vídeo, a consulta e a seleção dos modelos pré-treinados, o início e o acompanhamento da segmentação, e a exibição do resultado (máscara junto à imagem ou ao vídeo original e sobreposição) ocorrem na interface proposta. A escolha da entrada, a decisão de quais modelos testar e a comparação dos resultados entre modelos são realizadas pelo usuário. A análise detalhada de um resultado, como a identificação de regiões suspeitas e o julgamento da qualidade da segmentação, enquanto a comparação entre diferentes configurações pertence à T03. O treinamento ou a obtenção dos modelos pré-treinados e a comunicação dos resultados à equipe ficam fora da interface.
 
 #### Diagrama
 
@@ -657,7 +657,7 @@ Não há suspensão (`|>`): interrupções durante a execução ou a comparaçã
 | Plano 2: `2.1 + 2.2` | Fora do GOMS | `2 = S2 []>> 2.1 []>> 2.2` |
 | 3: executar a segmentação (operação única) | Fora do GOMS | `3 = 3.1 []>> S3` |
 | 4: visualizar o resultado (operação única, com máscara junto ao original e sobreposição) | 2.A / 2.B / 2.C | `4 = S4 []>> 4.1 [] 4.2` |
-| Fora do HTA da T07 (pertence à T08) | Metas 1, 3 e 4 (acessar o resultado, identificar problemas e concluir) | Fora do CTT |
+| Fora do HTA da T07 | Metas 1, 3 e 4 (acessar o resultado, identificar problemas e concluir) | Fora do CTT |
 
 As sequências do HTA (`>`) não recebem métodos no GOMS e aparecem como `[]>>` no CTT. O GOMS só se conecta à T07 pela meta 2, que detalha a tarefa 4 do HTA: os métodos 2.A (imagem original) e 2.B (máscara) correspondem à visualização conjunta exibida por S4 e examinada em 4.1, e o método 2.C (sobreposição) corresponde a 4.2. A regra de seleção do GOMS equivale à escolha `[]` do CTT.
 
@@ -674,8 +674,7 @@ Os modelos abaixo são **propostas a validar**, derivadas das recomendações do
 1. **Fluxo único, sem scripts:** hoje cada modelo é executado em um script Python separado (C03, Q26). O ramo `1 → C` do CTT só se sustenta se seleção, execução e visualização ocorrerem na mesma interface.
 2. **Estado e erro claros:** S1 e S3 exigem que a interface informe se o carregamento e a execução estão concluídos, em andamento ou com erro, e indique o motivo da falha, como formato de arquivo incompatível. É a principal exceção prevista na descrição da tarefa.
 3. **Comparar sem recomeçar:** como `C*` repete apenas 2, 3 e 4, trocar de modelo não deve exigir selecionar e carregar o arquivo de novo. Alternar entre saídas dificulta a análise (C03, Q19), o que sugere manter os resultados de modelos já executados acessíveis para consulta.
-4. **Máscara junto ao original, sobreposição sob demanda:** S4 e a escolha entre 4.1 e 4.2 respondem a Q24 e preparam a análise detalhada da T08, cujos métodos 2.A, 2.B e 2.C usam as mesmas três visualizações.
-5. **Fronteira com a T08:** a T07 termina quando os resultados estão disponíveis para comparação. A interface deve permitir passar de um resultado à análise detalhada sem reprocessar a segmentação.
+4. **Máscara junto ao original, sobreposição sob demanda:** S4 e a escolha entre 4.1 e 4.2 respondem a Q24 e preparam a análise detalhada, cujos métodos 2.A, 2.B e 2.C usam as mesmas três visualizações.
 
 **Continuidade da investigação [?]:** verificar com quem realiza essa comparação no contexto da pesquisa quantos modelos e quantas imagens ou vídeos avalia por sessão; qual critério usa para considerar um resultado melhor que outro; se precisa consultar execuções anteriores depois de trocar de modelo; e quais informações de cada modelo, além do nome e da descrição, ajudam a escolher.
 
