@@ -1,7 +1,7 @@
 # Entrega 6 — Prototipação em papel
 
 **Data:** 01/11/2026  
-**Status:** 🟩 concluída 
+**Status:** 🟩 concluída
 **Responsabilidade:** 1 solução integrada por equipe
 
 ## Objetivo da atividade
@@ -36,7 +36,7 @@ Escolha apenas o que for coerente com tarefas e cenários. Para TCCs técnicos, 
 
 | Fluxo | Tarefa/objetivo | Por que foi priorizado |
 |---|---|---|
-| PF01 | T02: Executar a segmentação de imagens com uma configuração disponível | Foi priorizado por representar uma das etapas iniciais e essenciais do processo. O usuário precisa selecionar os arquivos que deseja processar e definir as configurações disponíveis, como o modelo de segmentação e os parâmetros de execução. Esse fluxo permite iniciar o processamento de maneira organizada e de acordo com a necessidade da análise. |
+| PF01 | T02: Executar a segmentação com uma ou mais configurações disponíveis | Foi priorizado por representar uma das etapas iniciais e essenciais do processo. O usuário precisa selecionar os arquivos que deseja processar e definir as configurações disponíveis, como o modelo de segmentação e os parâmetros de execução. Esse fluxo permite iniciar o processamento de maneira organizada e de acordo com a necessidade da análise. |
 | PF02 | T01: Avaliar a qualidade da segmentação de uma imagem | Foi priorizado porque, após a execução da segmentação, é necessário avaliar a qualidade do resultado obtido. A apresentação de métricas permite identificar o nível de precisão do modelo e verificar seu desempenho na identificação das diferentes classes, auxiliando o usuário na interpretação dos resultados. |
 | PF03 | T04: Comparar o desempenho consolidado entre modelos | Foi priorizado porque a aplicação oferece a possibilidade de utilizar diferentes modelos de segmentação. Dessa forma, é importante permitir a comparação de seus desempenhos por meio de métricas e resultados visuais, ajudando o usuário a identificar qual modelo apresenta melhores resultados para o contexto de imagens off-road e, consequentemente, qual é mais adequado para utilização. |
 
@@ -71,15 +71,15 @@ Realize uma simulação com uma pessoa que não participou da elaboração dessa
 
 | Observação | Tela/ação | Evidência | Consequência para o design |
 |---|---|---|---|
-| "É muito confuso ler modelo A e modelo B ao invés dos nomes" | Tela de comparacao de modelos | A tela de comparação de modelos apelida os modelos de modelo A e B | Remover essa label e usar os nomes de verdade |
-| "Eu gostaria de conseguir rodar mais de um modelos ao mesmo tempo" | Tela incial | A Tela incial obriga o usuário a escolher um modelo | Alterar a lista para ser uma lista de seleção múltipla |
+| "É muito confuso ler modelo A e modelo B ao invés dos nomes" | Tela de comparação de modelos | A tela de comparação de modelos apelida os modelos de modelo A e B | Remover essa label e usar os nomes de verdade |
+| "Eu gostaria de conseguir rodar mais de um modelos ao mesmo tempo" | Tela inicial | A Tela inicial obriga o usuário a escolher um modelo | Alterar a lista para ser uma lista de seleção múltipla |
 
 ## 5. Alterações após a simulação
 
 | Antes | Problema | Depois | Justificativa |
 |---|---|---|---|
-| Na tela de comparação entre modelos, na parte de métrica comparativas estamos utilizando as nomenclaturas Modelo A e Modelo B. | Essa nomenclatura não fica tão claro de qual modelo estamos analisando. | Trocarmos esses nomes, pelo nome real do modelo, então nesse exemplo seria FCN e DeepLabV3+.  | Melhora a experiência do usuário e deixa mais claro. |
-| Na tela de input de dados e configurações temos a opção de selecionar o modelo, mas nao temos a opção de selecionar mais de um modelo para rodar de uma vez. | O problema nesse cenário é ter que esperar um modelo terminar para outro começar a rodar.| Iremos incluir a opção do usuário selecionar mais de um modelo de uma vez.| Fica mais prático para o usuário pensando no cotidiano dele.|
+| Na tela de comparação entre modelos, na parte de métricas comparativas estamos utilizando as nomenclaturas Modelo A e Modelo B. | Essa nomenclatura não deixa claro qual modelo estamos analisando. | Trocaremos esses nomes pelo nome real do modelo, então nesse exemplo seria FCN e DeepLabV3+.  | Melhora a experiência do usuário e deixa mais claro. |
+| Na tela de input de dados e configurações temos a opção de selecionar o modelo, mas não temos a opção de selecionar mais de um modelo para rodar de uma vez. | O problema nesse cenário é ter que esperar um modelo terminar para outro começar a rodar.| Iremos incluir a opção do usuário selecionar mais de um modelo de uma vez.| Fica mais prático para o usuário pensando no cotidiano dele.|
 
 ## Checklist
 
@@ -90,3 +90,9 @@ Realize uma simulação com uma pessoa que não participou da elaboração dessa
 - [X] Há pelo menos uma simulação/walkthrough documentado.
 - [X] Críticas não foram apenas listadas: geraram decisão de revisão.
 - [X] O protótipo continua em baixa fidelidade; detalhes visuais não mascaram problemas de fluxo.
+
+## Histórico de revisões
+
+| Data | O que mudou | Motivo |
+|---|---|---|
+| 08/11/2026 | Nome da T02 no PF01 atualizado para "Executar a segmentação com uma ou mais configurações disponíveis", o que incorpora a segunda alteração da seção 5. Os rascunhos em papel **não** foram alterados. Registrado que eles ainda usam classes ilustrativas (*Transitável*, *Vegetação*, *Céu*) e mostram IoU por classe para um arquivo qualquer. No TCC, a segmentação é binária (*Trilha* × *Fora da trilha*) e IoU e acurácia só existem para imagens com anotação de referência. As duas correções serão aplicadas no protótipo da Entrega 11 | Revisão de consistência (`PENDENCIAS.md`: INC-05, INC-12, INC-52, INC-59) e leitura do repositório do TCC |

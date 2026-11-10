@@ -29,7 +29,7 @@ Um CRUD pode gerar tarefas relevantes, mas “cadastrar usuário” só merece m
 
 | Entrada | Onde | Uso nesta entrega |
 |---|---|---|
-| Tarefas T01–T05 | [`04_cenarios_problema.md`](04_cenarios_problema.md), seção 5 de cada cenário | Origem das tarefas modeladas |
+| Tarefas T01–T07 | [`04_cenarios_problema.md`](04_cenarios_problema.md), seção 5 de cada cenário | Origem das tarefas modeladas |
 | Personas P01–P03 | [`03_personas_contexto_jornada.md`](03_personas_contexto_jornada.md) | Perfil de quem executa cada tarefa |
 | Necessidades R01–R03 | [`../RASTREABILIDADE.md`](../RASTREABILIDADE.md), seção 3 | Ligação entre tarefa e capacidade do TCC |
 
@@ -42,6 +42,7 @@ Um CRUD pode gerar tarefas relevantes, mas “cadastrar usuário” só merece m
    - **GOMS:** representação **textual e indentada** (`GOAL`, `METHOD`, `SEL. RULE`, `OP.`), sem diagrama. O `GOAL 0` não tem método; metas com um único caminho são descritas direto por operadores; métodos e regras de seleção só existem onde há alternativas reais (onde o HTA tem `/` ou `+`). Cada bloco de operadores termina com uma **verificação do usuário**.
    - **CTT:** tipos de tarefa (abstrata, usuário, interação, sistema) e operadores temporais `>>`, `[]>>`, `[]`, `|||`, `|[]|`, `|=|`, `[>` e `|>`. A árvore começa pela **motivação externa** que leva o usuário à interface (`M []>> U`).
    - **Correspondência:** cada escolha do HTA tem métodos equivalentes no GOMS e uma relação equivalente no CTT, registradas em uma tabela por integrante.
+5. **Termos do TCC** (Entrega 1, §0.4 e §7.1, revisados em 08/11/2026 a partir do repositório do TCC): **configuração** = modelo (FCN ou DeepLabV3+, ambos com ResNet152) + parâmetros de treino expostos ao usuário: número de épocas, early stopping e paciência, datasets de treino (Freiburg Forest e/ou Synthetic Offroad), batch size e geração de gráficos. As tarefas modeladas nesta entrega **usam** configurações já treinadas; a tarefa de definir e treinar uma configuração (T08, P02/C03) entrou no recorte em 08/11/2026 e ainda não foi modelada (`PENDENCIAS.md`, INC-61). A segmentação é **binária**: as classes da legenda são *Trilha* e *Fora da trilha*. Métricas por modelo (IoU, acurácia) vêm do conjunto de teste anotado do TCC. Os valores usados nos protótipos são ilustrativos.
 4. **Arquivos de diagrama** em [`../assets/05_tarefas/`](../assets/README.md), com o padrão `<técnica>_<tarefa>_<descrição>.svg` (ex.: `hta_t05_decidir_modelo.svg`). O SVG é a fonte editável. CTTs extensos têm visão geral e detalhamentos recortados do mesmo arquivo.
 
 ## Seleção das tarefas
@@ -49,7 +50,7 @@ Um CRUD pode gerar tarefas relevantes, mas “cadastrar usuário” só merece m
 | ID | Tarefa | Persona/cenário de origem | Frequência/criticidade | Técnicas aplicadas | Autor responsável |
 |---|---|---|---|---|---|
 | T01 | Avaliar a qualidade da segmentação de uma imagem | P01 / C01 | `[H]` a cada sessão de validação · alta (E4) | GOMS (e objetivo 3 da T03) | Tiago Fagundes dos Santos |
-| T02 | Executar a segmentação de imagens com uma configuração disponível | P01 / C01 | `[H]` a cada sessão de validação · alta (E4) | Objetivo 2 do HTA e do CTT da T03 | Tiago Fagundes dos Santos |
+| T02 | Executar a segmentação com uma ou mais configurações disponíveis | P01 / C01; P02 / C03 | `[H]` a cada sessão de validação · alta (E4) | Objetivo 2 do HTA e do CTT da T03 | Tiago Fagundes dos Santos |
 | T03 | Comparar o resultado de uma imagem entre configurações | P01 / C01 | `[H]` quando há mais de uma configuração a avaliar · alta (E4) | HTA, CTT | Tiago Fagundes dos Santos |
 | T04 | Comparar o desempenho consolidado entre modelos | P03 / C02 | `[H]` antes de cada ciclo de testes · alta (E4) | GOMS | Henrique Finatti Silveira Belo Trebbi |
 | T05 | Decidir e justificar a adoção de um modelo | P03 / C02 | `[H]` antes de cada ciclo de testes · alta (E4) | HTA, CTT | Henrique Finatti Silveira Belo Trebbi |
@@ -290,9 +291,9 @@ Os modelos são **propostas a validar**, derivadas de C02 e da P03:
 **Recorte comum aos três modelos [H]:**
 
 - Rafael executa e avalia a segmentação **pela interface**, sem scripts nem terminal, que é o objetivo do recorte (Entrega 1, §7.1). A persona sabe programar, mas o modelo não oferece o caminho por script (ver `PENDENCIAS.md`, INC-35).
-- Ele usa apenas as **configurações já disponibilizadas pelo TCC**; não cria nem treina modelos.
+- Ele usa **configurações já treinadas**; definir e treinar uma configuração não faz parte das tarefas da P01 modeladas aqui (ver premissa 5).
 - Visualização lado a lado, sobreposição com opacidade e legenda fixa vêm das decisões 1 e 2 da P01. A **confiança do modelo** por região vem da ruptura do C01 ("sem informação sobre a confiança do resultado") e é hipótese de design.
-- **Métricas por classe (IoU) só existem quando a imagem tem anotação de referência** (máscara feita à mão). Uma imagem nova de campo normalmente não tem, então a avaliação dela é visual, com apoio da confiança (ver `PENDENCIAS.md`, INC-52).
+- **Métricas por classe (IoU) só existem quando a imagem tem anotação de referência** (máscara feita à mão). Uma imagem nova de campo normalmente não tem, então a avaliação dela é visual, com apoio da confiança (ver `PENDENCIAS.md`, INC-52). As imagens do conjunto de teste do TCC (Freiburg Forest e Synthetic Offroad) têm máscara de referência.
 - Ficam **fora da interface**: a captura das imagens (câmeras do veículo) e a comunicação à equipe. Ficam **fora do modelo**, por falta de sustentação: histórico (H08), exportação, atalhos de teclado (lição da Entrega 2) e modo offline.
 - Uma segmentação adequada não autoriza concluir que um trajeto é transitável ou seguro (Entrega 1, §4.3).
 
@@ -503,7 +504,7 @@ Os modelos são **propostas a validar**, derivadas de C01 e da P01:
 
 **Autor(a):** Mateus Marana Assuena — 22.123.026-1  
 **Persona:** P02 — Andreia Silva  
-**Cenário de origem:** C03 — Exeperimentação e análises de modelos para segmentação 
+**Cenário de origem:** C03 — Experimentação e análises de modelos para segmentação 
 **Tarefas modeladas:** T06 e T07
 **Rastreabilidade:** R03; H01, H04; Q18, Q21, Q26. R03; H01, H04; Q22, Q24; decisões de design relacionadas à visualização. R03; H01, H04; Q18, Q19, Q20; decisões de design relacionadas à comparação.
 
@@ -531,7 +532,7 @@ Os modelos são **propostas a validar**, derivadas de C01 e da P01:
 
 #### Diagrama
 
-![HTA - Tarefa 06](../assets/05_tarefas/hta-task-08.svg)
+![HTA - Tarefa 07](../assets/05_tarefas/hta-task-06.svg)
 
 #### Decomposição e planos
 
@@ -684,7 +685,40 @@ Os modelos abaixo são **propostas a validar**, derivadas das recomendações do
 
 Quais problemas de interação, oportunidades e requisitos apareceram a partir das modelagens? Quais tarefas irão para o protótipo e para o teste de usabilidade?
 
-{{a preencher após as três seções individuais}}
+As três seções modelam o **uso proposto** por perfis diferentes: o analista que executa e avalia (P01), a pesquisadora que experimenta modelos (P02) e a gestora que decide (P03). Os modelos continuam sendo **hipóteses `[H]`** derivadas de proto-personas e precisam ser verificados na Entrega 7. A síntese abaixo reúne o que se repetiu entre as seções.
+
+### Problemas de interação e requisitos comuns
+
+| ID | Problema observado nos modelos | Requisito derivado | Onde aparece |
+|---|---|---|---|
+| RQ01 | Hoje cada execução exige script; a falha obriga a depurar código. | Executar a segmentação pela interface, com um comando, e mostrar o estado de cada execução (processando, concluído, falhou), com a causa da falha em linguagem de usuário. | T03 obj. 2 e 2.3.2; T07 nó 3 e S3; RC04 |
+| RQ02 | Comparar resultados de entradas diferentes leva a conclusões erradas. | Comparar configurações ou modelos **sobre a mesma entrada** (T03, T07) ou **o mesmo conjunto anotado** (T04), e mostrar qual entrada ou conjunto foi usado. | T03 1.1 e 4.1; T07 ciclo `C*`; T04 OP. 1.4; T05 1.1 |
+| RQ03 | Alternar entre janelas e arquivos faz perder o fio da comparação. | Reunir original, máscara e sobreposição na mesma tela, com zoom; manter os resultados já executados acessíveis sem recarregar a entrada. | T01 metas 1–2; T06 meta 2; T03 obj. 4; T07 `C*` |
+| RQ04 | Cores sem padrão entre execuções exigem reinterpretar a legenda. | Legenda e paleta fixas em todas as visualizações. | T01 meta 2; T03 3.2; T06 2.B |
+| RQ05 | Não se sabe se o erro vem do modelo ou da imagem capturada. | Permitir que a pessoa registre a avaliação separando problema da imagem e problema do modelo. | T01 3.A.2; T03 4.2.2; T06 OP. 3.4 |
+| RQ06 | Métricas aparecem como se existissem para qualquer imagem. | Mostrar IoU e acurácia **só** quando houver anotação de referência (conjunto de teste do TCC); sem ela, avaliação visual com apoio da confiança do modelo `[H]`. | T01 3.B e 3.C; T04 precondições; recorte da P02; INC-52 |
+| RQ07 | Números soltos, sem referência, não sustentam decisão; termos geram dúvida. | Valor de referência, explicação no ponto de uso (o que a métrica indica e não indica) e aviso quando a diferença é pequena. | T04 metas 2–3; T05 2.3 e 3.2; RC01 |
+| RQ08 | Há o risco de a interface parecer "escolher" o melhor modelo. | A conclusão e a recomendação são registradas pela pessoa; a interface exibe e calcula, mas não decide. | T03 4.2; T05 obj. 3; T07 fronteira do sistema |
+| RQ09 | Parte da tarefa acontece fora da interface. | Não modelar como funcionalidade a comunicação à equipe, o pedido ao integrante técnico e a reunião com a coordenação; a interface só indica o que falta pedir. | T03 4.3; T05 1.2, 2.3.3 e ramo E |
+
+**Oportunidades:** a sobreposição com opacidade (T01 1.B, T06 2.C) e a confiança do modelo (T01 3.B) aparecem como os recursos que mais aproximam a avaliação do que hoje é feito "no olho". O resumo exportável (T05 4.1.1) e o histórico (H08) continuam **fora do recorte** até haver evidência.
+
+**Divergências entre as seções, a resolver na Entrega 9:**
+
+- **T03 e T07 se sobrepõem.** As duas comparam a mesma entrada processada por mais de uma configuração ou modelo; mudam a persona (P01 e P02) e o objetivo (P01 confere a qualidade antes de informar a equipe; P02 experimenta para orientar a pesquisa). Como uma configuração reúne o modelo e os parâmetros de treino, a T03 pode comparar configurações do mesmo modelo, enquanto a T07 compara modelos. **Decisão de 08/11/2026:** manter as duas tarefas separadas nesta entrega e reavaliar a fusão na construção do modelo conceitual (Entrega 9).
+- ~~**IDs da P02:** o cenário C03 propunha T07 (executar), T08 (analisar) e T09 (comparar).~~ **Resolvido em 08/11/2026:** o C03 passou a usar T02 (executar, compartilhada com o C01), T06 (analisar) e T07 (comparar), os mesmos IDs desta entrega (`PENDENCIAS.md`, INC-56).
+
+### Tarefas que vão para o protótipo e para o teste
+
+| Tarefa | Protótipo (Entrega 6) | Teste com usuários (Entrega 14) | Por quê |
+|---|---|---|---|
+| T02 executar | Tela P01 (input de dados e configurações), fluxo PF01 | Sim, dentro do UT01 | Entrada obrigatória de todos os fluxos (RQ01). A simulação da E6 levou à seleção de mais de um modelo por execução. |
+| T01 / T06 avaliar uma imagem | Tela P02 (resultado da segmentação), fluxo PF02 | **UT01:** executar a segmentação de uma imagem e avaliar o resultado | A E1 aponta a interpretação do resultado como a atividade mais crítica (§3.4) e ao menos tão frequente quanto o envio (§3.3). |
+| T03 / T07 comparar configurações ou modelos | Tela P03 (comparação de modelos), com os dois modelos sobre o mesmo arquivo | **UT02:** comparar duas configurações sobre a mesma imagem e registrar a conclusão | Necessidade central do C01 e do C03 (RQ02, RQ03). |
+| T04 comparar o consolidado | Tela P03, fluxo PF03. A E6 usa a mesma tela para a comparação por imagem e a consolidada; separar as duas visões fica para a Entrega 11 | **UT03:** com base no consolidado, preparar a recomendação | Única tarefa da P03 com interface; testa RQ06 e RQ07. |
+| T05 decidir e justificar | Não prototipada na E6; o campo "Conclusão" da tela P03 cobre só o registro da conclusão | Sim, dentro do UT03, só até a recomendação | A reunião com a coordenação (4.2, 4.3) fica fora da interface e do teste. |
+
+As tarefas UT01–UT03 são propostas; instruções neutras, critérios de sucesso e perfil dos participantes serão definidos na Entrega 12 (DECIDE).
 
 ## Rastreabilidade
 
@@ -692,17 +726,19 @@ Quais problemas de interação, oportunidades e requisitos apareceram a partir d
 |---|---|---|---|---|
 | T01–T03 | R01, R02, R03 | P01 / C01 | HTA T03, GOMS T01, CTT T03 (seção 2) | Coluna HTA/GOMS/CTT de R01–R03 — atualizada |
 | T04, T05 | R03 | P03 / C02 | HTA T05, GOMS T04, CTT T05 (seção 1) | Coluna HTA/GOMS/CTT de R03 — atualizada |
-| {{a definir}} | {{...}} | P02 / C03 | {{seção 3}} | {{...}} |
+| T06, T07 | R03 (e R02, pela execução dentro da T07) | P02 / C03 | HTA T07, GOMS T06, CTT T07 (seção 3) | Colunas Cenário, Tarefa e HTA/GOMS/CTT de R03 — atualizadas |
+
+Os requisitos RQ01–RQ09 da síntese ligam estes modelos às telas da Entrega 6 e às tarefas de teste UT01–UT03.
 
 ## Checklist
 
-- [ ] Cada integrante produziu ao menos 1 HTA, 1 GOMS e 1 CTT.
-- [ ] Cada artefato identifica autor e tarefa.
-- [ ] Diagramas são legíveis e possuem fonte editável quando possível.
-- [ ] HTA contém planos, não apenas árvore de tópicos.
-- [ ] GOMS distingue Goals, Operators, Methods e Selection Rules.
-- [ ] CTT usa operadores temporais e tipos de tarefa coerentes.
-- [ ] Há texto explicando cada diagrama.
-- [ ] Tarefas estão ligadas a cenários/personas na rastreabilidade.
-- [ ] Em TCC técnico, as tarefas descrevem o que a pessoa faz com a contribuição/resultados, não passos internos do código.
-- [ ] CRUDs, relatórios, filtros e atividades administrativas foram escolhidos por relevância ao objetivo do usuário.
+- [x] Cada integrante produziu ao menos 1 HTA, 1 GOMS e 1 CTT. *(Henrique: HTA/CTT T05, GOMS T04; Tiago: HTA/CTT T03, GOMS T01; Mateus: HTA/CTT T07, GOMS T06.)*
+- [x] Cada artefato identifica autor e tarefa.
+- [ ] Diagramas são legíveis e possuem fonte editável quando possível. *(Pendente: a figura embutida na seção 3.1 não corresponde à tabela do HTA da T07; ver `PENDENCIAS.md`, INC-53.)*
+- [x] HTA contém planos, não apenas árvore de tópicos.
+- [x] GOMS distingue Goals, Operators, Methods e Selection Rules.
+- [x] CTT usa operadores temporais e tipos de tarefa coerentes.
+- [x] Há texto explicando cada diagrama.
+- [x] Tarefas estão ligadas a cenários/personas na rastreabilidade.
+- [x] Em TCC técnico, as tarefas descrevem o que a pessoa faz com a contribuição/resultados, não passos internos do código.
+- [x] CRUDs, relatórios, filtros e atividades administrativas foram escolhidos por relevância ao objetivo do usuário. *(Nenhum CRUD, login ou histórico; exportação só como alternativa `[H]` na T05.)*

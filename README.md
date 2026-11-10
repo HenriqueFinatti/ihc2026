@@ -40,16 +40,16 @@ Leia obrigatoriamente o [Guia para definir o escopo de IHC a partir do tema do T
 | Resultado técnico esperado do TCC | Estudo, Sistema e Modelo |
 | O TCC já previa interface? | Sim |
 | Capacidade técnica que pode gerar valor para pessoas | Facilitar a compreensão do resultado da segmentação pela equipe do Baja |
-| Usuário principal adotado em IHC | Estudantes do projeto Baja |
-| Objetivo principal desse usuário | Comprender e comparar modelos e resultados da segmentação nos percusos do Baja |
-| Interface/recorte explorado na disciplina | Segmentação Semântica |
+| Usuário principal adotado em IHC | Analista de segmentação da equipe Baja FEI (P01) |
+| Objetivo principal desse usuário | Compreender e comparar modelos e resultados da segmentação nos percursos do Baja |
+| Interface/recorte explorado na disciplina | Configuração e treino dos modelos → envio de imagens/vídeos → execução → visualização lado a lado → métricas → comparação entre modelos e configurações (Entrega 1, seção 11) |
 | Relação com o escopo formal do TCC | Parte Prevista |
 
 > **Importante:** a tabela acima explica a relação entre os dois trabalhos. Ela não altera o compromisso formal do TCC.
 
 ## Resumo do projeto pela perspectiva do usuário
 
-Os estudantes integrantes do projeto Baja FEI precisam compreender e analisar as vias off-road em que o veículo está inserido durante o desenvolvimento do projeto. Atualmente, enfrentam dificuldades na identificação e segmentação dos diferentes elementos presentes nessas vias, como pista e vegetação, sendo essa análise realizada principalmente a partir da observação das imagens do ambiente. O tema do TCC investiga o uso de segmentação semântica para identificar automaticamente esses elementos em imagens de vias off-road. Para fins da disciplina de IHC, será explorada uma interface que permita aos estudantes visualizar as imagens, os resultados da segmentação e comparar de forma clara a identificação realizada pelo modelo.
+Os integrantes da equipe Baja FEI — em especial o analista de segmentação — precisam compreender e analisar as vias off-road em que o veículo está inserido durante o desenvolvimento do projeto. Atualmente, enfrentam dificuldades na identificação e segmentação dos elementos presentes nessas vias, em especial a delimitação da trilha em relação ao entorno, sendo essa análise realizada principalmente a partir da observação das imagens do ambiente. O tema do TCC investiga o uso de segmentação semântica para identificar automaticamente esses elementos em imagens de vias off-road. Para fins da disciplina de IHC, será explorada uma interface que permita ao analista de segmentação visualizar as imagens, os resultados da segmentação e comparar de forma clara a identificação realizada pelo modelo.
 
 Se alguma afirmação ainda não estiver sustentada por evidência, registre-a como hipótese na [Entrega 1](docs/01_conhecendo_o_problema.md).
 

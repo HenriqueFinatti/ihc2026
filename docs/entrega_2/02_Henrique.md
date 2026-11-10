@@ -53,11 +53,11 @@ As afirmações abaixo são **opiniões de terceiros**, com fonte registrada.
 | Opinião | Fonte | O que sugere para o nosso projeto |
 |---|---|---|
 | O Roboflow é descrito em avaliações públicas como fácil de usar e acessível a usuários não especialistas | G2 — https://www.g2.com/products/roboflow/reviews (acesso 28/09/2026) | É o **análogo mais próximo do nosso perfil de usuário** entre os três produtos. Isso gera uma hipótese de design; não comprova que o analista do Baja compreenda uma interface sem código. |
-| Usuários elogiam a **versionação de datasets**, que permite reverter a um conjunto de anotações anterior | SearchTools.ai — https://searchtools.ai/t/roboflow (acesso 28/09/2026), reunindo avaliações do G2 | Dá origem observável a parte de **RC02 (histórico/versionamento)** no Roboflow, e não no Supervisely. |
-| Pre-roteulagem assistida por IA é apontada como diferencial | G2 — alguns usuários relatam que a rotulagem pré-anotada por modelos reduz trabalho manual | É uma referência para automatizar etapas quando isso fizer sentido; não confirma o processo nem a necessidade do público Baja. |
+| Usuários elogiam a **versionação de datasets**, que permite reverter a um conjunto de anotações anterior | G2, via SearchTools.ai — https://searchtools.ai/t/roboflow (acesso 28/09/2026; fonte secundária) | Dá origem observável a parte de **RC02 (histórico/versionamento)** no Roboflow, e não no Supervisely. |
+| Pré-rotulagem assistida por IA é apontada como diferencial | G2 — alguns usuários relatam que a rotulagem pré-anotada por modelos reduz trabalho manual | É uma referência para automatizar etapas quando isso fizer sentido; não confirma o processo nem a necessidade do público Baja. |
 | Há relatos de **lentidão no carregamento de imagens** e de instabilidade da interface de anotação com conjuntos grandes (acima de alguns milhares de imagens) | SearchTools.ai (reunindo avaliações do G2); AppCritica — https://www.appcritica.com/review/roboflow/ | Alerta de desempenho. Se o nosso usuário carregar vídeos longos ou lotes grandes, o feedback de espera precisa ser bem desenhado. |
 | Abstrações pesadas "podem esconder os fundamentos" para quem está aprendendo | AppCritica | Alerta: uma interface que esconde o modelo pode tanto ajudar (usuário técnico) quanto atrapalhar (quem precisa entender o resultado). Relevante para a escolha de nível de transparência. |
-| Política de dados públicos por padrão no plano gratuito e cobrança baseada em créditos são queixas recorrentes | Oryndex — https://oryndex.co/tools/roboflow | Questão de **modelo de negócio**, não de tela. Para o nosso recorte, o produto é gratuito e local, o que evita esse custo de entrada. |
+| Política de dados públicos por padrão no plano gratuito e cobrança baseada em créditos são queixas recorrentes | Oryndex — https://oryndex.co/tools/roboflow | Questão de **modelo de negócio**, não de tela. A página de preços consultada em 08/11/2026 informa workspaces privados em todos os planos, então a queixa sobre dados públicos pode se referir a uma política anterior. `[H]` Custo de entrada e privacidade dos dados podem pesar para uma equipe estudantil; a forma de distribuição da nossa interface ainda não foi definida. |
 
 > **Ressalva de verificação:** assim como na análise do CVAT, as citações vêm do G2 e de fontes secundárias. A equipe deve confirmar a formulação exata na página primária antes da entrega.
 
@@ -71,9 +71,9 @@ As afirmações abaixo são **opiniões de terceiros**, com fonte registrada.
 
 #### Modelo de negócio
 
-- **Freemium com cobrança por consumo.** Plano gratuito limitado, com datasets e modelos públicos por padrão; planos pagos para uso privado, cobrança baseada em créditos de treinamento e limites de API na inferência hospedada.
+- **Freemium com cobrança por créditos.** Free Tier gratuito com 10 créditos por mês, Core a US$ 39 por mês (20 créditos) e Enterprise sob consulta; treino e inferência hospedada consomem créditos. A página oficial informa, em 08/11/2026, que workspaces e modelos são privados em todos os planos (https://roboflow.com/pricing).
 - Receptor típico: equipes de desenvolvedores e pequenas empresas que precisam chegar rápido a um modelo implantado.
-- **Implicação para o nosso projeto:** o nosso recorte é local, gratuito e de escopo restrito (executar modelos já disponíveis). Não há dependência de créditos, e isso é um diferencial de adoptabilidade frente ao Roboflow.
+- **Implicação para o nosso projeto:** `[H]` cobrança por créditos de treino é uma barreira para equipes pequenas. Como o nosso recorte inclui configurar e treinar modelos, vale investigar na Entrega 7 se custo e privacidade dos dados pesam para a equipe Baja.
 
 #### Pontos positivos, limitações e lições
 
@@ -81,16 +81,17 @@ As afirmações abaixo são **opiniões de terceiros**, com fonte registrada.
 |---|---|---|---|
 | Upload como ação primária, com ícone visível | Padrão observado (positivo) | [Figura E3](../../assets/02_concorrencia/roboflow_input_imagens.png) | Referência para uma entrada de dados clara e em linguagem simples; validar a necessidade do público Baja. |
 | Seleção de modelo acessível, com justificativas por trilha | Padrão observado (positivo, com ressalva) | [Figura E4](../../assets/02_concorrencia/roboflow_selecionar_modelos.png) | **Oferecer a escolha de modelo com justificativa**, mas em lista explícita, e não apenas por descoberta conversacional. |
-| Versionamento de datasets e capacidade de reverter anotações | Padrão observado (positivo, com fonte pública) | SearchTools.ai / G2 | É a origem mais clara para **RC02**. Aplicável apenas se o nosso recorte incluir recuperação de análises anteriores. |
+| Versionamento de datasets e capacidade de reverter anotações | Padrão observado (positivo, com fonte pública) | G2, via SearchTools.ai | É a origem mais clara para **RC02**. Aplicável apenas se o nosso recorte incluir recuperação de análises anteriores. |
 | Métricas de desempenho do modelo com filtros e visualizações | Relato de usuário | G2 — avaliação a confirmar na fonte primária | Mostra um padrão de avaliação de modelos no produto. Para o nosso projeto, é uma referência de design; a necessidade do público Baja continua como hipótese. |
 | Seleção de modelo depende de o usuário descobrir o chat | Limitação (auto-observação da equipe) | [Figura E4](../../assets/02_concorrencia/roboflow_selecionar_modelos.png) | Uma **lista explícita** reduz dependência de descoberta. Decisão de projeto: adotar lista, não chat. |
-| Evidência visual é insuficiente para avaliar o fluxo completo | Limite de interpretação | [Figura E3](../../assets/02_concorrencia/roboflow_input_imagens.png) | A equipe deve ampliar esta captura (sem recorte) antes de citar o fluxo. |
+| Evidência visual é insuficiente para avaliar o fluxo completo | Limite de interpretação | [Figura E3](../../assets/02_concorrencia/roboflow_input_imagens.png) | A captura é um recorte parcial: o fluxo completo e o resultado do processamento não são citados como evidência. |
 | Lentidão em conjuntos grandes | Limitação (com fonte pública) | SearchTools.ai; AppCritica | Sugere investigar feedback de progresso e tolerância à espera caso o fluxo envolva arquivos grandes. |
-| Versionamento só se aplica se o recorte incluir histórico | Limite de escopo | seção 2.1 — rastreabilidade | Não assumir treinamento nem versionamento de modelos: nosso recorte é **executar** modelos disponíveis, não treiná-los. |
+| Versionamento só se aplica se o recorte incluir histórico | Limite de escopo | `RASTREABILIDADE.md`, seção 5 (28/09/2026 e 08/11/2026) | O treino de modelos entrou no recorte em 08/11/2026. Guardar versões das configurações treinadas continua dependendo da H08 (Entrega 7). |
 
 ## Referências desta análise
 
 - Roboflow (site oficial). https://roboflow.com/ — acesso 27/08/2026.
+- Roboflow — preços. https://roboflow.com/pricing — acesso 08/11/2026.
 - G2 — Roboflow Reviews. https://www.g2.com/products/roboflow/reviews — acesso 28/09/2026.
 - Oryndex — Roboflow. https://oryndex.co/tools/roboflow — acesso 28/09/2026. Fonte secundária.
 - SearchTools.ai — Roboflow AI App. https://searchtools.ai/t/roboflow — acesso 28/09/2026. Fonte secundária.

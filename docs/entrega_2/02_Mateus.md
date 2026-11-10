@@ -4,7 +4,7 @@
 
 **Produto analisado:** Supervisely
 
-**Módulo/versão analisada:** plataforma web Supervisely; módulo de **configuração de treinamento** (seleção de modelo, barras de progresso, gráficos de treino e validação) e **aba de análise** do projeto (filtros, estatísticas de dataset, tabelas e visualizações por classe). A edição Community é auto-hospedada; a versão comercial é gerenciada em nuvem.
+**Módulo/versão analisada:** plataforma web Supervisely; módulo de **configuração de treinamento** (seleção de modelo, barras de progresso, gráficos de treino e validação) e **aba de análise** do projeto (filtros, estatísticas de dataset, tabelas e visualizações por classe). Há uma edição Community gratuita, um plano Pro pago e uma edição Enterprise em nuvem privada, on-premise ou offline (página de preços, 08/11/2026).
 
 **Link oficial:** https://supervisely.com/
 
@@ -40,27 +40,27 @@ O problema que a plataforma busca resolver é que desenvolver um modelo de visã
 
 A proposta vai além de ser uma ferramenta de anotação: posiciona-se como uma plataforma completa, quase um "sistema operacional para Computer Vision", reunindo diferentes ferramentas em um ecossistema.
 
-No contexto do nosso TCC, a Supervisely é relevante por dois motivos: é a única das três que **mostra barras de progresso de treinamento em vídeo**, e a sua aba de análise apresenta **tabelas além de gráficos** — padrão que o professor apontou como existente no produto e que a equipe havia ignorado.
+No contexto do nosso TCC, a Supervisely é relevante por dois motivos: mostra **barras de progresso de treinamento por época e lote** (o CVAT também tem indicador de progresso, na seleção de modelo — Figura E1 da análise C01), e a sua aba de análise apresenta **tabelas além de gráficos**.
 
 #### Funcionalidades relevantes
 
 | Funcionalidade | Como é realizada | Evidência | O que a evidência sustenta (e o que não sustenta) | Observação de IHC |
 |---|---|---|---|---|
-| Configuração de treinamento e seleção de modelo | Tela de configuração com seleção de modelo e opções de treinamento | [`treinamento-supervisely.png`](../../assets/02_concorrencia/treinamento-supervisely.png) — instantes ~12–18 s mostram barras de progresso de épocas e lotes e gráficos de treino/validação | Sustenta: o produto oferece **acompanhamento visual da execução**, com barras de progresso e gráficos. **Não** sustenta: recuperação efetiva por checkpoint ou histórico de execuções — esses elementos não aparecem nos trechos inspecionados. | É a origem mais clara de **RC04**. Mas o estado acompanhado é *treinamento*; o nosso usuário apenas **executa** segmentação, então o texto do progresso deve ser adaptado. |
-| Análise de métricas do modelo | Aba de análise do projeto, com filtros, estatísticas de dataset, **tabelas** e visualizações por classe | [`analise-metricas-supervisely.png`](../../assets/02_concorrencia/analise-metricas-supervisely.png) — por volta de ~8 s aparecem tabelas; ao longo do vídeo há filtros, estatísticas e visualizações por classe | Sustenta: o produto apresenta **tabelas, filtros e estatísticas**, além de gráficos. **Não** sustenta: a crítica de "dependência de gráficos" aplicada ao produto como um todo — as tabelas existem e contrariam uma leitura simplista. | Corrige a recomendação **RC03**: a tabela não é apenas algo a acrescentar, é um padrão que o produto **já oferece** e que devemos adotar. |
+| Configuração de treinamento | Tela de acompanhamento do treinamento, com barras de progresso e gráficos (a seleção de modelo **não** aparece na captura estática) | [`treinamento-supervisely.png`](../../assets/02_concorrencia/treinamento-supervisely.png) — barras de progresso de épocas e lotes e gráficos de treino/validação | Sustenta: o produto oferece **acompanhamento visual da execução**, com barras de progresso e gráficos. **Não** sustenta: recuperação efetiva por checkpoint ou histórico de execuções — esses elementos não aparecem nos trechos inspecionados. | É a origem mais clara de **RC04**. O estado acompanhado é o *treinamento*, que também faz parte do nosso recorte (configurar e treinar modelos); para a execução da segmentação, os textos do progresso devem ser adaptados. |
+| Análise do projeto (estatísticas do dataset) | Aba de análise do projeto, com filtros, estatísticas de dataset, **tabelas** e visualizações por classe. A tabela capturada é a matriz *Class Co-Occurrence*, estatística do dataset, e não métrica de desempenho do modelo | [`analise-metricas-supervisely.png`](../../assets/02_concorrencia/analise-metricas-supervisely.png) — tabela de coocorrência de classes e menu de estatísticas por classe | Sustenta: o produto apresenta **tabelas, filtros e estatísticas**, além de gráficos. **Não** sustenta: a crítica de "dependência de gráficos" aplicada ao produto como um todo — as tabelas existem e contrariam uma leitura simplista. | Corrige a recomendação **RC03**: a tabela não é apenas algo a acrescentar, é um padrão que o produto **já oferece** ao lado de gráficos. Como a tabela capturada é de estatística do dataset, a sustentação da RC03 é **média**. |
 
 **Legendas das evidências**
 
-- **Figura E5 — quadros de `treinamento-supervisely.png`.** Sequência de telas de configuração de treinamento: seleção de modelo, barras de progresso de épocas e lotes, gráficos de treino e validação. *Fonte: gravação de tela da equipe durante navegação no produto (uso próprio), 03/09/2026. Os quadros citados estão entre ~12 s e ~18 s.*
-- **Figura E6 — quadros de `analise-metricas-supervisely.png`.** Navegação na aba de análise: filtros, estatísticas de dataset, tabelas e visualizações por classe. *Fonte: gravação de tela da equipe, 03/09/2026. As tabelas ficam visíveis por volta de ~8 s.*
+- **Figura E5 — `treinamento-supervisely.png`.** Tela de acompanhamento do treinamento: barras de progresso de épocas e lotes e gráficos de treino e validação (as métricas dos gráficos são de detecção de objetos, não de segmentação). *Fonte: captura estática extraída da gravação de tela da equipe durante navegação no produto (uso próprio), 03/09/2026, por volta de 12–18 s.*
+- **Figura E6 — `analise-metricas-supervisely.png`.** Aba de análise: tabela *Class Co-Occurrence* (estatística do dataset) e menu de estatísticas por classe. *Fonte: captura estática extraída da gravação de tela da equipe, 03/09/2026, por volta de 8 s.*
 
 #### Experiência do usuário e opiniões
 
 | Opinião | Fonte | O que sugere para o nosso projeto |
 |---|---|---|
 | Avaliações são predominantemente positivas, destacando a qualidade das ferramentas de anotação, a variedade de recursos e a capacidade de integrar as etapas do desenvolvimento | G2 — https://www.g2.com/sellers/supervisely (acesso 03/09/2026 e 28/09/2026) | A plataforma integra o fluxo de ponta a ponta, o que reduz troca de contexto — um princípio aplicável ao nosso recorte. |
-| Usuários apontam como pontos negativos a **curva de aprendizado**, a **complexidade decorrente da grande quantidade de funcionalidades**, relatos de lentidão e limitações dos recursos gratuitos | G2 — https://www.g2.com/sellers/supervisely (acesso em 28/09/2026) | **Confirma a hipótese H10** de forma mais forte que o CVAT: é o caso mais claro de excesso de opções para o nosso perfil. Justifica diretamente uma interface contida. |
-| A plataforma é considerada adequada a projetos de pesquisa e aplicações profissionais, mas com custo escalonado | G2 | Reforça que o nosso escopo, local e gratuito, é mais acessível para uma equipe estudantil. |
+| Usuários apontam como pontos negativos a **curva de aprendizado**, a **complexidade decorrente da grande quantidade de funcionalidades**, relatos de lentidão e limitações dos recursos gratuitos | G2 — https://www.g2.com/sellers/supervisely (acesso em 28/09/2026) | **Reforça a hipótese H10, que permanece refinada** (opinião de terceiros não confirma hipótese sobre o nosso público): é o caso mais claro de excesso de opções entre os três produtos. Apoia a escolha de uma interface contida. |
+| A plataforma é considerada adequada a projetos de pesquisa e aplicações profissionais, mas com custo escalonado | G2 | `[H]` Custo de entrada pode pesar para uma equipe estudantil; a forma de distribuição da nossa interface ainda não foi definida. |
 
 > **Ressalva de verificação:** a fonte é pública e identificável, mas a equipe deve registrar a data exata de acesso e, se possível, o recorte analisado. Opinião agregada de terceiros não deve ser tratada como medição do nosso público.
 
@@ -73,28 +73,29 @@ No contexto do nosso TCC, a Supervisely é relevante por dois motivos: é a úni
 
 #### Modelo de negócio
 
-- **Modelo comercial com edição Community auto-hospedada e versão gerenciada (self-hosted e cloud) paga**, com planos voltados a equipes e empresas.
+- **Modelo comercial em três edições:** Community gratuita (até 2 membros, 5 GB e 10.000 arquivos), Pro a partir de €199 por mês (3 membros incluídos, €85 por membro extra) e Enterprise sob consulta, em nuvem privada, on-premise ou offline (https://supervisely.com/pricing, acesso 08/11/2026).
 - A cobrança está ligada a recursos, armazenamento e uso da plataforma, e não apenas a assentos.
 - **Implicação para o nosso projeto:** o nosso recorte é um sistema local de uso restrito à equipe, sem cobrança e sem gestão de workspace compartilhado. Portanto, não há necessidade de ativação de usuários ou planos — o que já foi decidido na Entrega 1 (padrões "usuários/permissões" e "administração" marcados como **não** aplicáveis).
 
-> `[?]` A estrutura exata de planos e preços da Supervisely **não foi verificada** por esta análise e deve ser conferida em https://supervisely.com/pricing se a disciplina exigir detalhe comercial.
+> Planos e preços conferidos em https://supervisely.com/pricing em 08/11/2026 (a página informa atualização em 27/10/2026). Os valores podem mudar.
 
 #### Pontos positivos, limitações e lições
 
 | Ponto | Tipo | Evidência | Implicação para o nosso projeto |
 |---|---|---|---|
-| Tabelas de métricas existem no produto, junto com gráficos | Padrão observado (positivo) | [Figura E6](../../assets/02_concorrencia/analise-metricas-supervisely.png), ~8 s | **Corrige RC03.** A tabela deve ser adotada como alternativa ao gráfico desde o início, e não como correção de um problema que não existe. |
-| Barras de progresso de época e lote durante o treinamento | Padrão observado (positivo) | [Figura E5](../../assets/02_concorrencia/treinamento-supervisely.png), ~12–18 s | Origem mais clara de **RC04**. Adaptar as etapas e os textos ao nosso fluxo de execução, sem mencionar "treinando". |
+| Tabelas de estatísticas do dataset existem no produto, junto com gráficos | Padrão observado (positivo) | [Figura E6](../../assets/02_concorrencia/analise-metricas-supervisely.png) | **Corrige RC03.** A tabela deve ser adotada como alternativa ao gráfico desde o início, e não como correção de um problema que não existe. A captura não mostra tabela de métricas do modelo (sustentação média). |
+| Barras de progresso de época e lote durante o treinamento | Padrão observado (positivo) | [Figura E5](../../assets/02_concorrencia/treinamento-supervisely.png) | Origem mais clara de **RC04**. Aplica-se ao treino de uma configuração e, com textos adaptados, à execução da segmentação. |
 | Filtros e estatísticas de dataset na aba de análise | Padrão observado (positivo) | [Figura E6](../../assets/02_concorrencia/analise-metricas-supervisely.png) | Apoia a utilidade de filtros, mas **apenas se** o nosso recorte mantiver histórico — ver H08. |
 | Integração de todas as etapas em um só ambiente | Ponto positivo com fonte | G2 | Reduz troca de contexto. No nosso recorte, o caminho inteiro (enviar → executar → comparar) deve estar em uma única interface. |
 | Curva de aprendizado e excesso de funcionalidades | Limitação (com fonte) | G2 — ver "Experiência do usuário e opiniões" | Justifica uma interface contida, voltada a **um** fluxo principal. |
 | Lentidão relatada | Limitação (com fonte) | G2 | Reforça a necessidade de feedback de estado e de espera tolerada. |
 | As métricas do modelo só aparecem diluídos em um fluxo maior | Limite de interpretação | Figuras E5 e E6 | A etapa que o nosso usuário precisa (segmentar e interpretar) **não é o centro** dessas plataformas. Isso é um argumento a favor do nosso recorte: tratar a interpretação como objetivo principal. |
-| Gravação de tela não é print estático | Limite de evidência | Figuras E5 e E6 | Extrair capturas estáticas antes da entrega. |
+| Cada evidência tem uma única captura estática | Limite de evidência | Figuras E5 e E6 | As capturas foram extraídas das gravações; o que aparece só no vídeo (outros quadros, a seleção de modelo) não é citado como evidência. |
 
 ## Referências desta análise
 
 - Supervisely (site oficial). https://supervisely.com/ — acesso 03/09/2026.
+- Supervisely — preços. https://supervisely.com/pricing — acesso 08/11/2026.
 - G2 — Supervisely. https://www.g2.com/sellers/supervisely — acesso 03/09/2026 e 28/09/2026.
 
 ---

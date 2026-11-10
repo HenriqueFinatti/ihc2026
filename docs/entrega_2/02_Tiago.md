@@ -34,7 +34,7 @@ Perfil típico: engenheiros de ML, pesquisadores, equipes de anotação e empres
 
 O CVAT surgiu dentro da Intel como ferramenta de anotação para o projeto OpenVINO e foi disponibilizado como código aberto em 2018; hoje é mantido pela empresa CVAT.ai. A proposta é permitir marcar objetos com caixas, contornar regiões com polígonos, criar máscaras de segmentação e acompanhar objetos em vídeos, com recursos automáticos e semiautomáticos (Segment Anything, YOLO, interpolação) para acelerar o trabalho.
 
-No contexto do nosso TCC, o CVAT poderia ser usado para produzir as máscaras de referência — por exemplo, marcando *área transitável*, *vegetação*, *céu* e *obstáculo* — que servem de ground truth para treinar e avaliar o DeepLabv3+.
+No contexto do nosso TCC, o CVAT poderia ser usado para produzir as máscaras de referência — por exemplo, marcando a região de *trilha* (no TCC, a segmentação é binária: *Trilha* × *Fora da trilha*) — que servem de ground truth para treinar e avaliar o DeepLabv3+.
 
 #### Funcionalidades relevantes
 
@@ -58,7 +58,7 @@ As afirmações abaixo são **opiniões de terceiros**, não observações próp
 | "Interface densa em funcionalidades" e "curva de aprendizado íngreme" são queixas recorrentes | Oryndex — https://oryndex.co/tools/cvat (acesso 28/09/2026), sintetizando avaliações do G2 | Apoia a hipótese **H10** (ferramentas genéricas são complexas para o perfil priorizado). |
 | O **sistema de atalhos é descrito como complexo** e demanda tempo para ser dominado por novos anotadores | Oryndex (sintetizando o G2) | **Corrige uma suposição da equipe:** a equipe havia atribuído "excelente suporte a atalhos" como oportunidade. A evidência pública sugere o contrário para usuários novos. Não devemos prometer atalhos como diferencial. |
 | Relatos de lentidão da interface com vídeos muito grandes ou anotações densas | Francis Okafor — https://www.francisokafor.com/tools/cvat (acesso 28/09/2026) | Alerta de desempenho para conteúdos grandes — relevante se o nosso usuário carregar vídeos longos. |
-| A instalação auto-hospedada via Docker é apontada como sobrecarga para equipes pequenas | Oryndex; Francis Okafor | Reforça que uma interface que **não exige instalação** tem valor real para um usuário de baixo conhecimento técnico. |
+| A instalação auto-hospedada via Docker é apontada como sobrecarga para equipes pequenas | Oryndex; Francis Okafor | `[H]` Sugere que a instalação pesa para equipes pequenas; para o nosso público, isso precisa ser investigado (Entrega 7). |
 
 > **Ressalva de verificação:** os números e as citações acima vieram do G2 e de fontes secundárias que o reproduzem. Antes da entrega, a equipe deve abrir a página do G2 e do produto e confirmar a formulação exata, pois fontes secundárias podem resumir de forma imprecisa. O que a disciplina exige é que **a origem seja identificável**.
 
@@ -72,26 +72,28 @@ As afirmações abaixo são **opiniões de terceiros**, não observações próp
 
 #### Modelo de negócio
 
-- **Open-core / freemium.** Community Edition sob licença MIT (gratuita e auto-hospedada); CVAT Online em nuvem com planos pagos por usuário (Free limitado; Solo e Team por assento; Enterprise auto-hospedado).
-- A empresa **CVAT.ai** mantém o produto e captou aporte externo em rodada pre-seed em 2026.
+- **Open-core / freemium.** Community Edition sob licença MIT (gratuita e auto-hospedada); CVAT Online em nuvem: Free (US$ 0, limitado), Solo (US$ 33 por mês, ou US$ 23 no plano anual) e Team (US$ 33 por usuário por mês, mínimo de 2 usuários); CVAT Enterprise on-premise ou em nuvem privada, sob consulta.
+- A empresa **CVAT.ai** mantém o produto.
 - **Implicação para o nosso projeto:** o CVAT compete no *ecossistema*, não apenas na tela. O nosso foco é a etapa de **segmentação e interpretação do resultado**, que ele não cobre.
 
-> `[?]` Os valores exatos dos planos devem ser conferidos em https://www.cvat.ai/pricing antes da entrega. As informações comerciais aqui são de consulta pública e podem ter mudado.
+> Valores conferidos em https://www.cvat.ai/pricing em 08/11/2026. As informações comerciais são de consulta pública e podem mudar.
 
 #### Pontos positivos, limitações e lições
 
 | Ponto | Tipo | Evidência | Implicação para o nosso projeto |
 |---|---|---|---|
 | Lista explícita de modelos para anotação automática | Padrão observado (positivo) | [Figura E1](../../assets/02_concorrencia/cvat_selecao_modelo.png) | O nosso usuário deve **escolher o modelo por lista ou menu suspenso**, com descrição curta de cada — replicar este padrão. |
-| Indicadores de progresso e eventos | Padrão observado (positivo) | [Figura E2](../../assets/02_concorrencia/cvat_metricas.png) | Adotar indicador de estado da execução, distinguindo "processando", "concluído" e "falhou". |
+| Indicador de progresso na execução de um modelo | Padrão observado (positivo) | [Figura E1](../../assets/02_concorrencia/cvat_selecao_modelo.png) | Adotar indicador de estado da execução, distinguindo "processando", "concluído" e "falhou". |
+| Painel de eventos e indicadores do trabalho | Padrão observado (positivo) | [Figura E2](../../assets/02_concorrencia/cvat_metricas.png) | Referência para registrar o que aconteceu em cada execução, sem confundir produtividade com qualidade do modelo. |
 | Densidade de funcionalidades e terminologia | Limitação (com fonte pública) | Oryndex / G2 — ver "Experiência do usuário e opiniões" | A interface deve ser **contida no recorte**: apenas o necessário para enviar imagem, ver o resultado e comparar. |
 | Curva de aprendizado e sistema de atalhos complexo | Limitação (com fonte pública) | Oryndex / G2 | **Não prometer atalhos como diferencial**; se incluídos, devem ser documentados. Corrige suposição anterior da equipe. |
-| Instalação auto-hospedada exige Docker | Limitação (com fonte pública) | Oryndex; Francis Okafor | Uma interface que roda sem instalação reduz a barreira de entrada — é um diferencial do nosso recorte. |
+| Instalação auto-hospedada exige Docker | Limitação (com fonte pública) | Oryndex; Francis Okafor | `[H]` Reduzir a barreira de instalação pode ser relevante para o nosso público; a forma de instalação da nossa interface ainda não foi definida. |
 | As métricas do produto são de produtividade, não de qualidade do modelo | Limite de interpretação | [Figura E2](../../assets/02_concorrencia/cvat_metricas.png) | Nunca apresentar "quantidade de objetos anotados" como "acerto da segmentação". São grandezas diferentes. |
 
 ## Referências desta análise
 
 - CVAT (site oficial). https://www.cvat.ai/ — acesso 27/08/2026.
+- CVAT — preços. https://www.cvat.ai/pricing — acesso 08/11/2026.
 - G2 — CVAT Reviews. https://www.g2.com/products/cvat/reviews — acesso 28/09/2026.
 - Oryndex — CVAT. https://oryndex.co/tools/cvat — acesso 28/09/2026. Fonte secundária; usar como pista e confirmar no G2.
 - Francis Okafor — CVAT Review. https://www.francisokafor.com/tools/cvat — acesso 28/09/2026. Fonte secundária.

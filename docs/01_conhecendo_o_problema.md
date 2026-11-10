@@ -61,7 +61,7 @@ Uma hipótese explicitada é melhor do que uma suposição escondida.
 |---|---:|---|---|
 | Henrique Finatti Silveira Belo Trebbi | 22.123.030-3 | [@HenriqueFinatti](https://github.com/HenriqueFinatti) |  |
 | Mateus Marana Assuena | 22.123.026-1 | [@MatMarana](https://github.com/MatMarana) |  |
-| Tiago Fagundes dos Santos | 22.123.017-0 |[@TiagoFagundes19](https://github.com/TiagoFagundes19) |  |
+| Tiago Fagundes dos Santos | 22.123.017-0 |[@TiagoFagundes19](https://github.com/TiagoFagundes19) | |
 
 ## 0.2 Título atual do TCC
 
@@ -85,7 +85,7 @@ Marque e descreva:
 - [ ] componente embarcado/IoT;
 - [ ] outro: {{...}}.
 
-**Descrição:** O TCC desenvolve um sistema de segmentação semântica para identificar automaticamente elementos presentes em vias off-road (pista, vegetação, obstáculos) a partir de imagens e vídeos capturados durante testes do veículo Baja. O sistema utiliza modelos de deep learning (DeepLabv3+ com backbone ResNet152) e inclui comparação de desempenho entre diferentes configurações de modelo, além de métricas de avaliação da qualidade das segmentações produzidas.
+**Descrição:** O TCC desenvolve um sistema de segmentação semântica que identifica automaticamente, em imagens e vídeos de vias off-road, **a região de trilha** e a separa do restante da cena. A segmentação é **binária**: cada pixel é classificado como *Trilha* (classe `Trail` dos datasets Freiburg Forest e Synthetic Offroad) ou *Fora da trilha*. O sistema compara dois modelos de deep learning, **FCN** e **DeepLabV3+**, ambos com backbone ResNet152, quanto à qualidade da segmentação e ao tempo de inferência. [F] — documento e repositório do TCC.
 
 ## 0.5 O TCC já previa desenvolvimento de interface com usuário?
 
@@ -93,7 +93,7 @@ Marque e descreva:
 - [ ] Parcialmente; existe alguma interação, mas ainda não está bem definida.
 - [ ] Não. O TCC é predominantemente técnico e não previa interface.
 
-**Explique o que está formalmente previsto no TCC:** O TCC prevê o desenvolvimento de um sistema interativo que permita aos integrantes da equipe Baja FEI selecionar imagens ou vídeos de vias off-road, executar a segmentação semântica utilizando modelos pré-treinados (DeepLabv3+ com ResNet152), visualizar os resultados e comparar o desempenho entre diferentes configurações de modelo. A interface faz parte do escopo formal do TCC como ferramenta de apoio à análise e validação dos resultados da segmentação.
+**Explique o que está formalmente previsto no TCC:** O TCC prevê o desenvolvimento de um sistema interativo que permita aos integrantes da equipe Baja FEI selecionar imagens ou vídeos de vias off-road, configurar e treinar os modelos (FCN e DeepLabV3+, ambos com ResNet152), executar a segmentação semântica, visualizar os resultados e comparar o desempenho entre eles. A interface faz parte do escopo formal do TCC como ferramenta de apoio à análise e validação dos resultados da segmentação.
 
 > Esta resposta serve para separar o compromisso do TCC do projeto da disciplina. Mesmo quando a opção for **não**, a equipe irá definir uma interface para exercitar IHC.
 
@@ -107,9 +107,9 @@ Segmentar caminhos em vias não urbanas.
 
 ## 1.2 Qual situação, atividade ou problema do mundo real motivou o TCC?
 
-O desenvolvimento de um carro autônomo pra equipe do Baja Fei
+O desenvolvimento de um carro autônomo para a equipe Baja FEI.
 
-[F]
+[F] — documento do TCC (introdução).
 
 ## 1.3 Qual é a **capacidade/contribuição central** produzida pelo TCC?
 
@@ -134,9 +134,9 @@ Os integrantes da equipe Baja FEI poderão avaliar visualmente a qualidade da se
 
 ## 2.1 Quem interage diretamente com o produto, se já existe interface prevista?
 
-Estudantes do projeto Baja FEI
+Integrantes da equipe Baja FEI. No recorte de IHC, o usuário direto priorizado é o analista de segmentação (§7.2).
 
-[F]
+[F] — documento do TCC: a interface prevista se destina aos integrantes da equipe Baja FEI (§0.5).
 
 ## 2.2 Quem poderia **usar, configurar, administrar, operar, interpretar ou tomar decisões** a partir da contribuição técnica?
 
@@ -145,7 +145,7 @@ Considere perfis profissionais e stakeholders, não apenas consumidores finais.
 | Perfil | Relação com a contribuição | O que faria | Status/evidência |
 |---|---|---|---|
 | Analista de segmentação (Baja FEI) | Interpretar | Avaliar a qualidade da segmentação, identificar falhas de classificação e selecionar o modelo mais adequado para cada condição de terreno | H |
-| Desenvolvedor de modelos (Baja FEI) | Configurar | Configurar parâmetros dos modelos, adicionar novos modelos ao sistema e ajustar configurações de processamento | H |
+| Pesquisador(a) de modelos (Baja FEI / orientação do TCC) | Configurar e experimentar | Definir configurações de treino (§7.1), treinar os modelos e comparar os resultados em imagens e vídeos dos testes. Adicionar novas arquiteturas e ajustar parâmetros internos do treino acontece no código do TCC e fica **fora do recorte de IHC** (§7.1 e Delimitação) | H |
 | Gestor de projeto (Baja FEI) | Decidir | Consultar resultados consolidados e tomar decisões sobre qual modelo utilizar nos testes do veículo | H |
 
 ## 2.3 Existem pessoas afetadas que não usariam a interface diretamente?
@@ -191,7 +191,7 @@ A atividade de análise dos resultados parece ser pelo menos tão frequente quan
 [H]
 
 ## 3.4 Qual parece mais crítica? Que consequência existe se for mal executada?
-A atividade mais crítica parece ser a interpretação dos resultados (A03), pois é nela que o usuário precisa compreender o que as cores e regiões segmentadas significam em relação ao terreno real. Uma interpretação incorreta pode levar à seleção de um modelo inadequado ou à identificação equivocada de áreas transitáveis. Diferentemente de falhas técnicas (que impedem o uso) ou dificuldades de interação (que tornam o uso lento), uma interpretação incorreta gera resultados plausíveis mas equivocados, o que é mais difícil de detectar.
+A atividade mais crítica parece ser a interpretação dos resultados (A03), pois é nela que o usuário precisa compreender o que as cores e regiões segmentadas significam em relação ao terreno real. Uma interpretação incorreta pode levar à seleção de um modelo inadequado ou a uma leitura equivocada da região de trilha. Diferentemente de falhas técnicas (que impedem o uso) ou dificuldades de interação (que tornam o uso lento), uma interpretação incorreta gera resultados plausíveis mas equivocados, o que é mais difícil de detectar.
 
 [H]
 
@@ -238,17 +238,17 @@ Um integrante da equipe Baja FEI precisa analisar uma imagem de uma via off-road
 # 5. Entendendo o contexto de uso
 
 ## 5.1 Onde e em quais situações a interação poderia ocorrer?
-A interação poderia ocorrer nos laboratórios FEI ou nas pista off-road da FEI, onde são realizados os testes do veículo. O sistema seria utilizado principalmente para analisar imagens e vídeos capturados durante esses percursos, permitindo que os integrantes da equipe avaliem a segmentação do terreno e identifiquem regiões transitáveis e não transitáveis.
+A interação poderia ocorrer nos laboratórios FEI ou nas pistas off-road da FEI, onde são realizados os testes do veículo. O sistema seria utilizado principalmente para analisar imagens e vídeos capturados durante esses percursos, permitindo que os integrantes da equipe avaliem se o modelo delimita corretamente a região de trilha. O resultado da segmentação serve à análise do modelo e não indica, por si só, se um trecho é transitável ou seguro (§4.3 e §5.6).
 
-[F]
+[F] os testes do veículo ocorrem nos laboratórios e pistas off-road da FEI (observação da equipe); [H] o uso da interface nesses locais e para essa finalidade.
 
 ## 5.2 Em quais dispositivos/equipamentos?
 A interação ocorreria principalmente em computadores ou notebooks capazes de executar o software e processar as imagens ou os vídeos. Também seriam utilizadas câmeras instaladas no veículo Baja ou dispositivos móveis para registrar o percurso off-road.
-[F]
+[H]
 
 ## 5.3 Existem condições físicas relevantes?
 <!--Considere iluminação, ruído, mobilidade, conexão, privacidade, uso compartilhado, interrupções, pressão de tempo etc. -->
-Uma boa iluminação se faz necessário para conseguir registrar imagens e videos de ótima qualidade. Para quem utiliza a interface, condições como visibilidade da tela em ambientes externos e possíveis interrupções durante a análise são fatores a serem investigados.
+Uma boa iluminação se faz necessária para conseguir registrar imagens e vídeos de ótima qualidade. Para quem utiliza a interface, condições como visibilidade da tela em ambientes externos e possíveis interrupções durante a análise são fatores a serem investigados.
 
 [H]
 
@@ -259,7 +259,7 @@ A aplicação poderia ser executada por qualquer membro da equipe Baja FEI.
 [H]
 
 ## 5.5 Existe necessidade de histórico, rastreabilidade ou auditoria?
-Existe a necessidade de manter o histórico das images e vídeos processado, junto com os resultados da segementação, com o objetivo de comparar diferentes registros, assim sendo possivel identificar possíveis falhas e acompanhar a evolução do modelo ao longo dos testes realizados pela equipe Baja FEI.
+Ainda não se sabe. A equipe levantou a hipótese de que manter o histórico das imagens e vídeos processados, junto com os resultados da segmentação, ajudaria a comparar registros, identificar falhas e acompanhar a evolução do modelo ao longo dos testes (**H08**). Até a coleta da Entrega 7, o histórico fica **fora do recorte**.
 
 [H]
 
@@ -296,9 +296,9 @@ Os integrantes do Baja FEI com noções básicas de programação devem estar fa
 [H]
 
 ## 6.4 O que essas soluções parecem fazer bem?
-As soluções pesquisadas centralizam atividades relacionadas à visão computacional, como envio e organização de imagens, anotação, treinamento e visualização dos resultados. Esses recursos podem facilitar a compreensão dos resultados e reduzir a necessidade de executar comandos manualmente.
+As soluções pesquisadas centralizam atividades relacionadas à visão computacional, como envio e organização de imagens, anotação, treinamento e visualização dos resultados. [F] — análise de concorrência (Entrega 2).
 
-[F]
+Esses recursos podem facilitar a compreensão dos resultados e reduzir a necessidade de executar comandos manualmente. [H]
 
 ## 6.5 O que parecem fazer mal, dificultar ou não atender?
 Por serem ferramentas genéricas e profissionais, essas soluções podem apresentar muitas funcionalidades, configurações e termos técnicos desnecessários para um integrante do Baja FEI que deseja apenas processar uma imagem ou um vídeo e visualizar o resultado
@@ -322,7 +322,9 @@ Alguns padrões que podem ser familiares aos integrantes da equipe são:
 
 ### Caminho A — TCC já possui interface
 
-O recorte da disciplina será o fluxo de envio, processamento e visualização de imagens ou vídeos de vias off-road. O usuário deverá selecionar um arquivo, iniciar a segmentação com uma das **configurações já disponibilizadas pelo TCC** e visualizar a comparação entre a imagem original e o resultado produzido, com uma legenda indicando as classes identificadas. A interface pretende tornar o processo mais acessível e facilitar a compreensão dos resultados, sem exigir que o usuário interaja diretamente com o código ou insira novos modelos.
+O recorte da disciplina será o fluxo de configuração, treino, envio, processamento, visualização e comparação de resultados de imagens ou vídeos de vias off-road. O usuário poderá definir uma configuração e treinar o modelo com ela; selecionar um arquivo e iniciar a segmentação com uma ou mais **configurações disponíveis**; visualizar a imagem original e o resultado lado a lado, com uma legenda das classes; consultar as métricas de desempenho de cada configuração; e comparar os resultados entre modelos e configurações. A interface pretende tornar o processo mais acessível e facilitar a compreensão dos resultados, sem exigir que o usuário interaja diretamente com o código ou insira novos modelos.
+
+Neste projeto, **configuração** = modelo (FCN ou DeepLabV3+, ambos com ResNet152) + parâmetros de treino expostos ao usuário: número de épocas, early stopping e paciência, datasets de treino (Freiburg Forest e/ou Synthetic Offroad), batch size e geração de gráficos. Esses parâmetros fazem parte da configuração de treino do TCC [F]. O usuário define uma configuração, treina o modelo com ela e depois a usa na segmentação e na comparação. Os demais parâmetros do arquivo (taxa de aprendizado, pesos das classes, tamanho da imagem, número de *workers*, modo de execução de teste e rótulos dos datasets) são internos e ficam fora da interface, assim como adicionar novas arquiteturas de modelo.
 
 ## 7.2 Qual perfil será priorizado no projeto de IHC?
 
@@ -349,6 +351,8 @@ Complete:
 - [ ] Outra: {{...}}.
 
 > **Declaração:** a interface desenvolvida nesta disciplina é um artefato de aprendizagem de IHC baseado no tema do TCC. Sua inclusão ou implementação no TCC somente ocorrerá se isso for posteriormente decidido pela equipe e pelo orientador.
+>
+> **No nosso caso:** a interface já está prevista no TCC (§0.5). A declaração vale para o design produzido na disciplina: telas, fluxos e decisões só passam para o TCC se a equipe e o orientador decidirem.
 
 ---
 
@@ -361,14 +365,14 @@ Marque apenas as que parecem plausíveis e explique o objetivo correspondente.
 | Possibilidade | Pode fazer sentido? | Objetivo/tarefa que justificaria | Evidência atual |
 |---|---|---|---|
 | Dashboard/visão geral | talvez | Comparar o desempenho de diferentes modelos e visualizar métricas consolidadas | [H] |
-| Configuração/parametrização | talvez | Configurar parâmetros de processamento e selecionar modelos disponíveis | [H] |
+| Configuração/parametrização | sim | Definir a configuração de treino com os parâmetros expostos ao usuário (§7.1) e escolher a configuração usada na execução. Parâmetros internos ficam fora | [H] |
 | Entrada/upload/seleção de dados | sim | Enviar imagens ou vídeos de vias off-road para análise | [H] |
 | Acompanhamento de processamento | sim | Acompanhar o status do processamento da segmentação | [H] |
 | Relatório/resultados | sim | Visualizar métricas de desempenho e resultados da segmentação | [H] |
-| Histórico com busca/filtros | talvez | Consultar análises anteriores para comparar evolução ou reprocessar imagens | [H] |
+| Histórico com busca/filtros | talvez | Consultar análises anteriores para comparar evolução ou reprocessar imagens. Fora do recorte até a Entrega 7 responder a H08 | [H] |
 | Comparação de resultados | sim | Comparar segmentação original vs. modelo, ou desempenho entre diferentes modelos | [H] |
 | Explicabilidade/detalhamento | talvez | Investigar por que uma região foi classificada de determinada forma | [H] |
-| Administração/configurações globais | talvez | Gerenciar modelos disponíveis e configurações do sistema | [H] |
+| Administração/configurações globais | não | Adicionar novas arquiteturas ou alterar parâmetros internos acontece no código do TCC, fora do recorte (§7.1) | [H] |
 | Usuários/perfis/permissões | não | Sistema local com uso restrito à equipe, sem necessidade de perfis | [H] |
 | CRUD de entidade do domínio | não | Não há entidades complexas a serem gerenciadas no escopo atual | [H] |
 | Auditoria/logs | talvez | Visualizar erros de processamento e diagnósticos de falhas | [H] |
@@ -393,11 +397,12 @@ Marque apenas as que parecem plausíveis e explique o objetivo correspondente.
 
 | ID | O usuário precisa conseguir... | Para alcançar... | Prioridade inicial |
 |---|---|---|---|
-| A01 | Selecionar e enviar uma imagem ou um vídeo | Inserir o arquivo que será analisado pelo modelo | alta |
-| A02 | Iniciar o processamento da segmentação | Gerar o resultado da segmentação sem executar scripts manualmente | alta |
-| A03 | Visualizar a imagem original e o resultado segmentado lado a lado | Interpretar como o modelo classificou cada região da imagem | alta |
-| A04 | Visualizar métricas de desempenho (IoU, acurácia) | Avaliar a qualidade da segmentação e comparar modelos | alta |
-| A05 | Comparar resultados entre diferentes modelos ou configurações | Selecionar o modelo mais adequado para as condições do terreno | média |
+| AC01 | Selecionar e enviar uma imagem ou um vídeo | Inserir o arquivo que será analisado pelo modelo | alta |
+| AC02 | Iniciar o processamento da segmentação | Gerar o resultado da segmentação sem executar scripts manualmente | alta |
+| AC03 | Visualizar a imagem original e o resultado segmentado lado a lado | Interpretar como o modelo classificou cada região da imagem | alta |
+| AC04 | Visualizar métricas de desempenho de cada modelo: IoU e acurácia **no conjunto de teste anotado** e tempo de inferência | Avaliar a qualidade da segmentação e comparar modelos. Imagens novas de campo não têm anotação de referência; nelas a avaliação é visual | alta |
+| AC05 | Comparar resultados entre diferentes modelos ou configurações | Selecionar o modelo mais adequado para as condições do terreno | média |
+| AC06 | Definir uma configuração de treino e treinar o modelo com ela | Obter configurações para comparar sem precisar alterar código | média |
 
 ## 9.3 Tecnologias/restrições já definidas no TCC
 
@@ -406,8 +411,11 @@ A tecnologia aparece **agora**, depois do entendimento do uso.
 | Tecnologia/restrição | Por que existe | Possível impacto na interação |
 |---|---|---|
 | Python | É a linguagem utilizada no desenvolvimento e na execução do modelo | A interface deverá se comunicar com o código responsável pelo processamento |
-| DeepLabv3+ | É a arquitetura responsável por realizar a segmentação semântica e classificar cada região da imagem | O processamento pode levar algum tempo, exigindo que a interface apresente um indicador de carregamento e informe quando o resultado estiver pronto |
-| ResNet152 | É o backbone utilizado pelo DeepLabv3+ para extrair características das imagens | Pode aumentar o tempo de processamento e o consumo de memória, especialmente em computadores sem GPU |
+| FCN e DeepLabV3+ | São as duas arquiteturas comparadas pelo TCC; cada uma classifica os pixels em *Trilha* ou *Fora da trilha* | O processamento pode levar tempo, sobretudo com o backbone ResNet152. A interface precisa de indicador de progresso por modelo e deve avisar quando o resultado estiver pronto |
+| ResNet152 | É o backbone usado pelos dois modelos para extrair características das imagens | Aumenta o tempo de processamento e o consumo de memória, especialmente em computadores sem GPU |
+| Métricas do TCC | O TCC avalia os modelos no conjunto de teste anotado (IoU/mIoU, acurácia, recall, F1 e matriz de confusão) e mede o tempo de inferência [F] (metodologia do TCC) | As métricas por modelo vêm desse conjunto. Imagens novas de campo não têm anotação de referência e são avaliadas visualmente |
+| Configuração de treino | O treino usa os parâmetros da configuração (§7.1) e registra loss, acurácia e mIoU a cada época [F] | A interface expõe só os parâmetros do usuário, com valores padrão, e mostra o progresso por época |
+| Saída do modelo | Uma máscara binária por imagem; vídeos são segmentados quadro a quadro [F] | Sobreposição colorida e legenda são recursos da interface |
 
 ---
 
@@ -415,14 +423,14 @@ A tecnologia aparece **agora**, depois do entendimento do uso.
 
 | ID | Hipótese/dúvida | Por que importa | Como poderá ser investigada |
 |---|---|---|---|
-| H01 | O que se espera que esteja diferente para pessoas, organizações ou processos se essa contribuição for bem-sucedida? | Define o benefício concreto que a interface deve proporcionar | Entrega 4 (aprofundamento do problema) |
+| H01 | A decisão sobre qual modelo usar é tomada com base em números dispersos e sem critério explícito *(reformulada em 08/11/2026; texto anterior: "O que se espera que esteja diferente para pessoas, organizações ou processos se essa contribuição for bem-sucedida?")* | Define se a interface precisa reunir as métricas e explicitar o critério de comparação. A H12 trata do benefício esperado | Entrega 4 (cenário C02) e Entrega 7 (coleta de dados) |
 | H02 | O perfil prioritário (analista de segmentação) possui conhecimento básico do domínio mas pode não dominar programação | Direciona o nível de complexidade da interface | Entrega 3 (personas e contexto) |
 | H03 | O piloto Baja FEI seria beneficiado indiretamente, sem interagir diretamente com a interface | Esclarece stakeholders e impactos indiretos | Entrega 3 (personas e contexto) |
 | H04 | Conhecimento técnico, experiência com ferramentas e familiaridade com métricas influenciam a interação | Define requisitos de design para acessibilidade e usabilidade | Entrega 3 (personas e contexto) |
-| H05 | As atividades são realizadas atualmente por meio de scripts que exigem conhecimento técnico | Base do problema de interação que a interface deve resolver | Entrega 2 (já investigada parcialmente) |
+| H05 | As atividades são realizadas atualmente por meio de scripts que exigem conhecimento técnico | Base do problema de interação que a interface deve resolver | Entrega 2 (investigada parcialmente) e Entrega 7 (com o público) |
 | H06 | Dificuldades principais: configurar parâmetros, selecionar arquivos, interpretar resultados sem orientação | Identifica pontos críticos de interação | Entrega 4 (situações problemáticas) |
 | H07 | Existem fatores sociais ou organizacionais como papéis, permissões e colaboração na equipe | Pode afetar design e governança da interface | Entrega 7 (coleta de dados) |
-| H08 | Existe necessidade de histórico para comparar análises e acompanhar evolução | Define se interface precisa de funcionalidades de busca e armazenamento | Entrega 8 (engenharia de usabilidade) |
+| H08 | Existe necessidade de histórico para comparar análises e acompanhar evolução | Define se interface precisa de funcionalidades de busca e armazenamento | Entrega 7 (investigação) e Entrega 8 (engenharia de usabilidade) |
 | H09 | Interfaces conhecidas pelo público: VS Code, terminais, GitHub, ferramentas de telemetria | Estabelece padrões e expectativas do usuário | Entrega 7 (coleta de dados) |
 | H10 | Ferramentas genéricas como CVAT e Roboflow podem ser complexas para o perfil priorizado | Justifica a necessidade de uma interface simplificada | Entrega 7 (coleta de dados) |
 | H11 | Padrões familiares: seleção de arquivo, botão de processamento, barra de progresso, comparação lado a lado | Direciona elementos de interface a serem incluídos | Entrega 7 (coleta de dados) |
@@ -436,26 +444,26 @@ Registre em [`../RASTREABILIDADE.md`](../RASTREABILIDADE.md).
 
 | Pergunta | Síntese atual |
 |---|---|
-| Qual é a contribuição central do TCC? | Desenvolver um sistema de segmentação semântica de vias off-road utilizando DeepLabv3+ e comparar o desempenho entre modelos |
+| Qual é a contribuição central do TCC? | Desenvolver um sistema de segmentação semântica (binária: trilha × fora da trilha) de vias off-road e comparar o desempenho entre FCN e DeepLabV3+ |
 | O TCC já previa interface? | Sim |
 | Quem é o usuário prioritário de IHC? | Analista de segmentação da equipe Baja FEI |
 | O que ele precisa alcançar? | Avaliar a qualidade da segmentação, identificar falhas de classificação e selecionar o modelo mais adequado para as condições do terreno |
 | Qual problema/atividade será estudado? | A dificuldade de interpretar resultados de segmentação sem uma interface adequada, e a necessidade de comparar modelos |
 | Como isso acontece hoje? | Através de scripts Python que exigem conhecimento técnico |
 | Qual é o contexto de uso? | Laboratórios FEI e pistas off-road durante testes do veículo Baja |
-| Que interface/recorte será explorado? | Upload de dados, processamento, visualização lado a lado, métricas de desempenho e comparação entre modelos |
+| Que interface/recorte será explorado? | Configuração e treino dos modelos, upload de dados, processamento, visualização lado a lado, métricas de desempenho e comparação entre modelos e configurações |
 | Como a interface se relaciona ao TCC? | Facilita a utilização do sistema de segmentação desenvolvido no TCC, sem exigir interação direta com código |
 | Quais pontos ainda são hipóteses? | H01, H02, H03, H04, H06, H07, H08, H09, H10, H11, H12 |
 
 ### Delimitação
 
-**Dentro do escopo de IHC:** Upload de imagens/vídeos, execução da segmentação, visualização lado a lado (original × segmentação), exibição de métricas de desempenho e comparação entre modelos disponíveis.
+**Dentro do escopo de IHC:** Definição da configuração de treino (parâmetros expostos ao usuário, §7.1) e treino dos modelos, upload de imagens/vídeos, execução da segmentação com um ou mais modelos disponíveis, visualização lado a lado (original × segmentação), exibição de métricas de desempenho (no conjunto de teste anotado) e comparação entre os modelos disponíveis.
 
-**Fora do escopo de IHC:** Treinamento de modelos, anotação de datasets, configuração avançada de parâmetros de deep learning, integração com hardware do veículo, processamento em tempo real durante corridas.
+**Fora do escopo de IHC:** Adição de novas arquiteturas de modelo, ajuste dos parâmetros internos do treino (taxa de aprendizado, pesos das classes, tamanho da imagem, entre outros), anotação de datasets, integração com hardware do veículo, processamento em tempo real durante corridas e, até a Entrega 7 responder a H08, histórico de análises.
 
-**Dentro do escopo formal do TCC:** Desenvolvimento do modelo de segmentação semântica (DeepLabv3+ com ResNet152), comparação de desempenho entre modelos, métricas de avaliação, sistema de interface para visualização e análise dos resultados.
+**Dentro do escopo formal do TCC:** Desenvolvimento dos modelos de segmentação semântica (FCN e DeepLabV3+, ambos com ResNet152), comparação de desempenho entre eles, métricas de avaliação, sistema de interface para configuração, visualização e análise dos resultados.
 
-**Interface da disciplina será implementada no TCC?** Sim — a interface faz parte do escopo formal do TCC como ferramenta de apoio à análise dos resultados.
+**Interface da disciplina será implementada no TCC?** Sim — a interface faz parte do escopo formal do TCC como ferramenta de apoio à análise dos resultados. O que for desenhado na disciplina só entra no TCC por decisão da equipe e do orientador (§7.5).
 
 ---
 
@@ -481,7 +489,7 @@ Prepare uma explicação de até três frases:
 
 1. **Problema/atividade humana:** Integrantes da equipe Baja FEI precisam avaliar a qualidade da segmentação semântica de vias off-road para selecionar o modelo mais adequado, mas atualmente dependem de scripts técnicos que dificultam a interpretação dos resultados.
 
-2. **Contribuição técnica do TCC:** Desenvolvimento de um sistema de segmentação semântica utilizando DeepLabv3+ com comparação de desempenho entre modelos e métricas de avaliação.
+2. **Contribuição técnica do TCC:** Desenvolvimento de um sistema de segmentação semântica (trilha × fora da trilha) com comparação de desempenho entre FCN e DeepLabV3+ e métricas de avaliação.
 
 3. **Como uma pessoa poderia utilizar essa contribuição:** Através de uma interface visual, o analista envia imagens do terreno, acompanha o processamento e compara os resultados lado a lado, identificando falhas de classificação e selecionando o melhor modelo sem precisar executar comandos no terminal.
 
@@ -508,3 +516,12 @@ Essa síntese ajuda a apresentar o projeto para público não especializado sem 
 - [X] Hipóteses prioritárias receberam IDs únicos e estão na rastreabilidade.
 - [X] O recorte de IHC é viável para modelar, prototipar e avaliar no semestre.
 - [X] A equipe consegue explicar problema humano → contribuição computacional → forma de uso.
+
+# Histórico de revisões
+
+| Data | O que mudou | Motivo |
+|---|---|---|
+| 26/09/2026 | Perfil prioritário (analista de segmentação), objetivo humano além de "segmentar", consolidação do recorte, correção de IDs e marcações, delimitação preenchida | Feedback do professor sobre a Entrega 1 |
+| 28/09/2026 | Histórico e comparação de resultados passaram para "talvez/sim" na §8; versionamento de modelos saiu do recorte; perfil padronizado como "analista de segmentação da equipe Baja FEI" | Feedback do professor e resultados da Entrega 2 |
+| 08/11/2026 | Classes, modelos e métricas alinhados ao repositório do TCC (§0.4, §0.5, §9.2, §9.3, §11): segmentação binária *Trilha* × *Fora da trilha*, modelos FCN e DeepLabV3+, métricas por modelo só no conjunto de teste anotado. "Configuração" definida como modelo + parâmetros de treino expostos ao usuário (§7.1, §9.3); configurar e treinar entram no recorte (§2.2, §8, §9.2 AC06, Delimitação); novas arquiteturas e parâmetros internos ficam fora. §7.5 explica que a declaração da disciplina vale para o design produzido nela, já que a interface está prevista no TCC. §5.1, §5.2 e §6.4 deixam de marcar como [F] afirmações hipotéticas. §5.5 reescrita como hipótese (H08). H01 reformulada como afirmação testável | Revisão de consistência (`PENDENCIAS.md`: INC-11, INC-12, INC-14, INC-15, INC-16, INC-18, INC-52) e leitura do repositório do TCC |
+| 08/11/2026 | Fase 2 da revisão de pendências: IDs das ações da §9.2 passam a AC01–AC06 (as atividades da §3.2 continuam A01–A04); §7.1 descreve o recorte completo (configuração e treino, execução, visualização, métricas e comparação); origem dos [F] da §1.2 e da §2.1; "Onde investigar" da H05 e da H08 alinhado à RAST; correções de grafia | Revisão de consistência (`PENDENCIAS.md`: INC-06, INC-10, INC-13, INC-17, INC-19) |
