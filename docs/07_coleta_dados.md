@@ -30,7 +30,7 @@ Quando o acesso ao perfil profissional for difícil, discuta com o docente alter
 
 Antes de decidir “que dados coletar”, retome os itens `[H]` e `[?]` da Entrega 1 e o registro de hipóteses em [`../RASTREABILIDADE.md`](../RASTREABILIDADE.md). A coleta deve responder perguntas reais do projeto, e não apenas produzir um formulário porque a técnica foi solicitada.
 
-> Linhas preenchidas por Henrique (hipóteses ligadas à P03 e ao C02). Tiago e Mateus acrescentam as hipóteses das suas partes.
+> Linhas preenchidas por parte: Henrique (P03/C02) e Tiago (P01/C01). Mateus acrescenta as hipóteses da sua parte.
 
 | ID | Hipótese/lacuna | Evidência atual | Decisão que depende da resposta | Prioridade |
 |---|---|---|---|---|
@@ -39,6 +39,11 @@ Antes de decidir “que dados coletar”, retome os itens `[H]` e `[?]` da Entre
 | H04 | Conhecimento técnico, experiência com ferramentas e familiaridade com métricas influenciam a interação. **Para a P03:** quais métricas e termos quem decide entende. | As personas variam nesse eixo, mas são construção da equipe. A RC01 (termos) tem sustentação média. | Se a explicação dos termos no ponto de uso (decisão 3 da P03) vira requisito, e com qual vocabulário. | alta |
 | H06 | Dificuldades principais: configurar parâmetros, selecionar arquivos, interpretar resultados sem orientação. **Para a P03:** julgar se uma diferença entre configurações é relevante. | Dores escritas pela equipe nas personas e no C02; nenhuma relatada por usuários. | De onde vem o valor de referência (decisão 2 da P03) e qual é o critério de resultado "inconclusivo" (decisão 5). | média |
 | H12 | Benefício esperado: eliminar necessidade de código, apresentar resultados claramente, permitir comparação entre modelos. **Para a P03:** chegar à reunião com uma escolha que consiga sustentar. | Expectativa registrada na E1 §9.1, sem evidência. | O que conta como sucesso nas metas de usabilidade (Entrega 8) para a tarefa de decisão; se o resumo exportável (decisão 4 da P03) é o que de fato se leva à reunião. | média |
+| H02 | O perfil prioritário (analista de segmentação) possui conhecimento básico do domínio mas pode não dominar programação. **Para a P01:** separar o que a pessoa sabe de programação do que sabe para interpretar a segmentação. | Só a P01, que refina a hipótese (programa no curso, mas não conhece os scripts do projeto); nenhum relato de analista. | Quanto da execução precisa ser escondido e se a interface precisa explicar a análise, o código ou os dois. | alta |
+| H05 | As atividades são realizadas atualmente por meio de scripts que exigem conhecimento técnico. **Para a P01:** quais passos e erros da execução atrapalham a análise. | Observação interna da equipe (E1 §4.6), sustentada com evidência limitada; não mostra a dificuldade de quem analisa. | Fluxo sem código, estados de execução (RC04) e mensagens de erro (decisões 4 e 5 da P01). | alta |
+| H09 | Interfaces conhecidas pelo público: VS Code, terminais, GitHub, ferramentas de telemetria. | Nenhuma sobre o público; a E2 descreve produtos, não o que a equipe usa. | Quais padrões e termos podem ser reaproveitados sem explicação. | média |
+| H10 | Ferramentas genéricas como CVAT e Roboflow podem ser complexas para o perfil priorizado. | Refinada pela E2 com fontes públicas: a complexidade varia por produto. Não se sabe se a equipe conhece essas ferramentas. | Se a interface precisa se diferenciar dessas ferramentas ou se a comparação com elas é irrelevante para o público. | baixa |
+| H11 | Padrões familiares: seleção de arquivo, botão de processamento, barra de progresso, comparação lado a lado. | Padrões observados nos produtos da E2; familiaridade do público não comprovada. | Estrutura das telas de execução e comparação (decisões 1 e 4 da P01). | média |
 
 ## Parte A — necessidades e requisitos de IHC
 
@@ -112,7 +117,71 @@ O estudo é uma atividade de ensino da disciplina, sem finalidade de pesquisa ci
 - **Descarte:** gravações apagadas logo após a transcrição; anotações brutas e tabela de códigos apagadas ao fim do semestre letivo, depois da Entrega 14.
 - **Devolutiva:** a síntese anonimizada é compartilhada com quem participou, que pode apontar interpretações erradas antes do uso no projeto.
 
-> Repita A02, A03...
+### A02 — Tiago Fagundes dos Santos
+
+**Autor(a):** Tiago Fagundes dos Santos — 22.123.017-0  
+**Persona e cenário:** P01 — Rafael Pereira; C01 (tarefas T01, T02 e T03)  
+**Objetivo desta parte:** verificar se existe na equipe Baja FEI quem analise os resultados da segmentação como a P01 foi descrita, como essa análise é feita hoje (execução, inspeção da máscara e comparação entre configurações) e onde ela falha. As respostas decidem o que entra no fluxo principal da interface (T01–T03) e o estado das decisões de design 1 a 5 da P01.
+
+> As afirmações sobre a organização da equipe Baja FEI nesta seção (papéis, quantidade de pessoas, rotina de testes) são hipóteses `[H]` levantadas para planejar a coleta e serão conferidas com a equipe antes da aplicação.
+
+#### Que dados coletar?
+
+Os dados seguem os cinco grupos de Barbosa e Silva (2010). Atendendo ao feedback da Entrega 1, o conhecimento de **programação** e o conhecimento para **interpretar a segmentação** são investigados separadamente.
+
+| Dado/informação | Hipótese/lacuna relacionada | Por que é necessário | Qual decisão de design pode afetar |
+|---|---|---|---|
+| **Usuário.** Papel na equipe, há quanto tempo analisa resultados de segmentação ou de outros dados de teste e qual curso faz | H02 | Saber se o perfil da P01 existe e se a análise é feita por uma pessoa dedicada ou por quem estiver disponível | Manter a P01 como persona prioritária e o nível de conhecimento assumido nas telas |
+| **Relação com tecnologia.** Se programa, em que linguagem, e se consegue rodar e corrigir os scripts do projeto sem ajuda | H02, H05 | A P01 "programa no curso, mas não conhece os scripts por dentro"; é preciso saber se a dificuldade está no código ou na análise | Quanto da execução precisa ser escondido; se mensagens de erro em linguagem de usuário (decisão 5) bastam |
+| **Relação com tecnologia.** Como a segmentação é executada hoje: passos, pré-condições, erros mais comuns e como a pessoa os percebe e contorna | H05 (C01, Q2 e Q8) | O processo atual por scripts é a base do problema, mas só tem evidência interna | Fluxo sem código e estados de execução (decisão 4, RC04); mensagens de erro (decisão 5) |
+| **Relação com tecnologia.** Ferramentas e interfaces que a pessoa já usa (editor de código, terminal, GitHub, planilhas, CVAT, Roboflow ou similares) e o que acha delas | H09, H10, H11 | Os padrões da E2 foram observados nos produtos, não no nosso público | Padrões de interface que podem ser reaproveitados (seleção de arquivo, barra de progresso, lado a lado) |
+| **Relação com tecnologia.** Onde e em que equipamento a análise acontece (laboratório ou beira da pista, computador do laboratório ou notebook), se há internet e se a pessoa é interrompida | Ambiente da P01 `[?]` (E3, seção 3.1) | O professor pediu para esclarecer esse contexto; o uso à beira da pista não está definido | Modo offline e retomada após interrupção (decisão 5); tamanho e legibilidade das telas |
+| **Domínio.** Como a pessoa decide se uma máscara está correta, que sinais usa e o que faz quando não tem certeza | H06 (C01, Q7) | O critério de correção é hipótese do C01 | Apoio à avaliação visual da T01; registro de imagem duvidosa (RQ05) |
+| **Domínio.** Como a pessoa separa uma falha do modelo de uma falha da imagem (sombra, poeira, desfoque) | H06 (C01) | É a ruptura central do C01, sem evidência | Informação de confiança do resultado (RQ06) e campos para registrar o motivo da dúvida |
+| **Domínio.** Quais métricas lê (IoU, acurácia, tempo de inferência), o que entende de cada uma e se sabe que IoU e acurácia dependem de anotação de referência | H04, H02 | A P01 "interpreta métricas", mas sem referência; é preciso saber o que de fato é lido | Painel de métricas (decisão 3) e o estado da tela quando a imagem não tem métricas |
+| **Domínio.** Como lê a máscara e a legenda hoje (cores, o que é "trilha"), e que termos geram dúvida | H04, RC01 | A legenda fixa (decisão 2) parte de uma dificuldade ainda não demonstrada | Paleta, rótulos e textos de apoio |
+| **Tarefas.** Com que frequência a análise acontece, quantas imagens ou vídeos por sessão e quanto tempo leva | C01, Q9 | O volume define se a tarefa é feita imagem a imagem ou em lote | Processamento de várias imagens de uma vez e prioridade da T01 e da T02 |
+| **Tarefas.** Como a pessoa escolhe a outra configuração para comparar e como compara hoje (janelas lado a lado, planilhas) | C01, Q5; T03 | O C01 supõe que se compara com "a mais recente"; o critério real é desconhecido | Comparação de configurações sobre a mesma imagem (T03; tela de comparação da E6) |
+| **Tarefas.** Como organiza os arquivos e as métricas e se precisa voltar a análises anteriores | H08 (C01, Q3) | O histórico está fora do recorte até a Entrega 7 responder se ele é necessário | Incluir ou não o histórico (decisão 4) e o que ele precisaria recuperar |
+| **Tarefas.** Para quem e em que formato o resultado é entregue (grupo da equipe, reunião, relatório) e o que acontece quando a análise não fica pronta a tempo | C01, Q2 e Q4 | A evidência produzida aqui é a base das decisões da P02 e da P03 | Exportação de imagens e relatórios (decisão 4) |
+| **Motivações e valores.** O que a pessoa considera uma análise bem feita, se prefere aprender uma ferramenta nova fazendo ou com explicação e se usa atalhos de teclado | Comportamentos da P01 `[H]` | Preferências escritas pela equipe, nunca verificadas | Atalhos e presets (decisão 5, em investigação); ajuda contextual |
+
+**Dados que não serão coletados:** notas, desempenho acadêmico, opinião sobre a competência técnica de colegas, imagens dos testes em que apareçam pessoas e qualquer dado pessoal sensível. Arquivos, pastas e logs só serão vistos se a pessoa quiser mostrá-los, sem copiar o conteúdo.
+
+#### De quem coletar?
+
+Respostas às perguntas da aula para o recorte da P01 `[H]`:
+
+- **Quem utilizará o sistema?** Quem analisa os resultados da segmentação depois dos testes e responde à equipe se a configuração pode continuar.
+- **Quem será afetado por ele?** Quem decide a configuração (P03 e coordenação), que recebe a evidência; quem acompanha os testes e fornece as imagens; e quem pilota, que usa a configuração escolhida (H03).
+- **Quem decide quais objetivos o sistema deve apoiar?** Os autores do TCC e o orientador.
+- **Quem definiu o processo atual?** Quem escreveu e mantém os scripts de segmentação, junto com a liderança da equipe.
+
+| Perfil/stakeholder | Critério de inclusão | Relação com persona/público |
+|---|---|---|
+| Integrantes da equipe Baja FEI que analisam resultados de segmentação depois dos testes `[H]` | Executou ou analisou resultados de segmentação, ou analisou outros dados de teste do veículo (imagens, telemetria), no último semestre; ter 18 anos ou mais; não ser autor deste projeto | **Perfil principal.** Corresponde à P01 (analista de segmentação). Previsão de 3 a 6 pessoas `[H]` |
+| Integrantes que acompanham os testes de campo e descarregam as imagens das câmeras | Participou de pelo menos um teste de campo no último semestre | **Informante secundário.** Confirma de onde vêm as imagens, em que condições são capturadas e quando chegam a quem analisa (C01, Q6). Uma pessoa basta |
+| Integrante que escreveu ou mantém os scripts de segmentação | É responsável pelos scripts ou pelos modelos do projeto | **Informante secundário.** Descreve as pré-condições e os erros mais comuns da execução (C01, Q8), sem ser o usuário-alvo. Coordenar com a parte A03 (P02) para não abordar a mesma pessoa duas vezes |
+
+**Se faltar gente no perfil principal:** se a análise de segmentação ainda for feita por uma ou duas pessoas, a alternativa é incluir alunos de Ciência da Computação da FEI com experiência em visão computacional fora da Baja, como participantes proxy. A limitação será registrada: eles conhecem a técnica, mas não o contexto dos testes.
+
+#### Aspectos éticos
+
+Valem a base normativa e as regras gerais descritas na A01: atividade de ensino (Resolução CNS 510/2016, art. 1º, parágrafo único), LGPD, participação voluntária, termo de consentimento, armazenamento fora do repositório e descarte ao fim do semestre. Abaixo, os riscos próprios desta parte.
+
+| Dado ou situação | Risco neste projeto | Cuidado adotado |
+|---|---|---|
+| Dificuldade com código e com os scripts | A pessoa pode se sentir avaliada por não saber programar ou por não conseguir corrigir um erro | Deixar claro, no convite e no início, que se avalia o processo e não a pessoa; perguntar sobre o que acontece, e não sobre o que a pessoa "deveria saber" |
+| Acompanhar a análise no computador da pessoa | A tela pode mostrar arquivos, mensagens e dados de outros integrantes | A pessoa escolhe o que mostrar e fecha o que não quiser; nada é fotografado ou copiado; anota-se só a sequência de passos |
+| Gravação de tela | Mostra nome de usuário, caminhos de pastas e conversas abertas | Só com autorização explícita no termo e com as outras janelas fechadas; apagada logo após a análise |
+| Imagens dos testes | Podem mostrar pilotos, outros integrantes e as instalações da FEI | Não copiar as imagens; se for preciso ilustrar algo na entrega, usar apenas imagens sem pessoas e com autorização da equipe |
+| Erros que atrasaram uma resposta à equipe | Relatar a falha pode expor a pessoa perante a liderança | Pergunta opcional; o relato é anonimizado e não é repassado à liderança nem à coordenação |
+| Comparação entre analistas | Com poucas pessoas, diferenças de critério podem ser atribuídas a alguém específico | Na divulgação, usar códigos (A1, A2…) e apresentar critérios de forma agregada ("parte dos analistas…"), sem ligar um critério a uma pessoa |
+
+- **Anonimização:** as pessoas que participam desta coleta recebem códigos A1, A2… na transcrição, como descrito na A01. *(Isso se refere a quem participa da coleta de dados, não a usuários da interface, que não terá cadastro nem login.)*
+- **Devolutiva:** a síntese anonimizada é compartilhada com quem participou antes do uso no projeto.
+
+> Repita A03...
 
 ## Parte B — ferramentas de coleta
 
