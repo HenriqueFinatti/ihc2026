@@ -135,3 +135,21 @@ Os encaminhamentos abaixo são investigações futuras, e não exigências de re
 6. Concluir a síntese para comunicação do projeto e atualizar o checklist após a revisão.
 
 **Parecer geral:** a Entrega 01 apresenta uma base pertinente para um projeto de IHC ligado ao Baja FEI, especialmente ao reconhecer dificuldades no uso de scripts e propor um fluxo inicial de interpretação de segmentações. Entretanto, ainda não demonstra um entendimento suficientemente consolidado de usuário, objetivo, contexto e escopo, e mantém lacunas de preenchimento e inconsistências na rastreabilidade. Considero a entrega parcialmente atendida, com necessidade de revisão dos pontos prioritários antes de utilizá-la como referência estável para as próximas atividades. O avanço esperado é transformar o foco atual em executar e visualizar a segmentação em uma justificativa clara de como uma pessoa utilizará esses resultados para alcançar um objetivo definido, mantendo transparentes as hipóteses e os limites do conhecimento disponível.
+
+---
+
+## Tratamento dos comentários
+
+*Registro da equipe, 10/11/2026. Cada item foi conferido contra o estado atual de `docs/01_conhecendo_o_problema.md` antes de qualquer alteração, já que boa parte foi resolvida nas revisões de 26/09, 28/09 e 08/11/2026.*
+
+| Item do parecer | Situação em 10/11/2026 | O que foi feito |
+|---|---|---|
+| 1. Objetivo humano | Parcialmente atendido em 26/09 | Objetivo unificado em §1.4, §2.2, §2.4, §3.1, §7.2–§7.4, §9.1, §9.2, §11 e §13: selecionar a **configuração** a usar nos testes do veículo, com base nas métricas do conjunto de teste anotado e na inspeção visual. Saiu "mais adequado às condições do terreno", que afirmava mais do que as métricas permitem. |
+| 2. Recorte e delimitação | Já atendido (26/09 e 08/11) | Nenhuma alteração. §0.4, §0.5 e §11 preenchidas, Caminho B removido e ResNet152 descrito como backbone dos dois modelos. |
+| 3. Perfil prioritário | Parcialmente atendido | Configurar e treinar atribuídos ao pesquisador de modelos (§7.1, AC06), e não ao analista prioritário, que pode não dominar código. §5.4 descreve os papéis de analista, pesquisador e gestor, ligada à H07. Os stakeholders já tinham sido corrigidos. |
+| 4. Atividades humanas × processamento | Parcialmente atendido | Criada a A05 (treino) na §3.2 e preenchida a criticidade de cada atividade. A02, §3.3 e §3.4 já estavam corrigidas. |
+| 5. Fatos, hipóteses e evidências | Parcialmente atendido | §6.1 e §6.2 passam a citar a Entrega 2 como origem dos [F]. Saiu a afirmação não verificada sobre polígonos no CVAT. §4.6 registra que data e detalhes da observação não foram anotados [?]. §4.1, §4.5, §8 e §9.1 já estavam corrigidas. |
+| 6. Contexto e significado dos resultados | Parcialmente atendido | Contexto prioritário definido como análise no laboratório da FEI depois dos testes de campo; uso na pista vira lacuna e tempo real continua fora (§5.1, §7.4, §11 e RAST §1). AC04 explica o que as métricas indicam e não indicam. Os limites sobre segurança do trajeto e a §5.3 já estavam corrigidos. |
+| 7. Possibilidades × necessidades | Parcialmente atendido | §8 separa a comparação original × segmentação (AC03) da comparação entre configurações (AC05). Alertas e logs passam a depender do acompanhamento (F03) para comunicar falhas do fluxo. "Usuários/perfis" passa a citar a H07. A tensão entre histórico e busca já estava resolvida (H08). |
+| 8. Rastreabilidade e campos pendentes | Já atendido (26/09 e 08/11) | Nenhuma alteração estrutural. IDs únicos, colunas alinhadas, RAST §1 e §13 preenchidas. A RAST §1 recebeu só o novo contexto, o objetivo e o responsável pelo treino. |
+| Recomendações | Parcialmente atendido | §2.4 separa conhecimento de programação e de segmentação. Coluna de responsabilidades da §0.1 removida, `{{...}}` residuais retirados, "VS Code" e pontuação corrigidos. A tabela da §1.5 e a linha H02 já estavam corretas. |
