@@ -4,7 +4,7 @@
 
 **Produto analisado:** Supervisely
 
-**Módulo/versão analisada:** plataforma web Supervisely; módulo de **configuração de treinamento** (seleção de modelo, barras de progresso, gráficos de treino e validação) e **aba de análise** do projeto (filtros, estatísticas de dataset, tabelas e visualizações por classe). Há uma edição Community gratuita, um plano Pro pago e uma edição Enterprise em nuvem privada, on-premise ou offline (página de preços, 08/11/2026).
+**Módulo/versão analisada:** plataforma web Supervisely; módulo de **configuração de treinamento** (barras de progresso e gráficos de treino e validação; a seleção de modelo aparece só na gravação, não na captura estática) e **aba de análise** do projeto (filtros, estatísticas de dataset, tabelas e visualizações por classe). Há uma edição Community gratuita, um plano Pro pago e uma edição Enterprise em nuvem privada, on-premise ou offline (página de preços, 08/11/2026).
 
 **Link oficial:** https://supervisely.com/
 
@@ -51,8 +51,8 @@ No contexto do nosso TCC, a Supervisely é relevante por dois motivos: mostra **
 
 **Legendas das evidências**
 
-- **Figura E5 — `treinamento-supervisely.png`.** Tela de acompanhamento do treinamento: barras de progresso de épocas e lotes e gráficos de treino e validação (as métricas dos gráficos são de detecção de objetos, não de segmentação). *Fonte: captura estática extraída da gravação de tela da equipe durante navegação no produto (uso próprio), 03/09/2026, por volta de 12–18 s.*
-- **Figura E6 — `analise-metricas-supervisely.png`.** Aba de análise: tabela *Class Co-Occurrence* (estatística do dataset) e menu de estatísticas por classe. *Fonte: captura estática extraída da gravação de tela da equipe, 03/09/2026, por volta de 8 s.*
+- **Figura E5 — `treinamento-supervisely.png`.** Tela de acompanhamento do treinamento: barras de progresso de épocas e lotes e gráficos de treino e validação (as métricas dos gráficos são de detecção de objetos, não de segmentação). *Fonte: captura estática extraída da gravação de tela da equipe (`treinamento.webm`) durante navegação no produto (uso próprio), 03/09/2026, por volta de 12–18 s.*
+- **Figura E6 — `analise-metricas-supervisely.png`.** Aba de análise: tabela *Class Co-Occurrence* (estatística do dataset) e menu de estatísticas por classe. *Fonte: captura estática extraída da gravação de tela da equipe (`analise-metricas.mp4`), 03/09/2026, por volta de 8 s.*
 
 #### Experiência do usuário e opiniões
 
@@ -62,7 +62,7 @@ No contexto do nosso TCC, a Supervisely é relevante por dois motivos: mostra **
 | Usuários apontam como pontos negativos a **curva de aprendizado**, a **complexidade decorrente da grande quantidade de funcionalidades**, relatos de lentidão e limitações dos recursos gratuitos | G2 — https://www.g2.com/sellers/supervisely (acesso em 28/09/2026) | **Reforça a hipótese H10, que permanece refinada** (opinião de terceiros não confirma hipótese sobre o nosso público): é o caso mais claro de excesso de opções entre os três produtos. Apoia a escolha de uma interface contida. |
 | A plataforma é considerada adequada a projetos de pesquisa e aplicações profissionais, mas com custo escalonado | G2 | `[H]` Custo de entrada pode pesar para uma equipe estudantil; a forma de distribuição da nossa interface ainda não foi definida. |
 
-> **Ressalva de verificação:** a fonte é pública e identificável, mas a equipe deve registrar a data exata de acesso e, se possível, o recorte analisado. Opinião agregada de terceiros não deve ser tratada como medição do nosso público.
+> **Ressalva de verificação:** a fonte é pública e identificável; as datas de acesso estão nas referências, e a formulação foi confirmada pela equipe na página de origem em 09/11/2026 (ver [`../02_analise_concorrencia.md`](../02_analise_concorrencia.md), seção 7). Opinião agregada de terceiros não deve ser tratada como medição do nosso público.
 
 #### Padrões e tendências percebidos
 
@@ -89,7 +89,7 @@ No contexto do nosso TCC, a Supervisely é relevante por dois motivos: mostra **
 | Integração de todas as etapas em um só ambiente | Ponto positivo com fonte | G2 | Reduz troca de contexto. No nosso recorte, o caminho inteiro (enviar → executar → comparar) deve estar em uma única interface. |
 | Curva de aprendizado e excesso de funcionalidades | Limitação (com fonte) | G2 — ver "Experiência do usuário e opiniões" | Justifica uma interface contida, voltada a **um** fluxo principal. |
 | Lentidão relatada | Limitação (com fonte) | G2 | Reforça a necessidade de feedback de estado e de espera tolerada. |
-| As métricas do modelo só aparecem diluídos em um fluxo maior | Limite de interpretação | Figuras E5 e E6 | A etapa que o nosso usuário precisa (segmentar e interpretar) **não é o centro** dessas plataformas. Isso é um argumento a favor do nosso recorte: tratar a interpretação como objetivo principal. |
+| As métricas do modelo só aparecem diluídas em um fluxo maior | Limite de interpretação | Figuras E5 e E6 | A etapa que o nosso usuário precisa (segmentar e interpretar) **não é o centro** dessas plataformas. Isso é um argumento a favor do nosso recorte: tratar a interpretação como objetivo principal. |
 | Cada evidência tem uma única captura estática | Limite de evidência | Figuras E5 e E6 | As capturas foram extraídas das gravações; o que aparece só no vídeo (outros quadros, a seleção de modelo) não é citado como evidência. |
 
 ## Referências desta análise

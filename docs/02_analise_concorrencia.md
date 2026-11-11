@@ -1,7 +1,7 @@
 # Entrega 2 — Público-alvo e análise de concorrência
 
-**Data:** 16/09/2026 (primeira versão) · 28/09/2026 (revisão após feedback)  
-**Status:** 🟩 concluída  
+**Data:** 16/09/2026 (primeira versão) · 28/09/2026 (revisão após feedback) · 10/11/2026 (aplicação final do parecer)  
+**Status:** 🟦 revisada após feedback  
 **Responsabilidade mínima:** cada integrante analisa pelo menos 1 concorrente/interface representativa; a equipe produz síntese comparativa.
 
 ## Objetivo da atividade
@@ -16,6 +16,7 @@ Compreender soluções do mesmo domínio **e também interfaces familiares ao p�
 - **15/10/2026:** registrada a pendência de capturas estáticas e removidas conclusões que tratavam observações de concorrentes como confirmação sobre o público Baja.
 - **08/11/2026 (Fase 2):** E5 e E6 passam a apontar para as capturas estáticas já extraídas, e a pendência das capturas foi fechada; tempos de vídeo retirados do texto; nota repetida da seção 1 unificada; análises individuais ajustadas (H10 refinada, evidência do indicador de progresso, afirmações sobre instalação e custo marcadas como hipótese, referências internas e grafia); preços conferidos nos sites oficiais e citações confirmadas pela equipe; captura E3 do Roboflow mantida como recorte parcial. Ver `PENDENCIAS.md`, INC-06 e INC-20 a INC-30.
 - **08/11/2026:** RC03 rebaixada de "alta" para "média": a captura E6 mostra uma tabela de estatística do **dataset** (matriz *Class Co-Occurrence*), não métricas de desempenho de modelo. A seleção de modelo da Supervisely deixou de constar como comprovada, porque a captura E5 mostra progresso e gráficos de treino, mas não a lista de modelos. Classes do exemplo da RC01 alinhadas ao TCC (*Trilha* × *Fora da trilha*). Configurar e treinar os modelos entrou no recorte: atualizadas as notas de escopo da RC02 e da RC04. Ver `PENDENCIAS.md`, INC-12, INC-22, INC-23 e INC-61.
+- **10/11/2026:** parecer da Entrega 02 conferido contra o estado atual e aplicado nos pontos que ainda valiam. Nova §3.2 com a leitura analítica de cada evidência (positivo, negativo ou padrão; atividade da Entrega 1; aprendizado). Origem das imagens do CVAT (E1, E2) corrigida: são material de divulgação do site oficial, e não uso próprio. E5 e E6 citam o vídeo de origem. RC01 ganhou origem concreta (ícones de ajuda do CVAT, texto explicativo da E6, legendas técnicas da E5), a lista de termos que o usuário precisa entender e o acesso à explicação por mouse, teclado e toque. RC02 inclui configuração treinada; RC03 delimita o gráfico (curvas da E5) e registra cor + número na E6; RC04 detalha como distinguir os estados e separa execução (analista) de treino (pesquisador de modelos). §1 e §2 alinhadas à revisão da Entrega 1 de 10/11/2026. Análises individuais: ressalvas de verificação atualizadas nas três; origem da E1/E2, modelos do TCC e ícones de ajuda (Tiago); módulo analisado, vídeos de origem e concordância (Mateus); descrição da E3 e grafia (Henrique).
 
 ## Entrada obrigatória da Entrega 1
 
@@ -27,7 +28,7 @@ Compreender soluções do mesmo domínio **e também interfaces familiares ao p�
 
 ## 1. Público-alvo desta análise
 
-O público-alvo do **nosso projeto** é o *analista de segmentação da equipe Baja FEI* — um integrante que conhece o domínio off-road e o projeto Baja, mas que pode não dominar programação (ver [`01_conhecendo_o_problema.md`](01_conhecendo_o_problema.md), seção 7.2).
+O público-alvo do **nosso projeto** é o *analista de segmentação da equipe Baja FEI* — um integrante que conhece o domínio off-road e o projeto Baja, mas que pode não dominar programação (ver [`01_conhecendo_o_problema.md`](01_conhecendo_o_problema.md), seção 7.2). As observações sobre treino (Supervisely, E5) interessam sobretudo ao **pesquisador de modelos**, perfil secundário que define configurações e treina os modelos (Entrega 1, §2.2 e §7.1).
 
 **Esta correção foi registrada na rastreabilidade.** A versão anterior utilizava "Estudante FEI" em parte da documentação, o que foi padronizado para "analista de segmentação da equipe Baja FEI". Ver [`../RASTREABILIDADE.md`](../RASTREABILIDADE.md), seção 5.
 
@@ -51,7 +52,7 @@ Os três produtos analisados têm **públicos próprios, diferentes do nosso**:
 | **C02** | Roboflow | "Test Your Model" (upload de imagem/webcam) e seleção de modelo por assistente conversacional | Ciclo completo: dataset → treinamento → implantação | Indireta. O módulo de teste de modelo é o ponto mais próximo da nossa atividade de entrada de dados, mas diluído em um fluxo maior. |
 | **C03** | Supervisely | Configuração de treinamento e aba de análise do projeto | Ciclo completo de visão computacional | Indireta. A etapa "segmentar e interpretar" não é o centro do produto. |
 
-**Achado de IHC:** a atividade central do nosso usuário — *executar a segmentação e compreender o resultado para decidir qual modelo usar* — **não é o centro de nenhuma dessas plataformas**. Elas concentram-se em anotar, treinar e implantar. Isso justifica o nosso recorte: tratar a interpretação do resultado como objetivo principal, e não como etapa intermediária.
+**Achado de IHC:** a atividade central do nosso usuário — *executar a segmentação e compreender o resultado para decidir qual configuração usar* — **não é o centro de nenhuma dessas plataformas**. Elas concentram-se em anotar, treinar e implantar. Isso justifica o nosso recorte: tratar a interpretação do resultado como objetivo principal, e não como etapa intermediária.
 
 ## 3. Evidências visuais e o que cada uma comprova
 
@@ -59,14 +60,14 @@ Os arquivos estão em `assets/02_concorrencia/`. A coluna "o que **não** compro
 
 | Evidência | Arquivo | O que permite observar | O que **não** comprova | Tipo | Origem |
 |---|---|---|---|---|---|
-| **E1** | [`cvat_selecao_modelo.png`](../assets/02_concorrencia/cvat_selecao_modelo.png) | Seleção de modelo para anotação automática, correspondência de rótulos, controles e indicação de progresso | Eficiência por atalhos; experiência em modo escuro | Print composto (marcado pela equipe) | Uso próprio da equipe, 27/08/2026 |
-| **E2** | [`cvat_metricas.png`](../assets/02_concorrencia/cvat_metricas.png) | Quantidade de objetos e imagens, tempo de trabalho, velocidade de anotação, tabela de eventos e filtros | **Acurácia de modelo; comparação de desempenho entre modelos.** São métricas de produtividade de anotação — objeto diferente do nosso | Print | Uso próprio da equipe, 27/08/2026 |
+| **E1** | [`cvat_selecao_modelo.png`](../assets/02_concorrencia/cvat_selecao_modelo.png) | Seleção de modelo para anotação automática, correspondência de rótulos, controles e indicação de progresso | Eficiência por atalhos; experiência em modo escuro; comportamento em uso real (é material de divulgação, com dados de exemplo) | Imagem de divulgação composta, com as legendas do próprio site | Site oficial do CVAT (https://www.cvat.ai/), material de divulgação, acesso 27/08/2026 |
+| **E2** | [`cvat_metricas.png`](../assets/02_concorrencia/cvat_metricas.png) | Quantidade de objetos e imagens, tempo de trabalho, velocidade de anotação, tabela de eventos e filtros | **Acurácia de modelo; comparação de desempenho entre modelos.** São métricas de produtividade de anotação — objeto diferente do nosso. Também não mostra uso real: os dados são de exemplo | Imagem de divulgação | Site oficial do CVAT (https://www.cvat.ai/), material de divulgação, acesso 27/08/2026 |
 | **E3** | [`roboflow_input_imagens.png`](../assets/02_concorrencia/roboflow_input_imagens.png) | Recorte de "Test Your Model", com opções de arquivo e webcam, no contexto "Off-Road Trail Segmentation" | O fluxo completo e os resultados do processamento — o recorte tem 341 × 192 px e mostra só parte da tela | Print (recorte parcial) | Uso próprio da equipe, 27/08/2026 |
 | **E4** | [`roboflow_selecionar_modelos.png`](../assets/02_concorrencia/roboflow_selecionar_modelos.png) | Resposta conversacional com opções de modelos e justificativas resumidas para trilhas | Que a troca foi executada; que o treinamento terminou; o desempenho obtido; dificuldade de desfazer alterações | Print | Uso próprio da equipe, 27/08/2026 |
-| **E5** | [`treinamento-supervisely.png`](../assets/02_concorrencia/treinamento-supervisely.png) | Acompanhamento do treinamento no Supervisely: **barras de progresso de época e lote** e gráficos de treino/validação | Seleção de modelo (não aparece na captura); recuperação efetiva por checkpoint; histórico de execuções | Print (extraído da gravação de tela, por volta de 12–18 s) | Uso próprio da equipe, 03/09/2026 |
-| **E6** | [`analise-metricas-supervisely.png`](../assets/02_concorrencia/analise-metricas-supervisely.png) | Aba de análise do Supervisely: **tabela** de estatística do dataset (*Class Co-Occurrence*) e menu de estatísticas por classe | Tabela de métricas de desempenho do modelo; que o produto dependa de gráficos — **as tabelas existem e contrariam essa leitura** | Print (extraído da gravação de tela, por volta de 8 s) | Uso próprio da equipe, 03/09/2026 |
+| **E5** | [`treinamento-supervisely.png`](../assets/02_concorrencia/treinamento-supervisely.png) | Acompanhamento do treinamento no Supervisely: **barras de progresso de época e lote** e gráficos de treino/validação | Seleção de modelo (não aparece na captura); recuperação efetiva por checkpoint; histórico de execuções | Print extraído da gravação `treinamento.webm`, por volta de 12–18 s | Uso próprio da equipe, 03/09/2026 |
+| **E6** | [`analise-metricas-supervisely.png`](../assets/02_concorrencia/analise-metricas-supervisely.png) | Aba de análise do Supervisely: **tabela** de estatística do dataset (*Class Co-Occurrence*) e menu de estatísticas por classe | Tabela de métricas de desempenho do modelo; que o produto dependa de gráficos — **as tabelas existem e contrariam essa leitura** | Print extraído da gravação `analise-metricas.mp4`, por volta de 8 s | Uso próprio da equipe, 03/09/2026 |
 
-> **Capturas estáticas:** atendendo à observação do professor de que a entrega pede *capturas estáticas*, as evidências E5 e E6 foram extraídas das gravações de tela de 03/09/2026 e salvas em `assets/02_concorrencia/` (`treinamento-supervisely.png` e `analise-metricas-supervisely.png`). As gravações continuam como material complementar da equipe.
+> **Capturas estáticas:** atendendo à observação do professor de que a entrega pede *capturas estáticas*, as evidências E5 e E6 foram extraídas das gravações de tela de 03/09/2026 (`treinamento.webm` e `analise-metricas.mp4`) e salvas em `assets/02_concorrencia/` (`treinamento-supervisely.png` e `analise-metricas-supervisely.png`). As gravações continuam como material complementar da equipe.
 
 ### 3.1 Padrões de interface observados, por produto
 
@@ -83,6 +84,19 @@ O padrão só é atribuído ao produto **onde foi verificado**. A versão anteri
 | Administração / CRUD de projetos | Sim — fora do recorte analisado | Sim — fora do recorte analisado | Sim — fora do recorte analisado | Gerenciar projetos e datasets | **Não** — fora do nosso recorte |
 
 > **Sobre "verificado" e "não observado":** a ausência de um elemento no recorte analisado **não prova** que ele não existe no produto. Escrevemos "não observado" ou "não verificado" para não repetir o erro de afirmar ausência a partir de uma captura parcial.
+
+### 3.2 Leitura analítica de cada evidência
+
+Para cada evidência: o que é positivo, negativo ou apenas um padrão observado, qual atividade do nosso usuário está envolvida (Entrega 1, §3.2) e o que se transfere ao projeto. A leitura usa feedback, consistência e relevância do conteúdo como critérios, sem antecipar uma avaliação heurística formal.
+
+| Evidência | Positivo, negativo ou padrão | Atividade envolvida (E1 §3.2) | Aprendizado para o projeto |
+|---|---|---|---|
+| **E1** — CVAT, seleção de modelo | **Padrão positivo:** modelo escolhido em lista ("Model: SAM 3"); estado em texto ("Automatic annotation is in progress") junto da barra; ícones "?" ao lado de termos técnicos (*Threshold*, mapeamento de rótulos). **Limite:** imagem de divulgação, não uso real. | A02 (iniciar e acompanhar); A04 (escolher o que comparar) | Escolher a configuração em lista; mostrar o estado em texto, e não só na barra; oferecer ajuda no ponto do termo (RC01, RC04). |
+| **E2** — CVAT, painel de anotação | **Padrão positivo:** cartões com valor numérico e "?" ao lado de cada indicador; gráficos rotulados com o próprio valor ("150 objects"). **Negativo para o nosso uso:** são números de produtividade de anotação e poderiam ser confundidos com qualidade do modelo. | A03 (interpretar) | Rotular gráficos com o valor e explicar cada indicador; nunca apresentar produtividade como qualidade da segmentação. |
+| **E3** — Roboflow, *Test Your Model* | **Padrão positivo:** a entrada de dados é a primeira ação, com duas fontes explícitas (*File* e *Webcam*). **Limite:** recorte parcial; o painel "SAM3" ao lado não mostra conteúdo. | A01 (selecionar e enviar) | Entrada por arquivo como ação primária e visível. A webcam não se aplica ao nosso contexto (análise no laboratório, Entrega 1 §5.1). |
+| **E4** — Roboflow, assistente conversacional | **Padrão com ressalva:** cada opção traz uma descrição curta ("Best Match", número de imagens e classes); o estado aparece em texto com tempo decorrido ("Considering trail options (5s)"). **Negativo:** a escolha depende de descobrir o chat e de conversar com ele. | A04 (comparar e escolher) | Descrever cada configuração em uma linha ao lado do nome; escolher por lista, não por conversa (F01). |
+| **E5** — Supervisely, treino | **Positivo:** progresso por época e por lote, com contagem e tempo restante ("13/100 [01:18<07:01]"); aviso que explica valores NaN/Inf nos gráficos. **Negativo:** notação técnica ("4.84s/it") e legendas sem explicação ("box loss", "cls loss", "dfl loss"); o valor exato de uma época não é legível nas curvas. | A05 (treinar); A02 (acompanhar) | Progresso com contagem e tempo restante em linguagem simples; explicar os termos dos gráficos (RC01); oferecer os valores também em tabela (RC03). |
+| **E6** — Supervisely, *Class Co-Occurrence* | **Positivo:** texto acima da matriz explica o que ela mostra e o que acontece ao clicar em uma célula; cada célula combina cor e número, então a cor não carrega a informação sozinha. **Limite:** é estatística do dataset, não desempenho do modelo. | A03 (interpretar); A04 (comparar) | Explicar cada visualização no próprio lugar (RC01); combinar cor e valor numérico em métricas e legendas (RC03). |
 
 ## 4. Síntese comparativa da equipe
 
@@ -107,11 +121,11 @@ Cada recomendação segue a cadeia **observação → dificuldade/oportunidade �
 
 | Elemento | Conteúdo |
 |---|---|
-| **Observação** | Os três produtos apresentam terminologia técnica. No CVAT, a seleção de modelo traz "correspondência de rótulos" (E1); a Supervisely organiza a análise por projeto e métricas (E6). |
-| **Dificuldade/oportunidade** | O nosso usuário pode não saber o que significa uma classe (no TCC, *Trilha* × *Fora da trilha*) nem o que uma métrica **indica — e o que não indica**. |
+| **Observação** | Os três produtos usam terminologia técnica, e dois deles já oferecem apoio no ponto de uso. No CVAT, termos como *Threshold* e o mapeamento de rótulos (E1) e cada indicador do painel (E2) têm um ícone "?" ao lado; o conteúdo da ajuda não aparece nas imagens. Na Supervisely, um texto acima da matriz explica o que ela mostra (E6), e um aviso explica valores NaN/Inf nos gráficos de treino (E5). Na mesma E5, as legendas "box loss", "cls loss" e "dfl loss" e a notação "s/it" aparecem sem explicação. |
+| **Dificuldade/oportunidade** | O nosso usuário pode não saber o que significa uma classe (no TCC, *Trilha* × *Fora da trilha*) nem o que uma métrica **indica — e o que não indica**. Os termos que ele precisará compreender são: as duas classes; IoU e acurácia, calculadas só no conjunto de teste anotado; e tempo de inferência. Para o pesquisador de modelos, também os termos do treino (época, early stopping, loss). Nenhum desses números indica, sozinho, se um trajeto é seguro (Entrega 1, §4.3). |
 | **Objetivo do usuário** | Compreender o que a segmentação está mostrando e avaliar o desempenho sem depender de conhecimento prévio em IA. |
-| **Recomendação** | Exibir explicação contextual dos termos no ponto em que aparecem, em vez de apenas "tooltip". **Proposta sujeita a investigação** — a Entrega 7 deve verificar quais termos realmente geram dúvida antes de adoptá-la. |
-| **Sustentação** | **Média.** A observação é verificável, mas a dificuldade **específica do nosso usuário** ainda não foi demonstrada. |
+| **Recomendação** | Exibir explicação contextual dos termos no ponto em que aparecem, em vez de apenas "tooltip". A explicação deve abrir com o mouse, com o foco do teclado e com clique ou toque, e não só ao passar o mouse. **Proposta sujeita a investigação** — a Entrega 7 deve verificar quais termos realmente geram dúvida antes de adotá-la. |
+| **Sustentação** | **Média.** A observação é verificável e o apoio contextual existe em dois produtos (E1, E2, E6), mas a dificuldade **específica do nosso usuário** ainda não foi demonstrada. |
 | **Hipótese relacionada** | H04, H12 |
 
 ### RC02 — Histórico e recuperação de análises anteriores *(rebaixada a pendente)*
@@ -120,7 +134,7 @@ Cada recomendação segue a cadeia **observação → dificuldade/oportunidade �
 |---|---|
 | **Observação** | O Roboflow oferece **versionamento de datasets**, permitindo reverter a um conjunto de anotações anterior (fonte: G2). A Supervisely **não** foi verificada quanto a checkpoints ou histórico nos trechos inspecionados. |
 | **Correção de escopo** | A versão anterior desta recomendação propunha "versionamento ou histórico de **modelos**". Nosso recorte é **executar modelos já disponíveis** — não treinamos modelos nem produzimos versões. Portanto, **versionamento de modelos está fora do escopo**. |
-| **Dúvida que permanece** | O que precisaria ser recuperado: uma **segmentação passada**, um **modelo**, ou o **resultado de uma execução**? Cada opção implica funcionalidades diferentes. |
+| **Dúvida que permanece** | O que precisaria ser recuperado: uma **segmentação passada**, uma **configuração treinada**, ou o **resultado de uma execução**? Cada opção implica funcionalidades diferentes. |
 | **Atualização de escopo (08/11/2026)** | Configurar e treinar os modelos entrou no recorte (Entrega 1, §7.1). O argumento "não treinamos modelos" deixa de valer, e guardar mais de uma configuração treinada passa a ser uma pergunta concreta para a H08. |
 | **Estado** | **Não é uma recomendação confirmada.** Fica como **pendência vinculada** à hipótese **H08**, a ser investigada na Entrega 7. Só vira recomendação se a equipe demonstrar a necessidade. |
 | **Hipótese relacionada** | H08 |
@@ -130,10 +144,10 @@ Cada recomendação segue a cadeia **observação → dificuldade/oportunidade �
 | Elemento | Conteúdo |
 |---|---|
 | **Correção** | A versão anterior derivava RC03 da crítica "dependência de gráficos" da Supervisely. Mas **E6 mostra que a Supervisely já oferece tabelas**. A crítica original era injusta com o produto. |
-| **Observação corrigida** | Tabelas e filtros coexistem com gráficos na aba de análise da Supervisely (E6) e no Roboflow (relatos de usuário sobre tabelas e gráficos de avaliação). **Limite da evidência:** a tabela visível na E6 é a matriz *Class Co-Occurrence*, uma estatística do dataset (quantas vezes duas classes aparecem juntas); não é uma tabela de métricas de desempenho do modelo. |
+| **Observação corrigida** | Tabelas e filtros coexistem com gráficos na aba de análise da Supervisely (E6) e no Roboflow (relatos de usuário sobre tabelas e gráficos de avaliação). **Limite da evidência:** a tabela visível na E6 é a matriz *Class Co-Occurrence*, uma estatística do dataset (quantas vezes duas classes aparecem juntas); não é uma tabela de métricas de desempenho do modelo. **Qual gráfico dificulta qual leitura:** nas curvas de treino e validação da E5, a tendência é visível, mas o valor exato de uma época não é legível na captura; há controles de zoom, e não verificamos se o valor aparece ao passar o mouse `[?]`. Na E6, cada célula traz cor e número. |
 | **Oportunidade** | O padrão **já existe nos produtos analisados** — portanto é uma **solução positiva observada**, e não apenas uma correção de limitação. |
-| **Objetivo do usuário** | Consultar e comparar valores exatos de métricas, especialmente quando o gráfico não permite ler um número. |
-| **Recomendação** | Oferecer a métrica **em tabela e em gráfico**, deixando o usuário alternar. **Ressalva:** tabela não é garantia automática de acessibilidade — exige hierarquia visual, rótulos e contraste adequados. |
+| **Objetivo do usuário** | Consultar e comparar valores exatos de métricas, especialmente quando o gráfico não permite ler um número (como nas curvas da E5). |
+| **Recomendação** | Oferecer a métrica **em tabela e em gráfico**, deixando o usuário alternar. **Ressalva:** tabela não é garantia automática de acessibilidade — exige hierarquia visual, rótulos e contraste adequados, e a informação não deve depender só de cor (a E6 mostra cor e número juntos). |
 | **Sustentação** | **Média** *(rebaixada de alta em 08/11/2026)* — a E6 comprova que o produto organiza estatísticas em tabela ao lado de gráficos; não comprova uma tabela de métricas de modelo. O apoio a métricas em tabela vem de relatos de usuário do Roboflow (G2), ainda a confirmar. |
 | **Hipótese relacionada** | H04, H12 |
 
@@ -142,10 +156,11 @@ Cada recomendação segue a cadeia **observação → dificuldade/oportunidade �
 | Elemento | Conteúdo |
 |---|---|
 | **Correção de origem** | A versão anterior atribuía RC04 ao CVAT e ao Roboflow. O **apoio mais direto é da Supervisely** (E5, barras de época e lote); o CVAT tem indicador na seleção de modelo (E1). O recorte do Roboflow (E4) mostra **estado textual em conversa**, e **não** comprova a barra proposta. |
-| **Observação** | Barras de progresso por etapa e gráficos de treino/validação na Supervisely (E5); indicador de progresso na seleção de modelo do CVAT (E1). |
+| **Observação** | Barras de progresso por etapa e gráficos de treino/validação na Supervisely (E5); indicador de progresso na seleção de modelo do CVAT (E1); estado em texto com tempo decorrido no assistente do Roboflow (E4). |
 | **Dificuldade/oportunidade** | O processamento de segmentação pode demorar. Sem feedback, o usuário não sabe se está executando, terminou ou falhou. |
 | **Objetivo do usuário** | Saber em que estado está a execução e evitar repetir ou abandonar uma segmentação desnecessariamente. |
-| **Adaptação ao recorte** | Os textos devem descrever a **nossa** atividade: enviar imagem → processando → resultado pronto → falha. *Atualização (08/11/2026):* o treino entrou no recorte, então o progresso por época e lote observado na E5 também se aplica diretamente à tarefa de treinar uma configuração. |
+| **Adaptação ao recorte** | Os textos devem descrever a **nossa** atividade. Na execução, feita pelo analista: enviar imagem → processando → resultado pronto → falha. No treino, feito pelo pesquisador de modelos (Entrega 1, §7.1 e A05): treinando (época x de n) → concluído → falha. *Atualização (08/11/2026):* o treino entrou no recorte, então o progresso por época e lote observado na E5 se aplica à tarefa de treinar uma configuração. |
+| **Como distinguir os estados** | Cada estado tem rótulo em texto e ícone próprios, sem depender só de cor. O progresso mostra a contagem (como "13/100" na E5) e o tempo restante em linguagem simples, e não em notação técnica como "4.84s/it". A falha diz o que falhou e o que fazer em seguida. |
 | **Sustentação** | **Alta** — apoiada em evidência visual direta (E5, E1). |
 | **Hipótese relacionada** | H06, H11 |
 
@@ -194,6 +209,7 @@ Cada recomendação segue a cadeia **observação → dificuldade/oportunidade �
 - [X] Foram analisados concorrentes e/ou interfaces representativas ao público.
 - [X] Cada padrão foi atribuído **apenas** ao produto em que foi verificado, com marcação "não observado" quando o recorte não permite concluir.
 - [X] As evidências estão vinculadas a observações específicas, com indicação do que **não** comprovaram e sua origem.
+- [X] Cada evidência tem leitura analítica: positivo, negativo ou padrão, atividade envolvida e aprendizado (§3.2).
 - [X] Opiniões de UX têm fonte identificável.
 - [X] As recomendações seguem a cadeia observação → dificuldade → objetivo do usuário → recomendação.
 - [X] RC02 foi rebaixada a pendência por conflito com o escopo; RC03 foi corrigida pela evidência; RC04 teve a origem corrigida e o texto adaptado.

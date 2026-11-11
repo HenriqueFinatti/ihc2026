@@ -38,7 +38,7 @@ No contexto do nosso TCC, o Roboflow é relevante porque o nosso usuário **prec
 
 | Funcionalidade | Como é realizada | Evidência | O que a evidência sustenta (e o que não sustenta) | Observação de IHC |
 |---|---|---|---|---|
-| Entrada de imagens para teste de modelo | Botão de upload posicionado no canto superior esquerdo, ao lado de uma prévia do resultado | [`roboflow_input_imagens.png`](../../assets/02_concorrencia/roboflow_input_imagens.png) | Sustenta: existe um **ponto de entrada de imagens com ícone de upload** e a possibilidade de usar webcam, em um contexto de projeto de trilha off-road. **Não** sustenta: o recorte tem 341 × 192 px e mostra apenas parte da tela — **não permite avaliar o fluxo completo nem o resultado do processamento**. | O upload como **ação primária e visível** é um bom padrão para o nosso usuário, que não tem familiaridade com linha de comando. |
+| Entrada de imagens para teste de modelo | Opção *File*, com ícone de upload, no topo da lista de fontes (abaixo dela, *Webcam*), ao lado de um painel identificado como "SAM3" cujo conteúdo o recorte não mostra | [`roboflow_input_imagens.png`](../../assets/02_concorrencia/roboflow_input_imagens.png) | Sustenta: existe um **ponto de entrada de imagens com ícone de upload** e a possibilidade de usar webcam, em um contexto de projeto de trilha off-road. **Não** sustenta: o recorte tem 341 × 192 px e mostra apenas parte da tela — **não permite avaliar o fluxo completo nem o resultado do processamento**. | O upload como **ação primária e visível** é um bom padrão para o nosso usuário, que não tem familiaridade com linha de comando. |
 | Seleção de modelo por assistente conversacional | Resposta em formato de conversa, com opções de modelos e justificativas resumidas para trilhas | [`roboflow_selecionar_modelos.png`](../../assets/02_concorrencia/roboflow_selecionar_modelos.png) | Sustenta: o produto **apresenta sugestões de modelo em formato conversacional**, com justificativas. **Não** sustenta: a troca do modelo foi executada, o treinamento foi concluído, o desempenho foi obtido, nem que é difícil desfazer alterações. | Oferece acesso rápido à escolha de modelo, mas depende de o usuário **descobrir** que existe um chat. Para o nosso perfil, uma lista explícita é mais previsível. |
 
 **Legendas das imagens**
@@ -59,12 +59,12 @@ As afirmações abaixo são **opiniões de terceiros**, com fonte registrada.
 | Abstrações pesadas "podem esconder os fundamentos" para quem está aprendendo | AppCritica | Alerta: uma interface que esconde o modelo pode tanto ajudar (usuário técnico) quanto atrapalhar (quem precisa entender o resultado). Relevante para a escolha de nível de transparência. |
 | Política de dados públicos por padrão no plano gratuito e cobrança baseada em créditos são queixas recorrentes | Oryndex — https://oryndex.co/tools/roboflow | Questão de **modelo de negócio**, não de tela. A página de preços consultada em 08/11/2026 informa workspaces privados em todos os planos, então a queixa sobre dados públicos pode se referir a uma política anterior. `[H]` Custo de entrada e privacidade dos dados podem pesar para uma equipe estudantil; a forma de distribuição da nossa interface ainda não foi definida. |
 
-> **Ressalva de verificação:** assim como na análise do CVAT, as citações vêm do G2 e de fontes secundárias. A equipe deve confirmar a formulação exata na página primária antes da entrega.
+> **Ressalva de verificação:** as citações vêm do G2 e de fontes secundárias. A formulação foi confirmada pela equipe nas páginas de origem em 09/11/2026 (ver [`../02_analise_concorrencia.md`](../02_analise_concorrencia.md), seção 7).
 
 #### Padrões e tendências percebidos
 
 - **Plataforma integrada de ponta a ponta:** dataset → anotação → treinamento → avaliação → implantação, em um só ambiente.
-- **Baixo código como proposta central:** a messaging é "não construa a infraestrutura do zero".
+- **Baixo código como proposta central:** a mensagem é "não construa a infraestrutura do zero".
 - **Versionamento de datasets** como recurso de primeira classe, permitindo reverter anotações.
 - **Monetização por créditos de treinamento**, com salto de preço entre o plano gratuito e os pagos — o que torna o custo um ponto sensível para equipes pequenas.
 - Para o nosso perfil, o padrão relevante é a **previsibilidade**: o usuário deve ver, sem esforço, o que será enviado, o que está sendo processado e o que será devolvido.
@@ -72,7 +72,7 @@ As afirmações abaixo são **opiniões de terceiros**, com fonte registrada.
 #### Modelo de negócio
 
 - **Freemium com cobrança por créditos.** Free Tier gratuito com 10 créditos por mês, Core a US$ 39 por mês (20 créditos) e Enterprise sob consulta; treino e inferência hospedada consomem créditos. A página oficial informa, em 08/11/2026, que workspaces e modelos são privados em todos os planos (https://roboflow.com/pricing).
-- Receptor típico: equipes de desenvolvedores e pequenas empresas que precisam chegar rápido a um modelo implantado.
+- Cliente típico: equipes de desenvolvedores e pequenas empresas que precisam chegar rápido a um modelo implantado.
 - **Implicação para o nosso projeto:** `[H]` cobrança por créditos de treino é uma barreira para equipes pequenas. Como o nosso recorte inclui configurar e treinar modelos, vale investigar na Entrega 7 se custo e privacidade dos dados pesam para a equipe Baja.
 
 #### Pontos positivos, limitações e lições
