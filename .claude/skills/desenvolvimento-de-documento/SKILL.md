@@ -1,5 +1,5 @@
 ---
-name: projeto-ihc-equipe17
+name: desenvolvimento-de-documento
 description: Base de trabalho do projeto de IHC da Equipe 17 (FEI 2026/2, segmentação semântica off-road para a Baja FEI). Use em qualquer pedido sobre as entregas, IDs, pendências ou rastreabilidade do repositório ihc2026.
 ---
 
