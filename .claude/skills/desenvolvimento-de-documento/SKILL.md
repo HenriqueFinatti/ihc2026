@@ -29,7 +29,7 @@ Leia também:
 - o arquivo da entrega pedida (`docs/NN_*.md`), inteiro, incluindo o checklist do fim;
 - as entregas anteriores das quais ela depende (por exemplo, a E9 parte das personas da E3, das tarefas da E5 e das metas da E8);
 - o parecer em `feedbacks/` da entrega, se existir;
-- `.claude/skills/projeto-ihc-equipe17/CONTEXTO.md`, se existir (estado atual das decisões por entrega).
+- `.claude/skills/desenvolvimento-de-documento/CONTEXTO.md`, se existir (estado atual das decisões por entrega).
 
 Antes de editar, confira se o arquivo tem alterações não commitadas ou se mudou desde a última leitura. Se mudou, parta da versão atual e preserve as edições da pessoa.
 
@@ -123,7 +123,7 @@ Toda parte concluída revisa estes arquivos e lista na mensagem de validação o
   - Atualize o status da entrega na tabela "Entregas" sempre que mudar no topo do arquivo.
   - Atualize a tabela "Relação entre TCC e projeto de IHC" se o usuário principal ou o recorte mudar.
 - **Entrega anterior afetada:** não altere sem pedido. Abra uma pendência e avise a pessoa.
-- **`.claude/skills/projeto-ihc-equipe17/CONTEXTO.md`, se existir:** atualize o estado da entrega e as decisões novas.
+- **`.claude/skills/desenvolvimento-de-documento/CONTEXTO.md`, se existir:** atualize o estado da entrega e as decisões novas.
 
 ## 7. O que a IA não faz
 
