@@ -424,7 +424,178 @@ A coluna "Dado da A01" liga cada pergunta à tabela "Que dados coletar" da Parte
 6. **Consequência para o design:** cada veredito é ligado à decisão que ele afeta (persona P03, tarefas T04 e T05, decisões de design 1 a 5 da P03, RQ08) e registrado na seção 5 do `RASTREABILIDADE.md`.
 7. **Respostas dos informantes secundários:** usadas para triangular, ou seja, confirmar ou contradizer o que disse o perfil principal sobre o mesmo processo; não sustentam sozinhas uma hipótese.
 
-> Os instrumentos I02 (Tiago, questionário) e I03 (Mateus, investigação contextual) serão acrescentados a seguir.
+### Instrumento I02 — Questionário
+
+**Autor(a):** Tiago Fagundes dos Santos — 22.123.017-0  
+**Técnica:** questionário on-line autoaplicado (Google Forms), com perguntas fechadas (múltipla escolha, caixas de seleção, grades com escala) e algumas abertas opcionais  
+**Objetivo:** caracterizar quem analisa os resultados da segmentação na equipe Baja FEI (conhecimento de programação separado do conhecimento para interpretar os resultados, ferramentas conhecidas, familiaridade com métricas e termos, frequência, volume e contexto da análise) e verificar se quem acompanha os testes se beneficia dos resultados, para sustentar, refutar ou refinar H02, H05, H09, H10, H11 e H03 (Parte A, A02)  
+**Público:** integrantes que analisam resultados de segmentação ou outros dados dos testes (perfil P01, 3 a 6 pessoas `[H]`) e integrantes que acompanham os testes, pilotam ou descarregam as imagens (seção 8, H03)  
+**Duração prevista:** cerca de 10 minutos
+
+#### Procedimento padronizado de aplicação
+
+1. **Preparação**
+   - O formulário está no Google Forms, com as mesmas perguntas e desvios da cópia textual abaixo. Configurações de privacidade: não coleta e-mail, não exige login, não permite editar a resposta depois de enviada e não mostra as respostas dos outros a quem responde. Antes da aplicação, conferir os caminhos de resposta no modo de visualização.
+   - Aplicar o piloto com um autor deste projeto, cronometrando (meta: até 12 minutos), ajustar perguntas confusas e apagar a resposta do piloto.
+   - Confirmar com a liderança da equipe quem analisa resultados e quem acompanha os testes (hipóteses `[H]` da A02) e excluir da lista quem já participa da I01 ou da I03 como público principal.
+2. **Apresentação e consentimento**
+   - Enviar o link individualmente, por mensagem da equipe do projeto (nunca pela coordenação), com o texto de convite abaixo.
+   - A primeira seção do formulário é o termo de consentimento; quem não concordar ou tiver menos de 18 anos é levado direto ao fim, sem responder nada.
+3. **Aplicação**
+   - O formulário fica aberto por 7 dias. Um único lembrete é enviado no 4º dia, para todos, sem saber quem já respondeu.
+   - Ninguém acompanha o preenchimento; dúvidas são respondidas pelos responsáveis, sem sugerir respostas.
+4. **Encerramento**
+   - No fim do prazo, desativar "Aceitando respostas".
+   - A mensagem de confirmação agradece e informa a devolutiva.
+5. **Armazenamento e anonimização**
+   - O formulário não coleta nome nem e-mail.
+   - Exportar as respostas para uma planilha na pasta privada da equipe, fora do repositório, e excluir as respostas do Google Forms.
+   - Numerar as respostas (A1, A2… para quem analisa; T1, T2… para quem acompanha os testes) e retirar de respostas abertas qualquer nome ou detalhe que identifique alguém.
+   - Apagar a planilha ao fim do semestre letivo.
+
+#### Instrumento
+
+##### Texto do convite
+
+> Olá! Somos Henrique, Mateus e Tiago, da disciplina de Interação Humano-Computador da FEI. Estamos estudando como a equipe Baja analisa os resultados da segmentação das imagens dos testes, para projetar uma interface que apoie essa atividade. Você poderia responder a um questionário de cerca de 10 minutos? Ele não pede nome nem e-mail, e a participação é voluntária: https://forms.gle/pAMyXCdebYo9aHmq9. Obrigado!
+
+##### Questionário (cópia textual)
+
+As perguntas abaixo são as mesmas do formulário on-line, na mesma ordem. A coluna "Dado da A02" liga cada pergunta à tabela "Que dados coletar" da Parte A.
+
+**Título no formulário:** Análise de resultados de segmentação na equipe Baja FEI  
+**Link do formulário:** [https://forms.gle/pAMyXCdebYo9aHmq9](https://forms.gle/pAMyXCdebYo9aHmq9)
+
+**Descrição (topo do formulário):** Questionário da disciplina de Interação Humano-Computador (FEI). Queremos entender como a equipe Baja FEI analisa os resultados da segmentação de imagens dos testes, para projetar uma interface que apoie essa atividade. Leva cerca de 10 minutos. Não pedimos nome nem e-mail.
+
+##### Seção 1 — Termo de consentimento
+
+> **Objetivo.** Entender como a equipe analisa os resultados da segmentação de imagens dos testes. **Estamos estudando o processo, não a sua capacidade.** Não há respostas certas ou erradas, e "não sei" é uma resposta válida.
+>
+> **O que será solicitado.** Responder a perguntas de múltipla escolha e algumas abertas, por cerca de 10 minutos.
+>
+> **Privacidade.** O formulário não coleta nome nem e-mail. Nas análises, as respostas recebem um código, e combinações de dados que possam identificar alguém (como curso, tempo de equipe e atividade juntos) não são divulgadas. As respostas ficam em uma pasta privada dos três responsáveis, fora do repositório do projeto, e são apagadas ao fim do semestre letivo.
+>
+> **Voluntariedade.** A participação é voluntária. As perguntas abertas são opcionais, e você pode fechar o formulário a qualquer momento sem enviar. A coordenação da equipe não saberá quem respondeu.
+>
+> **Responsáveis.** Henrique Finatti Silveira Belo Trebbi, Mateus Marana Assuena e Tiago Fagundes dos Santos.
+
+| # | Pergunta | Tipo | Opções | Obrigatória | Dado da A02 |
+|---|---|---|---|:-:|---|
+| 1.1 | Você tem 18 anos ou mais e concorda em participar nos termos acima? | Múltipla escolha | Sim, tenho 18 anos ou mais e concordo em participar; Não | sim | Consentimento e critério de inclusão (A02) |
+
+**Desvio na 1.1:** "Sim, tenho 18 anos ou mais e concordo em participar" → Seção 2; "Não" → Enviar formulário.
+
+##### Seção 2 — Sua participação na equipe
+
+| # | Pergunta | Tipo | Opções | Obrigatória | Dado da A02 |
+|---|---|---|---|:-:|---|
+| 2.1 | Há quanto tempo você está na equipe Baja FEI? | Múltipla escolha | Menos de 6 meses; De 6 meses a 1 ano; De 1 a 2 anos; Mais de 2 anos | sim | Usuário: tempo na equipe (H02) |
+| 2.2 | Qual é o seu curso? | Múltipla escolha | Ciência da Computação; Engenharia Mecânica; Engenharia Elétrica; Engenharia de Controle e Automação; Outro | sim | Usuário: curso (H02) |
+| 2.3 | No último semestre, qual destas opções descreve melhor a sua participação nos testes do veículo? | Múltipla escolha | Analiso ou executo a segmentação de imagens dos testes; Analiso outros dados dos testes (telemetria, vídeos, fotos), mas não a segmentação; Acompanho os testes, piloto ou descarrego as imagens das câmeras, sem analisar resultados; Nenhuma dessas | sim | Papel na equipe; direciona para o perfil principal (P01) ou para quem acompanha os testes (H03) |
+
+**Desvio na 2.3:** "Analiso ou executo a segmentação de imagens dos testes" → Seção 3; "Analiso outros dados dos testes (telemetria, vídeos, fotos), mas não a segmentação" → Seção 3; "Acompanho os testes, piloto ou descarrego as imagens das câmeras, sem analisar resultados" → Seção 8; "Nenhuma dessas" → Seção 9.
+
+##### Seção 3 — Programação e execução
+
+| # | Pergunta | Tipo | Opções | Obrigatória | Dado da A02 |
+|---|---|---|---|:-:|---|
+| 3.1 | Com que frequência você programa, em qualquer linguagem? | Múltipla escolha | Nunca; Raramente; Algumas vezes por mês; Toda semana | sim | Programação (H02) |
+| 3.2 | Quem executa a segmentação dos resultados que você analisa? | Múltipla escolha | Eu mesmo(a), sem ajuda; Eu mesmo(a), mas às vezes preciso de ajuda; Outra pessoa executa e me envia os resultados; Não analiso segmentação | sim | Execução atual (H02, H05) |
+| 3.3 | Indique o quanto você concorda com cada frase. | Grade de múltipla escolha | Linhas: Consigo resolver sozinho(a) um erro que interrompe a execução; Entendo o que os scripts de segmentação do projeto fazem; A execução da segmentação costuma funcionar sem problemas. Colunas: Discordo totalmente; Discordo; Neutro; Concordo; Concordo totalmente; Não se aplica | não | Execução atual e programação × análise (H02, H05) |
+| 3.4 | Conte a última vez em que a execução da segmentação falhou ou deu um resultado inesperado. O que aconteceu e o que você fez? | Parágrafo | — | não | Erros mais comuns e como são contornados (H05; C01, Q2 e Q8) |
+
+**Depois desta seção:** Seção 4.
+
+##### Seção 4 — Ferramentas
+
+| # | Pergunta | Tipo | Opções | Obrigatória | Dado da A02 |
+|---|---|---|---|:-:|---|
+| 4.1 | Quais destas ferramentas você usa pelo menos uma vez por mês? | Caixas de seleção | Editor de código (por exemplo, VS Code); Terminal ou linha de comando; GitHub ou GitLab; Jupyter Notebook ou Google Colab; Planilhas (Excel, Google Planilhas); Ferramentas de telemetria do veículo; Nenhuma dessas; Outro | não | Ferramentas usadas (H09) |
+| 4.2 | Você conhece estas ferramentas de visão computacional? | Grade de múltipla escolha | Linhas: CVAT; Roboflow; Supervisely. Colunas: Não conheço; Conheço, mas nunca usei; Já usei; Uso com frequência | não | Ferramentas de visão computacional (H10) |
+| 4.3 | Se já usou alguma delas, o que achou mais fácil e o que achou mais difícil? | Parágrafo | — | não | Complexidade das ferramentas (H10) |
+| 4.4 | Nas ferramentas que você usa para analisar dados ou imagens, quais destes recursos você costuma usar? | Caixas de seleção | Ver duas imagens ou resultados lado a lado; Barra ou indicador de progresso; Arrastar arquivos para a janela; Atalhos de teclado; Filtrar ou ordenar tabelas; Exportar imagens ou relatórios; Nenhum desses; Outro | não | Padrões familiares (H11); atalhos (decisão 5 da P01) |
+
+**Depois desta seção:** Seção 5.
+
+##### Seção 5 — Como você analisa os resultados
+
+| # | Pergunta | Tipo | Opções | Obrigatória | Dado da A02 |
+|---|---|---|---|:-:|---|
+| 5.1 | Com que frequência você analisa resultados de segmentação? | Múltipla escolha | Depois de cada teste de campo; Algumas vezes por mês; Raramente; Não analiso segmentação | sim | Frequência (C01, Q9) |
+| 5.2 | Em uma análise típica, quantas imagens ou trechos de vídeo você analisa? | Múltipla escolha | Até 10; De 11 a 50; De 51 a 200; Mais de 200; Não sei | não | Volume por sessão (C01, Q9) |
+| 5.3 | Onde você costuma fazer essa análise? | Caixas de seleção | Laboratório da FEI; À beira da pista, durante os testes; Em casa; Outro | não | Ambiente da P01 `[?]` |
+| 5.4 | Em que equipamento? | Caixas de seleção | Computador do laboratório; Notebook próprio; Celular ou tablet; Outro | não | Ambiente da P01 `[?]` |
+| 5.5 | Durante a análise, com que frequência acontece cada situação? | Grade de múltipla escolha | Linhas: Ser interrompido(a); Ficar sem conexão com a internet. Colunas: Nunca; Às vezes; Com frequência; Não sei | não | Interrupções e conectividade (decisão 5 da P01) |
+| 5.6 | Como você decide se uma máscara de segmentação está correta? | Parágrafo | — | não | Critério de correção (H06; C01, Q7) |
+| 5.7 | Quando um resultado parece errado, com que frequência você consegue dizer se o problema é do modelo ou da imagem (sombra, poeira, desfoque)? | Múltipla escolha | Quase sempre; Às vezes; Raramente; Nunca; Não sei | não | Falha do modelo × falha da imagem (H06) |
+| 5.8 | O que você costuma fazer quando não tem certeza se o resultado está certo? | Caixas de seleção | Peço a opinião de um colega; Executo de novo com outra configuração; Consulto as métricas; Marco a imagem para revisar depois; Deixo a imagem de lado; Outro | não | O que faz na dúvida (C01, Q7) |
+
+**Depois desta seção:** Seção 6.
+
+##### Seção 6 — Métricas e termos
+
+*Não há problema em responder "não sei": queremos saber quais termos precisam de explicação, não testar conhecimento.*
+
+| # | Pergunta | Tipo | Opções | Obrigatória | Dado da A02 |
+|---|---|---|---|:-:|---|
+| 6.1 | Quanto você conhece cada termo? | Grade de múltipla escolha | Linhas: IoU (Intersection over Union); Acurácia; Tempo de inferência; Matriz de confusão; Conjunto de teste anotado; Época (de treino). Colunas: Não conheço; Conheço o nome, mas não sei explicar; Sei explicar; Uso para tomar decisões | não | Métricas e termos (H04, RC01) |
+| 6.2 | Na sua opinião, IoU e acurácia podem ser calculadas para qualquer imagem nova capturada em um teste? | Múltipla escolha | Sim; Não, só para imagens que têm uma marcação de referência feita à mão; Não sei | não | Métricas dependem de anotação (H04; INC-52) |
+| 6.3 | Que palavras nos resultados de segmentação ou nas conversas da equipe sobre eles já causaram dúvida para você? | Parágrafo | — | não | Termos que geram dúvida (RC01; legenda, decisão 2 da P01) |
+
+**Depois desta seção:** Seção 7.
+
+##### Seção 7 — Comparação, organização e entrega
+
+| # | Pergunta | Tipo | Opções | Obrigatória | Dado da A02 |
+|---|---|---|---|:-:|---|
+| 7.1 | Quando você compara os resultados de duas configurações, como faz hoje? | Caixas de seleção | Abro as imagens em janelas lado a lado; Comparo números em uma planilha; Alterno entre arquivos; Peço para outra pessoa comparar; Não costumo comparar; Outro | não | Como compara hoje (T03; C01, Q5) |
+| 7.2 | Como é escolhida a configuração que você compara com a que está em uso? | Múltipla escolha | É a mais recente treinada; Alguém da equipe indica; É a que teve as melhores métricas antes; Eu não escolho; já recebo definida; Não costumo comparar; Outro | não | Como escolhe a configuração (C01, Q5) |
+| 7.3 | Com que frequência você precisa voltar a resultados de análises anteriores? | Múltipla escolha | Nunca; Raramente; Algumas vezes por mês; Toda semana | não | Necessidade de voltar a análises (H08) |
+| 7.4 | Quando precisa encontrar um resultado antigo, como você faz? | Parágrafo | — | não | Organização dos arquivos (H08; C01, Q3) |
+| 7.5 | Para quem você entrega o resultado da análise? | Caixas de seleção | Grupo de mensagens da equipe; Gestão ou liderança da equipe; Coordenação; Na reunião da equipe; Não entrego; uso só para mim; Outro | não | Destinatários (C01, Q4) |
+| 7.6 | Em que formato? | Caixas de seleção | Mensagem de texto; Prints ou imagens; Planilha; Slides; Relatório; Outro | não | Formato da entrega (exportação, decisão 4 da P01) |
+| 7.7 | Para aprender uma ferramenta nova, você prefere: | Múltipla escolha | Explorar sozinho(a), fazendo; Seguir um tutorial ou guia; Que alguém me mostre; Outro | não | Motivações: forma de aprender (ajuda contextual) |
+| 7.8 | Para você, o que é uma análise de segmentação bem feita? | Parágrafo | — | não | Motivações e valores |
+
+**Depois desta seção:** Seção 9.
+
+##### Seção 8 — Para quem acompanha os testes
+
+| # | Pergunta | Tipo | Opções | Obrigatória | Dado da A02 |
+|---|---|---|---|:-:|---|
+| 8.1 | Você usa ou consulta os resultados da segmentação no seu trabalho na equipe? | Múltipla escolha | Sim, com frequência; Às vezes; Não | não | Interação direta com os resultados (H03) |
+| 8.2 | O resultado da análise de segmentação muda alguma coisa no que você faz nos testes? | Múltipla escolha | Sim; Não; Não sei | não | Benefício indireto (H03) |
+| 8.3 | Se respondeu "Sim" na pergunta anterior, o que muda? | Parágrafo | — | não | Benefício indireto (H03) |
+| 8.4 | Em que condições as imagens dos testes costumam ser capturadas? | Caixas de seleção | Sol forte; Sombra de vegetação; Poeira; Chuva ou lama; Pouca luz; Não sei; Outro | não | Condições de captura e falhas da imagem (C01, Q6; H06) |
+| 8.5 | Quanto tempo depois do teste as imagens chegam a quem analisa? | Múltipla escolha | No mesmo dia; No dia seguinte; Na mesma semana; Mais de uma semana depois; Não sei | não | Origem e prazo das imagens (C01, Q6) |
+
+**Depois desta seção:** Seção 9.
+
+##### Seção 9 — Para terminar
+
+| # | Pergunta | Tipo | Opções | Obrigatória | Dado da A02 |
+|---|---|---|---|:-:|---|
+| 9.1 | Há algo sobre a análise dos resultados de segmentação que não perguntamos e que você considera importante? | Parágrafo | — | não | Lacunas não previstas |
+
+**Depois desta seção:** Enviar formulário.
+
+**Mensagem de confirmação:** Obrigado por participar! Suas respostas foram registradas sem nome nem e-mail. Quando a análise estiver pronta, a síntese anonimizada será compartilhada com a equipe.
+
+**O que as perguntas evitam de propósito:** nenhuma pergunta pergunta se a pessoa quer um painel, um histórico ou um relatório. A pergunta 4.4 lista recursos que a pessoa já usa em outras ferramentas, e as perguntas 7.3 e 7.4 investigam se ela volta a análises antigas, sem propor a solução. As opções fechadas sempre incluem "Outro", "Não sei" ou "Nenhum desses".
+
+#### Como os dados serão analisados
+
+1. **Separação dos grupos:** as respostas de quem analisa (seções 3 a 7) e de quem acompanha os testes (seção 8) são analisadas separadamente.
+2. **Perguntas fechadas:** contagem de respostas por opção. Com 3 a 6 pessoas, os resultados são relatados como contagens ("4 de 5"), sem porcentagens nem médias de escala.
+3. **Programação × interpretação (H02):** a 3.1 e a 3.3 (programação e execução) são cruzadas com a 6.1 e a 5.7 (leitura das métricas e da máscara). O objetivo é ver se quem programa também interpreta bem os resultados, ou o contrário, como pediu o feedback da Entrega 1.
+4. **Termos (6.1 e 6.3):** os termos que mais aparecem como "conheço o nome, mas não sei explicar" ou citados como dúvida são candidatos a explicação no ponto de uso (RC01) e a troca de rótulo na legenda.
+5. **Perguntas abertas:** codificação temática simples, com a mesma lógica do I01: códigos iniciais a partir das linhas da A02 e temas novos quando aparecerem.
+6. **Veredito por hipótese:** H02, H05, H09, H10, H11 e H03 recebem "sustentada", "refutada", "refinada" ou "sem evidência", com as contagens e os trechos que justificam. A H08 recebe só uma contribuição (7.3 e 7.4), a ser somada à I03.
+7. **Consequência para o design:** cada veredito é ligado à decisão que afeta (persona P01, tarefas T01 a T03, decisões de design 1 a 5 da P01) e registrado na seção 5 do `RASTREABILIDADE.md`.
+8. **Limitações:** respostas autodeclaradas e amostra pequena. Os resultados são cruzados com a I01 (o que quem decide diz sobre como os resultados chegam) e com a I03 (como as configurações chegam a quem analisa). Combinações de curso, tempo de equipe e atividade não são publicadas juntas, para ninguém ser identificado.
+
+> O instrumento I03 (Mateus, investigação contextual) será acrescentado a seguir.
 
 ## Síntese
 
