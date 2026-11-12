@@ -1,7 +1,7 @@
 # Entrega 7 — Coleta de dados, necessidades e aspectos éticos
 
 **Data:** 11/11/2026 (início)  
-**Status:** 🟨 em andamento
+**Status:** 🟩 concluída
 
 ## Objetivo da atividade
 
@@ -595,22 +595,203 @@ As perguntas abaixo são as mesmas do formulário on-line, na mesma ordem. A col
 7. **Consequência para o design:** cada veredito é ligado à decisão que afeta (persona P01, tarefas T01 a T03, decisões de design 1 a 5 da P01) e registrado na seção 5 do `RASTREABILIDADE.md`.
 8. **Limitações:** respostas autodeclaradas e amostra pequena. Os resultados são cruzados com a I01 (o que quem decide diz sobre como os resultados chegam) e com a I03 (como as configurações chegam a quem analisa). Combinações de curso, tempo de equipe e atividade não são publicadas juntas, para ninguém ser identificado.
 
-> O instrumento I03 (Mateus, investigação contextual) será acrescentado a seguir.
+### Instrumento I03 — Investigação contextual
+
+**Autor(a):** Mateus Marana Assuena — 22.123.026-1  
+**Técnica:** investigação contextual (Barbosa e Silva, 2010): estudo de campo no ambiente da pessoa, com observação e entrevista, no modelo mestre-aprendiz. A pessoa faz o próprio trabalho e ensina enquanto faz (mestre); quem conduz observa e pergunta para aprender (aprendiz). Segue os quatro princípios da técnica: **contexto** (o trabalho real, no lugar onde acontece), **parceria** (a pessoa conduz, o aprendiz acompanha), **interpretação** (o entendimento é conferido com a pessoa) e **foco** (os dados da A03)  
+**Objetivo:** entender, vendo o trabalho acontecer, como quem configura e treina modelos define uma configuração, acompanha o treino, reage a falhas, analisa e compara os experimentos e registra o que fez, para sustentar, refutar ou refinar a H08 e as lacunas da T08 e da P02 (Parte A, A03)  
+**Público:** pessoas que definem configurações e treinam modelos ligados à Baja FEI (perfil P02, 1 a 3 pessoas `[H]`), excluídos os autores deste projeto e do TCC  
+**Duração prevista:** duas sessões de cerca de 40 minutos, porque um treino pode levar mais tempo do que uma visita: a **sessão 1** acompanha a definição da configuração e o início do treino; a **sessão 2**, depois que o treino termina, acompanha a análise e a comparação dos resultados. Se a pessoa preferir, as duas partes acontecem no mesmo dia, com um intervalo
+
+#### Procedimento padronizado de aplicação
+
+1. **Preparação**
+   - Confirmar com a equipe quem treina os modelos (hipóteses `[H]` da A03) e convidar cada pessoa individualmente, com o texto de convite abaixo.
+   - Agendar as sessões no local e no horário em que a pessoa já faria um experimento, para observar trabalho real, e não uma demonstração montada.
+   - Treinar o aprendiz: um autor deste projeto demonstra o próprio fluxo de treino enquanto o aprendiz aplica o roteiro e preenche a ficha. Esse ensaio serve para treinar quem conduz e não entra na análise.
+   - Levar o termo, o roteiro de foco e fichas de registro sem campo de nome. Definir dois papéis: o aprendiz, que conversa com a pessoa, e o anotador, que preenche a ficha.
+2. **Apresentação e consentimento**
+   - Ler o texto de abertura, que explica o modelo mestre-aprendiz.
+   - Entregar o termo, esperar a leitura, tirar dúvidas e registrar o aceite, incluindo as escolhas sobre gravação de áudio, gravação de tela e citação de trechos.
+3. **Aplicação**
+   - **Conversa inicial** (5 minutos): perguntas da fase 1 do roteiro.
+   - **Observação com perguntas** (30 minutos por sessão): a pessoa trabalha normalmente e explica o que faz. O aprendiz observa os pontos do roteiro e pergunta só em pausas naturais, sem interromper uma ação em andamento.
+   - **Interpretação compartilhada** (5 a 10 minutos, ao fim da sessão 2): o aprendiz resume o que entendeu e a pessoa confirma ou corrige.
+   - O aprendiz não sugere outro jeito de fazer, não opina sobre o trabalho e não mostra telas ou protótipos do projeto.
+4. **Encerramento**
+   - Fazer a pergunta aberta final, lembrar o direito de desistir e de pedir a exclusão dos registros, explicar a devolutiva e agradecer.
+5. **Armazenamento e anonimização**
+   - No mesmo dia, completar a ficha de registro com o código da pessoa (PQ1, PQ2…) e guardar ficha, áudio e gravação de tela, se autorizados, na pasta privada da equipe, fora do repositório.
+   - Apagar áudio e gravação de tela logo depois de completar a ficha; nada é fotografado.
+   - Retirar das fichas nomes de pessoas, números de resultados e nomes de arquivos de pesquisa não publicados.
+
+#### Instrumento
+
+##### Texto do convite
+
+> Olá, [nome]. Somos Henrique, Mateus e Tiago, da disciplina de Interação Humano-Computador da FEI. Estamos estudando como são feitos os experimentos com os modelos de segmentação da Baja (configurar, treinar, analisar e comparar) para projetar uma interface que apoie esse trabalho. Gostaríamos de acompanhar você enquanto faz um experimento que já faria de qualquer forma, em duas conversas de cerca de 40 minutos, no local e horário que preferir. Não vamos avaliar o seu trabalho nem copiar resultados. A participação é voluntária e pode ser recusada sem nenhuma consequência. Podemos combinar?
+
+##### Termo de consentimento
+
+> **Projeto:** Interface para análise de segmentação semântica de vias off-road — disciplina de Interação Humano-Computador, FEI.  
+> **Atividade:** investigação contextual (acompanhamento de um experimento, com conversa).  
+> **Responsáveis:** Henrique Finatti Silveira Belo Trebbi, Mateus Marana Assuena e Tiago Fagundes dos Santos.
+>
+> **Convite e objetivo.** Você está sendo convidado(a) a mostrar como faz um experimento com os modelos de segmentação, explicando enquanto trabalha. **Estamos estudando o processo, não a sua capacidade nem os resultados da sua pesquisa.**
+>
+> **O que será solicitado.** Fazer um experimento que você já faria, no seu local de trabalho, em duas sessões de cerca de 40 minutos, respondendo a perguntas quando houver uma pausa.
+>
+> **Registros.** Faremos anotações. Com a sua autorização, também gravaremos o áudio e, com as outras janelas fechadas, a tela, apenas para completar as anotações; essas gravações são apagadas logo depois. Nada será fotografado, e resultados, imagens e arquivos da sua pesquisa não serão copiados. Apenas os três responsáveis terão acesso aos registros, que ficam fora do repositório do projeto e são apagados ao fim do semestre letivo.
+>
+> **Privacidade.** Seu nome não aparece em nenhum documento: você recebe um código. Como há poucas pessoas que treinam modelos na equipe, seu papel pode ser reconhecido; por isso, você escolhe se trechos da conversa podem ser citados e pode revisar as citações antes do uso.
+>
+> **Voluntariedade.** A participação é voluntária. Você pode interromper a qualquer momento, pular perguntas e pedir, mesmo depois, que os registros sejam excluídos, sem justificar.
+>
+> **Devolutiva.** Você receberá a síntese anonimizada e poderá apontar interpretações erradas antes do uso.
+>
+> **Consentimento.** Declaro que recebi informações suficientes e concordo em participar.  
+> ( ) Autorizo a gravação de áudio. ( ) Não autorizo.  
+> ( ) Autorizo a gravação de tela, com as outras janelas fechadas. ( ) Não autorizo.  
+> ( ) Autorizo a citação de trechos, depois de revisá-los. ( ) Não autorizo.  
+> Código do participante: ______ Data: ___/___/______ Aceite: ______________________
+
+##### Texto de abertura (ler para o participante)
+
+> "Obrigado por nos receber. Hoje você é quem ensina: faça o seu experimento como faria normalmente e vá contando o que está fazendo e por quê. Nós vamos observar e, quando houver uma pausa, perguntar o que não entendermos. Não existe jeito certo ou errado, e não estamos avaliando você nem a sua pesquisa. Se quiser parar ou não mostrar alguma coisa, é só dizer."
+
+##### Roteiro de foco
+
+A coluna "Dado da A03" liga cada ponto à tabela "Que dados coletar" da Parte A. As perguntas servem de apoio: o aprendiz só as usa quando o que está observando não responde por si.
+
+**Fase 1 — Conversa inicial** (no começo da sessão 1)
+
+| # | Pergunta | Dado da A03 |
+|---|---|---|
+| 1.1 | Qual é o seu papel na equipe Baja ou na pesquisa ligada a ela? Quanto tempo por semana você consegue dedicar a experimentos? | Papel e tempo disponível (perfil da P02; H07) |
+| 1.2 | Que experimento você vai fazer hoje e o que quer descobrir com ele? | Critérios para escolher o que testar (C03, Q18 e Q28) |
+| 1.3 | Onde e quando você costuma fazer esse trabalho? Hoje é um dia típico? | Onde e em que janelas de tempo trabalha (ambiente da P02) |
+
+**Fase 2 — Sessão 1: definir a configuração e iniciar o treino**
+
+| # | O que observar | Perguntas de apoio (só em pausas) | Dado da A03 |
+|---|---|---|---|
+| 2.1 | O que a pessoa consulta antes de definir a configuração (anotações, resultados anteriores, colegas) | "De onde veio a ideia de testar isso?" | Critérios para escolher o que testar (Q18); registro de experimentos (H08) |
+| 2.2 | Quais parâmetros ela altera e quais deixa no padrão (épocas, early stopping e paciência, datasets de treino, batch size, gráficos) | "Por que esse valor?" "Tem algum que você nunca muda?" | Parâmetros ajustados de fato (T08) |
+| 2.3 | O que ela confere antes de iniciar o treino e como o inicia | "O que poderia dar errado neste ponto?" | Como treina hoje (H05; Q26) |
+| 2.4 | O que ela olha enquanto o treino avança, se fica esperando ou sai e volta depois | "Como você sabe se está indo bem?" "O que costuma fazer enquanto espera?" | Acompanhamento do treino; janelas de tempo |
+| 2.5 | Se o treino parar ou der erro: como ela percebe, o que faz e quanto trabalho perde | Se não houver falha: "Já aconteceu de um treino parar no meio? O que você fez?" | Falhas no treino (Q26 e Q27) |
+| 2.6 | Interrupções, equipamento usado e outras atividades que disputam a atenção | — | Ambiente da P02 |
+
+**Fase 2 — Sessão 2: analisar e comparar os resultados**
+
+| # | O que observar | Perguntas de apoio (só em pausas) | Dado da A03 |
+|---|---|---|---|
+| 3.1 | O que a pessoa abre primeiro quando o treino termina (métricas, curvas de treino, matriz de confusão, imagens, tempo de inferência) | "O que isso te diz?" | Métricas e gráficos usados (H04; Q20) |
+| 3.2 | Como examina as imagens segmentadas e o que considera um resultado insatisfatório | "O que faria agora com esse resultado?" | Resultado insatisfatório e próximo experimento (Q22) |
+| 3.3 | Como coloca dois experimentos lado a lado e o que precisa ver ao mesmo tempo | "Como você sabe qual resultado veio de qual configuração?" | Como compara e o que vê junto (Q19 e Q24) |
+| 3.4 | Que entradas usa (imagens, vídeos) e de onde vêm | "Essas imagens são sempre as mesmas?" | Tipos de entrada (Q21) |
+| 3.5 | Onde e como registra o experimento; se volta de fato a um experimento antigo durante o trabalho | Só se a pessoa quiser mostrar: "Como você encontraria um experimento do mês passado?" | Registro e recuperação de experimentos (H08; Q23) |
+| 3.6 | Para quem a conclusão vai e em que formato | "Quem usa essa conclusão? Como ela chega à escolha da configuração dos testes?" | Uso das conclusões (H07; Q25 e Q28) |
+
+**Fase 3 — Interpretação compartilhada** (ao fim da sessão 2)
+
+| # | Pergunta | Dado da A03 |
+|---|---|---|
+| 4.1 | O aprendiz resume em três a cinco frases o que entendeu ("Pelo que vi, você primeiro…, depois…, e o mais demorado é…") e pergunta: "Entendi certo? O que corrigiria?" | Confirmação das observações (princípio da interpretação) |
+| 4.2 | Que partes desse trabalho você gostaria que tomassem menos tempo? E quais você faz questão de continuar fazendo do seu jeito, nos seus próprios scripts? | Interface × scripts próprios (H12; decisão 6 da P02) |
+| 4.3 | Que informações técnicas você precisa ter sempre à vista para confiar em um resultado? | Informações técnicas que não podem ficar escondidas (decisão 6 da P02) |
+
+**Fase 4 — Encerramento**
+
+| # | Pergunta | Dado da A03 |
+|---|---|---|
+| 5.1 | Tem alguma parte do seu trabalho com os modelos que não vimos hoje e que você acha importante? | Lacunas não previstas |
+
+**O que o roteiro evita de propósito:** a pergunta 3.5 observa se a pessoa volta de fato a experimentos antigos, em vez de perguntar se ela quer um histórico. Atende ao alerta do professor de que perguntar sobre registros não basta para concluir que a funcionalidade é necessária. Nenhuma pergunta propõe telas ou funcionalidades.
+
+##### Ficha de registro (uma por sessão)
+
+| Campo | Registro |
+|---|---|
+| Código e sessão | PQ__ · sessão 1 ou 2 |
+| Data, local e duração | |
+| Equipamento e ferramentas usados | |
+| Interrupções (quantas e de que tipo) | |
+| Artefatos consultados (anotações, planilhas, resultados anteriores) | Descrever o tipo e o uso, sem copiar o conteúdo |
+| Rupturas e contornos | O que deu errado ou travou e o que a pessoa fez |
+| Citações da pessoa | Sem nomes; marcar se a citação foi autorizada |
+| Dúvidas para a interpretação compartilhada | |
+
+**Sequência de passos** (preenchida durante a observação):
+
+| Horário | Passo observado | Ferramenta | O que a pessoa disse (intenção) | Observação do aprendiz |
+|---|---|---|---|---|
+| | | | | |
+
+#### Como os dados serão analisados
+
+1. **Sessão de interpretação da equipe:** em até dois dias, aprendiz e anotador leem as fichas para os outros autores, e cada observação relevante vira uma nota curta (um fato ou uma fala por nota), identificada pelo código.
+2. **Modelo de sequência:** para cada pessoa, a sequência de passos, intenções e rupturas de um experimento completo (configurar, treinar, acompanhar, analisar, comparar, registrar). As sequências são comparadas entre as pessoas e servem de base para modelar a T08 (HTA, GOMS e CTT), pendente desde a Entrega 5.
+3. **Diagrama de afinidade:** as notas são agrupadas por semelhança e os grupos recebem um título. Os grupos são comparados com os dados da A03 e com as lacunas não previstas.
+4. **Veredito por hipótese e lacuna:** H08 e as lacunas da T08 e da P02 (parâmetros ajustados, acompanhamento do treino, falhas, papel único ou separado, interface × scripts) recebem "sustentada", "refutada", "refinada" ou "sem evidência", com as notas que justificam. Com 1 a 3 pessoas, os resultados são relatos de caso, sem generalização.
+5. **Consequência para o design:** cada veredito é ligado à decisão que afeta (escopo e parâmetros da T08, acompanhamento do treino, histórico na decisão 5 da P02, divisão da persona P02) e registrado na seção 5 do `RASTREABILIDADE.md`.
+6. **Limitações:** ser observado muda o comportamento, e uma ou duas sessões podem não mostrar uma falha real. Por isso as falhas também são perguntadas (2.5), e os resultados são cruzados com a I01 (como as conclusões chegam a quem decide) e com a I02 (como as configurações chegam a quem analisa).
 
 ## Síntese
 
-Explique quais lacunas de conhecimento sobre usuários o conjunto de técnicas pretende reduzir. Indique explicitamente quais hipóteses da Entrega 1 deverão ficar **sustentadas, refutadas ou refinadas** após a análise dos dados. Quando os dados forem coletados/analisados, atualize o histórico em `RASTREABILIDADE.md`.
+O usuário e a interface deste projeto foram propostos pela equipe a partir do TCC, e as três personas são proto-personas. Por isso, a coleta tem duas funções: verificar se o **cenário de uso faz sentido** (se cada perfil existe na Baja FEI e faz a atividade imaginada) e testar as hipóteses que sustentam as decisões de design já tomadas.
+
+### Lacunas que o conjunto de técnicas pretende reduzir
+
+| Lacuna | Instrumento | Por que essa técnica cobre a lacuna |
+|---|---|---|
+| Quem escolhe as configurações, quem recomenda e quem decide; como a decisão acontece e com que critério | I01 (blocos 2 a 5) e informantes secundários | Processo de poucas pessoas, que pede relato de uma ocorrência concreta e aprofundamento |
+| Se quem analisa os resultados sabe programar, se sabe interpretar, quais ferramentas e termos conhece e em que contexto trabalha | I02 (seções 3 a 6) | Público maior e dados comparáveis entre pessoas |
+| Como uma configuração é definida, treinada, acompanhada, analisada e registrada | I03 (sessões 1 e 2) | Conhecimento tácito, que a pessoa não descreve bem fora do trabalho |
+| Se existe necessidade de histórico (H08) | I02 (7.3 e 7.4), I01 (5.3) e I03 (3.5) | Três fontes, porque perguntar sobre registros não basta: a I03 observa se a pessoa volta de fato a experimentos antigos |
+| Se o piloto e quem acompanha os testes se beneficiam sem usar a interface (H03) | I02 (seção 8) | Perguntas curtas para um público que não é usuário |
+
+**Plausibilidade das personas:**
+
+- **P01 (Rafael):** a I02 confirma se existe quem analisa resultados de segmentação na equipe.
+- **P03 (Larissa):** a I01 confirma se existe quem prepara a decisão sem executar os modelos e se essa pessoa usaria a interface ou só receberia um material.
+- **P02 (Andreia):** a I03 confirma se quem treina os modelos é a coordenação, outro pesquisador ou ninguém fora dos autores.
+
+Se um perfil não existir, a persona correspondente será revista antes da Entrega 8.
+
+### O que deve ficar sustentado, refutado ou refinado
+
+| Hipótese | Instrumentos | Fica **sustentada** se… | Fica **refutada** se… | Pode ser **refinada** se… |
+|---|---|---|---|---|
+| H01 — decisão com números dispersos e sem critério explícito | I01 (2.1, 3.1, 4.4); I02 (7.5, 7.6) | os relatos mostram resultados chegando por canais separados e escolha sem critério declarado | a equipe já usa um critério explícito e os resultados chegam reunidos | existe critério, mas só uma pessoa o conhece ou ele não é aplicado sempre |
+| H02 — analista conhece o domínio, mas pode não dominar programação | I02 (2.2, 3.1–3.3, 6.1) | quem analisa programa pouco ou depende de ajuda para executar | quem analisa programa com frequência e resolve erros sozinho | programar e interpretar aparecem separados (programa bem, mas interpreta com dificuldade, ou o contrário) |
+| H03 — piloto beneficiado sem usar a interface | I02 (seção 8) | quem acompanha os testes não consulta os resultados, mas o que faz muda por causa deles | os resultados não mudam nada no trabalho de quem acompanha os testes | parte dessas pessoas consulta os resultados e seria usuária ocasional |
+| H04 — conhecimento técnico e familiaridade com métricas influenciam a interação | I01 (4.1–4.3); I02 (6.1–6.3); I03 (3.1) | o conhecimento de métricas e termos varia entre os perfis e muda o que cada um olha | todos os perfis leem as mesmas métricas do mesmo jeito | só alguns termos geram dúvida, o que define a lista de explicações no ponto de uso (RC01) |
+| H05 — atividades feitas hoje por scripts que exigem conhecimento técnico | I02 (3.2–3.4); I03 (2.3) | executar depende de scripts e os erros exigem ajuda técnica | a execução já é simples e raramente falha | a dificuldade está em passos específicos (preparar arquivos, interpretar erros) e não na execução como um todo |
+| H06 — dificuldade de interpretar resultados sem orientação | I01 (4.4); I02 (5.6–5.8) | quem decide não sabe julgar diferenças e quem analisa não separa falha do modelo de falha da imagem | ambos têm critério claro e o aplicam | a dificuldade aparece só em casos específicos (diferenças pequenas, sombra, poeira) |
+| H07 — papéis e colaboração influenciam a interface | I01 (1.1, 2.2, S2.1); I03 (1.1, 3.6) | há papéis distintos de propor, recomendar e decidir | uma só pessoa faz tudo | os papéis existem, mas mudam conforme o ciclo de testes |
+| H08 — necessidade de histórico | I01 (5.3); I02 (7.3, 7.4); I03 (3.5) | as pessoas voltam com frequência a análises ou experimentos antigos e têm dificuldade para encontrá-los | ninguém volta a resultados antigos, ou encontra sem esforço | a necessidade existe só para um perfil (por exemplo, quem treina) ou só para um tipo de informação |
+| H09 — interfaces conhecidas (editor de código, terminal, GitHub, telemetria) | I02 (4.1) | a maioria usa essas ferramentas com frequência | quase ninguém as usa | o conjunto de ferramentas difere por curso ou papel |
+| H10 — ferramentas como CVAT e Roboflow são complexas para o perfil | I02 (4.2, 4.3) | quem já usou relata dificuldade | quem já usou relata facilidade | a dificuldade depende da ferramenta, ou ninguém as conhece (hipótese irrelevante para o público) |
+| H11 — padrões familiares (seleção de arquivo, progresso, lado a lado) | I02 (4.4) | esses recursos aparecem entre os que as pessoas já usam | não aparecem | só parte deles é familiar |
+| H12 — benefício esperado: dispensar código, apresentar resultados com clareza, comparar | I01 (5.1, 6.1–6.3); I02 (7.8); I03 (4.2, 4.3) | as dificuldades relatadas coincidem com esses três benefícios | as dificuldades estão em outro lugar | os benefícios valem para um perfil e não para outro (por exemplo, quem treina prefere manter os scripts) |
+
+### Depois da coleta
+
+- Cada veredito é registrado na seção 2 (estado da hipótese) e na seção 5 (mudanças) do [`../RASTREABILIDADE.md`](../RASTREABILIDADE.md), com o instrumento e os trechos que o justificam.
+- Uma hipótese só muda de estado com evidência dos instrumentos. Respostas dos autores, do piloto e de participantes proxy são registradas à parte e não bastam sozinhas.
+- Decisões de design que dependem das hipóteses (personas, tarefas T01–T08, decisões das personas e histórico) são revistas na Entrega 8, a partir desses vereditos.
 
 ## Checklist
 
-- [ ] Hipóteses/lacunas prioritárias da Entrega 1 foram revisitadas.
-- [ ] Se o escopo de IHC foi derivado de TCC técnico, a coleta investiga a plausibilidade do usuário, tarefa e contexto adotados.
-- [ ] Perguntas não pressupõem que dashboard, CRUD, filtros ou relatórios sejam necessários; investigam a necessidade.
-- [ ] Cada dado a coletar responde uma dúvida concreta do projeto ou justifica outra necessidade de informação.
-- [ ] Parte A identifica dados e perfis de coleta de forma específica.
-- [ ] Aspectos éticos são contextualizados para o projeto.
-- [ ] Há uma técnica completa por integrante e técnicas distintas.
-- [ ] Questionário está incluído entre as técnicas.
-- [ ] Cada instrumento possui objetivo, público, procedimento e conteúdo integral.
-- [ ] Perguntas evitam indução e coletam apenas dados necessários.
-- [ ] Está claro como os dados serão analisados e usados no design.
+- [X] Hipóteses/lacunas prioritárias da Entrega 1 foram revisitadas.
+- [X] Se o escopo de IHC foi derivado de TCC técnico, a coleta investiga a plausibilidade do usuário, tarefa e contexto adotados.
+- [X] Perguntas não pressupõem que dashboard, CRUD, filtros ou relatórios sejam necessários; investigam a necessidade.
+- [X] Cada dado a coletar responde uma dúvida concreta do projeto ou justifica outra necessidade de informação.
+- [X] Parte A identifica dados e perfis de coleta de forma específica.
+- [X] Aspectos éticos são contextualizados para o projeto.
+- [X] Há uma técnica completa por integrante e técnicas distintas.
+- [X] Questionário está incluído entre as técnicas.
+- [X] Cada instrumento possui objetivo, público, procedimento e conteúdo integral.
+- [X] Perguntas evitam indução e coletam apenas dados necessários.
+- [X] Está claro como os dados serão analisados e usados no design.
