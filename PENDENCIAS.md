@@ -103,6 +103,8 @@ Alguns itens não são correção de texto: dependem de uma decisão do grupo. V
 | INC-60 | 🟠 | E1, E5, E6 | Dependências do TCC para a interface: avaliação no teste, confiança e sobreposição não existem hoje | Equipe + TCC | ➖ | 08/11: **descartado.** Os documentos descrevem o TCC previsto, não o estado atual da implementação; as menções foram retiradas da E1, E5 e RAST. |
 | INC-61 | 🟠 | E3, E4, E5, RAST | Configurar e treinar entrou no recorte, mas não tem persona, cenário nem modelo de tarefa | Equipe | 🟨 | 08/11: registrado na E1 (A06), na E5 (premissa 5) e na RAST (R04). 09/11: T08 criada no C03 (E4) e citada na E3 (síntese das personas e contexto de uso), na RAST (R04) e na E5 (premissa 5). **Falta:** modelar a T08 (HTA/GOMS/CTT), na E5 ou na E9. |
 | INC-62 | 🟠 | E4 (Mateus) | Refinamento do C03 sem respostas e com marcações fora da convenção | Mateus | 🟩 | 10/11 (Fase 2): refinamento do C03 reescrito com respostas hipotéticas em negrito para Q18–Q26 e resumo do que mudou; marcações "[Contexto da P02]", "[Necessidade da P02]" e "[P02]" removidas. **Rascunho a revisar pelo Mateus.** |
+| INC-63 | 🟠 | E1, E3, E5 | Exportação adotada nas personas e no contexto de uso (E3), mas fora do recorte na E1 e na E5 | Equipe | ⬜ | |
+| INC-64 | 🟠 | E5 (Mateus) | Seção 3 da E5 ainda diz que o treinamento de modelos fica fora do escopo, contra a D2 | Mateus | ⬜ | |
 
 **Prioridade sugerida:** resolver os 🔴 antes de fechar a E4 e começar a E5. O INC-22 é o mais sensível, porque a RC03 sustenta decisões nas três personas.
 
@@ -403,6 +405,18 @@ Alguns itens não são correção de texto: dependem de uma decisão do grupo. V
 - **Problema:** o resumo marcava Q18 e Q20–Q26 como "Novo", mas descrevia só a necessidade de investigar; o cenário refinado não trazia respostas. O texto usava marcações fora da convenção ("[Contexto da P02]", "[Necessidade da P02]", "[P02]").
 - **Resolução:** mesmo tratamento do C01 (INC-45): respostas hipotéticas em negrito, nota de proto-persona e resumo do que mudou no texto.
 
+### Criados em 12/11/2026 (Entrega 8)
+
+#### INC-63 🟠 Exportação: adotada na E3, fora do recorte na E1 e na E5
+- **Onde:** E3, decisões de design da P01 (4), da P02 (7) e da P03 (4) e contexto de uso ("a saída exportável é parte do produto, não extra"); E1, §11 (Delimitação, que não inclui exportação); E5, seções 2 e 3 ("fora do modelo"/"fora do escopo") e síntese ("o resumo exportável continua fora do recorte até haver evidência").
+- **Problema:** a E3 trata a exportação como adotada, enquanto a E1 e a E5 a deixam fora do recorte. A E8 (§1, Segurança/privacidade) e as metas de usabilidade precisam saber se exportar faz parte da interface.
+- **Sugestão:** a equipe decide, depois da coleta da E7 (H12; I01 5.1 e 6.1–6.3), se a exportação entra no recorte. Se entrar, registrar na RAST §5 e acrescentar à Delimitação da E1; se não, marcar as decisões da E3 como "em investigação" ou "condicionada", como já foi feito com o histórico (INC-39).
+
+#### INC-64 🟠 E5, seção 3: treinamento ainda aparece como fora do escopo
+- **Onde:** E5, seção 3 (P02/C03, Mateus), introdução: "Ficam **fora do escopo**: treinamento de modelos, captura de imagens pelo veículo, [...]".
+- **Problema:** desde a D2 (08/11/2026), definir uma configuração e treinar estão **dentro** do recorte (E1 §7.1; RAST R04). A própria premissa 5 da E5 já diz que a T08 entrou no recorte e ainda não foi modelada.
+- **Sugestão:** trocar "treinamento de modelos" por uma remissão à premissa 5 (T08 no recorte, modelagem pendente, INC-61). Os demais itens da lista (captura, comunicação, histórico, exportação e modo offline) continuam válidos, ressalvado o INC-63.
+
 ---
 
 ## Histórico deste arquivo
@@ -425,3 +439,4 @@ Alguns itens não são correção de texto: dependem de uma decisão do grupo. V
 | 09/11/2026 | Fase 2, Entrega 3: resolvidos INC-32, 33, 36, 37, 40, 41 e 42; INC-03 descartado; INC-61 em andamento (T08 criada) | Henrique Finatti Silveira Belo Trebbi (com apoio do Claude) |
 | 10/11/2026 | Fase 2, Entrega 4: resolvidos INC-04, 44, 45, 46, 50 e 51; criado e resolvido INC-62 (refinamento do C03). Rascunhos do C01 e do C03 a revisar pelo Tiago e pelo Mateus | Henrique Finatti Silveira Belo Trebbi (com apoio do Claude) |
 | 10/11/2026 | INC-06 (grafia) resolvido. Ficam abertos, por decisão da equipe, INC-53 a 55 (E5 do Mateus), INC-59 (protótipo da E11) e INC-61 (modelar a T08) | Henrique Finatti Silveira Belo Trebbi (com apoio do Claude) |
+| 12/11/2026 | Entrega 8, §1 (Características da plataforma): criados INC-63 (exportação: E3 × E1/E5) e INC-64 (E5, seção 3, treino como fora do escopo) | Equipe (com apoio do Claude) |
