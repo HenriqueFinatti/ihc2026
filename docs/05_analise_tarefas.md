@@ -1,7 +1,7 @@
 # Entrega 5 — Análise de tarefas: HTA, GOMS e CTT
 
 **Data:** 30/10/2026  
-**Status:** 🟨 em andamento  
+**Status:** 🟩 Concluída 
 **Responsabilidade:** cada integrante modela pelo menos 1 HTA, 1 GOMS e 1 CTT. As três técnicas podem abordar a mesma funcionalidade ou funcionalidades distintas, conforme a orientação da disciplina.
 
 ## Objetivo da atividade
@@ -539,17 +539,15 @@ Os modelos são **propostas a validar**, derivadas de C01 e da P01:
 | Objetivos / Operações | Problemas e Recomendações |
 |---|---|
 | **0. Comparar resultados de diferentes modelos** | **Input:** imagens ou vídeos e modelos pré-treinados (C03).<br>**Plano 0:** `1 > 2 > 3 > 4`.<br>**Problema:** as execuções ocorrem em scripts separados, o que dificulta comparar os resultados entre modelos (C03, Q19).<br>**Recomendação:** reunir seleção, execução e visualização em uma única interface, de modo que o usuário compare os modelos sem trocar de ferramenta. |
-| **1. Selecionar a entrada** | **Plano 1:** `1.1 + 1.2`.<br>**Ação:** definir qual imagem ou vídeo será segmentado.<br>**Recomendação:** permitir escolher e carregar o arquivo diretamente pela interface. |
-| 1.1. Selecionar imagem ou vídeo | **Ação:** escolher o arquivo que será usado na segmentação.<br>**Recomendação:** aceitar tanto imagens quanto vídeos gravados. |
-| 1.2. Carregar o arquivo | **Ação:** enviar o arquivo selecionado para a interface.<br>**Problema [H]:** arquivos incompatíveis podem impedir o processamento.<br>**Recomendação:** informar se o carregamento foi concluído ou falhou e, em caso de falha, indicar o motivo (por exemplo, formato não suportado). |
-| **2. Selecionar o modelo** | **Plano 2:** `2.1 + 2.2`.<br>**Ação:** definir qual modelo pré-treinado será usado.<br>**Recomendação:** listar os modelos disponíveis de forma organizada, com seleção na própria interface. |
-| 2.1. Consultar modelos disponíveis | **Ação:** consultar os modelos que podem ser utilizados.<br>**Recomendação:** exibir o nome e uma breve descrição de cada modelo, para apoiar a escolha. |
-| 2.2. Selecionar modelo desejado | **Ação:** escolher o modelo que será aplicado ao arquivo.<br>**Recomendação:** permitir a seleção direta pela interface, sem editar scripts ou parâmetros manualmente. |
-| **3. Executar a segmentação** | **Ação:** iniciar a segmentação com o arquivo e o modelo selecionados.<br>**Problema:** hoje é necessário usar scripts Python separados para rodar cada modelo (C03, Q26).<br>**Recomendação:** permitir iniciar o processamento pela interface e informar o estado da execução (em andamento, concluída ou com erro). |
-| **4. Visualizar o resultado** | **Ação:** consultar o resultado produzido pela segmentação.<br>**Problema:** alternar entre diferentes saídas dificulta a análise (C03, Q19).<br>**Recomendação:** apresentar a máscara junto à imagem ou ao vídeo original e permitir consultar a sobreposição (Q24). |
+| **1. Selecionar a entrada** | **Plano 1:** `1.1 + 1.2`.<br>**Ação:** Segmentar imagem/vídeo com mais de um modelo.<br> |
+| **2. Comparar resultados visualmente** | **Plano 2:** `2.1 + 2.2`.<br>**Ação:** Comparar resultados atráves das imagens/vídeos segmentados.<br>**Recomendação:** Mostar ambas as imagens na interface |
+| 2.1. Consultar imagem original | **Ação:** visualizar a imagem original.<br>**Recomendação:** Exibir imagem original na interface. |
+| 2.2. Consultar imagem segmentada | **Ação:** visualizar a imagem segmentada.<br>**Recomendação:** Exibir imagem segmentada na interface|
+| **3. Comparar métricas** | **Ação:** Visualizar as métricas de cada modelo e compará-las.<br> |
+| 3.1. Visualizar as métricas disponíveis | **Ação:** Utilizar as métricas de cada modelo e compará-las para decidir o melhor modelo.<br>**Recomendação:** Exibir ambas as métricas de maneira ordenada e indicando a qual modelo pertencem. |
 
 **Verificação do HTA**
-O objetivo 0 representa uma meta da Andreia no contexto real de pesquisa: comparar diferentes modelos de segmentação para identificar quais apresentam resultados mais adequados, e não simplesmente utilizar o sistema. Cada objetivo decomposto possui duas ou mais subtarefas e um plano associado; as folhas representam operações. A seleção da entrada e do modelo ocorre conforme os planos definidos em 1 e 2. A decomposição contempla a execução da segmentação e a visualização dos resultados, necessárias para atingir o objetivo. Não há paralelismo (+) nem escolhas condicionais explicitamente representadas no plano atual.
+O objetivo 0 representa uma meta da Andreia no contexto real de pesquisa: comparar diferentes modelos de segmentação para identificar quais apresentam resultados mais adequados, e não simplesmente utilizar o sistema. Cada objetivo decomposto possui duas ou mais subtarefas e um plano associado; as folhas representam operações. A decomposição contempla a execução da segmentação e a visualização dos resultados, necessárias para atingir o objetivo. Não há paralelismo (+) nem escolhas condicionais explicitamente representadas no plano atual.
 
 ### 3.2 GOMS — T06 Analisar visualmente os resultados da segmentação
 
@@ -619,26 +617,26 @@ GOAL 0: analisar visualmente os resultados da segmentação
 
 ##### Leitura da árvore
 
-Os IDs numéricos identificam as tarefas da T07, alinhadas ao HTA. As letras marcam nós adicionais do CTT: `C` (avaliar um modelo, ciclo que pode ser repetido) e `S1`–`S4` (tarefas do sistema).
+Os IDs numéricos identificam as tarefas e coincidem com os do HTA. A árvore não tem nós adicionais, ou seja, não há tarefas do sistema nem ciclos. Tarefas abstratas aparecem como nuvem e tarefas de interação com o ícone de tela e cursor.
 
-1. **Comparar o resultado de diferentes modelos:** `T07 = 1 []>> C*`. O usuário define a entrada uma vez e, em seguida, avalia um modelo; o ciclo se repete com outros modelos até que a comparação seja possível.
-2. **Selecionar a entrada:** `1 = 1.1 []>> 1.2 []>> S1`. O usuário seleciona a imagem ou o vídeo (1.1) e carrega o arquivo (1.2); o sistema informa se o carregamento foi concluído ou se ocorreu erro, como formato incompatível (S1).
-3. **Avaliar um modelo:** `C = 2 []>> 3 []>> 4`. Para cada modelo, o usuário o seleciona, executa a segmentação e visualiza o resultado. Corresponde ao plano `1 > 2 > 3 > 4` do HTA, com repetição do ciclo 2–4.
-4. **Selecionar o modelo:** `2 = S2 []>> 2.1 []>> 2.2`. O sistema apresenta os modelos disponíveis, com nome e breve descrição (S2); o usuário os consulta (2.1) e escolhe o modelo desejado (2.2).
-5. **Executar a segmentação:** `3 = 3.1 []>> S3`. O usuário inicia o processamento com o arquivo e o modelo selecionados (3.1); o sistema executa a segmentação e informa o estado da execução: em andamento, concluída ou com erro (S3).
-6. **Visualizar o resultado:** `4 = S4 []>> 4.1 [] 4.2`. O sistema exibe a máscara junto à imagem ou ao vídeo original (S4); o usuário examina essa visualização (4.1) ou consulta a sobreposição (4.2), conforme a necessidade.
+1. **Comparar resultados de diferentes modelos:** `0 = 1 >> (2 ||| 3)`. O usuário primeiro segmenta a imagem com mais de um modelo (1). Depois, compara os resultados visualmente (2) e compara as métricas (3), sem ordem imposta entre as duas comparações.
+2. **Segmentar imagem com mais de um modelo:** `1`. Tarefa de interação, sem subtarefas. Habilita a comparação: sem as segmentações de pelo menos dois modelos, não há o que comparar.
+3. **Comparar resultados visualmente:** `2 = 2.1 |=| 2.2`. O usuário consulta a imagem original (2.1) e a imagem segmentada (2.2). As duas consultas são obrigatórias, mas podem ser feitas em qualquer ordem, o que corresponde ao plano `2.1 + 2.2` do HTA.
+4. **Comparar métricas:** `3 = 3.1`. O usuário consulta as métricas disponíveis (3.1) para comparar o desempenho dos modelos.
 
 ##### Legenda e relações temporais usadas
 
-| Relação CTT | Notação | Ocorrência em T07 |
+| Relação CTT | Notação | Ocorrência em 0 |
 |---|---|---|
-| Ativação com passagem de informação | `T1 []>> T2` | A entrada carregada permite avaliar um modelo; o modelo selecionado e a entrada permitem executar a segmentação; a execução concluída produz o resultado a ser visualizado. |
-| Escolha | `T1 [] T2` | Escolha entre examinar a máscara com a imagem ou vídeo original (4.1) e consultar a sobreposição (4.2). |
-| Concorrência com comunicação | `T1 \|[]\| T2` | Não há concorrência explicitamente modelada nesta tarefa. |
-| Desativação | `T1 [> T2` | Não há desativação explicitamente modelada nesta tarefa. |
-| Iteração | `T*` | O ciclo `C` (selecionar modelo, executar e visualizar) é repetido para cada modelo comparado. |
+| Habilitação | `T1 >> T2` | A segmentação (1) precisa ser concluída antes das comparações (2 e 3). Corresponde ao plano `1 > 2` do HTA. |
+| Concorrência | `T1 \|\|\| T2` | A comparação visual (2) e a comparação de métricas (3) são independentes entre si. |
+| Independência de ordem | `T1 \|=\| T2` | Consultar a imagem original (2.1) e a segmentada (2.2): ambas são obrigatórias, em qualquer ordem. |
+| Escolha | `T1 [] T2` | Não há escolha modelada nesta tarefa. |
+| Desativação | `T1 [> T2` | Não há desativação modelada nesta tarefa. |
+| Iteração | `T*` | Não há repetição modelada. A segmentação com mais de um modelo está dentro da própria tarefa 1. |
+| Suspensão | `T1 \|> T2` | Não há suspensão modelada. Interrupções durante a segmentação ou a comparação não foram consideradas. |
 
-Não há suspensão (`|>`): interrupções durante a execução ou a comparação não foram modeladas.
+O plano do HTA para a tarefa 0 só diz `1 > 2` e não menciona a tarefa 3. Por isso, `2 ||| 3` é uma suposição minha. Se a comparação de métricas só puder acontecer depois da visual, troque por `2 >> 3`. Se forem alternativas, use `2 [] 3`. Nos dois casos, o SVG também precisa ser atualizado.
 
 ##### Tipos de tarefas
 
