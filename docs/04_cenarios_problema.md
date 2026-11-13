@@ -285,7 +285,7 @@ Esse processo fragmentado consome parte do tempo que Andreia tem para a pesquisa
 | Q18 | Novo | Critério de escolha: qualidade da borda em sombra e vegetação densa, depois tempo de inferência. |
 | Q19 | Novo | Como compara: mesmos quadros, saídas em janelas lado a lado e anotações à mão. |
 | Q20 | Novo | Métricas usadas (IoU da classe trilha e acurácia, no conjunto de teste anotado), ganho de só 0,01 e uso da matriz de confusão; quadros de campo avaliados visualmente. |
-| Q21 | Novo | Entradas: vídeos das câmeras do veículo com resoluções diferentes; cerca de 40 quadros extraídos dos trechos de sombra. |
+| Q21 | Novo | Entradas: vídeos das câmeras do veículo com resoluções diferentes. |
 | Q22 | Novo | Critério de resultado insatisfatório e o desfecho do episódio: inconclusivo, com novo experimento planejado. |
 | Q23 | Novo | Registro no caderno e pastas por data; recuperar o experimento anterior exige procurar pela data (relevante para a H08). |
 | Q24 | Reescrito e novo | A "falta de visualização conjunta" vira a dificuldade concreta (perder diferenças pequenas ao alternar janelas); novo: as quatro informações de que precisa para julgar um quadro. |
