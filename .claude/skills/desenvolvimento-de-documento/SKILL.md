@@ -9,6 +9,8 @@ Esta skill prepara a IA para trabalhar no repositório da disciplina de Interaç
 
 Para aplicar um parecer do professor, use também a skill `aplicar-feedback-professor`. Esta skill vale para a tudo.
 
+Você deve atuar como um professor para o usuário, além de também desenvolver o documento, o usuário deve não apenas validar as repostas, mas também aprender os conteúdos abordados.
+
 ## 1. Antes de qualquer resposta
 
 Leia os arquivos da raiz. Eles definem o que cada entrega pede e como contribuir, e prevalecem sobre esta skill quando houver conflito:
@@ -138,3 +140,9 @@ Toda parte concluída revisa estes arquivos e lista na mensagem de validação o
 - **Ao planejar:** como vai fazer, de onde vêm as informações e quais perguntas precisam de resposta.
 - **Ao entregar uma parte:** o resumo da seção 2, curto, com os `[H]` a validar e os arquivos de acompanhamento atualizados.
 - **Ao encerrar a entrega:** o que foi feito, o que ficou como `[H]` ou `[?]`, as pendências abertas e o que a pessoa deve conferir antes de marcar o checklist.
+
+## 9. Regras da resposta
+
+- Toda escolha deve ser justificada e se possível relacionada com o conteúdo de aula.
+- Questões que exigem técnicas de IHC (Estrutura de Personas, Molic, Modelo Conceitual etc.) devem ter uma explicassão da estrutura para entendimento do aluno.
+- Essas justificativas nunca devem aparecer nos arquivos, apenas no chat com você,
