@@ -58,7 +58,7 @@ s.text(480, y + 44, "Caixa tracejada: objetivo da persona alcançado entre pesso
        size=14, anchor="start")
 y = s.note(y + 80, ["Numeração provisória deste mapa (letras, para não confundir com seções do documento nem com o HTA); os IDs O01… são atribuídos no mapa consolidado da equipe.",
                     "A2 inclui o início do treino; B3 não tem subtópicos: é um único diálogo.",
-                    "B2.1 reutiliza o diálogo de execução da P01 (CI01); B2.3, o aviso de diferença pequena da P03 (CI02).",
+                    "B2.1 reutiliza o diálogo de execução da P01 (CI01); B2.3, o diálogo de julgar a diferença da P03 (CI02).",
                     "[H]: proposta derivada de proto-persona, a revisar depois da coleta da Entrega 7."]) + 20
 
 s.save(OUT, y)
