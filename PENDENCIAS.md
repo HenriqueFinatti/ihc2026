@@ -105,6 +105,9 @@ Alguns itens não são correção de texto: dependem de uma decisão do grupo. V
 | INC-62 | 🟠 | E4 (Mateus) | Refinamento do C03 sem respostas e com marcações fora da convenção | Mateus | 🟩 | 10/11 (Fase 2): refinamento do C03 reescrito com respostas hipotéticas em negrito para Q18–Q26 e resumo do que mudou; marcações "[Contexto da P02]", "[Necessidade da P02]" e "[P02]" removidas. **Rascunho a revisar pelo Mateus.** |
 | INC-63 | 🟠 | E1, E3, E5 | Exportação adotada nas personas e no contexto de uso (E3), mas fora do recorte na E1 e na E5 | Equipe | ⬜ | |
 | INC-64 | 🟠 | E5 (Mateus) | Seção 3 da E5 ainda diz que o treinamento de modelos fica fora do escopo, contra a D2 | Mateus | ⬜ | |
+| INC-65 | 🟠 | E1, E5, E9, RAST | Datasets de treino: os documentos citam Freiburg Forest e Synthetic Offroad; o repositório do TCC também tem o CaSSeD | Equipe | ⬜ | |
+| INC-66 | 🟠 | E5 (Tiago), E7 | Confiança do modelo retirada do projeto (não faz parte do TCC previsto), mas a E5 e a E7 ainda a usam | Tiago | ⬜ | |
+| INC-67 | 🟠 | E3, E5 | Aviso automático de "resultado inconclusivo" retirado (o sistema não julga a relevância da diferença), mas a E3 e a E5 ainda o preveem | Henrique, equipe | ⬜ | |
 
 **Prioridade sugerida:** resolver os 🔴 antes de fechar a E4 e começar a E5. O INC-22 é o mais sensível, porque a RC03 sustenta decisões nas três personas.
 
@@ -419,6 +422,23 @@ Alguns itens não são correção de texto: dependem de uma decisão do grupo. V
 
 ---
 
+### Criados em 14/11/2026 (Entrega 9)
+
+#### INC-65 🟠 Datasets de treino: CaSSeD no TCC, ausente nos documentos
+- **Onde:** E1 §0.4 e §7.1, E5 premissa 5 e RAST §5 (D2) definem os datasets de treino como Freiburg Forest e/ou Synthetic Offroad; o repositório do TCC (configuração de treino) também tem o dataset CaSSeD, ligado por padrão. A E9 (§4, signo "datasets de treino") ficou marcada `[?]`.
+- **Problema:** se o CaSSeD faz parte do TCC previsto, a definição de configuração (D2), os signos da E9 e as próximas entregas (MoLIC, Figma) ficam com a lista de datasets incompleta.
+- **Sugestão:** a equipe confirma se o CaSSeD faz parte do TCC previsto. Se fizer, atualizar a D2 na RAST §5 (sem apagar a versão anterior), a E1 §0.4 e §7.1, a premissa 5 da E5 e o signo da E9; se não, registrar que ele fica fora do recorte.
+
+#### INC-66 🟠 Confiança do modelo retirada, mas ainda citada na E5 e na E7
+- **Onde:** E5, seção 2 (recorte comum, HTA T03 3.3.2, GOMS T01 método 3.B, síntese 2.5 item 3), síntese da equipe (RQ06 e "Oportunidades"); E7, Parte A (A02, linha sobre separar falha do modelo de falha da imagem: "informação de confiança do resultado").
+- **Problema:** em 14/11/2026, a equipe decidiu que a confiança do modelo (probabilidade por região) não é signo da interface, porque o TCC previsto não a exibe (E9, seção 4). Imagens sem anotação de referência passam a ser avaliadas só visualmente (E9, CI01 [6]).
+- **Sugestão:** na E5, retirar o método 3.B do GOMS da T01 e a operação 3.3.2 do HTA da T03 (a escolha passa a ser entre inspeção visual e métricas por classe), ajustar a RQ06 ("sem anotação, avaliação visual") e a frase de oportunidades; regenerar o HTA da T03 pelo script. Na E7, trocar "informação de confiança do resultado" pela avaliação visual com registro da origem do problema (RQ05).
+
+#### INC-67 🟠 Aviso de "resultado inconclusivo" retirado, mas ainda previsto na E3 e na E5
+- **Onde:** E3, decisão de design 5 da P03 ("destacar quando o resultado é inconclusivo"); E5, seção 1 (recorte comum, HTA T05 2.3 e 2.3.2.1, GOMS T04 regras de seleção 3.A e 3.B) e síntese da equipe (RQ07, "aviso quando a diferença é pequena").
+- **Problema:** em 14/11/2026, a equipe decidiu que o sistema calcula e mostra a diferença entre configurações e explica o que cada métrica indica, mas não julga se a diferença é relevante (E9, seção 4, signo "diferença entre configurações"; RQ08). O critério de "inconclusivo" nunca chegou a ser definido.
+- **Sugestão:** na E3, reescrever a decisão 5 da P03 como "mostrar a diferença entre configurações e explicar o que as métricas não garantem", sem aviso automático; na E5, trocar "aviso de resultado inconclusivo" por "diferença pequena" (percebida pela pessoa) nas regras de seleção e ajustar a RQ07 para "valor de referência, diferença entre configurações e explicação no ponto de uso". A recomendação com ressalva (HTA T05 3.2) continua válida, porque a ressalva é registrada pela pessoa.
+
 ## Histórico deste arquivo
 
 | Data | Alteração | Responsável |
@@ -441,3 +461,5 @@ Alguns itens não são correção de texto: dependem de uma decisão do grupo. V
 | 10/11/2026 | INC-06 (grafia) resolvido. Ficam abertos, por decisão da equipe, INC-53 a 55 (E5 do Mateus), INC-59 (protótipo da E11) e INC-61 (modelar a T08) | Henrique Finatti Silveira Belo Trebbi (com apoio do Claude) |
 | 12/11/2026 | Entrega 8, §1 (Características da plataforma): criados INC-63 (exportação: E3 × E1/E5) e INC-64 (E5, seção 3, treino como fora do escopo) | Equipe (com apoio do Claude) |
 | 13/11/2026 | Entrega 9: INC-61 atualizado (T08 descrita no CI03); CI01 e CI02 citam o INC-63 ao deixar a exportação fora | Equipe (com apoio do Claude) |
+| 14/11/2026 | Entrega 9, §4 (esquema de signos): criado INC-65 (dataset CaSSeD no TCC × documentos) | Equipe (com apoio do Claude) |
+| 14/11/2026 | Entrega 9, §4: decisões da equipe sobre os signos; criados INC-66 (confiança do modelo retirada) e INC-67 (aviso de resultado inconclusivo retirado) | Equipe (com apoio do Claude) |
