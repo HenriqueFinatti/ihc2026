@@ -67,32 +67,61 @@ As metas avaliam a **interação** com a interface, não o desempenho dos modelo
 
 ### 3.2 Metas quantitativas
 
+População: participantes da equipe Baja FEI com o perfil de cada persona, excluídos os autores; na Entrega 14, o número de participantes é igual ao de integrantes (3). Por isso as metas de eficácia são dadas em número de participantes. Os tempos não incluem o processamento dos modelos, que é simulado no protótipo, e são `[H]`: serão recalibrados no teste-piloto da Entrega 12.
+
 | ID | Dimensão | Métrica | Tarefa/escopo | Meta | Como medir | Justificativa |
 |---|---|---|---|---|---|---|
-| MU01 | eficácia | taxa de conclusão sem ajuda | T01 | ≥ {{x}}% | teste observado | {{...}} |
-| MU02 | eficiência | tempo mediano | T02 | ≤ {{tempo}} | cronômetro/log | {{...}} |
-| MU03 | satisfação | escala pós-tarefa | T01–T03 | ≥ {{valor}} | questionário | {{...}} |
+| MU01 | eficácia | conclusão sem ajuda | UT01: T02 + T01 (P01) | ≥ 2 de 3 participantes | observação; concluir = executar e apontar ao menos uma região mal classificada | MQ01, MQ04; atividade mais crítica (E1 §3.4) |
+| MU02 | eficácia | conclusão sem ajuda | UT02: T03/T07 (P01, P02) | ≥ 2 de 3 | observação; a conclusão registrada cita a configuração e a entrada corretas | MQ05; RQ02 |
+| MU03 | eficácia | conclusão sem ajuda | UT03: T04 + T05 até a recomendação (P03) | ≥ 2 de 3 | observação; a recomendação registrada cita a métrica e uma ressalva | MQ03, MQ07; H01 |
+| MU04 | eficácia | erros críticos não percebidos pelo participante | UT01–UT03 | 0 por participante | observação; erro crítico = concluir segurança pela máscara, tratar imagem de campo como se tivesse métricas ou atribuir um resultado à configuração errada | MQ02, MQ05; RQ06, RQ08 |
+| MU05 | eficácia | recuperação de falha simulada sem ajuda | UT01 (falha na execução) | ≥ 2 de 3 | observação | MQ04; RQ01, RC04 |
+| MU06 | eficiência | tempo mediano de interação | UT01 / UT02 / UT03 | ≤ 5 / ≤ 4 / ≤ 8 min `[H]` | cronômetro, descontando o processamento simulado | hoje cada execução exige script (H05); valores a recalibrar no piloto |
+| MU07 | eficiência | pedidos de ajuda ao moderador | UT01–UT03 | ≤ 1 por participante em cada tarefa | contagem na observação | MQ04; H02 |
+| MU08 | eficácia (compreensão) | acertos no questionário pós-tarefa de compreensão (4 perguntas: o que é *Trilha*; por que uma imagem de campo não tem IoU; o que a métrica indica; se a segmentação indica segurança) | após UT01 e UT03 | ≥ 3 de 4 por participante | questionário | MQ01–MQ03; RC01, H04 |
+| MU09 | satisfação | facilidade percebida (escala de 1 a 7, uma pergunta após cada tarefa) | UT01–UT03 | mediana ≥ 5 | questionário pós-tarefa | MQ04, MQ05 |
+| MU10 | satisfação | SUS (System Usability Scale) | sessão completa | ≥ 68 | questionário ao final | 68 é a média de referência do SUS; abaixo dela a interface fica pior que a média |
+| MU11 | eficácia | conclusão sem ajuda, incluindo retomar o treino após falha por memória | T08 (P02) | ≥ 2 de 3 | observação | MQ06; C03 Q26. **Condicionada:** a T08 ainda não tem tarefa de teste `[?]` (INC-61) |
 
 ### 3.3 Priorização das metas (se exigida na disciplina)
 
-Se o professor solicitar porcentagens que somem 100%, trate-as como **peso de prioridade**, não como métrica de usabilidade.
+As porcentagens abaixo são **pesos de prioridade**, não métricas de usabilidade. Pesam mais as metas ligadas à compreensão do resultado pela P01, porque interpretar é a atividade mais crítica (Entrega 1, §3.4). A eficiência pesa menos, porque os tempos ainda são `[H]` e o processamento depende do equipamento.
 
 | Meta | Peso de prioridade | Justificativa |
 |---|---:|---|
-| MU01 | {{...}}% | {{...}} |
+| MU01 | 15% | Conclusão da tarefa central da persona prioritária (P01): executar e avaliar uma imagem |
+| MU04 | 15% | Um erro crítico, como concluir segurança pela máscara, leva a uma decisão errada sem que ninguém perceba |
+| MU02 | 10% | Comparar sobre a mesma entrada é a necessidade central do C01 e do C03 |
+| MU03 | 10% | Sustenta a recomendação levada à reunião de decisão (P03) |
+| MU08 | 10% | Mede diretamente se as métricas e os limites foram entendidos (MQ01–MQ03) |
+| MU10 | 10% | Visão geral da satisfação com a interface como um todo |
+| MU05 | 8% | A falha de execução é a principal exceção prevista nas tarefas (RQ01) |
+| MU06 | 7% | Tempo importa, mas os valores ainda serão recalibrados no piloto |
+| MU07 | 5% | Complementa a MU01, mostrando onde a ajuda foi necessária |
+| MU09 | 5% | Complementa a MU10, tarefa por tarefa |
+| MU11 | 5% | Treino da P02; peso baixo enquanto a T08 não tiver tarefa de teste |
 | **Total** | **100%** | |
 
 ## 4. Como o ciclo será iterado
 
-Explique que artefatos serão revisitados após protótipos e avaliações.
+O projeto segue o design centrado no ser humano (ISO 9241-210): cada avaliação pode mandar o trabalho de volta a uma etapa anterior. Nenhuma entrega reinicia o projeto: toda mudança precisa de evidência e é registrada na §5 do `RASTREABILIDADE.md` e, quando for o caso, no `PENDENCIAS.md`. Esta entrega também é revista e ganha um "Histórico de revisões" quando uma meta ou característica mudar.
+
+| Quando | O que pode mudar | Artefatos revisitados |
+|---|---|---|
+| Análise dos dados da Entrega 7 | Estado das hipóteses H01–H12; existência de cada perfil; histórico (H08); exportação (INC-63); contexto ainda `[?]`, como a beira da pista e a tela projetada | Personas (E3), cenários (E4), tarefas T01–T08 (E5), §1 e metas `[H]` da §3 desta entrega |
+| Modelo conceitual e MoLIC (Entregas 9 e 10) | Termos e signos da interface; fusão ou não de T03 e T07; modelagem da T08 (INC-61) | §1 (Capacidades), §2 (consistência de termos), MQ05, MQ06, MU02 e MU11 |
+| Protótipo no Figma (Entrega 11) | Legenda binária e estado "sem métricas" (INC-59); falha simulada e questionário de compreensão, necessários para MU05 e MU08 | Protótipo em papel (E6) como referência; metas da §3 que dependem do protótipo |
+| Planejamento da avaliação (Entrega 12) | Instruções e critérios de sucesso de UT01–UT03; tarefa de teste para a T08; tempos da MU06, recalibrados no teste-piloto | §3.2 (valores da MU06 e escopo da MU11) |
+| Avaliação heurística (Entrega 13) | Problemas encontrados, inclusive os critérios de acessibilidade da §2, corrigidos no protótipo antes do teste com usuários | Protótipo (E11) e, se o problema vier do fluxo, MoLIC (E10) |
+| Observação de usuários (Entrega 14) | Comparação dos resultados com MQ01–MQ07 e MU01–MU11; meta não atingida vira mudança no protótipo ou revisão da tarefa ou da persona | Protótipo (E11), tarefas (E5), personas (E3) e coluna "Decisão/melhoria" da RAST §3 |
 
 ## Checklist
 
-- [ ] Capacidades e restrições têm impacto de IHC explicitado.
-- [ ] Está claro o limite entre contribuição técnica do TCC e camada interativa da disciplina.
-- [ ] Resultados/processamento simulados no protótipo foram explicitados.
-- [ ] Metas de usabilidade avaliam a interação, não substituem métricas técnicas do TCC.
-- [ ] Normas/princípios estão contextualizados, não apenas copiados.
-- [ ] Metas quantitativas são mensuráveis e associadas a tarefas/público.
-- [ ] Eficácia, eficiência e satisfação são consideradas quando pertinentes.
-- [ ] Metas poderão ser verificadas nas Entregas 12–14.
+- [X] Capacidades e restrições têm impacto de IHC explicitado.
+- [X] Está claro o limite entre contribuição técnica do TCC e camada interativa da disciplina.
+- [X] Resultados/processamento simulados no protótipo foram explicitados.
+- [X] Metas de usabilidade avaliam a interação, não substituem métricas técnicas do TCC.
+- [X] Normas/princípios estão contextualizados, não apenas copiados.
+- [X] Metas quantitativas são mensuráveis e associadas a tarefas/público.
+- [X] Eficácia, eficiência e satisfação são consideradas quando pertinentes.
+- [X] Metas poderão ser verificadas nas Entregas 12–14.
