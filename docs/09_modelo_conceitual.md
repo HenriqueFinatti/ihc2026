@@ -103,18 +103,42 @@ O episódio a seguir é uma situação construída pela equipe `[H]`. [1] *Na se
 
 **O que não muda:** o perfil de Larissa, a decisão compartilhada com a coordenação, os valores do episódio (0,78 e 0,76 no conjunto de teste anotado) e as atividades que continuam fora do sistema (o aviso de que os resultados estão prontos, o pedido de conferência ao integrante técnico e a reunião).
 
-### CI03 — {{título}}
+### CI03 — Treino e comparação de uma nova configuração em uma janela curta
 
 **Autor(a):** Mateus Marana Assuena — 22.123.026-1  
-**Origem:** cenário problema C03 — Experimentação e análises de modelos para segmentação
+**Origem:** cenário problema C03 — Experimentação e análises de modelos para segmentação  
+**Persona:** P02 (Andreia Silva, pesquisadora e coordenadora)  
+**Tarefas apoiadas:** T08 (definir uma configuração de treino e treinar o modelo), T02 (executar a segmentação com uma ou mais configurações disponíveis), T06 (analisar visualmente os resultados da segmentação) e T07 (comparar o resultado de diferentes modelos)  
+**Rastreabilidade:** R02, R03, R04; H01, H04, H08; RC01, RC04; RQ01–RQ03, RQ06–RQ08; decisões de design 1, 2, 3 e 6 da P02 (Entrega 3)
 
-{{cenário de interação com alterações marcadas}}
+Andreia é professora em tempo integral e coordenadora da equipe Baja FEI, onde acompanha pesquisas voltadas ao desenvolvimento de um veículo autônomo para terrenos off-road. Com formação avançada em Engenharia Mecânica e especialização em Visão Computacional, possui conhecimentos para desenvolver modelos próprios e implementar scripts em Python. O veículo autônomo é o objetivo maior da pesquisa; neste cenário, ela trabalha com os modelos do TCC (FCN e DeepLabV3+), ajustando a configuração de treino e comparando resultados. Faz os experimentos na sala dos professores ou no laboratório, entre aulas, em janelas curtas: inicia um treino e volta horas depois para ver se terminou.
+
+O episódio a seguir é uma situação construída pela equipe `[H]`. [1] *Depois de um teste em que a configuração em uso, DeepLabV3+ – 30 épocas `[H]`, teve dificuldade nos trechos de sombra,* Andreia quer saber se mais épocas de treino e a inclusão do dataset Synthetic Offroad melhoram a trilha em sombra, para decidir se vale levar a nova configuração à reunião de coordenação. Ao escolher o que testar, prioriza a qualidade da borda da trilha em sombra e vegetação densa e, em segundo lugar, o tempo de inferência, pensando no uso futuro no veículo. As entradas são vídeos das câmeras do veículo, com resoluções diferentes conforme a câmera; ela extrai cerca de 40 quadros dos trechos de sombra.
+
+[2] *Para experimentar uma configuração diferente,* **ela a define no próprio sistema: escolhe o modelo DeepLabV3+ e ajusta os parâmetros de treino que o sistema expõe (50 épocas em vez de 30, os datasets Freiburg Forest e Synthetic Offroad, o batch size, o early stopping com a paciência e a geração de gráficos), partindo dos valores padrão. O sistema não aceita valores fora do permitido, como nenhum dataset de treino escolhido, e sugere o nome DeepLabV3+ – 50 épocas `[H]`, que ela mantém.** [3] *Inicia o treino e vai dar aula.* **Ao voltar, encontra o estado do treino: ele parou na época 18 por falta de memória. O sistema explica a causa em poucas palavras, mantém a configuração preenchida e sugere reduzir o batch size; ela aceita e reinicia sem refazer a configuração.** [4] **Na janela seguinte, o sistema mostra que o treino terminou na época 41, porque o early stopping o encerrou quando a validação parou de melhorar, com os gráficos de treino e validação. A nova configuração passa a aparecer entre as configurações disponíveis, já com as métricas no conjunto de teste anotado.**
+
+[5] *Ela executa as duas configurações sobre os mesmos 40 quadros, sem scripts, e acompanha o processamento.* [6] *Para julgar um quadro, vê ao mesmo tempo a imagem original, a máscara de cada configuração e a sobreposição,* **sem alternar janelas, e por isso nota diferenças pequenas na borda da trilha.** [7] *Depois, consulta as métricas no conjunto de teste anotado:* **o sistema mostra que o IoU da classe *Trilha* e a acurácia sobem só 0,01 e avisa que a diferença é pequena demais para indicar, sozinha, que a nova configuração é melhor. Para entender onde cada configuração erra, ela consulta a matriz de confusão de cada uma. O sistema lembra que os quadros de campo não têm anotação de referência e que, neles, a avaliação é visual.**
+
+[8] *Nos quadros, a nova configuração melhora nas sombras largas, mas ainda perde a trilha nos trechos estreitos;* **ela registra a conclusão junto da comparação: resultado inconclusivo nas métricas, melhora visual nas sombras largas, falha nos trechos estreitos e, como próximo experimento, testar outro conjunto de dados.** [9] **Em vez de levar um "talvez", decide manter a DeepLabV3+ – 50 épocas como configuração candidata e, fora do sistema, pede a Rafael (P01) que a valide nas imagens do próximo teste antes de levá-la à reunião de coordenação, onde Larissa (P03) prepara a decisão.** Continua registrando o experimento no caderno de pesquisa, porque recuperar experimentos anteriores no sistema depende da H08.
+
+[10] *O tempo de Andreia vai para a pesquisa: a falha no treino custou só um reinício, e a comparação lhe deu uma conclusão clara sobre o que fazer a seguir.*
 
 #### Diferenças relevantes
 
 | # | Alteração | Por que foi necessária | Evidência/artefato que justifica |
 |---|---|---|---|
-| {{...}} | {{...}} | {{...}} | {{...}} |
+| 1 | O gatilho deixa de ser a falha da configuração no teste do C02 e passa a ser a dificuldade observada nos trechos de sombra. | No CI02, a ressalva sobre as sombras leva a conferência para antes do teste; o CI03 não pode partir de uma falha que o CI02 evita. O objetivo do experimento (Q28) continua o mesmo. | C03, Q28; CI02 [8] |
+| 2 | Andreia define a configuração no sistema: escolhe o modelo e ajusta só os parâmetros expostos, partindo de valores padrão; o sistema recusa valores fora do permitido e sugere um nome para a configuração. | No C03, a configuração era ajustada em scripts (Q26). Configurar e treinar estão dentro do recorte desde a D2; parâmetros internos e novas arquiteturas continuam fora. | D2 (`PENDENCIAS.md`); E1 §7.1; RAST R04; T08 (C03); E8 §1 (Capacidades); `PENDENCIAS.md`, INC-61 e INC-64. O formato do nome da configuração está em aberto `[?]` (seção 2.2) |
+| 3 | O treino interrompido por falta de memória é explicado em linguagem de usuário, a configuração é mantida e o sistema sugere reduzir o batch size; Andreia reinicia sem refazer a configuração. | No C03, a falha no meio do treino custou uma tarde (Q26). A interrupção continua possível (depende do equipamento), mas a retomada fica mais curta. | C03, Q26; RC04; RQ01; E8 §1 (Tempo de processamento: falha por memória e progresso por época) |
+| 4 | O sistema mostra o estado do treino por época, o encerramento por early stopping e os gráficos de treino e validação; a configuração treinada fica disponível com as métricas do conjunto de teste. | Andreia trabalha em janelas curtas e precisa saber, ao voltar, em que ponto o treino está. Ao terminar, a nova configuração precisa estar pronta para ser executada e comparada. | C03, Q27; RC04 (evidência visual E5 da RAST §7: barras de época e gráficos de treino na Supervisely); E3, ambiente típico de uso e dores da P02 |
+| 5 | As duas configurações são executadas sobre os mesmos quadros, pela interface. | No C03, cada modelo era executado em um script separado (Q19, Q26). | RQ01; RQ02; E3, decisão de design 2 da P02; E5 §3, HTA T07 1 e síntese 3.5 (itens 1 e 3) |
+| 6 | Imagem original, máscaras e sobreposição aparecem ao mesmo tempo, sem alternar janelas. | Alternar janelas fazia Andreia perder diferenças pequenas na borda da trilha (Q24). | C03, Q24; RQ03; E3, decisão de design 1 da P02; E5 §3, GOMS T06 e síntese 3.5 (item 4) |
+| 7 | As métricas do conjunto de teste vêm com o aviso de diferença pequena e com a matriz de confusão de cada configuração; o sistema lembra que os quadros de campo são avaliados visualmente. | O ganho de 0,01 não mostrava o problema nos quadros de campo (Q20). O aviso de diferença pequena é o mesmo do CI02, e a matriz de confusão é a métrica que Andreia já usa para ver onde o modelo erra. | C03, Q20; RQ06; RQ07; E3, decisão de design 3 da P02; CI02 [5] |
+| 8 | Andreia registra a conclusão junto da comparação, com o que melhorou, o que falhou e o próximo experimento. | A conclusão é dela; o sistema organiza, mas não decide. | C03, Q22; RQ08; E3, decisão de design 6 da P02 (acesso às informações técnicas) |
+| 9 | O desfecho muda de "talvez" para uma decisão clara: manter a nova configuração como candidata e pedir validação em campo a Rafael antes da reunião. O caderno de pesquisa continua sendo o registro entre experimentos. | Liga o experimento ao CI01 (Rafael compara a configuração em uso com a mais nova) e ao CI02 (Larissa compara as candidatas). O cenário não supõe histórico de experimentos nem exportação, que continuam fora do recorte. | C03, Q23, Q25 e Q28; CI01 [8]; CI02; H08; RQ09; `PENDENCIAS.md`, INC-63 (exportação; decisão de design 7 da P02) |
+| 10 | O sentimento final se inverte: a falha custa só um reinício e a comparação dá uma conclusão clara. | É o benefício esperado da interface para a P02: menos tempo de preparação e comparação, mais tempo para a pesquisa. | H01; H04; E3, objetivos e dores da P02 |
+
+**O que não muda:** o perfil e o contexto de Andreia (janelas curtas entre aulas), o objetivo do experimento (Q28), os critérios de escolha (Q18), as entradas (quadros extraídos dos vídeos, Q21), o resultado visual nos quadros (melhora nas sombras largas, falha nos trechos estreitos) e as atividades que continuam fora do sistema (extrair os quadros, o caderno de pesquisa, o pedido a Rafael e a reunião de coordenação).
 
 ## 2. Design centrado na comunicação
 
@@ -182,12 +206,29 @@ Cada integrante descreve, como conversa, o cenário de interação que escreveu 
 ### 2.3 CI03
 
 **Autor(a):** Mateus Marana Assuena — 22.123.026-1  
-**Nome do cenário:** CI03 — {{título}}
+**Nome do cenário:** CI03 — Treino e comparação de uma nova configuração em uma janela curta  
+**Persona:** P02 (Andreia Silva)
 
 | Tópico > subtópico | Falas e signos envolvidos | Intenção/efeito esperado |
 |---|---|---|
-| {{objetivo}} | `U: ...` / `D: ...` | {{...}} |
-| > {{subtópico}} | {{...}} | {{...}} |
+| **definir uma configuração de treino** (T08) | `U:` Quero treinar uma nova configuração para melhorar a trilha em sombra. | Andreia parte do objetivo do experimento, não de arquivos de script (CI03 [2]; Q28). |
+| > escolher o modelo e os parâmetros | `D:` Qual **modelo** você quer treinar? Estes são os **parâmetros de treino** que você pode ajustar, com os **valores padrão**: **épocas**, **early stopping** e **paciência**, **datasets de treino**, **batch size** e **geração de gráficos**.<br>`U:` **DeepLabV3+**, 50 **épocas**, **datasets** Freiburg Forest e Synthetic Offroad, **batch size** 16 `[H]`, **early stopping** com **paciência** 5 `[H]` e gráficos ligados. | Expor só os parâmetros do recorte, com valores de partida, e deixar claro que o resto é interno (D2; decisão de design 6 da P02). |
+| > *ruptura:* valor fora do permitido | `D:` Escolha pelo menos um **dataset de treino** para continuar. | Impedir uma configuração que não pode ser treinada, em vez de deixar o treino falhar depois. |
+| > nomear a configuração | `D:` Sugiro o nome **DeepLabV3+ – 50 épocas** `[H]`, a partir do **modelo** e das **épocas**. Quer manter?<br>`U:` Mantenho. | Dar à configuração um **nome** que as outras personas reconheçam ao executar e comparar. O formato do nome continua em aberto `[?]`. |
+| **treinar o modelo** (T08) | `U:` Pode iniciar o treino.<br>`D:` **Treino** iniciado com a **DeepLabV3+ – 50 épocas**. Você pode sair; o **estado do treino** fica disponível quando voltar. | Combinar com a rotina em janelas curtas: iniciar e voltar depois (CI03 [3]; Q27). |
+| > acompanhar o treino | `U:` Em que ponto está o treino?<br>`D:` **Treinando:** **época** 12 de 50. Estes são os **gráficos de treino e validação** até agora. | Mostrar o progresso por época e a evolução do treino (CI03 [4]; RC04). |
+| > *ruptura:* treino interrompido | `D:` **Falhou:** o treino parou na **época** 18 porque faltou memória no computador. A **configuração** foi mantida. Reduzir o **batch size** costuma resolver; quer reiniciar com **batch size** 8 `[H]`?<br>`U:` Sim, reinicie. | Explicar a causa e oferecer o caminho de volta sem refazer a configuração (CI03 [3]; E8 §1). |
+| > conferir o resultado do treino | `D:` **Treino concluído** na **época** 41: o **early stopping** encerrou o treino porque o desempenho na validação não melhorou nas últimas 5 **épocas**. A **DeepLabV3+ – 50 épocas** está entre as **configurações disponíveis**, com o **IoU** da classe **Trilha**, a **acurácia**, o **tempo de inferência** e a **matriz de confusão** no **conjunto de teste anotado**. | Explicar por que o treino terminou antes das 50 épocas e deixar a configuração pronta para uso (CI03 [4]). |
+| **comparar as configurações nos quadros de sombra** (T02, T06 e T07) | `U:` Quero comparar a nova configuração com a **DeepLabV3+ – 30 épocas** nestes 40 **quadros** de sombra. | A comparação acontece sobre a mesma entrada (CI03 [5]; RQ02). |
+| > executar as configurações nos mesmos quadros | `U:` Execute as duas configurações nestes **quadros**.<br>`D:` *(mesmo diálogo de "acompanhar o processamento" do CI01, seção 2.1)* | Reaproveitar a conversa de execução já usada pela P01. |
+| > analisar um quadro | `U:` Quero ver este **quadro** nas duas configurações.<br>`D:` Aqui estão a **imagem original**, a **máscara** de cada **configuração** e a **sobreposição**, ao mesmo tempo, com a **legenda** **Trilha** e **Fora da trilha**. | Ver as quatro informações juntas, sem alternar janelas, para notar diferenças pequenas na borda da trilha (CI03 [6]; Q24; RQ03). |
+| > comparar as métricas no conjunto de teste | `D:` No **conjunto de teste anotado**, o **IoU** da classe **Trilha** e a **acurácia** da **DeepLabV3+ – 50 épocas** são 0,01 maiores. **Resultado inconclusivo:** a diferença é pequena demais para indicar, sozinha, que a nova configuração é melhor.<br>`D:` Estes **quadros** não têm **anotação de referência**; neles, a avaliação é visual. | Reaproveitar o aviso de diferença pequena do CI02 e não estender as métricas aos quadros de campo (CI03 [7]; RQ06; RQ07). |
+| > consultar a matriz de confusão | `U:` Onde cada configuração erra?<br>`D:` Esta é a **matriz de confusão** de cada **configuração** no **conjunto de teste anotado**: mostra quanto do que era **Trilha** foi marcado como **Fora da trilha**, e o contrário. | Dar a Andreia a métrica que ela já usa para entender o tipo de erro (CI03 [7]; C03, Q20). |
+| **registrar a conclusão do experimento** | `U:` Conclusão: inconclusivo nas métricas; melhora visual nas sombras largas; ainda perde a trilha nos trechos estreitos. Mantenho a **DeepLabV3+ – 50 épocas** como **configuração candidata**. **Próximo experimento:** testar outro conjunto de dados.<br>`D:` **Conclusão** registrada junto da comparação, com a **DeepLabV3+ – 50 épocas** marcada como **configuração candidata**. | A conclusão e a decisão sobre o próximo passo são de Andreia; o sistema registra, mas não decide (CI03 [8] e [9]; RQ08). |
+
+**Fora da conversa com o sistema:** extrair os quadros dos vídeos, registrar o experimento no caderno de pesquisa (o histórico depende da H08), pedir a Rafael a validação em campo e levar a conclusão à reunião de coordenação (RQ09).
+
+**Signos que esta conversa introduz:** modelo (DeepLabV3+, FCN), parâmetros de treino (épocas, early stopping, paciência, datasets de treino, batch size, geração de gráficos), valor padrão, nome da configuração `[?]`, treino, estado do treino (treinando, concluído, falhou), época, gráficos de treino e validação, configuração candidata, quadro, matriz de confusão e próximo experimento. Também reutiliza signos das seções 2.1 e 2.2: configuração, configurações disponíveis, conjunto de teste anotado, IoU, acurácia, tempo de inferência, anotação de referência, imagem original, máscara, sobreposição, legenda, resultado inconclusivo e conclusão. Os valores de batch size e paciência são ilustrativos `[H]`.
 
 ## 3. Mapa de objetivos
 
@@ -227,7 +268,14 @@ Cada mapa parte do objetivo geral da persona e chega aos tópicos e subtópicos 
 
 **Autor(a):** Mateus Marana Assuena — 22.123.026-1
 
-{{mapa de objetivos a partir do CI03}}
+![Mapa de objetivos da P02 a partir do CI03](../assets/09_modelo_conceitual/mapa_objetivos_ci03.svg)
+
+*Figura 3 — Mapa de objetivos da P02 (Andreia Silva) a partir do CI03, por Mateus Marana Assuena. Gerado por [`mapa_objetivos_ci03.py`](../scripts/diagramas/mapa_objetivos_ci03.py).*
+
+- **Objetivo geral:** decidir qual configuração seguir no próximo experimento e qual levar à reunião, que é o objetivo da P02 na Entrega 3 e a resposta à Q28 do C03.
+- **Objetivo A (T08):** A1 e A2 são os dois primeiros tópicos da seção 2.3. O início do treino faz parte de A2.
+- **Objetivo B (T02, T06 e T07):** B2 e B3 são os dois últimos tópicos da seção 2.3. B1 (extrair os quadros dos vídeos) e B4 (pedir a validação em campo a Rafael e levar a conclusão à reunião) ficam fora do sistema.
+- **Reuso entre personas:** executar as configurações nos mesmos quadros (B2.1) usa o diálogo de acompanhar o processamento da P01 (A2.2), e comparar as métricas no conjunto de teste (B2.3) usa o aviso de diferença pequena da P03 (A2.2).
 
 ### 3.2 Mapa consolidado
 
