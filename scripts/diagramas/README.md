@@ -11,6 +11,8 @@ Os SVGs de HTA e CTT em `assets/05_tarefas/` e os mapas de objetivos em `assets/
 | `ctt_t05.py` | `ctt_t05_decidir_modelo.svg` + visão geral e detalhamentos | Henrique Finatti Silveira Belo Trebbi |
 | `mapa_objetivos_ci01.py` | `mapa_objetivos_ci01.svg` (Entrega 9, mapa da P01) | Tiago Fagundes dos Santos |
 | `mapa_objetivos_ci02.py` | `mapa_objetivos_ci02.svg` (Entrega 9, mapa da P03) | Henrique Finatti Silveira Belo Trebbi |
+| `mapa_objetivos_ci03.py` | `mapa_objetivos_ci03.svg` (Entrega 9, mapa da P02) | Mateus Marana Assuena |
+| `mapa_objetivos_consolidado.py` | `mapa_objetivos.svg` (Entrega 9, mapa consolidado) | Equipe |
 | `verificar.js` | Confere texto fora das caixas, sobreposição e texto passando da borda | — |
 
 O GOMS não tem gerador: ele é textual e fica direto em `docs/05_analise_tarefas.md`.
@@ -27,6 +29,8 @@ python3 hta_t05.py
 python3 ctt_t05.py
 python3 mapa_objetivos_ci01.py
 python3 mapa_objetivos_ci02.py
+python3 mapa_objetivos_ci03.py
+python3 mapa_objetivos_consolidado.py
 ```
 
 ## Como verificar (opcional)

@@ -1,5 +1,388 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="960" height="360" viewBox="0 0 960 360">
-<rect width="100%" height="100%" fill="#f6f8fa" stroke="#8c959f" stroke-width="4"/>
-<text x="480" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" fill="#24292f">PLACEHOLDER DE ARTEFATO</text>
-<text x="480" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#57606a">Substitua este arquivo pela evidência real da equipe.</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="2936" viewBox="0 0 1440 2936" role="img" aria-labelledby="title desc" xmlns:c2pa="http://c2pa.org/manifest">
+<title id="title">Mapa de objetivos consolidado — Equipe 17</title>
+<desc id="desc">Mapa de objetivos consolidado das personas P01, P02 e P03, a partir dos mapas individuais dos cenários CI01, CI02 e CI03. Objetivo geral, quatro grupos, objetivos O01 a O10 e seus subtópicos. Caixas tracejadas são objetivos alcançados fora do sistema.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#333"/></marker></defs>
+<rect width="1440" height="2936" fill="white"/>
+<g font-family="DejaVu Sans, Arial, sans-serif" fill="#222">
+<text x="40" y="40" text-anchor="start" font-size="25" font-weight="700">Mapa de objetivos consolidado — Equipe 17</text>
+<text x="40" y="73" text-anchor="start" font-size="16" font-weight="400">Henrique Finatti Silveira Belo Trebbi · Mateus Marana Assuena · Tiago Fagundes dos Santos · P01, P02 e P03 · CI01–CI03 · Proposta [H]</text>
+<path d="M40 100 H1400" fill="none" stroke="#333" stroke-width="1.6"/>
+<text x="40" y="130" text-anchor="start" font-size="18" font-weight="700">Visão geral</text>
+<g data-box="b1">
+<rect x="420.0" y="152" width="600.0" height="76" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="720.0" y="178" text-anchor="middle" font-size="16" font-weight="400">Escolher, com evidência, a configuração</text>
+<text x="720.0" y="201" text-anchor="middle" font-size="16" font-weight="400">do modelo usada nos testes do Baja</text>
+</g>
+<path d="M720.0 228 V259" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M196.5 259 H1243.5" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M196.5 259 V298" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<g data-box="b2">
+<rect x="40.0" y="298" width="313.0" height="76" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="196.5" y="324" text-anchor="middle" font-size="16" font-weight="400">A. Preparar</text>
+<text x="196.5" y="347" text-anchor="middle" font-size="16" font-weight="400">configurações</text>
+</g>
+<path d="M545.5 259 V298" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<g data-box="b3">
+<rect x="389.0" y="298" width="313.0" height="76" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="545.5" y="324" text-anchor="middle" font-size="16" font-weight="400">B. Executar e</text>
+<text x="545.5" y="347" text-anchor="middle" font-size="16" font-weight="400">avaliar resultados</text>
+</g>
+<path d="M894.5 259 V298" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<g data-box="b4">
+<rect x="738.0" y="298" width="313.0" height="76" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="894.5" y="324" text-anchor="middle" font-size="16" font-weight="400">C. Comparar</text>
+<text x="894.5" y="347" text-anchor="middle" font-size="16" font-weight="400">configurações</text>
+</g>
+<path d="M1243.5 259 V298" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<g data-box="b5">
+<rect x="1087.0" y="298" width="313.0" height="76" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="1243.5" y="324" text-anchor="middle" font-size="16" font-weight="400">D. Concluir e</text>
+<text x="1243.5" y="347" text-anchor="middle" font-size="16" font-weight="400">decidir</text>
+</g>
+<path d="M40 408 H1400" fill="none" stroke="#333" stroke-width="1.6"/>
+<text x="40" y="438" text-anchor="start" font-size="18" font-weight="700">Grupos A e B — preparar configurações; executar e avaliar resultados</text>
+<g data-box="b6">
+<rect x="110.0" y="460" width="420.0" height="53" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="320.0" y="486" text-anchor="middle" font-size="16" font-weight="400">A. Preparar configurações</text>
+</g>
+<path d="M320.0 513 V544" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M172.5 544 H467.5" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M172.5 544 V583" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<g data-box="b7">
+<rect x="40.0" y="583" width="265.0" height="99" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="172.5" y="609" text-anchor="middle" font-size="16" font-weight="400">O01. Definir uma</text>
+<text x="172.5" y="632" text-anchor="middle" font-size="16" font-weight="400">configuração de</text>
+<text x="172.5" y="655" text-anchor="middle" font-size="16" font-weight="400">treino (P02)</text>
+</g>
+<path d="M467.5 544 V583" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<g data-box="b8">
+<rect x="335.0" y="583" width="265.0" height="99" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="467.5" y="609" text-anchor="middle" font-size="16" font-weight="400">O02. Treinar o</text>
+<text x="467.5" y="632" text-anchor="middle" font-size="16" font-weight="400">modelo (P02)</text>
+</g>
+<g data-box="b9">
+<rect x="800.0" y="460" width="460.0" height="53" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="1030.0" y="486" text-anchor="middle" font-size="16" font-weight="400">B. Executar e avaliar resultados</text>
+</g>
+<path d="M1030.0 513 V544" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M775.3 544 H1284.7" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M775.3 544 V583" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<g data-box="b10">
+<rect x="660.0" y="583" width="230.7" height="99" fill="white" stroke="#333" stroke-width="1.6" stroke-dasharray="8 5" class="frame"/>
+<text x="775.3333333333334" y="609" text-anchor="middle" font-size="16" font-weight="400">Obter as entradas</text>
+<text x="775.3333333333334" y="632" text-anchor="middle" font-size="16" font-weight="400">(imagens e quadros)</text>
+<text x="775.3333333333334" y="655" text-anchor="middle" font-size="16" font-weight="400">(P01, P02)</text>
+</g>
+<path d="M1030.0 544 V583" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<g data-box="b11">
+<rect x="914.7" y="583" width="230.7" height="99" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="1030.0" y="609" text-anchor="middle" font-size="16" font-weight="400">O03. Executar a</text>
+<text x="1030.0" y="632" text-anchor="middle" font-size="16" font-weight="400">segmentação</text>
+<text x="1030.0" y="655" text-anchor="middle" font-size="16" font-weight="400">(P01, P02)</text>
+</g>
+<path d="M1284.7 544 V583" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<g data-box="b12">
+<rect x="1169.3" y="583" width="230.7" height="99" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="1284.6666666666667" y="609" text-anchor="middle" font-size="16" font-weight="400">O04. Avaliar a</text>
+<text x="1284.6666666666667" y="632" text-anchor="middle" font-size="16" font-weight="400">segmentação de uma</text>
+<text x="1284.6666666666667" y="655" text-anchor="middle" font-size="16" font-weight="400">imagem (P01, P02)</text>
+</g>
+<path d="M40 716 H1400" fill="none" stroke="#333" stroke-width="1.6"/>
+<text x="40" y="746" text-anchor="start" font-size="18" font-weight="700">Grupos C e D — comparar configurações; concluir e decidir</text>
+<g data-box="b13">
+<rect x="170.0" y="768" width="460.0" height="53" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="400.0" y="794" text-anchor="middle" font-size="16" font-weight="400">C. Comparar configurações</text>
+</g>
+<path d="M400.0 821 V852" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M153.3 852 H646.7" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M153.3 852 V891" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<g data-box="b14">
+<rect x="40.0" y="891" width="226.7" height="122" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="153.33333333333331" y="917" text-anchor="middle" font-size="16" font-weight="400">O05. Comparar</text>
+<text x="153.33333333333331" y="940" text-anchor="middle" font-size="16" font-weight="400">configurações sobre a</text>
+<text x="153.33333333333331" y="963" text-anchor="middle" font-size="16" font-weight="400">mesma entrada</text>
+<text x="153.33333333333331" y="986" text-anchor="middle" font-size="16" font-weight="400">(P01, P02)</text>
+</g>
+<path d="M400.0 852 V891" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<g data-box="b15">
+<rect x="286.7" y="891" width="226.7" height="122" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="400.0" y="917" text-anchor="middle" font-size="16" font-weight="400">O06. Comparar o</text>
+<text x="400.0" y="940" text-anchor="middle" font-size="16" font-weight="400">desempenho</text>
+<text x="400.0" y="963" text-anchor="middle" font-size="16" font-weight="400">consolidado</text>
+<text x="400.0" y="986" text-anchor="middle" font-size="16" font-weight="400">(P03, P02)</text>
+</g>
+<path d="M646.7 852 V891" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<g data-box="b16">
+<rect x="533.3" y="891" width="226.7" height="122" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="646.6666666666666" y="917" text-anchor="middle" font-size="16" font-weight="400">O07. Entender o</text>
+<text x="646.6666666666666" y="940" text-anchor="middle" font-size="16" font-weight="400">que os números</text>
+<text x="646.6666666666666" y="963" text-anchor="middle" font-size="16" font-weight="400">significam</text>
+<text x="646.6666666666666" y="986" text-anchor="middle" font-size="16" font-weight="400">(P03, P02)</text>
+</g>
+<g data-box="b17">
+<rect x="880.0" y="768" width="460.0" height="53" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="1110.0" y="794" text-anchor="middle" font-size="16" font-weight="400">D. Concluir e decidir</text>
+</g>
+<path d="M1110.0 821 V852" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M911.3 852 H1308.7" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M911.3 852 V891" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<g data-box="b18">
+<rect x="820.0" y="891" width="182.7" height="99" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="911.3333333333334" y="917" text-anchor="middle" font-size="16" font-weight="400">O08. Registrar a</text>
+<text x="911.3333333333334" y="940" text-anchor="middle" font-size="16" font-weight="400">conclusão</text>
+<text x="911.3333333333334" y="963" text-anchor="middle" font-size="16" font-weight="400">(P01, P02, P03)</text>
+</g>
+<path d="M1110.0 852 V891" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<g data-box="b19">
+<rect x="1018.7" y="891" width="182.7" height="99" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="1110.0" y="917" text-anchor="middle" font-size="16" font-weight="400">O09. Apresentar a</text>
+<text x="1110.0" y="940" text-anchor="middle" font-size="16" font-weight="400">recomendação à</text>
+<text x="1110.0" y="963" text-anchor="middle" font-size="16" font-weight="400">coordenação (P03)</text>
+</g>
+<path d="M1308.7 852 V891" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<g data-box="b20">
+<rect x="1217.3" y="891" width="182.7" height="99" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="1308.6666666666667" y="917" text-anchor="middle" font-size="16" font-weight="400">O10. Registrar a</text>
+<text x="1308.6666666666667" y="940" text-anchor="middle" font-size="16" font-weight="400">decisão da</text>
+<text x="1308.6666666666667" y="963" text-anchor="middle" font-size="16" font-weight="400">coordenação (P03)</text>
+</g>
+<g data-box="b21">
+<rect x="460.0" y="1047" width="520.0" height="53" fill="white" stroke="#333" stroke-width="1.6" stroke-dasharray="8 5" class="frame"/>
+<text x="720.0" y="1073" text-anchor="middle" font-size="16" font-weight="400">Fora do sistema (grupos C e D)</text>
+</g>
+<path d="M720.0 1100 V1131" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M333.3 1131 H1106.7" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M333.3 1131 V1170" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<g data-box="b22">
+<rect x="160.0" y="1170" width="346.7" height="99" fill="white" stroke="#333" stroke-width="1.6" stroke-dasharray="8 5" class="frame"/>
+<text x="333.33333333333337" y="1196" text-anchor="middle" font-size="16" font-weight="400">Pedir execução,</text>
+<text x="333.33333333333337" y="1219" text-anchor="middle" font-size="16" font-weight="400">conferência ou validação</text>
+<text x="333.33333333333337" y="1242" text-anchor="middle" font-size="16" font-weight="400">a um colega (P02, P03)</text>
+</g>
+<path d="M720.0 1131 V1170" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<g data-box="b23">
+<rect x="546.7" y="1170" width="346.7" height="99" fill="white" stroke="#333" stroke-width="1.6" stroke-dasharray="8 5" class="frame"/>
+<text x="720.0" y="1196" text-anchor="middle" font-size="16" font-weight="400">Comunicar as</text>
+<text x="720.0" y="1219" text-anchor="middle" font-size="16" font-weight="400">conclusões ao grupo</text>
+<text x="720.0" y="1242" text-anchor="middle" font-size="16" font-weight="400">(P01)</text>
+</g>
+<path d="M1106.7 1131 V1170" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<g data-box="b24">
+<rect x="933.3" y="1170" width="346.7" height="99" fill="white" stroke="#333" stroke-width="1.6" stroke-dasharray="8 5" class="frame"/>
+<text x="1106.6666666666667" y="1196" text-anchor="middle" font-size="16" font-weight="400">Discutir a decisão</text>
+<text x="1106.6666666666667" y="1219" text-anchor="middle" font-size="16" font-weight="400">na reunião de</text>
+<text x="1106.6666666666667" y="1242" text-anchor="middle" font-size="16" font-weight="400">coordenação (P02, P03)</text>
+</g>
+<path d="M40 1303 H1400" fill="none" stroke="#333" stroke-width="1.6"/>
+<text x="40" y="1333" text-anchor="start" font-size="18" font-weight="700">Desdobramento dos objetivos em subtópicos</text>
+<g data-box="b25">
+<rect x="120.0" y="1355" width="440.0" height="76" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="340.0" y="1381" text-anchor="middle" font-size="16" font-weight="400">O01. Definir uma configuração</text>
+<text x="340.0" y="1404" text-anchor="middle" font-size="16" font-weight="400">de treino</text>
+</g>
+<path d="M340.0 1431 V1462" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M182.5 1462 H497.5" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M182.5 1462 V1501" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<g data-box="b26">
+<rect x="40.0" y="1501" width="285.0" height="99" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="182.5" y="1527" text-anchor="middle" font-size="16" font-weight="400">O01.1. Escolher o</text>
+<text x="182.5" y="1550" text-anchor="middle" font-size="16" font-weight="400">modelo e os</text>
+<text x="182.5" y="1573" text-anchor="middle" font-size="16" font-weight="400">parâmetros</text>
+</g>
+<path d="M497.5 1462 V1501" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<g data-box="b27">
+<rect x="355.0" y="1501" width="285.0" height="99" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="497.5" y="1527" text-anchor="middle" font-size="16" font-weight="400">O01.2. Nomear a</text>
+<text x="497.5" y="1550" text-anchor="middle" font-size="16" font-weight="400">configuração</text>
+</g>
+<g data-box="b28">
+<rect x="840.0" y="1355" width="420.0" height="53" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="1050.0" y="1381" text-anchor="middle" font-size="16" font-weight="400">O02. Treinar o modelo</text>
+</g>
+<path d="M1050.0 1408 V1439" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M867.5 1439 H1232.5" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M867.5 1439 V1478" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<g data-box="b29">
+<rect x="700.0" y="1478" width="335.0" height="76" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="867.5" y="1504" text-anchor="middle" font-size="16" font-weight="400">O02.1. Acompanhar</text>
+<text x="867.5" y="1527" text-anchor="middle" font-size="16" font-weight="400">o treino</text>
+</g>
+<path d="M1232.5 1439 V1478" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<g data-box="b30">
+<rect x="1065.0" y="1478" width="335.0" height="76" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="1232.5" y="1504" text-anchor="middle" font-size="16" font-weight="400">O02.2. Conferir o</text>
+<text x="1232.5" y="1527" text-anchor="middle" font-size="16" font-weight="400">resultado do treino</text>
+</g>
+<g data-box="b31">
+<rect x="130.0" y="1634" width="420.0" height="53" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="340.0" y="1660" text-anchor="middle" font-size="16" font-weight="400">O03. Executar a segmentação</text>
+</g>
+<path d="M340.0 1687 V1718" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M182.5 1718 H497.5" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M182.5 1718 V1757" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<g data-box="b32">
+<rect x="40.0" y="1757" width="285.0" height="99" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="182.5" y="1783" text-anchor="middle" font-size="16" font-weight="400">O03.1. Enviar as</text>
+<text x="182.5" y="1806" text-anchor="middle" font-size="16" font-weight="400">entradas e escolher</text>
+<text x="182.5" y="1829" text-anchor="middle" font-size="16" font-weight="400">as configurações</text>
+</g>
+<path d="M497.5 1718 V1757" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<g data-box="b33">
+<rect x="355.0" y="1757" width="285.0" height="99" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="497.5" y="1783" text-anchor="middle" font-size="16" font-weight="400">O03.2. Acompanhar</text>
+<text x="497.5" y="1806" text-anchor="middle" font-size="16" font-weight="400">o processamento</text>
+</g>
+<g data-box="b34">
+<rect x="820.0" y="1634" width="460.0" height="76" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="1050.0" y="1660" text-anchor="middle" font-size="16" font-weight="400">O04. Avaliar a segmentação</text>
+<text x="1050.0" y="1683" text-anchor="middle" font-size="16" font-weight="400">de uma imagem</text>
+</g>
+<path d="M1050.0 1710 V1741" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M808.7 1741 H1291.3" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M808.7 1741 V1780" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<g data-box="b35">
+<rect x="700.0" y="1780" width="217.3" height="99" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="808.6666666666666" y="1806" text-anchor="middle" font-size="16" font-weight="400">O04.1. Ver o</text>
+<text x="808.6666666666666" y="1829" text-anchor="middle" font-size="16" font-weight="400">resultado sobre</text>
+<text x="808.6666666666666" y="1852" text-anchor="middle" font-size="16" font-weight="400">a imagem</text>
+</g>
+<path d="M1050.0 1741 V1780" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<g data-box="b36">
+<rect x="941.3" y="1780" width="217.3" height="99" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="1050.0" y="1806" text-anchor="middle" font-size="16" font-weight="400">O04.2. Conferir se</text>
+<text x="1050.0" y="1829" text-anchor="middle" font-size="16" font-weight="400">há métricas</text>
+</g>
+<path d="M1291.3 1741 V1780" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<g data-box="b37">
+<rect x="1182.7" y="1780" width="217.3" height="99" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="1291.3333333333333" y="1806" text-anchor="middle" font-size="16" font-weight="400">O04.3. Registrar a</text>
+<text x="1291.3333333333333" y="1829" text-anchor="middle" font-size="16" font-weight="400">avaliação da</text>
+<text x="1291.3333333333333" y="1852" text-anchor="middle" font-size="16" font-weight="400">imagem</text>
+</g>
+<g data-box="b38">
+<rect x="80.0" y="1913" width="440.0" height="76" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="300.0" y="1939" text-anchor="middle" font-size="16" font-weight="400">O05. Comparar configurações</text>
+<text x="300.0" y="1962" text-anchor="middle" font-size="16" font-weight="400">sobre a mesma entrada</text>
+</g>
+<path d="M300.0 1989 V2020" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M162.5 2020 H437.5" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M162.5 2020 V2059" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<g data-box="b39">
+<rect x="40.0" y="2059" width="245.0" height="99" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="162.5" y="2085" text-anchor="middle" font-size="16" font-weight="400">O05.1. Escolher as</text>
+<text x="162.5" y="2108" text-anchor="middle" font-size="16" font-weight="400">configurações a</text>
+<text x="162.5" y="2131" text-anchor="middle" font-size="16" font-weight="400">comparar</text>
+</g>
+<path d="M437.5 2020 V2059" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<g data-box="b40">
+<rect x="315.0" y="2059" width="245.0" height="99" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="437.5" y="2085" text-anchor="middle" font-size="16" font-weight="400">O05.2. Comparar na</text>
+<text x="437.5" y="2108" text-anchor="middle" font-size="16" font-weight="400">mesma imagem</text>
+<text x="437.5" y="2131" text-anchor="middle" font-size="16" font-weight="400">e região</text>
+</g>
+<g data-box="b41">
+<rect x="770.0" y="1913" width="480.0" height="53" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="1010.0" y="1939" text-anchor="middle" font-size="16" font-weight="400">O06. Comparar o desempenho consolidado</text>
+</g>
+<path d="M1010.0 1966 V1997" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M711.5 1997 H1308.5" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M711.5 1997 V2036" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<g data-box="b42">
+<rect x="620.0" y="2036" width="183.0" height="99" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="711.5" y="2062" text-anchor="middle" font-size="16" font-weight="400">O06.1. Escolher as</text>
+<text x="711.5" y="2085" text-anchor="middle" font-size="16" font-weight="400">configurações</text>
+</g>
+<path d="M910.5 1997 V2036" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<g data-box="b43">
+<rect x="819.0" y="2036" width="183.0" height="99" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="910.5" y="2062" text-anchor="middle" font-size="16" font-weight="400">O06.2. Conferir se</text>
+<text x="910.5" y="2085" text-anchor="middle" font-size="16" font-weight="400">a comparação</text>
+<text x="910.5" y="2108" text-anchor="middle" font-size="16" font-weight="400">é válida</text>
+</g>
+<path d="M1109.5 1997 V2036" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<g data-box="b44">
+<rect x="1018.0" y="2036" width="183.0" height="99" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="1109.5" y="2062" text-anchor="middle" font-size="16" font-weight="400">O06.3. Ler o</text>
+<text x="1109.5" y="2085" text-anchor="middle" font-size="16" font-weight="400">desempenho de</text>
+<text x="1109.5" y="2108" text-anchor="middle" font-size="16" font-weight="400">cada uma</text>
+</g>
+<path d="M1308.5 1997 V2036" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<g data-box="b45">
+<rect x="1217.0" y="2036" width="183.0" height="99" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="1308.5" y="2062" text-anchor="middle" font-size="16" font-weight="400">O06.4. Consultar</text>
+<text x="1308.5" y="2085" text-anchor="middle" font-size="16" font-weight="400">a matriz de</text>
+<text x="1308.5" y="2108" text-anchor="middle" font-size="16" font-weight="400">confusão</text>
+</g>
+<g data-box="b46">
+<rect x="130.0" y="2192" width="420.0" height="76" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="340.0" y="2218" text-anchor="middle" font-size="16" font-weight="400">O07. Entender o que os</text>
+<text x="340.0" y="2241" text-anchor="middle" font-size="16" font-weight="400">números significam</text>
+</g>
+<path d="M340.0 2268 V2299" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M182.5 2299 H497.5" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M182.5 2299 V2338" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<g data-box="b47">
+<rect x="40.0" y="2338" width="285.0" height="99" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="182.5" y="2364" text-anchor="middle" font-size="16" font-weight="400">O07.1. Entender</text>
+<text x="182.5" y="2387" text-anchor="middle" font-size="16" font-weight="400">um termo</text>
+</g>
+<path d="M497.5 2299 V2338" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<g data-box="b48">
+<rect x="355.0" y="2338" width="285.0" height="99" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="497.5" y="2364" text-anchor="middle" font-size="16" font-weight="400">O07.2. Julgar a</text>
+<text x="497.5" y="2387" text-anchor="middle" font-size="16" font-weight="400">diferença entre</text>
+<text x="497.5" y="2410" text-anchor="middle" font-size="16" font-weight="400">configurações</text>
+</g>
+<g data-box="b49">
+<rect x="840.0" y="2192" width="420.0" height="53" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="1050.0" y="2218" text-anchor="middle" font-size="16" font-weight="400">O08. Registrar a conclusão</text>
+</g>
+<path d="M1050.0 2245 V2276" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M867.5 2276 H1232.5" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M867.5 2276 V2315" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<g data-box="b50">
+<rect x="700.0" y="2315" width="335.0" height="76" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="867.5" y="2341" text-anchor="middle" font-size="16" font-weight="400">O08.1. Informar a</text>
+<text x="867.5" y="2364" text-anchor="middle" font-size="16" font-weight="400">conclusão</text>
+</g>
+<path d="M1232.5 2276 V2315" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<g data-box="b51">
+<rect x="1065.0" y="2315" width="335.0" height="76" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="1232.5" y="2341" text-anchor="middle" font-size="16" font-weight="400">O08.2. Conferir a</text>
+<text x="1232.5" y="2364" text-anchor="middle" font-size="16" font-weight="400">conclusão</text>
+</g>
+<g data-box="b52">
+<rect x="440.0" y="2471" width="560.0" height="53" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="720.0" y="2497" text-anchor="middle" font-size="16" font-weight="400">O09. Apresentar a recomendação à coordenação</text>
+</g>
+<path d="M720.0 2524 V2555" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M485.0 2555 H955.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M485.0 2555 V2594" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<g data-box="b53">
+<rect x="280.0" y="2594" width="410.0" height="76" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="485.0" y="2620" text-anchor="middle" font-size="16" font-weight="400">O09.1. Retomar</text>
+<text x="485.0" y="2643" text-anchor="middle" font-size="16" font-weight="400">a análise</text>
+</g>
+<path d="M955.0 2555 V2594" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<g data-box="b54">
+<rect x="750.0" y="2594" width="410.0" height="76" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="955.0" y="2620" text-anchor="middle" font-size="16" font-weight="400">O09.2. Responder a uma</text>
+<text x="955.0" y="2643" text-anchor="middle" font-size="16" font-weight="400">dúvida (reutiliza O07.2)</text>
+</g>
+<path d="M40 2704 H1400" fill="none" stroke="#333" stroke-width="1.6"/>
+<text x="40" y="2734" text-anchor="start" font-size="18" font-weight="700">Legenda</text>
+<g data-box="b55">
+<rect x="50.0" y="2756" width="180.0" height="50" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="140" y="2782" text-anchor="middle" font-size="16" font-weight="400">objetivo</text>
+</g>
+<g data-box="b56">
+<rect x="270.0" y="2756" width="180.0" height="50" fill="white" stroke="#333" stroke-width="1.6" stroke-dasharray="8 5" class="frame"/>
+<text x="360" y="2782" text-anchor="middle" font-size="16" font-weight="400">fora do sistema</text>
+</g>
+<text x="480" y="2778" text-anchor="start" font-size="14" font-weight="400">Caixa contínua: objetivo apoiado pelo sistema, com ID O01–O10 (subtópicos O01.1…), usado nas Entregas 10 e 11.</text>
+<text x="480" y="2800" text-anchor="start" font-size="14" font-weight="400">Caixa tracejada: objetivo alcançado entre pessoas, fora do sistema (RQ09); não recebe ID.</text>
+<text x="40" y="2836" text-anchor="start" font-size="14" font-weight="400">Entre parênteses: personas que têm o objetivo. Correspondência com os mapas individuais na seção 3.2 da Entrega 9.</text>
+<text x="40" y="2856" text-anchor="start" font-size="14" font-weight="400">O05 reúne T03 (P01) e T07 (P02); O08 reúne as conclusões da validação (P01), do experimento (P02) e a recomendação (P03).</text>
+<text x="40" y="2876" text-anchor="start" font-size="14" font-weight="400">O10 não tem subtópicos: é um único diálogo.</text>
+<text x="40" y="2896" text-anchor="start" font-size="14" font-weight="400">[H]: proposta derivada de proto-personas, a revisar depois da coleta da Entrega 7.</text>
+</g><metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTplZjAxMzI2Yi05ZGIzLTQwODQtODE0YS0wODkyZjk4YjM2NWEAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaH9Xtp4NLSuvMilkhPC5SvcAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDo3OWIzNmUwMy1lYjI3LTQ0NzgtYjI0YS00MGY1ZjYyMGIwM2RscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNoeGN0mtkIcRs2VtUZsc2LiAAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggDl3ycmyAzoJA9AsszHrnXeWhIkJ8PPb72M0zmePV3SOkZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaPVY/fMMF7H+tPcXBJFz8z8AAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRMAAAAAAAAAAAAAAAAZGhhc2hYILehQ7DENoRR6hCQaRL1x57ycIOsvm/+K7VZ9FE+a93wZG5hbWVuanVtYmYgbWFuaWZlc3RqZXhjbHVzaW9uc4GiZXN0YXJ0GXdhZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOmVmMDEzMjZiLTlkYjMtNDA4NC04MTRhLTA4OTJmOThiMzY1YS9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOjQyMmQxZDM1LWY0NDktNGQ1MS1iOTQwLWYzMGIxYWI2MTAyM3JjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCAOXfJybIDOgkD0CyzMeudd5aEiQnw89vvYzTOZ49XdI6JjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggdV1yu1LpCIr+42fFnqrHAHMqoasGR1jfo58ANjT6IneiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFggSUQUlbgjQhdMxpHR13bIOT0MvqV/lDUc16a4U2jWauV0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQEUJAyuGpJvzq9dlwEOc9g19mkLpbqPUBmdME2T6FXQRFAH3psXVM+jMge6Bi7ohBsuK+nOA/6Mz7uADB6pA4+Q=</c2pa:manifest></metadata></svg>
