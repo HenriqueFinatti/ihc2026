@@ -9,6 +9,7 @@ Os SVGs de HTA e CTT em `assets/05_tarefas/` e os mapas de objetivos em `assets/
 | `ctt_t03.py` | `ctt_t03_comparar_configuracoes.svg` + visão geral e detalhamentos | Tiago Fagundes dos Santos |
 | `hta_t05.py` | `hta_t05_decidir_modelo.svg` | Henrique Finatti Silveira Belo Trebbi |
 | `ctt_t05.py` | `ctt_t05_decidir_modelo.svg` + visão geral e detalhamentos | Henrique Finatti Silveira Belo Trebbi |
+| `mapa_objetivos_ci01.py` | `mapa_objetivos_ci01.svg` (Entrega 9, mapa da P01) | Tiago Fagundes dos Santos |
 | `mapa_objetivos_ci02.py` | `mapa_objetivos_ci02.svg` (Entrega 9, mapa da P03) | Henrique Finatti Silveira Belo Trebbi |
 | `verificar.js` | Confere texto fora das caixas, sobreposição e texto passando da borda | — |
 
@@ -24,6 +25,7 @@ python3 hta_t03.py
 python3 ctt_t03.py
 python3 hta_t05.py
 python3 ctt_t05.py
+python3 mapa_objetivos_ci01.py
 python3 mapa_objetivos_ci02.py
 ```
 
