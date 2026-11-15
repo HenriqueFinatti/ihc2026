@@ -23,49 +23,77 @@ Exemplos de conversas:
 
 Modele também rupturas plausíveis: entrada inválida, falha de processamento, ausência de resultado, permissão insuficiente, filtro sem resultados, conflito de alteração, cancelamento ou necessidade de recuperação.
 
-## M01 — {{nome do cenário/objetivo}}
+## M01 — Executar, avaliar e comparar a segmentação
 
 **Autor(a):** Tiago Fagundes dos Santos — 22.123.017-0  
 **Cenário de interação de origem:** CI01 — Validação de segmentação e comparação de configurações sem scripts (P01, Rafael)  
 **Objetivo(s):** O03, O04, O05, O08  
 **Tarefa(s) relacionada(s):** T01, T02 (compartilhada com a P02), T03  
-**Signos relevantes:** {{...}}
+**Signos relevantes:** imagem; formato aceito; configuração (nome, descrição, métricas no conjunto de teste); estado da execução (processando, concluído, falhou); progresso; causa da falha; imagem original; máscara; legenda (*Trilha*, *Fora da trilha*); sobreposição; transparência; região ampliada; anotação de referência; IoU e acurácia; avaliação da imagem (correta, duvidosa); origem do problema (imagem/captura ou modelo); imagem inconclusiva; conclusão do tipo validação (Entrega 9, seção 4)
 
 ### Diagrama
 
 ![MoLIC M01](../assets/10_molic/molic_m01.svg)
 
-**Fonte editável:** {{adicione aqui o link para o arquivo `.drawio`, `.svg` editável ou outro formato utilizado pela equipe}}
+*Figura — MoLIC M01, por Tiago Fagundes dos Santos.*
+
+**Fonte editável:** [`scripts/diagramas/molic_m01.py`](../scripts/diagramas/molic_m01.py),
+ que usa os elementos de MoLIC de [`molic_svg.py`](../scripts/diagramas/molic_svg.py).
 
 ### Leitura do diagrama
 
 Explique em texto o caminho principal e pelo menos os caminhos alternativos/rupturas mais importantes.
 
+O diagrama tem um ponto de abertura e **uma única conversa**, que começa com `gco: executar a segmentação (O03)` e termina com `gcc: validar a segmentação (O03–O05, O08)`. Dentro dela, Rafael passa por quatro objetivos: executa a segmentação das imagens do teste (O03), avalia cada imagem (O04), compara as imagens duvidosas com outra configuração (O05) e registra a conclusão da validação (O08). A entrada em cada novo objetivo é marcada por um `gco` na fala de transição. A coluna da esquerda é o caminho principal; a do centro tem as cenas de alerta e a O04.2; a da direita, a comparação (O05). Descarregar as imagens das câmeras e informar o grupo da equipe acontecem fora do sistema (RQ09).
+
 #### Caminho principal
 
-1. {{ponto de abertura → cena...}}
-2. {{...}}
+1. **Ponto de abertura → O03.1 Enviar as entradas e escolher as configurações.** Com `u: segmentar as imagens do teste` (`gco: executar a segmentação, O03`), o sistema mostra as configurações disponíveis, cada uma com descrição e métricas no conjunto de teste. Rafael envia as imagens do teste e escolhe a configuração.
+2. **O03.1 → processo do sistema.** Com `u: executar`, o sistema confere se todas as imagens estão em formato aceito.
+3. **Processo → O03.2 Acompanhar o processamento.** Com `d: imagens aceitas`, o sistema mostra o estado da execução (processando, concluído ou falhou), o progresso e a configuração em execução.
+4. **O03.2 → O04.1 Ver o resultado sobre a imagem.** Com `d: concluído` e a precondição "execução inicial" (`gco: avaliar a segmentação, O04`), o sistema mostra a imagem original e a máscara, com a legenda *Trilha* e *Fora da trilha*. Rafael escolhe a sobreposição, a transparência e a região ampliada.
+5. **O04.1 ⇄ O04.2 Conferir se há métricas.** Com `u: qual é o IoU?`, o sistema mostra IoU e acurácia quando a imagem tem anotação de referência. Rafael volta com `u: voltar à imagem`.
+6. **O04.1 → O04.3 Registrar a avaliação da imagem.** Com `u: avaliar esta imagem`, Rafael marca a imagem como correta ou duvidosa e, se for o caso, a origem do problema: imagem (captura) ou modelo. Com `u: próxima imagem`, volta à O04.1 para a imagem seguinte; esse laço se repete até todas as imagens estarem avaliadas.
+7. **O04.3 → O08.1 Informar a conclusão (validação).** Com `u: registrar a conclusão` (`gco: registrar a conclusão, O08`), Rafael informa a configuração mais adequada, as imagens inconclusivas e as que tiveram problema na imagem (captura). O tipo de conclusão é validação.
+8. **O08.1 → processo → O08.2 Conferir a conclusão.** Com `u: registrar`, o sistema confere se todas as imagens têm avaliação, guarda a conclusão e responde `d: conclusão registrada`, mostrando o que foi registrado.
+9. **O08.2 → encerramento.** Com `u: confirmar` (`gcc: validar a segmentação, O03–O05 e O08`), a conversa termina.
+
+**Comparação com outra configuração (O05).** É o caminho que Rafael segue no CI01 quando há muitas imagens duvidosas, entre os passos 6 e 7:
+
+1. **O04.3 → O05.1 Escolher as configurações a comparar.** Com `u: comparar as duvidosas` (`gco: comparar, O05`), o sistema mostra as configurações disponíveis, com descrição e métricas no conjunto de teste, e indica quais já foram executadas nestas imagens. Rafael escolhe a outra configuração e as imagens duvidosas.
+2. **O05.1 → O03.2 Acompanhar o processamento.** Com `u: executar nas imagens duvidosas`, a conversa volta à **mesma cena** da execução inicial (reuso): Rafael não aprende um caminho novo para executar.
+3. **O03.2 → O05.2 Comparar na mesma imagem e região.** Com `d: concluído` e a precondição "comparação", o sistema mostra as configurações lado a lado, na mesma região ampliada, com a avaliação já registrada da imagem.
+4. **O05.2 → O04.3.** Com `u: voltar à avaliação`, Rafael revê a avaliação das imagens à luz da comparação e segue para a conclusão (passo 7).
+
+A precondição é o que diferencia as duas saídas da O03.2: o mesmo `d: concluído` leva à avaliação depois da execução inicial e à comparação depois da execução de outra configuração.
 
 #### Alternativas e rupturas
 
 | Situação | Onde ocorre | Como o usuário percebe | Caminho de recuperação/saída |
 |---|---|---|---|
-| {{dado inválido}} | {{...}} | {{fala/feedback}} | {{...}} |
+| Imagens em formato não aceito | Processo depois da O03.1 | `d: [AL] formato não aceito` — cena de alerta "Imagens fora do formato aceito", com quais imagens não são aceitas e quais formatos são aceitos | `u: trocar os arquivos` volta à O03.1 (seta tracejada); `u: seguir sem elas` segue para a O03.2 com as outras imagens, por decisão dele |
+| A execução falha em uma imagem | O03.2 | `d: [RA] falhou` — cena de alerta "Falha na execução", com a causa e a imagem afetada; as outras imagens seguem | `u: tentar de novo / deixar de fora` volta à O03.2 (seta tracejada). Quando a solução está fora do sistema, o diálogo diz o que fazer (`[CE]`) |
+| Imagem sem anotação de referência | O04.2 | `d: [PP] sem anotação: não há métricas; avaliação visual` | Prevenção passiva: não há erro a recuperar. Rafael volta à O04.1 e avalia visualmente, com a sobreposição e a região ampliada |
+| Imagens sem avaliação ao registrar a conclusão | Processo depois da O08.1 | `d: [AL] imagens sem avaliação` — cena de alerta com quantas imagens ainda não têm avaliação | `u: avaliá-las antes` volta à O04.3 (seta tracejada), de onde `u: próxima imagem` leva às imagens; `u: concluir assim mesmo` segue para a O08.2 com a conclusão registrada |
+| A comparação muda a avaliação de uma imagem | O05.2 | Vê as duas configurações na mesma região, ao lado da avaliação registrada | `u: voltar à avaliação` leva à O04.3, onde a avaliação pode ser alterada |
+| A conclusão registrada tem um erro | O08.2 | Vê o registro na conferência e percebe o erro | `u: corrigir` volta à O08.1 (seta tracejada), com o que já foi informado |
 
 ### Checklist específico de modelagem
 
-- [ ] Existe **ponto de abertura** coerente com o início do objetivo.
-- [ ] As **cenas de conversa** representam tópicos/assuntos, não nomes de páginas apenas.
-- [ ] As transições/falas deixam claro o que o usuário ou o sistema comunica.
-- [ ] Há **ponto(s) de encerramento** para objetivos concluídos/abandonados quando aplicável.
-- [ ] Processamentos do sistema estão representados conforme a notação adotada em aula, sem “inventar” fala do usuário.
-- [ ] Rupturas (breakdowns) relevantes têm feedback e caminho de recuperação, não becos sem saída.
-- [ ] Acessos ubíquos/atalhos só aparecem quando semanticamente justificáveis.
-- [ ] O diagrama cobre caminhos alternativos importantes, e não apenas o “happy path”.
-- [ ] Nomes de objetivos, tópicos e signos são coerentes com a Entrega 9.
-- [ ] O diagrama é legível em tamanho normal no GitHub.
-- [ ] O MoLIC representa a conversa usuário–sistema, não o fluxo interno do algoritmo.
-- [ ] Processamento, filtros, administração, relatórios e históricos incluem retornos/rupturas quando relevantes.
+- [x] Existe **ponto de abertura** coerente com o início do objetivo. *(A conversa começa no ponto de abertura do sistema com `u: segmentar as imagens do teste`, que é o primeiro passo do CI01 depois de as imagens chegarem das câmeras.)*
+- [x] As **cenas de conversa** representam tópicos/assuntos, não nomes de páginas apenas. *(Os tópicos usam os nomes oficiais da tabela de subtópicos da Entrega 9, seção 3.2. As cenas de alerta têm o assunto da ruptura no título, sem ID, porque não são subtópicos.)*
+- [x] As transições/falas deixam claro o que o usuário ou o sistema comunica. *(Falas `u:` e `d:` tiradas da conversa da Entrega 9, seção 2.1.)*
+- [x] Há **ponto(s) de encerramento** para objetivos concluídos/abandonados quando aplicável. *(Um: fim da conversa (`gcc` O03–O05 e O08). Não há saída por abandono: todas as rupturas do CI01 têm recuperação dentro do sistema, e a falha em uma imagem não encerra a validação, porque as outras imagens seguem.)*
+- [x] Processamentos do sistema estão representados conforme a notação adotada em aula, sem “inventar” fala do usuário. *(Dois processos: conferir o formato das imagens e conferir as avaliações antes de registrar a conclusão; as saídas são só falas `d:`. O fim da execução é uma fala `d:` que sai da O03.2.)*
+- [x] Rupturas (breakdowns) relevantes têm feedback e caminho de recuperação, não becos sem saída. *(Formato não aceito: alerta com duas saídas; falha na execução: recuperação apoiada, com captura de erro quando a solução está fora do sistema; imagens sem avaliação: alerta com duas saídas; conclusão errada: `u: corrigir`; imagem sem anotação: prevenção passiva na O04.2.)*
+- [x] Acessos ubíquos/atalhos só aparecem quando semanticamente justificáveis. *(Nenhum: no CI01 a conversa é uma sequência só, sem ponto que precise ser alcançado de qualquer cena. A explicação de termos (O07.1) não é objetivo da P01 e está no M02.)*
+- [x] O diagrama cobre caminhos alternativos importantes, e não apenas o “happy path”. *(Comparação com outra configuração (O05) e as rupturas em "Alternativas e rupturas".)*
+- [x] Nomes de objetivos, tópicos e signos são coerentes com a Entrega 9. *(Cenas O03.1–O08.2 e signos da seção 4; nomes alinhados em 14/11/2026, `PENDENCIAS.md`, INC-68.)*
+- [x] O diagrama é legível em tamanho normal no GitHub. *(SVG gerado por script e conferido com `scripts/diagramas/verificar.js`: nenhum texto fora das caixas, sobreposto ou passando da borda.)*
+- [x] O MoLIC representa a conversa usuário–sistema, não o fluxo interno do algoritmo. *(A inferência do modelo não aparece; a O03.2 mostra só o estado e o progresso da execução, e o sistema responde com falas `d:`.)*
+- [x] Processamento, filtros, administração, relatórios e históricos incluem retornos/rupturas quando relevantes. *(O processamento tem saídas de erro e a reexecução reaproveita a O03.2. Filtros, administração, relatórios exportáveis e histórico estão fora do recorte (Entrega 1, seção 8; `PENDENCIAS.md`, INC-63; H08).)*
+
+**Limitação conhecida:** na cena de alerta "Imagens sem avaliação", `u: avaliá-las antes` está desenhada até a O04.3, de onde `u: próxima imagem` leva à O04.1; na interação, o sistema pode abrir direto a primeira imagem sem avaliação.
 
 
 ## M02 — Comparar, recomendar e registrar a decisão

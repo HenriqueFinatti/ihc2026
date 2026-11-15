@@ -341,12 +341,19 @@ Os subtópicos são os diálogos de cada objetivo. Os nomes desta tabela são os
 
 | ID | Subtópico | Objetivo | Origem no mapa individual |
 |---|---|---|---|
+| O03.1 | Enviar as entradas e escolher as configurações | O03 | P01 A2.1 "Enviar as imagens e escolher a configuração" |
+| O03.2 | Acompanhar o processamento | O03 | P01 A2.2; P01 B1.2 "Executar a outra configuração nas imagens duvidosas" (reuso) |
+| O04.1 | Ver o resultado sobre a imagem | O04 | P01 A3.1 |
+| O04.2 | Conferir se há métricas | O04 | P01 A3.2 |
+| O04.3 | Registrar a avaliação da imagem | O04 | P01 A3.3 |
+| O05.1 | Escolher as configurações a comparar | O05 | P01 B1.1 "Escolher a outra configuração" |
+| O05.2 | Comparar na mesma imagem e região | O05 | P01 B1.3 "Comparar na mesma região" |
 | O06.1 | Escolher as configurações | O06 | P03 A1.1 "Escolher o que comparar" |
 | O06.2 | Conferir se a comparação é válida | O06 | P03 A1.2 |
 | O06.3 | Ler o desempenho de cada configuração | O06 | P03 A1.3 |
 | O07.1 | Entender um termo | O07 | P03 A2.1 |
 | O07.2 | Julgar a diferença entre configurações | O07 | P03 A2.2 "Julgar a diferença entre as configurações" |
-| O08.1 | Informar a conclusão | O08 | P03 A3.1 "Informar a recomendação e a ressalva" |
+| O08.1 | Informar a conclusão | O08 | P03 A3.1 "Informar a recomendação e a ressalva"; P01 B2 "Registrar a conclusão da validação" |
 | O08.2 | Conferir a conclusão | O08 | P03 A3.2 "Conferir a recomendação" |
 | O09.1 | Retomar a análise | O09 | P03 B1.1 "Retomar a comparação" |
 | O09.2 | Responder a uma dúvida (usa O07.2) | O09 | P03 B1.2 "Responder a uma dúvida da coordenação" |
@@ -504,4 +511,4 @@ Todos os objetivos O01 a O10 ficam cobertos por pelo menos um diagrama. Os ponto
 
 | Data | O que mudou | Motivo |
 |---|---|---|
-| 14/11/2026 | Seção 3.2: tabela de subtópicos com os nomes oficiais (subtópicos da P03); na figura do mapa consolidado, O06.3 passa a "Ler o desempenho de cada configuração" | Os IDs dos subtópicos só existiam na figura e os nomes divergiam entre a E9 e a E10 (`PENDENCIAS.md`: INC-68) |
+| 14/11/2026 | Seção 3.2: tabela de subtópicos com os nomes oficiais (subtópicos da P03 e da P01); na figura do mapa consolidado, O06.3 passa a "Ler o desempenho de cada configuração" | Os IDs dos subtópicos só existiam na figura e os nomes divergiam entre a E9 e a E10 (`PENDENCIAS.md`: INC-68) |
