@@ -168,49 +168,81 @@ O diagrama tem um ponto de abertura do sistema e duas conversas sobre objetivos,
 
 **Limitação conhecida:** a volta do acesso ubíquo O07.1 (`u: voltar à cena anterior`) está desenhada até a O06.3, onde os termos aparecem com mais frequência; na interação, ela leva de volta à cena de onde a pessoa veio.
 
-## M03 — {{nome do cenário/objetivo}}
+## M03 — Treinar uma configuração e compará-la
 
 **Autor(a):** Mateus Marana Assuena — 22.123.026-1  
 **Cenário de interação de origem:** CI03 — Treino e comparação de uma nova configuração em uma janela curta (P02, Andreia)  
 **Objetivo(s):** O01, O02, O03, O05, O06 (O06.3, O06.4), O07 (O07.2), O08  
 **Tarefa(s) relacionada(s):** T02 (compartilhada com a P01), T06, T07, T08  
-**Signos relevantes:** {{...}}
+**Signos relevantes:** modelo; parâmetros de treino (épocas, early stopping e paciência, datasets de treino, batch size, geração de gráficos) e seus valores padrão; nome da configuração; treino e estado do treino (treinando, concluído, falhou); época; gráficos de treino e validação; causa da falha; motivo do término do treino; quadro; imagem original; máscara; sobreposição; legenda (*Trilha*, *Fora da trilha*); região ampliada; IoU, acurácia e tempo de inferência no conjunto de teste; anotação de referência; diferença entre configurações; matriz de confusão; conclusão do tipo experimento; configuração candidata; ressalva; próximo experimento (Entrega 9, seção 4)
 
 ### Diagrama
 
 ![MoLIC M03](../assets/10_molic/molic_m03.svg)
 
-**Fonte editável:** {{adicione aqui o link para o arquivo `.drawio`, `.svg` editável ou outro formato utilizado pela equipe}}
+*Figura — MoLIC M03, por Mateus Marana Assuena.*
+
+**Fonte editável:** [`scripts/diagramas/molic_m03.py`](../scripts/diagramas/molic_m03.py),
+ que usa os elementos de MoLIC de [`molic_svg.py`](../scripts/diagramas/molic_svg.py).
 
 ### Leitura do diagrama
 
 Explique em texto o caminho principal e pelo menos os caminhos alternativos/rupturas mais importantes.
 
+O diagrama tem um ponto de abertura, um acesso ubíquo e dois encerramentos. A conversa começa com `gco: definir uma configuração de treino (O01)` e passa por cinco objetivos: definir a configuração (O01), treinar o modelo (O02), executar e comparar as configurações nos mesmos quadros (O03 e O05), comparar o desempenho no conjunto de teste (O06 e O07) e registrar a conclusão do experimento (O08). Como o treino é longo, Andreia pode sair enquanto ele roda e voltar depois pelo acesso ubíquo "em que ponto está o treino?". As cenas O03.1, O03.2 e O05.2 são as mesmas do M01, e a O06.3 e a O07.2 são as mesmas do M02 (reuso). Extrair os quadros dos vídeos, pedir a validação em campo e levar a conclusão à reunião acontecem fora do sistema (RQ09).
+
 #### Caminho principal
 
-1. {{ponto de abertura → cena...}}
-2. {{...}}
+**Treinar a nova configuração**
+
+1. **Ponto de abertura → O01.1 Escolher o modelo e os parâmetros.** Com `u: treinar uma nova configuração` (`gco: definir uma configuração de treino, O01`), o sistema mostra os modelos e os parâmetros de treino que podem ser ajustados, com os valores padrão: épocas, early stopping e paciência, datasets de treino, batch size e geração de gráficos.
+2. **O01.1 → O01.2 Nomear a configuração.** Com `u: continuar`, o sistema sugere um nome a partir do modelo e das épocas, e Andreia mantém ou altera o nome.
+3. **O01.2 → processo do sistema.** Com `u: iniciar o treino`, o sistema confere se o nome já existe e inicia o treino.
+4. **Processo → O02.1 Acompanhar o treino.** Com `d: treino iniciado` (`gco: treinar o modelo, O02`), o sistema mostra o estado do treino (treinando, concluído ou falhou), a época atual e o total, e os gráficos de treino e validação.
+5. **O02.1 → O02.2 Conferir o resultado do treino.** Com `d: treino concluído`, o sistema mostra em que época o treino terminou e por quê (por exemplo, o early stopping), o IoU da classe *Trilha*, a acurácia, o tempo de inferência e a matriz de confusão no conjunto de teste, e informa que a configuração está entre as disponíveis.
+
+**Comparar com outra configuração e concluir**
+
+6. **O02.2 → O03.1 Enviar as entradas e escolher as configurações.** Com `u: comparar com outra configuração nestes quadros` (`gco: comparar configurações, O05`), Andreia envia os quadros e escolhe as configurações a comparar, cada uma com descrição e métricas no conjunto de teste.
+7. **O03.1 → processo → O03.2 Acompanhar o processamento.** Com `u: executar`, o sistema confere o formato dos quadros e responde `d: entradas aceitas`, mostrando o estado e o progresso da execução de cada configuração.
+8. **O03.2 → O05.2 Comparar na mesma imagem e região.** Com `d: concluído` e a precondição "comparação", o sistema mostra a imagem original, a máscara de cada configuração e a sobreposição ao mesmo tempo, com a legenda *Trilha* e *Fora da trilha*. Andreia escolhe o quadro e a região ampliada.
+9. **O05.2 → O06.3 Ler o desempenho de cada configuração.** Com `u: comparar as métricas` (`gco: comparar o desempenho, O06`), o sistema mostra IoU da classe *Trilha*, acurácia e tempo de inferência no conjunto de teste e a diferença entre configurações.
+10. **O06.3 ⇄ O07.2 Julgar a diferença entre configurações.** Com `u: a diferença importa?`, o sistema mostra a diferença e o que a métrica indica e não indica, sem julgar se ela é relevante. Andreia volta com `u: voltar à análise`.
+11. **O06.3 ⇄ O06.4 Consultar a matriz de confusão.** Com `u: onde cada uma erra?`, o sistema mostra a matriz de confusão de cada configuração no conjunto de teste: quanto do que era *Trilha* foi marcado como *Fora da trilha*, e o contrário. Andreia volta com `u: voltar à análise`.
+12. **O06.3 → O08.1 Informar a conclusão (experimento).** Com `u: registrar a conclusão` (`gco: registrar a conclusão, O08`), Andreia informa a conclusão, a configuração candidata (ou nenhuma), a ressalva e o próximo experimento.
+13. **O08.1 → processo → O08.2 Conferir a conclusão.** Com `u: registrar`, o sistema guarda a conclusão junto da comparação e responde `d: conclusão registrada`, mostrando o que foi registrado.
+14. **O08.2 → encerramento.** Com `u: confirmar` (`gcc: comparar e concluir o experimento, O03 e O05–O08`), a conversa termina.
+
+**Sair durante o treino e voltar depois.** Em O02.1, `u: sair (o treino continua)` leva a um encerramento (`gcc: definir, O01`): a configuração já foi definida e o treino segue sem Andreia. Quando ela volta, o acesso ubíquo `u: em que ponto está o treino?` (`gco: treinar o modelo, O02`) abre de novo a O02.1, de qualquer ponto do sistema.
 
 #### Alternativas e rupturas
 
 | Situação | Onde ocorre | Como o usuário percebe | Caminho de recuperação/saída |
 |---|---|---|---|
-| {{dado inválido}} | {{...}} | {{fala/feedback}} | {{...}} |
+| Nenhum dataset de treino escolhido | O01.1 | O sistema não deixa continuar sem pelo menos um dataset de treino (`[PA]`, no diálogo da cena) | Prevenção ativa: a ruptura é evitada, por isso não há seta de erro |
+| Nome de configuração repetido | Processo depois da O01.2 | `d: [RA] nome repetido: escolha outro` | A seta tracejada volta à O01.2, onde Andreia informa outro nome |
+| O treino é interrompido | O02.1 | `d: [RA] falhou` — cena de alerta "Treino interrompido", com a causa, a época em que o treino parou, a configuração mantida e um ajuste sugerido (ex.: batch size menor) | `u: reiniciar com o ajuste` volta à O02.1 (seta tracejada), sem refazer a configuração |
+| Andreia precisa sair durante o treino | O02.1 | O estado do treino continua disponível | `u: sair (o treino continua)` encerra a conversa; o acesso ubíquo leva de volta à O02.1 |
+| Quadros sem anotação de referência | O06.3 | `d: [PP] quadros sem anotação de referência: avaliação visual` | Prevenção passiva: as métricas valem para o conjunto de teste, e os quadros são avaliados visualmente na O05.2 |
+| Quadros em formato não aceito ou falha na execução | Processo depois da O03.1 e O03.2 | As mesmas falas `[AL]` e `[RA]` do M01 | Os mesmos caminhos do M01 (seção "Alternativas e rupturas" do M01) |
+| A conclusão registrada tem um erro | O08.2 | Vê o registro na conferência e percebe o erro | `u: corrigir` volta à O08.1 (seta tracejada), com o que já foi informado |
 
 ### Checklist específico de modelagem
 
-- [ ] Existe **ponto de abertura** coerente com o início do objetivo.
-- [ ] As **cenas de conversa** representam tópicos/assuntos, não nomes de páginas apenas.
-- [ ] As transições/falas deixam claro o que o usuário ou o sistema comunica.
-- [ ] Há **ponto(s) de encerramento** para objetivos concluídos/abandonados quando aplicável.
-- [ ] Processamentos do sistema estão representados conforme a notação adotada em aula, sem “inventar” fala do usuário.
-- [ ] Rupturas (breakdowns) relevantes têm feedback e caminho de recuperação, não becos sem saída.
-- [ ] Acessos ubíquos/atalhos só aparecem quando semanticamente justificáveis.
-- [ ] O diagrama cobre caminhos alternativos importantes, e não apenas o “happy path”.
-- [ ] Nomes de objetivos, tópicos e signos são coerentes com a Entrega 9.
-- [ ] O diagrama é legível em tamanho normal no GitHub.
-- [ ] O MoLIC representa a conversa usuário–sistema, não o fluxo interno do algoritmo.
-- [ ] Processamento, filtros, administração, relatórios e históricos incluem retornos/rupturas quando relevantes.
+- [x] Existe **ponto de abertura** coerente com o início do objetivo. *(A conversa começa no ponto de abertura do sistema com `u: treinar uma nova configuração`, que é o objetivo do experimento no CI03; a volta durante o treino começa no acesso ubíquo "em que ponto está o treino?".)*
+- [x] As **cenas de conversa** representam tópicos/assuntos, não nomes de páginas apenas. *(Os tópicos usam os nomes oficiais da tabela de subtópicos da Entrega 9, seção 3.2. A cena de alerta "Treino interrompido" tem o assunto da ruptura no título, sem ID, porque não é subtópico.)*
+- [x] As transições/falas deixam claro o que o usuário ou o sistema comunica. *(Falas `u:` e `d:` tiradas da conversa da Entrega 9, seção 2.3.)*
+- [x] Há **ponto(s) de encerramento** para objetivos concluídos/abandonados quando aplicável. *(Dois: saída durante o treino (`gcc` O01), com o treino seguindo sem Andreia, e fim da conversa (`gcc` O03 e O05–O08).)*
+- [x] Processamentos do sistema estão representados conforme a notação adotada em aula, sem “inventar” fala do usuário. *(Três processos: iniciar o treino, executar as configurações nos quadros e registrar a conclusão; as saídas são só falas `d:`. O fim do treino e o fim da execução são falas `d:` que saem da O02.1 e da O03.2.)*
+- [x] Rupturas (breakdowns) relevantes têm feedback e caminho de recuperação, não becos sem saída. *(Dataset faltando: prevenção ativa no diálogo da O01.1; nome repetido: `[RA]` de volta à O01.2; treino interrompido: alerta com causa, configuração mantida e ajuste sugerido; quadros sem anotação: prevenção passiva na O06.3; conclusão errada: `u: corrigir`. As rupturas da execução são as do M01.)*
+- [x] Acessos ubíquos/atalhos só aparecem quando semanticamente justificáveis. *(Um: "em que ponto está o treino?", porque o treino é longo e Andreia o acompanha em janelas curtas, voltando de qualquer ponto do sistema (CI03 [3]).)*
+- [x] O diagrama cobre caminhos alternativos importantes, e não apenas o “happy path”. *(Saída e volta durante o treino, consulta à matriz de confusão e as rupturas em "Alternativas e rupturas".)*
+- [x] Nomes de objetivos, tópicos e signos são coerentes com a Entrega 9. *(Cenas O01.1–O08.2 e signos da seção 4; subtópicos da P02 incluídos na tabela da seção 3.2 em 15/11/2026, `PENDENCIAS.md`, INC-68.)*
+- [x] O diagrama é legível em tamanho normal no GitHub. *(SVG gerado por script e conferido com `scripts/diagramas/verificar.js`: nenhum texto fora das caixas, sobreposto ou passando da borda.)*
+- [x] O MoLIC representa a conversa usuário–sistema, não o fluxo interno do algoritmo. *(O treino aparece só pelo estado, pela época e pelos gráficos; parâmetros internos e a arquitetura do modelo ficam fora, como no recorte da Entrega 1.)*
+- [x] Processamento, filtros, administração, relatórios e históricos incluem retornos/rupturas quando relevantes. *(O treino e a execução têm saídas de erro e retorno. Filtros, administração, relatórios exportáveis e histórico estão fora do recorte (Entrega 1, seção 8; `PENDENCIAS.md`, INC-63; H08).)*
+
+**Limitação conhecida:** as cenas reusadas do M01 (O03.1, O03.2 e O05.2) e do M02 (O06.3 e O07.2) mostram aqui só os diálogos que a P02 usa; o conteúdo completo de cada cena é a união do que aparece nos três diagramas.
 
 
 ## Consolidação da equipe
