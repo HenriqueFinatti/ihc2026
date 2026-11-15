@@ -48,13 +48,13 @@ y = s.section(y, "Expansão do objetivo 3 — avaliar o resultado (detalhada no 
 y = s.tree(N(["3. Avaliar o resultado (T01)"], "Plano 3: 3.1 > 3.2 > 3.3"),
            [N(["3.1. Visualizar o resultado", "sobre a imagem"], "3.1.1 / 3.1.2"),
             N(["3.2. Interpretar as", "classes pela legenda"], op=True),
-            N(["3.3. Julgar a qualidade", "da segmentação"], "3.3.1 / 3.3.2")],
+            N(["3.3. Julgar a qualidade", "da segmentação"], "3.3.1 > [3.3.2]")],
            y, gap=40, pw=560) + 20
 ya = s.tree(N(["3.1. Visualizar o resultado sobre a imagem"], "Plano 3.1: 3.1.1 / 3.1.2"),
             [N(["3.1.1. Comparar", "lado a lado"], op=True),
              N(["3.1.2. Sobrepor a", "máscara com opacidade"], op=True)],
             y, 40, 600, pw=480)
-yb = s.tree(N(["3.3. Julgar a qualidade da segmentação"], "Plano 3.3: 3.3.1 / 3.3.2"),
+yb = s.tree(N(["3.3. Julgar a qualidade da segmentação"], "Plano 3.3: 3.3.1 > [3.3.2]"),
             [N(["3.3.1. Julgar pela", "inspeção visual"], op=True),
              N(["3.3.2. Conferir as", "métricas por", "classe"], op=True)],
             y, 660, 1400, gap=24, pw=480)
@@ -63,14 +63,17 @@ y = max(ya, yb) + 20
 y = s.section(y, "Expansão do objetivo 4 — concluir a comparação")
 y = s.tree(N(["4. Concluir a comparação"], "Plano 4: 4.1 > 4.2 > 4.3"),
            [N(["4.1. Comparar as", "configurações na", "mesma região"], op=True),
-            N(["4.2. Registrar a", "conclusão"], "4.2.1 / 4.2.2 / 4.2.3"),
+            N(["4.2. Registrar a", "conclusão"], "(4.2.1 / 4.2.2 / 4.2.3) > 4.2.4"),
             N(["4.3. Comunicar a", "conclusão à equipe"], op=True)],
            y, gap=40, pw=560) + 20
-y = s.tree(N(["4.2. Registrar a conclusão"], "Plano 4.2: 4.2.1 / 4.2.2 / 4.2.3"),
-           [N(["4.2.1. Indicar a", "configuração mais", "adequada"], op=True),
-            N(["4.2.2. Registrar que", "nenhuma é adequada"], op=True),
-            N(["4.2.3. Registrar", "resultado", "inconclusivo"], op=True)],
-           y, 380, 1060, gap=24, pw=480) + 10
+y = s.tree(N(["4.2. Registrar a conclusão"], "Plano 4.2: (4.2.1 / 4.2.2 / 4.2.3) > 4.2.4"),
+           [N(["4.2.1. Concluir que uma", "configuração é a", "mais adequada"], op=True),
+            N(["4.2.2. Concluir que", "nenhuma é adequada"], op=True),
+            N(["4.2.3. Concluir que o", "resultado é", "inconclusivo"], op=True),
+            N(["4.2.4. Inserir a", "conclusão na", "interface"], op=True)],
+           y, 160, 1280, gap=24, pw=520) + 10
+y = s.note(y + 10, ["[3.3.2] só ocorre se a inspeção visual (3.3.1) for inconclusiva e a imagem tiver anotação de referência ([ ] = passo condicional).",
+                    "Em 4.2, Rafael decide a conclusão (4.2.1 / 4.2.2 / 4.2.3) e depois a insere na interface (4.2.4); ela fica guardada na sessão."]) + 10
 
 H = s.hta_legend(y)
 s.save(OUT, H)

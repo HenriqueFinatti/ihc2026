@@ -1,0 +1,215 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="2412" viewBox="0 0 1440 2412" role="img" aria-labelledby="title desc" xmlns:c2pa="http://c2pa.org/manifest">
+<title id="title">HTA — T08: Definir uma configuração de treino e treinar o modelo</title>
+<desc id="desc">HTA da tarefa T08 por Mateus Marana Assuena. Objetivos retangulares, operações com traço duplo e planos. Uso proposto pela pesquisadora e coordenadora (P02) a partir do cenário C03 e do cenário de interação CI03 da Entrega 9. Condições completas na tabela da Entrega 5.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#333"/></marker></defs>
+<rect width="1440" height="2412" fill="white"/>
+<g font-family="DejaVu Sans, Arial, sans-serif" fill="#222">
+<text x="40" y="40" text-anchor="start" font-size="25" font-weight="700">HTA — T08: Definir uma configuração de treino e treinar o modelo</text>
+<text x="40" y="73" text-anchor="start" font-size="16" font-weight="400">Mateus Marana Assuena · 22.123.026-1 · P02, Andreia Silva · C03 / CI03 · Uso proposto [H]</text>
+<path d="M40 100 H1400" fill="none" stroke="#333" stroke-width="1.6"/>
+<text x="40" y="130" text-anchor="start" font-size="18" font-weight="700">Visão geral</text>
+<g data-box="b1">
+<rect x="440.0" y="152" width="560.0" height="98" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="720.0" y="178" text-anchor="middle" font-size="16" font-weight="400">0. Definir uma configuração de treino</text>
+<text x="720.0" y="201" text-anchor="middle" font-size="16" font-weight="400">e treinar o modelo</text>
+<text x="720.0" y="235" text-anchor="middle" font-size="14" font-weight="700">Plano 0: 1 &gt; 2 &gt; 3</text>
+</g>
+<path d="M720.0 250 V281" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M253.3 281 H1186.7" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M253.3 281 V320" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<g data-box="b2">
+<rect x="40.0" y="320" width="426.7" height="98" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="253.33333333333334" y="346" text-anchor="middle" font-size="16" font-weight="400">1. Definir a</text>
+<text x="253.33333333333334" y="369" text-anchor="middle" font-size="16" font-weight="400">configuração</text>
+<text x="253.33333333333334" y="403" text-anchor="middle" font-size="14" font-weight="700">1.1 &gt; 1.2 &gt; 1.3</text>
+</g>
+<path d="M720.0 281 V320" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<g data-box="b3">
+<rect x="506.7" y="320" width="426.7" height="98" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="720.0" y="346" text-anchor="middle" font-size="16" font-weight="400">2. Treinar o</text>
+<text x="720.0" y="369" text-anchor="middle" font-size="16" font-weight="400">modelo</text>
+<text x="720.0" y="403" text-anchor="middle" font-size="14" font-weight="700">2.1 &gt; 2.2 &gt; 2.3</text>
+</g>
+<path d="M1186.7 281 V320" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<g data-box="b4">
+<rect x="973.3" y="320" width="426.7" height="98" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="1186.6666666666667" y="346" text-anchor="middle" font-size="16" font-weight="400">3. Conferir a</text>
+<text x="1186.6666666666667" y="369" text-anchor="middle" font-size="16" font-weight="400">configuração treinada</text>
+<text x="1186.6666666666667" y="403" text-anchor="middle" font-size="14" font-weight="700">3.1 &gt; 3.2</text>
+</g>
+<text x="40" y="452" text-anchor="start" font-size="14" font-weight="400">Se 2.3 terminar em 2.3.2 (falha), Andreia ajusta a configuração e volta a 2.1.</text>
+<text x="40" y="472" text-anchor="start" font-size="14" font-weight="400">Planos abreviados; condições e exceções na tabela da Entrega 5, seção 3.6.1.</text>
+<path d="M40 502 H1400" fill="none" stroke="#333" stroke-width="1.6"/>
+<text x="40" y="532" text-anchor="start" font-size="18" font-weight="700">Expansão do objetivo 1 — definir a configuração</text>
+<g data-box="b5">
+<rect x="440.0" y="554" width="560.0" height="75" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="720.0" y="580" text-anchor="middle" font-size="16" font-weight="400">1. Definir a configuração</text>
+<text x="720.0" y="614" text-anchor="middle" font-size="14" font-weight="700">Plano 1: 1.1 &gt; 1.2 &gt; 1.3</text>
+</g>
+<path d="M720.0 629 V660" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M253.3 660 H1186.7" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M253.3 660 V699" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<g data-box="b6">
+<rect x="40.0" y="699" width="426.7" height="98" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="253.33333333333334" y="725" text-anchor="middle" font-size="16" font-weight="400">1.1. Escolher o</text>
+<text x="253.33333333333334" y="748" text-anchor="middle" font-size="16" font-weight="400">modelo</text>
+</g>
+<path d="M40.0 802 H466.7" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M40.0 806 H466.7" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M720.0 660 V699" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<g data-box="b7">
+<rect x="506.7" y="699" width="426.7" height="98" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="720.0" y="725" text-anchor="middle" font-size="16" font-weight="400">1.2. Definir os</text>
+<text x="720.0" y="748" text-anchor="middle" font-size="16" font-weight="400">parâmetros de treino</text>
+<text x="720.0" y="782" text-anchor="middle" font-size="14" font-weight="700">1.2.1 / 1.2.2</text>
+</g>
+<path d="M1186.7 660 V699" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<g data-box="b8">
+<rect x="973.3" y="699" width="426.7" height="98" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="1186.6666666666667" y="725" text-anchor="middle" font-size="16" font-weight="400">1.3. Nomear a</text>
+<text x="1186.6666666666667" y="748" text-anchor="middle" font-size="16" font-weight="400">configuração</text>
+</g>
+<path d="M973.3 802 H1400.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M973.3 806 H1400.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<g data-box="b9">
+<rect x="460.0" y="831" width="520.0" height="75" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="720.0" y="857" text-anchor="middle" font-size="16" font-weight="400">1.2. Definir os parâmetros de treino</text>
+<text x="720.0" y="891" text-anchor="middle" font-size="14" font-weight="700">Plano 1.2: 1.2.1 / 1.2.2</text>
+</g>
+<path d="M720.0 906 V937" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M485.0 937 H955.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M485.0 937 V976" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<g data-box="b10">
+<rect x="280.0" y="976" width="410.0" height="99" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="485.0" y="1002" text-anchor="middle" font-size="16" font-weight="400">1.2.1. Manter os</text>
+<text x="485.0" y="1025" text-anchor="middle" font-size="16" font-weight="400">valores padrão</text>
+</g>
+<path d="M280.0 1080 H690.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M280.0 1084 H690.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M955.0 937 V976" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<g data-box="b11">
+<rect x="750.0" y="976" width="410.0" height="99" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="955.0" y="1002" text-anchor="middle" font-size="16" font-weight="400">1.2.2. Alterar os</text>
+<text x="955.0" y="1025" text-anchor="middle" font-size="16" font-weight="400">parâmetros do</text>
+<text x="955.0" y="1048" text-anchor="middle" font-size="16" font-weight="400">experimento</text>
+</g>
+<path d="M750.0 1080 H1160.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M750.0 1084 H1160.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M40 1109 H1400" fill="none" stroke="#333" stroke-width="1.6"/>
+<text x="40" y="1139" text-anchor="start" font-size="18" font-weight="700">Expansão do objetivo 2 — treinar o modelo</text>
+<g data-box="b12">
+<rect x="440.0" y="1161" width="560.0" height="75" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="720.0" y="1187" text-anchor="middle" font-size="16" font-weight="400">2. Treinar o modelo</text>
+<text x="720.0" y="1221" text-anchor="middle" font-size="14" font-weight="700">Plano 2: 2.1 &gt; 2.2 &gt; 2.3</text>
+</g>
+<path d="M720.0 1236 V1267" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M253.3 1267 H1186.7" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M253.3 1267 V1306" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<g data-box="b13">
+<rect x="40.0" y="1306" width="426.7" height="98" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="253.33333333333334" y="1332" text-anchor="middle" font-size="16" font-weight="400">2.1. Iniciar o</text>
+<text x="253.33333333333334" y="1355" text-anchor="middle" font-size="16" font-weight="400">treino</text>
+</g>
+<path d="M40.0 1409 H466.7" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M40.0 1413 H466.7" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M720.0 1267 V1306" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<g data-box="b14">
+<rect x="506.7" y="1306" width="426.7" height="98" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="720.0" y="1332" text-anchor="middle" font-size="16" font-weight="400">2.2. Acompanhar o</text>
+<text x="720.0" y="1355" text-anchor="middle" font-size="16" font-weight="400">treino</text>
+</g>
+<path d="M506.7 1409 H933.3" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M506.7 1413 H933.3" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M1186.7 1267 V1306" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<g data-box="b15">
+<rect x="973.3" y="1306" width="426.7" height="98" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="1186.6666666666667" y="1332" text-anchor="middle" font-size="16" font-weight="400">2.3. Conferir o</text>
+<text x="1186.6666666666667" y="1355" text-anchor="middle" font-size="16" font-weight="400">desfecho do treino</text>
+<text x="1186.6666666666667" y="1389" text-anchor="middle" font-size="14" font-weight="700">2.3.1 / 2.3.2</text>
+</g>
+<g data-box="b16">
+<rect x="140.0" y="1438" width="520.0" height="75" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="400.0" y="1464" text-anchor="middle" font-size="16" font-weight="400">2.3. Conferir o desfecho do treino</text>
+<text x="400.0" y="1498" text-anchor="middle" font-size="14" font-weight="700">Plano 2.3: 2.3.1 / 2.3.2</text>
+</g>
+<path d="M400.0 1513 V1544" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M210.0 1544 H590.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M210.0 1544 V1583" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<g data-box="b17">
+<rect x="40.0" y="1583" width="340.0" height="98" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="210.0" y="1609" text-anchor="middle" font-size="16" font-weight="400">2.3.1. Reconhecer o</text>
+<text x="210.0" y="1632" text-anchor="middle" font-size="16" font-weight="400">treino concluído</text>
+</g>
+<path d="M40.0 1686 H380.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M40.0 1690 H380.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M590.0 1544 V1583" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<g data-box="b18">
+<rect x="420.0" y="1583" width="340.0" height="98" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="590.0" y="1609" text-anchor="middle" font-size="16" font-weight="400">2.3.2. Tratar a</text>
+<text x="590.0" y="1632" text-anchor="middle" font-size="16" font-weight="400">falha do treino</text>
+<text x="590.0" y="1666" text-anchor="middle" font-size="14" font-weight="700">2.3.2.1 &gt; 2.3.2.2</text>
+</g>
+<g data-box="b19">
+<rect x="860.0" y="1695" width="480.0" height="75" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="1100.0" y="1721" text-anchor="middle" font-size="16" font-weight="400">2.3.2. Tratar a falha do treino</text>
+<text x="1100.0" y="1755" text-anchor="middle" font-size="14" font-weight="700">Plano 2.3.2: 2.3.2.1 &gt; 2.3.2.2</text>
+</g>
+<path d="M1100.0 1770 V1801" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M942.5 1801 H1257.5" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M942.5 1801 V1840" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<g data-box="b20">
+<rect x="800.0" y="1840" width="285.0" height="99" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="942.5" y="1866" text-anchor="middle" font-size="16" font-weight="400">2.3.2.1. Ler a</text>
+<text x="942.5" y="1889" text-anchor="middle" font-size="16" font-weight="400">causa da falha</text>
+</g>
+<path d="M800.0 1944 H1085.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M800.0 1948 H1085.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M1257.5 1801 V1840" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<g data-box="b21">
+<rect x="1115.0" y="1840" width="285.0" height="99" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="1257.5" y="1866" text-anchor="middle" font-size="16" font-weight="400">2.3.2.2. Ajustar a</text>
+<text x="1257.5" y="1889" text-anchor="middle" font-size="16" font-weight="400">configuração e</text>
+<text x="1257.5" y="1912" text-anchor="middle" font-size="16" font-weight="400">reiniciar</text>
+</g>
+<path d="M1115.0 1944 H1400.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M1115.0 1948 H1400.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M40 1973 H1400" fill="none" stroke="#333" stroke-width="1.6"/>
+<text x="40" y="2003" text-anchor="start" font-size="18" font-weight="700">Expansão do objetivo 3 — conferir a configuração treinada</text>
+<g data-box="b22">
+<rect x="460.0" y="2025" width="520.0" height="75" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="720.0" y="2051" text-anchor="middle" font-size="16" font-weight="400">3. Conferir a configuração treinada</text>
+<text x="720.0" y="2085" text-anchor="middle" font-size="14" font-weight="700">Plano 3: 3.1 &gt; 3.2</text>
+</g>
+<path d="M720.0 2100 V2131" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M485.0 2131 H955.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M485.0 2131 V2170" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<g data-box="b23">
+<rect x="280.0" y="2170" width="410.0" height="76" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="485.0" y="2196" text-anchor="middle" font-size="16" font-weight="400">3.1. Ler os gráficos de</text>
+<text x="485.0" y="2219" text-anchor="middle" font-size="16" font-weight="400">treino e validação</text>
+</g>
+<path d="M280.0 2251 H690.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M280.0 2255 H690.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M955.0 2131 V2170" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<g data-box="b24">
+<rect x="750.0" y="2170" width="410.0" height="76" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="955.0" y="2196" text-anchor="middle" font-size="16" font-weight="400">3.2. Ler as métricas no</text>
+<text x="955.0" y="2219" text-anchor="middle" font-size="16" font-weight="400">conjunto de teste</text>
+</g>
+<path d="M750.0 2251 H1160.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M750.0 2255 H1160.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M40 2270 H1400" fill="none" stroke="#333" stroke-width="1.6"/>
+<text x="40" y="2300" text-anchor="start" font-size="18" font-weight="700">Legenda (Barbosa e Silva, 2010)</text>
+<g data-box="b25">
+<rect x="50.0" y="2322" width="180.0" height="50" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="140" y="2348" text-anchor="middle" font-size="16" font-weight="400">objetivo</text>
+</g>
+<g data-box="b26">
+<rect x="270.0" y="2322" width="180.0" height="50" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="360" y="2348" text-anchor="middle" font-size="16" font-weight="400">operação</text>
+</g>
+<path d="M270.0 2377 H450.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M270.0 2381 H450.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<text x="480" y="2344" text-anchor="start" font-size="14" font-weight="400">Planos: 1 &gt; 2 sequencial · 1 / 2 seleção (depende das circunstâncias) · 1 + 2 paralelo (não usado).</text>
+<text x="480" y="2366" text-anchor="start" font-size="14" font-weight="400">Operações (folhas) têm traço duplo abaixo. [H]: modelo hipotético a validar na Entrega 7.</text>
+</g><metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTphMThjM2JmZi0yNWQxLTRjN2MtYTM2NC0zNjJmNzIwNmUwNTYAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaA3mliOpid+mh6nooQ5jy84AAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDo4YTEzNmQzYi1hNjZhLTQ3NTgtYWVmZC1hN2FkMDE4ODBmODNscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNo+mXkokpgVnVBUvlYvweonQAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggWxrmS3qFLWDl3GzA6Mm7slR4dk8dxmNF3u1eWhX4fRSkZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaDp6RuJaIjCx9ZnRi1aXCEoAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRMAAAAAAAAAAAAAAAAZGhhc2hYIDy0VZSNkpq9QyOL0qs87uP+K2E2ZIzIOkNQmMTyOqSPZG5hbWVuanVtYmYgbWFuaWZlc3RqZXhjbHVzaW9uc4GiZXN0YXJ0GUPNZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOmExOGMzYmZmLTI1ZDEtNGM3Yy1hMzY0LTM2MmY3MjA2ZTA1Ni9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOjExMTM4MmQyLWE4MGQtNGI4Yy05OTA4LThlNWIwZTAwYWU2MHJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCBbGuZLeoUtYOXcbMDoybuyVHh2Tx3GY0Xe7V5aFfh9FKJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFgg514c9P7CguA6kmBRUmUd9JOZG5b7CBimML5Rmp8StkWiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFgglx1edLvQnIf/2PdhZ+ND1+8I+gsaJZmDf+hKQKGx3iB0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQFUN1I6OFXtIv+2z1TUVSQ66LYZdXKbhtRW6FTRFNIDTHiURQKGfl8/bWVOHorCSvpAv36Ux8ay483nRTg3znpE=</c2pa:manifest></metadata></svg>

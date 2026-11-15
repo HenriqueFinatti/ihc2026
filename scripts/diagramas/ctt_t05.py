@@ -21,7 +21,8 @@ y = s.panel(y, "Motivação externa antes da sessão de uso [H]",               
 y = s.panel(y, "Sessão de decisão e recurso ao integrante técnico",                              # 1
             ("A", ["U. Sessão de decisão"]),
             [("A", ["R. Percurso da decisão"]), ("A", ["E. Recorrer ao", "integrante técnico"])], ["|>"], 200, 1240,
-            note=["E suspende R quando faltam execuções (1.2) ou quando a dúvida persiste (2.3.3); com a resposta, R é retomado do ponto em que parou."])
+            note=["E suspende R quando faltam execuções (1.2) ou quando a dúvida persiste (2.3.3).",
+                  "Retomada: depois de 1.2, volta a 1.1; depois de 2.3.3, volta a 2.3.2.2 se a resposta basta, ou a 2.1 se ela muda a leitura dos números."])
 y = s.panel(y, "R — percurso da decisão",                                                        # 2
             ("A", ["R. Percurso da decisão"]),
             [("A", ["1. Reunir os", "resultados do ciclo"]), ("A", ["2. Comparar o", "desempenho (T04)"]),
@@ -37,11 +38,11 @@ y = s.panel(y, "2 — Comparar o desempenho consolidado (T04)",                 
             ("A", ["2. Comparar o desempenho consolidado"]),
             [("I", ["2.1. Abrir a", "comparação do ciclo"]),
              ("S", ["S2. Exibir métricas", "agregadas por modelo", "e a referência"]),
-             ("A", ["2.2. Ler o", "desempenho"]), ("A", ["2.3. Avaliar a", "relevância"])],
+             ("A", ["2.2*. Ler o", "desempenho"]), ("A", ["2.3. Avaliar a", "relevância"])],
             ["[]>>", "[]>>", "[]>>"])
 y0 = y
 ya = s.panel(y0, "2.2 e 2.3 — ler e avaliar",                                                    # 5
-             ("A", ["2.2. Ler o desempenho"]),
+             ("A", ["2.2*. Ler o desempenho"]),
              [("I", ["2.2.1. Ler as", "métricas na tabela"]), ("I", ["2.2.2. Ler as", "métricas no gráfico"])],
              ["[]"], 40, 680)
 yb = s.panel(y0 + 54, None,
@@ -50,11 +51,12 @@ yb = s.panel(y0 + 54, None,
              ["[]"], 760, 1400)
 s.divider(720, y0 + 54, max(ya, yb) - 10)
 y = max(ya, yb)
+y = s.note(y, ["2.2* = (2.2.1 [] 2.2.2)*: a escolha entre tabela e gráfico pode ser refeita na mesma análise; 2.2 termina quando Larissa passa a 2.3."]) + 18
 y = s.panel(y, "2.3.2 — consultar a explicação e julgar",                                        # 6
             ("A", ["2.3.2. Consultar a explicação e julgar"]),
             [("I", ["2.3.2.1. Consultar a explicação", "do termo"]),
              ("U", ["2.3.2.2. Julgar a diferença", "com a explicação"])], ["[]>>"], 200, 1240,
-            note=["Se a dúvida persistir depois de 2.3.2.2, Larissa recorre a E (2.3.3)."])
+            note=["Se a dúvida persistir depois de 2.3.2.2, Larissa recorre a E (2.3.3) e, com a resposta, volta a 2.3.2.2."])
 y = s.panel(y, "3 — Formar a recomendação",                                                      # 7
             ("A", ["3. Formar a recomendação"]),
             [("U", ["3.1. Recomendar o", "modelo de melhor", "desempenho"]),
@@ -80,7 +82,7 @@ y = s.panel(y, "E — recorrer ao integrante técnico (fora da interface)",     
             [("U", ["1.2. Solicitar execuções", "faltantes"]), ("U", ["2.3.3. Pedir interpretação", "da diferença"])],
             ["[]"], 200, 1240,
             note=["Contato por mensagem com o integrante que executa os modelos (P01). A interface não executa nem responde por ele."])
-H = s.ctt_legend(y, ["[]>>  ativação com passagem de informação", "[]  escolha", "|>  suspensão / retomada"],
+H = s.ctt_legend(y, ["[]>>  ativação com passagem de informação", "[]  escolha", "|>  suspensão / retomada", "T*  iteração"],
                  ["Letras (M, U, R, E, C, S, Q, K) marcam nós só do CTT;", "os números seguem o HTA."])
 
 s.save(str(OUT), H)

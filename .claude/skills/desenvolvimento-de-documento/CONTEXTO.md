@@ -1,6 +1,6 @@
 # Contexto atual do projeto
 
-**Última atualização:** 14/11/2026
+**Última atualização:** 15/11/2026
 
 Este arquivo resume o estado do projeto para a IA e para a equipe. Ele **aponta** para onde cada decisão está registrada e não substitui as entregas. Se houver diferença entre este arquivo e uma entrega, a entrega e o `RASTREABILIDADE.md` valem, e este arquivo deve ser corrigido.
 
@@ -73,7 +73,7 @@ Nos mapas individuais da E9, a numeração por letras (A1, A1.1…) é provisór
 | E2 | 🟦 | Recomendações RC01–RC04; evidências E1–E6 na RAST §7 |
 | E3 | 🟦 | Personas P01–P03, contexto de uso e jornada; exportação condicionada à E7 |
 | E4 | 🟦 | Cenários C01–C03; T08 criada no C03 |
-| E5 | 🟩 | HTA/GOMS/CTT de T01–T08; requisitos RQ01–RQ09; tarefas de teste UT01–UT03 |
+| E5 | 🟦 | HTA/GOMS/CTT de T01–T08; requisitos RQ01–RQ09; tarefas de teste UT01–UT03. Parecer aplicado em 15/11/2026: passos condicionais com colchetes (`[2.3.3]` na T05, `[3.3.2]` na T03, `[4.2]` na T07), julgamentos que podem terminar como inconclusivos, desfecho da execução (sucesso ou falha) na T03 e na T07 e conclusão guardada só na sessão (histórico depende da H08) |
 | E6 | 🟩 | Fluxos PF01–PF03 do protótipo em papel |
 | E7 | 🟩 | Planejamento da coleta (I01 entrevista, I02 questionário em https://forms.gle/pAMyXCdebYo9aHmq9, I03 investigação contextual). Os estados das hipóteses só mudam depois da coleta |
 | E8 | 🟩 | Características da plataforma (§1), princípios (§2), metas MQ01–MQ07 e MU01–MU11 (§3) |

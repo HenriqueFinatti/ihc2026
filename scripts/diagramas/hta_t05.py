@@ -38,13 +38,13 @@ y = s.section(y, "Expansão do objetivo 2 — comparação consolidada (detalhad
 y = s.tree(N(["2. Comparar o desempenho consolidado (T04)"], "Plano 2: 2.1 > 2.2 > 2.3"),
            [N(["2.1. Abrir a comparação", "dos modelos do ciclo"], op=True),
             N(["2.2. Ler o desempenho", "de cada modelo"], "2.2.1 / 2.2.2"),
-            N(["2.3. Avaliar se a", "diferença é relevante"], "2.3.1 / 2.3.2 / 2.3.3")],
+            N(["2.3. Avaliar se a", "diferença é relevante"], "2.3.1 / (2.3.2 > [2.3.3])")],
            y, gap=40, pw=560) + 20
 ya = s.tree(N(["2.2. Ler o desempenho de cada modelo"], "Plano 2.2: 2.2.1 / 2.2.2"),
             [N(["2.2.1. Ler as", "métricas na tabela"], op=True),
              N(["2.2.2. Ler as", "métricas no gráfico"], op=True)],
             y, 40, 560, pw=440)
-yb = s.tree(N(["2.3. Avaliar se a diferença é relevante"], "Plano 2.3: 2.3.1 / 2.3.2 / 2.3.3"),
+yb = s.tree(N(["2.3. Avaliar se a diferença é relevante"], "Plano 2.3: 2.3.1 / (2.3.2 > [2.3.3])"),
             [N(["2.3.1. Julgar a", "diferença pela", "referência"], op=True),
              N(["2.3.2. Consultar a", "explicação e julgar"], "2.3.2.1 > 2.3.2.2"),
              N(["2.3.3. Pedir", "interpretação ao", "integrante técnico"], op=True)],
@@ -54,6 +54,8 @@ y = s.tree(N(["2.3.2. Consultar a explicação e julgar"], "Plano 2.3.2: 2.3.2.1
            [N(["2.3.2.1. Consultar a explicação", "do termo"], op=True),
             N(["2.3.2.2. Julgar a diferença", "com a explicação"], op=True)],
            y, 620, 1400, pw=460) + 20
+y = s.note(y, ["2.3.3 não é alternativa a 2.3.2: só ocorre depois dele, se a dúvida persistir ([ ] = passo condicional).",
+                "Com a resposta do integrante técnico, Larissa volta a julgar a diferença (2.3.2.2)."]) + 10
 
 y = s.section(y, "Expansão do objetivo 4")
 y = s.tree(N(["4. Apresentar e sustentar a recomendação"], "Plano 4: 4.1 > 4.2 > 4.3"),

@@ -34,8 +34,14 @@ y = s.panel(y, "2* — Obter o resultado de cada configuração (T02)",
             ("A", ["2. Obter o resultado de uma configuração"]),
             [("I", ["2.1. Iniciar a", "segmentação"]),
              ("S", ["S2. Executar e", "informar o estado"]),
-             ("I", ["2.2. Acompanhar o", "processamento"])], ["[]>>", "[]>>"],
-            note=["Se a execução falhar, S2 informa a causa; Andreia repete 2.1 ou retira a configuração da comparação."])
+             ("I", ["2.2. Acompanhar o", "processamento"]),
+             ("A", ["2.3. Conferir o", "desfecho"])], ["[]>>", "[]>>", "[]>>"])
+y = s.panel(y, "2.3 — Conferir o desfecho da execução",
+            ("A", ["2.3. Conferir o desfecho da execução"]),
+            [("U", ["2.3.1. Reconhecer o", "resultado pronto"]),
+             ("I", ["2.3.2. Repetir ou retirar", "a configuração"])], ["[]"], 200, 1240,
+            note=["Com resultado pronto, a configuração entra na comparação. Com falha, S2 informa a causa; repetir inicia nova ocorrência de 2,",
+                  "retirar exclui a configuração. Se restar menos de duas configurações com resultado, Andreia volta a 1.2."])
 y = s.panel(y, "3 — Comparar os resultados visualmente (T06)",
             ("A", ["3. Comparar os resultados visualmente"]),
             [("S", ["S3. Exibir original,", "máscaras e", "sobreposição"]),
@@ -46,14 +52,15 @@ y = s.panel(y, "4 — Comparar as métricas no conjunto de teste",
             ("A", ["4. Comparar as métricas"]),
             [("S", ["S4. Exibir métricas e", "diferença entre", "configurações"]),
              ("U", ["4.1. Ler a diferença", "entre as", "configurações"]),
-             ("I", ["4.2. Consultar a", "matriz de confusão"])], ["[]>>", "[]>>"],
+             ("I", ["[4.2]. Consultar a", "matriz de confusão"])], ["[]>>", "[]>>"],
             note=["4.2 é opcional: só quando Andreia precisa entender onde cada configuração erra."])
 y = s.panel(y, "5 — Concluir a comparação",
             ("A", ["5. Concluir a comparação"]),
             [("U", ["5.1. Julgar se a", "diferença é relevante"]),
              ("I", ["5.2. Registrar a", "conclusão"])], ["[]>>"], 200, 1240,
-            note=["O sistema mostra a diferença, mas não julga se ela é relevante (RQ08)."])
-H = s.ctt_legend(y, ["[]>>  ativação com passagem de informação", "T*  iteração"],
+            note=["5.1 pode concluir que a nova configuração é melhor, igual, pior ou que a comparação é inconclusiva.",
+                  "O sistema mostra a diferença, mas não julga se ela é relevante (RQ08)."])
+H = s.ctt_legend(y, ["[]>>  ativação com passagem de informação", "[]  escolha", "T*  iteração", "[T]  opcional"],
                  ["Letras (M, U, S) marcam nós só do CTT;", "os números seguem o HTA."])
 
 s.save(str(OUT), H)

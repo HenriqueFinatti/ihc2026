@@ -111,3 +111,20 @@ Investiguem com os perfis correspondentes os critérios de comparação e relev�
 5. Atualizar os arquivos apresentados, as pendências e a rastreabilidade antes de marcar a entrega como concluída.
 
 **Parecer geral:** vocês escolheram tarefas pertinentes e demonstram avanço na modelagem da interação, especialmente nas estruturas de Henrique e Tiago e na organização textual dos três GOMS. A quantidade foi atendida, mas a entrega ainda não apresenta consistência suficiente entre todas as contribuições. A prioridade é corrigir os problemas formais de T07 e consolidar as versões, além de ajustar os caminhos condicionais e a representação da incerteza. Com essas revisões, os modelos poderão orientar o projeto de interface com maior precisão e confiabilidade.
+
+---
+
+## Tratamento dos comentários
+
+*Registro da equipe, 15/11/2026. Cada item foi conferido contra o estado atual de `docs/05_analise_tarefas.md`, dos scripts em `scripts/diagramas/` e dos SVGs em `assets/05_tarefas/` antes de qualquer alteração. Os diagramas do Mateus já tinham sido refeitos em 14/11/2026, depois do envio deste parecer.*
+
+| Item do parecer | Situação em 15/11/2026 | O que foi feito |
+|---|---|---|
+| 1. HTA T07: decomposição e planos | Já atendido em 14/11 (HTA refeito por script, sem nó de filho único; diagrama, numeração, planos e tabela iguais; sem `+`) | Novo objetivo 2.3 (desfecho da execução: `2.3.1 / 2.3.2`) e plano 4 como `4.1 > [4.2]`, para que o diagrama mostre a falha e o passo opcional que a tabela já descrevia. |
+| 2. HTA T07: Feedback e resultado humano | Parcialmente atendido em 14/11 (Feedback na tarefa 0; comparação na mesma região em 3.2) | A conclusão passa a admitir "inconclusiva" no Resultado, no Feedback da tarefa 0, em 5.1 e em 5.2; 5.2 guarda a conclusão na sessão (histórico depende da H08). |
+| 3. CTT T07: motivação externa e sistema | Já atendido em 14/11 (motivação `T07 = M []>> U`, S1–S4, texto compatível com a figura; `\|=\|` e `+` não são mais usados) | Desfecho `2.3 = 2.3.1 [] 2.3.2` no ramo 2 e `[4.2]` no desenho; legenda e tabelas revistas. |
+| 4. Henrique: método alternativo × continuação | Não atendido | HTA T05: plano 2.3 como `2.3.1 / (2.3.2 > [2.3.3])`. GOMS T04: o antigo método 3.C virou a submeta condicional 3.B.5, dentro do 3.B; a regra de seleção escolhe entre 3.A e 3.B no início. CTT T05: a retomada depois de E diz quando a resposta basta (volta a 2.3.2.2) e quando é preciso conferir os resultados de novo (volta a 2.1). |
+| 5. Tiago: término inconclusivo no GOMS T01 | Não atendido | Meta 3 em caminho único: inspeção visual comum (OP. 3.1–3.3) que pode terminar inconclusiva, consulta às métricas como submeta condicional 3.4 (só com anotação de referência) e origem do erro apontada só quando a evidência permite (OP. 3.5). HTA T03: plano 3.3 como `3.3.1 > [3.3.2]`. A citação da E9 ao GOMS da T01 foi atualizada. |
+| 6. CTTs: escolhas, repetições, falhas e registro | Não atendido | T03: avaliação só no ramo de sucesso (`2.3 = D [] 2.3.2`, `D = 2.3.1 []>> 3`), retirada encerra C; `3.1* = (3.1.1 [] 3.1.2)*`; `[3.3.2]`; registro separado em julgamento (J), interação (4.2.4) e sistema (S5, conclusão guardada na sessão). T05: `2.2* = (2.2.1 [] 2.2.2)*`. T07: desfecho da execução (item 3). |
+| 7. Consolidação e registros | Parcialmente atendido em 14/11 (a seção 3.6 com a T08 existe; INC-53 a 55 correspondem aos artefatos atuais) | Item 3.2 do HTA T03 cita *Trilha* e *Fora da trilha*; entradas T01–T08 e R01–R04; ordem das premissas; status "revisada após feedback"; checklist com dois itens novos; resolução de INC-53 a 55 complementada em `PENDENCIAS.md`. O arquivo antigo `hta-task-06.svg` não é citado por nenhum documento. |
+| Recomendações | Atendido | Visões gerais e detalhamentos de T03 e T05 preservados e regenerados; critério de conclusão e retorno à meta 2 no GOMS da T06; registro na sessão diferenciado do histórico persistente (T03 4.2 e T07 5.2); requisitos RQ05 e RQ06 associados aos modelos corrigidos. |
