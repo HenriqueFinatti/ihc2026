@@ -102,7 +102,7 @@ Antes de criar personas, retome os tipos de usuários, características relevant
 - **Descrição:** upload intuitivo, botão único para executar a segmentação e exportação direta de imagens e relatórios, para que a evidência chegue ao grupo da equipe e à reunião de decisão. Uma lista de execuções anteriores (histórico) foi considerada, mas depende da H08.
 - **Justificativa:** elimina a dependência de scripts, reduz fricção operacional e acelera a geração de evidências para a equipe.
 - **Base:** `[F]` o processo atual exige scripts (01 §4.1, §4.6); **RC04** (feedback de processamento, sustentação **alta** — E5/E1). O item **histórico** depende de **H08/RC02**, ainda **não sustentado**.
-- **Estado:** adotada (upload, execução e exportação); **em investigação** (histórico, H08 — fora do recorte até a Entrega 7).
+- **Estado:** adotada (upload e execução); **condicionada à coleta da Entrega 7** (exportação, H12 — fora do recorte até lá; `PENDENCIAS.md`, INC-63); **em investigação** (histórico, H08 — fora do recorte até a Entrega 7).
 
 **5. Modo offline, mensagens de erro claras, atalhos de teclado e presets de visualização**
 - **Descrição:** operação local quando necessário; mensagens orientam solução rápida; atalhos e presets para visualizações frequentes.
@@ -180,7 +180,7 @@ Antes de criar personas, retome os tipos de usuários, características relevant
 - **Descrição:** permitir exportar imagens segmentadas, métricas e resultados das comparações para formatos adequados à documentação da pesquisa e apresentação à equipe.
 - **Justificativa:** Andreia precisa analisar e registrar resultados para acompanhar melhorias no projeto Baja. A exportação reduz o trabalho manual necessário para preparar evidências e materiais de acompanhamento.
 - **Base:** `[H]` H12; não há evidência do fluxo atual de exportação.
-- **Estado:** adotada.
+- **Estado:** condicionada à coleta da Entrega 7 (H12); fora do recorte até lá (`PENDENCIAS.md`, INC-63).
 
 
 ### Persona P03 — Larissa Camargo
@@ -232,12 +232,12 @@ Antes de criar personas, retome os tipos de usuários, características relevant
 **4. Exportação de relatório executivo**
 - **Descrição:** saída em português com imagem de exemplo, tabela resumida, a recomendação que a própria Larissa registra (com suas ressalvas) e o aviso explícito de que **métrica não equivale a segurança de trajeto** (restrição registrada na Entrega 1, seção 4.3).
 - **Justificativa:** P03 precisa levar e defender a decisão perante a equipe e a coordenação; o relatório é o produto que ela consome. Liga-se a H01 e H12, **ambas abertas**. A interface organiza as evidências; quem interpreta e recomenda é a Larissa, e a decisão é da reunião com a coordenação.
-- **Estado:** adotada.
+- **Estado:** condicionada à coleta da Entrega 7 (H12); fora do recorte até lá (`PENDENCIAS.md`, INC-63).
 
 **5. Sinalização de limitações e incerteza**
-- **Descrição:** destacar quando o resultado é inconclusivo (poucas amostras, métricas próximas entre modelos) e o que ele **não** garante operacionalmente.
+- **Descrição:** mostrar a diferença entre as configurações em cada métrica e explicar o que as métricas **não** garantem (por exemplo, o IoU médio não mostra em que trecho a configuração erra, e nenhuma métrica garante que um trajeto é seguro). O sistema não julga se a diferença é relevante: quem julga é a Larissa.
 - **Justificativa:** uma decisão de gestão precisa ser defensável; mostrar os limites evita que P03 adote um modelo com base em uma diferença irrelevante. Liga-se à H12, ainda aberta.
-- **Estado:** adotada; o critério do que é "inconclusivo" ainda precisa ser definido pela equipe `[?]`.
+- **Estado:** adotada; revista em 14/11/2026 para retirar o aviso automático de resultado inconclusivo (`PENDENCIAS.md`, INC-67).
 
 
 ### Síntese das personas
@@ -371,3 +371,4 @@ As necessidades e objetivos que devem aparecer nos cenários e tarefas seguintes
 | 08/11/2026 | P02 e P03 reclassificadas como secundárias. P02 redefinida como pesquisadora/coordenadora que configura, treina e compara os modelos do TCC (tempo real sinalizado como fora do recorte; histórico condicionado à H08). Classes alinhadas ao TCC (*Trilha* × *Fora da trilha*) na P01, P03, mapa de empatia e jornada. RC03 citada com sustentação média. "Coordenação" ligada à P02 no contexto de uso. P03 deixa de atribuir o valor de referência à RC03 | Revisão de consistência (`PENDENCIAS.md`: INC-12, INC-22, INC-23, INC-31, INC-32, INC-34, INC-38, INC-39, INC-49) e leitura do repositório do TCC |
 | 09/11/2026 | Preferência por atalhos movida para "Comportamentos relevantes" da P01; base da decisão 1 da P01 corrigida (a E2 não observou lado a lado); linhas "Base:" nas decisões 1 e 6 da P02; contexto de uso lista as tarefas T01–T08 por persona e perdeu a nota de pendência; P02 ligada à nova T08 (configurar e treinar); data e síntese ajustadas | Revisão de consistência (`PENDENCIAS.md`: INC-36, INC-37, INC-40, INC-41, INC-42, INC-61) |
 | 10/11/2026 | As três personas passam a primárias (P01 continua prioritária), cada uma com justificativa própria; revogada a reclassificação de 08/11/2026. Andreia: objetivo dentro do recorte, idade (42 anos, escolha da proto-persona), necessidades separadas entre atendidas e fora do recorte, justificativa de navegação pela tarefa e H02 como "não atribuída". Acessibilidade de P01 e P02 como `[?]`, com preferências em "Comportamentos". Linha "Interpretação: sozinho × com apoio" e expectativas e relações nas biografias. Estado de cada decisão de design (adotada, em investigação ou fora do recorte); na P03, a interface organiza as evidências e a recomendação é da própria Larissa. Mapa de empatia redesenhado (Ciência da Computação, *Trilha* × *Fora da trilha*, bases [F]/[H], ganhos pela perspectiva de Rafael). Jornada com processo atual (4.1) e experiência pretendida antes, durante e depois (4.2); bases das etapas 3 e 6 corrigidas. Contexto com ambiente por persona (3.1) e papéis e responsabilidades; alinhado à Entrega 1 revisada. Imagens identificadas como geradas por IA; lembretes de edição removidos | Feedback do professor sobre a Entrega 3 |
+| 14/11/2026 | Exportação (decisões 4 da P01, 7 da P02 e 4 da P03) passa a condicionada à coleta da Entrega 7, fora do recorte até lá; decisão 5 da P03 deixa de prever aviso automático de resultado inconclusivo: a interface mostra a diferença entre configurações e explica as métricas, e quem julga é a Larissa | Revisão de consistência com a E1, a E5 e a E9 (`PENDENCIAS.md`: INC-63 e INC-67) |

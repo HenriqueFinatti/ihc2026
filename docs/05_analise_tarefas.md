@@ -42,7 +42,7 @@ Um CRUD pode gerar tarefas relevantes, mas “cadastrar usuário” só merece m
    - **GOMS:** representação **textual e indentada** (`GOAL`, `METHOD`, `SEL. RULE`, `OP.`), sem diagrama. O `GOAL 0` não tem método; metas com um único caminho são descritas direto por operadores; métodos e regras de seleção só existem onde há alternativas reais (onde o HTA tem `/` ou `+`). Cada bloco de operadores termina com uma **verificação do usuário**.
    - **CTT:** tipos de tarefa (abstrata, usuário, interação, sistema) e operadores temporais `>>`, `[]>>`, `[]`, `|||`, `|[]|`, `|=|`, `[>` e `|>`. A árvore começa pela **motivação externa** que leva o usuário à interface (`M []>> U`).
    - **Correspondência:** cada escolha do HTA tem métodos equivalentes no GOMS e uma relação equivalente no CTT, registradas em uma tabela por integrante.
-5. **Termos do TCC** (Entrega 1, §0.4 e §7.1, revisados em 08/11/2026 a partir do repositório do TCC): **configuração** = modelo (FCN ou DeepLabV3+, ambos com ResNet152) + parâmetros de treino expostos ao usuário: número de épocas, early stopping e paciência, datasets de treino (Freiburg Forest e/ou Synthetic Offroad), batch size e geração de gráficos. As tarefas modeladas nesta entrega **usam** configurações já treinadas; a tarefa de definir e treinar uma configuração (T08, P02/C03) entrou no recorte em 08/11/2026 e ainda não foi modelada (`PENDENCIAS.md`, INC-61). A segmentação é **binária**: as classes da legenda são *Trilha* e *Fora da trilha*. Métricas por modelo (IoU, acurácia) vêm do conjunto de teste anotado do TCC. Os valores usados nos protótipos são ilustrativos.
+5. **Termos do TCC** (Entrega 1, §0.4 e §7.1, revisados em 08/11/2026 a partir do repositório do TCC): **configuração** = modelo (FCN ou DeepLabV3+, ambos com ResNet152) + parâmetros de treino expostos ao usuário: número de épocas, early stopping e paciência, datasets de treino (Freiburg Forest, Synthetic Offroad e/ou CaSSeD), batch size e geração de gráficos. As tarefas modeladas nesta entrega **usam** configurações já treinadas; a tarefa de definir e treinar uma configuração (T08, P02/C03) entrou no recorte em 08/11/2026 e ainda não foi modelada (`PENDENCIAS.md`, INC-61). A segmentação é **binária**: as classes da legenda são *Trilha* e *Fora da trilha*. Métricas por modelo (IoU, acurácia) vêm do conjunto de teste anotado do TCC. Os valores usados nos protótipos são ilustrativos.
 4. **Arquivos de diagrama** em [`../assets/05_tarefas/`](../assets/README.md), com o padrão `<técnica>_<tarefa>_<descrição>.svg` (ex.: `hta_t05_decidir_modelo.svg`). O SVG é a fonte editável. CTTs extensos têm visão geral e detalhamentos recortados do mesmo arquivo.
 
 ## Seleção das tarefas
@@ -71,7 +71,7 @@ Um CRUD pode gerar tarefas relevantes, mas “cadastrar usuário” só merece m
 
 - Larissa **não executa** a segmentação. As execuções dos modelos candidatos são feitas pelo integrante técnico (P01, tarefa T02) na interface. Larissa usa a interface para **consultar e comparar** os resultados consolidados.
 - Ficam **fora da interface**: a pauta da reunião, o contato com o integrante técnico (por mensagem) e a reunião com a coordenação.
-- A visão consolidada, o valor de referência das métricas, a explicação no ponto de uso, o aviso de resultado inconclusivo e o resumo exportável vêm das decisões de design da P03 e são **hipóteses de design**, não funcionalidades confirmadas. O resumo exportável não consta no recorte da Entrega 1 (§11) e por isso aparece só como alternativa condicionada.
+- A visão consolidada, o valor de referência das métricas, a explicação no ponto de uso, a diferença entre configurações e o resumo exportável vêm das decisões de design da P03 e são **hipóteses de design**, não funcionalidades confirmadas. O resumo exportável não consta no recorte da Entrega 1 (§11) e por isso aparece só como alternativa condicionada.
 - A recomendação apoia a decisão sobre o modelo; ela **não** afirma que um trajeto é seguro ou transitável (Entrega 1, §4.3).
 
 ### 1.1 HTA — T05 Decidir e justificar a adoção de um modelo
@@ -105,15 +105,15 @@ Retângulos representam objetivos; operações (folhas) têm traço duplo abaixo
 | **2.2. Ler o desempenho de cada modelo** | **Plano 2.2:** `2.2.1 / 2.2.2`. Tabela quando precisa de valores exatos ou as barras estão próximas; gráfico para visão geral quando a diferença é visível. **Recomendação:** oferecer as duas formas (RC03, cuja evidência está em revisão, `PENDENCIAS.md` INC-22). |
 | 2.2.1. Ler as métricas na tabela | **Ação:** ler IoU médio e acurácia de cada modelo e o valor de referência. **Recomendação:** destacar o maior valor de cada métrica. |
 | 2.2.2. Ler as métricas no gráfico | **Ação:** comparar as barras dos modelos com a linha de referência. **Problema:** barras próximas não permitem ler a diferença; nesse caso, usar 2.2.1. |
-| **2.3. Avaliar se a diferença é relevante** | **Plano 2.3:** `2.3.1 / 2.3.2 / 2.3.3`. 2.3.1 se os termos são conhecidos, há referência e a diferença é clara; 2.3.2 se há termo desconhecido, diferença pequena ou aviso de resultado inconclusivo; 2.3.3 se a dúvida persistir depois de 2.3.2. **Problema:** hoje Larissa não sabe se uma diferença pequena é relevante e escolhe o maior número (C02, Q14). |
+| **2.3. Avaliar se a diferença é relevante** | **Plano 2.3:** `2.3.1 / 2.3.2 / 2.3.3`. 2.3.1 se os termos são conhecidos, há referência e a diferença é clara; 2.3.2 se há termo desconhecido ou a diferença é pequena; 2.3.3 se a dúvida persistir depois de 2.3.2. **Problema:** hoje Larissa não sabe se uma diferença pequena é relevante e escolhe o maior número (C02, Q14). |
 | 2.3.1. Julgar a diferença pela referência | **Ação:** comparar a diferença entre os modelos com a referência e decidir se ela é relevante. **Problema [H]:** o valor de referência é hipótese de design (P03, decisão 2); sem ele, o julgamento passa a 2.3.2. |
 | **2.3.2. Consultar a explicação e julgar** | **Plano 2.3.2:** `2.3.2.1 > 2.3.2.2`. **Recomendação:** explicar no ponto de uso o que a métrica indica e o que não indica (RC01; P03, decisão 3). |
-| 2.3.2.1. Consultar a explicação do termo ou do aviso | **Ação:** abrir a explicação de IoU, acurácia ou do aviso de resultado inconclusivo. **Problema:** ainda não se sabe quais termos geram dúvida (C02, Q15); investigar na Entrega 7. |
+| 2.3.2.1. Consultar a explicação do termo | **Ação:** abrir a explicação de IoU ou acurácia. **Problema:** ainda não se sabe quais termos geram dúvida (C02, Q15); investigar na Entrega 7. |
 | 2.3.2.2. Julgar a diferença com a explicação | **Ação:** decidir se a diferença é relevante, se é inconclusiva ou se a dúvida persiste. |
 | 2.3.3. Pedir interpretação ao integrante técnico | **Ação:** enviar a dúvida a P01 por mensagem e aguardar a resposta. **Problema:** reintroduz a dependência de colegas que a interface pretende reduzir. **Recomendação:** registrar na Entrega 7 quais dúvidas levam a este passo, para avaliar se a explicação de 2.3.2 é suficiente. |
 | **3. Formar a recomendação** | **Plano 3:** `3.1 / 3.2 / 3.3`. 3.1 se a diferença é relevante; 3.2 se é pequena ou inconclusiva, mas a decisão não pode esperar o próximo ciclo; 3.3 se é inconclusiva e há tempo para novas execuções antes do teste. **Problema:** hoje, sem critério, a escolha vai para o número maior (C02). |
 | 3.1. Recomendar o modelo de melhor desempenho | **Ação:** escolher o modelo que se destaca nas métricas avaliadas como relevantes. |
-| 3.2. Recomendar com ressalva de incerteza | **Ação:** escolher um modelo e registrar que a diferença é pequena ou inconclusiva. **Recomendação:** sinalizar quando o resultado é inconclusivo (P03, decisão 5). |
+| 3.2. Recomendar com ressalva de incerteza | **Ação:** escolher um modelo e registrar que a diferença é pequena ou inconclusiva. **Recomendação:** mostrar a diferença entre configurações e o que as métricas não garantem (P03, decisão 5); a incerteza é registrada pela Larissa, e não sinalizada pelo sistema. |
 | 3.3. Adiar e pedir novas execuções | **Ação:** não recomendar ainda e identificar o que precisa ser executado. **Problema:** adiar pode atrasar o ciclo de testes (C02, Q16). |
 | **4. Apresentar e sustentar a recomendação** | **Plano 4:** `4.1 > 4.2 > 4.3`. **Problema:** hoje Larissa leva só os números e tem dificuldade de sustentar a escolha (C02, Q17). |
 | **4.1. Preparar o material para a reunião** | **Plano 4.1:** `4.1.1 / 4.1.2`. 4.1.1 se a interface oferecer resumo exportável; senão, 4.1.2. **Recomendação:** o material deve trazer modelo, métricas, referência e ressalvas. |
@@ -156,20 +156,17 @@ GOAL 0: identificar o modelo de melhor desempenho e se a diferença entre os mod
       OP. 2.B.4: verificar qual modelo se destaca e em quais métricas
   GOAL 3: avaliar se a diferença entre os modelos é relevante
     METHOD 3.A: julgar pela referência
-    (SEL. RULE: termos conhecidos, referência exibida, diferença clara
-     e nenhum aviso de resultado inconclusivo)
+    (SEL. RULE: termos conhecidos, referência exibida e diferença clara)
       OP. 3.A.1: comparar a diferença entre os modelos com a referência
       OP. 3.A.2: decidir se a diferença é relevante
       OP. 3.A.3: verificar que o julgamento se apoia nos valores lidos na meta 2
     METHOD 3.B: consultar a explicação no ponto de uso
-    (SEL. RULE: termo desconhecido, diferença pequena, referência ausente
-     ou aviso de resultado inconclusivo)
-      OP. 3.B.1: acionar a explicação do termo ou do aviso
+    (SEL. RULE: termo desconhecido, diferença pequena ou referência ausente)
+      OP. 3.B.1: acionar a explicação do termo
       OP. 3.B.2: ler o que a métrica indica
       OP. 3.B.3: ler o que a métrica não indica
-      OP. 3.B.4: ler o motivo do aviso de incerteza, quando houver
-      OP. 3.B.5: decidir se a diferença é relevante, inconclusiva ou se a dúvida persiste
-      OP. 3.B.6: verificar se a explicação respondeu à dúvida
+      OP. 3.B.4: decidir se a diferença é relevante, inconclusiva ou se a dúvida persiste
+      OP. 3.B.5: verificar se a explicação respondeu à dúvida
     METHOD 3.C: pedir interpretação ao integrante técnico
     (SEL. RULE: a dúvida persiste depois de 3.B)
       OP. 3.C.1: anotar o termo ou a diferença que gerou a dúvida
@@ -292,8 +289,8 @@ Os modelos são **propostas a validar**, derivadas de C02 e da P03:
 
 - Rafael executa e avalia a segmentação **pela interface**, sem scripts nem terminal, que é o objetivo do recorte (Entrega 1, §7.1). A persona sabe programar, mas o modelo não oferece o caminho por script (ver `PENDENCIAS.md`, INC-35).
 - Ele usa **configurações já treinadas**; definir e treinar uma configuração não faz parte das tarefas da P01 modeladas aqui (ver premissa 5).
-- Visualização lado a lado, sobreposição com opacidade e legenda fixa vêm das decisões 1 e 2 da P01. A **confiança do modelo** por região vem da ruptura do C01 ("sem informação sobre a confiança do resultado") e é hipótese de design.
-- **Métricas por classe (IoU) só existem quando a imagem tem anotação de referência** (máscara feita à mão). Uma imagem nova de campo normalmente não tem, então a avaliação dela é visual, com apoio da confiança (ver `PENDENCIAS.md`, INC-52). As imagens do conjunto de teste do TCC (Freiburg Forest e Synthetic Offroad) têm máscara de referência.
+- Visualização lado a lado, sobreposição com opacidade e legenda fixa vêm das decisões 1 e 2 da P01. A confiança do modelo por região, proposta a partir da ruptura do C01, foi retirada em 14/11/2026 porque o TCC previsto não a exibe (`PENDENCIAS.md`, INC-66).
+- **Métricas por classe (IoU) só existem quando a imagem tem anotação de referência** (máscara feita à mão). Uma imagem nova de campo normalmente não tem, então a avaliação dela é visual (ver `PENDENCIAS.md`, INC-52). As imagens do conjunto de teste do TCC (Freiburg Forest, Synthetic Offroad e CaSSeD) têm máscara de referência.
 - Ficam **fora da interface**: a captura das imagens (câmeras do veículo) e a comunicação à equipe. Ficam **fora do modelo**, por falta de sustentação: histórico (H08), exportação, atalhos de teclado (lição da Entrega 2) e modo offline.
 - Uma segmentação adequada não autoriza concluir que um trajeto é transitável ou seguro (Entrega 1, §4.3).
 
@@ -334,10 +331,9 @@ Retângulos representam objetivos; operações (folhas) têm traço duplo abaixo
 | 3.1.1. Comparar lado a lado | **Ação:** ver a imagem e a máscara lado a lado, na mesma região. |
 | 3.1.2. Sobrepor a máscara com opacidade | **Ação:** sobrepor a máscara à imagem e ajustar a opacidade. |
 | 3.2. Interpretar as classes pela legenda | **Ação:** associar cada cor a uma classe pela legenda. **Problema:** hoje as cores não têm padrão entre execuções (jornada, etapa 5). **Recomendação:** paleta fixa e rótulo textual de cada classe (P01, decisão 2; RC01). Os nomes das classes ainda não estão definidos (INC-12). |
-| **3.3. Julgar a qualidade da segmentação** | **Plano 3.3:** `3.3.1 / 3.3.2 / 3.3.3`. 3.3.1 se o acerto ou o erro é evidente na região de interesse; 3.3.2 se a inspeção é inconclusiva e a imagem não tem anotação de referência; 3.3.3 se a inspeção é inconclusiva e a imagem tem anotação de referência. **Problema:** hoje Rafael não sabe dizer se a falha é do modelo ou da imagem (C01, Q7). |
+| **3.3. Julgar a qualidade da segmentação** | **Plano 3.3:** `3.3.1 / 3.3.2`. 3.3.1 se o acerto ou o erro é evidente na região de interesse ou se a imagem não tem anotação de referência; 3.3.2 se a inspeção é inconclusiva e a imagem tem anotação de referência. **Problema:** hoje Rafael não sabe dizer se a falha é do modelo ou da imagem (C01, Q7). |
 | 3.3.1. Julgar pela inspeção visual | **Ação:** comparar a classe atribuída com o terreno visível e decidir. **Problema [?]:** o critério para considerar uma máscara correta ainda não foi levantado (C01, Q7). |
-| 3.3.2. Consultar a confiança do modelo [H] | **Ação:** consultar a confiança do modelo na região duvidosa. **Problema [H]:** a confiança não é calibrada e não equivale a acerto. **Recomendação:** explicar o que a confiança indica e o que não indica (RC01). |
-| 3.3.3. Conferir as métricas por classe | **Ação:** ler o IoU da classe de interesse. **Problema:** o IoU exige anotação de referência, que imagens novas de campo normalmente não têm (INC-52). **Recomendação:** métricas em tabela e em gráfico (RC03; evidência em revisão, INC-22). |
+| 3.3.2. Conferir as métricas por classe | **Ação:** ler o IoU da classe de interesse. **Problema:** o IoU exige anotação de referência, que imagens novas de campo normalmente não têm (INC-52). **Recomendação:** métricas em tabela e em gráfico (RC03; evidência em revisão, INC-22). |
 | **4. Concluir a comparação** | **Plano 4:** `4.1 > 4.2 > 4.3`. **Problema:** hoje as métricas ficam em planilhas diferentes e Rafael "perde o fio da comparação" (C01). |
 | 4.1. Comparar as configurações na mesma região | **Ação:** ver os resultados das configurações lado a lado, na mesma região da imagem. **Recomendação:** reunir todas as configurações tratadas em uma única visão, com a avaliação feita em 3. |
 | **4.2. Registrar a conclusão** | **Plano 4.2:** `4.2.1 / 4.2.2 / 4.2.3`. 4.2.1 se uma configuração se destaca; 4.2.2 se nenhuma é adequada; 4.2.3 se não há elementos para decidir. **Problema [H]:** onde a conclusão fica guardada depende da necessidade de histórico (H08). |
@@ -378,36 +374,30 @@ GOAL 0: avaliar se a segmentação de uma imagem identifica corretamente as regi
     OP. 2.3: verificar que todas as cores da região de interesse têm classe na legenda
   GOAL 3: julgar a qualidade da segmentação
     METHOD 3.A: julgar pela inspeção visual
-    (SEL. RULE: o acerto ou o erro é evidente na região de interesse)
+    (SEL. RULE: o acerto ou o erro é evidente na região de interesse,
+     ou a imagem não tem anotação de referência)
       OP. 3.A.1: comparar a classe atribuída com o terreno visível na imagem
       OP. 3.A.2: examinar a imagem original em busca de problema de captura
       OP. 3.A.3: decidir se o resultado é adequado ou inadequado
       OP. 3.A.4: verificar que a decisão distingue erro do modelo de problema da imagem
-    METHOD 3.B: consultar a confiança do modelo
-    (SEL. RULE: inspeção visual inconclusiva e a imagem não tem anotação de referência)
-      OP. 3.B.1: acionar a exibição da confiança
-      OP. 3.B.2: localizar a região duvidosa
-      OP. 3.B.3: ler a confiança do modelo nessa região
-      OP. 3.B.4: decidir se o resultado é adequado, inadequado ou inconclusivo
-      OP. 3.B.5: verificar que a decisão não trata confiança alta como acerto garantido
-    METHOD 3.C: conferir as métricas por classe
+    METHOD 3.B: conferir as métricas por classe
     (SEL. RULE: inspeção visual inconclusiva e a imagem tem anotação de referência)
-      OP. 3.C.1: abrir as métricas da execução
-      OP. 3.C.2: localizar a classe de interesse
-      OP. 3.C.3: ler o IoU da classe
-      OP. 3.C.4: comparar o IoU com a impressão da inspeção visual
-      OP. 3.C.5: decidir se o resultado é adequado, inadequado ou inconclusivo
-      OP. 3.C.6: verificar que a decisão se apoia na classe de interesse, e não só na média
+      OP. 3.B.1: abrir as métricas da execução
+      OP. 3.B.2: localizar a classe de interesse
+      OP. 3.B.3: ler o IoU da classe
+      OP. 3.B.4: comparar o IoU com a impressão da inspeção visual
+      OP. 3.B.5: decidir se o resultado é adequado, inadequado ou inconclusivo
+      OP. 3.B.6: verificar que a decisão se apoia na classe de interesse, e não só na média
   OP. 0.1: verificar que a avaliação indica se o resultado é adequado, inadequado ou inconclusivo, e por quê
 ```
 
-**Regras e repetições:** a meta 1 pode ser repetida com o outro método (ex.: ver lado a lado e, com dúvida no limite da pista, passar à sobreposição). Na meta 3, Rafael sempre começa pela inspeção visual; os métodos 3.B e 3.C só são selecionados quando ela é inconclusiva, e a escolha entre eles depende de a imagem ter anotação de referência. A comparação **entre** configurações não faz parte da T01: acontece no objetivo 4 da T03.
+**Regras e repetições:** a meta 1 pode ser repetida com o outro método (ex.: ver lado a lado e, com dúvida no limite da pista, passar à sobreposição). Na meta 3, Rafael sempre começa pela inspeção visual; o método 3.B só é selecionado quando ela é inconclusiva e a imagem tem anotação de referência. Sem anotação, a inspeção visual é o único método, e um resultado que continua duvidoso é registrado como inconclusivo (T03, 4.2.3). A comparação **entre** configurações não faz parte da T01: acontece no objetivo 4 da T03.
 
-**Correspondência com o HTA da T03:** GOAL 1 ↔ 3.1 (1.A ↔ 3.1.1, 1.B ↔ 3.1.2); GOAL 2 ↔ 3.2; GOAL 3 ↔ 3.3 (3.A ↔ 3.3.1, 3.B ↔ 3.3.2, 3.C ↔ 3.3.3). Ler, localizar e examinar são operadores perceptivos; selecionar, ampliar e ajustar são motores; associar, decidir e verificar são cognitivos.
+**Correspondência com o HTA da T03:** GOAL 1 ↔ 3.1 (1.A ↔ 3.1.1, 1.B ↔ 3.1.2); GOAL 2 ↔ 3.2; GOAL 3 ↔ 3.3 (3.A ↔ 3.3.1, 3.B ↔ 3.3.2). Ler, localizar e examinar são operadores perceptivos; selecionar, ampliar e ajustar são motores; associar, decidir e verificar são cognitivos.
 
 ### 2.3 CTT — T03 Comparar o resultado de uma imagem entre configurações
 
-**Fronteira dos sistemas:** seleção da imagem, escolha das configurações, execução, visualização, legenda, confiança, métricas e comparação na interface proposta; captura da imagem e comunicação à equipe fora dela. O sistema processa e exibe; não decide qual configuração é a melhor.
+**Fronteira dos sistemas:** seleção da imagem, escolha das configurações, execução, visualização, legenda, métricas e comparação na interface proposta; captura da imagem e comunicação à equipe fora dela. O sistema processa e exibe; não decide qual configuração é a melhor.
 
 #### Diagrama
 
@@ -451,7 +441,7 @@ Os IDs numéricos seguem o HTA. As letras marcam nós que só existem no CTT: `M
 4. **Repetir por configuração:** `V = C* [> F`. C se repete para cada configuração escolhida; F (reconhecer que todas foram tratadas) desativa a repetição.
 5. **Uma configuração:** `C = 2 []>> 3`. O ramo 3 só é habilitado se 2 terminar com resultado pronto (2.3.1).
 6. **Obter o resultado:** `2 = 2.1 []>> P []>> 2.3`, com `P = S2 |[]| 2.2`. O sistema processa a imagem (S2) e, ao mesmo tempo, informa o estado a Rafael, que acompanha (2.2). Depois, `2.3 = 2.3.1 [] 2.3.2` e `2.3.2 = 2.3.2.1 []>> 2.3.2.2`; repetir volta a 2.1, retirar encerra C sem avaliação.
-7. **Avaliar:** `3 = S3 []>> 3.1 []>> 3.2 []>> 3.3`, com `3.1 = 3.1.1 [] 3.1.2` e `3.3 = 3.3.1 [] 3.3.2 [] 3.3.3`.
+7. **Avaliar:** `3 = S3 []>> 3.1 []>> 3.2 []>> 3.3`, com `3.1 = 3.1.1 [] 3.1.2` e `3.3 = 3.3.1 [] 3.3.2`.
 8. **Concluir:** `4 = Q []>> S4 []>> 4.1 []>> 4.2 []>> 4.3`, com `4.2 = 4.2.1 [] 4.2.2 [] 4.2.3`. A comunicação (4.3) acontece fora da interface.
 
 #### Legenda e relações temporais usadas
@@ -459,7 +449,7 @@ Os IDs numéricos seguem o HTA. As letras marcam nós que só existem no CTT: `M
 | Relação CTT | Notação | Ocorrência em T03 |
 |---|---|---|
 | Ativação com passagem de informação | `T1 []>> T2` | M passa a imagem e a dúvida a R; a imagem passa às configurações (1); o resultado passa à avaliação (C); as avaliações passam à conclusão (4). |
-| Escolha | `T1 [] T2` | Resultado pronto ou falha (2.3); lado a lado ou sobreposição (3.1); visual, confiança ou métricas (3.3); as três conclusões (4.2). |
+| Escolha | `T1 [] T2` | Resultado pronto ou falha (2.3); lado a lado ou sobreposição (3.1); visual ou métricas (3.3); as três conclusões (4.2). |
 | Concorrência com comunicação | `T1 \|[]\| T2` | S2 processa enquanto Rafael acompanha o estado (2.2), e o sistema comunica processando, concluído ou falhou. |
 | Desativação | `T1 [> T2` | F encerra a repetição de C. |
 | Iteração | `T*` | C* repete-se para cada configuração. |
@@ -472,7 +462,7 @@ Não há suspensão (`|>`): interrupções durante a análise (Entrega 1, §5.3)
 |---|---|---|
 | Nuvem | Abstrata | T03, R, V, C, P, ramos 1 a 4, 2.3, 2.3.2, 3.1, 3.3 e 4.2. |
 | Pessoa | Usuário | M (fora da interface); F; 2.3.1 e 2.3.2.2; 3.3.1; 4.2.1 a 4.2.3; 4.3 (fora da interface). |
-| Pessoa e computador, com seta dupla | Interação | 1.1, 1.2, 2.1, 2.2, 2.3.2.1, 3.1.1, 3.1.2, 3.2, 3.3.2, 3.3.3, Q e 4.1. |
+| Pessoa e computador, com seta dupla | Interação | 1.1, 1.2, 2.1, 2.2, 2.3.2.1, 3.1.1, 3.1.2, 3.2, 3.3.2, Q e 4.1. |
 | Computador | Sistema | S1 (exibir configurações), S2 (processar a imagem), S3 (exibir imagem, máscara e legenda) e S4 (exibir resultados lado a lado). |
 
 ### 2.4 Correspondência entre os três modelos
@@ -482,7 +472,7 @@ Não há suspensão (`|>`): interrupções durante a análise (Entrega 1, §5.3)
 | Plano 0: repetir `2 > 3` por configuração | Fora do GOMS (a T01 avalia uma execução) | `V = C* [> F` |
 | 2.3: `2.3.1 / 2.3.2` | Fora do GOMS (precondição: resultado pronto) | `2.3.1 [] 2.3.2` |
 | 3.1: `3.1.1 / 3.1.2` | 1.A / 1.B | `3.1.1 [] 3.1.2` |
-| 3.3: `3.3.1 / 3.3.2 / 3.3.3` | 3.A / 3.B / 3.C | `3.3.1 [] 3.3.2 [] 3.3.3` |
+| 3.3: `3.3.1 / 3.3.2` | 3.A / 3.B | `3.3.1 [] 3.3.2` |
 | 4.2: `4.2.1 / 4.2.2 / 4.2.3` | Fora do GOMS | `4.2.1 [] 4.2.2 [] 4.2.3` |
 
 As sequências (`>`) do HTA não recebem métodos no GOMS e aparecem como `[]>>` no CTT. Uma diferença deliberada: no HTA, acompanhar o processamento (2.2) vem depois de iniciar (2.1); no CTT, ele acontece **ao mesmo tempo** que o processamento do sistema (`S2 |[]| 2.2`), o que o HTA não consegue representar porque não modela o sistema.
@@ -493,10 +483,10 @@ Os modelos são **propostas a validar**, derivadas de C01 e da P01:
 
 1. **Execução sem script, com estado claro:** o ramo 2 só funciona se a interface distinguir processando, concluído e falhou, e explicar a falha em linguagem de usuário (RC04).
 2. **Imagem ou modelo:** a ruptura central do C01 é não saber se o erro vem do modelo ou da captura. Ela aparece em 3.A.2 (examinar a imagem original) e em 4.2.2 (registrar onde parece estar o problema).
-3. **Métricas dependem de anotação:** para imagens novas de campo, a avaliação é visual, com apoio da confiança `[H]`. A interface não deve prometer IoU para toda imagem (INC-52).
+3. **Métricas dependem de anotação:** para imagens novas de campo, a avaliação é visual. A interface não deve prometer IoU para toda imagem (INC-52).
 4. **Comparação reunida:** reunir as configurações na mesma visão (4.1) responde ao "perder o fio da comparação" do C01.
 
-**Continuidade da investigação [?]:** na Entrega 7, verificar com um integrante que faz a análise de segmentação (perfil P01) como escolhe as configurações a comparar (C01, Q5); qual critério usa para considerar a máscara correta (Q7); se as imagens de campo costumam ter anotação de referência; se a confiança do modelo ajudaria a decidir; e quantas imagens e configurações avalia por sessão (Q9).
+**Continuidade da investigação [?]:** na Entrega 7, verificar com um integrante que faz a análise de segmentação (perfil P01) como escolhe as configurações a comparar (C01, Q5); qual critério usa para considerar a máscara correta (Q7); se as imagens de campo costumam ter anotação de referência; e quantas imagens e configurações avalia por sessão (Q9).
 
 ---
 
@@ -511,13 +501,13 @@ Os modelos são **propostas a validar**, derivadas de C01 e da P01:
 **Recorte comum aos três modelos [H]:**
 
 - Andreia executa, analisa e compara os resultados da segmentação **pela interface**, sem precisar recorrer a scripts ou ao terminal. Embora tenha conhecimento de Python e visão computacional, o objetivo do sistema é centralizar essas atividades em uma interface.
-- Ela utiliza apenas **modelos pré-treinados disponibilizados pelo sistema**; não cria, treina ou modifica modelos.
+- Nas tarefas modeladas nesta seção (T06 e T07), ela utiliza **configurações já treinadas e disponibilizadas pelo sistema**. Definir uma configuração e treinar o modelo é a T08, que está no recorte desde 08/11/2026 (premissa 5) e ainda não foi modelada (`PENDENCIAS.md`, INC-61).
 - As entradas consideradas são **imagens e vídeos gravados**. A captura de imagens pelas câmeras do veículo fica fora do escopo da interface.
 - A análise visual considera a imagem original, as máscaras geradas e as sobreposições, permitindo inspecionar os resultados e identificar diferenças entre modelos.
 - A comparação considera a mesma entrada processada por diferentes modelos, para que as diferenças observadas sejam atribuídas aos modelos, e não a arquivos distintos.
 - **Métricas são consideradas somente quando estiverem disponíveis** para a execução. Não se presume que todas as imagens possuam anotações de referência ou que todos os indicadores possam ser calculados.
 - A avaliação dos resultados combina inspeção visual e indicadores disponíveis, sem presumir que uma métrica isolada determine a qualidade da segmentação.
-- Ficam **fora do escopo**: treinamento de modelos, captura de imagens pelo veículo, comunicação dos resultados à equipe, histórico persistente, exportação e modo offline, enquanto não houver requisitos que sustentem essas funcionalidades.
+- Ficam **fora do escopo**: captura de imagens pelo veículo, comunicação dos resultados à equipe, histórico persistente, exportação e modo offline, enquanto não houver requisitos que sustentem essas funcionalidades.
 - Uma segmentação adequada não permite concluir, isoladamente, que um terreno ou trajeto é transitável ou seguro para o veículo Baja.
 
 ### 3.1 HTA — T07: Comparar o resultado de diferentes modelos
@@ -601,7 +591,7 @@ GOAL 0: analisar visualmente os resultados da segmentação
     OP. 4.4: verificar que a conclusão está fundamentada nas evidências visuais
     
 ```
-**Regras e repetições:** na meta 2, os métodos 2.A, 2.B e 2.C podem ser utilizados em conjunto e repetidos conforme a necessidade da análise. A pessoa pode começar pela imagem original, consultar a máscara e, em seguida, utilizar a sobreposição para investigar uma região específica. Na meta 3, a identificação de problemas pode levar à consulta de outra visualização para confirmar a inconsistência.
+**Regras e repetições:** na meta 2, os métodos 2.A, 2.B e 2.C são alternativas, escolhidas pelas regras de seleção. Usar mais de uma visualização na mesma análise é repetir a meta 2 com outro método: a pessoa pode começar pela imagem original, consultar a máscara e, em seguida, repetir a meta com a sobreposição para investigar uma região específica. Na meta 3, a identificação de problemas pode levar à consulta de outra visualização para confirmar a inconsistência.
 
 **Correspondência com o HTA da T07:** GOAL 0 ↔ objetivo principal de analisar visualmente os resultados; GOAL 1 ↔ acesso aos resultados da execução; GOAL 2 ↔ análise das visualizações disponíveis; GOAL 3 ↔ identificação de possíveis problemas; GOAL 4 ↔ conclusão da análise. Observar e localizar são operadores perceptivos; selecionar e abrir são motores; identificar, comparar, avaliar e concluir são cognitivos.
 
@@ -694,12 +684,12 @@ As três seções modelam o **uso proposto** por perfis diferentes: o analista q
 | RQ03 | Alternar entre janelas e arquivos faz perder o fio da comparação. | Reunir original, máscara e sobreposição na mesma tela, com zoom; manter os resultados já executados acessíveis sem recarregar a entrada. | T01 metas 1–2; T06 meta 2; T03 obj. 4; T07 `C*` |
 | RQ04 | Cores sem padrão entre execuções exigem reinterpretar a legenda. | Legenda e paleta fixas em todas as visualizações. | T01 meta 2; T03 3.2; T06 2.B |
 | RQ05 | Não se sabe se o erro vem do modelo ou da imagem capturada. | Permitir que a pessoa registre a avaliação separando problema da imagem e problema do modelo. | T01 3.A.2; T03 4.2.2; T06 OP. 3.4 |
-| RQ06 | Métricas aparecem como se existissem para qualquer imagem. | Mostrar IoU e acurácia **só** quando houver anotação de referência (conjunto de teste do TCC); sem ela, avaliação visual com apoio da confiança do modelo `[H]`. | T01 3.B e 3.C; T04 precondições; recorte da P02; INC-52 |
-| RQ07 | Números soltos, sem referência, não sustentam decisão; termos geram dúvida. | Valor de referência, explicação no ponto de uso (o que a métrica indica e não indica) e aviso quando a diferença é pequena. | T04 metas 2–3; T05 2.3 e 3.2; RC01 |
+| RQ06 | Métricas aparecem como se existissem para qualquer imagem. | Mostrar IoU e acurácia **só** quando houver anotação de referência (conjunto de teste do TCC); sem ela, avaliação visual. | T01 3.A e 3.B; T04 precondições; recorte da P02; INC-52 |
+| RQ07 | Números soltos, sem referência, não sustentam decisão; termos geram dúvida. | Valor de referência, diferença entre configurações e explicação no ponto de uso (o que a métrica indica e não indica); quem julga se a diferença é relevante é a pessoa. | T04 metas 2–3; T05 2.3 e 3.2; RC01 |
 | RQ08 | Há o risco de a interface parecer "escolher" o melhor modelo. | A conclusão e a recomendação são registradas pela pessoa; a interface exibe e calcula, mas não decide. | T03 4.2; T05 obj. 3; T07 fronteira do sistema |
 | RQ09 | Parte da tarefa acontece fora da interface. | Não modelar como funcionalidade a comunicação à equipe, o pedido ao integrante técnico e a reunião com a coordenação; a interface só indica o que falta pedir. | T03 4.3; T05 1.2, 2.3.3 e ramo E |
 
-**Oportunidades:** a sobreposição com opacidade (T01 1.B, T06 2.C) e a confiança do modelo (T01 3.B) aparecem como os recursos que mais aproximam a avaliação do que hoje é feito "no olho". O resumo exportável (T05 4.1.1) e o histórico (H08) continuam **fora do recorte** até haver evidência.
+**Oportunidades:** a sobreposição com opacidade (T01 1.B, T06 2.C) aparece como o recurso que mais aproxima a avaliação do que hoje é feito "no olho". O resumo exportável (T05 4.1.1) e o histórico (H08) continuam **fora do recorte** até haver evidência.
 
 **Divergências entre as seções, a resolver na Entrega 9:**
 
@@ -740,3 +730,12 @@ Os requisitos RQ01–RQ09 da síntese ligam estes modelos às telas da Entrega 6
 - [x] Tarefas estão ligadas a cenários/personas na rastreabilidade.
 - [x] Em TCC técnico, as tarefas descrevem o que a pessoa faz com a contribuição/resultados, não passos internos do código.
 - [x] CRUDs, relatórios, filtros e atividades administrativas foram escolhidos por relevância ao objetivo do usuário. *(Nenhum CRUD, login ou histórico; exportação só como alternativa `[H]` na T05.)*
+
+## Histórico de revisões
+
+| Data | O que mudou | Motivo |
+|---|---|---|
+| 14/11/2026 | Premissa 5 e seção 2: dataset CaSSeD incluído entre os datasets do TCC | Revisão de consistência com o repositório do TCC (`PENDENCIAS.md`: INC-65) |
+| 14/11/2026 | Seção 1: o aviso automático de resultado inconclusivo sai do recorte comum, do HTA da T05 (2.3, 2.3.2.1 e 3.2) e do GOMS da T04 (regras 3.A e 3.B); RQ07 passa a citar a diferença entre configurações, cuja relevância é julgada pela pessoa. Diagramas da T05 regenerados | Decisão da equipe na Entrega 9 (`PENDENCIAS.md`: INC-67) |
+| 14/11/2026 | Seção 2: a confiança do modelo sai do recorte comum, do HTA e do CTT da T03 (3.3.2 removido; 3.3.3 passa a 3.3.2) e do GOMS da T01 (método 3.B removido; 3.C passa a 3.B); RQ06 e "Oportunidades" ajustadas. Diagramas da T03 regenerados | Decisão da equipe na Entrega 9 (`PENDENCIAS.md`: INC-66) |
+| 14/11/2026 | Seção 3: o recorte comum deixa de dizer que treinar fica fora do escopo e remete à T08 (premissa 5); regras e repetições do GOMS da T06 tratam os métodos como alternativas, com repetição da meta | Revisão de consistência (`PENDENCIAS.md`: INC-64 e INC-55) |

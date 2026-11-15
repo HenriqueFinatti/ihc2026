@@ -356,7 +356,7 @@ A tabela reúne os signos das conversas das seções 2.1, 2.2 e 2.3, agrupados p
 | Configuração | épocas | usuário | Número máximo de vezes que o treino percorre os datasets de treino. | número inteiro | ≥ 1 | 200 (TCC) | PA: aceita só inteiros positivos | — |
 | Configuração | early stopping | usuário | Encerra o treino antes do número de épocas quando o desempenho na validação para de melhorar. | sim/não | — | sim (TCC) | — | — |
 | Configuração | paciência | usuário | Número de épocas sem melhora na validação até o early stopping encerrar o treino. | número inteiro | ≥ 1; só vale com early stopping ligado | 5 (TCC) | PA: só pode ser informada com early stopping ligado | — |
-| Configuração | datasets de treino | usuário | Conjuntos de imagens anotadas usados no treino. | seleção múltipla | pelo menos um; {Freiburg Forest, Synthetic Offroad} `[?]` | todos (TCC) | PA: não permite continuar sem dataset (seção 2.3) | — |
+| Configuração | datasets de treino | usuário | Conjuntos de imagens anotadas usados no treino. | seleção múltipla | pelo menos um; {Freiburg Forest, Synthetic Offroad, CaSSeD} | todos (TCC) | PA: não permite continuar sem dataset (seção 2.3) | — |
 | Configuração | batch size | usuário | Quantas imagens o treino processa por vez; valores maiores usam mais memória do computador. | número inteiro | ≥ 1 | 4 (TCC) | PP: avisa que valores maiores exigem mais memória | RA: depois de falha por falta de memória, sugere um valor menor e mantém a configuração (seção 2.3) |
 | Configuração | geração de gráficos | usuário | Define se o treino gera os gráficos de treino e validação. | sim/não | — | sim (TCC) | — | — |
 | Configuração | descrição da configuração | sistema | Resumo do modelo e dos parâmetros, para escolher sem abrir os detalhes (F01). | texto | — | gerada a partir dos parâmetros | — | — |
@@ -405,7 +405,7 @@ A tabela reúne os signos das conversas das seções 2.1, 2.2 e 2.3, agrupados p
 - **Relevância da diferença:** o sistema calcula e mostra a diferença entre configurações e explica o que cada métrica indica, mas não avisa que um resultado é inconclusivo nem julga se a diferença é relevante; o julgamento é de quem analisa (decisão de 14/11/2026, `PENDENCIAS.md`, INC-67).
 - **Confiança do modelo:** não é signo da interface, porque o TCC previsto não a exibe; imagens sem anotação de referência são avaliadas visualmente (decisão de 14/11/2026, `PENDENCIAS.md`, INC-66).
 - **Imagem inconclusiva:** não é um signo novo; é uma imagem com avaliação "duvidosa" que continua assim depois da comparação.
-- **Datasets de treino:** o repositório do TCC também lista o dataset CaSSeD, que os documentos do projeto não citam. A lista fica marcada `[?]` até a equipe confirmar se ele faz parte do TCC previsto (`PENDENCIAS.md`, INC-65).
+- **Datasets de treino:** Freiburg Forest, Synthetic Offroad e CaSSeD; o CaSSeD foi confirmado como parte do TCC previsto em 14/11/2026 (`PENDENCIAS.md`, INC-65).
 - **Parâmetros internos do treino** (taxa de aprendizado, tamanho da imagem, pesos das classes, divisão da validação e outros) não são signos da interface (D2).
 - **Valores padrão "(TCC)":** valores padrão da configuração do TCC. Os números usados nos cenários de interação (ex.: 50 épocas, batch size 16) são exemplos `[H]`.
 
@@ -463,13 +463,12 @@ Todos os objetivos O01 a O10 ficam cobertos por pelo menos um diagrama. Os ponto
 
 - Objetivos alcançados fora do sistema (obter as entradas, pedir execução ou validação a um colega, comunicar o grupo, discutir na reunião): no máximo como saída da conversa, sem cenas próprias.
 - Confiança do modelo e aviso automático de resultado inconclusivo, retirados em 14/11/2026 (`PENDENCIAS.md`, INC-66 e INC-67).
-- Histórico entre sessões, exportação, perfis e permissões: fora do recorte até a coleta da Entrega 7 (H08; `PENDENCIAS.md`, INC-63).
+- Histórico entre sessões e exportação: fora do recorte até a coleta da Entrega 7 (H08 e H12; `PENDENCIAS.md`, INC-63). Perfis e permissões: fora do recorte (E1 §8).
 
 ### Pontos em aberto que afetam a Entrega 10
 
 - Formato do nome da configuração (modelo + épocas) `[H]`.
 - Origem do valor de referência das métricas `[?]` (decisão de design 2 da P03).
-- Inclusão do dataset CaSSeD entre os datasets de treino `[?]` (`PENDENCIAS.md`, INC-65).
 - Modelagem da T08 na Entrega 5 (`PENDENCIAS.md`, INC-61), que pode refinar O01 e O02.
 
 ## Checklist
