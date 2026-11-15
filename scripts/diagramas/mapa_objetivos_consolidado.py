@@ -79,7 +79,7 @@ ya = s.tree(N(["O05. Comparar configurações", "sobre a mesma entrada"]),
 yb = s.tree(N(["O06. Comparar o desempenho consolidado"]),
             [N(["O06.1. Escolher as", "configurações"]),
              N(["O06.2. Conferir se", "a comparação", "é válida"]),
-             N(["O06.3. Ler o", "desempenho de", "cada uma"]),
+             N(["O06.3. Ler o", "desempenho de cada", "configuração"]),
              N(["O06.4. Consultar", "a matriz de", "confusão"])],
             y, 620, 1400, gap=16, pw=480)
 y = max(ya, yb) + 20

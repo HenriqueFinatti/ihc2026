@@ -469,7 +469,7 @@ Todos os objetivos O01 a O10 ficam cobertos por pelo menos um diagrama. Os ponto
 
 - Formato do nome da configuração (modelo + épocas) `[H]`.
 - Origem do valor de referência das métricas `[?]` (decisão de design 2 da P03).
-- Modelagem da T08 na Entrega 5 (`PENDENCIAS.md`, INC-61), que pode refinar O01 e O02.
+- A T08 foi modelada na Entrega 5 (seção 3.6) depois desta síntese; os diálogos de O01 e O02 seguem os mesmos passos (definir, treinar, tratar falha, conferir).
 
 ## Checklist
 
