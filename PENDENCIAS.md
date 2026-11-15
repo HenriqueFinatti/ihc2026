@@ -108,7 +108,7 @@ Alguns itens não são correção de texto: dependem de uma decisão do grupo. V
 | INC-65 | 🟠 | E1, E5, E9, RAST | Datasets de treino: os documentos citam Freiburg Forest e Synthetic Offroad; o repositório do TCC também tem o CaSSeD | Equipe | 🟩 | 14/11: **decisão da equipe:** o CaSSeD faz parte do TCC previsto. D2 atualizada na RAST §5; E1 §0.4 e §7.1, E5 (premissa 5 e seção 2) e E9 §4 citam os três datasets. |
 | INC-66 | 🟠 | E5 (Tiago), E7 | Confiança do modelo retirada do projeto (não faz parte do TCC previsto), mas a E5 e a E7 ainda a usam | Tiago | 🟩 | 14/11: E5 §2: confiança do modelo retirada do recorte comum, do HTA e do CTT da T03 (3.3.3 passa a 3.3.2) e do GOMS da T01 (3.C passa a 3.B); RQ06, síntese 2.5, continuidade e "Oportunidades" ajustadas; diagramas da T03 regenerados pelos scripts. E7, A02: troca pela avaliação visual com registro da origem do problema (RQ05). |
 | INC-67 | 🟠 | E3, E5 | Aviso automático de "resultado inconclusivo" retirado (o sistema não julga a relevância da diferença), mas a E3 e a E5 ainda o preveem | Henrique, equipe | 🟩 | 14/11: E3, decisão 5 da P03 reescrita (diferença entre configurações e explicação; sem aviso automático). E5 §1: recorte comum, HTA T05 (2.3, 2.3.2.1, 3.2), GOMS T04 (regras 3.A e 3.B; 3.B.4 removido) e RQ07 ajustados; diagramas da T05 regenerados. |
-| INC-68 | ⚪ | E9, E10 | Subtópicos (O01.1…) só definidos na figura do mapa consolidado; nomes divergentes entre a E9 e a E10 | Cada autor | 🟨 | 14/11: tabela "Subtópicos" criada na E9 §3.2 com os nomes oficiais; subtópicos da P03 incluídos e M02 alinhado (O06.1, O06.2); figura: O06.3 renomeado. **Falta:** subtópicos da P01 (com o M01) e da P02 (com o M03). |
+| INC-68 | ⚪ | E9, E10 | Subtópicos (O01.1…) só definidos na figura do mapa consolidado; nomes divergentes entre a E9 e a E10 | Cada autor | 🟩 | 14/11: tabela "Subtópicos" criada na E9 §3.2 com os nomes oficiais; subtópicos da P03 incluídos e M02 alinhado (O06.1, O06.2); figura: O06.3 renomeado. Subtópicos da P01 incluídos (O03.1–O05.2 e origem de O08.1) e M01 alinhado. 15/11: subtópicos da P02 incluídos (O01.1–O02.2, O06.4 e origens em O03.1, O03.2, O05.2, O06.3, O07.2 e O08.1) e M03 alinhado. |
 
 **Prioridade sugerida:** resolver os 🔴 antes de fechar a E4 e começar a E5. O INC-22 é o mais sensível, porque a RC03 sustenta decisões nas três personas.
 
@@ -451,26 +451,28 @@ Alguns itens não são correção de texto: dependem de uma decisão do grupo. V
 
 | Data | Alteração | Responsável |
 |---|---|---|
-| 30/10/2026 | Levantamento inicial (INC-01 a INC-50) | Henrique Finatti Silveira Belo Trebbi (com apoio do Claude) |
+| 30/10/2026 | Levantamento inicial (INC-01 a INC-50) | Equipe (com apoio do Claude) |
 | 30/10/2026 | Resolvidos INC-47 e INC-48; INC-02 e INC-04 resolvidos na parte do Henrique; criado INC-51 | Henrique Finatti Silveira Belo Trebbi (com apoio do Claude) |
-| 30/10/2026 | INC-02 resolvido (autoria de Tiago e Mateus) | Henrique Finatti Silveira Belo Trebbi (com apoio do Claude) |
-| 02/11/2026 | Criado INC-52 (métricas exigem anotação de referência) durante a E5 do Tiago | Henrique Finatti Silveira Belo Trebbi (com apoio do Claude) |
-| 05/11/2026 | Criados INC-53 a INC-56 na revisão da seção 3 da E5 (Mateus) | Henrique Finatti Silveira Belo Trebbi (com apoio do Claude) |
-| 08/11/2026 | Triagem: INC-43 resolvido; INC-04, INC-50 e INC-53 atualizados; criados INC-57 e INC-58 | Henrique Finatti Silveira Belo Trebbi (com apoio do Claude) |
-| 08/11/2026 | Fase 1 (decisões transversais D1–D8, conferidas com o repositório do TCC) aplicada nas E1–E6, nas análises individuais da E2 e na RAST. Resolvidos INC-05, 11, 12, 14, 15, 16, 22, 23, 31, 34, 38, 39, 49, 52, 56, 57 e 58; INC-32 em andamento; criados INC-59 e INC-60 | Henrique Finatti Silveira Belo Trebbi (com apoio do Claude) |
+| 30/10/2026 | INC-02 resolvido (autoria de Tiago e Mateus) | Tiago Fagundes dos Santos e Mateus Marana Assuena (com apoio do Claude) |
+| 02/11/2026 | Criado INC-52 (métricas exigem anotação de referência) durante a E5 do Tiago | Tiago Fagundes dos Santos (com apoio do Claude) |
+| 05/11/2026 | Criados INC-53 a INC-56 na revisão da seção 3 da E5 (Mateus) | Mateus Marana Assuena (com apoio do Claude) |
+| 08/11/2026 | Triagem: INC-43 resolvido; INC-04, INC-50 e INC-53 atualizados; criados INC-57 e INC-58 | Equipe (com apoio do Claude) |
+| 08/11/2026 | Fase 1 (decisões transversais D1–D8, conferidas com o repositório do TCC) aplicada nas E1–E6, nas análises individuais da E2 e na RAST. Resolvidos INC-05, 11, 12, 14, 15, 16, 22, 23, 31, 34, 38, 39, 49, 52, 56, 57 e 58; INC-32 em andamento; criados INC-59 e INC-60 | Equipe (com apoio do Claude) |
 | 08/11/2026 | Correções do Henrique: status das entregas mantido 🟩 (INC-01 resolvido por decisão da equipe); "configuração" = modelo + parâmetros de treino expostos ao usuário, com configurar e treinar dentro do recorte (D2 corrigida); interface prevista no TCC, ainda não implementada (INC-18 resolvido). Criado INC-61 | Henrique Finatti Silveira Belo Trebbi (com apoio do Claude) |
-| 08/11/2026 | Princípio "TCC previsto": retiradas dos documentos as menções ao estado atual da implementação (terminal, edição manual da configuração, tempos em CPU, recursos não implementados). INC-60 descartado; INC-18 com resolução revista | Henrique Finatti Silveira Belo Trebbi (com apoio do Claude) |
-| 08/11/2026 | Fase 2, Entrega 1 e README: resolvidos INC-07, 08, 09, 10, 13, 17, 19 e 35; INC-03 e INC-06 em andamento (partes de outras entregas) | Henrique Finatti Silveira Belo Trebbi (com apoio do Claude) |
-| 08/11/2026 | Fase 2, Entrega 2: resolvidos INC-20, 21, 24, 25, 26 e 30; INC-27 e INC-29 em andamento; INC-28 aguarda nova captura (Henrique) | Henrique Finatti Silveira Belo Trebbi (com apoio do Claude) |
-| 09/11/2026 | Entrega 2 fechada: INC-27 e INC-29 resolvidos (citações confirmadas pela equipe); INC-28 descartado (captura do Roboflow mantida) | Henrique Finatti Silveira Belo Trebbi (com apoio do Claude) |
+| 08/11/2026 | Princípio "TCC previsto": retiradas dos documentos as menções ao estado atual da implementação (terminal, edição manual da configuração, tempos em CPU, recursos não implementados). INC-60 descartado; INC-18 com resolução revista | Equipe (com apoio do Claude) |
+| 08/11/2026 | Fase 2, Entrega 1 e README: resolvidos INC-07, 08, 09, 10, 13, 17, 19 e 35; INC-03 e INC-06 em andamento (partes de outras entregas) | Equipe (com apoio do Claude) |
+| 08/11/2026 | Fase 2, Entrega 2: resolvidos INC-20, 21, 24, 25, 26 e 30; INC-27 e INC-29 em andamento; INC-28 aguarda nova captura (Henrique) | Equipe (com apoio do Claude) |
+| 09/11/2026 | Entrega 2 fechada: INC-27 e INC-29 resolvidos (citações confirmadas pela equipe); INC-28 descartado (captura do Roboflow mantida) | Equipe (com apoio do Claude) |
 | 09/11/2026 | Ajustes do Henrique incorporados: aviso do template e coluna de responsabilidade mantidos (INC-09 descartado); seção de Referências retirada da E1 | Henrique Finatti Silveira Belo Trebbi (com apoio do Claude) |
-| 09/11/2026 | Fase 2, Entrega 3: resolvidos INC-32, 33, 36, 37, 40, 41 e 42; INC-03 descartado; INC-61 em andamento (T08 criada) | Henrique Finatti Silveira Belo Trebbi (com apoio do Claude) |
-| 10/11/2026 | Fase 2, Entrega 4: resolvidos INC-04, 44, 45, 46, 50 e 51; criado e resolvido INC-62 (refinamento do C03). Rascunhos do C01 e do C03 a revisar pelo Tiago e pelo Mateus | Henrique Finatti Silveira Belo Trebbi (com apoio do Claude) |
-| 10/11/2026 | INC-06 (grafia) resolvido. Ficam abertos, por decisão da equipe, INC-53 a 55 (E5 do Mateus), INC-59 (protótipo da E11) e INC-61 (modelar a T08) | Henrique Finatti Silveira Belo Trebbi (com apoio do Claude) |
+| 09/11/2026 | Fase 2, Entrega 3: resolvidos INC-32, 33, 36, 37, 40, 41 e 42; INC-03 descartado; INC-61 em andamento (T08 criada) | Equipe (com apoio do Claude) |
+| 10/11/2026 | Fase 2, Entrega 4: resolvidos INC-04, 44, 45, 46, 50 e 51; criado e resolvido INC-62 (refinamento do C03). Rascunhos do C01 e do C03 a revisar pelo Tiago e pelo Mateus | Equipe (com apoio do Claude) |
+| 10/11/2026 | INC-06 (grafia) resolvido. Ficam abertos, por decisão da equipe, INC-53 a 55 (E5 do Mateus), INC-59 (protótipo da E11) e INC-61 (modelar a T08) | Equipe (com apoio do Claude) |
 | 12/11/2026 | Entrega 8, §1 (Características da plataforma): criados INC-63 (exportação: E3 × E1/E5) e INC-64 (E5, seção 3, treino como fora do escopo) | Equipe (com apoio do Claude) |
 | 13/11/2026 | Entrega 9: INC-61 atualizado (T08 descrita no CI03); CI01 e CI02 citam o INC-63 ao deixar a exportação fora | Equipe (com apoio do Claude) |
 | 14/11/2026 | Entrega 9, §4 (esquema de signos): criado INC-65 (dataset CaSSeD no TCC × documentos) | Equipe (com apoio do Claude) |
 | 14/11/2026 | Entrega 9, §4: decisões da equipe sobre os signos; criados INC-66 (confiança do modelo retirada) e INC-67 (aviso de resultado inconclusivo retirado) | Equipe (com apoio do Claude) |
-| 14/11/2026 | Parecer da equipe sobre as pendências abertas: resolvidos INC-63, 64, 65, 66 e 67; INC-55 em andamento (falta o CTT da T07). INC-53, 54, 55 (CTT) e 61 ficam para o commit dos diagramas do Mateus; INC-59 fica para a E11 | Henrique Finatti Silveira Belo Trebbi (com apoio do Claude) |
-| 14/11/2026 | Diagramas do Mateus na E5: resolvidos INC-53, 54, 55 e 61 (HTA e CTT da T07 refeitos; T08 modelada) | Equipe (com apoio do Claude) |
+| 14/11/2026 | Parecer da equipe sobre as pendências abertas: resolvidos INC-63, 64, 65, 66 e 67; INC-55 em andamento (falta o CTT da T07). INC-53, 54, 55 (CTT) e 61 ficam para o commit dos diagramas do Mateus; INC-59 fica para a E11 | Equipe (com apoio do Claude) |
+| 14/11/2026 | Diagramas do Mateus na E5: resolvidos INC-53, 54, 55 e 61 (HTA e CTT da T07 refeitos; T08 modelada) | Mateus Marana Assuena (com apoio do Claude) |
 | 14/11/2026 | Entrega 10: criado INC-68 (subtópicos sem definição no texto da E9 e nomes divergentes na E10); parte da P03 resolvida | Henrique Finatti Silveira Belo Trebbi (com apoio do Claude) |
+| 14/11/2026 | INC-68: parte da P01 resolvida, com o M01 | Tiago Fagundes dos Santos (com apoio do Claude) |
+| 15/11/2026 | INC-68 resolvido: parte da P02, com o M03 | Mateus Marana Assuena (com apoio do Claude) |
