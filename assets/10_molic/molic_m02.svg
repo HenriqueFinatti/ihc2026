@@ -1,0 +1,192 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1767.0" viewBox="0 0 1440 1767.0" role="img" aria-labelledby="title desc" xmlns:c2pa="http://c2pa.org/manifest">
+<title id="title">MoLIC M02 — Comparar, recomendar e registrar a decisão (P03, CI02)</title>
+<desc id="desc">Diagrama MoLIC por Henrique Finatti Silveira Belo Trebbi a partir do cenário de interação CI02. Conversa 1: comparar o desempenho consolidado das configurações do ciclo e registrar a recomendação (O06, O07, O08). Conversa 2: apresentar a recomendação à coordenação e registrar a decisão (O09, O10).</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#333"/></marker></defs>
+<rect width="1440" height="1767.0" fill="white"/>
+<g font-family="DejaVu Sans, Arial, sans-serif" fill="#222">
+<text x="40" y="40" text-anchor="start" font-size="25" font-weight="700">MoLIC M02 — Comparar, recomendar e registrar a decisão</text>
+<text x="40" y="73" text-anchor="start" font-size="16" font-weight="400">Henrique Finatti Silveira Belo Trebbi · 22.123.030-3 · P03, Larissa Camargo · CI02 · O06–O10 · Proposta [H]</text>
+<circle cx="280" cy="150" r="13" fill="#222"/>
+<g data-box="b1">
+<rect x="110.0" y="240" width="340" height="135" rx="14" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="280" y="266" text-anchor="middle" font-size="15" font-weight="700">O06.1 Escolher as</text>
+<text x="280" y="287" text-anchor="middle" font-size="15" font-weight="700">configurações</text>
+<path d="M110.0 300 H450.0" stroke="#333" stroke-width="1" fill="none"/>
+<text x="124.0" y="322" text-anchor="start" font-size="13" font-weight="400">d+u: ciclo de testes</text>
+<text x="124.0" y="341" text-anchor="start" font-size="13" font-weight="400">d+u: configurações com execução concluída</text>
+<text x="124.0" y="360" text-anchor="start" font-size="13" font-weight="400">       (nome, conjunto de teste, data)</text>
+</g>
+<path d="M280.0 163.0 L280.0 240.0" fill="none" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text x="292" y="182" text-anchor="start" font-size="13" font-weight="400">u: comparar as configurações do ciclo</text>
+<text x="292" y="199" text-anchor="start" font-size="13" font-weight="400">gco: comparar o desempenho (O06)</text>
+<rect x="267.0" y="437.0" width="26" height="26" fill="#222"/>
+<path d="M280.0 375.0 L280.0 437.0" fill="none" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text x="292" y="407" text-anchor="start" font-size="13" font-weight="400">u: comparar as selecionadas</text>
+<circle cx="60" cy="450" r="13" fill="white" stroke="#222" stroke-width="2"/>
+<circle cx="60" cy="450" r="7" fill="#222"/>
+<path d="M267.0 450.0 L73.0 450.0" fill="none" stroke="#333" stroke-width="1.5" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<text x="80" y="400" text-anchor="start" font-size="13" font-weight="400">d: [CE] configuração sem</text>
+<text x="80" y="417" text-anchor="start" font-size="13" font-weight="400">execução: peça ao</text>
+<text x="80" y="434" text-anchor="start" font-size="13" font-weight="400">integrante técnico</text>
+<g data-box="b2">
+<rect x="640.0" y="410" width="320" height="135" rx="14" fill="white" stroke="#333" stroke-width="1.6" stroke-dasharray="9 6" class="frame"/>
+<text x="800" y="436" text-anchor="middle" font-size="15" font-weight="700">O06.2 Conferir se a</text>
+<text x="800" y="457" text-anchor="middle" font-size="15" font-weight="700">comparação é válida</text>
+<path d="M640.0 470 H960.0" stroke="#333" stroke-width="1" stroke-dasharray="9 6" fill="none"/>
+<text x="654.0" y="492" text-anchor="start" font-size="13" font-weight="400">d: [AL] conjuntos de teste</text>
+<text x="654.0" y="511" text-anchor="start" font-size="13" font-weight="400">    diferentes: conjunto de cada</text>
+<text x="654.0" y="530" text-anchor="start" font-size="13" font-weight="400">    configuração</text>
+</g>
+<path d="M293.0 450.0 L640.0 450.0" fill="none" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text x="333.0" y="472" text-anchor="start" font-size="13" font-weight="400">d: [AL] conjuntos de</text>
+<text x="333.0" y="489" text-anchor="start" font-size="13" font-weight="400">teste diferentes</text>
+<path d="M800.0 410.0 L800.0 300.0 L450.0 300.0" fill="none" stroke="#333" stroke-width="1.5" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<text x="462.0" y="290" text-anchor="start" font-size="13" font-weight="400">u: escolher outras configurações</text>
+<g data-box="b3">
+<rect x="110.0" y="573.0" width="340" height="192" rx="14" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="280" y="599.0" text-anchor="middle" font-size="15" font-weight="700">O06.3 Ler o desempenho de cada</text>
+<text x="280" y="620.0" text-anchor="middle" font-size="15" font-weight="700">configuração</text>
+<path d="M110.0 633.0 H450.0" stroke="#333" stroke-width="1" fill="none"/>
+<text x="124.0" y="655.0" text-anchor="start" font-size="13" font-weight="400">d: IoU médio e por classe, acurácia,</text>
+<text x="124.0" y="674.0" text-anchor="start" font-size="13" font-weight="400">    tempo de inferência (conjunto de teste)</text>
+<text x="124.0" y="693.0" text-anchor="start" font-size="13" font-weight="400">d: valor de referência e sua origem</text>
+<text x="124.0" y="712.0" text-anchor="start" font-size="13" font-weight="400">d: maior valor; diferença entre</text>
+<text x="124.0" y="731.0" text-anchor="start" font-size="13" font-weight="400">    configurações</text>
+<text x="124.0" y="750.0" text-anchor="start" font-size="13" font-weight="400">u: tabela | gráfico</text>
+</g>
+<path d="M280.0 463.0 L280.0 573.0" fill="none" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text x="268" y="503.0" text-anchor="end" font-size="13" font-weight="400">d: mesmo conjunto</text>
+<text x="268" y="520.0" text-anchor="end" font-size="13" font-weight="400">de teste</text>
+<path d="M800.0 545.0 L800.0 581.0 L520.0 581.0 L520.0 599.0 L450.0 599.0" fill="none" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text x="530.0" y="573" text-anchor="start" font-size="13" font-weight="400">u: comparar mesmo assim</text>
+<g data-box="b4">
+<rect x="640.0" y="643.0" width="320" height="135" rx="14" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="800" y="669.0" text-anchor="middle" font-size="15" font-weight="700">O07.2 Julgar a diferença entre</text>
+<text x="800" y="690.0" text-anchor="middle" font-size="15" font-weight="700">configurações</text>
+<path d="M640.0 703.0 H960.0" stroke="#333" stroke-width="1" fill="none"/>
+<text x="654.0" y="725.0" text-anchor="start" font-size="13" font-weight="400">d: diferença entre configurações</text>
+<text x="654.0" y="744.0" text-anchor="start" font-size="13" font-weight="400">d: o que a métrica indica e o</text>
+<text x="654.0" y="763.0" text-anchor="start" font-size="13" font-weight="400">    que não indica</text>
+</g>
+<path d="M450.0 689.0 L640.0 689.0" fill="none" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text x="464.0" y="663.0" text-anchor="start" font-size="13" font-weight="400">u: a diferença</text>
+<text x="464.0" y="680.0" text-anchor="start" font-size="13" font-weight="400">importa?</text>
+<path d="M640.0 754.0 L450.0 754.0" fill="none" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text x="464.0" y="724.0" text-anchor="start" font-size="13" font-weight="400">u: voltar à</text>
+<text x="464.0" y="741.0" text-anchor="start" font-size="13" font-weight="400">análise</text>
+<rect x="725.0" y="831.0" width="150" height="34" rx="17" fill="#c8c8c8" stroke="#555" stroke-width="1.4"/>
+<g data-box="b5">
+<rect x="640.0" y="945.0" width="320" height="95" rx="14" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="800" y="971.0" text-anchor="middle" font-size="15" font-weight="700">O07.1 Entender um termo</text>
+<path d="M640.0 984.0 H960.0" stroke="#333" stroke-width="1" fill="none"/>
+<text x="654.0" y="1006.0" text-anchor="start" font-size="13" font-weight="400">d: o que o termo indica</text>
+<text x="654.0" y="1025.0" text-anchor="start" font-size="13" font-weight="400">d: o que o termo não indica</text>
+</g>
+<path d="M800.0 865.0 L800.0 945.0" fill="none" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text x="812" y="909.0" text-anchor="start" font-size="13" font-weight="400">u: o que é este termo?</text>
+<path d="M640.0 992.5 L560.0 992.5 L560.0 635.0 L450.0 635.0" fill="none" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text x="552.0" y="865.0" text-anchor="end" font-size="13" font-weight="400">u: voltar à</text>
+<text x="552.0" y="882.0" text-anchor="end" font-size="13" font-weight="400">cena anterior</text>
+<g data-box="b6">
+<rect x="110.0" y="885.0" width="340" height="135" rx="14" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="280" y="911.0" text-anchor="middle" font-size="15" font-weight="700">O08.1 Informar a conclusão</text>
+<text x="280" y="932.0" text-anchor="middle" font-size="15" font-weight="700">(recomendação)</text>
+<path d="M110.0 945.0 H450.0" stroke="#333" stroke-width="1" fill="none"/>
+<text x="124.0" y="967.0" text-anchor="start" font-size="13" font-weight="400">d+u: configuração indicada</text>
+<text x="124.0" y="986.0" text-anchor="start" font-size="13" font-weight="400">d+u: ressalva (opcional)</text>
+<text x="124.0" y="1005.0" text-anchor="start" font-size="13" font-weight="400">d: tipo de conclusão: recomendação</text>
+</g>
+<path d="M280.0 765.0 L280.0 885.0" fill="none" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text x="292" y="805.0" text-anchor="start" font-size="13" font-weight="400">u: registrar a recomendação</text>
+<text x="292" y="822.0" text-anchor="start" font-size="13" font-weight="400">gco: registrar a conclusão (O08)</text>
+<rect x="267.0" y="1067.0" width="26" height="26" fill="#222"/>
+<path d="M280.0 1020.0 L280.0 1067.0" fill="none" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text x="292" y="1052.0" text-anchor="start" font-size="13" font-weight="400">u: registrar</text>
+<g data-box="b7">
+<rect x="110.0" y="1163.0" width="340" height="95" rx="14" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="280" y="1189.0" text-anchor="middle" font-size="15" font-weight="700">O08.2 Conferir a conclusão</text>
+<path d="M110.0 1202.0 H450.0" stroke="#333" stroke-width="1" fill="none"/>
+<text x="124.0" y="1224.0" text-anchor="start" font-size="13" font-weight="400">d: configuração, métricas, referência</text>
+<text x="124.0" y="1243.0" text-anchor="start" font-size="13" font-weight="400">    e ressalva registradas</text>
+</g>
+<path d="M280.0 1093.0 L280.0 1163.0" fill="none" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text x="292" y="1133.0" text-anchor="start" font-size="13" font-weight="400">d: recomendação registrada</text>
+<path d="M450.0 1210.5 L500.0 1210.5 L500.0 952.5 L450.0 952.5" fill="none" stroke="#333" stroke-width="1.5" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+<text x="508.0" y="1081.5" text-anchor="start" font-size="13" font-weight="400">u: corrigir</text>
+<circle cx="280" cy="1338.0" r="13" fill="white" stroke="#222" stroke-width="2"/>
+<circle cx="280" cy="1338.0" r="7" fill="#222"/>
+<path d="M280.0 1258.0 L280.0 1325.0" fill="none" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text x="292" y="1286.0" text-anchor="start" font-size="13" font-weight="400">u: confirmar</text>
+<text x="292" y="1303.0" text-anchor="start" font-size="13" font-weight="400">gcc: comparar e recomendar (O06, O08)</text>
+<rect x="1155.0" y="283.0" width="150" height="34" rx="17" fill="#c8c8c8" stroke="#555" stroke-width="1.4"/>
+<g data-box="b8">
+<rect x="1060.0" y="430" width="340" height="95" rx="14" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="1230" y="456" text-anchor="middle" font-size="15" font-weight="700">O09.1 Retomar a análise</text>
+<path d="M1060.0 469 H1400.0" stroke="#333" stroke-width="1" fill="none"/>
+<text x="1074.0" y="491" text-anchor="start" font-size="13" font-weight="400">d: comparação do ciclo de testes</text>
+<text x="1074.0" y="510" text-anchor="start" font-size="13" font-weight="400">d: recomendação e ressalva registradas</text>
+</g>
+<path d="M1230.0 317.0 L1230.0 430.0" fill="none" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text x="1218" y="347.0" text-anchor="end" font-size="13" font-weight="400">u: apresentar a recomendação</text>
+<text x="1218" y="364.0" text-anchor="end" font-size="13" font-weight="400">gco: apresentar (O09)</text>
+<path d="M1060.0 505.0 L1010.0 505.0 L1010.0 663.0 L960.0 663.0" fill="none" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text x="1000.0" y="621.0" text-anchor="end" font-size="13" font-weight="400">u: a diferença importa?</text>
+<text x="1000.0" y="638.0" text-anchor="end" font-size="13" font-weight="400">(O09.2)</text>
+<path d="M960.0 758.0 L1050.0 758.0 L1050.0 575.0 L1100.0 575.0 L1100.0 525.0" fill="none" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text x="1060.0" y="770.0" text-anchor="start" font-size="13" font-weight="400">u: voltar à apresentação</text>
+<g data-box="b9">
+<rect x="1060.0" y="785" width="340" height="154" rx="14" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="1230" y="811" text-anchor="middle" font-size="15" font-weight="700">O10 Registrar a decisão da</text>
+<text x="1230" y="832" text-anchor="middle" font-size="15" font-weight="700">coordenação</text>
+<path d="M1060.0 845 H1400.0" stroke="#333" stroke-width="1" fill="none"/>
+<text x="1074.0" y="867" text-anchor="start" font-size="13" font-weight="400">d+u: decisão: aceita | aceita com</text>
+<text x="1074.0" y="886" text-anchor="start" font-size="13" font-weight="400">       condição | adiada</text>
+<text x="1074.0" y="905" text-anchor="start" font-size="13" font-weight="400">d+u: condição [PA: obrigatória se</text>
+<text x="1074.0" y="924" text-anchor="start" font-size="13" font-weight="400">       a decisão é condicionada]</text>
+</g>
+<path d="M1290.0 525.0 L1290.0 785.0" fill="none" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text x="1278" y="655" text-anchor="end" font-size="13" font-weight="400">u: registrar a decisão</text>
+<text x="1278" y="672" text-anchor="end" font-size="13" font-weight="400">gco: registrar a decisão (O10)</text>
+<rect x="1217.0" y="986.0" width="26" height="26" fill="#222"/>
+<path d="M1230.0 939.0 L1230.0 986.0" fill="none" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text x="1242" y="971" text-anchor="start" font-size="13" font-weight="400">u: registrar</text>
+<circle cx="1230" cy="1102.0" r="13" fill="white" stroke="#222" stroke-width="2"/>
+<circle cx="1230" cy="1102.0" r="7" fill="#222"/>
+<path d="M1230.0 1012.0 L1230.0 1089.0" fill="none" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text x="1218" y="1042.0" text-anchor="end" font-size="13" font-weight="400">d: decisão registrada</text>
+<text x="1218" y="1059.0" text-anchor="end" font-size="13" font-weight="400">gcc: apresentar e decidir (O09, O10)</text>
+<text x="40" y="1391.0" text-anchor="start" font-size="14" font-weight="400">Conversa 1 (colunas da esquerda e do centro): Larissa compara as configurações do ciclo e registra a recomendação.</text>
+<text x="40" y="1411.0" text-anchor="start" font-size="14" font-weight="400">Conversa 2 (coluna da direita): na reunião, retoma a análise e registra a decisão da coordenação.</text>
+<text x="40" y="1431.0" text-anchor="start" font-size="14" font-weight="400">O07.1 e O07.2 são as mesmas cenas nas duas conversas. Proposta derivada de proto-persona [H].</text>
+<path d="M40 1471.0 H1400" fill="none" stroke="#333" stroke-width="1.6"/>
+<text x="40" y="1501.0" text-anchor="start" font-size="18" font-weight="700">Legenda (Barbosa e Silva, 2010; aulas de MoLIC)</text>
+<g data-box="b10">
+<rect x="45.0" y="1527.0" width="170" height="76" rx="14" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="130" y="1553.0" text-anchor="middle" font-size="15" font-weight="700">Tópico</text>
+<path d="M45.0 1566.0 H215.0" stroke="#333" stroke-width="1" fill="none"/>
+<text x="59.0" y="1588.0" text-anchor="start" font-size="13" font-weight="400">d+u: diálogos</text>
+</g>
+<text x="130" y="1623.0" text-anchor="middle" font-size="13" font-weight="400">cena</text>
+<g data-box="b11">
+<rect x="245.0" y="1527.0" width="170" height="76" rx="14" fill="white" stroke="#333" stroke-width="1.6" stroke-dasharray="9 6" class="frame"/>
+<text x="330" y="1553.0" text-anchor="middle" font-size="15" font-weight="700">Tópico</text>
+<path d="M245.0 1566.0 H415.0" stroke="#333" stroke-width="1" stroke-dasharray="9 6" fill="none"/>
+<text x="259.0" y="1588.0" text-anchor="start" font-size="13" font-weight="400">d: alerta</text>
+</g>
+<text x="330" y="1623.0" text-anchor="middle" font-size="13" font-weight="400">cena de alerta</text>
+<rect x="467.0" y="1546.0" width="26" height="26" fill="#222"/>
+<text x="480" y="1599.0" text-anchor="middle" font-size="13" font-weight="400">processo</text>
+<text x="480" y="1616.0" text-anchor="middle" font-size="13" font-weight="400">do sistema</text>
+<rect x="565.0" y="1542.0" width="110" height="34" rx="17" fill="#c8c8c8" stroke="#555" stroke-width="1.4"/>
+<text x="620" y="1599.0" text-anchor="middle" font-size="13" font-weight="400">acesso ubíquo</text>
+<circle cx="740" cy="1559.0" r="13" fill="#222"/>
+<text x="740" y="1599.0" text-anchor="middle" font-size="13" font-weight="400">abertura</text>
+<circle cx="840" cy="1559.0" r="13" fill="white" stroke="#222" stroke-width="2"/>
+<circle cx="840" cy="1559.0" r="7" fill="#222"/>
+<text x="840" y="1599.0" text-anchor="middle" font-size="13" font-weight="400">encerramento</text>
+<text x="40" y="1657.0" text-anchor="start" font-size="13" font-weight="400">Seta contínua: fala de transição (u: usuário; d: preposto do designer).</text>
+<text x="40" y="1677.0" text-anchor="start" font-size="13" font-weight="400">Seta tracejada: fala de recuperação de ruptura.</text>
+<text x="40" y="1697.0" text-anchor="start" font-size="13" font-weight="400">gco / gcc: abertura / fechamento da conversa sobre um objetivo.</text>
+<text x="40" y="1717.0" text-anchor="start" font-size="13" font-weight="400">[PP] prevenção passiva · [PA] prevenção ativa · [AL] prevenção apoiada (alerta)</text>
+<text x="40" y="1737.0" text-anchor="start" font-size="13" font-weight="400">[RA] recuperação apoiada · [CE] captura de erro (Entrega 9, seção 4).</text>
+</g><metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTpiOTlkZWU5ZC1kOTEwLTRjNzQtYmJhOS1iOGM3NjA5MDRjODgAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaDMdiN4YxHtmX9zZMXYsoncAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDpkNDFjN2Y5ZS0xMjkwLTQ5YmEtOWM2Mi02MzE1MjVlM2EwZDdscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNouPoav9d0cFEbkDONKViMEgAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggGOBzmYqOCQLAzlfilATkghLp8ZzvHuEi7X/3+LuuzhqkZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaLRoh1Ehk4i8+I1kIS1MQvsAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRMAAAAAAAAAAAAAAAAZGhhc2hYIJG2pblR1GfntpxcSprymd49UfINGaVvioEBFPBjpvCNZG5hbWVuanVtYmYgbWFuaWZlc3RqZXhjbHVzaW9uc4GiZXN0YXJ0GUn6Zmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOmI5OWRlZTlkLWQ5MTAtNGM3NC1iYmE5LWI4Yzc2MDkwNGM4OC9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOjEzYzViZWJmLWNjZmUtNGNkZi04ZDAwLTAwZmI3MjVkYmIyNHJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCAY4HOZio4JAsDOV+KUBOSCEunxnO8e4SLtf/f4u67OGqJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggHcYz8vMqc3ct5ufEyCbJ0oLreiy+2aGNbHEy0acyPy+iY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFggs0vzINTZsILERckI3IhPEZjr7RpoR4c5XHA/aaVfqTh0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQA7faCGPu81BVi++fCmeRgkse4CUMb9hffxGcjxtP/Hy+da2s6yNJ+3SlHNEDZ5l0kd2urKDrfu/YRZBcLlNpXA=</c2pa:manifest></metadata></svg>

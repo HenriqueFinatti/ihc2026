@@ -335,6 +335,23 @@ O mapa consolidado junta os três mapas individuais sob um objetivo geral comum:
 
 A prioridade segue a das tarefas na Entrega 4 (seção 5 de cada cenário): T01 a T07 têm prioridade alta e T08, média.
 
+#### Subtópicos
+
+Os subtópicos são os diálogos de cada objetivo. Os nomes desta tabela são os **nomes oficiais**, usados nas cenas da MoLIC (Entrega 10) e no protótipo (Entrega 11). A última coluna mostra o tópico de origem e o nome que ele tinha no mapa individual, quando a consolidação o renomeou para servir a mais de uma persona.
+
+| ID | Subtópico | Objetivo | Origem no mapa individual |
+|---|---|---|---|
+| O06.1 | Escolher as configurações | O06 | P03 A1.1 "Escolher o que comparar" |
+| O06.2 | Conferir se a comparação é válida | O06 | P03 A1.2 |
+| O06.3 | Ler o desempenho de cada configuração | O06 | P03 A1.3 |
+| O07.1 | Entender um termo | O07 | P03 A2.1 |
+| O07.2 | Julgar a diferença entre configurações | O07 | P03 A2.2 "Julgar a diferença entre as configurações" |
+| O08.1 | Informar a conclusão | O08 | P03 A3.1 "Informar a recomendação e a ressalva" |
+| O08.2 | Conferir a conclusão | O08 | P03 A3.2 "Conferir a recomendação" |
+| O09.1 | Retomar a análise | O09 | P03 B1.1 "Retomar a comparação" |
+| O09.2 | Responder a uma dúvida (usa O07.2) | O09 | P03 B1.2 "Responder a uma dúvida da coordenação" |
+
+
 ## 4. Esquema conceitual de signos
 
 Consolide as informações em **uma tabela única**.
@@ -482,3 +499,9 @@ Todos os objetivos O01 a O10 ficam cobertos por pelo menos um diagrama. Os ponto
 - [x] Em TCC técnico, signos representam conceitos do domínio compreensíveis ao usuário, não apenas variáveis/estruturas internas.
 - [x] Padrões como dashboard, relatório, filtros, administração e CRUD possuem objetivos e signos correspondentes. *(O único padrão adotado, a comparação consolidada das configurações, corresponde a O06. Histórico, exportação, administração e CRUD estão fora do recorte.)*
 - [x] A interface comunica não só o resultado técnico, mas também seu significado para a tarefa.
+
+## Histórico de revisões
+
+| Data | O que mudou | Motivo |
+|---|---|---|
+| 14/11/2026 | Seção 3.2: tabela de subtópicos com os nomes oficiais (subtópicos da P03); na figura do mapa consolidado, O06.3 passa a "Ler o desempenho de cada configuração" | Os IDs dos subtópicos só existiam na figura e os nomes divergiam entre a E9 e a E10 (`PENDENCIAS.md`: INC-68) |
