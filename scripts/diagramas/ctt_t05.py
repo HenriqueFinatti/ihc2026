@@ -52,7 +52,7 @@ s.divider(720, y0 + 54, max(ya, yb) - 10)
 y = max(ya, yb)
 y = s.panel(y, "2.3.2 — consultar a explicação e julgar",                                        # 6
             ("A", ["2.3.2. Consultar a explicação e julgar"]),
-            [("I", ["2.3.2.1. Consultar a explicação", "do termo ou do aviso"]),
+            [("I", ["2.3.2.1. Consultar a explicação", "do termo"]),
              ("U", ["2.3.2.2. Julgar a diferença", "com a explicação"])], ["[]>>"], 200, 1240,
             note=["Se a dúvida persistir depois de 2.3.2.2, Larissa recorre a E (2.3.3)."])
 y = s.panel(y, "3 — Formar a recomendação",                                                      # 7

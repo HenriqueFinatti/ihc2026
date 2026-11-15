@@ -48,16 +48,15 @@ y = s.section(y, "Expansão do objetivo 3 — avaliar o resultado (detalhada no 
 y = s.tree(N(["3. Avaliar o resultado (T01)"], "Plano 3: 3.1 > 3.2 > 3.3"),
            [N(["3.1. Visualizar o resultado", "sobre a imagem"], "3.1.1 / 3.1.2"),
             N(["3.2. Interpretar as", "classes pela legenda"], op=True),
-            N(["3.3. Julgar a qualidade", "da segmentação"], "3.3.1 / 3.3.2 / 3.3.3")],
+            N(["3.3. Julgar a qualidade", "da segmentação"], "3.3.1 / 3.3.2")],
            y, gap=40, pw=560) + 20
 ya = s.tree(N(["3.1. Visualizar o resultado sobre a imagem"], "Plano 3.1: 3.1.1 / 3.1.2"),
             [N(["3.1.1. Comparar", "lado a lado"], op=True),
              N(["3.1.2. Sobrepor a", "máscara com opacidade"], op=True)],
             y, 40, 600, pw=480)
-yb = s.tree(N(["3.3. Julgar a qualidade da segmentação"], "Plano 3.3: 3.3.1 / 3.3.2 / 3.3.3"),
+yb = s.tree(N(["3.3. Julgar a qualidade da segmentação"], "Plano 3.3: 3.3.1 / 3.3.2"),
             [N(["3.3.1. Julgar pela", "inspeção visual"], op=True),
-             N(["3.3.2. Consultar a", "confiança do", "modelo [H]"], op=True),
-             N(["3.3.3. Conferir as", "métricas por", "classe"], op=True)],
+             N(["3.3.2. Conferir as", "métricas por", "classe"], op=True)],
             y, 660, 1400, gap=24, pw=480)
 y = max(ya, yb) + 20
 

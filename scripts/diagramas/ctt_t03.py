@@ -72,9 +72,8 @@ ya = s.panel(y0, "3.1 e 3.3 — visualizar e julgar",                           
 yb = s.panel(y0 + 54, None,
              ("A", ["3.3. Julgar a qualidade"]),
              [("U", ["3.3.1. Julgar", "pela inspeção", "visual"]),
-              ("I", ["3.3.2. Consultar", "a confiança", "do modelo [H]"]),
-              ("I", ["3.3.3. Conferir", "as métricas", "por classe"])],
-             ["[]", "[]"], 700, 1400)
+              ("I", ["3.3.2. Conferir", "as métricas", "por classe"])],
+             ["[]"], 700, 1400)
 s.divider(670, y0 + 54, max(ya, yb) - 10)
 y = max(ya, yb)
 y = s.panel(y, "4 — Concluir a comparação",                                                      # 10

@@ -51,7 +51,7 @@ yb = s.tree(N(["2.3. Avaliar se a diferença é relevante"], "Plano 2.3: 2.3.1 /
             y, 620, 1400, gap=24, pw=460)
 y = max(ya, yb) + 20
 y = s.tree(N(["2.3.2. Consultar a explicação e julgar"], "Plano 2.3.2: 2.3.2.1 > 2.3.2.2"),
-           [N(["2.3.2.1. Consultar a explicação", "do termo ou do aviso"], op=True),
+           [N(["2.3.2.1. Consultar a explicação", "do termo"], op=True),
             N(["2.3.2.2. Julgar a diferença", "com a explicação"], op=True)],
            y, 620, 1400, pw=460) + 20
 
