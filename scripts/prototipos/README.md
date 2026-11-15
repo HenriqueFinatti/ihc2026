@@ -1,4 +1,26 @@
-# Gerador das telas da Entrega 6 (versão 2)
+# Geradores da Entrega 6
+
+## `anotacoes.py` — anotações da revisão (incorporado à entrega)
+
+Gera, a partir das fotos da versão simulada (`assets/06_prototipos/*.jfif`), uma imagem anotada por tela em `assets/06_prototipos/anotacoes/`: a foto original com marcadores numerados, as notas de cada marcador (aplicada na anotação, retirada ou fora do recorte) e os estados da tela desenhados em baixa fidelidade. É a revisão usada na Entrega 6 (seções 3 e 5).
+
+```bash
+cd scripts/prototipos
+python3 anotacoes.py
+```
+
+Requer Python 3 e Pillow (`pip install pillow`).
+
+| Arquivo | Tela | Estados anotados |
+|---|---|---|
+| `P01_nova_analise_anotada.png` | P01 — Nova análise | P01-E (arquivo inválido), P01-P (processando em fila) |
+| `P02_resultado_anotado.png` | P02 — Resultado | P02-S (imagem de campo, sem métricas) |
+| `P03_comparacao_anotada.png` | P03 — Comparação | P03-I (mesma imagem), P03-C (conjunto de teste), P03-F (sem resultado) |
+
+## `wireframes.py` — versão 2 (não incorporada)
+
+> **Não faz parte da Entrega 6.** É um rascunho de trabalho da equipe e está desatualizado: usa três classes (*Transitável*, *Vegetação*, *Céu*), configurações com ResNet101 e ResNet50 e a confiança do modelo, todos retirados do projeto. As notas que citam a "simulação" ("não entendi como as telas se conectam", "não entendi o progresso", "gostaria de ver as imagens segmentadas") são **propostas da equipe**, e não falas registradas na sessão (Entrega 6, seção 4). Pode servir de ponto de partida para o protótipo da Entrega 11, depois de alinhado ao recorte.
+
 
 `wireframes.py` gera as telas revisadas do protótipo de baixa fidelidade em `assets/06_prototipos/v2/`. Cada tela traz, à direita, notas numeradas com o que mudou em relação à versão em papel e de onde veio a mudança (simulação, Entrega 5 ou pendência).
 

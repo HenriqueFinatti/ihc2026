@@ -74,7 +74,7 @@ Nos mapas individuais da E9, a numeração por letras (A1, A1.1…) é provisór
 | E3 | 🟦 | Personas P01–P03, contexto de uso e jornada; exportação condicionada à E7 |
 | E4 | 🟦 | Cenários C01–C03; T08 criada no C03 |
 | E5 | 🟦 | HTA/GOMS/CTT de T01–T08; requisitos RQ01–RQ09; tarefas de teste UT01–UT03. Parecer aplicado em 15/11/2026: passos condicionais com colchetes (`[2.3.3]` na T05, `[3.3.2]` na T03, `[4.2]` na T07), julgamentos que podem terminar como inconclusivos, desfecho da execução (sucesso ou falha) na T03 e na T07 e conclusão guardada só na sessão (histórico depende da H08) |
-| E6 | 🟩 | Fluxos PF01–PF03 do protótipo em papel |
+| E6 | 🟦 | Fluxos PF01–PF03 do protótipo em papel. Parecer aplicado em 15/11/2026: fotos mantidas como versão simulada e revisão por anotações (`assets/06_prototipos/anotacoes/`, gerador `scripts/prototipos/anotacoes.py`), com estados P01-E, P01-P, P02-S, P03-I, P03-C e P03-F; seleção múltipla com execução em fila; P03 dividida em comparação na mesma imagem (T03/T07) e no conjunto de teste (T04); conclusão registrada pela pessoa. O gerador `wireframes.py` não foi incorporado |
 | E7 | 🟩 | Planejamento da coleta (I01 entrevista, I02 questionário em https://forms.gle/pAMyXCdebYo9aHmq9, I03 investigação contextual). Os estados das hipóteses só mudam depois da coleta |
 | E8 | 🟩 | Características da plataforma (§1), princípios (§2), metas MQ01–MQ07 e MU01–MU11 (§3) |
 | E9 | 🟩 | Cenários de interação CI01–CI03 encadeados (CI03 cria a configuração candidata → CI01 valida em campo → CI02 compara as candidatas); conversas U:/D: (§2); mapa consolidado O01–O10 (§3.2); esquema de signos (§4); a Síntese lista, para cada MoLIC, os objetivos, as rupturas (com PP/PA/AL/RA/CE) e os signos obrigatórios |
@@ -85,7 +85,7 @@ Nos mapas individuais da E9, a numeração por letras (A1, A1.1…) é provisór
 
 | ID | Entrega | Resumo |
 |---|---|---|
-| INC-59 | E6 → E11 | Rascunhos em papel usam classes ilustrativas e IoU para qualquer arquivo; corrigir no protótipo da E11 (legenda binária, métricas só no conjunto de teste, estado "sem métricas"), sem redesenhar a E6 |
+| INC-59 | E6 → E11 | Rascunhos em papel usam classes ilustrativas e IoU para qualquer arquivo; em andamento: anotações da E6 já mostram a correção; redesenhar no protótipo da E11 (legenda binária, métricas só no conjunto de teste, estado "sem métricas"), sem redesenhar a E6 |
 
 Resolvidas em 14/11/2026: INC-53, 54, 55 e 61 (diagramas do Mateus e T08), INC-63 (exportação), 64 (E5 §3), 65 (CaSSeD), 66 (confiança do modelo) e 67 (aviso de inconclusivo).
 
