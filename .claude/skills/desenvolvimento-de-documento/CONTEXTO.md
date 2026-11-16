@@ -79,7 +79,8 @@ Nos mapas individuais da E9, a numeração por letras (A1, A1.1…) é provisór
 | E8 | 🟩 | Características da plataforma (§1), princípios (§2), metas MQ01–MQ07 e MU01–MU11 (§3) |
 | E9 | 🟩 | Cenários de interação CI01–CI03 encadeados (CI03 cria a configuração candidata → CI01 valida em campo → CI02 compara as candidatas); conversas U:/D: (§2); mapa consolidado O01–O10 (§3.2); esquema de signos (§4); a Síntese lista, para cada MoLIC, os objetivos, as rupturas (com PP/PA/AL/RA/CE) e os signos obrigatórios |
 | E10 | 🟩 | M01 (Tiago), M02 (Henrique) e M03 (Mateus) com leitura e checklist; cenas reusadas entre diagramas; consolidação (O05.1 × O03.1, O06.2 vale para a P02 [H], O08 único com tipo de conclusão); “Preparação para o Figma” lista 9 telas com estados de feedback e erro |
-| E11–E14 | ⬜ | — |
+| E11 | 🟩 | Interface implementada no TCC (autorizada pelo professor no lugar do Figma), web local; commit d11c155 do repositório público; telas TL01–TL11 (TL11 Datasets fora dos MoLIC), 44 capturas em assets/11_figma/; INC-59 resolvido, INC-70 descartado |
+| E12–E14 | ⬜ | — |
 
 ## Pendências abertas
 
