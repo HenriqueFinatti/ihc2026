@@ -61,7 +61,7 @@ Rafael acompanha os testes do Baja em terrenos off-road dentro da FEI e coleta i
 | 4 | Os resultados ficam reunidos na sessão (imagem, máscara e configuração), sem pastas organizadas à mão. | No C01, as pastas eram nomeadas pela data do teste e as métricas ficavam em planilhas à parte (Q3). O cenário não supõe histórico entre sessões, que continua fora do recorte até a H08 ser confirmada. | C01, Q3; RQ03; E8 §1 (Volume de dados/histórico); H08 |
 | 5 | Rafael vê a imagem e a máscara ao mesmo tempo, sobrepõe a máscara com transparência ajustável, amplia a região, e as cores e os nomes das classes são fixos. | No C01, as máscaras eram abertas em janelas separadas e as cores não tinham padrão entre execuções. | E3, decisões de design 1 e 2 da P01; RQ03; RQ04; E5 §2, HTA T03 3.1 e 3.2 e GOMS T01 metas 1 e 2 |
 | 6 | Para uma imagem sem anotação de referência, o sistema informa que não há IoU nem acurácia e que a avaliação é visual; Rafael examina a imagem original com a máscara sobreposta e ampliada. | No C01, Rafael não sabia se a falha era do modelo ou da imagem. As métricas só existem para imagens com anotação de referência, e o TCC previsto não exibe a confiança do modelo; a distinção entre modelo e imagem fica com a avaliação visual e o registro da origem do problema (linha 7). | C01 (ruptura da máscara de uma cor só); RQ06; E8 §1 (Restrições: estado "sem métricas"); `PENDENCIAS.md`, INC-52 e INC-66 (confiança do modelo retirada em 14/11/2026) |
-| 7 | Rafael registra cada imagem como correta ou duvidosa e, nas duvidosas, se o problema parece ser da imagem ou do modelo. | No C01, ele não conseguia dizer se a falha era do modelo ou da imagem, e marcava as duvidosas fora do sistema. O critério visual de correção (Q7) continua o mesmo. | C01, Q7; RQ05; E5 §2, GOMS T01 OP. 3.2, HTA T03 4.2.2 e síntese 2.5 (item 2) |
+| 7 | Rafael registra cada imagem como correta ou duvidosa e, nas duvidosas, se o problema parece ser da imagem ou do modelo. | No C01, ele não conseguia dizer se a falha era do modelo ou da imagem, e marcava as duvidosas fora do sistema. O critério visual de correção (Q7) continua o mesmo. | C01, Q7; RQ05; E5 §2, GOMS T01 3.A.2, HTA T03 4.2.2 e síntese 2.5 (item 2) |
 | 8 | Ao escolher a configuração para comparar, Rafael vê a descrição e as métricas de cada uma no conjunto de teste, em vez de supor que a mais recente é a melhor. | No C01, ele escolhia a configuração mais recente sem conferir as métricas, porque elas estavam em outra planilha (Q5). | C01, Q5; F01; E3, decisão de design 3 da P01; E5 §2, HTA T03 1.2 |
 | 9 | O sistema reúne as duas configurações na mesma visão, sobre a mesma imagem e na mesma região, com as avaliações já registradas. | No C01, as máscaras ficavam em janelas separadas e as métricas em planilhas diferentes, e Rafael perdia o fio da comparação. | RQ02; RQ03; E5 §2, HTA T03 4.1 e síntese 2.5 (item 4) |
 | 10 | Rafael registra a conclusão (configuração mais adequada, imagens inconclusivas e problema de captura) e informa o grupo fora do sistema, sugerindo a comparação na reunião. | A conclusão é dele; o sistema exibe e organiza, mas não decide. A decisão continua com a gestão e a coordenação (Q4). O cenário não usa a exportação de imagens (decisão de design 4 da P01), porque ela está fora do recorte da Entrega 1 até decisão da equipe. | C01, Q4; RQ08; RQ09; E5 §2, HTA T03 4.2 e 4.3; `PENDENCIAS.md`, INC-63 (exportação) |
@@ -341,19 +341,24 @@ Os subtópicos são os diálogos de cada objetivo. Os nomes desta tabela são os
 
 | ID | Subtópico | Objetivo | Origem no mapa individual |
 |---|---|---|---|
-| O03.1 | Enviar as entradas e escolher as configurações | O03 | P01 A2.1 "Enviar as imagens e escolher a configuração" |
-| O03.2 | Acompanhar o processamento | O03 | P01 A2.2; P01 B1.2 "Executar a outra configuração nas imagens duvidosas" (reuso) |
+| O01.1 | Escolher o modelo e os parâmetros | O01 | P02 A1.1 |
+| O01.2 | Nomear a configuração | O01 | P02 A1.2 |
+| O02.1 | Acompanhar o treino | O02 | P02 A2.1 |
+| O02.2 | Conferir o resultado do treino | O02 | P02 A2.2 |
+| O03.1 | Enviar as entradas e escolher as configurações | O03 | P01 A2.1 "Enviar as imagens e escolher a configuração"; P02 B2 (abertura do tópico: enviar os quadros e escolher as configurações) |
+| O03.2 | Acompanhar o processamento | O03 | P01 A2.2; P01 B1.2 "Executar a outra configuração nas imagens duvidosas" (reuso); P02 B2.1 "Executar as configurações nos mesmos quadros" (reuso) |
 | O04.1 | Ver o resultado sobre a imagem | O04 | P01 A3.1 |
 | O04.2 | Conferir se há métricas | O04 | P01 A3.2 |
 | O04.3 | Registrar a avaliação da imagem | O04 | P01 A3.3 |
 | O05.1 | Escolher as configurações a comparar | O05 | P01 B1.1 "Escolher a outra configuração" |
-| O05.2 | Comparar na mesma imagem e região | O05 | P01 B1.3 "Comparar na mesma região" |
+| O05.2 | Comparar na mesma imagem e região | O05 | P01 B1.3 "Comparar na mesma região"; P02 B2.2 "Analisar um quadro" |
 | O06.1 | Escolher as configurações | O06 | P03 A1.1 "Escolher o que comparar" |
 | O06.2 | Conferir se a comparação é válida | O06 | P03 A1.2 |
-| O06.3 | Ler o desempenho de cada configuração | O06 | P03 A1.3 |
+| O06.3 | Ler o desempenho de cada configuração | O06 | P03 A1.3; P02 B2.3 "Comparar as métricas no conjunto de teste" |
+| O06.4 | Consultar a matriz de confusão | O06 | P02 B2.4 |
 | O07.1 | Entender um termo | O07 | P03 A2.1 |
-| O07.2 | Julgar a diferença entre configurações | O07 | P03 A2.2 "Julgar a diferença entre as configurações" |
-| O08.1 | Informar a conclusão | O08 | P03 A3.1 "Informar a recomendação e a ressalva"; P01 B2 "Registrar a conclusão da validação" |
+| O07.2 | Julgar a diferença entre configurações | O07 | P03 A2.2 "Julgar a diferença entre as configurações"; P02 B2.3 (reuso) |
+| O08.1 | Informar a conclusão | O08 | P03 A3.1 "Informar a recomendação e a ressalva"; P01 B2 "Registrar a conclusão da validação"; P02 B3 "Registrar a conclusão do experimento" |
 | O08.2 | Conferir a conclusão | O08 | P03 A3.2 "Conferir a recomendação" |
 | O09.1 | Retomar a análise | O09 | P03 B1.1 "Retomar a comparação" |
 | O09.2 | Responder a uma dúvida (usa O07.2) | O09 | P03 B1.2 "Responder a uma dúvida da coordenação" |
@@ -511,5 +516,5 @@ Todos os objetivos O01 a O10 ficam cobertos por pelo menos um diagrama. Os ponto
 
 | Data | O que mudou | Motivo |
 |---|---|---|
-| 15/11/2026 | Tabela da seção 1 (CI01): referência ao GOMS da T01 passa de "3.A.2" a "OP. 3.2", depois da reorganização da meta 3 na E5 | Aplicação do parecer da Entrega 5 (item 5) na E5 |
 | 14/11/2026 | Seção 3.2: tabela de subtópicos com os nomes oficiais (subtópicos da P03 e da P01); na figura do mapa consolidado, O06.3 passa a "Ler o desempenho de cada configuração" | Os IDs dos subtópicos só existiam na figura e os nomes divergiam entre a E9 e a E10 (`PENDENCIAS.md`: INC-68) |
+| 15/11/2026 | Seção 3.2: subtópicos da P02 na tabela de subtópicos (O01.1–O02.2, O06.4 e as origens da P02) | Completar a tabela junto com o MoLIC M03 (`PENDENCIAS.md`: INC-68) |
