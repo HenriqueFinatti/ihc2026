@@ -26,7 +26,7 @@ y = s.tree(N(["A. Experimentar uma nova configuração"]),
 
 y = s.section(y, "Objetivo B — avaliar a nova configuração (T02, T06 e T07)")
 y = s.tree(N(["B. Avaliar a nova configuração"]),
-           [N(["B1. Extrair os quadros", "dos vídeos"], dashed=True),
+           [N(["B1. Extrair os quadros", "dos vídeos"]),
             N(["B2. Comparar as", "configurações nos", "quadros de sombra"]),
             N(["B3. Registrar a", "conclusão do", "experimento"]),
             N(["B4. Pedir validação em", "campo e levar à", "reunião"], dashed=True)],
@@ -58,6 +58,7 @@ s.text(480, y + 44, "Caixa tracejada: objetivo da persona alcançado entre pesso
        size=14, anchor="start")
 y = s.note(y + 80, ["Numeração provisória deste mapa (letras, para não confundir com seções do documento nem com o HTA); os IDs O01… são atribuídos no mapa consolidado da equipe.",
                     "A2 inclui o início do treino; B3 não tem subtópicos: é um único diálogo.",
+                    "B1 passou para o sistema em 16/11/2026: o vídeo é enviado na execução (O03.1), e o sistema extrai os quadros.",
                     "B2.1 reutiliza o diálogo de execução da P01 (CI01); B2.3, o diálogo de julgar a diferença da P03 (CI02).",
                     "[H]: proposta derivada de proto-persona, a revisar depois da coleta da Entrega 7."]) + 20
 

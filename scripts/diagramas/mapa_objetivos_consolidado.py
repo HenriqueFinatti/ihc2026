@@ -28,7 +28,7 @@ ya = s.tree(N(["A. Preparar configurações"]),
              N(["O02. Treinar o", "modelo (P02)"])],
             y, 40, 600, gap=30, pw=420)
 yb = s.tree(N(["B. Executar e avaliar resultados"]),
-            [N(["Obter as entradas", "(imagens e quadros)", "(P01, P02)"], dashed=True),
+            [N(["Obter as entradas", "(imagens e vídeos)", "(P01, P02)"], dashed=True),
              N(["O03. Executar a", "segmentação", "(P01, P02)"]),
              N(["O04. Avaliar a", "segmentação de uma", "imagem (P01, P02)"])],
             y, 660, 1400, gap=24, pw=460)

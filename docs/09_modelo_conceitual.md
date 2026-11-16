@@ -226,7 +226,7 @@ Cada integrante descreve, como conversa, o cenário de interação que escreveu 
 | > consultar a matriz de confusão | `U:` Onde cada configuração erra?<br>`D:` Esta é a **matriz de confusão** de cada **configuração** no **conjunto de teste**: mostra quanto do que era **Trilha** foi marcado como **Fora da trilha**, e o contrário. | Dar a Andreia a métrica que ela já usa para entender o tipo de erro (CI03 [7]; C03, Q20). |
 | **registrar a conclusão do experimento** | `U:` Conclusão: inconclusivo nas métricas; melhora visual nas sombras largas; ainda perde a trilha nos trechos estreitos. Mantenho a **DeepLabV3+ – 50 épocas** como **configuração candidata**. **Próximo experimento:** testar outro conjunto de dados.<br>`D:` **Conclusão** registrada junto da comparação, com a **DeepLabV3+ – 50 épocas** marcada como **configuração candidata**. | A conclusão e a decisão sobre o próximo passo são de Andreia; o sistema registra, mas não decide (CI03 [8] e [9]; RQ08). |
 
-**Fora da conversa com o sistema:** extrair os quadros dos vídeos, registrar o experimento no caderno de pesquisa (o histórico depende da H08), pedir a Rafael a validação em campo e levar a conclusão à reunião de coordenação (RQ09).
+**Fora da conversa com o sistema:** registrar o experimento no caderno de pesquisa (o histórico depende da H08), pedir a Rafael a validação em campo e levar a conclusão à reunião de coordenação (RQ09). Desde 16/11/2026, extrair os quadros dos vídeos acontece no sistema: Andreia envia o vídeo do teste ao executar as configurações, e o sistema extrai os quadros (O03.1).
 
 **Signos que esta conversa introduz:** modelo (DeepLabV3+, FCN), parâmetros de treino (épocas, early stopping, paciência, datasets de treino, batch size, geração de gráficos), valor padrão, nome da configuração `[?]`, treino, estado do treino (treinando, concluído, falhou), época, gráficos de treino e validação, configuração candidata, quadro, matriz de confusão e próximo experimento. Também reutiliza signos das seções 2.1 e 2.2: configuração, configurações disponíveis, conjunto de teste, IoU, acurácia, tempo de inferência, anotação de referência, imagem original, máscara, sobreposição, legenda, diferença entre configurações e conclusão. Os valores de batch size e paciência são ilustrativos `[H]`.
 
@@ -274,7 +274,7 @@ Cada mapa parte do objetivo geral da persona e chega aos tópicos e subtópicos 
 
 - **Objetivo geral:** decidir qual configuração seguir no próximo experimento e qual levar à reunião, que é o objetivo da P02 na Entrega 3 e a resposta à Q28 do C03.
 - **Objetivo A (T08):** A1 e A2 são os dois primeiros tópicos da seção 2.3. O início do treino faz parte de A2.
-- **Objetivo B (T02, T06 e T07):** B2 e B3 são os dois últimos tópicos da seção 2.3. B1 (extrair os quadros dos vídeos) e B4 (pedir a validação em campo a Rafael e levar a conclusão à reunião) ficam fora do sistema.
+- **Objetivo B (T02, T06 e T07):** B2 e B3 são os dois últimos tópicos da seção 2.3. B4 (pedir a validação em campo a Rafael e levar a conclusão à reunião) fica fora do sistema. B1 (extrair os quadros dos vídeos) passou para o sistema em 16/11/2026: o vídeo é enviado na execução (O03.1), e o sistema extrai os quadros.
 - **Reuso entre personas:** executar as configurações nos mesmos quadros (B2.1) usa o diálogo de acompanhar o processamento da P01 (A2.2), e comparar as métricas no conjunto de teste (B2.3) usa o diálogo de julgar a diferença da P03 (A2.2).
 
 ### 3.2 Mapa consolidado
@@ -313,7 +313,7 @@ O mapa consolidado junta os três mapas individuais sob um objetivo geral comum:
 | P03 (CI02) | B3 Registrar a decisão da coordenação | O10 |
 | P02 (CI03) | A1 Definir uma configuração de treino (A1.1, A1.2) | O01 (O01.1, O01.2) |
 | P02 (CI03) | A2 Treinar o modelo (A2.1, A2.2) | O02 (O02.1, O02.2) |
-| P02 (CI03) | B1 Extrair os quadros dos vídeos | fora do sistema |
+| P02 (CI03) | B1 Extrair os quadros dos vídeos | O03.1 (desde 16/11/2026, o sistema extrai os quadros do vídeo enviado) |
 | P02 (CI03) | B2 Comparar as configurações nos quadros de sombra (B2.1, B2.2, B2.3, B2.4) | O05 (B2.1 usa O03; B2.2 → O05.2; B2.3 → O06.3 e O07.2; B2.4 → O06.4) |
 | P02 (CI03) | B3 Registrar a conclusão do experimento | O08 |
 | P02 (CI03) | B4 Pedir validação em campo e levar à reunião | fora do sistema |
@@ -345,7 +345,7 @@ Os subtópicos são os diálogos de cada objetivo. Os nomes desta tabela são os
 | O01.2 | Nomear a configuração | O01 | P02 A1.2 |
 | O02.1 | Acompanhar o treino | O02 | P02 A2.1 |
 | O02.2 | Conferir o resultado do treino | O02 | P02 A2.2 |
-| O03.1 | Enviar as entradas e escolher as configurações | O03 | P01 A2.1 "Enviar as imagens e escolher a configuração"; P02 B2 (abertura do tópico: enviar os quadros e escolher as configurações) |
+| O03.1 | Enviar as entradas e escolher as configurações | O03 | P01 A2.1 "Enviar as imagens e escolher a configuração"; P02 B1 "Extrair os quadros dos vídeos" (desde 16/11/2026) e abertura do B2 (escolher as configurações) |
 | O03.2 | Acompanhar o processamento | O03 | P01 A2.2; P01 B1.2 "Executar a outra configuração nas imagens duvidosas" (reuso); P02 B2.1 "Executar as configurações nos mesmos quadros" (reuso) |
 | O04.1 | Ver o resultado sobre a imagem | O04 | P01 A3.1 |
 | O04.2 | Conferir se há métricas | O04 | P01 A3.2 |
@@ -395,7 +395,8 @@ A tabela reúne os signos das conversas das seções 2.1, 2.2 e 2.3, agrupados p
 | Processamento | causa da falha | sistema | Motivo de uma execução ou de um treino não terminar, em linguagem de usuário (ex.: falta de memória no computador). | texto | — | — | — | RA: quando a pessoa pode resolver no sistema (repetir, mudar o batch size); CE: quando depende de algo fora dele (ex.: liberar memória ou usar outro computador) |
 | Processamento | motivo do término do treino | sistema | Se o treino terminou ao atingir as épocas ou antes, por early stopping. | texto | — | — | PP: explica por que o treino terminou antes das épocas pedidas | — |
 | Processamento | gráficos de treino e validação | sistema | Evolução do treino por época. | gráfico | só existe com geração de gráficos ligada | — | — | — |
-| Entrada | imagem | usuário | Fotografia dos testes ou quadro extraído de vídeo. Na conversa da P02, "quadro" é a imagem extraída de vídeo; na interface, o signo é sempre "imagem". Exibida sem alteração como "imagem original" ao lado da máscara. | arquivo de imagem | formato aceito | — | PP: informa os formatos aceitos; AL: antes de executar, aponta as imagens fora do formato e pergunta se segue sem elas (seção 2.1) | — |
+| Entrada | imagem | usuário | Fotografia dos testes ou quadro extraído de vídeo pelo sistema. Na conversa da P02, "quadro" é a imagem extraída de vídeo; na interface, o signo é sempre "imagem". Exibida sem alteração como "imagem original" ao lado da máscara. | arquivo de imagem | formato aceito | — | PP: informa os formatos aceitos; AL: antes de executar, aponta as imagens fora do formato e pergunta se segue sem elas (seção 2.1) | — |
+| Entrada | vídeo | usuário | Vídeo dos testes. Ao recebê-lo, o sistema extrai os quadros, e cada quadro vira uma imagem da sessão (desde 16/11/2026). | arquivo de vídeo | formato aceito (MP4) | — | PP: informa os formatos aceitos; AL: como na imagem | — |
 | Entrada | formato aceito | sistema | Formatos de arquivo que o sistema processa (ex.: JPG ou PNG `[H]`). | lista | — | — | — | — |
 | Entrada | anotação de referência | domínio | Máscara feita à mão que indica a resposta certa. Vem dos datasets do TCC; o usuário não envia anotações (fora do recorte). Só as imagens do conjunto de teste têm; imagens novas de campo não. | sim/não | — | — | PP: explica que, sem anotação, não há IoU nem acurácia (RQ06) | — |
 | Entrada | conjunto de teste | domínio | Parte dos datasets do TCC separada para teste: imagens com anotação de referência que não são usadas no treino. É onde o IoU, a acurácia e a matriz de confusão são calculados (D5); as métricas não valem para as imagens dos testes do Baja. Nas entregas anteriores, aparece como "conjunto de teste anotado". | conjunto de imagens | — | — | PP: identifica o conjunto usado em cada resultado | — |
@@ -405,6 +406,7 @@ A tabela reúne os signos das conversas das seções 2.1, 2.2 e 2.3, agrupados p
 | Resultado | classe | domínio | *Trilha* ou *Fora da trilha* (D1). Descreve a classificação do modelo; não indica se o trecho é seguro. | seleção simples | {Trilha, Fora da trilha} | — | — | — |
 | Resultado | legenda | sistema | Cor e nome de cada classe, iguais em todas as visualizações (RQ04). | lista | cores fixas | cores fixas | PP: o nome da classe acompanha sempre a cor | — |
 | Resultado | sobreposição | sistema | Máscara exibida por cima da imagem original. | imagem | — | — | — | — |
+| Resultado | vídeo com a sobreposição | sistema | Vídeo montado com a sobreposição de cada quadro, que a pessoa pode baixar em MP4. Única exportação no recorte (desde 16/11/2026; `PENDENCIAS.md`, INC-63). | arquivo de vídeo | só existe quando a entrada é um vídeo | — | — | — |
 | Resultado | transparência | usuário | Quanto da máscara aparece na sobreposição. | número (percentual) | 0% a 100% | 50% `[H]` | — | — |
 | Resultado | região ampliada | usuário | Área da imagem ampliada pela pessoa, mantida igual entre configurações na comparação (O05.2). | área da imagem | dentro da imagem | imagem inteira | — | — |
 | Métricas | IoU | domínio | Quanto as regiões marcadas pela configuração coincidem com as anotadas, por classe (ex.: IoU da classe *Trilha*) ou na média das classes (IoU médio). Só no conjunto de teste. | número | 0 a 1 | — | PP: explicação no ponto de uso do que indica e do que não indica (RC01) | — |
@@ -484,7 +486,7 @@ Todos os objetivos O01 a O10 ficam cobertos por pelo menos um diagrama. Os ponto
 ### Signos que precisam aparecer nas falas
 
 - **Configuração e treino:** configuração, nome da configuração, modelo, parâmetros de treino (épocas, early stopping, paciência, datasets de treino, batch size, geração de gráficos), situação da configuração, estado, progresso, causa da falha, motivo do término do treino.
-- **Entrada e resultado:** imagem, formato aceito, anotação de referência, conjunto de teste, sessão, máscara, classe (*Trilha*, *Fora da trilha*), legenda, sobreposição, transparência, região ampliada.
+- **Entrada e resultado:** imagem, vídeo, formato aceito, anotação de referência, conjunto de teste, sessão, máscara, classe (*Trilha*, *Fora da trilha*), legenda, sobreposição, vídeo com a sobreposição, transparência, região ampliada.
 - **Métricas:** IoU, acurácia, tempo de inferência, matriz de confusão, valor de referência e sua origem, maior valor, diferença entre configurações.
 - **Avaliação, conclusão e decisão:** avaliação da imagem, origem do problema, conclusão e tipo de conclusão, configuração indicada, ressalva, próximo experimento, ciclo de testes, decisão da coordenação, condição.
 
@@ -492,7 +494,7 @@ Todos os objetivos O01 a O10 ficam cobertos por pelo menos um diagrama. Os ponto
 
 - Objetivos alcançados fora do sistema (obter as entradas, pedir execução ou validação a um colega, comunicar o grupo, discutir na reunião): no máximo como saída da conversa, sem cenas próprias.
 - Confiança do modelo e aviso automático de resultado inconclusivo, retirados em 14/11/2026 (`PENDENCIAS.md`, INC-66 e INC-67).
-- Histórico entre sessões e exportação: fora do recorte até a coleta da Entrega 7 (H08 e H12; `PENDENCIAS.md`, INC-63). Perfis e permissões: fora do recorte (E1 §8).
+- Histórico entre sessões e exportação: fora do recorte até a coleta da Entrega 7 (H08 e H12; `PENDENCIAS.md`, INC-63). Exceção decidida em 16/11/2026: o download do vídeo com a sobreposição, em MP4. Perfis e permissões: fora do recorte (E1 §8).
 
 ### Pontos em aberto que afetam a Entrega 10
 
@@ -509,7 +511,7 @@ Todos os objetivos O01 a O10 ficam cobertos por pelo menos um diagrama. Os ponto
 - [x] O esquema de signos está em uma tabela única e sem duplicações conceituais.
 - [x] Nomes de objetivos/signos serão reutilizados na Entrega 10.
 - [x] Em TCC técnico, signos representam conceitos do domínio compreensíveis ao usuário, não apenas variáveis/estruturas internas.
-- [x] Padrões como dashboard, relatório, filtros, administração e CRUD possuem objetivos e signos correspondentes. *(O único padrão adotado, a comparação consolidada das configurações, corresponde a O06. Histórico, exportação, administração e CRUD estão fora do recorte.)*
+- [x] Padrões como dashboard, relatório, filtros, administração e CRUD possuem objetivos e signos correspondentes. *(O único padrão adotado, a comparação consolidada das configurações, corresponde a O06. Histórico, exportação (exceto o vídeo com a sobreposição, em MP4, desde 16/11/2026), administração e CRUD estão fora do recorte.)*
 - [x] A interface comunica não só o resultado técnico, mas também seu significado para a tarefa.
 
 ## Histórico de revisões
@@ -518,3 +520,4 @@ Todos os objetivos O01 a O10 ficam cobertos por pelo menos um diagrama. Os ponto
 |---|---|---|
 | 14/11/2026 | Seção 3.2: tabela de subtópicos com os nomes oficiais (subtópicos da P03 e da P01); na figura do mapa consolidado, O06.3 passa a "Ler o desempenho de cada configuração" | Os IDs dos subtópicos só existiam na figura e os nomes divergiam entre a E9 e a E10 (`PENDENCIAS.md`: INC-68) |
 | 15/11/2026 | Seção 3.2: subtópicos da P02 na tabela de subtópicos (O01.1–O02.2, O06.4 e as origens da P02) | Completar a tabela junto com o MoLIC M03 (`PENDENCIAS.md`: INC-68) |
+| 16/11/2026 | Seção 2.3 ("Fora da conversa"), mapa da P02 (B1 passa a objetivo apoiado pelo sistema) e correspondência: a extração dos quadros dos vídeos passa para o sistema (O03.1). Seção 3.2: no mapa consolidado, "Obter as entradas (imagens e vídeos)". Seção 4: signos "vídeo" e "vídeo com a sobreposição". Síntese e checklist: o download do vídeo com a sobreposição (MP4) é a única exportação no recorte | Decisões da implementação da Entrega 11 (`RASTREABILIDADE.md`, §5; `PENDENCIAS.md`, INC-63) |

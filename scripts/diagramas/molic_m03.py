@@ -65,7 +65,7 @@ m.arrow([(L, c3["b"]), (L, c5["y"])], ["d: treino concluído"], at=(L + 12, c3["
 
 # ---------------------------------------------------------------- O03 e O05: executar e comparar nos quadros
 c6 = m.scene(L, c5["b"] + 130, WL, ["O03.1 Enviar as entradas e escolher", "as configurações"],
-             ["d+u: quadros", "d+u: configurações a comparar, com", "       descrição e métricas no",
+             ["d+u: imagens ou vídeos do teste", "       (o sistema extrai os quadros)", "d+u: configurações a comparar, com", "       descrição e métricas no",
               "       conjunto de teste"])
 m.arrow([(L, c5["b"]), (L, c6["y"])], ["u: comparar com outra configuração", "nestes quadros",
                                         "gco: comparar configurações (O05)"], at=(L + 12, c5["b"] + 30))
@@ -127,8 +127,7 @@ y = s.note(y, ["Andreia define a configuração e inicia o treino; pode sair dur
                "e registra a conclusão do experimento.",
                "O03.1, O03.2 e O05.2 são as mesmas cenas do M01; O06.3 e O07.2, as mesmas do M02 (reuso). As rupturas",
                "da execução (formato não aceito e falha) estão desenhadas no M01.",
-               "Fora do sistema: extrair os quadros dos vídeos, pedir a validação em campo e levar a conclusão à reunião",
-               "(RQ09). Proposta [H]."]) + 20
+               "Fora do sistema: pedir a validação em campo e levar a conclusão à reunião (RQ09). Proposta [H]."]) + 20
 H = m.legend(y)
 s.save(OUT, H)
 print(OUT.name, H)

@@ -29,7 +29,7 @@ Modele também rupturas plausíveis: entrada inválida, falha de processamento, 
 **Cenário de interação de origem:** CI01 — Validação de segmentação e comparação de configurações sem scripts (P01, Rafael)  
 **Objetivo(s):** O03, O04, O05, O08  
 **Tarefa(s) relacionada(s):** T01, T02 (compartilhada com a P02), T03  
-**Signos relevantes:** imagem; formato aceito; configuração (nome, descrição, métricas no conjunto de teste); estado da execução (processando, concluído, falhou); progresso; causa da falha; imagem original; máscara; legenda (*Trilha*, *Fora da trilha*); sobreposição; transparência; região ampliada; anotação de referência; IoU e acurácia; avaliação da imagem (correta, duvidosa); origem do problema (imagem/captura ou modelo); imagem inconclusiva; conclusão do tipo validação (Entrega 9, seção 4)
+**Signos relevantes:** imagem; vídeo; formato aceito; configuração (nome, descrição, métricas no conjunto de teste); estado da execução (processando, concluído, falhou); progresso; causa da falha; imagem original; máscara; legenda (*Trilha*, *Fora da trilha*); sobreposição; transparência; região ampliada; anotação de referência; IoU e acurácia; avaliação da imagem (correta, duvidosa); origem do problema (imagem/captura ou modelo); imagem inconclusiva; conclusão do tipo validação (Entrega 9, seção 4)
 
 ### Diagrama
 
@@ -48,10 +48,10 @@ O diagrama tem um ponto de abertura e **uma única conversa**, que começa com `
 
 #### Caminho principal
 
-1. **Ponto de abertura → O03.1 Enviar as entradas e escolher as configurações.** Com `u: segmentar as imagens do teste` (`gco: executar a segmentação, O03`), o sistema mostra as configurações disponíveis, cada uma com descrição e métricas no conjunto de teste. Rafael envia as imagens do teste e escolhe a configuração.
+1. **Ponto de abertura → O03.1 Enviar as entradas e escolher as configurações.** Com `u: segmentar as imagens do teste` (`gco: executar a segmentação, O03`), o sistema mostra as configurações disponíveis, cada uma com descrição e métricas no conjunto de teste. Rafael envia as imagens ou os vídeos do teste (o sistema extrai os quadros de cada vídeo) e escolhe a configuração.
 2. **O03.1 → processo do sistema.** Com `u: executar`, o sistema confere se todas as imagens estão em formato aceito.
 3. **Processo → O03.2 Acompanhar o processamento.** Com `d: imagens aceitas`, o sistema mostra o estado da execução (processando, concluído ou falhou), o progresso e a configuração em execução.
-4. **O03.2 → O04.1 Ver o resultado sobre a imagem.** Com `d: concluído` e a precondição "execução inicial" (`gco: avaliar a segmentação, O04`), o sistema mostra a imagem original e a máscara, com a legenda *Trilha* e *Fora da trilha*. Rafael escolhe a sobreposição, a transparência e a região ampliada.
+4. **O03.2 → O04.1 Ver o resultado sobre a imagem.** Com `d: concluído` e a precondição "execução inicial" (`gco: avaliar a segmentação, O04`), o sistema mostra a imagem original e a máscara, com a legenda *Trilha* e *Fora da trilha*. Rafael escolhe a sobreposição, a transparência e a região ampliada. Quando a entrada é um vídeo, ele pode baixar o vídeo com a sobreposição, em MP4.
 5. **O04.1 ⇄ O04.2 Conferir se há métricas.** Com `u: qual é o IoU?`, o sistema mostra IoU e acurácia quando a imagem tem anotação de referência. Rafael volta com `u: voltar à imagem`.
 6. **O04.1 → O04.3 Registrar a avaliação da imagem.** Com `u: avaliar esta imagem`, Rafael marca a imagem como correta ou duvidosa e, se for o caso, a origem do problema: imagem (captura) ou modelo. Com `u: próxima imagem`, volta à O04.1 para a imagem seguinte; esse laço se repete até todas as imagens estarem avaliadas.
 7. **O04.3 → O08.1 Informar a conclusão (validação).** Com `u: registrar a conclusão` (`gco: registrar a conclusão, O08`), Rafael informa a configuração mais adequada, as imagens inconclusivas e as que tiveram problema na imagem (captura). O tipo de conclusão é validação.
@@ -91,7 +91,7 @@ A precondição é o que diferencia as duas saídas da O03.2: o mesmo `d: conclu
 - [x] Nomes de objetivos, tópicos e signos são coerentes com a Entrega 9. *(Cenas O03.1–O08.2 e signos da seção 4; nomes alinhados em 14/11/2026, `PENDENCIAS.md`, INC-68.)*
 - [x] O diagrama é legível em tamanho normal no GitHub. *(SVG gerado por script e conferido com `scripts/diagramas/verificar.js`: nenhum texto fora das caixas, sobreposto ou passando da borda.)*
 - [x] O MoLIC representa a conversa usuário–sistema, não o fluxo interno do algoritmo. *(A inferência do modelo não aparece; a O03.2 mostra só o estado e o progresso da execução, e o sistema responde com falas `d:`.)*
-- [x] Processamento, filtros, administração, relatórios e históricos incluem retornos/rupturas quando relevantes. *(O processamento tem saídas de erro e a reexecução reaproveita a O03.2. Filtros, administração, relatórios exportáveis e histórico estão fora do recorte (Entrega 1, seção 8; `PENDENCIAS.md`, INC-63; H08).)*
+- [x] Processamento, filtros, administração, relatórios e históricos incluem retornos/rupturas quando relevantes. *(O processamento tem saídas de erro e a reexecução reaproveita a O03.2. Filtros, administração, relatórios exportáveis e histórico estão fora do recorte (Entrega 1, seção 8; `PENDENCIAS.md`, INC-63; H08). A única exportação no recorte é o vídeo com a sobreposição, em MP4, na O04.1 (desde 16/11/2026).)*
 
 **Limitação conhecida:** na cena de alerta "Imagens sem avaliação", `u: avaliá-las antes` está desenhada até a O04.3, de onde `u: próxima imagem` leva à O04.1; na interação, o sistema pode abrir direto a primeira imagem sem avaliação.
 
@@ -164,7 +164,7 @@ O diagrama tem um ponto de abertura do sistema e duas conversas sobre objetivos,
 - [x] Nomes de objetivos, tópicos e signos são coerentes com a Entrega 9. *(Cenas O06.1–O10 e signos da seção 4; nomes alinhados em 14/11/2026, `PENDENCIAS.md`, INC-68.)*
 - [x] O diagrama é legível em tamanho normal no GitHub. *(SVG gerado por script e conferido com `scripts/diagramas/verificar.js`: nenhum texto fora das caixas, sobreposto ou passando da borda.)*
 - [x] O MoLIC representa a conversa usuário–sistema, não o fluxo interno do algoritmo. *(O cálculo das métricas não aparece; o sistema só exibe resultados e responde com falas `d:`.)*
-- [x] Processamento, filtros, administração, relatórios e históricos incluem retornos/rupturas quando relevantes. *(Os processamentos têm saídas de erro. Filtros, administração, relatórios exportáveis e histórico estão fora do recorte (Entrega 1, seção 8; `PENDENCIAS.md`, INC-63; H08).)*
+- [x] Processamento, filtros, administração, relatórios e históricos incluem retornos/rupturas quando relevantes. *(Os processamentos têm saídas de erro. Filtros, administração, relatórios exportáveis e histórico estão fora do recorte (Entrega 1, seção 8; `PENDENCIAS.md`, INC-63; H08); a única exportação adotada, o vídeo com a sobreposição em MP4, está no M01.)*
 
 **Limitação conhecida:** a volta do acesso ubíquo O07.1 (`u: voltar à cena anterior`) está desenhada até a O06.3, onde os termos aparecem com mais frequência; na interação, ela leva de volta à cena de onde a pessoa veio.
 
@@ -174,7 +174,7 @@ O diagrama tem um ponto de abertura do sistema e duas conversas sobre objetivos,
 **Cenário de interação de origem:** CI03 — Treino e comparação de uma nova configuração em uma janela curta (P02, Andreia)  
 **Objetivo(s):** O01, O02, O03, O05, O06 (O06.3, O06.4), O07 (O07.2), O08  
 **Tarefa(s) relacionada(s):** T02 (compartilhada com a P01), T06, T07, T08  
-**Signos relevantes:** modelo; parâmetros de treino (épocas, early stopping e paciência, datasets de treino, batch size, geração de gráficos) e seus valores padrão; nome da configuração; treino e estado do treino (treinando, concluído, falhou); época; gráficos de treino e validação; causa da falha; motivo do término do treino; quadro; imagem original; máscara; sobreposição; legenda (*Trilha*, *Fora da trilha*); região ampliada; IoU, acurácia e tempo de inferência no conjunto de teste; anotação de referência; diferença entre configurações; matriz de confusão; conclusão do tipo experimento; configuração candidata; ressalva; próximo experimento (Entrega 9, seção 4)
+**Signos relevantes:** modelo; parâmetros de treino (épocas, early stopping e paciência, datasets de treino, batch size, geração de gráficos) e seus valores padrão; nome da configuração; treino e estado do treino (treinando, concluído, falhou); época; gráficos de treino e validação; causa da falha; motivo do término do treino; vídeo; quadro; imagem original; máscara; sobreposição; legenda (*Trilha*, *Fora da trilha*); região ampliada; IoU, acurácia e tempo de inferência no conjunto de teste; anotação de referência; diferença entre configurações; matriz de confusão; conclusão do tipo experimento; configuração candidata; ressalva; próximo experimento (Entrega 9, seção 4)
 
 ### Diagrama
 
@@ -189,7 +189,7 @@ O diagrama tem um ponto de abertura do sistema e duas conversas sobre objetivos,
 
 Explique em texto o caminho principal e pelo menos os caminhos alternativos/rupturas mais importantes.
 
-O diagrama tem um ponto de abertura, um acesso ubíquo e dois encerramentos. A conversa começa com `gco: definir uma configuração de treino (O01)` e passa por cinco objetivos: definir a configuração (O01), treinar o modelo (O02), executar e comparar as configurações nos mesmos quadros (O03 e O05), comparar o desempenho no conjunto de teste (O06 e O07) e registrar a conclusão do experimento (O08). Como o treino é longo, Andreia pode sair enquanto ele roda e voltar depois pelo acesso ubíquo "em que ponto está o treino?". As cenas O03.1, O03.2 e O05.2 são as mesmas do M01, e a O06.3 e a O07.2 são as mesmas do M02 (reuso). Extrair os quadros dos vídeos, pedir a validação em campo e levar a conclusão à reunião acontecem fora do sistema (RQ09).
+O diagrama tem um ponto de abertura, um acesso ubíquo e dois encerramentos. A conversa começa com `gco: definir uma configuração de treino (O01)` e passa por cinco objetivos: definir a configuração (O01), treinar o modelo (O02), executar e comparar as configurações nos mesmos quadros (O03 e O05), comparar o desempenho no conjunto de teste (O06 e O07) e registrar a conclusão do experimento (O08). Como o treino é longo, Andreia pode sair enquanto ele roda e voltar depois pelo acesso ubíquo "em que ponto está o treino?". As cenas O03.1, O03.2 e O05.2 são as mesmas do M01, e a O06.3 e a O07.2 são as mesmas do M02 (reuso). Pedir a validação em campo e levar a conclusão à reunião acontecem fora do sistema (RQ09); os quadros dos vídeos são extraídos pelo sistema quando o vídeo é enviado (O03.1).
 
 #### Caminho principal
 
@@ -203,7 +203,7 @@ O diagrama tem um ponto de abertura, um acesso ubíquo e dois encerramentos. A c
 
 **Comparar com outra configuração e concluir**
 
-6. **O02.2 → O03.1 Enviar as entradas e escolher as configurações.** Com `u: comparar com outra configuração nestes quadros` (`gco: comparar configurações, O05`), Andreia envia os quadros e escolhe as configurações a comparar, cada uma com descrição e métricas no conjunto de teste.
+6. **O02.2 → O03.1 Enviar as entradas e escolher as configurações.** Com `u: comparar com outra configuração nestes quadros` (`gco: comparar configurações, O05`), Andreia envia o vídeo do teste (o sistema extrai os quadros) e escolhe as configurações a comparar, cada uma com descrição e métricas no conjunto de teste.
 7. **O03.1 → processo → O03.2 Acompanhar o processamento.** Com `u: executar`, o sistema confere o formato dos quadros e responde `d: entradas aceitas`, mostrando o estado e o progresso da execução de cada configuração.
 8. **O03.2 → O05.2 Comparar na mesma imagem e região.** Com `d: concluído` e a precondição "comparação", o sistema mostra a imagem original, a máscara de cada configuração e a sobreposição ao mesmo tempo, com a legenda *Trilha* e *Fora da trilha*. Andreia escolhe o quadro e a região ampliada.
 9. **O05.2 → O06.3 Ler o desempenho de cada configuração.** Com `u: comparar as métricas` (`gco: comparar o desempenho, O06`), o sistema mostra IoU da classe *Trilha*, acurácia e tempo de inferência no conjunto de teste e a diferença entre configurações.
@@ -240,7 +240,7 @@ O diagrama tem um ponto de abertura, um acesso ubíquo e dois encerramentos. A c
 - [x] Nomes de objetivos, tópicos e signos são coerentes com a Entrega 9. *(Cenas O01.1–O08.2 e signos da seção 4; subtópicos da P02 incluídos na tabela da seção 3.2 em 15/11/2026, `PENDENCIAS.md`, INC-68.)*
 - [x] O diagrama é legível em tamanho normal no GitHub. *(SVG gerado por script e conferido com `scripts/diagramas/verificar.js`: nenhum texto fora das caixas, sobreposto ou passando da borda.)*
 - [x] O MoLIC representa a conversa usuário–sistema, não o fluxo interno do algoritmo. *(O treino aparece só pelo estado, pela época e pelos gráficos; parâmetros internos e a arquitetura do modelo ficam fora, como no recorte da Entrega 1.)*
-- [x] Processamento, filtros, administração, relatórios e históricos incluem retornos/rupturas quando relevantes. *(O treino e a execução têm saídas de erro e retorno. Filtros, administração, relatórios exportáveis e histórico estão fora do recorte (Entrega 1, seção 8; `PENDENCIAS.md`, INC-63; H08).)*
+- [x] Processamento, filtros, administração, relatórios e históricos incluem retornos/rupturas quando relevantes. *(O treino e a execução têm saídas de erro e retorno. Filtros, administração, relatórios exportáveis e histórico estão fora do recorte (Entrega 1, seção 8; `PENDENCIAS.md`, INC-63; H08); a única exportação adotada, o vídeo com a sobreposição em MP4, está no M01.)*
 
 **Limitação conhecida:** as cenas reusadas do M01 (O03.1, O03.2 e O05.2) e do M02 (O06.3 e O07.2) mostram aqui só os diálogos que a P02 usa; o conteúdo completo de cada cena é a união do que aparece nos três diagramas.
 
@@ -253,7 +253,7 @@ O diagrama tem um ponto de abertura, um acesso ubíquo e dois encerramentos. A c
 |---|---|---|---|
 | O01 | M03 | Nenhuma: O01.1 e O01.2 aparecem só no M03, com as duas rupturas da Síntese da Entrega 9 (dataset faltando e nome repetido). | Objetivo exclusivo da P02; fica no M03. |
 | O02 | M03 | Nenhuma: O02.1 e O02.2 aparecem só no M03, com a ruptura de treino interrompido e o acesso ubíquo para voltar durante o treino. | Objetivo exclusivo da P02; fica no M03. |
-| O03 | M01, M03 | Sem duplicidade: O03.1 e O03.2 são as mesmas cenas nos dois diagramas. Os diálogos mudam com a entrada (imagens do teste no M01, quadros no M03), e as rupturas da execução só estão desenhadas no M01. | Cada cena é única, e seu conteúdo é a união dos diálogos dos dois diagramas; "entradas" cobre imagens e quadros. As rupturas de formato e de falha valem para as duas personas e ficam desenhadas no M01 (o M03 remete a ele). |
+| O03 | M01, M03 | Sem duplicidade: O03.1 e O03.2 são as mesmas cenas nos dois diagramas. As duas personas enviam imagens ou vídeos do teste, e o sistema extrai os quadros dos vídeos; as rupturas da execução só estão desenhadas no M01. | Cada cena é única, e seu conteúdo é a união dos diálogos dos dois diagramas; "entradas" cobre imagens e vídeos. As rupturas de formato e de falha valem para as duas personas e ficam desenhadas no M01 (o M03 remete a ele). |
 | O04 | M01 | Nenhuma: só a P01 avalia imagem a imagem. A P02 olha os quadros na O05.2, mas não registra avaliação por quadro (CI03). | Objetivo exclusivo da P01; fica no M01. |
 | O05 | M01, M03 | Possível duplicidade na escolha das configurações: a P01 escolhe na O05.1, e a P02, na O03.1. | Os dois caminhos ficam: a O05.1 é usada quando a entrada já está no sistema e a comparação nasce da avaliação (P01); a O03.1, quando a comparação começa com entradas novas (P02). A O05.2 é a mesma cena nos dois diagramas. |
 | O06 | M02, M03 | Duas lacunas: (1) a P02 entra na O06.3 pela O05.2, sem passar pela O06.2, que confere se as configurações foram avaliadas no mesmo conjunto de teste; (2) a O06.4 (matriz de confusão) só aparece no M03. | (1) A conferência da O06.2 vale também para a entrada pela O05.2 `[H]`; no M03 ela não foi desenhada porque, no CI03, as duas configurações usam o mesmo conjunto de teste. (2) A O06.4 é aberta a partir da O06.3 por qualquer persona; o M02 não a desenha porque o CI02 não a usa. |
@@ -274,9 +274,9 @@ Cada grupo de cenas abaixo corresponde a uma tela ou região de tela do protóti
 |---|---|---|---|---|
 | Configuração de treino | O01.1, O01.2 | M03 | Valores padrão dos parâmetros já preenchidos; nome sugerido (modelo + épocas) `[H]`; "treino iniciado" | Sem dataset de treino: não deixa continuar (PA); nome repetido: aponta o nome e pede outro (RA) |
 | Estado do treino | O02.1, O02.2 | M03 | Treinando: época atual e total, gráficos de treino e validação; treino concluído: época e motivo do término, métricas e matriz de confusão no conjunto de teste | Treino interrompido: causa, época, configuração mantida e ajuste sugerido, com "reiniciar com o ajuste" (RA) |
-| Entradas e configurações | O03.1 | M01, M03 | Lista de configurações disponíveis, com descrição e métricas no conjunto de teste (F01) | Arquivos em formato não aceito: quais são e quais formatos são aceitos, com "trocar os arquivos" ou "seguir sem eles" (AL) |
+| Entradas e configurações | O03.1 | M01, M03 | Envio de imagens ou vídeos (o sistema extrai os quadros); lista de configurações disponíveis, com descrição e métricas no conjunto de teste (F01) | Arquivos em formato não aceito: quais são e quais formatos são aceitos, com "trocar os arquivos" ou "seguir sem eles" (AL) |
 | Processamento | O03.2 | M01, M03 | Processando, com progresso e configuração em execução; concluído (F03) | Falhou: causa e imagem afetada, com "tentar de novo" ou "deixar de fora"; o que fazer quando a solução está fora do sistema (RA, CE) |
-| Resultado e avaliação da imagem | O04.1, O04.2, O04.3 | M01 | Imagem original, máscara e legenda binária; sobreposição, transparência e região ampliada; métricas da imagem quando há anotação de referência; avaliação registrada | Imagem sem anotação de referência: "sem métricas, avaliação visual" (PP) |
+| Resultado e avaliação da imagem | O04.1, O04.2, O04.3 | M01 | Imagem original, máscara e legenda binária; sobreposição, transparência e região ampliada; métricas da imagem quando há anotação de referência; avaliação registrada; quadros de vídeo, com navegação entre quadros e download do vídeo com a sobreposição (MP4) | Imagem sem anotação de referência: "sem métricas, avaliação visual" (PP) |
 | Comparação na mesma imagem | O05.1, O05.2 | M01, M03 | Configurações já executadas nas imagens; configurações lado a lado, na mesma região ampliada, com a avaliação registrada | — |
 | Desempenho consolidado | O06.1–O06.4, O07.2 | M02, M03 | Ciclo e configurações com execução concluída; IoU, acurácia e tempo de inferência em tabela ou gráfico (F02); valor de referência e sua origem; maior valor; diferença entre configurações e o que a métrica indica e não indica; matriz de confusão | Configuração sem execução no ciclo: qual falta e o que fazer fora do sistema (CE); conjuntos de teste diferentes: alerta com "escolher outras" ou "comparar mesmo assim" (AL); quadros sem anotação: avaliação visual (PP) |
 | Conclusão | O08.1, O08.2 | M01, M02, M03 | Campos conforme o tipo de conclusão (validação, recomendação ou experimento); conferência do que foi registrado, com "confirmar" | Imagens sem avaliação (só na validação): quantas faltam, com "avaliá-las antes" ou "concluir assim mesmo" (AL); conclusão errada: "corrigir" volta ao formulário com os dados preenchidos |
@@ -308,3 +308,9 @@ Os rascunhos da Entrega 6 que usam classes ilustrativas e IoU para qualquer imag
 - usar rótulos genéricos (“Tela 1”, “Processo 2”) sem tópico de conversa;
 - criar no Figma fluxos que não existem no MoLIC;
 - diagrama sem legenda/fonte editável e com texto ilegível.
+
+## Histórico de revisões
+
+| Data | O que mudou | Motivo |
+|---|---|---|
+| 16/11/2026 | M01 e M03: na O03.1, a entrada passa a "imagens ou vídeos do teste (o sistema extrai os quadros)"; M01: na O04.1, download do vídeo com a sobreposição (MP4); M03: a extração dos quadros sai da nota "Fora do sistema". Leituras, signos, checklists, consolidação (O03) e "Preparação para o Figma" ajustados; diagramas gerados de novo | Decisões da implementação da Entrega 11 (`RASTREABILIDADE.md`, §5; `PENDENCIAS.md`, INC-63) |

@@ -21,7 +21,7 @@ XR = 1425                          # corredor da direita (reuso de O03.2)
 # ---------------------------------------------------------------- O03: executar a segmentação
 op = m.opening(L, 150)
 c1 = m.scene(L, 230, WL, ["O03.1 Enviar as entradas e escolher", "as configurações"],
-             ["d+u: imagens do teste", "d+u: configurações disponíveis, com",
+             ["d+u: imagens ou vídeos do teste", "       (o sistema extrai os quadros)", "d+u: configurações disponíveis, com",
               "       descrição e métricas no", "       conjunto de teste"])
 m.arrow([(L, op["b"]), (L, c1["y"])], ["u: segmentar as imagens do teste", "gco: executar a segmentação (O03)"],
         at=(L + 12, 182))
@@ -55,7 +55,8 @@ m.arrow([(c4["x"], yB), (c3["r"], yB)], ["u: tentar de novo /", "deixar de fora"
 # ---------------------------------------------------------------- O04: avaliar cada imagem
 c5 = m.scene(L, c3["b"] + 130, WL, ["O04.1 Ver o resultado sobre a", "imagem"],
              ["d: imagem original e máscara, com a", "    legenda (Trilha, Fora da trilha)",
-              "d+u: sobreposição e transparência", "d+u: região ampliada"])
+              "d+u: sobreposição e transparência", "d+u: região ampliada",
+              "u: baixar o vídeo com a sobreposição", "    (MP4, quando a entrada é vídeo)"])
 m.arrow([(L, c3["b"]), (L, c5["y"])], ["d: concluído", "precond: execução inicial", "gco: avaliar a segmentação (O04)"],
         at=(L - 12, c3["b"] + 28), anchor="end")
 
