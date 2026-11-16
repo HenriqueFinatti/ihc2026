@@ -1,7 +1,7 @@
 # Entrega 7 — Coleta de dados, necessidades e aspectos éticos
 
-**Data:** 11/11/2026 (início)  
-**Status:** 🟩 concluída
+**Data:** 11/11/2026 (início) · 15/11/2026 (revisão após feedback)  
+**Status:** 🟦 revisada após feedback
 
 ## Objetivo da atividade
 
@@ -37,7 +37,7 @@ Antes de decidir “que dados coletar”, retome os itens `[H]` e `[?]` da Entre
 | H07 | Existem fatores sociais ou organizacionais como papéis, permissões e colaboração na equipe. **Para a P03:** quem escolhe as configurações candidatas, quem recomenda e quem decide. | Nenhuma. O C02 descreve, como hipótese, que a gestora reúne e recomenda e que a palavra final é discutida com a coordenação. | Se a T05 (decidir e justificar) acontece na interface ou fora dela; se a P03 continua como persona própria ou se funde a outro papel; se é preciso registrar quem fez a recomendação. | alta |
 | H01 | A decisão sobre qual modelo usar é tomada com base em números dispersos e sem critério explícito. | Só o cenário C02, construído pela equipe. Nenhum relato de quem decide. | Se o painel consolidado (decisão 1 da P03) e a referência de comparação (decisão 2) são necessários, ou se a equipe já tem um critério que só precisa ser apresentado. | alta |
 | H04 | Conhecimento técnico, experiência com ferramentas e familiaridade com métricas influenciam a interação. **Para a P03:** quais métricas e termos quem decide entende. | As personas variam nesse eixo, mas são construção da equipe. A RC01 (termos) tem sustentação média. | Se a explicação dos termos no ponto de uso (decisão 3 da P03) vira requisito, e com qual vocabulário. | alta |
-| H06 | Dificuldades principais: configurar parâmetros, selecionar arquivos, interpretar resultados sem orientação. **Para a P03:** julgar se uma diferença entre configurações é relevante. | Dores escritas pela equipe nas personas e no C02; nenhuma relatada por usuários. | De onde vem o valor de referência (decisão 2 da P03) e qual é o critério de resultado "inconclusivo" (decisão 5). | média |
+| H06 | Dificuldades principais: configurar parâmetros, selecionar arquivos, interpretar resultados sem orientação. **Para a P03:** julgar se uma diferença entre configurações é relevante. | Dores escritas pela equipe nas personas e no C02; nenhuma relatada por usuários. | De onde vem o valor de referência (decisão 2 da P03) e como a pessoa julga se uma diferença é relevante. Esse julgamento é humano: a interface mostra a diferença e explica as métricas, sem aviso automático de resultado inconclusivo (decisão 5 da P03, revista em 14/11/2026; `PENDENCIAS.md`, INC-67). | média |
 | H12 | Benefício esperado: eliminar necessidade de código, apresentar resultados claramente, permitir comparação entre modelos. **Para a P03:** chegar à reunião com uma escolha que consiga sustentar. | Expectativa registrada na E1 §9.1, sem evidência. | O que conta como sucesso nas metas de usabilidade (Entrega 8) para a tarefa de decisão; se o resumo exportável (decisão 4 da P03) é o que de fato se leva à reunião. | média |
 | H02 | O perfil prioritário (analista de segmentação) possui conhecimento básico do domínio mas pode não dominar programação. **Para a P01:** separar o que a pessoa sabe de programação do que sabe para interpretar a segmentação. | Só a P01, que refina a hipótese (programa no curso, mas não conhece os scripts do projeto); nenhum relato de analista. | Quanto da execução precisa ser escondido e se a interface precisa explicar a análise, o código ou os dois. | alta |
 | H05 | As atividades são realizadas atualmente por meio de scripts que exigem conhecimento técnico. **Para a P01:** quais passos e erros da execução atrapalham a análise. | Observação interna da equipe (E1 §4.6), sustentada com evidência limitada; não mostra a dificuldade de quem analisa. | Fluxo sem código, estados de execução (RC04) e mensagens de erro (decisões 4 e 5 da P01). | alta |
@@ -69,12 +69,12 @@ Os dados seguem os cinco grupos de Barbosa e Silva (2010): o próprio usuário, 
 | **Relação com tecnologia.** Onde e em que equipamento a decisão é preparada e discutida (notebook próprio, tela projetada na reunião, conexão disponível) | Ambiente da P03 `[?]` (E3) | O contexto de uso da P03 é hipótese; a reunião com tela compartilhada nunca foi confirmada | Layout legível em projeção; necessidade de funcionar sem internet |
 | **Domínio.** Quais métricas a pessoa reconhece (IoU, acurácia, tempo de inferência, valores por classe), como explica cada uma com as próprias palavras e quais ignora | H04, RC01 | O cenário C02 supõe que ela ignora o que não entende; é preciso saber o que de fato é lido | Quais métricas aparecem primeiro; se a explicação no ponto de uso (decisão 3 da P03) vira requisito |
 | **Domínio.** Termos que geram dúvida ("configuração", "época", "classe", "trilha", "conjunto de teste") e as palavras que a equipe usa no lugar deles | H04, RC01 | O vocabulário das telas deve ser o da equipe, e não o do código | Rótulos, legenda e textos de ajuda |
-| **Domínio.** Como a pessoa julga se uma diferença entre duas configurações é relevante e se usa alguma referência (resultado anterior, meta da equipe, faixa esperada) | H06; decisão 2 da P03 | Sem saber de onde viria a referência, a "métrica com referência" pode ser inventada pela interface | Origem e forma do valor de referência; critério de resultado "inconclusivo" (decisão 5) |
+| **Domínio.** Como a pessoa julga se uma diferença entre duas configurações é relevante e se usa alguma referência (resultado anterior, meta da equipe, faixa esperada) | H06; decisão 2 da P03 | Sem saber de onde viria a referência, a "métrica com referência" pode ser inventada pela interface | Origem e forma do valor de referência; o que a interface mostra para apoiar o julgamento, que é da pessoa (diferença entre configurações e explicação das métricas, decisão 5; sem aviso automático, INC-67) |
 | **Tarefas.** Como a escolha da configuração acontece hoje: quem propõe as configurações candidatas, quem recomenda, quem decide e em qual momento | H07, H01 | O professor pediu que se investigue quem escolhe, quem recomenda e quem decide | Se a T05 acontece na interface ou fora dela; se a recomendação precisa registrar autoria |
 | **Tarefas.** Como os resultados chegam a quem decide: formato, quem envia, com que antecedência e com quais números | H01 (C02, Q11 e Q13) | Confirmar se os números chegam dispersos e sem critério, que é a hipótese central da P03 | Painel consolidado (decisão 1 da P03) |
 | **Tarefas.** Se a pessoa prefere comparar as configurações ela mesma, na interface, ou receber um material já preparado por quem executou | Feedback da E3 sobre o acesso direto da P03 | A P03 foi definida como usuária direta da interface; isso nunca foi verificado | P03 como usuária direta (T04) ou como destinatária de um relatório (decisão 4) |
 | **Tarefas.** Com que frequência a decisão acontece (a cada ciclo de testes, antes de competições) e quanto tempo há para prepará-la | H12 | Uma decisão rara e com pouco tempo de preparo pede outra interface do que uma decisão semanal | Profundidade das explicações; prioridade da T04 e da T05 no protótipo |
-| **Tarefas.** O que a pessoa leva para a reunião, quais perguntas costuma ouvir e se já precisou rever uma decisão depois de um teste (o que motivou e qual foi a consequência) | H12 (C02, Q16 e Q17); gravidade dos erros | Dimensionar a consequência de uma decisão mal sustentada e o que precisa ser justificado | Conteúdo do resumo exportável (decisão 4); avisos de limitação (decisão 5); metas da Entrega 8 |
+| **Tarefas.** O que a pessoa leva para a reunião, quais perguntas costuma ouvir e se já precisou rever uma decisão depois de um teste (o que motivou e qual foi a consequência) | H12 (C02, Q16 e Q17); gravidade dos erros | Dimensionar a consequência de uma decisão mal sustentada e o que precisa ser justificado | Conteúdo do resumo exportável (decisão 4, condicionada); o que a sinalização de limitações precisa explicar (decisão 5); metas da Entrega 8 |
 | **Tarefas.** Se, ao decidir, a pessoa consulta decisões ou resultados de ciclos anteriores e como os encontra | H08 | O histórico está fora do recorte até a Entrega 7 responder se ele é necessário | Incluir ou não o histórico e o que ele precisaria recuperar |
 | **Motivações e valores.** O que a pessoa considera uma boa decisão, o que mais teme ao decidir e se prefere que o sistema sugira uma opção ou apenas organize os dados | H12; RQ08 (E5) | O projeto definiu que a interface organiza as evidências e não recomenda; isso precisa ser aceitável para quem decide | Manter a decisão humana (sem "modelo recomendado" pelo sistema) ou rever o RQ08 |
 
@@ -91,7 +91,7 @@ Respostas às perguntas da aula para o recorte da P03 `[H]`:
 
 | Perfil/stakeholder | Critério de inclusão | Relação com persona/público |
 |---|---|---|
-| Integrantes da equipe Baja FEI que preparam ou tomam a decisão sobre qual configuração usar nos testes (por exemplo, capitão, gerente de projeto ou líder da área de eletrônica e autonomia `[H]`) | Participou de pelo menos uma escolha de configuração de modelo, ou de outra decisão técnica com base em resultados que não produziu, no último semestre; ter 18 anos ou mais; não ser autor deste projeto | **Perfil principal.** Corresponde à P03 (gestora). Previsão de 2 a 4 pessoas `[H]`, conforme o número de pessoas que de fato exercem o papel |
+| Integrantes da equipe Baja FEI que preparam ou tomam a decisão sobre qual configuração usar nos testes (por exemplo, capitão, gerente de projeto ou líder da área de eletrônica e autonomia `[H]`) | Participou de pelo menos uma escolha de configuração de modelo, ou de outra decisão técnica com base em resultados que não produziu, no último semestre; ter 18 anos ou mais; não ser autor deste projeto | **Perfil principal.** Corresponde à P03 (gestora). Previsão de 2 a 4 pessoas `[H]`, conforme o número de pessoas que de fato exercem o papel. Quem participou só de outra decisão técnica, e não de uma escolha de configuração de segmentação, é identificado pela pergunta de triagem 1.2 da I01, recebe outro código (D1, D2…) e é analisado à parte: suas respostas mostram como decisões parecidas são tomadas, mas não confirmam como a escolha de configuração acontece nem que a P03 existe como foi descrita |
 | Integrantes que executam os modelos e entregam os números para a reunião | Executou a segmentação ou preparou resultados para uma reunião de decisão no último semestre | **Informante secundário.** Corresponde à P01. Confirma como os resultados chegam a quem decide (C02, Q11 e Q13). Uma pessoa basta |
 | Coordenação da equipe (professor(a) responsável pela Baja FEI) | Participa das reuniões em que a configuração é escolhida | **Informante secundário, participação opcional.** Corresponde à "coordenação" do C02 (P02). Confirma quem tem a palavra final (H07) |
 
@@ -111,9 +111,10 @@ O estudo é uma atividade de ensino da disciplina, sem finalidade de pesquisa ci
 | Gravação | Voz identifica a pessoa | Gravar áudio só com autorização explícita no termo; sem autorização, registrar por anotações. Sem gravação de vídeo |
 
 - **Voluntariedade:** participar é opcional, e a pessoa pode desistir a qualquer momento, inclusive depois da conversa, pedindo a exclusão das suas respostas.
+- **Contato:** dúvidas e pedidos de exclusão vão para o e-mail institucional de qualquer um dos três responsáveis: Henrique (unifhtrebbi@fei.edu.br), Tiago (uniftsantos@fei.edu.br) ou Mateus (unimassuena@fei.edu.br), informado nos termos. Na entrevista e na investigação contextual, a exclusão pode ser pedida até o fim do semestre letivo; depois disso, a lista que liga código e nome já foi apagada e não é possível localizar os registros de uma pessoa. No questionário I02, que não identifica quem responde, a resposta só pode ser abandonada antes do envio (ver A02).
 - **Consentimento:** antes de começar, a pessoa lê e aceita o termo de consentimento, adaptado do modelo em [`../instrumentos/termo_consentimento_modelo.md`](../instrumentos/termo_consentimento_modelo.md). O termo explica o objetivo, a duração, o que será registrado e quem terá acesso. O texto final entra na Parte B, junto com o instrumento.
 - **Minimização:** coletar só os dados da tabela "Que dados coletar"; o que ficar fora dela não é perguntado.
-- **Anonimização:** as pessoas que participam desta coleta não são identificadas nos documentos. Na transcrição, cada uma recebe um código (G1, G2…), e a lista que liga código e nome fica separada das anotações e é apagada ao fim da análise. *(Isso se refere a quem participa da coleta de dados, não a usuários da interface, que não terá cadastro nem login.)*
+- **Anonimização:** as pessoas que participam desta coleta não são identificadas nos documentos. Na transcrição, cada uma recebe um código (G1, G2…), e a lista que liga código e nome fica separada das anotações e é apagada ao fim do semestre letivo, depois da Entrega 14 (o mesmo prazo do descarte, abaixo). *(Isso se refere a quem participa da coleta de dados, não a usuários da interface, que não terá cadastro nem login.)*
 - **Armazenamento:** gravações, anotações brutas e a tabela de códigos ficam em uma pasta privada, acessível só aos três autores, **fora do repositório**. No repositório entram apenas sínteses anonimizadas.
 - **Descarte:** gravações apagadas logo após a transcrição; anotações brutas e tabela de códigos apagadas ao fim do semestre letivo, depois da Entrega 14.
 - **Devolutiva:** a síntese anonimizada é compartilhada com quem participou, que pode apontar interpretações erradas antes do uso no projeto.
@@ -132,22 +133,22 @@ Os dados seguem os cinco grupos de Barbosa e Silva (2010). Atendendo ao feedback
 
 | Dado/informação | Hipótese/lacuna relacionada | Por que é necessário | Qual decisão de design pode afetar |
 |---|---|---|---|
-| **Usuário.** Papel na equipe, há quanto tempo analisa resultados de segmentação ou de outros dados de teste e qual curso faz | H02 | Saber se o perfil da P01 existe e se a análise é feita por uma pessoa dedicada ou por quem estiver disponível | Manter a P01 como persona prioritária e o nível de conhecimento assumido nas telas |
-| **Relação com tecnologia.** Se programa, em que linguagem, e se consegue rodar e corrigir os scripts do projeto sem ajuda | H02, H05 | A P01 "programa no curso, mas não conhece os scripts por dentro"; é preciso saber se a dificuldade está no código ou na análise | Quanto da execução precisa ser escondido; se mensagens de erro em linguagem de usuário (decisão 5) bastam |
-| **Relação com tecnologia.** Como a segmentação é executada hoje: passos, pré-condições, erros mais comuns e como a pessoa os percebe e contorna | H05 (C01, Q2 e Q8) | O processo atual por scripts é a base do problema, mas só tem evidência interna | Fluxo sem código e estados de execução (decisão 4, RC04); mensagens de erro (decisão 5) |
+| **Usuário.** Papel na equipe (se analisa a segmentação, outros dados dos testes ou só acompanha os testes), há quanto tempo está na equipe e qual curso faz | H02 | Saber se o perfil da P01 existe e se a análise é feita por uma pessoa dedicada ou por quem estiver disponível | Manter a P01 como persona prioritária e o nível de conhecimento assumido nas telas |
+| **Relação com tecnologia.** Com que frequência programa e se consegue rodar e corrigir os scripts do projeto sem ajuda | H02, H05 | A P01 "programa no curso, mas não conhece os scripts por dentro"; é preciso saber se a dificuldade está no código ou na análise | Quanto da execução precisa ser escondido; se mensagens de erro em linguagem de usuário (decisão 5) bastam |
+| **Relação com tecnologia.** Quem executa a segmentação hoje, se a execução costuma funcionar e, na última falha, o que aconteceu e o que a pessoa fez (passos e pré-condições da execução são observados na I03) | H05 (C01, Q2 e Q8) | O processo atual por scripts é a base do problema, mas só tem evidência interna | Fluxo sem código e estados de execução (decisão 4, RC04); mensagens de erro (decisão 5) |
 | **Relação com tecnologia.** Ferramentas e interfaces que a pessoa já usa (editor de código, terminal, GitHub, planilhas, CVAT, Roboflow ou similares) e o que acha delas | H09, H10, H11 | Os padrões da E2 foram observados nos produtos, não no nosso público | Padrões de interface que podem ser reaproveitados (seleção de arquivo, barra de progresso, lado a lado) |
 | **Relação com tecnologia.** Onde e em que equipamento a análise acontece (laboratório ou beira da pista, computador do laboratório ou notebook), se há internet e se a pessoa é interrompida | Ambiente da P01 `[?]` (E3, seção 3.1) | O professor pediu para esclarecer esse contexto; o uso à beira da pista não está definido | Modo offline e retomada após interrupção (decisão 5); tamanho e legibilidade das telas |
 | **Domínio.** Como a pessoa decide se uma máscara está correta, que sinais usa e o que faz quando não tem certeza | H06 (C01, Q7) | O critério de correção é hipótese do C01 | Apoio à avaliação visual da T01; registro de imagem duvidosa (RQ05) |
 | **Domínio.** Como a pessoa separa uma falha do modelo de uma falha da imagem (sombra, poeira, desfoque) | H06 (C01) | É a ruptura central do C01, sem evidência | Avaliação visual com registro da origem do problema, imagem ou modelo (RQ05), e campos para registrar o motivo da dúvida |
 | **Domínio.** Quais métricas lê (IoU, acurácia, tempo de inferência), o que entende de cada uma e se sabe que IoU e acurácia dependem de anotação de referência | H04, H02 | A P01 "interpreta métricas", mas sem referência; é preciso saber o que de fato é lido | Painel de métricas (decisão 3) e o estado da tela quando a imagem não tem métricas |
-| **Domínio.** Como lê a máscara e a legenda hoje (cores, o que é "trilha"), e que termos geram dúvida | H04, RC01 | A legenda fixa (decisão 2) parte de uma dificuldade ainda não demonstrada | Paleta, rótulos e textos de apoio |
-| **Tarefas.** Com que frequência a análise acontece, quantas imagens ou vídeos por sessão e quanto tempo leva | C01, Q9 | O volume define se a tarefa é feita imagem a imagem ou em lote | Processamento de várias imagens de uma vez e prioridade da T01 e da T02 |
+| **Domínio.** Que termos dos resultados e das conversas da equipe geram dúvida, inclusive os da legenda (como "trilha") | H04, RC01 | A legenda fixa (decisão 2) parte de uma dificuldade ainda não demonstrada | Paleta, rótulos e textos de apoio |
+| **Tarefas.** Com que frequência a análise acontece e quantas imagens ou vídeos por sessão | C01, Q9 | O volume define se a tarefa é feita imagem a imagem ou em lote | Processamento de várias imagens de uma vez e prioridade da T01 e da T02 |
 | **Tarefas.** Como a pessoa escolhe a outra configuração para comparar e como compara hoje (janelas lado a lado, planilhas) | C01, Q5; T03 | O C01 supõe que se compara com "a mais recente"; o critério real é desconhecido | Comparação de configurações sobre a mesma imagem (T03; tela de comparação da E6) |
 | **Tarefas.** Como organiza os arquivos e as métricas e se precisa voltar a análises anteriores | H08 (C01, Q3) | O histórico está fora do recorte até a Entrega 7 responder se ele é necessário | Incluir ou não o histórico (decisão 4) e o que ele precisaria recuperar |
-| **Tarefas.** Para quem e em que formato o resultado é entregue (grupo da equipe, reunião, relatório) e o que acontece quando a análise não fica pronta a tempo | C01, Q2 e Q4 | A evidência produzida aqui é a base das decisões da P02 e da P03 | Exportação de imagens e relatórios (decisão 4) |
+| **Tarefas.** Para quem e em que formato o resultado é entregue (grupo da equipe, reunião, relatório) | C01, Q4 | A evidência produzida aqui é a base das decisões da P02 e da P03 | Exportação de imagens e relatórios (decisão 4) |
 | **Motivações e valores.** O que a pessoa considera uma análise bem feita, se prefere aprender uma ferramenta nova fazendo ou com explicação e se usa atalhos de teclado | Comportamentos da P01 `[H]` | Preferências escritas pela equipe, nunca verificadas | Atalhos e presets (decisão 5, em investigação); ajuda contextual |
 
-**Dados que não serão coletados:** notas, desempenho acadêmico, opinião sobre a competência técnica de colegas, imagens dos testes em que apareçam pessoas e qualquer dado pessoal sensível. Arquivos, pastas e logs só serão vistos se a pessoa quiser mostrá-los, sem copiar o conteúdo.
+**Dados que não serão coletados:** notas, desempenho acadêmico, opinião sobre a competência técnica de colegas, imagens dos testes em que apareçam pessoas e qualquer dado pessoal sensível. O questionário não pede arquivos, pastas nem logs; o acompanhamento do trabalho no computador pertence à I03 (A03).
 
 #### De quem coletar?
 
@@ -160,8 +161,9 @@ Respostas às perguntas da aula para o recorte da P01 `[H]`:
 
 | Perfil/stakeholder | Critério de inclusão | Relação com persona/público |
 |---|---|---|
-| Integrantes da equipe Baja FEI que analisam resultados de segmentação depois dos testes `[H]` | Executou ou analisou resultados de segmentação, ou analisou outros dados de teste do veículo (imagens, telemetria), no último semestre; ter 18 anos ou mais; não ser autor deste projeto | **Perfil principal.** Corresponde à P01 (analista de segmentação). Previsão de 3 a 6 pessoas `[H]` |
-| Integrantes que acompanham os testes de campo e descarregam as imagens das câmeras | Participou de pelo menos um teste de campo no último semestre | **Informante secundário.** Confirma de onde vêm as imagens, em que condições são capturadas e quando chegam a quem analisa (C01, Q6). Uma pessoa basta |
+| Integrantes da equipe Baja FEI que analisam resultados de segmentação depois dos testes `[H]` | Executou ou analisou resultados de segmentação no último semestre (primeira opção da pergunta 2.3 do I02); ter 18 anos ou mais; não ser autor deste projeto | **Perfil principal (grupo A).** Corresponde à P01 (analista de segmentação). Previsão de 3 a 6 pessoas `[H]`. Só as respostas deste grupo confirmam como a análise de segmentação acontece e se a P01 existe como foi descrita |
+| Integrantes que analisam outros dados dos testes (telemetria, vídeos, fotos), mas não a segmentação | Analisou outros dados de teste no último semestre (segunda opção da 2.3); ter 18 anos ou mais; não ser autor deste projeto | **Grupo separado (grupo O).** Responde só à seção 9 do I02. Mostra o que conhece quem poderia passar a analisar a segmentação (H02, H09, H11), sem servir de evidência sobre como essa análise é feita |
+| Integrantes que acompanham os testes de campo e descarregam as imagens das câmeras | Participou de pelo menos um teste de campo no último semestre; ter 18 anos ou mais | **Informante secundário (grupo T, seção 8 do I02).** Confirma de onde vêm as imagens, em que condições são capturadas e quando chegam a quem analisa (C01, Q6). Uma pessoa basta |
 | Integrante que escreveu ou mantém os scripts de segmentação | É responsável pelos scripts ou pelos modelos do projeto | **Informante secundário.** Descreve as pré-condições e os erros mais comuns da execução (C01, Q8), sem ser o usuário-alvo. Coordenar com a parte A03 (P02) para não abordar a mesma pessoa duas vezes |
 
 **Se faltar gente no perfil principal:** se a análise de segmentação ainda for feita por uma ou duas pessoas, a alternativa é incluir alunos de Ciência da Computação da FEI com experiência em visão computacional fora da Baja, como participantes proxy. A limitação será registrada: eles conhecem a técnica, mas não o contexto dos testes.
@@ -173,13 +175,15 @@ Valem a base normativa e as regras gerais descritas na A01: atividade de ensino 
 | Dado ou situação | Risco neste projeto | Cuidado adotado |
 |---|---|---|
 | Dificuldade com código e com os scripts | A pessoa pode se sentir avaliada por não saber programar ou por não conseguir corrigir um erro | Deixar claro, no convite e no início, que se avalia o processo e não a pessoa; perguntar sobre o que acontece, e não sobre o que a pessoa "deveria saber" |
-| Acompanhar a análise no computador da pessoa | A tela pode mostrar arquivos, mensagens e dados de outros integrantes | A pessoa escolhe o que mostrar e fecha o que não quiser; nada é fotografado ou copiado; anota-se só a sequência de passos |
-| Gravação de tela | Mostra nome de usuário, caminhos de pastas e conversas abertas | Só com autorização explícita no termo e com as outras janelas fechadas; apagada logo após a análise |
+| Resposta sem identificação | Depois do envio, não há como saber qual resposta é de quem, nem para excluí-la a pedido | O termo (seção 1 do formulário) avisa que a pessoa pode fechar o formulário a qualquer momento antes de enviar e que, depois do envio, a resposta não pode ser localizada nem excluída individualmente |
+| Respostas abertas | Podem citar colegas, situações ou arquivos que identifiquem alguém | Retirar nomes e detalhes identificadores na planilha, antes da análise (procedimento, passo 5) |
 | Imagens dos testes | Podem mostrar pilotos, outros integrantes e as instalações da FEI | Não copiar as imagens; se for preciso ilustrar algo na entrega, usar apenas imagens sem pessoas e com autorização da equipe |
 | Erros que atrasaram uma resposta à equipe | Relatar a falha pode expor a pessoa perante a liderança | Pergunta opcional; o relato é anonimizado e não é repassado à liderança nem à coordenação |
 | Comparação entre analistas | Com poucas pessoas, diferenças de critério podem ser atribuídas a alguém específico | Na divulgação, usar códigos (A1, A2…) e apresentar critérios de forma agregada ("parte dos analistas…"), sem ligar um critério a uma pessoa |
 
-- **Anonimização:** as pessoas que participam desta coleta recebem códigos A1, A2… na transcrição, como descrito na A01. *(Isso se refere a quem participa da coleta de dados, não a usuários da interface, que não terá cadastro nem login.)*
+O I02 é um questionário autoaplicado: ninguém acompanha o preenchimento, e não há gravação, transcrição nem acesso ao computador da pessoa. Acompanhar o trabalho no computador pertence à I03 (ver A03).
+
+- **Anonimização:** o formulário não coleta nome nem e-mail, então não existe lista que ligue código e pessoa. Na planilha, as respostas recebem códigos A1, A2… (segmentação), O1, O2… (outros dados) e T1, T2… (acompanha os testes). *(Isso se refere a quem participa da coleta de dados, não a usuários da interface, que não terá cadastro nem login.)*
 - **Devolutiva:** a síntese anonimizada é compartilhada com quem participou antes do uso no projeto.
 
 ### A03 — Mateus Marana Assuena
@@ -247,7 +251,7 @@ Valem a base normativa e as regras gerais descritas na A01: atividade de ensino 
 | Papel único na equipe | Se há uma só pessoa na coordenação, ela é identificável mesmo com código | Avisar no termo que o papel pode ser reconhecido; a pessoa escolhe se trechos dela podem ser citados e revisa as citações antes do uso |
 | Resultados de pesquisa não publicados | Números, imagens e conjuntos de dados podem ser parte de um trabalho em andamento | Não pedir nem registrar resultados; perguntar só pelo processo; se a pessoa mostrar algo, não copiar |
 | Tempo da pessoa | Agenda apertada entre aulas e orientações | Sessão curta, no horário que a pessoa escolher, com possibilidade de interromper e continuar outro dia |
-| Tela com treinos em andamento | Pode mostrar arquivos, contas e dados de outros projetos | A pessoa escolhe o que mostrar; nada é fotografado; gravação de tela só com autorização e com as outras janelas fechadas |
+| Tela com treinos em andamento | Pode mostrar arquivos, contas, resultados e dados de outros projetos | A pessoa escolhe o que mostrar; a tela não é gravada e nada é fotografado; o anotador registra na ficha só a sequência de passos e a estrutura das telas (que campos, gráficos e mensagens aparecem), sem valores, nomes de arquivos ou imagens |
 
 - **Anonimização:** as pessoas que participam desta coleta recebem códigos PQ1, PQ2… na transcrição, como descrito na A01. *(Isso se refere a quem participa da coleta de dados, não a usuários da interface, que não terá cadastro nem login.)*
 - **Devolutiva:** a síntese anonimizada é compartilhada com quem participou antes do uso no projeto.
@@ -284,7 +288,7 @@ A escolha considerou o tamanho de cada público, o tipo de dado que cada Parte A
    - Confirmar com a liderança da equipe quem exerce o papel de decisão (as hipóteses `[H]` da A01) e montar a lista de convidados.
    - Convidar cada pessoa individualmente, por mensagem escrita pela equipe do projeto, nunca pela coordenação, com o texto de convite abaixo.
    - Agendar uma sessão de até 40 minutos, presencial em sala reservada do laboratório (fora do horário de reunião da equipe) ou por videochamada, no horário escolhido pela pessoa.
-   - Aplicar o piloto do roteiro com um autor deste projeto e ajustar perguntas confusas.
+   - Aplicar o piloto do roteiro com um autor deste projeto, para conferir duração e funcionamento. Quando viável, fazer também um ensaio de compreensão com uma pessoa próxima do perfil que não participará da coleta (por exemplo, ex-integrante da Baja ou gestor de outra equipe de competição da FEI). Ajustar perguntas confusas. As respostas dos ensaios não entram na análise.
    - Levar o termo de consentimento, o roteiro e uma folha de anotações sem campo de nome (só o código). Definir dois papéis: um entrevistador, que conduz, e um anotador, que registra.
 2. **Apresentação e consentimento**
    - Ler o texto de abertura do roteiro, sem improvisar o objetivo.
@@ -292,6 +296,7 @@ A escolha considerou o tamanho de cada público, o tipo de dado que cada Parte A
    - Perguntar se a pessoa autoriza a gravação de áudio. Se não autorizar, seguir só com anotações.
 3. **Aplicação**
    - Seguir os blocos na ordem. As perguntas principais são feitas como estão escritas; os aprofundamentos só quando a resposta for vaga ou geral.
+   - **Triagem na 1.2:** se a pessoa não participa da escolha da configuração do modelo de segmentação, o entrevistador usa nos blocos 2 a 5 as variantes D (abaixo do bloco 1), não volta a citar a escolha de configuração e registra o código D1, D2… em vez de G1, G2….
    - Pedir exemplos concretos ("a última vez que…") em vez de opiniões gerais.
    - Não sugerir respostas, não citar as personas nem as hipóteses e não mostrar protótipos ou telas, para não induzir.
    - Respeitar perguntas marcadas como opcionais e pedidos para pular uma pergunta.
@@ -300,10 +305,10 @@ A escolha considerou o tamanho de cada público, o tipo de dado que cada Parte A
    - Lembrar o direito de desistir e de pedir a exclusão das respostas, e explicar a devolutiva.
    - Agradecer.
 5. **Armazenamento e anonimização**
-   - No mesmo dia, atribuir o código (G1, G2…; S1, S2… para informantes secundários) e guardar a gravação e as anotações na pasta privada da equipe, fora do repositório.
+   - No mesmo dia, atribuir o código (G1, G2…; D1, D2… para quem entrou por outra decisão técnica; S1, S2… para informantes secundários) e guardar a gravação e as anotações na pasta privada da equipe, fora do repositório.
    - Em até dois dias, transcrever ou expandir as anotações, já sem nomes de pessoas.
    - Apagar o áudio depois da transcrição.
-   - A lista que liga código e nome fica em arquivo separado e é apagada ao fim do semestre.
+   - A lista que liga código e nome fica em arquivo separado e é apagada ao fim do semestre letivo, depois da Entrega 14.
 
 #### Instrumento
 
@@ -325,7 +330,7 @@ A escolha considerou o tamanho de cada público, o tipo de dado que cada Parte A
 >
 > **Privacidade.** Seu nome não aparece em nenhum documento: você recebe um código. Como a equipe é pequena, descreveremos o seu papel de forma genérica para evitar que você seja reconhecido(a). Nomes de colegas citados na conversa serão retirados. Se você mostrar planilhas ou mensagens, nada será copiado ou fotografado.
 >
-> **Voluntariedade.** A participação é voluntária. Você pode pular perguntas, interromper a entrevista a qualquer momento e pedir, mesmo depois, que suas respostas sejam excluídas, sem justificar. A coordenação da equipe não saberá quem participou.
+> **Voluntariedade.** A participação é voluntária. Você pode pular perguntas, interromper a entrevista a qualquer momento e pedir, mesmo depois, que suas respostas sejam excluídas, sem justificar. A coordenação da equipe não saberá quem participou. Para dúvidas ou pedidos de exclusão, escreva para o e-mail institucional de qualquer um dos responsáveis: Henrique (unifhtrebbi@fei.edu.br), Tiago (uniftsantos@fei.edu.br) ou Mateus (unimassuena@fei.edu.br), até o fim do semestre letivo.
 >
 > **Devolutiva.** Você receberá a síntese anonimizada e poderá apontar interpretações erradas antes de usarmos os resultados.
 >
@@ -346,7 +351,9 @@ A coluna "Dado da A01" liga cada pergunta à tabela "Que dados coletar" da Parte
 | # | Pergunta | Aprofundamentos (se necessário) | Dado da A01 |
 |---|---|---|---|
 | 1.1 | Qual é o seu papel na equipe Baja hoje e há quanto tempo você o exerce? | O que esse papel inclui no dia a dia? | Papel na equipe (H07) |
-| 1.2 | Você participa das conversas em que se escolhe a configuração do modelo usada nos testes? De que forma? | Desde quando? Sempre ou só às vezes? | Papel na equipe (H07) |
+| 1.2 | Você participa das conversas em que se escolhe a configuração do modelo de segmentação usada nos testes? De que forma? | Desde quando? Sempre ou só às vezes? **Triagem:** se a resposta for não, perguntar de que decisões técnicas a pessoa participa e seguir com as variantes D | Papel na equipe (H07); triagem entre G e D |
+
+**Variantes D (quem entrou por outra decisão técnica):** nas perguntas 2.1, 2.2, 2.4, 3.1, 4.4 e 5.1, "a escolha da configuração" passa a ser "a última decisão técnica que você tomou com base em resultados que não produziu" (por exemplo, a escolha de um componente a partir de dados de telemetria `[H]`). A 2.3 só é feita se a pessoa citar resultados de modelos de segmentação. As respostas D ficam em colunas separadas da matriz e servem para comparar como decisões parecidas são tomadas; não sustentam sozinhas H01, H06, H07 ou H12 para a escolha de configuração.
 
 **Bloco 2 — A última escolha de configuração** (cerca de 10 minutos)
 
@@ -419,8 +426,8 @@ A coluna "Dado da A01" liga cada pergunta à tabela "Que dados coletar" da Parte
 1. **Preparação do material:** transcrições ou anotações expandidas, uma por participante, identificadas só pelo código.
 2. **Codificação temática dedutiva:** os códigos iniciais são as linhas da tabela "Que dados coletar" da A01 e as hipóteses H07, H01, H04, H06, H08 e H12. Cada trecho relevante recebe um ou mais códigos.
 3. **Codificação indutiva:** trechos que não se encaixam em nenhum código inicial formam temas novos, registrados como lacunas não previstas.
-4. **Matriz participante × tema:** uma tabela mostra o que cada participante disse sobre cada tema, com um trecho de apoio, para comparar papéis e encontrar convergências e divergências.
-5. **Veredito por hipótese:** cada hipótese recebe "sustentada", "refutada", "refinada" ou "sem evidência", sempre com os trechos que justificam. Com 2 a 4 pessoas, os resultados são relatados como contagens ("2 de 3 participantes"), sem porcentagens nem generalização para outras equipes.
+4. **Matriz participante × tema:** uma tabela mostra o que cada participante disse sobre cada tema, com um trecho de apoio, para comparar papéis e encontrar convergências e divergências. Participantes D ficam em colunas separadas e não entram nas contagens do perfil principal.
+5. **Veredito por hipótese:** cada hipótese recebe "sustentada", "refutada", "refinada" ou "sem evidência", sempre com os trechos que justificam, seguindo as regras de leitura da Síntese. Só as respostas do perfil G mudam o estado de uma hipótese. Com 2 a 4 pessoas, os resultados são relatados como contagens ("2 de 3 participantes"), sem porcentagens nem generalização para outras equipes.
 6. **Consequência para o design:** cada veredito é ligado à decisão que ele afeta (persona P03, tarefas T04 e T05, decisões de design 1 a 5 da P03, RQ08) e registrado na seção 5 do `RASTREABILIDADE.md`.
 7. **Respostas dos informantes secundários:** usadas para triangular, ou seja, confirmar ou contradizer o que disse o perfil principal sobre o mesmo processo; não sustentam sozinhas uma hipótese.
 
@@ -429,14 +436,14 @@ A coluna "Dado da A01" liga cada pergunta à tabela "Que dados coletar" da Parte
 **Autor(a):** Tiago Fagundes dos Santos — 22.123.017-0  
 **Técnica:** questionário on-line autoaplicado (Google Forms), com perguntas fechadas (múltipla escolha, caixas de seleção, grades com escala) e algumas abertas opcionais  
 **Objetivo:** caracterizar quem analisa os resultados da segmentação na equipe Baja FEI (conhecimento de programação separado do conhecimento para interpretar os resultados, ferramentas conhecidas, familiaridade com métricas e termos, frequência, volume e contexto da análise) e verificar se quem acompanha os testes se beneficia dos resultados, para sustentar, refutar ou refinar H02, H05, H09, H10, H11 e H03 (Parte A, A02)  
-**Público:** integrantes que analisam resultados de segmentação ou outros dados dos testes (perfil P01, 3 a 6 pessoas `[H]`) e integrantes que acompanham os testes, pilotam ou descarregam as imagens (seção 8, H03)  
+**Público:** integrantes que analisam resultados de segmentação (perfil P01, 3 a 6 pessoas `[H]`, seções 3 a 7), integrantes que analisam outros dados dos testes, mas não a segmentação (seção 9), e integrantes que acompanham os testes, pilotam ou descarregam as imagens (seção 8, H03)  
 **Duração prevista:** cerca de 10 minutos
 
 #### Procedimento padronizado de aplicação
 
 1. **Preparação**
    - O formulário está no Google Forms, com as mesmas perguntas e desvios da cópia textual abaixo. Configurações de privacidade: não coleta e-mail, não exige login, não permite editar a resposta depois de enviada e não mostra as respostas dos outros a quem responde. Antes da aplicação, conferir os caminhos de resposta no modo de visualização.
-   - Aplicar o piloto com um autor deste projeto, cronometrando (meta: até 12 minutos), ajustar perguntas confusas e apagar a resposta do piloto.
+   - Aplicar o piloto com um autor deste projeto, cronometrando (meta: até 12 minutos) e percorrendo os quatro caminhos da 2.3. Quando viável, fazer também um ensaio de compreensão com uma pessoa próxima do perfil que não responderá ao questionário (por exemplo, aluno de Ciência da Computação com experiência em visão computacional fora da Baja), pedindo que diga em voz alta como entende cada pergunta. Ajustar perguntas confusas e apagar as respostas dos ensaios, que não entram na análise.
    - Confirmar com a liderança da equipe quem analisa resultados e quem acompanha os testes (hipóteses `[H]` da A02) e excluir da lista quem já participa da I01 ou da I03 como público principal.
 2. **Apresentação e consentimento**
    - Enviar o link individualmente, por mensagem da equipe do projeto (nunca pela coordenação), com o texto de convite abaixo.
@@ -450,7 +457,7 @@ A coluna "Dado da A01" liga cada pergunta à tabela "Que dados coletar" da Parte
 5. **Armazenamento e anonimização**
    - O formulário não coleta nome nem e-mail.
    - Exportar as respostas para uma planilha na pasta privada da equipe, fora do repositório, e excluir as respostas do Google Forms.
-   - Numerar as respostas (A1, A2… para quem analisa; T1, T2… para quem acompanha os testes) e retirar de respostas abertas qualquer nome ou detalhe que identifique alguém.
+   - Numerar as respostas (A1, A2… para quem analisa segmentação; O1, O2… para quem analisa outros dados; T1, T2… para quem acompanha os testes) e retirar de respostas abertas qualquer nome ou detalhe que identifique alguém.
    - Apagar a planilha ao fim do semestre letivo.
 
 #### Instrumento
@@ -476,7 +483,7 @@ As perguntas abaixo são as mesmas do formulário on-line, na mesma ordem. A col
 >
 > **Privacidade.** O formulário não coleta nome nem e-mail. Nas análises, as respostas recebem um código, e combinações de dados que possam identificar alguém (como curso, tempo de equipe e atividade juntos) não são divulgadas. As respostas ficam em uma pasta privada dos três responsáveis, fora do repositório do projeto, e são apagadas ao fim do semestre letivo.
 >
-> **Voluntariedade.** A participação é voluntária. As perguntas abertas são opcionais, e você pode fechar o formulário a qualquer momento sem enviar. A coordenação da equipe não saberá quem respondeu.
+> **Voluntariedade.** A participação é voluntária. As perguntas abertas são opcionais, e você pode fechar o formulário a qualquer momento sem enviar. A coordenação da equipe não saberá quem respondeu. Como o formulário não identifica quem responde, depois do envio não conseguimos localizar nem excluir uma resposta específica: se quiser desistir, basta fechar o formulário antes de enviar. Dúvidas podem ser enviadas ao e-mail institucional de qualquer um dos responsáveis: Henrique (unifhtrebbi@fei.edu.br), Tiago (uniftsantos@fei.edu.br) ou Mateus (unimassuena@fei.edu.br).
 >
 > **Responsáveis.** Henrique Finatti Silveira Belo Trebbi, Mateus Marana Assuena e Tiago Fagundes dos Santos.
 
@@ -490,18 +497,18 @@ As perguntas abaixo são as mesmas do formulário on-line, na mesma ordem. A col
 
 | # | Pergunta | Tipo | Opções | Obrigatória | Dado da A02 |
 |---|---|---|---|:-:|---|
-| 2.1 | Há quanto tempo você está na equipe Baja FEI? | Múltipla escolha | Menos de 6 meses; De 6 meses a 1 ano; De 1 a 2 anos; Mais de 2 anos | sim | Usuário: tempo na equipe (H02) |
+| 2.1 | Há quanto tempo você está na equipe Baja FEI? | Múltipla escolha | Menos de 6 meses; De 6 meses a menos de 1 ano; De 1 ano a menos de 2 anos; 2 anos ou mais | sim | Usuário: tempo na equipe (H02) |
 | 2.2 | Qual é o seu curso? | Múltipla escolha | Ciência da Computação; Engenharia Mecânica; Engenharia Elétrica; Engenharia de Controle e Automação; Outro | sim | Usuário: curso (H02) |
-| 2.3 | No último semestre, qual destas opções descreve melhor a sua participação nos testes do veículo? | Múltipla escolha | Analiso ou executo a segmentação de imagens dos testes; Analiso outros dados dos testes (telemetria, vídeos, fotos), mas não a segmentação; Acompanho os testes, piloto ou descarrego as imagens das câmeras, sem analisar resultados; Nenhuma dessas | sim | Papel na equipe; direciona para o perfil principal (P01) ou para quem acompanha os testes (H03) |
+| 2.3 | No último semestre, qual destas opções descreve melhor a sua participação nos testes do veículo? | Múltipla escolha | Analiso ou executo a segmentação de imagens dos testes; Analiso outros dados dos testes (telemetria, vídeos, fotos), mas não a segmentação; Acompanho os testes, piloto ou descarrego as imagens das câmeras, sem analisar resultados; Nenhuma dessas | sim | Papel na equipe; separa o perfil principal (P01, grupo A), quem analisa outros dados (grupo O) e quem acompanha os testes (H03, grupo T) |
 
-**Desvio na 2.3:** "Analiso ou executo a segmentação de imagens dos testes" → Seção 3; "Analiso outros dados dos testes (telemetria, vídeos, fotos), mas não a segmentação" → Seção 3; "Acompanho os testes, piloto ou descarrego as imagens das câmeras, sem analisar resultados" → Seção 8; "Nenhuma dessas" → Seção 9.
+**Desvio na 2.3:** "Analiso ou executo a segmentação de imagens dos testes" → Seção 3; "Analiso outros dados dos testes (telemetria, vídeos, fotos), mas não a segmentação" → Seção 9; "Acompanho os testes, piloto ou descarrego as imagens das câmeras, sem analisar resultados" → Seção 8; "Nenhuma dessas" → Seção 10. Assim, as seções 3 a 7, sobre máscaras, falhas e comparação de configurações, só aparecem para quem trabalha com a segmentação.
 
 ##### Seção 3 — Programação e execução
 
 | # | Pergunta | Tipo | Opções | Obrigatória | Dado da A02 |
 |---|---|---|---|:-:|---|
 | 3.1 | Com que frequência você programa, em qualquer linguagem? | Múltipla escolha | Nunca; Raramente; Algumas vezes por mês; Toda semana | sim | Programação (H02) |
-| 3.2 | Quem executa a segmentação dos resultados que você analisa? | Múltipla escolha | Eu mesmo(a), sem ajuda; Eu mesmo(a), mas às vezes preciso de ajuda; Outra pessoa executa e me envia os resultados; Não analiso segmentação | sim | Execução atual (H02, H05) |
+| 3.2 | Quem executa a segmentação dos resultados que você analisa? | Múltipla escolha | Eu mesmo(a), sem ajuda; Eu mesmo(a), mas às vezes preciso de ajuda; Outra pessoa executa e me envia os resultados; Eu executo, mas quem analisa os resultados é outra pessoa | sim | Execução atual (H02, H05) |
 | 3.3 | Indique o quanto você concorda com cada frase. | Grade de múltipla escolha | Linhas: Consigo resolver sozinho(a) um erro que interrompe a execução; Entendo o que os scripts de segmentação do projeto fazem; A execução da segmentação costuma funcionar sem problemas. Colunas: Discordo totalmente; Discordo; Neutro; Concordo; Concordo totalmente; Não se aplica | não | Execução atual e programação × análise (H02, H05) |
 | 3.4 | Conte a última vez em que a execução da segmentação falhou ou deu um resultado inesperado. O que aconteceu e o que você fez? | Parágrafo | — | não | Erros mais comuns e como são contornados (H05; C01, Q2 e Q8) |
 
@@ -511,10 +518,10 @@ As perguntas abaixo são as mesmas do formulário on-line, na mesma ordem. A col
 
 | # | Pergunta | Tipo | Opções | Obrigatória | Dado da A02 |
 |---|---|---|---|:-:|---|
-| 4.1 | Quais destas ferramentas você usa pelo menos uma vez por mês? | Caixas de seleção | Editor de código (por exemplo, VS Code); Terminal ou linha de comando; GitHub ou GitLab; Jupyter Notebook ou Google Colab; Planilhas (Excel, Google Planilhas); Ferramentas de telemetria do veículo; Nenhuma dessas; Outro | não | Ferramentas usadas (H09) |
+| 4.1 | Quais destas ferramentas você usa pelo menos uma vez por mês? Se marcar "Nenhuma dessas", não marque outras. | Caixas de seleção | Editor de código (por exemplo, VS Code); Terminal ou linha de comando; GitHub ou GitLab; Jupyter Notebook ou Google Colab; Planilhas (Excel, Google Planilhas); Ferramentas de telemetria do veículo; Nenhuma dessas; Outro | não | Ferramentas usadas (H09) |
 | 4.2 | Você conhece estas ferramentas de visão computacional? | Grade de múltipla escolha | Linhas: CVAT; Roboflow; Supervisely. Colunas: Não conheço; Conheço, mas nunca usei; Já usei; Uso com frequência | não | Ferramentas de visão computacional (H10) |
 | 4.3 | Se já usou alguma delas, o que achou mais fácil e o que achou mais difícil? | Parágrafo | — | não | Complexidade das ferramentas (H10) |
-| 4.4 | Nas ferramentas que você usa para analisar dados ou imagens, quais destes recursos você costuma usar? | Caixas de seleção | Ver duas imagens ou resultados lado a lado; Barra ou indicador de progresso; Arrastar arquivos para a janela; Atalhos de teclado; Filtrar ou ordenar tabelas; Exportar imagens ou relatórios; Nenhum desses; Outro | não | Padrões familiares (H11); atalhos (decisão 5 da P01) |
+| 4.4 | Nas ferramentas que você usa para analisar dados ou imagens, quais destes recursos você costuma usar? Se marcar "Nenhum desses", não marque outros. | Caixas de seleção | Ver duas imagens ou resultados lado a lado; Barra ou indicador de progresso; Arrastar arquivos para a janela; Atalhos de teclado; Filtrar ou ordenar tabelas; Exportar imagens ou relatórios; Nenhum desses; Outro | não | Padrões familiares (H11); atalhos (decisão 5 da P01) |
 
 **Depois desta seção:** Seção 5.
 
@@ -522,7 +529,7 @@ As perguntas abaixo são as mesmas do formulário on-line, na mesma ordem. A col
 
 | # | Pergunta | Tipo | Opções | Obrigatória | Dado da A02 |
 |---|---|---|---|:-:|---|
-| 5.1 | Com que frequência você analisa resultados de segmentação? | Múltipla escolha | Depois de cada teste de campo; Algumas vezes por mês; Raramente; Não analiso segmentação | sim | Frequência (C01, Q9) |
+| 5.1 | Nos últimos três meses, com que frequência você analisou resultados de segmentação? | Múltipla escolha | Toda semana; Algumas vezes por mês; Uma vez por mês ou menos; Não analisei nesse período | sim | Frequência (C01, Q9) |
 | 5.2 | Em uma análise típica, quantas imagens ou trechos de vídeo você analisa? | Múltipla escolha | Até 10; De 11 a 50; De 51 a 200; Mais de 200; Não sei | não | Volume por sessão (C01, Q9) |
 | 5.3 | Onde você costuma fazer essa análise? | Caixas de seleção | Laboratório da FEI; À beira da pista, durante os testes; Em casa; Outro | não | Ambiente da P01 `[?]` |
 | 5.4 | Em que equipamento? | Caixas de seleção | Computador do laboratório; Notebook próprio; Celular ou tablet; Outro | não | Ambiente da P01 `[?]` |
@@ -540,8 +547,9 @@ As perguntas abaixo são as mesmas do formulário on-line, na mesma ordem. A col
 | # | Pergunta | Tipo | Opções | Obrigatória | Dado da A02 |
 |---|---|---|---|:-:|---|
 | 6.1 | Quanto você conhece cada termo? | Grade de múltipla escolha | Linhas: IoU (Intersection over Union); Acurácia; Tempo de inferência; Matriz de confusão; Conjunto de teste anotado; Época (de treino). Colunas: Não conheço; Conheço o nome, mas não sei explicar; Sei explicar; Uso para tomar decisões | não | Métricas e termos (H04, RC01) |
-| 6.2 | Na sua opinião, IoU e acurácia podem ser calculadas para qualquer imagem nova capturada em um teste? | Múltipla escolha | Sim; Não, só para imagens que têm uma marcação de referência feita à mão; Não sei | não | Métricas dependem de anotação (H04; INC-52) |
-| 6.3 | Que palavras nos resultados de segmentação ou nas conversas da equipe sobre eles já causaram dúvida para você? | Parágrafo | — | não | Termos que geram dúvida (RC01; legenda, decisão 2 da P01) |
+| 6.2 | Na sua opinião, IoU e acurácia podem ser calculadas para qualquer imagem nova capturada em um teste? | Múltipla escolha | Sim; Não; Não sei | não | Métricas dependem de anotação (H04; INC-52) |
+| 6.3 | Se respondeu "Não" na pergunta anterior, o que seria preciso para calcular essas métricas? | Resposta curta | — | não | Métricas dependem de anotação (H04; INC-52) |
+| 6.4 | Que palavras nos resultados de segmentação ou nas conversas da equipe sobre eles já causaram dúvida para você? | Parágrafo | — | não | Termos que geram dúvida (RC01; legenda, decisão 2 da P01) |
 
 **Depois desta seção:** Seção 7.
 
@@ -558,7 +566,7 @@ As perguntas abaixo são as mesmas do formulário on-line, na mesma ordem. A col
 | 7.7 | Para aprender uma ferramenta nova, você prefere: | Múltipla escolha | Explorar sozinho(a), fazendo; Seguir um tutorial ou guia; Que alguém me mostre; Outro | não | Motivações: forma de aprender (ajuda contextual) |
 | 7.8 | Para você, o que é uma análise de segmentação bem feita? | Parágrafo | — | não | Motivações e valores |
 
-**Depois desta seção:** Seção 9.
+**Depois desta seção:** Seção 10.
 
 ##### Seção 8 — Para quem acompanha os testes
 
@@ -570,28 +578,41 @@ As perguntas abaixo são as mesmas do formulário on-line, na mesma ordem. A col
 | 8.4 | Em que condições as imagens dos testes costumam ser capturadas? | Caixas de seleção | Sol forte; Sombra de vegetação; Poeira; Chuva ou lama; Pouca luz; Não sei; Outro | não | Condições de captura e falhas da imagem (C01, Q6; H06) |
 | 8.5 | Quanto tempo depois do teste as imagens chegam a quem analisa? | Múltipla escolha | No mesmo dia; No dia seguinte; Na mesma semana; Mais de uma semana depois; Não sei | não | Origem e prazo das imagens (C01, Q6) |
 
-**Depois desta seção:** Seção 9.
+**Depois desta seção:** Seção 10.
 
-##### Seção 9 — Para terminar
+##### Seção 9 — Para quem analisa outros dados dos testes
+
+*As perguntas 9.1 a 9.3 repetem a 3.1, a 4.1 e a 4.4 porque o Google Forms não reaproveita uma pergunta em dois caminhos. Na análise, elas são contadas no grupo O, separadas do grupo A.*
 
 | # | Pergunta | Tipo | Opções | Obrigatória | Dado da A02 |
 |---|---|---|---|:-:|---|
-| 9.1 | Há algo sobre a análise dos resultados de segmentação que não perguntamos e que você considera importante? | Parágrafo | — | não | Lacunas não previstas |
+| 9.1 | Com que frequência você programa, em qualquer linguagem? | Múltipla escolha | Nunca; Raramente; Algumas vezes por mês; Toda semana | sim | Programação (H02), grupo O |
+| 9.2 | Quais destas ferramentas você usa pelo menos uma vez por mês? Se marcar "Nenhuma dessas", não marque outras. | Caixas de seleção | Editor de código (por exemplo, VS Code); Terminal ou linha de comando; GitHub ou GitLab; Jupyter Notebook ou Google Colab; Planilhas (Excel, Google Planilhas); Ferramentas de telemetria do veículo; Nenhuma dessas; Outro | não | Ferramentas usadas (H09), grupo O |
+| 9.3 | Nas ferramentas que você usa para analisar dados ou imagens, quais destes recursos você costuma usar? Se marcar "Nenhum desses", não marque outros. | Caixas de seleção | Ver duas imagens ou resultados lado a lado; Barra ou indicador de progresso; Arrastar arquivos para a janela; Atalhos de teclado; Filtrar ou ordenar tabelas; Exportar imagens ou relatórios; Nenhum desses; Outro | não | Padrões familiares (H11), grupo O |
+| 9.4 | Você consulta os resultados da segmentação no seu trabalho na equipe? | Múltipla escolha | Sim, com frequência; Às vezes; Não | não | Possível usuário ocasional da interface (P01) |
+
+**Depois desta seção:** Seção 10.
+
+##### Seção 10 — Para terminar
+
+| # | Pergunta | Tipo | Opções | Obrigatória | Dado da A02 |
+|---|---|---|---|:-:|---|
+| 10.1 | Há algo sobre a análise dos resultados de segmentação que não perguntamos e que você considera importante? | Parágrafo | — | não | Lacunas não previstas |
 
 **Depois desta seção:** Enviar formulário.
 
 **Mensagem de confirmação:** Obrigado por participar! Suas respostas foram registradas sem nome nem e-mail. Quando a análise estiver pronta, a síntese anonimizada será compartilhada com a equipe.
 
-**O que as perguntas evitam de propósito:** nenhuma pergunta pergunta se a pessoa quer um painel, um histórico ou um relatório. A pergunta 4.4 lista recursos que a pessoa já usa em outras ferramentas, e as perguntas 7.3 e 7.4 investigam se ela volta a análises antigas, sem propor a solução. As opções fechadas sempre incluem "Outro", "Não sei" ou "Nenhum desses".
+**O que as perguntas evitam de propósito:** nenhuma pergunta pergunta se a pessoa quer um painel, um histórico ou um relatório. A pergunta 4.4 lista recursos que a pessoa já usa em outras ferramentas, e as perguntas 7.3 e 7.4 investigam se ela volta a análises antigas, sem propor a solução. As opções fechadas sobre práticas, ferramentas e recursos incluem "Outro", "Não sei" ou "Nenhum desses", e a 6.2 não explica a resposta nas opções.
 
 #### Como os dados serão analisados
 
-1. **Separação dos grupos:** as respostas de quem analisa (seções 3 a 7) e de quem acompanha os testes (seção 8) são analisadas separadamente.
-2. **Perguntas fechadas:** contagem de respostas por opção. Com 3 a 6 pessoas, os resultados são relatados como contagens ("4 de 5"), sem porcentagens nem médias de escala.
-3. **Programação × interpretação (H02):** a 3.1 e a 3.3 (programação e execução) são cruzadas com a 6.1 e a 5.7 (leitura das métricas e da máscara). O objetivo é ver se quem programa também interpreta bem os resultados, ou o contrário, como pediu o feedback da Entrega 1.
-4. **Termos (6.1 e 6.3):** os termos que mais aparecem como "conheço o nome, mas não sei explicar" ou citados como dúvida são candidatos a explicação no ponto de uso (RC01) e a troca de rótulo na legenda.
+1. **Separação dos grupos:** as respostas de quem analisa segmentação (grupo A, seções 3 a 7), de quem analisa outros dados (grupo O, seção 9) e de quem acompanha os testes (grupo T, seção 8) são analisadas separadamente. Só o grupo A confirma como a análise de segmentação acontece e se a P01 existe como foi descrita; o grupo O mostra o que conhece quem poderia passar a analisar (H02, H09, H11); o grupo T responde à H03.
+2. **Perguntas fechadas:** contagem de respostas por opção, dentro de cada grupo. Com 3 a 6 pessoas, os resultados são relatados como contagens ("4 de 5"), sem porcentagens nem médias de escala. Pergunta opcional em branco conta como "sem resposta", e uma opção não marcada numa caixa de seleção não é tratada como "não uso": relata-se quantas pessoas responderam à pergunta. Quando "Nenhuma dessas" vem marcada junto com outras opções, a resposta conta pelas opções específicas e a inconsistência é registrada.
+3. **Programação × leitura dos resultados (H02):** a 3.1 e a 3.3 (programação e execução) são cruzadas com a 6.1 e a 5.7 (familiaridade declarada com as métricas e com a separação entre falha do modelo e falha da imagem). O objetivo é ver se quem programa também se declara à vontade para ler os resultados, ou o contrário, como pediu o feedback da Entrega 1. São percepções da própria pessoa, não medida de desempenho: as conclusões são escritas como "declara", e a triangulação com a I01 (S1) e com a I03 aprofunda o entendimento.
+4. **Termos (6.1 e 6.4):** os termos que mais aparecem como "conheço o nome, mas não sei explicar" ou citados como dúvida são candidatos a explicação no ponto de uso (RC01) e a troca de rótulo na legenda.
 5. **Perguntas abertas:** codificação temática simples, com a mesma lógica do I01: códigos iniciais a partir das linhas da A02 e temas novos quando aparecerem.
-6. **Veredito por hipótese:** H02, H05, H09, H10, H11 e H03 recebem "sustentada", "refutada", "refinada" ou "sem evidência", com as contagens e os trechos que justificam. A H08 recebe só uma contribuição (7.3 e 7.4), a ser somada à I03.
+6. **Veredito por hipótese:** H02, H05, H09, H10, H11 e H03 recebem "sustentada", "refutada", "refinada" ou "sem evidência", com as contagens e os trechos que justificam, seguindo as regras de leitura da Síntese. A H08 recebe só uma contribuição (7.3 e 7.4), a ser somada à I03.
 7. **Consequência para o design:** cada veredito é ligado à decisão que afeta (persona P01, tarefas T01 a T03, decisões de design 1 a 5 da P01) e registrado na seção 5 do `RASTREABILIDADE.md`.
 8. **Limitações:** respostas autodeclaradas e amostra pequena. Os resultados são cruzados com a I01 (o que quem decide diz sobre como os resultados chegam) e com a I03 (como as configurações chegam a quem analisa). Combinações de curso, tempo de equipe e atividade não são publicadas juntas, para ninguém ser identificado.
 
@@ -612,17 +633,18 @@ As perguntas abaixo são as mesmas do formulário on-line, na mesma ordem. A col
    - Levar o termo, o roteiro de foco e fichas de registro sem campo de nome. Definir dois papéis: o aprendiz, que conversa com a pessoa, e o anotador, que preenche a ficha.
 2. **Apresentação e consentimento**
    - Ler o texto de abertura, que explica o modelo mestre-aprendiz.
-   - Entregar o termo, esperar a leitura, tirar dúvidas e registrar o aceite, incluindo as escolhas sobre gravação de áudio, gravação de tela e citação de trechos.
+   - Entregar o termo, esperar a leitura, tirar dúvidas e registrar o aceite, incluindo as escolhas sobre gravação de áudio e citação de trechos.
 3. **Aplicação**
    - **Conversa inicial** (5 minutos): perguntas da fase 1 do roteiro.
    - **Observação com perguntas** (30 minutos por sessão): a pessoa trabalha normalmente e explica o que faz. O aprendiz observa os pontos do roteiro e pergunta só em pausas naturais, sem interromper uma ação em andamento.
    - **Interpretação compartilhada** (5 a 10 minutos, ao fim da sessão 2): o aprendiz resume o que entendeu e a pessoa confirma ou corrige.
    - O aprendiz não sugere outro jeito de fazer, não opina sobre o trabalho e não mostra telas ou protótipos do projeto.
+   - Se a pessoa abrir imagens, resultados ou arquivos de pesquisa, o anotador registra só o tipo de conteúdo consultado e para quê, sem anotar valores nem nomes de arquivos.
 4. **Encerramento**
    - Fazer a pergunta aberta final, lembrar o direito de desistir e de pedir a exclusão dos registros, explicar a devolutiva e agradecer.
 5. **Armazenamento e anonimização**
-   - No mesmo dia, completar a ficha de registro com o código da pessoa (PQ1, PQ2…) e guardar ficha, áudio e gravação de tela, se autorizados, na pasta privada da equipe, fora do repositório.
-   - Apagar áudio e gravação de tela logo depois de completar a ficha; nada é fotografado.
+   - No mesmo dia, completar a ficha de registro com o código da pessoa (PQ1, PQ2…) e guardar a ficha e o áudio, se autorizado, na pasta privada da equipe, fora do repositório.
+   - Apagar o áudio logo depois de completar a ficha. A tela não é gravada e nada é fotografado: a ficha registra os passos e a estrutura das telas (que campos, gráficos e mensagens aparecem), sem valores, nomes de arquivos ou imagens.
    - Retirar das fichas nomes de pessoas, números de resultados e nomes de arquivos de pesquisa não publicados.
 
 #### Instrumento
@@ -641,17 +663,16 @@ As perguntas abaixo são as mesmas do formulário on-line, na mesma ordem. A col
 >
 > **O que será solicitado.** Fazer um experimento que você já faria, no seu local de trabalho, em duas sessões de cerca de 40 minutos, respondendo a perguntas quando houver uma pausa.
 >
-> **Registros.** Faremos anotações. Com a sua autorização, também gravaremos o áudio e, com as outras janelas fechadas, a tela, apenas para completar as anotações; essas gravações são apagadas logo depois. Nada será fotografado, e resultados, imagens e arquivos da sua pesquisa não serão copiados. Apenas os três responsáveis terão acesso aos registros, que ficam fora do repositório do projeto e são apagados ao fim do semestre letivo.
+> **Registros.** Faremos anotações sobre os passos que você segue e sobre a estrutura das telas (que campos e gráficos aparecem), sem anotar valores, nomes de arquivos ou imagens. Com a sua autorização, também gravaremos o áudio, apenas para completar as anotações; ele é apagado logo depois. A tela não será gravada, nada será fotografado, e resultados, imagens e arquivos da sua pesquisa não serão copiados. Apenas os três responsáveis terão acesso aos registros, que ficam fora do repositório do projeto e são apagados ao fim do semestre letivo.
 >
 > **Privacidade.** Seu nome não aparece em nenhum documento: você recebe um código. Como há poucas pessoas que treinam modelos na equipe, seu papel pode ser reconhecido; por isso, você escolhe se trechos da conversa podem ser citados e pode revisar as citações antes do uso.
 >
-> **Voluntariedade.** A participação é voluntária. Você pode interromper a qualquer momento, pular perguntas e pedir, mesmo depois, que os registros sejam excluídos, sem justificar.
+> **Voluntariedade.** A participação é voluntária. Você pode interromper a qualquer momento, pular perguntas e pedir, mesmo depois, que os registros sejam excluídos, sem justificar. Para dúvidas ou pedidos de exclusão, escreva para o e-mail institucional de qualquer um dos responsáveis: Henrique (unifhtrebbi@fei.edu.br), Tiago (uniftsantos@fei.edu.br) ou Mateus (unimassuena@fei.edu.br), até o fim do semestre letivo.
 >
 > **Devolutiva.** Você receberá a síntese anonimizada e poderá apontar interpretações erradas antes do uso.
 >
 > **Consentimento.** Declaro que recebi informações suficientes e concordo em participar.  
 > ( ) Autorizo a gravação de áudio. ( ) Não autorizo.  
-> ( ) Autorizo a gravação de tela, com as outras janelas fechadas. ( ) Não autorizo.  
 > ( ) Autorizo a citação de trechos, depois de revisá-los. ( ) Não autorizo.  
 > Código do participante: ______ Data: ___/___/______ Aceite: ______________________
 
@@ -746,40 +767,48 @@ O usuário e a interface deste projeto foram propostos pela equipe a partir do T
 | Lacuna | Instrumento | Por que essa técnica cobre a lacuna |
 |---|---|---|
 | Quem escolhe as configurações, quem recomenda e quem decide; como a decisão acontece e com que critério | I01 (blocos 2 a 5) e informantes secundários | Processo de poucas pessoas, que pede relato de uma ocorrência concreta e aprofundamento |
-| Se quem analisa os resultados sabe programar, se sabe interpretar, quais ferramentas e termos conhece e em que contexto trabalha | I02 (seções 3 a 6) | Público maior e dados comparáveis entre pessoas |
+| Se quem analisa os resultados sabe programar, se declara saber interpretar, quais ferramentas e termos conhece e em que contexto trabalha | I02 (seções 3 a 6) | Público maior e dados comparáveis entre pessoas |
 | Como uma configuração é definida, treinada, acompanhada, analisada e registrada | I03 (sessões 1 e 2) | Conhecimento tácito, que a pessoa não descreve bem fora do trabalho |
 | Se existe necessidade de histórico (H08) | I02 (7.3 e 7.4), I01 (5.3) e I03 (3.5) | Três fontes, porque perguntar sobre registros não basta: a I03 observa se a pessoa volta de fato a experimentos antigos |
 | Se o piloto e quem acompanha os testes se beneficiam sem usar a interface (H03) | I02 (seção 8) | Perguntas curtas para um público que não é usuário |
 
 **Plausibilidade das personas:**
 
-- **P01 (Rafael):** a I02 confirma se existe quem analisa resultados de segmentação na equipe.
-- **P03 (Larissa):** a I01 confirma se existe quem prepara a decisão sem executar os modelos e se essa pessoa usaria a interface ou só receberia um material.
+- **P01 (Rafael):** a I02 confirma se existe quem analisa resultados de segmentação na equipe (grupo A). Quem analisa só outros dados (grupo O) não conta como evidência da P01.
+- **P03 (Larissa):** a I01 confirma se existe quem prepara a decisão sem executar os modelos e se essa pessoa usaria a interface ou só receberia um material. Participantes D (outra decisão técnica) ficam à parte.
 - **P02 (Andreia):** a I03 confirma se quem treina os modelos é a coordenação, outro pesquisador ou ninguém fora dos autores.
 
 Se um perfil não existir, a persona correspondente será revista antes da Entrega 8.
 
 ### O que deve ficar sustentado, refutado ou refinado
 
+**Regras de leitura dos critérios:**
+
+- Separar três perguntas: se a necessidade **existe**, se o processo atual tem **dificuldade** para atendê-la e se vale a pena **incorporá-la à nova interface**. Uma resposta sobre uma delas não decide as outras.
+- "Sem evidência" é o veredito quando a coleta não permite concluir, por exemplo, quando poucas pessoas responderam ou quando só há participantes do grupo O, D, proxy ou dos ensaios.
+- Pergunta opcional em branco ou opção não marcada não equivale a resposta negativa.
+- Familiaridade e capacidade declaradas (I02, seções 3, 5 e 6) são percepção da pessoa, não desempenho demonstrado: o veredito é escrito como "declara" e aprofundado pela triangulação.
+- Só o público principal de cada instrumento (grupo A do I02, perfil G da I01, PQ da I03) muda o estado de uma hipótese.
+
 | Hipótese | Instrumentos | Fica **sustentada** se… | Fica **refutada** se… | Pode ser **refinada** se… |
 |---|---|---|---|---|
 | H01 — decisão com números dispersos e sem critério explícito | I01 (2.1, 3.1, 4.4); I02 (7.5, 7.6) | os relatos mostram resultados chegando por canais separados e escolha sem critério declarado | a equipe já usa um critério explícito e os resultados chegam reunidos | existe critério, mas só uma pessoa o conhece ou ele não é aplicado sempre |
-| H02 — analista conhece o domínio, mas pode não dominar programação | I02 (2.2, 3.1–3.3, 6.1) | quem analisa programa pouco ou depende de ajuda para executar | quem analisa programa com frequência e resolve erros sozinho | programar e interpretar aparecem separados (programa bem, mas interpreta com dificuldade, ou o contrário) |
+| H02 — analista conhece o domínio, mas pode não dominar programação | I02, grupo A (2.2, 3.1–3.3, 5.7, 6.1) | quem analisa segmentação programa pouco ou declara depender de ajuda para executar | quem analisa segmentação programa com frequência e declara resolver erros sozinho | programar e se declarar à vontade com as métricas aparecem separados (programa com frequência, mas declara dificuldade com as métricas, ou o contrário); por ser autodeclarado, é aprofundado com a I01 (S1) e a I03 |
 | H03 — piloto beneficiado sem usar a interface | I02 (seção 8) | quem acompanha os testes não consulta os resultados, mas o que faz muda por causa deles | os resultados não mudam nada no trabalho de quem acompanha os testes | parte dessas pessoas consulta os resultados e seria usuária ocasional |
-| H04 — conhecimento técnico e familiaridade com métricas influenciam a interação | I01 (4.1–4.3); I02 (6.1–6.3); I03 (3.1) | o conhecimento de métricas e termos varia entre os perfis e muda o que cada um olha | todos os perfis leem as mesmas métricas do mesmo jeito | só alguns termos geram dúvida, o que define a lista de explicações no ponto de uso (RC01) |
-| H05 — atividades feitas hoje por scripts que exigem conhecimento técnico | I02 (3.2–3.4); I03 (2.3) | executar depende de scripts e os erros exigem ajuda técnica | a execução já é simples e raramente falha | a dificuldade está em passos específicos (preparar arquivos, interpretar erros) e não na execução como um todo |
+| H04 — conhecimento técnico e familiaridade com métricas influenciam a interação | I01 (4.1–4.3); I02 (6.1–6.4); I03 (3.1) | o conhecimento de métricas e termos varia entre os perfis e muda o que cada um olha | todos os perfis leem as mesmas métricas do mesmo jeito | só alguns termos geram dúvida, o que define a lista de explicações no ponto de uso (RC01) |
+| H05 — atividades feitas hoje por scripts que exigem conhecimento técnico | I02 (3.2–3.4); I03 (2.3) | executar depende de scripts e de conhecimento técnico, e os erros exigem ajuda | executar já não depende de scripts nem de conhecimento técnico (por exemplo, a equipe já usa uma ferramenta sem código) | a execução depende de scripts, mas quem executa o faz sem dificuldade e raramente precisa de ajuda (a dependência existe sem ser um problema hoje), ou a dificuldade está em passos específicos (preparar arquivos, interpretar erros) |
 | H06 — dificuldade de interpretar resultados sem orientação | I01 (4.4); I02 (5.6–5.8) | quem decide não sabe julgar diferenças e quem analisa não separa falha do modelo de falha da imagem | ambos têm critério claro e o aplicam | a dificuldade aparece só em casos específicos (diferenças pequenas, sombra, poeira) |
-| H07 — papéis e colaboração influenciam a interface | I01 (1.1, 2.2, S2.1); I03 (1.1, 3.6) | há papéis distintos de propor, recomendar e decidir | uma só pessoa faz tudo | os papéis existem, mas mudam conforme o ciclo de testes |
-| H08 — necessidade de histórico | I01 (5.3); I02 (7.3, 7.4); I03 (3.5) | as pessoas voltam com frequência a análises ou experimentos antigos e têm dificuldade para encontrá-los | ninguém volta a resultados antigos, ou encontra sem esforço | a necessidade existe só para um perfil (por exemplo, quem treina) ou só para um tipo de informação |
-| H09 — interfaces conhecidas (editor de código, terminal, GitHub, telemetria) | I02 (4.1) | a maioria usa essas ferramentas com frequência | quase ninguém as usa | o conjunto de ferramentas difere por curso ou papel |
+| H07 — papéis e colaboração influenciam a interface | I01 (1.1, 2.2, S2.1); I03 (1.1, 3.6) | há papéis distintos de propor, recomendar e decidir, com dependência entre eles | uma só pessoa propõe, executa e decide, sem depender de permissão, aprovação nem colaboração de ninguém | os papéis mudam conforme o ciclo de testes, ou uma pessoa acumula atividades, mas ainda depende de permissões, aprovação ou colaboração (a hipótese vale, com outra divisão de papéis) |
+| H08 — necessidade de histórico | I01 (5.3); I02 (7.3, 7.4); I03 (3.5) | as pessoas voltam com frequência a análises ou experimentos antigos e têm dificuldade para encontrá-los com o que usam hoje | ninguém volta a resultados antigos nem relata uma situação em que precisou fazê-lo | as pessoas voltam a resultados antigos e os encontram sem esforço com o que já usam (caderno, pastas): a necessidade existe, mas a solução atual a atende, e incluir o histórico na interface depende de outro ganho; ou a necessidade existe só para um perfil (por exemplo, quem treina) ou só para um tipo de informação |
+| H09 — interfaces conhecidas (editor de código, terminal, GitHub, telemetria) | I02 (4.1; 9.2 à parte, grupo O) | a maioria usa essas ferramentas com frequência | quase ninguém as usa | o conjunto de ferramentas difere por curso ou papel |
 | H10 — ferramentas como CVAT e Roboflow são complexas para o perfil | I02 (4.2, 4.3) | quem já usou relata dificuldade | quem já usou relata facilidade | a dificuldade depende da ferramenta, ou ninguém as conhece (hipótese irrelevante para o público) |
-| H11 — padrões familiares (seleção de arquivo, progresso, lado a lado) | I02 (4.4) | esses recursos aparecem entre os que as pessoas já usam | não aparecem | só parte deles é familiar |
+| H11 — padrões familiares (seleção de arquivo, progresso, lado a lado) | I02 (4.4; 9.3 à parte, grupo O) | esses recursos aparecem entre os que as pessoas marcam | quem responde à pergunta marca "Nenhum desses" ou só outros recursos | só parte deles é familiar; familiaridade não demonstra, sozinha, a necessidade de incluir o recurso |
 | H12 — benefício esperado: dispensar código, apresentar resultados com clareza, comparar | I01 (5.1, 6.1–6.3); I02 (7.8); I03 (4.2, 4.3) | as dificuldades relatadas coincidem com esses três benefícios | as dificuldades estão em outro lugar | os benefícios valem para um perfil e não para outro (por exemplo, quem treina prefere manter os scripts) |
 
 ### Depois da coleta
 
 - Cada veredito é registrado na seção 2 (estado da hipótese) e na seção 5 (mudanças) do [`../RASTREABILIDADE.md`](../RASTREABILIDADE.md), com o instrumento e os trechos que o justificam.
-- Uma hipótese só muda de estado com evidência dos instrumentos. Respostas dos autores, do piloto e de participantes proxy são registradas à parte e não bastam sozinhas.
+- Uma hipótese só muda de estado com evidência dos instrumentos. Respostas dos autores, do piloto, dos ensaios, de participantes proxy, do grupo O do I02 e dos participantes D da I01 são registradas à parte e não bastam sozinhas.
 - Decisões de design que dependem das hipóteses (personas, tarefas T01–T08, decisões das personas e histórico) são revistas na Entrega 8, a partir desses vereditos.
 
 ## Checklist
@@ -795,9 +824,13 @@ Se um perfil não existir, a persona correspondente será revista antes da Entre
 - [X] Cada instrumento possui objetivo, público, procedimento e conteúdo integral.
 - [X] Perguntas evitam indução e coletam apenas dados necessários.
 - [X] Está claro como os dados serão analisados e usados no design.
+- [X] Cada caminho do questionário e do roteiro só leva a perguntas que se aplicam à experiência de quem responde, e os grupos são analisados separadamente.
+- [X] Os critérios de sustentação e refutação respeitam o alcance dos dados (autodeclarados, em branco, "sem evidência").
+- [X] Os procedimentos éticos de cada parte correspondem aos registros que o instrumento de fato produz.
 
 ## Histórico de revisões
 
 | Data | O que mudou | Motivo |
 |---|---|---|
 | 14/11/2026 | Parte A, A02: a decisão ligada à separação entre falha do modelo e falha da imagem deixa de citar a confiança do resultado e passa a citar a avaliação visual com registro da origem do problema (RQ05) | Confiança do modelo retirada do projeto (`PENDENCIAS.md`: INC-66) |
+| 15/11/2026 | Aplicação do parecer da Entrega 7. **Separação dos grupos:** no I02, a opção "outros dados" da 2.3 leva a uma nova seção 9, curta, e "Para terminar" passa a ser a seção 10; as seções 3 a 7 ficam só para quem analisa segmentação; a análise e a A02 separam os grupos A (segmentação), O (outros dados) e T (acompanha os testes), e só o grupo A conta como evidência da P01. Na I01, a 1.2 passa a ser pergunta de triagem: quem entrou por outra decisão técnica recebe as variantes D e o código D1, D2…, analisado à parte. **Síntese:** regras de leitura (necessidade, dificuldade atual e conveniência de incluir na interface; "sem evidência"; resposta em branco não é negativa; dado autodeclarado) e critérios de H02, H05, H07, H08, H09 e H11 revistos. **Ética:** A02 sem acompanhamento no computador, gravação de tela e transcrição, com o limite de exclusão de uma resposta anônima; I03 sem gravação de tela; prazo único para a lista nome–código e canal de contato nos termos. **Referências e cobertura:** H06 e A01 sem o aviso automático de resultado inconclusivo (INC-67); A02 reduzida ao que o I02 pergunta (saíram linguagem de programação, duração da análise, passos e pré-condições da execução, leitura das cores da legenda e atraso da entrega). **Recomendações:** faixas da 2.1, frequência da 5.1 por período, regra para "Nenhuma dessas", 6.2 sem pista na opção negativa (nova 6.3; antiga 6.3 passa a 6.4) e ensaio de compreensão com pessoa próxima do perfil na I01 e no I02 | Feedback do professor sobre a Entrega 7 |

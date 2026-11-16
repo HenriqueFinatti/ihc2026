@@ -109,6 +109,7 @@ Alguns itens não são correção de texto: dependem de uma decisão do grupo. V
 | INC-66 | 🟠 | E5 (Tiago), E7 | Confiança do modelo retirada do projeto (não faz parte do TCC previsto), mas a E5 e a E7 ainda a usam | Tiago | 🟩 | 14/11: E5 §2: confiança do modelo retirada do recorte comum, do HTA e do CTT da T03 (3.3.3 passa a 3.3.2) e do GOMS da T01 (3.C passa a 3.B); RQ06, síntese 2.5, continuidade e "Oportunidades" ajustadas; diagramas da T03 regenerados pelos scripts. E7, A02: troca pela avaliação visual com registro da origem do problema (RQ05). |
 | INC-67 | 🟠 | E3, E5 | Aviso automático de "resultado inconclusivo" retirado (o sistema não julga a relevância da diferença), mas a E3 e a E5 ainda o preveem | Henrique, equipe | 🟩 | 14/11: E3, decisão 5 da P03 reescrita (diferença entre configurações e explicação; sem aviso automático). E5 §1: recorte comum, HTA T05 (2.3, 2.3.2.1, 3.2), GOMS T04 (regras 3.A e 3.B; 3.B.4 removido) e RQ07 ajustados; diagramas da T05 regenerados. |
 | INC-68 | ⚪ | E9, E10 | Subtópicos (O01.1…) só definidos na figura do mapa consolidado; nomes divergentes entre a E9 e a E10 | Cada autor | 🟩 | 14/11: tabela "Subtópicos" criada na E9 §3.2 com os nomes oficiais; subtópicos da P03 incluídos e M02 alinhado (O06.1, O06.2); figura: O06.3 renomeado. Subtópicos da P01 incluídos (O03.1–O05.2 e origem de O08.1) e M01 alinhado. 15/11: subtópicos da P02 incluídos (O01.1–O02.2, O06.4 e origens em O03.1, O03.2, O05.2, O06.3, O07.2 e O08.1) e M03 alinhado. |
+| INC-69 | 🟠 | E7 | Formulário on-line do I02 ainda na versão anterior à revisão de 15/11 (caminhos da 2.3, nova seção 9, 2.1, 3.2, 4.1, 4.4, 5.1, 6.2–6.4, termo); e-mails institucionais de contato marcados `[?]` nos termos | Tiago Fagundes dos Santos (formulário); Equipe (e-mails) | 🟨 | 15/11: e-mails institucionais dos três responsáveis incluídos nos termos da A01, I01, I02 e I03. **Falta:** replicar as mudanças do I02 (inclusive o termo da seção 1) no Google Forms. |
 
 **Prioridade sugerida:** resolver os 🔴 antes de fechar a E4 e começar a E5. O INC-22 é o mais sensível, porque a RC03 sustenta decisões nas três personas.
 
@@ -447,6 +448,11 @@ Alguns itens não são correção de texto: dependem de uma decisão do grupo. V
 - **Problema:** sem definição no texto, cada artefato passou a nomear os subtópicos de um jeito (ex.: O06.1 "Escolher o que comparar" na conversa da §2.2, "Escolher as configurações" na figura e "Escolher as configurações do ciclo" no M02). O checklist da E10 exige nomes coerentes com a E9.
 - **Sugestão:** tabela "Subtópicos" na E9 §3.2 com o ID, o nome oficial, o objetivo e a origem no mapa individual; os títulos das cenas da MoLIC usam os nomes oficiais. Feito por integrante, junto com cada MoLIC.
 
+#### INC-69 🟠 Formulário on-line e contato desatualizados em relação à E7 revisada
+- **Onde:** E7, I02 (cópia textual × formulário em https://forms.gle/pAMyXCdebYo9aHmq9) e termos da A01, I01, I02 e I03 (canal de contato).
+- **Problema:** o I02 afirma que o formulário tem "as mesmas perguntas e desvios da cópia textual". Depois da revisão de 15/11/2026, isso só volta a valer quando o formulário for editado. Os termos indicam o e-mail institucional dos responsáveis, mas os endereços estão marcados `[?]`.
+- **Sugestão:** no Google Forms, refazer o desvio da 2.3 (outros dados → seção 9; "Nenhuma dessas" → seção 10), criar a seção 9 (9.1 a 9.4), mudar o destino das seções 7 e 8 para a seção 10 e ajustar 2.1, 3.2, 4.1, 4.4, 5.1, 6.2, a nova 6.3 e o termo da seção 1. Conferir os quatro caminhos no modo de visualização. Incluir os e-mails nos termos e no convite antes da aplicação.
+
 ## Histórico deste arquivo
 
 | Data | Alteração | Responsável |
@@ -476,5 +482,7 @@ Alguns itens não são correção de texto: dependem de uma decisão do grupo. V
 | 14/11/2026 | Entrega 10: criado INC-68 (subtópicos sem definição no texto da E9 e nomes divergentes na E10); parte da P03 resolvida | Henrique Finatti Silveira Belo Trebbi (com apoio do Claude) |
 | 14/11/2026 | INC-68: parte da P01 resolvida, com o M01 | Tiago Fagundes dos Santos (com apoio do Claude) |
 | 15/11/2026 | INC-68 resolvido: parte da P02, com o M03 | Mateus Marana Assuena (com apoio do Claude) |
+| 15/11/2026 | Parecer do professor sobre a E7 aplicado (I01, I02, I03, Partes A e Síntese); criado INC-69 (formulário on-line e e-mails de contato a atualizar) | Equipe (com apoio do Claude) |
+| 15/11/2026 | INC-69 em andamento: e-mails de contato incluídos nos termos da E7; falta o formulário on-line | Equipe (com apoio do Claude) |
 | 15/11/2026 | Parecer do professor sobre a E6 aplicado: revisão por anotações sobre as fotos; INC-59 passa a "em andamento" (falta o protótipo da E11) | Equipe (com apoio do Claude) |
 | 15/11/2026 | Parecer do professor sobre a E5 aplicado nas três seções; INC-53, 54 e 55 conferidos contra os artefatos atuais (resolução complementada). Nenhuma pendência nova: a única citação afetada fora da E5 (GOMS T01 na E9) foi corrigida | Equipe (com apoio do Claude) |
