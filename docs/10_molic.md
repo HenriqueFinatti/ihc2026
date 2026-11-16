@@ -1,7 +1,7 @@
 # Entrega 10 — MoLIC
 
-**Data:** 14/11/2026 (início)  
-**Status:** 🟨 em andamento  
+**Data:** 14/11/2026 (início) · 16/11/2026 (primeira versão completa)  
+**Status:** 🟩 concluída  
 **Responsabilidade:** 1 solução completa por integrante
 
 ## Objetivo da atividade
@@ -251,20 +251,55 @@ O diagrama tem um ponto de abertura, um acesso ubíquo e dois encerramentos. A c
 
 | Objetivo | MoLIC que cobre | Lacunas/duplicidades | Decisão |
 |---|---|---|---|
-| O01 | M03 | {{...}} | {{...}} |
-| O02 | M03 | {{...}} | {{...}} |
-| O03 | M01, M03 | {{...}} | {{...}} |
-| O04 | M01 | {{...}} | {{...}} |
-| O05 | M01, M03 | {{...}} | {{...}} |
-| O06 | M02, M03 | {{...}} | {{...}} |
-| O07 | M02, M03 | {{...}} | {{...}} |
-| O08 | M01, M02, M03 | {{...}} | {{...}} |
-| O09 | M02 | {{...}} | {{...}} |
-| O10 | M02 | {{...}} | {{...}} |
+| O01 | M03 | Nenhuma: O01.1 e O01.2 aparecem só no M03, com as duas rupturas da Síntese da Entrega 9 (dataset faltando e nome repetido). | Objetivo exclusivo da P02; fica no M03. |
+| O02 | M03 | Nenhuma: O02.1 e O02.2 aparecem só no M03, com a ruptura de treino interrompido e o acesso ubíquo para voltar durante o treino. | Objetivo exclusivo da P02; fica no M03. |
+| O03 | M01, M03 | Sem duplicidade: O03.1 e O03.2 são as mesmas cenas nos dois diagramas. Os diálogos mudam com a entrada (imagens do teste no M01, quadros no M03), e as rupturas da execução só estão desenhadas no M01. | Cada cena é única, e seu conteúdo é a união dos diálogos dos dois diagramas; "entradas" cobre imagens e quadros. As rupturas de formato e de falha valem para as duas personas e ficam desenhadas no M01 (o M03 remete a ele). |
+| O04 | M01 | Nenhuma: só a P01 avalia imagem a imagem. A P02 olha os quadros na O05.2, mas não registra avaliação por quadro (CI03). | Objetivo exclusivo da P01; fica no M01. |
+| O05 | M01, M03 | Possível duplicidade na escolha das configurações: a P01 escolhe na O05.1, e a P02, na O03.1. | Os dois caminhos ficam: a O05.1 é usada quando a entrada já está no sistema e a comparação nasce da avaliação (P01); a O03.1, quando a comparação começa com entradas novas (P02). A O05.2 é a mesma cena nos dois diagramas. |
+| O06 | M02, M03 | Duas lacunas: (1) a P02 entra na O06.3 pela O05.2, sem passar pela O06.2, que confere se as configurações foram avaliadas no mesmo conjunto de teste; (2) a O06.4 (matriz de confusão) só aparece no M03. | (1) A conferência da O06.2 vale também para a entrada pela O05.2 `[H]`; no M03 ela não foi desenhada porque, no CI03, as duas configurações usam o mesmo conjunto de teste. (2) A O06.4 é aberta a partir da O06.3 por qualquer persona; o M02 não a desenha porque o CI02 não a usa. |
+| O07 | M02, M03 | O07.1 (entender um termo) só aparece no M02, embora o M01 e o M03 também mostrem métricas. | A O07.1 é um acesso ubíquo do sistema inteiro, disponível em qualquer cena com métricas; fica desenhada só no M02, onde é necessária para a P03. A O07.2 é a mesma cena no M02 e no M03. |
+| O08 | M01, M02, M03 | Sem duplicidade: O08.1 e O08.2 são as mesmas cenas nos três diagramas. Mudam os campos de cada tipo de conclusão, e o alerta de imagens sem avaliação só existe no M01. | Uma única conversa, em que o tipo de conclusão define os campos: validação (configuração mais adequada, imagens inconclusivas e com problema de captura), recomendação (configuração indicada e ressalva) e experimento (configuração candidata, ressalva e próximo experimento). O alerta de imagens sem avaliação vale só para a validação. |
+| O09 | M02 | Nenhuma: O09.1 aparece no M02, e a O09.2 usa a mesma cena O07.2. | Objetivo exclusivo da P03; fica no M02. |
+| O10 | M02 | Nenhuma: a condição obrigatória é tratada por prevenção ativa no diálogo da cena. | Objetivo exclusivo da P03; fica no M02. |
+
+As nove rupturas listadas na Síntese da Entrega 9 aparecem em pelo menos um diagrama: formato não aceito, falha na execução e imagens sem avaliação no M01; imagem sem anotação de referência no M01 (O04.2) e no M03 (O06.3); execução faltante no ciclo e configurações avaliadas em conjuntos diferentes no M02; valor fora do permitido, nome repetido e treino interrompido no M03.
 
 ### Preparação para o Figma
 
 Liste os estados/telas que serão necessários **a partir das conversas modeladas**, incluindo feedback, confirmação, erro e recuperação.
+
+Cada grupo de cenas abaixo corresponde a uma tela ou região de tela do protótipo da Entrega 11. Os estados vêm das falas `d:` e das rupturas dos três MoLIC; nenhum fluxo novo foi acrescentado. As cenas reusadas (O03.1, O03.2, O05.2, O06.3, O07.2, O08.1 e O08.2) viram uma única tela, usada por mais de uma persona.
+
+| Tela ou região | Cenas | MoLIC | Feedback e confirmação | Erro e recuperação |
+|---|---|---|---|---|
+| Configuração de treino | O01.1, O01.2 | M03 | Valores padrão dos parâmetros já preenchidos; nome sugerido (modelo + épocas) `[H]`; "treino iniciado" | Sem dataset de treino: não deixa continuar (PA); nome repetido: aponta o nome e pede outro (RA) |
+| Estado do treino | O02.1, O02.2 | M03 | Treinando: época atual e total, gráficos de treino e validação; treino concluído: época e motivo do término, métricas e matriz de confusão no conjunto de teste | Treino interrompido: causa, época, configuração mantida e ajuste sugerido, com "reiniciar com o ajuste" (RA) |
+| Entradas e configurações | O03.1 | M01, M03 | Lista de configurações disponíveis, com descrição e métricas no conjunto de teste (F01) | Arquivos em formato não aceito: quais são e quais formatos são aceitos, com "trocar os arquivos" ou "seguir sem eles" (AL) |
+| Processamento | O03.2 | M01, M03 | Processando, com progresso e configuração em execução; concluído (F03) | Falhou: causa e imagem afetada, com "tentar de novo" ou "deixar de fora"; o que fazer quando a solução está fora do sistema (RA, CE) |
+| Resultado e avaliação da imagem | O04.1, O04.2, O04.3 | M01 | Imagem original, máscara e legenda binária; sobreposição, transparência e região ampliada; métricas da imagem quando há anotação de referência; avaliação registrada | Imagem sem anotação de referência: "sem métricas, avaliação visual" (PP) |
+| Comparação na mesma imagem | O05.1, O05.2 | M01, M03 | Configurações já executadas nas imagens; configurações lado a lado, na mesma região ampliada, com a avaliação registrada | — |
+| Desempenho consolidado | O06.1–O06.4, O07.2 | M02, M03 | Ciclo e configurações com execução concluída; IoU, acurácia e tempo de inferência em tabela ou gráfico (F02); valor de referência e sua origem; maior valor; diferença entre configurações e o que a métrica indica e não indica; matriz de confusão | Configuração sem execução no ciclo: qual falta e o que fazer fora do sistema (CE); conjuntos de teste diferentes: alerta com "escolher outras" ou "comparar mesmo assim" (AL); quadros sem anotação: avaliação visual (PP) |
+| Conclusão | O08.1, O08.2 | M01, M02, M03 | Campos conforme o tipo de conclusão (validação, recomendação ou experimento); conferência do que foi registrado, com "confirmar" | Imagens sem avaliação (só na validação): quantas faltam, com "avaliá-las antes" ou "concluir assim mesmo" (AL); conclusão errada: "corrigir" volta ao formulário com os dados preenchidos |
+| Apresentação e decisão | O09.1, O10 | M02 | Comparação, recomendação e ressalva registradas; decisão registrada | Decisão "aceita com condição" sem a condição: não deixa registrar (PA) |
+
+**Acessos ubíquos** — viram elementos sempre visíveis, e não telas próprias:
+
+- "Em que ponto está o treino?" (M03): indicador do treino em andamento, que leva ao estado do treino.
+- "Apresentar a recomendação" (M02): item de menu que abre a apresentação.
+- "O que é este termo?" (M02, válido para todo o sistema): explicação no ponto de uso, junto de cada termo técnico (F04).
+
+**Estados do repertório da Entrega 11 que não aparecem nos MoLIC:**
+
+| Estado | Situação | Decisão |
+|---|---|---|
+| Vazio/sem dados | Não modelado como estado próprio; a falta de execução no ciclo é tratada pela captura de erro da O06.1 | Prototipar só a mensagem da O06.1 |
+| Filtro sem resultados | Não há filtros no recorte (F05 depende da H08) | Não se aplica |
+| Permissão insuficiente | Perfis e permissões descartados (F07; Entrega 1, seção 8) | Não se aplica |
+| Confirmação de ação destrutiva | Nenhuma conversa exclui dados | Não se aplica |
+| Cancelamento da execução ou do treino | Não aparece nas conversas da Entrega 9 nem nos MoLIC | Não prototipar sem antes incluir no MoLIC |
+| Dados desatualizados/conflito | Não modelado; o histórico entre sessões está fora do recorte (H08) | Não se aplica |
+
+Os rascunhos da Entrega 6 que usam classes ilustrativas e IoU para qualquer imagem (`PENDENCIAS.md`, INC-59) são corrigidos por esta lista: legenda binária (*Trilha*, *Fora da trilha*), métricas só no conjunto de teste e o estado "sem métricas, avaliação visual".
 
 ## Erros frequentes a evitar
 
