@@ -111,6 +111,7 @@ Alguns itens não são correção de texto: dependem de uma decisão do grupo. V
 | INC-68 | ⚪ | E9, E10 | Subtópicos (O01.1…) só definidos na figura do mapa consolidado; nomes divergentes entre a E9 e a E10 | Cada autor | 🟩 | 14/11: tabela "Subtópicos" criada na E9 §3.2 com os nomes oficiais; subtópicos da P03 incluídos e M02 alinhado (O06.1, O06.2); figura: O06.3 renomeado. Subtópicos da P01 incluídos (O03.1–O05.2 e origem de O08.1) e M01 alinhado. 15/11: subtópicos da P02 incluídos (O01.1–O02.2, O06.4 e origens em O03.1, O03.2, O05.2, O06.3, O07.2 e O08.1) e M03 alinhado. |
 | INC-69 | 🟠 | E7 | Formulário on-line do I02 ainda na versão anterior à revisão de 15/11 (caminhos da 2.3, nova seção 9, 2.1, 3.2, 4.1, 4.4, 5.1, 6.2–6.4, termo); e-mails institucionais de contato marcados `[?]` nos termos | Tiago Fagundes dos Santos (formulário); Equipe (e-mails) | 🟨 | 15/11: e-mails institucionais dos três responsáveis incluídos nos termos da A01, I01, I02 e I03. **Falta:** replicar as mudanças do I02 (inclusive o termo da seção 1) no Google Forms. |
 | INC-70 | 🟠 | E11 | Três capturas desatualizadas e três ajustes pendentes na interface implementada | Equipe | ➖ | 16/11: **descartado por decisão da equipe:** a interface e as capturas ficam como estão. As diferenças estão descritas nas legendas da E11 e a da TL01 está registrada no checklist da E11. |
+| INC-71 | 🟠 | E8 | A E8 prevê processamento, métricas e falha simulados, mas a E12 avalia a interface real sobre a cópia completa dos dados e não provoca falha | Equipe | ⬜ | |
 
 **Prioridade sugerida:** resolver os 🔴 antes de fechar a E4 e começar a E5. O INC-22 é o mais sensível, porque a RC03 sustenta decisões nas três personas.
 
@@ -461,6 +462,13 @@ Alguns itens não são correção de texto: dependem de uma decisão do grupo. V
 - **Problema:** três capturas não mostram a versão atual da interface: `TL02_acompanhar_o_treino` (eixo do gráfico de IoU médio com valores repetidos), `TL06_escolher_configuracoes_a_comparar` ("Outras imagens (3)" em vez de 2) e `TL07_E3_execucao_faltante_no_ciclo` (captura deslocada, com o topo cortado). Três pontos da interface divergem do modelo ou entre si: na TL01, o botão "Continuar" aparece ativo sem dataset de treino, enquanto a prevenção ativa da TL09 desabilita o botão; na TL03, o seletor de arquivos mostra "Browse… No files selected." em inglês; na TL08, a conclusão da validação mostra "5 imagens" numa sessão em que uma imagem foi deixada de fora.
 - **Sugestão:** desabilitar "Continuar" enquanto não houver dataset de treino (como na TL09), trocar o seletor de arquivos por um botão com texto em português, conferir a contagem de imagens da conclusão e refazer as três capturas, além das capturas da TL01, TL03 e TL08 afetadas pelos ajustes.
 
+### Criados em 16/11/2026 (Entrega 12)
+
+#### INC-71 🟠 Simulação prevista na E8 × avaliação sem simulação na E12
+- **Onde:** E8, "Delimitação do sistema interativo" (linha "integrações/dados simulados": IoU, acurácia e tempo de inferência como dados simulados), §3.1 (MQ04, "falha simulada") e §3.2 (texto de abertura e MU06, "processamento ... simulado no protótipo"; MU05, "recuperação de falha simulada").
+- **Problema:** a E11 implementou a interface sem partes simuladas, e a E12 ("O que está sendo avaliado") decidiu avaliar sobre a cópia completa dos dados do TCC, com métricas e fotos de campo reais, sem provocar falha na execução. A E8 passa a descrever uma simulação que não existe, e a MU05 (peso de 8% na §3.3) não pode ser verificada no teste com usuários da E14.
+- **Sugestão:** na E8, reescrever a linha "integrações/dados simulados" (nada é simulado; o teste usa uma cópia dos dados do TCC); trocar "processamento simulado" por "tempo de processamento" na §3.2 e na MU06; marcar a MU05 e a parte de falha da MQ04 como verificadas só na inspeção da E13 (ou retirá-las da E14) e redistribuir o peso da §3.3; registrar no "Histórico de revisões" da E8.
+
 ## Histórico deste arquivo
 
 | Data | Alteração | Responsável |
@@ -498,3 +506,4 @@ Alguns itens não são correção de texto: dependem de uma decisão do grupo. V
 | 16/11/2026 | INC-63: exportação do vídeo segmentado (MP4) adotada na implementação da E11; demais exportações continuam fora até a E7 | Equipe (com apoio do Claude) |
 | 16/11/2026 | Entrega 11: INC-59 resolvido (protótipo implementado com legenda binária, "sem métricas" e métricas só no conjunto de teste); criado INC-70 (capturas desatualizadas e ajustes na interface) | Equipe (com apoio do Claude) |
 | 16/11/2026 | INC-70 descartado por decisão da equipe (capturas e interface mantidas); Entrega 11 concluída | Equipe (com apoio do Claude) |
+| 16/11/2026 | Entrega 12, "O que está sendo avaliado": criado INC-71 (simulação prevista na E8 × avaliação sem simulação na E12) | Equipe (com apoio do Claude) |

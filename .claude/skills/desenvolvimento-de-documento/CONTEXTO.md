@@ -1,6 +1,6 @@
 # Contexto atual do projeto
 
-**Última atualização:** 15/11/2026
+**Última atualização:** 16/11/2026
 
 Este arquivo resume o estado do projeto para a IA e para a equipe. Ele **aponta** para onde cada decisão está registrada e não substitui as entregas. Se houver diferença entre este arquivo e uma entrega, a entrega e o `RASTREABILIDADE.md` valem, e este arquivo deve ser corrigido.
 
@@ -80,13 +80,15 @@ Nos mapas individuais da E9, a numeração por letras (A1, A1.1…) é provisór
 | E9 | 🟩 | Cenários de interação CI01–CI03 encadeados (CI03 cria a configuração candidata → CI01 valida em campo → CI02 compara as candidatas); conversas U:/D: (§2); mapa consolidado O01–O10 (§3.2); esquema de signos (§4); a Síntese lista, para cada MoLIC, os objetivos, as rupturas (com PP/PA/AL/RA/CE) e os signos obrigatórios |
 | E10 | 🟩 | M01 (Tiago), M02 (Henrique) e M03 (Mateus) com leitura e checklist; cenas reusadas entre diagramas; consolidação (O05.1 × O03.1, O06.2 vale para a P02 [H], O08 único com tipo de conclusão); “Preparação para o Figma” lista 9 telas com estados de feedback e erro |
 | E11 | 🟩 | Interface implementada no TCC (autorizada pelo professor no lugar do Figma), web local; commit d11c155 do repositório público; telas TL01–TL11 (TL11 Datasets fora dos MoLIC), 44 capturas em assets/11_figma/; INC-59 resolvido, INC-70 descartado |
-| E12–E14 | ⬜ | — |
+| E12 | 🟨 | "O que está sendo avaliado" escrito: a avaliação mede a interação, não o desempenho dos modelos; versão `d11c155`; cópia completa dos dados do TCC (métricas reais); fotos reais do Baja como imagens de campo (sem pessoas reconhecíveis ou com autorização); nada simulado; falha na execução não provocada no teste com usuários (MU05 só na inspeção da E13; INC-71); TL11 só na E13. DECIDE (seção A): heurística individual (E13) + teste de usabilidade em laboratório com pensar em voz alta `[H]` (E14); 3 participantes da Baja, não autores, códigos U01–U03; piloto fora da amostra recalibra a MU06; gravação de tela e áudio só com autorização `[H]`; datas `[?]` |
+| E13–E14 | ⬜ | — |
 
 ## Pendências abertas
 
 | ID | Entrega | Resumo |
 |---|---|---|
 | INC-59 | E6 → E11 | Rascunhos em papel usam classes ilustrativas e IoU para qualquer arquivo; em andamento: anotações da E6 já mostram a correção; redesenhar no protótipo da E11 (legenda binária, métricas só no conjunto de teste, estado "sem métricas"), sem redesenhar a E6 |
+| INC-71 | E8 × E12 | A E8 prevê processamento, métricas e falha simulados; a E12 avalia a interface real sobre a cópia completa dos dados e não provoca falha (MU05 sem verificação na E14) |
 
 Resolvidas em 14/11/2026: INC-53, 54, 55 e 61 (diagramas do Mateus e T08), INC-63 (exportação), 64 (E5 §3), 65 (CaSSeD), 66 (confiança do modelo) e 67 (aviso de inconclusivo).
 
