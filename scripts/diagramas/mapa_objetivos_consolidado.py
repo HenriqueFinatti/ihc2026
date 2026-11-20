@@ -6,108 +6,79 @@ from ihc_svg import Svg, N
 
 OUT = Path(__file__).resolve().parents[2] / "assets/09_modelo_conceitual/mapa_objetivos.svg"
 
+# Objetivos consolidados (IDs reutilizados nas Entregas 10 a 12), escritos como resultados.
+O = {
+    "O01": ["O01. Configuração de", "treino definida", "e nomeada"],
+    "O02": ["O02. Nova configuração", "treinada, disponível", "e avaliada no", "conjunto de teste"],
+    "O03": ["O03. Imagens", "segmentadas com as", "configurações", "escolhidas"],
+    "O04": ["O04. Imagens", "avaliadas, com a", "origem de cada", "problema"],
+    "O05": ["O05. Saber qual", "configuração delimita", "melhor a trilha nas", "mesmas imagens"],
+    "O06": ["O06. Saber como as", "configurações se", "saem no conjunto", "de teste"],
+    "O07": ["O07. Entender o que", "as métricas e a", "diferença indicam"],
+    "O08": ["O08. Conclusão", "registrada junto", "da análise"],
+    "O09": ["O09. Recomendação", "apresentada à", "coordenação"],
+    "O10": ["O10. Decisão da", "coordenação", "registrada"],
+}
+
+
+def d(k):
+    return N(O[k])
+
+
+def i(k):
+    return N(O[k], kind="indireto")
+
+
 s = Svg("Mapa de objetivos consolidado — Equipe 17",
         "Mapa de objetivos consolidado das personas P01, P02 e P03, a partir dos mapas individuais dos "
-        "cenários CI01, CI02 e CI03. Objetivo geral, quatro grupos, objetivos O01 a O10 e seus subtópicos. "
-        "Caixas tracejadas são objetivos alcançados fora do sistema.")
+        "cenários CI01, CI02 e CI03. Objetivo geral, objetivo final de cada persona e objetivos "
+        "instrumentais O01 a O10, diretos e indiretos, escritos como resultados desejados. Caixas "
+        "tracejadas são objetivos alcançados fora do sistema.")
 s.header("Mapa de objetivos consolidado — Equipe 17",
          "Henrique Finatti Silveira Belo Trebbi · Mateus Marana Assuena · Tiago Fagundes dos Santos · "
          "P01, P02 e P03 · CI01–CI03 · Proposta [H]")
 
-y = s.section(100, "Visão geral")
-y = s.tree(N(["Escolher, com evidência, a configuração", "do modelo usada nos testes do Baja"]),
-           [N(["A. Preparar", "configurações"]),
-            N(["B. Executar e", "avaliar resultados"]),
-            N(["C. Comparar", "configurações"]),
-            N(["D. Concluir e", "decidir"])],
-           y, gap=36, pw=600) + 20
+y = s.section(100, "Objetivo geral e objetivos finais das personas")
+y = s.tree(N(["Configuração usada nos testes do Baja", "escolhida com evidência"], kind="final"),
+           [N(["P01. Equipe sabe se a", "configuração em uso", "pode continuar"], kind="final"),
+            N(["P02. Saber se a nova", "configuração melhora", "e qual seguir no", "próximo experimento"], kind="final"),
+            N(["P03. Configuração do", "ciclo escolhida e", "sustentada perante", "a coordenação"], kind="final")],
+           y, 80, 1360, gap=40, pw=600) + 20
 
-y = s.section(y, "Grupos A e B — preparar configurações; executar e avaliar resultados")
-ya = s.tree(N(["A. Preparar configurações"]),
-            [N(["O01. Definir uma", "configuração de", "treino (P02)"]),
-             N(["O02. Treinar o", "modelo (P02)"])],
-            y, 40, 600, gap=30, pw=420)
-yb = s.tree(N(["B. Executar e avaliar resultados"]),
-            [N(["Obter as entradas", "(imagens e vídeos)", "(P01, P02)"], dashed=True),
-             N(["O03. Executar a", "segmentação", "(P01, P02)"]),
-             N(["O04. Avaliar a", "segmentação de uma", "imagem (P01, P02)"])],
-            y, 660, 1400, gap=24, pw=460)
-y = max(ya, yb) + 20
+y = s.section(y, "Objetivos instrumentais diretos — P01 (Rafael)")
+y = s.tree(N(["P01. Equipe sabe se a configuração", "em uso pode continuar"], kind="final"),
+           [d("O04"), d("O05"), d("O08"),
+            N(["Grupo da", "equipe", "informado"], dashed=True)],
+           y, 160, 1280, gap=30, pw=560) + 20
 
-y = s.section(y, "Grupos C e D — comparar configurações; concluir e decidir")
-ya = s.tree(N(["C. Comparar configurações"]),
-            [N(["O05. Comparar", "configurações sobre a", "mesma entrada", "(P01, P02)"]),
-             N(["O06. Comparar o", "desempenho", "consolidado", "(P03, P02)"]),
-             N(["O07. Entender o", "que os números", "significam", "(P03, P02)"])],
-            y, 40, 760, gap=20, pw=460)
-yb = s.tree(N(["D. Concluir e decidir"]),
-            [N(["O08. Registrar a", "conclusão", "(P01, P02, P03)"]),
-             N(["O09. Apresentar a", "recomendação à", "coordenação (P03)"]),
-             N(["O10. Registrar a", "decisão da", "coordenação (P03)"])],
-            y, 820, 1400, gap=16, pw=460)
-y = max(ya, yb) + 20
-y = s.tree(N(["Fora do sistema (grupos C e D)"], dashed=True),
-           [N(["Pedir execução,", "conferência ou validação", "a um colega (P02, P03)"], dashed=True),
-            N(["Comunicar as", "conclusões ao grupo", "(P01)"], dashed=True),
-            N(["Discutir a decisão", "na reunião de", "coordenação (P02, P03)"], dashed=True)],
-           y, 160, 1280, gap=40, pw=520) + 20
+y = s.section(y, "Objetivos instrumentais diretos — P03 (Larissa)")
+y = s.tree(N(["P03. Configuração do ciclo escolhida", "e sustentada perante a coordenação"], kind="final"),
+           [d("O06"), d("O08"), d("O10")],
+           y, 280, 1160, gap=40, pw=560) + 20
 
-y = s.section(y, "Desdobramento dos objetivos em subtópicos")
-ya = s.tree(N(["O01. Definir uma configuração", "de treino"]),
-            [N(["O01.1. Escolher o", "modelo e os", "parâmetros"]),
-             N(["O01.2. Nomear a", "configuração"])],
-            y, 40, 640, gap=30, pw=440)
-yb = s.tree(N(["O02. Treinar o modelo"]),
-            [N(["O02.1. Acompanhar", "o treino"]),
-             N(["O02.2. Conferir o", "resultado do treino"])],
-            y, 700, 1400, gap=30, pw=420)
-y = max(ya, yb) + 20
-ya = s.tree(N(["O03. Executar a segmentação"]),
-            [N(["O03.1. Enviar as", "entradas e escolher", "as configurações"]),
-             N(["O03.2. Acompanhar", "o processamento"])],
-            y, 40, 640, gap=30, pw=420)
-yb = s.tree(N(["O04. Avaliar a segmentação", "de uma imagem"]),
-            [N(["O04.1. Ver o", "resultado sobre", "a imagem"]),
-             N(["O04.2. Conferir se", "há métricas"]),
-             N(["O04.3. Registrar a", "avaliação da", "imagem"])],
-            y, 700, 1400, gap=24, pw=460)
-y = max(ya, yb) + 20
-ya = s.tree(N(["O05. Comparar configurações", "sobre a mesma entrada"]),
-            [N(["O05.1. Escolher as", "configurações a", "comparar"]),
-             N(["O05.2. Comparar na", "mesma imagem", "e região"])],
-            y, 40, 560, gap=30, pw=440)
-yb = s.tree(N(["O06. Comparar o desempenho consolidado"]),
-            [N(["O06.1. Escolher as", "configurações"]),
-             N(["O06.2. Conferir se", "a comparação", "é válida"]),
-             N(["O06.3. Ler o", "desempenho de cada", "configuração"]),
-             N(["O06.4. Consultar", "a matriz de", "confusão"])],
-            y, 620, 1400, gap=16, pw=480)
-y = max(ya, yb) + 20
-ya = s.tree(N(["O07. Entender o que os", "números significam"]),
-            [N(["O07.1. Entender", "um termo"]),
-             N(["O07.2. Julgar a", "diferença entre", "configurações"])],
-            y, 40, 640, gap=30, pw=420)
-yb = s.tree(N(["O08. Registrar a conclusão"]),
-            [N(["O08.1. Informar a", "conclusão"]),
-             N(["O08.2. Conferir a", "conclusão"])],
-            y, 700, 1400, gap=30, pw=420)
-y = max(ya, yb) + 20
-y = s.tree(N(["O09. Apresentar a recomendação à coordenação"]),
-           [N(["O09.1. Retomar", "a análise"]),
-            N(["O09.2. Responder a uma", "dúvida (reutiliza O07.2)"])],
-           y, 280, 1160, gap=60, pw=560) + 20
+y = s.section(y, "Objetivos instrumentais diretos — P02 (Andreia)")
+y = s.tree(N(["P02. Saber se a nova configuração melhora", "e qual seguir no próximo experimento"], kind="final"),
+           [d("O02"), d("O05"), d("O06"), d("O08"),
+            N(["Validação em", "campo pedida e", "conclusão levada", "à reunião"], dashed=True)],
+           y, 40, 1400, gap=16, pw=640) + 20
 
-y = s.section(y, "Legenda")
-s.box(140, y, 180, 50, ["objetivo"])
-s.box(360, y, 180, 50, ["fora do sistema"], dashed=True)
-s.text(480, y + 22, "Caixa contínua: objetivo apoiado pelo sistema, com ID O01–O10 (subtópicos O01.1…), usado nas Entregas 10 e 11.",
-       size=14, anchor="start")
-s.text(480, y + 44, "Caixa tracejada: objetivo alcançado entre pessoas, fora do sistema (RQ09); não recebe ID.",
-       size=14, anchor="start")
-y = s.note(y + 80, ["Entre parênteses: personas que têm o objetivo. Correspondência com os mapas individuais na seção 3.2 da Entrega 9.",
-                    "O05 reúne T03 (P01) e T07 (P02); O08 reúne as conclusões da validação (P01), do experimento (P02) e a recomendação (P03).",
-                    "O10 não tem subtópicos: é um único diálogo.",
-                    "[H]: proposta derivada de proto-personas, a revisar depois da coleta da Entrega 7."]) + 20
+y = s.section(y, "Objetivos instrumentais indiretos")
+y1 = s.tree(d("O04"), [i("O03"), N(["Entradas obtidas", "(imagens e vídeos)"], dashed=True, kind="indireto")],
+            y, 40, 520, gap=20, pw=300)
+y2 = s.tree(d("O05"), [i("O03")], y, 580, 860, gap=20, pw=260)
+y3 = s.tree(d("O02"), [i("O01")], y, 920, 1180, gap=20, pw=240)
+y = max(y1, y2, y3) + 20
+y1 = s.tree(d("O06"), [i("O07"), N(["Execuções e", "avaliações pedidas", "a um colega"], dashed=True, kind="indireto")],
+            y, 40, 620, gap=20, pw=300)
+y2 = s.tree(d("O10"), [i("O09"), N(["Decisão", "discutida na", "reunião"], dashed=True, kind="indireto")],
+            y, 720, 1300, gap=20, pw=300)
+y = max(y1, y2) + 20
+
+y = s.goal_legend(y, [
+    "Um mesmo objetivo pode servir a mais de uma persona (O05, O06 e O08) ou a mais de um objetivo (O03 serve a O04 e a O05); ele aparece em cada lugar.",
+    "O05 reúne T03 (P01) e T07 (P02); O08 reúne as conclusões da validação (P01), do experimento (P02) e a recomendação (P03). O07 também apoia O09.",
+    "Os IDs O01–O10 e os subtópicos O01.1… (tabela da seção 3.2 da Entrega 9) são os usados nas Entregas 10 a 12.",
+    "[H]: proposta derivada de proto-personas, a revisar depois da coleta da Entrega 7."])
 
 s.save(OUT, y)
 print(OUT.name, y)

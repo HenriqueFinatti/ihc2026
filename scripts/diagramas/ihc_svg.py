@@ -50,13 +50,18 @@ class Svg:
         return y + 20 * len(lines)
 
     # ------------------------------------------------------------ HTA
-    def box(self, cx, y, w, h, lines, plan=None, op=False, dashed=False):
+    def box(self, cx, y, w, h, lines, plan=None, op=False, dashed=False, kind=None):
+        """kind (mapa de objetivos da Entrega 9): "final" = borda grossa;
+        "indireto" = cantos arredondados e fundo cinza; None = borda simples."""
         self._bid += 1
         x = cx - w / 2
         dash = ' stroke-dasharray="8 5"' if dashed else ""
+        sw = "3.4" if kind == "final" else "1.6"
+        fill = "#ececec" if kind == "indireto" else "white"
+        rx = ' rx="16"' if kind == "indireto" else ""
         self.out.append(f'<g data-box="b{self._bid}">')
-        self.out.append(f'<rect x="{x:.1f}" y="{y}" width="{w:.1f}" height="{h}" fill="white" '
-                        f'stroke="#333" stroke-width="1.6"{dash} class="frame"/>')
+        self.out.append(f'<rect x="{x:.1f}" y="{y}" width="{w:.1f}" height="{h}" fill="{fill}"{rx} '
+                        f'stroke="#333" stroke-width="{sw}"{dash} class="frame"/>')
         for i, s in enumerate(lines):
             self.text(cx, y + 26 + 23 * i, s)
         if plan:
@@ -77,7 +82,7 @@ class Svg:
         cx = (x0 + x1) / 2
         ph = self._height([parent])
         self.box(cx, y, pw, ph, parent["lines"], parent.get("plan"), parent.get("op", False),
-                 parent.get("dashed", False))
+                 parent.get("dashed", False), parent.get("kind"))
         n = len(children)
         cw = (x1 - x0 - gap * (n - 1)) / n
         ch = self._height(children)
@@ -88,8 +93,22 @@ class Svg:
         for c, node in zip(centers, children):
             self.path(f"M{c:.1f} {bar} V{cy}", arrow=True)
             self.box(c, cy, cw, ch, node["lines"], node.get("plan"), node.get("op", False),
-                     node.get("dashed", False))
+                     node.get("dashed", False), node.get("kind"))
         return cy + ch + 14
+
+    def goal_legend(self, y, notes):
+        """Legenda dos mapas de objetivos (Entrega 9) e notas abaixo dela."""
+        y = self.section(y, "Legenda")
+        items = [("final", "objetivo final", False), (None, "instrumental direto", False),
+                 ("indireto", "instrumental indireto", False), (None, "fora do sistema", True)]
+        for i, (kind, label, dashed) in enumerate(items):
+            self.box(150 + i * 250, y, 220, 50, [label], dashed=dashed, kind=kind)
+        y = self.note(y + 86, [
+            "Objetivo final: o que a persona quer alcançar no fim. Instrumental direto: resultado que leva diretamente ao objetivo final.",
+            "Instrumental indireto: resultado que serve a outro objetivo instrumental. Caixa tracejada: objetivo alcançado entre pessoas, fora do sistema (RQ09).",
+            "Cada caixa é um resultado desejado, não um passo da interação; os passos ficam nos diálogos (subtópicos) da seção 2 e na tabela de subtópicos.",
+        ] + notes)
+        return y + 20
 
     def hta_legend(self, y):
         y = self.section(y, "Legenda (Barbosa e Silva, 2010)")
@@ -219,8 +238,9 @@ class Svg:
                 f.write(self.render(height, viewbox_y=y0, view_h=y1 - y0, label=label))
 
 
-def N(lines, plan=None, op=False, dashed=False):
+def N(lines, plan=None, op=False, dashed=False, kind=None):
     """Nó de HTA: lines = linhas do rótulo; plan = plano abreviado; op = operação (folha).
     dashed = contorno tracejado (usado no mapa de objetivos da Entrega 9 para objetivos
-    alcançados fora do sistema)."""
-    return {"lines": lines, "plan": plan, "op": op, "dashed": dashed}
+    alcançados fora do sistema). kind = tipo de objetivo no mapa de objetivos da Entrega 9:
+    "final", "direto" (instrumental direto) ou "indireto" (instrumental indireto)."""
+    return {"lines": lines, "plan": plan, "op": op, "dashed": dashed, "kind": kind}

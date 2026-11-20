@@ -347,7 +347,7 @@ Cada tela traz o responsável, o objetivo do usuário, os signos principais (Ent
 
 **Responsável:** Equipe (tela de apoio, fora dos MoLIC)  
 **Objetivo do usuário:** Preparar os dados de treino e de teste e avaliar no conjunto de teste as configurações que ainda não foram avaliadas.  
-**Signos principais:** Datasets de treino; conjunto de teste; situação da configuração (sem avaliação no conjunto de teste).  
+**Signos principais:** Datasets de treino; conjunto de teste; avaliação no conjunto de teste (sem avaliação no conjunto de teste).  
 **Origem no MoLIC:** Nenhuma cena. A tela existe porque sem ela não há dados para treinar nem para calcular as métricas (ver "Diferenças em relação aos MoLIC").
 
 ![TL11 — Estado de cada dataset, montagem do dataset e avaliação no conjunto de teste.](../assets/11_figma/TL11_datasets/TL11_datasets.png)

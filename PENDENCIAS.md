@@ -522,3 +522,4 @@ Alguns itens não são correção de texto: dependem de uma decisão do grupo. V
 | 20/11/2026 | Entrega 12, seção B: criado INC-72 (amostra e critérios das metas da E8 × um participante por perfil) | Equipe (com apoio do Claude) |
 | 20/11/2026 | Entrega 12 concluída; criado INC-73 (instrumentos E.2 a E.5 não escritos) | Equipe (com apoio do Claude) |
 | 20/11/2026 | Parecer do professor sobre a E8 aplicado (delimitação, §1 a §4); INC-71 e INC-72 resolvidos | Equipe (com apoio do Claude) |
+| 20/11/2026 | Parecer do professor sobre a E9 aplicado (mapas de objetivos, CI02, CI03, diálogos e esquema de signos); E11, TL11: signo "avaliação no conjunto de teste". Nenhuma pendência nova | Equipe (com apoio do Claude) |
