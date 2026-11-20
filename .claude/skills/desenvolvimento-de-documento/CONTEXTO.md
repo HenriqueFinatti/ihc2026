@@ -1,6 +1,6 @@
 # Contexto atual do projeto
 
-**Última atualização:** 16/11/2026
+**Última atualização:** 20/11/2026
 
 Este arquivo resume o estado do projeto para a IA e para a equipe. Ele **aponta** para onde cada decisão está registrada e não substitui as entregas. Se houver diferença entre este arquivo e uma entrega, a entrega e o `RASTREABILIDADE.md` valem, e este arquivo deve ser corrigido.
 
@@ -62,6 +62,9 @@ Atualize este arquivo quando o status de uma entrega mudar, quando a equipe toma
 | CI01–CI03 | Cenários de interação (CI01 → P01, CI02 → P03, CI03 → P02) | E9 §1 |
 | O01–O10 | Objetivos do mapa consolidado (subtópicos O01.1…), agrupados em A (preparar configurações), B (executar e avaliar), C (comparar) e D (concluir e decidir) | E9 §3.2 |
 | M01–M03 | Diagramas MoLIC previstos (M01 Tiago/CI01, M02 Henrique/CI02, M03 Mateus/CI03) | E9, Síntese; E10 |
+| QA01–QA13 | Perguntas de avaliação (QA09–QA13 só na inspeção da E13) | E12, seção B |
+| UT04 | Tarefa de teste da T08 (perfil P02), criada na E12; UT01–UT03 vêm da E5 | E12, seções B e D |
+| U01–U03 | Participantes do teste com usuários: U01 perfil P01, U02 perfil P02, U03 perfil P03 | E12, seções A, B e C |
 
 Nos mapas individuais da E9, a numeração por letras (A1, A1.1…) é provisória; os IDs definitivos são O01–O10.
 
@@ -80,7 +83,7 @@ Nos mapas individuais da E9, a numeração por letras (A1, A1.1…) é provisór
 | E9 | 🟩 | Cenários de interação CI01–CI03 encadeados (CI03 cria a configuração candidata → CI01 valida em campo → CI02 compara as candidatas); conversas U:/D: (§2); mapa consolidado O01–O10 (§3.2); esquema de signos (§4); a Síntese lista, para cada MoLIC, os objetivos, as rupturas (com PP/PA/AL/RA/CE) e os signos obrigatórios |
 | E10 | 🟩 | M01 (Tiago), M02 (Henrique) e M03 (Mateus) com leitura e checklist; cenas reusadas entre diagramas; consolidação (O05.1 × O03.1, O06.2 vale para a P02 [H], O08 único com tipo de conclusão); “Preparação para o Figma” lista 9 telas com estados de feedback e erro |
 | E11 | 🟩 | Interface implementada no TCC (autorizada pelo professor no lugar do Figma), web local; commit d11c155 do repositório público; telas TL01–TL11 (TL11 Datasets fora dos MoLIC), 44 capturas em assets/11_figma/; INC-59 resolvido, INC-70 descartado |
-| E12 | 🟨 | "O que está sendo avaliado" escrito: a avaliação mede a interação, não o desempenho dos modelos; versão `d11c155`; cópia completa dos dados do TCC (métricas reais); fotos reais do Baja como imagens de campo (sem pessoas reconhecíveis ou com autorização); nada simulado; falha na execução não provocada no teste com usuários (MU05 só na inspeção da E13; INC-71); TL11 só na E13. DECIDE (seção A): heurística individual (E13) + teste de usabilidade em laboratório com pensar em voz alta `[H]` (E14); 3 participantes da Baja, não autores, códigos U01–U03; piloto fora da amostra recalibra a MU06; gravação de tela e áudio só com autorização `[H]`; datas `[?]` |
+| E12 | 🟩 | "O que está sendo avaliado" escrito: a avaliação mede a interação, não o desempenho dos modelos; versão `d11c155`; cópia completa dos dados do TCC (métricas reais); fotos reais do Baja como imagens de campo (sem pessoas reconhecíveis ou com autorização); nada simulado; falha na execução não provocada no teste com usuários (MU05 só na inspeção da E13; INC-71); TL11 só na E13. DECIDE (seção A): heurística individual (E13) + teste de usabilidade em laboratório com pensar em voz alta `[H]` (E14); 3 participantes da Baja, não autores, códigos U01–U03; piloto fora da amostra recalibra a MU06; gravação de tela e áudio só com autorização `[H]`; datas `[?]`. Seção B: QA01–QA13 (QA09–QA13 só na inspeção; tempo, ajudas como meta própria, facilidade e SUS retirados por decisão da equipe em 20/11: MU06, MU07, MU09 e MU10 não são verificadas); um participante por perfil (U01 = P01 faz UT01 e UT02; U02 = P02 faz UT02 e UT04; U03 = P03 faz UT03); UT04 nova, para a T08; critérios lidos caso a caso (parecer da E8, item 5; INC-72); questionário de compreensão (MU08) em duas versões, U01 (máscara e foto sem métricas) e U03 (valor de referência e diferença); sessão inteira com pensar em voz alta. Seção C: perfis e critérios de inclusão da E7 (U01 = A02, U02 = A03, U03 = A01); proxy da E7 para o mesmo perfil, como limitação; exclusão de autores, de quem fez o piloto e de quem já usou a interface `[H]`; laboratório, até 60 min `[H]`; computador dos modelos `[?]`; piloto fora da amostra depois das correções da E13. Seção D: cenários neutros de UT01–UT04, sem tempo-limite; UT04 em duas partes (treino rápido do DeepLabV3+ só com o Freiburg Forest; depois, dizer o estado do treino); preparação de cada participante feita pelo moderador na interface; 3 fotos `[H]`; RAST §3 "Tarefa no teste" preenchida. Seção E: instrumentos dentro da E12 (E.1 convite e termo, E.2 roteiro, E.3 planilha, E.4 questionário de compreensão, E.5 formulário heurístico); modelos de instrumentos/ intactos; E.1 escrita (convite retirado pela equipe); E.2–E.5 pendentes (INC-73). Seção F: definições de sucesso total/parcial/falha, erro, erro crítico (MU04), dúvida, ajuda e abandono `[H]`; tempo e satisfação não medidos (só duração da sessão e falas); codificação por MQ e tipo, feita por moderador e anotador; severidade 0–4 com falha/erro crítico ≥ 3; QA atingida ou não por participante |
 | E13–E14 | ⬜ | — |
 
 ## Pendências abertas
@@ -89,6 +92,8 @@ Nos mapas individuais da E9, a numeração por letras (A1, A1.1…) é provisór
 |---|---|---|
 | INC-59 | E6 → E11 | Rascunhos em papel usam classes ilustrativas e IoU para qualquer arquivo; em andamento: anotações da E6 já mostram a correção; redesenhar no protótipo da E11 (legenda binária, métricas só no conjunto de teste, estado "sem métricas"), sem redesenhar a E6 |
 | INC-71 | E8 × E12 | A E8 prevê processamento, métricas e falha simulados; a E12 avalia a interface real sobre a cópia completa dos dados e não provoca falha (MU05 sem verificação na E14) |
+| INC-72 | E8 × E12 | Metas da E8 em "X de 3" e mediana; a E12 usa um participante por perfil, a UT04 e critérios por participante; MQ03 ainda depende do aviso retirado |
+| INC-73 | E12 | Instrumentos E.2 a E.5 (roteiro, planilha, questionário de compreensão U01/U03, formulário heurístico) não escritos; necessários antes da E13 e do piloto da E14 |
 
 Resolvidas em 14/11/2026: INC-53, 54, 55 e 61 (diagramas do Mateus e T08), INC-63 (exportação), 64 (E5 §3), 65 (CaSSeD), 66 (confiança do modelo) e 67 (aviso de inconclusivo).
 

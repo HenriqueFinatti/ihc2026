@@ -112,6 +112,8 @@ Alguns itens não são correção de texto: dependem de uma decisão do grupo. V
 | INC-69 | 🟠 | E7 | Formulário on-line do I02 ainda na versão anterior à revisão de 15/11 (caminhos da 2.3, nova seção 9, 2.1, 3.2, 4.1, 4.4, 5.1, 6.2–6.4, termo); e-mails institucionais de contato marcados `[?]` nos termos | Tiago Fagundes dos Santos (formulário); Equipe (e-mails) | 🟨 | 15/11: e-mails institucionais dos três responsáveis incluídos nos termos da A01, I01, I02 e I03. **Falta:** replicar as mudanças do I02 (inclusive o termo da seção 1) no Google Forms. |
 | INC-70 | 🟠 | E11 | Três capturas desatualizadas e três ajustes pendentes na interface implementada | Equipe | ➖ | 16/11: **descartado por decisão da equipe:** a interface e as capturas ficam como estão. As diferenças estão descritas nas legendas da E11 e a da TL01 está registrada no checklist da E11. |
 | INC-71 | 🟠 | E8 | A E8 prevê processamento, métricas e falha simulados, mas a E12 avalia a interface real sobre a cópia completa dos dados e não provoca falha | Equipe | ⬜ | |
+| INC-72 | 🟠 | E8 | Metas da E8 em "X de 3 participantes" e mediana, com tarefas de personas diferentes; a E12 usa um participante por perfil, a nova UT04 para a T08 e critérios lidos caso a caso, e não verifica MU06, MU07, MU09 e MU10 | Equipe | ⬜ | |
+| INC-73 | 🟠 | E12 | Instrumentos E.2 a E.5 (roteiro do moderador, planilha de observação, questionário de compreensão em duas versões e formulário heurístico) não foram escritos | Equipe | ⬜ | |
 
 **Prioridade sugerida:** resolver os 🔴 antes de fechar a E4 e começar a E5. O INC-22 é o mais sensível, porque a RC03 sustenta decisões nas três personas.
 
@@ -469,6 +471,16 @@ Alguns itens não são correção de texto: dependem de uma decisão do grupo. V
 - **Problema:** a E11 implementou a interface sem partes simuladas, e a E12 ("O que está sendo avaliado") decidiu avaliar sobre a cópia completa dos dados do TCC, com métricas e fotos de campo reais, sem provocar falha na execução. A E8 passa a descrever uma simulação que não existe, e a MU05 (peso de 8% na §3.3) não pode ser verificada no teste com usuários da E14.
 - **Sugestão:** na E8, reescrever a linha "integrações/dados simulados" (nada é simulado; o teste usa uma cópia dos dados do TCC); trocar "processamento simulado" por "tempo de processamento" na §3.2 e na MU06; marcar a MU05 e a parte de falha da MQ04 como verificadas só na inspeção da E13 (ou retirá-las da E14) e redistribuir o peso da §3.3; registrar no "Histórico de revisões" da E8.
 
+#### INC-72 🟠 Amostra e critérios das metas da E8 × um participante por perfil na E12
+- **Onde:** E8 §3.2 (texto de abertura; MU01–MU03, MU06, MU08, MU09 e MU11 em "≥ 2 de 3" ou mediana; MU11 condicionada à falta de tarefa de teste; MU10 com o 68 como fronteira) e §3.1 (MQ03, "quando o aviso aparece").
+- **Problema:** o parecer da E8 (item 5) pede que cada meta diga qual perfil produz evidência válida. A E12 (seção B) decidiu um participante por perfil (U01 = P01, U02 = P02, U03 = P03), criou a UT04 para a T08 e passou a ler os critérios por participante. A MU11 também incluía retomar o treino após falta de memória, que não pode ser provocada e ficou só na inspeção. A MQ03 ainda depende do aviso de diferença pequena, retirado da interface (INC-67). Em 20/11/2026, a equipe retirou da E12 as perguntas de tempo, pedidos de ajuda, facilidade por tarefa e SUS: MU06, MU07, MU09 e MU10 deixam de ser verificadas. A E12 (seção C) também admite um participante aproximado de fora da Baja quando faltar alguém de um perfil, enquanto a E8 §3.2 define a população só como integrantes da Baja.
+- **Sugestão:** ao aplicar o parecer da E8, reescrever as metas MU com o perfil e o critério por participante da E12 (QA01–QA08), tirar da MU11 a retomada após falta de memória, reescrever a MQ03 sem o aviso e retirar da E8 (ou marcar como não verificadas) as metas MU06, MU07, MU09 e MU10, revendo a priorização da §3.3; na §3.2, prever o participante aproximado da E12 como limitação.
+
+#### INC-73 🟠 Instrumentos da E12 incompletos
+- **Onde:** E12, seção E (tabela de instrumentos) e checklist ("Instrumentos estão prontos antes da Entrega 13/14").
+- **Problema:** a E12 foi concluída só com o termo de consentimento (E.1). A tabela da seção E e a seção F apontam para o roteiro do moderador (E.2), a planilha de observação (E.3), o questionário de compreensão nas versões do U01 e do U03 (E.4) e o formulário de avaliação heurística (E.5), que não existem. O questionário é a evidência das QA03 e QA06 (MU08).
+- **Sugestão:** escrever E.2 a E.5 antes da Entrega 13 (E.5) e do piloto da Entrega 14 (E.2 a E.4), seguindo as definições da seção F; marcar o item do checklist.
+
 ## Histórico deste arquivo
 
 | Data | Alteração | Responsável |
@@ -507,3 +519,5 @@ Alguns itens não são correção de texto: dependem de uma decisão do grupo. V
 | 16/11/2026 | Entrega 11: INC-59 resolvido (protótipo implementado com legenda binária, "sem métricas" e métricas só no conjunto de teste); criado INC-70 (capturas desatualizadas e ajustes na interface) | Equipe (com apoio do Claude) |
 | 16/11/2026 | INC-70 descartado por decisão da equipe (capturas e interface mantidas); Entrega 11 concluída | Equipe (com apoio do Claude) |
 | 16/11/2026 | Entrega 12, "O que está sendo avaliado": criado INC-71 (simulação prevista na E8 × avaliação sem simulação na E12) | Equipe (com apoio do Claude) |
+| 20/11/2026 | Entrega 12, seção B: criado INC-72 (amostra e critérios das metas da E8 × um participante por perfil) | Equipe (com apoio do Claude) |
+| 20/11/2026 | Entrega 12 concluída; criado INC-73 (instrumentos E.2 a E.5 não escritos) | Equipe (com apoio do Claude) |
