@@ -58,7 +58,7 @@ Atualize este arquivo quando o status de uma entrega mudar, quando a equipe toma
 | Família | Significado | Onde |
 |---|---|---|
 | MQ01–MQ07 | Metas qualitativas de usabilidade | E8 §3.1 |
-| MU01–MU11 | Metas quantitativas de usabilidade | E8 §3.2 |
+| MU01–MU05, MU08, MU11 | Metas quantitativas de usabilidade (MU06, MU07, MU09 e MU10 retiradas em 20/11/2026) | E8 §3.2 |
 | CI01–CI03 | Cenários de interação (CI01 → P01, CI02 → P03, CI03 → P02) | E9 §1 |
 | O01–O10 | Objetivos do mapa consolidado (subtópicos O01.1…), agrupados em A (preparar configurações), B (executar e avaliar), C (comparar) e D (concluir e decidir) | E9 §3.2 |
 | M01–M03 | Diagramas MoLIC previstos (M01 Tiago/CI01, M02 Henrique/CI02, M03 Mateus/CI03) | E9, Síntese; E10 |
@@ -79,7 +79,7 @@ Nos mapas individuais da E9, a numeração por letras (A1, A1.1…) é provisór
 | E5 | 🟦 | HTA/GOMS/CTT de T01–T08; requisitos RQ01–RQ09; tarefas de teste UT01–UT03. Parecer aplicado em 15/11/2026: passos condicionais com colchetes (`[2.3.3]` na T05, `[3.3.2]` na T03, `[4.2]` na T07), julgamentos que podem terminar como inconclusivos, desfecho da execução (sucesso ou falha) na T03 e na T07 e conclusão guardada só na sessão (histórico depende da H08) |
 | E6 | 🟦 | Fluxos PF01–PF03 do protótipo em papel. Parecer aplicado em 15/11/2026: fotos mantidas como versão simulada e revisão por anotações (`assets/06_prototipos/anotacoes/`, gerador `scripts/prototipos/anotacoes.py`), com estados P01-E, P01-P, P02-S, P03-I, P03-C e P03-F; seleção múltipla com execução em fila; P03 dividida em comparação na mesma imagem (T03/T07) e no conjunto de teste (T04); conclusão registrada pela pessoa. O gerador `wireframes.py` não foi incorporado |
 | E7 | 🟦 | Planejamento da coleta (I01 entrevista, I02 questionário em https://forms.gle/pAMyXCdebYo9aHmq9, I03 investigação contextual). Os estados das hipóteses só mudam depois da coleta. Parecer aplicado em 15/11/2026: grupos separados (I02: A segmentação, O outros dados, T acompanha os testes; I01: G e D por triagem na 1.2), só o público principal muda hipóteses, critérios de H02/H05/H07/H08 revistos, I03 sem gravação de tela. Formulário on-line a atualizar (INC-69); e-mails de contato já nos termos |
-| E8 | 🟩 | Características da plataforma (§1), princípios (§2), metas MQ01–MQ07 e MU01–MU11 (§3) |
+| E8 | 🟦 | Características da plataforma (§1), princípios (§2), metas MQ01–MQ07 e MU (§3). Parecer aplicado em 20/11/2026: nada simulado; princípios de negócio N1–N5 e de interface I1–I5; metas por perfil (U01–U03), falhas só na inspeção; priorização pelas metas de Nielsen (aprendizado 30, erros 30, memorização 15, satisfação 15, eficiência 10); ciclo de Mayhew com grupos G1–G3 (§4) |
 | E9 | 🟩 | Cenários de interação CI01–CI03 encadeados (CI03 cria a configuração candidata → CI01 valida em campo → CI02 compara as candidatas); conversas U:/D: (§2); mapa consolidado O01–O10 (§3.2); esquema de signos (§4); a Síntese lista, para cada MoLIC, os objetivos, as rupturas (com PP/PA/AL/RA/CE) e os signos obrigatórios |
 | E10 | 🟩 | M01 (Tiago), M02 (Henrique) e M03 (Mateus) com leitura e checklist; cenas reusadas entre diagramas; consolidação (O05.1 × O03.1, O06.2 vale para a P02 [H], O08 único com tipo de conclusão); “Preparação para o Figma” lista 9 telas com estados de feedback e erro |
 | E11 | 🟩 | Interface implementada no TCC (autorizada pelo professor no lugar do Figma), web local; commit d11c155 do repositório público; telas TL01–TL11 (TL11 Datasets fora dos MoLIC), 44 capturas em assets/11_figma/; INC-59 resolvido, INC-70 descartado |
@@ -91,10 +91,8 @@ Nos mapas individuais da E9, a numeração por letras (A1, A1.1…) é provisór
 | ID | Entrega | Resumo |
 |---|---|---|
 | INC-59 | E6 → E11 | Rascunhos em papel usam classes ilustrativas e IoU para qualquer arquivo; em andamento: anotações da E6 já mostram a correção; redesenhar no protótipo da E11 (legenda binária, métricas só no conjunto de teste, estado "sem métricas"), sem redesenhar a E6 |
-| INC-71 | E8 × E12 | A E8 prevê processamento, métricas e falha simulados; a E12 avalia a interface real sobre a cópia completa dos dados e não provoca falha (MU05 sem verificação na E14) |
-| INC-72 | E8 × E12 | Metas da E8 em "X de 3" e mediana; a E12 usa um participante por perfil, a UT04 e critérios por participante; MQ03 ainda depende do aviso retirado |
 | INC-73 | E12 | Instrumentos E.2 a E.5 (roteiro, planilha, questionário de compreensão U01/U03, formulário heurístico) não escritos; necessários antes da E13 e do piloto da E14 |
 
-Resolvidas em 14/11/2026: INC-53, 54, 55 e 61 (diagramas do Mateus e T08), INC-63 (exportação), 64 (E5 §3), 65 (CaSSeD), 66 (confiança do modelo) e 67 (aviso de inconclusivo).
+Resolvidas em 14/11/2026: INC-53, 54, 55 e 61 (diagramas do Mateus e T08), INC-63 (exportação), 64 (E5 §3), 65 (CaSSeD), 66 (confiança do modelo) e 67 (aviso de inconclusivo). Resolvidas em 20/11/2026: INC-71 e INC-72 (E8 alinhada à E12).
 
 O status de cada pendência é o do painel de `PENDENCIAS.md`.

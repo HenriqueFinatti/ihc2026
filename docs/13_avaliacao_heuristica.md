@@ -1,7 +1,7 @@
 # Entrega 13 — Avaliação de IHC por inspeção heurística
 
-**Data:** {{dd/mm/aaaa}}  
-**Status:** ⬜ não iniciada  
+**Data:** 20/11/2026 (início)  
+**Status:** 🟨 em andamento  
 **Responsabilidade:** 1 avaliação completa por integrante, sobre todas as telas/estados relevantes do projeto.
 
 ## Objetivo da atividade
@@ -46,11 +46,13 @@ Em TCCs técnicos, observe especialmente se a interface comunica o estado do pro
 
 | Item | Definição |
 |---|---|
-| Versão avaliada | {{link/commit/data}} |
-| Telas/estados | {{lista completa}} |
-| Fluxos | {{M01/M02...}} |
-| Dispositivo/viewport | {{...}} |
-| Avaliadores | {{nomes}} |
+| Versão avaliada | Interface implementada na Entrega 11: https://github.com/HenriqueFinatti/Segmentacao-Semantica-Off-Road, ramo `interface`, commit `d11c155` (16/11/2026), a mesma versão prevista na Entrega 12 (seção C) |
+| Telas/estados | TL01 Configuração de treino: escolher o modelo e os parâmetros; nomear a configuração; sem dataset de treino (PA); nome repetido (RA).<br>TL02 Estado do treino: treinando; resultado do treino; treino interrompido (RA); falta de memória, com sugestão de batch size menor (RA).<br>TL03 Entradas e configurações: envio de imagens ou vídeos e escolha das configurações; formato não aceito (AL).<br>TL04 Processamento: na fila; processando; concluído; falha numa imagem e falha numa configuração inteira (RA e CE).<br>TL05 Resultado e avaliação da imagem: sobreposição; imagem original e máscara; região ampliada; sem métricas (PP); quadro de vídeo e download do MP4; avaliação registrada; sem sessão (vazio).<br>TL06 Comparação na mesma imagem: escolher as configurações a comparar; comparar na mesma imagem e região.<br>TL07 Desempenho consolidado: escolher as configurações do ciclo; tabela e gráfico; a diferença importa?; matriz de confusão; sem avaliação no conjunto de teste (CE); conjuntos de teste diferentes (AL); execução faltante no ciclo (CE); sem valor de referência (vazio).<br>TL08 Conclusão: validação, experimento e recomendação; imagens sem avaliação (AL); conferir; corrigir.<br>TL09 Apresentação e decisão: retomar a análise; responder a uma dúvida; condição obrigatória (PA); decisão registrada; sem recomendação (vazio).<br>TL10 Explicação dos termos: painel aberto pelo botão "?" de cada termo e pelo botão do topo.<br>TL11 Datasets: estado dos datasets; configurações a avaliar; confirmação de remontagem.<br>Elementos de todas as telas: menu, indicador do treino no topo e rodapé |
+| Fluxos | M01 (P01, Rafael), M02 (P03, Larissa) e M03 (P02, Andreia), da Entrega 10, e a tela de apoio TL11, que está fora dos MoLIC |
+| Dispositivo/viewport | Computador que executa os modelos, com mouse e teclado, e a interface no navegador desse computador, em endereço local e sem internet (Entrega 8, §1; Entrega 12, seção C). Resolução da tela e navegador: `[?]` |
+| Avaliadores | AV01 — Henrique Finatti Silveira Belo Trebbi; AV02 — Tiago Fagundes dos Santos; AV03 — Mateus Marana Assuena. Cada um inspeciona sozinho, sem conhecer os achados dos outros, antes da consolidação (seção 7) |
+
+**Identificadores desta entrega:** H1 a H10 são as heurísticas de Nielsen (não confundir com as hipóteses H01 a H12 da Entrega 1); AV01 a AV03 são os avaliadores; cada avaliador numera as próprias violações a partir de V01, e elas são citadas com o avaliador, como "V01 (AV02)"; HC01… são os problemas consolidados da equipe. As capturas de cada avaliador ficam em `assets/13_heuristica/av01/`, `av02/` e `av03/`.
 
 ## 3. Procedimento individual
 
@@ -76,28 +78,32 @@ Ao justificar, considere **frequência, impacto e persistência** do problema no
 
 ---
 
-## Avaliador A01 — {{nome}}
+## Avaliador AV01 — Henrique Finatti Silveira Belo Trebbi
+
+**Autor(a):** Henrique Finatti Silveira Belo Trebbi — 22.123.030-3  
+**Data da inspeção:** {{dd/mm/aaaa}}  
+**Versão inspecionada:** commit `d11c155`
 
 ### 4. Matriz de cobertura das 10 heurísticas
 
 | Heurística | Telas/fluxos examinados | Houve violação? | IDs dos achados | Exemplo de boa prática se não violada |
 |---|---|---|---|---|
 | H1 | {{...}} | sim/não | {{V01...}} | {{...}} |
-| H2 | {{...}} | sim/não |  |  |
-| H3 | {{...}} | sim/não |  |  |
-| H4 | {{...}} | sim/não |  |  |
-| H5 | {{...}} | sim/não |  |  |
-| H6 | {{...}} | sim/não |  |  |
-| H7 | {{...}} | sim/não |  |  |
-| H8 | {{...}} | sim/não |  |  |
-| H9 | {{...}} | sim/não |  |  |
-| H10 | {{...}} | sim/não |  |  |
+| H2 | {{...}} | sim/não | {{V01...}} | {{...}} |
+| H3 | {{...}} | sim/não | {{V01...}} | {{...}} |
+| H4 | {{...}} | sim/não | {{V01...}} | {{...}} |
+| H5 | {{...}} | sim/não | {{V01...}} | {{...}} |
+| H6 | {{...}} | sim/não | {{V01...}} | {{...}} |
+| H7 | {{...}} | sim/não | {{V01...}} | {{...}} |
+| H8 | {{...}} | sim/não | {{V01...}} | {{...}} |
+| H9 | {{...}} | sim/não | {{V01...}} | {{...}} |
+| H10 | {{...}} | sim/não | {{V01...}} | {{...}} |
 
 ### 5. Declaração de violações
 
 | ID | Heurística | Tela/estado | Problema observado | Evidência | Severidade | Justificativa da severidade | Recomendação |
 |---|---|---|---|---|---:|---|---|
-| V01 | H1 | {{F02}} | {{o que ocorre, em que ação e qual consequência}} | ![print](../assets/13_heuristica/v01.svg) | 3 | {{frequência/impacto/persistência}} | {{correção específica}} |
+| V01 | {{H...}} | {{TL...}} | {{o que ocorre, em que ação e qual consequência}} | ![V01 (AV01)](../assets/13_heuristica/av01/v01.png) | {{0–4}} | {{frequência/impacto/persistência}} | {{correção específica}} |
 
 **Qualidade do relato:** o problema deve ser observável e localizado. Evite “interface confusa” sem dizer **o que**, **onde**, **quando** e **para quem**.
 
@@ -105,9 +111,83 @@ Ao justificar, considere **frequência, impacto e persistência** do problema no
 
 | Heurística sem violação | Exemplo no sistema | Evidência | Por que atende |
 |---|---|---|---|
-| {{H4}} | {{...}} | {{print}} | {{...}} |
+| {{H...}} | {{...}} | {{print}} | {{...}} |
 
-> Repita a seção para A02, A03... um avaliador por integrante.
+---
+
+## Avaliador AV02 — Tiago Fagundes dos Santos
+
+**Autor(a):** Tiago Fagundes dos Santos — 22.123.017-0  
+**Data da inspeção:** {{dd/mm/aaaa}}  
+**Versão inspecionada:** commit `d11c155`
+
+### 4. Matriz de cobertura das 10 heurísticas
+
+| Heurística | Telas/fluxos examinados | Houve violação? | IDs dos achados | Exemplo de boa prática se não violada |
+|---|---|---|---|---|
+| H1 | {{...}} | sim/não | {{V01...}} | {{...}} |
+| H2 | {{...}} | sim/não | {{V01...}} | {{...}} |
+| H3 | {{...}} | sim/não | {{V01...}} | {{...}} |
+| H4 | {{...}} | sim/não | {{V01...}} | {{...}} |
+| H5 | {{...}} | sim/não | {{V01...}} | {{...}} |
+| H6 | {{...}} | sim/não | {{V01...}} | {{...}} |
+| H7 | {{...}} | sim/não | {{V01...}} | {{...}} |
+| H8 | {{...}} | sim/não | {{V01...}} | {{...}} |
+| H9 | {{...}} | sim/não | {{V01...}} | {{...}} |
+| H10 | {{...}} | sim/não | {{V01...}} | {{...}} |
+
+### 5. Declaração de violações
+
+| ID | Heurística | Tela/estado | Problema observado | Evidência | Severidade | Justificativa da severidade | Recomendação |
+|---|---|---|---|---|---:|---|---|
+| V01 | {{H...}} | {{TL...}} | {{o que ocorre, em que ação e qual consequência}} | ![V01 (AV02)](../assets/13_heuristica/av02/v01.png) | {{0–4}} | {{frequência/impacto/persistência}} | {{correção específica}} |
+
+**Qualidade do relato:** o problema deve ser observável e localizado. Evite “interface confusa” sem dizer **o que**, **onde**, **quando** e **para quem**.
+
+### 6. Boas práticas — heurísticas não violadas (atividade didática)
+
+| Heurística sem violação | Exemplo no sistema | Evidência | Por que atende |
+|---|---|---|---|
+| {{H...}} | {{...}} | {{print}} | {{...}} |
+
+---
+
+## Avaliador AV03 — Mateus Marana Assuena
+
+**Autor(a):** Mateus Marana Assuena — 22.123.026-1  
+**Data da inspeção:** {{dd/mm/aaaa}}  
+**Versão inspecionada:** commit `d11c155`
+
+### 4. Matriz de cobertura das 10 heurísticas
+
+| Heurística | Telas/fluxos examinados | Houve violação? | IDs dos achados | Exemplo de boa prática se não violada |
+|---|---|---|---|---|
+| H1 | {{...}} | sim/não | {{V01...}} | {{...}} |
+| H2 | {{...}} | sim/não | {{V01...}} | {{...}} |
+| H3 | {{...}} | sim/não | {{V01...}} | {{...}} |
+| H4 | {{...}} | sim/não | {{V01...}} | {{...}} |
+| H5 | {{...}} | sim/não | {{V01...}} | {{...}} |
+| H6 | {{...}} | sim/não | {{V01...}} | {{...}} |
+| H7 | {{...}} | sim/não | {{V01...}} | {{...}} |
+| H8 | {{...}} | sim/não | {{V01...}} | {{...}} |
+| H9 | {{...}} | sim/não | {{V01...}} | {{...}} |
+| H10 | {{...}} | sim/não | {{V01...}} | {{...}} |
+
+### 5. Declaração de violações
+
+| ID | Heurística | Tela/estado | Problema observado | Evidência | Severidade | Justificativa da severidade | Recomendação |
+|---|---|---|---|---|---:|---|---|
+| V01 | {{H...}} | {{TL...}} | {{o que ocorre, em que ação e qual consequência}} | ![V01 (AV03)](../assets/13_heuristica/av03/v01.png) | {{0–4}} | {{frequência/impacto/persistência}} | {{correção específica}} |
+
+**Qualidade do relato:** o problema deve ser observável e localizado. Evite “interface confusa” sem dizer **o que**, **onde**, **quando** e **para quem**.
+
+### 6. Boas práticas — heurísticas não violadas (atividade didática)
+
+| Heurística sem violação | Exemplo no sistema | Evidência | Por que atende |
+|---|---|---|---|
+| {{H...}} | {{...}} | {{print}} | {{...}} |
+
+---
 
 ## 7. Consolidação da equipe
 
@@ -115,7 +195,7 @@ Problemas iguais ou muito semelhantes encontrados por avaliadores diferentes dev
 
 | ID consolidado | Achados individuais | Heurística | Problema | Severidade final | Prioridade | Responsável pela correção |
 |---|---|---|---|---:|---|---|
-| HC01 | V01(A01), V04(A02) | H1 | {{...}} | {{...}} | alta | {{...}} |
+| HC01 | {{V01 (AV01), V04 (AV02)}} | {{H...}} | {{...}} | {{...}} | {{alta/média/baixa}} | {{...}} |
 
 ## 8. Síntese e plano de melhoria
 
