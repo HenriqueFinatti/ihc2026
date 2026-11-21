@@ -120,7 +120,7 @@ Alguns itens não são correção de texto: dependem de uma decisão do grupo. V
 | INC-77 | 🟠 | E13 | AV01 inspecionou pelas capturas da E11, sem executar a interface: os sete percursos de acessibilidade não foram feitos, e a QA13 fica sem a parte do AV01 | Henrique Finatti Silveira Belo Trebbi | 🟩 | 21/11: percursos feitos uma vez pela equipe, na interface executada (versão `16a5bc1`), só com teclado e com ampliação de 200%; resultados e violações VA01 a VA04 na E13, "Percursos de acessibilidade da equipe". |
 | INC-78 | 🟠 | E13 | AV03 inspecionou pelas capturas da E11, sem executar a interface: os sete percursos de acessibilidade não foram feitos, e a QA13 fica sem a parte do AV03 | Mateus Marana Assuena | 🟩 | 21/11: percursos feitos uma vez pela equipe, na interface executada (versão `16a5bc1`), só com teclado e com ampliação de 200%; resultados e violações VA01 a VA04 na E13, "Percursos de acessibilidade da equipe". |
 | INC-79 | 🟠 | E13 | AV02 inspecionou pelas capturas da E11, sem executar a interface: os sete percursos de acessibilidade não foram feitos, e a QA13 fica sem a parte do AV02 | Tiago Fagundes dos Santos | 🟩 | 21/11: percursos feitos uma vez pela equipe, na interface executada (versão `16a5bc1`), só com teclado e com ampliação de 200%; resultados e violações VA01 a VA04 na E13, "Percursos de acessibilidade da equipe". |
-| INC-80 | 🔴 | E13 → E14 | Três problemas de severidade 3 da inspeção (HC01 ciclo de testes preenchido com o anterior, HC02 sem cancelar treino ou fila, HC03 "Pular para o conteúdo" leva a uma tela de erro) precisam ser corrigidos antes do piloto | Equipe | ⬜ | |
+| INC-81 | 🟠 | E12 → E14 | A E12 prevê participantes da equipe Baja, piloto antes das sessões e nada simulado; a E14 foi feita com sessões simuladas pela equipe, com participantes aproximados, sem piloto e sem as correções de severidade 3 | Equipe | ➖ | 21/11: **decisão da equipe:** sem acesso aos participantes da Baja no prazo, as sessões foram simuladas para fins didáticos; a simulação, a falta de piloto e as correções não feitas estão declaradas no topo da E14 e nas limitações (seção G). A E12 não foi alterada. |
 
 **Prioridade sugerida:** resolver os 🔴 antes de fechar a E4 e começar a E5. O INC-22 é o mais sensível, porque a RC03 sustenta decisões nas três personas.
 
@@ -524,12 +524,12 @@ Alguns itens não são correção de texto: dependem de uma decisão do grupo. V
 - **Problema:** a inspeção do AV02 foi feita pelas 59 capturas da E11 (commit `16a5bc1`) e pelo código, sem executar a interface; os sete percursos ficaram como não feitos.
 - **Sugestão:** fazer os sete percursos na interface executada, sobre a cópia dos dados, antes da consolidação (seção 7), e preencher a tabela do AV02.
 
-### Criados em 21/11/2026 (Entrega 13)
+### Criados em 21/11/2026 (Entrega 14)
 
-#### INC-80 🔴 Correções de severidade 3 antes do piloto
-- **Onde:** E13, seções 7 e 8 (HC01, HC02, HC03); E12, "Cronograma, equipamento e responsáveis" (correção dos problemas de severidade 3 ou 4).
-- **Problema:** a E12 determina que problemas de severidade 3 ou 4 da inspeção sejam corrigidos antes do piloto e do teste com usuários. A E13 encontrou três: HC01 (TL03), HC02 (TL02 e TL11) e HC03 (todas as telas).
-- **Sugestão:** corrigir HC01 e HC03 na interface; para HC02, incluir o cancelamento no MoLIC M03 (E10) antes de implementar; registrar o novo commit na E12 e na E14 e refazer as capturas afetadas da E11.
+#### INC-81 🟠 Teste com usuários simulado, sem piloto e sem as correções
+- **Onde:** E12, "Dados usados na avaliação", seção C (participantes, piloto, cronograma) e Checklist; E14, topo e seções B a G.
+- **Problema:** a E12 afirma que nenhuma parte da avaliação é simulada, prevê integrantes da equipe Baja como participantes, dois pilotos e a correção dos problemas de severidade 3 antes das sessões. A equipe não teve acesso aos participantes no prazo, não fez o piloto e decidiu não corrigir HC01, HC02 e HC03.
+- **Sugestão:** declarar na E14 que as sessões são simuladas para fins didáticos, com participantes aproximados, e tratar os resultados como hipóteses; registrar a falta de piloto e as correções não feitas como limitações (seção G). Se houver um teste real depois, ele substitui os dados simulados.
 
 ## Histórico deste arquivo
 
@@ -581,4 +581,6 @@ Alguns itens não são correção de texto: dependem de uma decisão do grupo. V
 | 21/11/2026 | Entrega 13, AV03: criado INC-78 (percursos de acessibilidade não feitos na inspeção pelas capturas) | Mateus Marana Assuena (com apoio do Claude) |
 | 21/11/2026 | Entrega 13, AV02: criado INC-79 (percursos de acessibilidade não feitos na inspeção pelas capturas) | Tiago Fagundes dos Santos (com apoio do Claude) |
 | 21/11/2026 | Entrega 13: percursos de acessibilidade feitos pela equipe; INC-77, INC-78 e INC-79 resolvidos | Equipe (com apoio do Claude) |
-| 21/11/2026 | Entrega 13 concluída: consolidação em 27 problemas (HC01 a HC27), três de severidade 3 a corrigir antes do piloto (HC01, HC02, HC03); criado INC-80 | Equipe (com apoio do Claude) |
+| 21/11/2026 | Entrega 13 concluída: consolidação em 27 problemas (HC01 a HC27), três de severidade 3 a corrigir antes do piloto (HC01, HC02, HC03) | Equipe (com apoio do Claude) |
+| 21/11/2026 | Entrega 14: criado INC-81 (sessões simuladas, sem piloto), descartado por decisão da equipe e declarado na E14 | Equipe (com apoio do Claude) |
+| 21/11/2026 | Entrega 14 concluída (sessões simuladas, achados AU01 a AU13); sem novas pendências | Equipe (com apoio do Claude) |
