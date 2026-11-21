@@ -117,6 +117,7 @@ Alguns itens não são correção de texto: dependem de uma decisão do grupo. V
 | INC-74 | 🟠 | E10 → E11 | Interface implementada e capturas da E11 anteriores à revisão da E10 (O11, avaliação antes das métricas, encerramento temporário, O07.1 como diálogo) | Equipe | 🟨 | 20/11: interface ajustada no commit `16a5bc1`, 59 capturas novas numeradas por fluxo e parecer da E11 aplicado em `docs/11_figma.md`. **Falta:** refazer a captura `TL11_datasets/01_conferir_datasets.png`, que mostra sobre a tela Datasets o diálogo da TL07, um estado que a interface não produz. |
 | INC-75 | 🟠 | E12, E13 | A E12 cita a versão `d11c155` e descreve a TL11 como tela de apoio fora dos MoLIC e sem tarefa de usuário; a E11 e a E13 passaram a usar `16a5bc1` e a TL11 é a conversa O11 do M03 | Equipe | 🟩 | 20/11: E12 com a versão `16a5bc1`; a preparação dos dados (TL11, conversa O11 do M03) continua só na inspeção, porque é feita antes de cada sessão (E.6). |
 | INC-76 | 🟠 | E12 | Cronograma, equipamento e parâmetros ainda `[?]`: datas da inspeção, das correções, dos pilotos e das sessões; integrante do piloto técnico e pessoa do piloto de compreensão; computador, tela e navegador; épocas e batch size do treino rápido da UT04; configurações, ciclos, fotos e palavras dos cenários na folha de preparação (E.6) | Equipe | ⬜ | |
+| INC-77 | 🟠 | E13 | AV01 inspecionou pelas capturas da E11, sem executar a interface: os sete percursos de acessibilidade não foram feitos, e a QA13 fica sem a parte do AV01 | Henrique Finatti Silveira Belo Trebbi | ⬜ | |
 
 **Prioridade sugerida:** resolver os 🔴 antes de fechar a E4 e começar a E5. O INC-22 é o mais sensível, porque a RC03 sustenta decisões nas três personas.
 
@@ -503,6 +504,13 @@ Alguns itens não são correção de texto: dependem de uma decisão do grupo. V
 - **Problema:** o parecer da E12 (item 3) pede que datas, responsáveis, equipamento, resolução, versão final e parâmetros do treino rápido estejam definidos antes da coleta. A tabela e a folha de preparação já têm os campos, mas os valores ainda são `[?]`.
 - **Sugestão:** preencher os campos antes do piloto técnico: as datas na ordem inspeção → correções → piloto técnico → piloto de compreensão → sessões; os dados do computador da sessão; o número de épocas e o batch size do treino rápido, medindo a duração no piloto técnico; e, na E.6, as configurações, os ciclos, as fotos e as palavras entre colchetes dos cenários. A coleta não começa enquanto houver campo `[?]`.
 
+### Criados em 20/11/2026 (Entrega 13)
+
+#### INC-77 🟠 Percursos de acessibilidade do AV01 não feitos
+- **Onde:** E13, avaliador AV01, "Percursos de acessibilidade"; checklist da E13 ("Cada avaliador fez os sete percursos de acessibilidade"); E12, QA13.
+- **Problema:** a inspeção do AV01 foi feita pelas 59 capturas da E11 (commit `16a5bc1`) e pelo código, sem executar a interface. Teclado, ampliação de 200% e leitor de tela não podem ser verificados assim, e os sete percursos ficaram como não feitos.
+- **Sugestão:** fazer os sete percursos na interface executada, sobre a cópia dos dados, antes da consolidação (seção 7), e preencher a tabela do AV01; registrar como violação cada problema encontrado.
+
 ## Histórico deste arquivo
 
 | Data | Alteração | Responsável |
@@ -549,3 +557,4 @@ Alguns itens não são correção de texto: dependem de uma decisão do grupo. V
 | 20/11/2026 | Parecer do professor sobre a E10 e correção 1 do parecer da E11 aplicados (M01–M03, consolidação e "Preparação para o Figma"); criado INC-74 (interface da E11 a ajustar) | Equipe (com apoio do Claude) |
 | 20/11/2026 | Parecer do professor sobre a E11 aplicado (versão `16a5bc1`, 59 capturas, cobertura com a O11, prevenção uniforme, percursos de acessibilidade); INC-74 em andamento (falta refazer a captura TL11/01); criado INC-75 (versão e TL11 na E12) | Equipe (com apoio do Claude) |
 | 20/11/2026 | Parecer do professor sobre a E12 aplicado (instrumentos E.2 a E.6, MU07, MU09 e MU10 de volta na E8 e na QA14, piloto em duas passagens, versão `16a5bc1`); E13 alinhada ao formulário E.5; INC-73 e INC-75 resolvidos; criado INC-76 (cronograma, equipamento e parâmetros em aberto) | Equipe (com apoio do Claude) |
+| 20/11/2026 | Entrega 13, AV01: criado INC-77 (percursos de acessibilidade não feitos na inspeção pelas capturas) | Henrique Finatti Silveira Belo Trebbi (com apoio do Claude) |
