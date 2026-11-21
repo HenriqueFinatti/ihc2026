@@ -17,7 +17,7 @@ Os SVGs de HTA e CTT em `assets/05_tarefas/`, os mapas de objetivos em `assets/0
 | `mapa_objetivos_ci02.py` | `mapa_objetivos_ci02.svg` (Entrega 9, mapa da P03) | Henrique Finatti Silveira Belo Trebbi |
 | `mapa_objetivos_ci03.py` | `mapa_objetivos_ci03.svg` (Entrega 9, mapa da P02) | Mateus Marana Assuena |
 | `mapa_objetivos_consolidado.py` | `mapa_objetivos.svg` (Entrega 9, mapa consolidado) | Equipe |
-| `molic_svg.py` | Elementos de MoLIC (cena, cena de alerta, processo, acesso ubíquo, abertura, encerramento, falas e legenda), usados pelos scripts `molic_m0x.py` | — |
+| `molic_svg.py` | Elementos de MoLIC (cena, cena de alerta, processo, acesso ubíquo, abertura, encerramento, encerramento temporário, falas e legenda), usados pelos scripts `molic_m0x.py` | — |
 | `molic_m01.py` | `molic_m01.svg` (Entrega 10) | Tiago Fagundes dos Santos |
 | `molic_m02.py` | `molic_m02.svg` (Entrega 10) | Henrique Finatti Silveira Belo Trebbi |
 | `molic_m03.py` | `molic_m03.svg` (Entrega 10) | Mateus Marana Assuena |

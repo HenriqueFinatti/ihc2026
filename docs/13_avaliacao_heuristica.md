@@ -46,9 +46,10 @@ Em TCCs técnicos, observe especialmente se a interface comunica o estado do pro
 
 | Item | Definição |
 |---|---|
-| Versão avaliada | Interface implementada na Entrega 11: https://github.com/HenriqueFinatti/Segmentacao-Semantica-Off-Road, ramo `interface`, commit `d11c155` (16/11/2026), a mesma versão prevista na Entrega 12 (seção C) |
-| Telas/estados | TL01 Configuração de treino: escolher o modelo e os parâmetros; nomear a configuração; sem dataset de treino (PA); nome repetido (RA).<br>TL02 Estado do treino: treinando; resultado do treino; treino interrompido (RA); falta de memória, com sugestão de batch size menor (RA).<br>TL03 Entradas e configurações: envio de imagens ou vídeos e escolha das configurações; formato não aceito (AL).<br>TL04 Processamento: na fila; processando; concluído; falha numa imagem e falha numa configuração inteira (RA e CE).<br>TL05 Resultado e avaliação da imagem: sobreposição; imagem original e máscara; região ampliada; sem métricas (PP); quadro de vídeo e download do MP4; avaliação registrada; sem sessão (vazio).<br>TL06 Comparação na mesma imagem: escolher as configurações a comparar; comparar na mesma imagem e região.<br>TL07 Desempenho consolidado: escolher as configurações do ciclo; tabela e gráfico; a diferença importa?; matriz de confusão; sem avaliação no conjunto de teste (CE); conjuntos de teste diferentes (AL); execução faltante no ciclo (CE); sem valor de referência (vazio).<br>TL08 Conclusão: validação, experimento e recomendação; imagens sem avaliação (AL); conferir; corrigir.<br>TL09 Apresentação e decisão: retomar a análise; responder a uma dúvida; condição obrigatória (PA); decisão registrada; sem recomendação (vazio).<br>TL10 Explicação dos termos: painel aberto pelo botão "?" de cada termo e pelo botão do topo.<br>TL11 Datasets: estado dos datasets; configurações a avaliar; confirmação de remontagem.<br>Elementos de todas as telas: menu, indicador do treino no topo e rodapé |
-| Fluxos | M01 (P01, Rafael), M02 (P03, Larissa) e M03 (P02, Andreia), da Entrega 10, e a tela de apoio TL11, que está fora dos MoLIC |
+| Versão avaliada | Interface implementada na Entrega 11: https://github.com/HenriqueFinatti/Segmentacao-Semantica-Off-Road, ramo `interface`, commit `16a5bc1` (20/11/2026), identificado no rodapé de cada tela; é a versão única das Entregas 13 e 14 (Entrega 11, "Acesso ao protótipo") |
+| Telas/estados | TL01 Configuração de treino: escolher o modelo e os parâmetros; sem dataset de treino (PA); nomear a configuração; nome repetido (RA).<br>TL02 Estado do treino: na fila; treinando; avaliação no conjunto de teste; resultado do treino; treino ou avaliação interrompidos (RA); falta de memória, com sugestão de batch size menor (RA).<br>TL03 Entradas e configurações: entradas e configurações obrigatórias (PA); envio de imagens ou vídeos e escolha das configurações; arquivos fora do formato aceito (AL).<br>TL04 Processamento: na fila; processando; falha numa imagem e numa configuração inteira (RA e CE); concluído.<br>TL05 Resultado e avaliação da imagem: sem sessão (vazio); sobreposição e sem métricas (PP); imagem original e máscara; região ampliada; avaliação registrada; quadro de vídeo e download do MP4.<br>TL06 Comparação na mesma imagem: configuração obrigatória (PA); escolher as configurações a comparar; comparar na mesma região, com sobreposição e com máscara.<br>TL07 Desempenho consolidado: configurações obrigatórias (PA); sem avaliação no conjunto de teste (CE); conjuntos de teste diferentes (AL); execução faltante no ciclo (CE); sem valor de referência (vazio); valor de referência e maior valor; gráfico; a diferença importa?; matriz de confusão.<br>TL08 Conclusão: validação, experimento e recomendação, cada uma com campo obrigatório (PA), conferência e correção; imagens sem avaliação (AL).<br>TL09 Apresentação e decisão: sem recomendação (vazio); retomar a análise; responder a uma dúvida; condição obrigatória (PA); decisão registrada.<br>TL10 Explicação dos termos: explicação junto do termo, aberta pelo botão "?"; glossário de termos, aberto pelo botão do topo.<br>TL11 Datasets: conferir os datasets; confirmar a remontagem (AL); montagem na fila; dataset montado; avaliar as selecionadas (PA); falha na avaliação (RA e CE); avaliando; avaliação concluída.<br>Elementos de todas as telas: menu, indicador do treino e da avaliação no topo, rodapé com a versão. As capturas de referência são as da Entrega 11 (`assets/11_figma/`) |
+| Fluxos | M01 (P01, Rafael), M02 (P03, Larissa) e M03 (P02, Andreia), da Entrega 10 revista em 20/11/2026; a TL11 é a conversa "preparar os dados de treino e de teste" (O11) do M03 |
+| Percursos de acessibilidade | Os sete percursos completos da Entrega 11 ("Verificação de acessibilidade básica"), feitos só com teclado e com ampliação de 200% do navegador e, quando possível, com leitor de tela `[?]` |
 | Dispositivo/viewport | Computador que executa os modelos, com mouse e teclado, e a interface no navegador desse computador, em endereço local e sem internet (Entrega 8, §1; Entrega 12, seção C). Resolução da tela e navegador: `[?]` |
 | Avaliadores | AV01 — Henrique Finatti Silveira Belo Trebbi; AV02 — Tiago Fagundes dos Santos; AV03 — Mateus Marana Assuena. Cada um inspeciona sozinho, sem conhecer os achados dos outros, antes da consolidação (seção 7) |
 
@@ -82,7 +83,7 @@ Ao justificar, considere **frequência, impacto e persistência** do problema no
 
 **Autor(a):** Henrique Finatti Silveira Belo Trebbi — 22.123.030-3  
 **Data da inspeção:** {{dd/mm/aaaa}}  
-**Versão inspecionada:** commit `d11c155`
+**Versão inspecionada:** commit `16a5bc1`
 
 ### 4. Matriz de cobertura das 10 heurísticas
 
@@ -119,7 +120,7 @@ Ao justificar, considere **frequência, impacto e persistência** do problema no
 
 **Autor(a):** Tiago Fagundes dos Santos — 22.123.017-0  
 **Data da inspeção:** {{dd/mm/aaaa}}  
-**Versão inspecionada:** commit `d11c155`
+**Versão inspecionada:** commit `16a5bc1`
 
 ### 4. Matriz de cobertura das 10 heurísticas
 
@@ -156,7 +157,7 @@ Ao justificar, considere **frequência, impacto e persistência** do problema no
 
 **Autor(a):** Mateus Marana Assuena — 22.123.026-1  
 **Data da inspeção:** {{dd/mm/aaaa}}  
-**Versão inspecionada:** commit `d11c155`
+**Versão inspecionada:** commit `16a5bc1`
 
 ### 4. Matriz de cobertura das 10 heurísticas
 

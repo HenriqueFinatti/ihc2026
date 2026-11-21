@@ -18,6 +18,7 @@ O = {
     "O08": ["O08. Conclusão", "registrada junto", "da análise"],
     "O09": ["O09. Recomendação", "apresentada à", "coordenação"],
     "O10": ["O10. Decisão da", "coordenação", "registrada"],
+    "O11": ["O11. Dados prontos", "e configurações", "avaliadas no", "conjunto de teste"],
 }
 
 
@@ -32,7 +33,7 @@ def i(k):
 s = Svg("Mapa de objetivos consolidado — Equipe 17",
         "Mapa de objetivos consolidado das personas P01, P02 e P03, a partir dos mapas individuais dos "
         "cenários CI01, CI02 e CI03. Objetivo geral, objetivo final de cada persona e objetivos "
-        "instrumentais O01 a O10, diretos e indiretos, escritos como resultados desejados. Caixas "
+        "instrumentais O01 a O11, diretos e indiretos, escritos como resultados desejados. Caixas "
         "tracejadas são objetivos alcançados fora do sistema.")
 s.header("Mapa de objetivos consolidado — Equipe 17",
          "Henrique Finatti Silveira Belo Trebbi · Mateus Marana Assuena · Tiago Fagundes dos Santos · "
@@ -66,18 +67,18 @@ y = s.section(y, "Objetivos instrumentais indiretos")
 y1 = s.tree(d("O04"), [i("O03"), N(["Entradas obtidas", "(imagens e vídeos)"], dashed=True, kind="indireto")],
             y, 40, 520, gap=20, pw=300)
 y2 = s.tree(d("O05"), [i("O03")], y, 580, 860, gap=20, pw=260)
-y3 = s.tree(d("O02"), [i("O01")], y, 920, 1180, gap=20, pw=240)
+y3 = s.tree(d("O02"), [i("O01"), i("O11")], y, 920, 1400, gap=20, pw=260)
 y = max(y1, y2, y3) + 20
-y1 = s.tree(d("O06"), [i("O07"), N(["Execuções e", "avaliações pedidas", "a um colega"], dashed=True, kind="indireto")],
-            y, 40, 620, gap=20, pw=300)
+y1 = s.tree(d("O06"), [i("O07"), i("O11"), N(["Execuções e", "avaliações pedidas", "a um colega"], dashed=True, kind="indireto")],
+            y, 40, 680, gap=20, pw=300)
 y2 = s.tree(d("O10"), [i("O09"), N(["Decisão", "discutida na", "reunião"], dashed=True, kind="indireto")],
-            y, 720, 1300, gap=20, pw=300)
+            y, 760, 1340, gap=20, pw=300)
 y = max(y1, y2) + 20
 
 y = s.goal_legend(y, [
     "Um mesmo objetivo pode servir a mais de uma persona (O05, O06 e O08) ou a mais de um objetivo (O03 serve a O04 e a O05); ele aparece em cada lugar.",
     "O05 reúne T03 (P01) e T07 (P02); O08 reúne as conclusões da validação (P01), do experimento (P02) e a recomendação (P03). O07 também apoia O09.",
-    "Os IDs O01–O10 e os subtópicos O01.1… (tabela da seção 3.2 da Entrega 9) são os usados nas Entregas 10 a 12.",
+    "Os IDs O01–O11 e os subtópicos O01.1… (tabela da seção 3.2 da Entrega 9) são os usados nas Entregas 10 a 12. O11 foi incluído em 20/11/2026 (tela Datasets).",
     "[H]: proposta derivada de proto-personas, a revisar depois da coleta da Entrega 7."])
 
 s.save(OUT, y)

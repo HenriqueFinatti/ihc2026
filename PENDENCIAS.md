@@ -114,6 +114,8 @@ Alguns itens não são correção de texto: dependem de uma decisão do grupo. V
 | INC-71 | 🟠 | E8 | A E8 prevê processamento, métricas e falha simulados, mas a E12 avalia a interface real sobre a cópia completa dos dados e não provoca falha | Equipe | 🟩 | 20/11: parecer da E8 aplicado. Delimitação reescrita (nada é simulado: cópia completa dos dados do TCC, processamento real, só o estado inicial preparado para o teste); "processamento simulado" retirado da §3; MU05 e as partes de falha da MQ04, da MQ06 e da MU11 verificadas só na inspeção da E13 (QA09); priorização refeita pelas metas de Nielsen. |
 | INC-72 | 🟠 | E8 | Metas da E8 em "X de 3 participantes" e mediana, com tarefas de personas diferentes; a E12 usa um participante por perfil, a nova UT04 para a T08 e critérios lidos caso a caso, e não verifica MU06, MU07, MU09 e MU10 | Equipe | 🟩 | 20/11: parecer da E8 aplicado. Cada meta diz o perfil e o participante que a verificam (U01 a U03), com critério por participante e participante aproximado como limitação; MU08 em duas versões; MU11 com a UT04, sem a falta de memória; MQ03 sem o aviso retirado; MU06, MU07, MU09 e MU10 retiradas (IDs não reaproveitados). |
 | INC-73 | 🟠 | E12 | Instrumentos E.2 a E.5 (roteiro do moderador, planilha de observação, questionário de compreensão em duas versões e formulário heurístico) não foram escritos | Equipe | ⬜ | |
+| INC-74 | 🟠 | E10 → E11 | Interface implementada e capturas da E11 anteriores à revisão da E10 (O11, avaliação antes das métricas, encerramento temporário, O07.1 como diálogo) | Equipe | 🟨 | 20/11: interface ajustada no commit `16a5bc1`, 59 capturas novas numeradas por fluxo e parecer da E11 aplicado em `docs/11_figma.md`. **Falta:** refazer a captura `TL11_datasets/01_conferir_datasets.png`, que mostra sobre a tela Datasets o diálogo da TL07, um estado que a interface não produz. |
+| INC-75 | 🟠 | E12, E13 | A E12 cita a versão `d11c155` e descreve a TL11 como tela de apoio fora dos MoLIC e sem tarefa de usuário; a E11 e a E13 passaram a usar `16a5bc1` e a TL11 é a conversa O11 do M03 | Equipe | ⬜ | |
 
 **Prioridade sugerida:** resolver os 🔴 antes de fechar a E4 e começar a E5. O INC-22 é o mais sensível, porque a RC03 sustenta decisões nas três personas.
 
@@ -481,6 +483,20 @@ Alguns itens não são correção de texto: dependem de uma decisão do grupo. V
 - **Problema:** a E12 foi concluída só com o termo de consentimento (E.1). A tabela da seção E e a seção F apontam para o roteiro do moderador (E.2), a planilha de observação (E.3), o questionário de compreensão nas versões do U01 e do U03 (E.4) e o formulário de avaliação heurística (E.5), que não existem. O questionário é a evidência das QA03 e QA06 (MU08).
 - **Sugestão:** escrever E.2 a E.5 antes da Entrega 13 (E.5) e do piloto da Entrega 14 (E.2 a E.4), seguindo as definições da seção F; marcar o item do checklist.
 
+### Criados em 20/11/2026 (revisão da Entrega 10)
+
+#### INC-74 🟠 Interface da E11 anterior à revisão da E10
+- **Onde:** E11 (telas TL01, TL02, TL04, TL05, TL07, TL10 e TL11; capturas em `assets/11_figma/`) × E10 revista em 20/11/2026.
+- **Problema:** a E10 passou a modelar a preparação dos dados (O11, tela Datasets), a avaliação no conjunto de teste antes das métricas do treino, o aviso de que o treino continua só com o programa aberto, a captura de erro "sem avaliação no conjunto de teste" apontando para a O11.3, o estado "na fila" e a explicação de termos sem sair da tela. A interface do commit `d11c155` e as capturas da E11 foram feitas antes dessas decisões.
+- **Sugestão:** ajustar as telas no repositório do TCC, refazer as capturas no novo commit e, em seguida, aplicar o parecer da E11 em `docs/11_figma.md` (cobertura MoLIC → telas com O11, versão avaliada).
+
+### Criados em 20/11/2026 (revisão da Entrega 11)
+
+#### INC-75 🟠 Versão e TL11 desatualizadas na E12
+- **Onde:** E12, seção A (tabela "O que está sendo avaliado", linha da TL11) e seção C ("Protótipo/versão").
+- **Problema:** depois do parecer da E11, a versão única das Entregas 13 e 14 passou a ser o commit `16a5bc1` (E11, "Acesso ao protótipo"; E13, seção 2), e a TL11 passou a ser a conversa O11 do M03, operada pela P02. A E12 ainda cita `d11c155` e trata a TL11 como tela de apoio sem tarefa de usuário.
+- **Sugestão:** ao aplicar o parecer da E12, trocar a versão por `16a5bc1` e rever a linha da TL11; decidir se a preparação dos dados (O11) continua só na inspeção ou entra na UT04 (perfil P02).
+
 ## Histórico deste arquivo
 
 | Data | Alteração | Responsável |
@@ -523,3 +539,6 @@ Alguns itens não são correção de texto: dependem de uma decisão do grupo. V
 | 20/11/2026 | Entrega 12 concluída; criado INC-73 (instrumentos E.2 a E.5 não escritos) | Equipe (com apoio do Claude) |
 | 20/11/2026 | Parecer do professor sobre a E8 aplicado (delimitação, §1 a §4); INC-71 e INC-72 resolvidos | Equipe (com apoio do Claude) |
 | 20/11/2026 | Parecer do professor sobre a E9 aplicado (mapas de objetivos, CI02, CI03, diálogos e esquema de signos); E11, TL11: signo "avaliação no conjunto de teste". Nenhuma pendência nova | Equipe (com apoio do Claude) |
+| 20/11/2026 | Entrega 9: O11 (preparar os dados de treino e de teste) incluído no CI03, no mapa da P02 e no mapa consolidado | Mateus Marana Assuena (com apoio do Claude) |
+| 20/11/2026 | Parecer do professor sobre a E10 e correção 1 do parecer da E11 aplicados (M01–M03, consolidação e "Preparação para o Figma"); criado INC-74 (interface da E11 a ajustar) | Equipe (com apoio do Claude) |
+| 20/11/2026 | Parecer do professor sobre a E11 aplicado (versão `16a5bc1`, 59 capturas, cobertura com a O11, prevenção uniforme, percursos de acessibilidade); INC-74 em andamento (falta refazer a captura TL11/01); criado INC-75 (versão e TL11 na E12) | Equipe (com apoio do Claude) |

@@ -1,8 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="2539" viewBox="0 0 1440 2539" role="img" aria-labelledby="title desc" xmlns:c2pa="http://c2pa.org/manifest">
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="2562" viewBox="0 0 1440 2562" role="img" aria-labelledby="title desc" xmlns:c2pa="http://c2pa.org/manifest">
 <title id="title">Mapa de objetivos consolidado — Equipe 17</title>
-<desc id="desc">Mapa de objetivos consolidado das personas P01, P02 e P03, a partir dos mapas individuais dos cenários CI01, CI02 e CI03. Objetivo geral, objetivo final de cada persona e objetivos instrumentais O01 a O10, diretos e indiretos, escritos como resultados desejados. Caixas tracejadas são objetivos alcançados fora do sistema.</desc>
+<desc id="desc">Mapa de objetivos consolidado das personas P01, P02 e P03, a partir dos mapas individuais dos cenários CI01, CI02 e CI03. Objetivo geral, objetivo final de cada persona e objetivos instrumentais O01 a O11, diretos e indiretos, escritos como resultados desejados. Caixas tracejadas são objetivos alcançados fora do sistema.</desc>
 <defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#333"/></marker></defs>
-<rect width="1440" height="2539" fill="white"/>
+<rect width="1440" height="2562" fill="white"/>
 <g font-family="DejaVu Sans, Arial, sans-serif" fill="#222">
 <text x="40" y="40" text-anchor="start" font-size="25" font-weight="700">Mapa de objetivos consolidado — Equipe 17</text>
 <text x="40" y="73" text-anchor="start" font-size="16" font-weight="400">Henrique Finatti Silveira Belo Trebbi · Mateus Marana Assuena · Tiago Fagundes dos Santos · P01, P02 e P03 · CI01–CI03 · Proposta [H]</text>
@@ -199,89 +199,105 @@
 <text x="720.0" y="1855" text-anchor="middle" font-size="16" font-weight="400">escolhidas</text>
 </g>
 <g data-box="b25">
-<rect x="930.0" y="1568" width="240.0" height="122" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
-<text x="1050.0" y="1594" text-anchor="middle" font-size="16" font-weight="400">O02. Nova configuração</text>
-<text x="1050.0" y="1617" text-anchor="middle" font-size="16" font-weight="400">treinada, disponível</text>
-<text x="1050.0" y="1640" text-anchor="middle" font-size="16" font-weight="400">e avaliada no</text>
-<text x="1050.0" y="1663" text-anchor="middle" font-size="16" font-weight="400">conjunto de teste</text>
+<rect x="1030.0" y="1568" width="260.0" height="122" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="1160.0" y="1594" text-anchor="middle" font-size="16" font-weight="400">O02. Nova configuração</text>
+<text x="1160.0" y="1617" text-anchor="middle" font-size="16" font-weight="400">treinada, disponível</text>
+<text x="1160.0" y="1640" text-anchor="middle" font-size="16" font-weight="400">e avaliada no</text>
+<text x="1160.0" y="1663" text-anchor="middle" font-size="16" font-weight="400">conjunto de teste</text>
 </g>
-<path d="M1050.0 1690 V1721" fill="none" stroke="#333" stroke-width="1.6"/>
-<path d="M1050.0 1721 H1050.0" fill="none" stroke="#333" stroke-width="1.6"/>
-<path d="M1050.0 1721 V1760" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<path d="M1160.0 1690 V1721" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M1035.0 1721 H1285.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M1035.0 1721 V1760" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
 <g data-box="b26">
-<rect x="920.0" y="1760" width="260.0" height="99" fill="#ececec" rx="16" stroke="#333" stroke-width="1.6" class="frame"/>
-<text x="1050.0" y="1786" text-anchor="middle" font-size="16" font-weight="400">O01. Configuração de</text>
-<text x="1050.0" y="1809" text-anchor="middle" font-size="16" font-weight="400">treino definida</text>
-<text x="1050.0" y="1832" text-anchor="middle" font-size="16" font-weight="400">e nomeada</text>
+<rect x="920.0" y="1760" width="230.0" height="122" fill="#ececec" rx="16" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="1035.0" y="1786" text-anchor="middle" font-size="16" font-weight="400">O01. Configuração de</text>
+<text x="1035.0" y="1809" text-anchor="middle" font-size="16" font-weight="400">treino definida</text>
+<text x="1035.0" y="1832" text-anchor="middle" font-size="16" font-weight="400">e nomeada</text>
 </g>
+<path d="M1285.0 1721 V1760" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
 <g data-box="b27">
-<rect x="180.0" y="1916" width="300.0" height="122" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
-<text x="330.0" y="1942" text-anchor="middle" font-size="16" font-weight="400">O06. Saber como as</text>
-<text x="330.0" y="1965" text-anchor="middle" font-size="16" font-weight="400">configurações se</text>
-<text x="330.0" y="1988" text-anchor="middle" font-size="16" font-weight="400">saem no conjunto</text>
-<text x="330.0" y="2011" text-anchor="middle" font-size="16" font-weight="400">de teste</text>
+<rect x="1170.0" y="1760" width="230.0" height="122" fill="#ececec" rx="16" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="1285.0" y="1786" text-anchor="middle" font-size="16" font-weight="400">O11. Dados prontos</text>
+<text x="1285.0" y="1809" text-anchor="middle" font-size="16" font-weight="400">e configurações</text>
+<text x="1285.0" y="1832" text-anchor="middle" font-size="16" font-weight="400">avaliadas no</text>
+<text x="1285.0" y="1855" text-anchor="middle" font-size="16" font-weight="400">conjunto de teste</text>
 </g>
-<path d="M330.0 2038 V2069" fill="none" stroke="#333" stroke-width="1.6"/>
-<path d="M180.0 2069 H480.0" fill="none" stroke="#333" stroke-width="1.6"/>
-<path d="M180.0 2069 V2108" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
 <g data-box="b28">
-<rect x="40.0" y="2108" width="280.0" height="99" fill="#ececec" rx="16" stroke="#333" stroke-width="1.6" class="frame"/>
-<text x="180.0" y="2134" text-anchor="middle" font-size="16" font-weight="400">O07. Entender o que</text>
-<text x="180.0" y="2157" text-anchor="middle" font-size="16" font-weight="400">as métricas e a</text>
-<text x="180.0" y="2180" text-anchor="middle" font-size="16" font-weight="400">diferença indicam</text>
+<rect x="210.0" y="1916" width="300.0" height="122" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="360.0" y="1942" text-anchor="middle" font-size="16" font-weight="400">O06. Saber como as</text>
+<text x="360.0" y="1965" text-anchor="middle" font-size="16" font-weight="400">configurações se</text>
+<text x="360.0" y="1988" text-anchor="middle" font-size="16" font-weight="400">saem no conjunto</text>
+<text x="360.0" y="2011" text-anchor="middle" font-size="16" font-weight="400">de teste</text>
 </g>
-<path d="M480.0 2069 V2108" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<path d="M360.0 2038 V2069" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M140.0 2069 H580.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M140.0 2069 V2108" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
 <g data-box="b29">
-<rect x="340.0" y="2108" width="280.0" height="99" fill="#ececec" rx="16" stroke="#333" stroke-width="1.6" stroke-dasharray="8 5" class="frame"/>
-<text x="480.0" y="2134" text-anchor="middle" font-size="16" font-weight="400">Execuções e</text>
-<text x="480.0" y="2157" text-anchor="middle" font-size="16" font-weight="400">avaliações pedidas</text>
-<text x="480.0" y="2180" text-anchor="middle" font-size="16" font-weight="400">a um colega</text>
+<rect x="40.0" y="2108" width="200.0" height="122" fill="#ececec" rx="16" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="140.0" y="2134" text-anchor="middle" font-size="16" font-weight="400">O07. Entender o que</text>
+<text x="140.0" y="2157" text-anchor="middle" font-size="16" font-weight="400">as métricas e a</text>
+<text x="140.0" y="2180" text-anchor="middle" font-size="16" font-weight="400">diferença indicam</text>
 </g>
+<path d="M360.0 2069 V2108" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
 <g data-box="b30">
-<rect x="860.0" y="1916" width="300.0" height="99" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
-<text x="1010.0" y="1942" text-anchor="middle" font-size="16" font-weight="400">O10. Decisão da</text>
-<text x="1010.0" y="1965" text-anchor="middle" font-size="16" font-weight="400">coordenação</text>
-<text x="1010.0" y="1988" text-anchor="middle" font-size="16" font-weight="400">registrada</text>
+<rect x="260.0" y="2108" width="200.0" height="122" fill="#ececec" rx="16" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="360.0" y="2134" text-anchor="middle" font-size="16" font-weight="400">O11. Dados prontos</text>
+<text x="360.0" y="2157" text-anchor="middle" font-size="16" font-weight="400">e configurações</text>
+<text x="360.0" y="2180" text-anchor="middle" font-size="16" font-weight="400">avaliadas no</text>
+<text x="360.0" y="2203" text-anchor="middle" font-size="16" font-weight="400">conjunto de teste</text>
 </g>
-<path d="M1010.0 2015 V2046" fill="none" stroke="#333" stroke-width="1.6"/>
-<path d="M860.0 2046 H1160.0" fill="none" stroke="#333" stroke-width="1.6"/>
-<path d="M860.0 2046 V2085" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
+<path d="M580.0 2069 V2108" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
 <g data-box="b31">
-<rect x="720.0" y="2085" width="280.0" height="99" fill="#ececec" rx="16" stroke="#333" stroke-width="1.6" class="frame"/>
-<text x="860.0" y="2111" text-anchor="middle" font-size="16" font-weight="400">O09. Recomendação</text>
-<text x="860.0" y="2134" text-anchor="middle" font-size="16" font-weight="400">apresentada à</text>
-<text x="860.0" y="2157" text-anchor="middle" font-size="16" font-weight="400">coordenação</text>
+<rect x="480.0" y="2108" width="200.0" height="122" fill="#ececec" rx="16" stroke="#333" stroke-width="1.6" stroke-dasharray="8 5" class="frame"/>
+<text x="580.0" y="2134" text-anchor="middle" font-size="16" font-weight="400">Execuções e</text>
+<text x="580.0" y="2157" text-anchor="middle" font-size="16" font-weight="400">avaliações pedidas</text>
+<text x="580.0" y="2180" text-anchor="middle" font-size="16" font-weight="400">a um colega</text>
 </g>
-<path d="M1160.0 2046 V2085" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
 <g data-box="b32">
-<rect x="1020.0" y="2085" width="280.0" height="99" fill="#ececec" rx="16" stroke="#333" stroke-width="1.6" stroke-dasharray="8 5" class="frame"/>
-<text x="1160.0" y="2111" text-anchor="middle" font-size="16" font-weight="400">Decisão</text>
-<text x="1160.0" y="2134" text-anchor="middle" font-size="16" font-weight="400">discutida na</text>
-<text x="1160.0" y="2157" text-anchor="middle" font-size="16" font-weight="400">reunião</text>
+<rect x="900.0" y="1916" width="300.0" height="99" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="1050.0" y="1942" text-anchor="middle" font-size="16" font-weight="400">O10. Decisão da</text>
+<text x="1050.0" y="1965" text-anchor="middle" font-size="16" font-weight="400">coordenação</text>
+<text x="1050.0" y="1988" text-anchor="middle" font-size="16" font-weight="400">registrada</text>
 </g>
-<path d="M40 2241 H1400" fill="none" stroke="#333" stroke-width="1.6"/>
-<text x="40" y="2271" text-anchor="start" font-size="18" font-weight="700">Legenda</text>
+<path d="M1050.0 2015 V2046" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M900.0 2046 H1200.0" fill="none" stroke="#333" stroke-width="1.6"/>
+<path d="M900.0 2046 V2085" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
 <g data-box="b33">
-<rect x="40.0" y="2293" width="220.0" height="50" fill="white" stroke="#333" stroke-width="3.4" class="frame"/>
-<text x="150" y="2319" text-anchor="middle" font-size="16" font-weight="400">objetivo final</text>
+<rect x="760.0" y="2085" width="280.0" height="99" fill="#ececec" rx="16" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="900.0" y="2111" text-anchor="middle" font-size="16" font-weight="400">O09. Recomendação</text>
+<text x="900.0" y="2134" text-anchor="middle" font-size="16" font-weight="400">apresentada à</text>
+<text x="900.0" y="2157" text-anchor="middle" font-size="16" font-weight="400">coordenação</text>
 </g>
+<path d="M1200.0 2046 V2085" fill="none" stroke="#333" stroke-width="1.6" marker-end="url(#arrow)"/>
 <g data-box="b34">
-<rect x="290.0" y="2293" width="220.0" height="50" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
-<text x="400" y="2319" text-anchor="middle" font-size="16" font-weight="400">instrumental direto</text>
+<rect x="1060.0" y="2085" width="280.0" height="99" fill="#ececec" rx="16" stroke="#333" stroke-width="1.6" stroke-dasharray="8 5" class="frame"/>
+<text x="1200.0" y="2111" text-anchor="middle" font-size="16" font-weight="400">Decisão</text>
+<text x="1200.0" y="2134" text-anchor="middle" font-size="16" font-weight="400">discutida na</text>
+<text x="1200.0" y="2157" text-anchor="middle" font-size="16" font-weight="400">reunião</text>
 </g>
+<path d="M40 2264 H1400" fill="none" stroke="#333" stroke-width="1.6"/>
+<text x="40" y="2294" text-anchor="start" font-size="18" font-weight="700">Legenda</text>
 <g data-box="b35">
-<rect x="540.0" y="2293" width="220.0" height="50" fill="#ececec" rx="16" stroke="#333" stroke-width="1.6" class="frame"/>
-<text x="650" y="2319" text-anchor="middle" font-size="16" font-weight="400">instrumental indireto</text>
+<rect x="40.0" y="2316" width="220.0" height="50" fill="white" stroke="#333" stroke-width="3.4" class="frame"/>
+<text x="150" y="2342" text-anchor="middle" font-size="16" font-weight="400">objetivo final</text>
 </g>
 <g data-box="b36">
-<rect x="790.0" y="2293" width="220.0" height="50" fill="white" stroke="#333" stroke-width="1.6" stroke-dasharray="8 5" class="frame"/>
-<text x="900" y="2319" text-anchor="middle" font-size="16" font-weight="400">fora do sistema</text>
+<rect x="290.0" y="2316" width="220.0" height="50" fill="white" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="400" y="2342" text-anchor="middle" font-size="16" font-weight="400">instrumental direto</text>
 </g>
-<text x="40" y="2379" text-anchor="start" font-size="14" font-weight="400">Objetivo final: o que a persona quer alcançar no fim. Instrumental direto: resultado que leva diretamente ao objetivo final.</text>
-<text x="40" y="2399" text-anchor="start" font-size="14" font-weight="400">Instrumental indireto: resultado que serve a outro objetivo instrumental. Caixa tracejada: objetivo alcançado entre pessoas, fora do sistema (RQ09).</text>
-<text x="40" y="2419" text-anchor="start" font-size="14" font-weight="400">Cada caixa é um resultado desejado, não um passo da interação; os passos ficam nos diálogos (subtópicos) da seção 2 e na tabela de subtópicos.</text>
-<text x="40" y="2439" text-anchor="start" font-size="14" font-weight="400">Um mesmo objetivo pode servir a mais de uma persona (O05, O06 e O08) ou a mais de um objetivo (O03 serve a O04 e a O05); ele aparece em cada lugar.</text>
-<text x="40" y="2459" text-anchor="start" font-size="14" font-weight="400">O05 reúne T03 (P01) e T07 (P02); O08 reúne as conclusões da validação (P01), do experimento (P02) e a recomendação (P03). O07 também apoia O09.</text>
-<text x="40" y="2479" text-anchor="start" font-size="14" font-weight="400">Os IDs O01–O10 e os subtópicos O01.1… (tabela da seção 3.2 da Entrega 9) são os usados nas Entregas 10 a 12.</text>
-<text x="40" y="2499" text-anchor="start" font-size="14" font-weight="400">[H]: proposta derivada de proto-personas, a revisar depois da coleta da Entrega 7.</text>
-</g><metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTplOTA2NTZmYi0xODBiLTQwODEtODNmMi0zYmFmMjVhYThhYzkAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaNgmYl71l6kuzvlkvPMsFHgAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDo5ZDg3MDg4ZS04NzkxLTRiZTItYjkzNC1iNWI2N2RiYjQzYzNscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNoWGYjL9+AFds+KeqhKvdVVwAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggY3Wu8NhZuxS1vPQsWbQ/y1mDxy7906+WCec35jiHzQ2kZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaAPHPaPEjpN3I5T9TZLmlEUAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRMAAAAAAAAAAAAAAAAZGhhc2hYIPtx/DmIuaCKi0iFJ1+3wrrnaVzX3pUJ/eDhv5468Q+pZG5hbWVuanVtYmYgbWFuaWZlc3RqZXhjbHVzaW9uc4GiZXN0YXJ0GV8VZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOmU5MDY1NmZiLTE4MGItNDA4MS04M2YyLTNiYWYyNWFhOGFjOS9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOjg3NmNiNmZkLTY3OWItNGEwZi1iMzI0LWFhOTExODVhMzFjOXJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCBjda7w2Fm7FLW89CxZtD/LWYPHLv3Tr5YJ5zfmOIfNDaJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggp6x2gxqdCzPrAZZ9IEjhcnOZb92ZpH419cwgqfZoWyeiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFggwbplkCB50rditldtDLcXpNwJ4nab48OidZP6zC/0/ex0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQPIQC39Qpz7u4iobd6RSwBha9s62IuaoAPNoB1MSdLhGqN1HKqt2wLFVvAvH1nnhYIH7ZefPkbsVBjwzuJjOLrs=</c2pa:manifest></metadata></svg>
+<g data-box="b37">
+<rect x="540.0" y="2316" width="220.0" height="50" fill="#ececec" rx="16" stroke="#333" stroke-width="1.6" class="frame"/>
+<text x="650" y="2342" text-anchor="middle" font-size="16" font-weight="400">instrumental indireto</text>
+</g>
+<g data-box="b38">
+<rect x="790.0" y="2316" width="220.0" height="50" fill="white" stroke="#333" stroke-width="1.6" stroke-dasharray="8 5" class="frame"/>
+<text x="900" y="2342" text-anchor="middle" font-size="16" font-weight="400">fora do sistema</text>
+</g>
+<text x="40" y="2402" text-anchor="start" font-size="14" font-weight="400">Objetivo final: o que a persona quer alcançar no fim. Instrumental direto: resultado que leva diretamente ao objetivo final.</text>
+<text x="40" y="2422" text-anchor="start" font-size="14" font-weight="400">Instrumental indireto: resultado que serve a outro objetivo instrumental. Caixa tracejada: objetivo alcançado entre pessoas, fora do sistema (RQ09).</text>
+<text x="40" y="2442" text-anchor="start" font-size="14" font-weight="400">Cada caixa é um resultado desejado, não um passo da interação; os passos ficam nos diálogos (subtópicos) da seção 2 e na tabela de subtópicos.</text>
+<text x="40" y="2462" text-anchor="start" font-size="14" font-weight="400">Um mesmo objetivo pode servir a mais de uma persona (O05, O06 e O08) ou a mais de um objetivo (O03 serve a O04 e a O05); ele aparece em cada lugar.</text>
+<text x="40" y="2482" text-anchor="start" font-size="14" font-weight="400">O05 reúne T03 (P01) e T07 (P02); O08 reúne as conclusões da validação (P01), do experimento (P02) e a recomendação (P03). O07 também apoia O09.</text>
+<text x="40" y="2502" text-anchor="start" font-size="14" font-weight="400">Os IDs O01–O11 e os subtópicos O01.1… (tabela da seção 3.2 da Entrega 9) são os usados nas Entregas 10 a 12. O11 foi incluído em 20/11/2026 (tela Datasets).</text>
+<text x="40" y="2522" text-anchor="start" font-size="14" font-weight="400">[H]: proposta derivada de proto-personas, a revisar depois da coleta da Entrega 7.</text>
+</g><metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTphYWMxNzVkZS1iZTNhLTQwODYtODdhNS02N2JjYTEzYzZiN2YAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaOS2xvf3xZ7/MCRq2FB9VcIAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDo0MmVjZDViMi01OWU4LTQwODMtOWMwOS01MzQ3YjVkYzRmOTdscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNoN4w3z2Rdp/oSNltnPv8pEAAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggBbJAhN2P0tWxBoEYXpLzIz2NSp9dCbfUCjszmiO6ax2kZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaND+TUCD6EOAX/R0ebwGu8wAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRMAAAAAAAAAAAAAAAAZGhhc2hYIBdMKQDA5ZlFKsicn/3F0N2103VPMBy5w6jOL9HsyVgyZG5hbWVuanVtYmYgbWFuaWZlc3RqZXhjbHVzaW9uc4GiZXN0YXJ0GWR4Zmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOmFhYzE3NWRlLWJlM2EtNDA4Ni04N2E1LTY3YmNhMTNjNmI3Zi9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOjQ4OWE3ZTZmLWEwYWEtNDY2OC04NzM4LTQ2ZmRkZDBlZDJhZHJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCAFskCE3Y/S1bEGgRhekvMjPY1Kn10Jt9QKOzOaI7prHaJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFgg+lx75lYY15+W5MDJF3VKw1/sphWTd1YwSrbon4EwyrqiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFgg5clpxEfvLWjg6kJKzn39aK05VnPx7qx/lO4hczQODTN0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQMEoMaTWIzrSbRzivB0y5Ve+OegVgrTYNKOq7oWzwQoOeKR18ZgVeLQkHI583NTUQsqzgSsA6RUyxQNVOLjLlTs=</c2pa:manifest></metadata></svg>

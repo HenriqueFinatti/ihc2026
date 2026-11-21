@@ -61,6 +61,13 @@ class Molic:
         self.out.append(f'<circle cx="{cx}" cy="{cy}" r="{r - 6}" fill="#222"/>')
         return {"cx": cx, "cy": cy, "y": cy - r, "b": cy + r, "x": cx - r, "r": cx + r}
 
+    def closing_temp(self, cx, cy, r=13):
+        """Encerramento temporário: a pessoa sai, mas a atividade do sistema continua (contorno tracejado)."""
+        self.out.append(f'<circle cx="{cx}" cy="{cy}" r="{r}" fill="white" stroke="#222" stroke-width="2" '
+                        f'stroke-dasharray="4 3"/>')
+        self.out.append(f'<circle cx="{cx}" cy="{cy}" r="{r - 6}" fill="#222"/>')
+        return {"cx": cx, "cy": cy, "y": cy - r, "b": cy + r, "x": cx - r, "r": cx + r}
+
     # ------------------------------------------------------------ falas
     def arrow(self, points, label=None, at=None, anchor="start", dashed=False, size=13):
         """Fala de transição: points = [(x, y), ...]; label = linhas; at = (x, y) da primeira linha."""
@@ -89,9 +96,12 @@ class Molic:
         self.s.text(740, y + 72, "abertura", size=13)
         self.closing(840, y + 32)
         self.s.text(840, y + 72, "encerramento", size=13)
+        self.closing_temp(1020, y + 32)
+        self.s.text(1020, y + 72, "encerramento temporário", size=13)
+        self.s.text(1020, y + 89, "(a atividade continua)", size=13)
         notes = ["Seta contínua: fala de transição (u: usuário; d: preposto do designer).",
                  "Seta tracejada: fala de recuperação de ruptura.",
-                 "gco / gcc: abertura / fechamento da conversa sobre um objetivo.",
+                 "gco / gcc: abertura / fechamento de cada conversa sobre um objetivo do usuário (um par por conversa).",
                  "[PP] prevenção passiva · [PA] prevenção ativa · [AL] prevenção apoiada (alerta)",
                  "[RA] recuperação apoiada · [CE] captura de erro (Entrega 9, seção 4)."]
         for i, n in enumerate(notes):
