@@ -83,9 +83,32 @@ Ao justificar, considere **frequência, impacto e persistência** do problema no
 
 **Autor(a):** Henrique Finatti Silveira Belo Trebbi — 22.123.030-3  
 **Data da inspeção:** {{dd/mm/aaaa}}  
-**Versão inspecionada:** commit `16a5bc1`
+**Versão inspecionada:** commit `16a5bc1`  
+**Computador, tela, resolução e navegador:** {{...}}  
+**Tempo gasto na inspeção:** {{...}}
 
-### 4. Matriz de cobertura das 10 heurísticas
+### 4. Cobertura das telas, dos estados e das heurísticas
+
+#### Telas e estados examinados
+
+Os estados de cada tela são os da seção 2 ("Telas/estados"). A falta de memória no treino não pode ser provocada no equipamento: é examinada pela mensagem implementada (Entrega 11) e marcada como "examinada sem reproduzir".
+
+| Tela | Estados examinados | Examinado? | Observação (motivo, se não examinado) |
+|---|---|---|---|
+| TL01 Configuração de treino | {{...}} | sim/não | {{...}} |
+| TL02 Estado do treino (inclui treino interrompido e falta de memória) | {{...}} | sim/não | {{...}} |
+| TL03 Entradas e configurações | {{...}} | sim/não | {{...}} |
+| TL04 Processamento (inclui falha na execução) | {{...}} | sim/não | {{...}} |
+| TL05 Resultado e avaliação da imagem | {{...}} | sim/não | {{...}} |
+| TL06 Comparação na mesma imagem | {{...}} | sim/não | {{...}} |
+| TL07 Desempenho consolidado | {{...}} | sim/não | {{...}} |
+| TL08 Conclusão | {{...}} | sim/não | {{...}} |
+| TL09 Apresentação e decisão | {{...}} | sim/não | {{...}} |
+| TL10 Explicação dos termos | {{...}} | sim/não | {{...}} |
+| TL11 Datasets | {{...}} | sim/não | {{...}} |
+| Elementos de todas as telas | {{...}} | sim/não | {{...}} |
+
+#### Matriz das 10 heurísticas
 
 | Heurística | Telas/fluxos examinados | Houve violação? | IDs dos achados | Exemplo de boa prática se não violada |
 |---|---|---|---|---|
@@ -102,11 +125,25 @@ Ao justificar, considere **frequência, impacto e persistência** do problema no
 
 ### 5. Declaração de violações
 
-| ID | Heurística | Tela/estado | Problema observado | Evidência | Severidade | Justificativa da severidade | Recomendação |
-|---|---|---|---|---|---:|---|---|
-| V01 | {{H...}} | {{TL...}} | {{o que ocorre, em que ação e qual consequência}} | ![V01 (AV01)](../assets/13_heuristica/av01/v01.png) | {{0–4}} | {{frequência/impacto/persistência}} | {{correção específica}} |
+| ID | Heurística | Tela/estado | Ação ou condição | Problema observado | Consequência para quem usa | Evidência | Severidade | Justificativa da severidade | Recomendação |
+|---|---|---|---|---|---|---|---:|---|---|
+| V01 | {{H...}} | {{TL...}} | {{em que ação ou condição}} | {{o que ocorre}} | {{o que isso causa a quem usa}} | ![V01 (AV01)](../assets/13_heuristica/av01/v01.png) | {{0–4}} | {{frequência/impacto/persistência}} | {{correção específica}} |
 
 **Qualidade do relato:** o problema deve ser observável e localizado. Evite “interface confusa” sem dizer **o que**, **onde**, **quando** e **para quem**.
+
+#### Percursos de acessibilidade
+
+Os sete percursos da Entrega 11 ("Percursos completos a confirmar"), feitos de ponta a ponta. Cada problema encontrado também entra na declaração de violações.
+
+| Percurso | Só com teclado: concluído? Onde parou? | Foco visível e na ordem da tela? | Ampliação de 200%: legível, sem rolagem horizontal? | Leitor de tela: anuncia estados e mensagens? | IDs das violações |
+|---|---|---|---|---|---|
+| Configurar e iniciar um treino (TL01 → TL02) | {{...}} | {{...}} | {{...}} | {{...}} | {{...}} |
+| Enviar entradas e recuperar-se de um formato inválido (TL03 → TL04) | {{...}} | {{...}} | {{...}} | {{...}} | {{...}} |
+| Avaliar as imagens (TL05) | {{...}} | {{...}} | {{...}} | {{...}} | {{...}} |
+| Comparar configurações (TL06 → TL07) | {{...}} | {{...}} | {{...}} | {{...}} | {{...}} |
+| Registrar uma conclusão (TL08) | {{...}} | {{...}} | {{...}} | {{...}} | {{...}} |
+| Apresentar uma recomendação (TL09) | {{...}} | {{...}} | {{...}} | {{...}} | {{...}} |
+| Preparar os dados e avaliar as configurações (TL11) | {{...}} | {{...}} | {{...}} | {{...}} | {{...}} |
 
 ### 6. Boas práticas — heurísticas não violadas (atividade didática)
 
@@ -120,9 +157,32 @@ Ao justificar, considere **frequência, impacto e persistência** do problema no
 
 **Autor(a):** Tiago Fagundes dos Santos — 22.123.017-0  
 **Data da inspeção:** {{dd/mm/aaaa}}  
-**Versão inspecionada:** commit `16a5bc1`
+**Versão inspecionada:** commit `16a5bc1`  
+**Computador, tela, resolução e navegador:** {{...}}  
+**Tempo gasto na inspeção:** {{...}}
 
-### 4. Matriz de cobertura das 10 heurísticas
+### 4. Cobertura das telas, dos estados e das heurísticas
+
+#### Telas e estados examinados
+
+Os estados de cada tela são os da seção 2 ("Telas/estados"). A falta de memória no treino não pode ser provocada no equipamento: é examinada pela mensagem implementada (Entrega 11) e marcada como "examinada sem reproduzir".
+
+| Tela | Estados examinados | Examinado? | Observação (motivo, se não examinado) |
+|---|---|---|---|
+| TL01 Configuração de treino | {{...}} | sim/não | {{...}} |
+| TL02 Estado do treino (inclui treino interrompido e falta de memória) | {{...}} | sim/não | {{...}} |
+| TL03 Entradas e configurações | {{...}} | sim/não | {{...}} |
+| TL04 Processamento (inclui falha na execução) | {{...}} | sim/não | {{...}} |
+| TL05 Resultado e avaliação da imagem | {{...}} | sim/não | {{...}} |
+| TL06 Comparação na mesma imagem | {{...}} | sim/não | {{...}} |
+| TL07 Desempenho consolidado | {{...}} | sim/não | {{...}} |
+| TL08 Conclusão | {{...}} | sim/não | {{...}} |
+| TL09 Apresentação e decisão | {{...}} | sim/não | {{...}} |
+| TL10 Explicação dos termos | {{...}} | sim/não | {{...}} |
+| TL11 Datasets | {{...}} | sim/não | {{...}} |
+| Elementos de todas as telas | {{...}} | sim/não | {{...}} |
+
+#### Matriz das 10 heurísticas
 
 | Heurística | Telas/fluxos examinados | Houve violação? | IDs dos achados | Exemplo de boa prática se não violada |
 |---|---|---|---|---|
@@ -139,11 +199,25 @@ Ao justificar, considere **frequência, impacto e persistência** do problema no
 
 ### 5. Declaração de violações
 
-| ID | Heurística | Tela/estado | Problema observado | Evidência | Severidade | Justificativa da severidade | Recomendação |
-|---|---|---|---|---|---:|---|---|
-| V01 | {{H...}} | {{TL...}} | {{o que ocorre, em que ação e qual consequência}} | ![V01 (AV02)](../assets/13_heuristica/av02/v01.png) | {{0–4}} | {{frequência/impacto/persistência}} | {{correção específica}} |
+| ID | Heurística | Tela/estado | Ação ou condição | Problema observado | Consequência para quem usa | Evidência | Severidade | Justificativa da severidade | Recomendação |
+|---|---|---|---|---|---|---|---:|---|---|
+| V01 | {{H...}} | {{TL...}} | {{em que ação ou condição}} | {{o que ocorre}} | {{o que isso causa a quem usa}} | ![V01 (AV02)](../assets/13_heuristica/av02/v01.png) | {{0–4}} | {{frequência/impacto/persistência}} | {{correção específica}} |
 
 **Qualidade do relato:** o problema deve ser observável e localizado. Evite “interface confusa” sem dizer **o que**, **onde**, **quando** e **para quem**.
+
+#### Percursos de acessibilidade
+
+Os sete percursos da Entrega 11 ("Percursos completos a confirmar"), feitos de ponta a ponta. Cada problema encontrado também entra na declaração de violações.
+
+| Percurso | Só com teclado: concluído? Onde parou? | Foco visível e na ordem da tela? | Ampliação de 200%: legível, sem rolagem horizontal? | Leitor de tela: anuncia estados e mensagens? | IDs das violações |
+|---|---|---|---|---|---|
+| Configurar e iniciar um treino (TL01 → TL02) | {{...}} | {{...}} | {{...}} | {{...}} | {{...}} |
+| Enviar entradas e recuperar-se de um formato inválido (TL03 → TL04) | {{...}} | {{...}} | {{...}} | {{...}} | {{...}} |
+| Avaliar as imagens (TL05) | {{...}} | {{...}} | {{...}} | {{...}} | {{...}} |
+| Comparar configurações (TL06 → TL07) | {{...}} | {{...}} | {{...}} | {{...}} | {{...}} |
+| Registrar uma conclusão (TL08) | {{...}} | {{...}} | {{...}} | {{...}} | {{...}} |
+| Apresentar uma recomendação (TL09) | {{...}} | {{...}} | {{...}} | {{...}} | {{...}} |
+| Preparar os dados e avaliar as configurações (TL11) | {{...}} | {{...}} | {{...}} | {{...}} | {{...}} |
 
 ### 6. Boas práticas — heurísticas não violadas (atividade didática)
 
@@ -157,9 +231,32 @@ Ao justificar, considere **frequência, impacto e persistência** do problema no
 
 **Autor(a):** Mateus Marana Assuena — 22.123.026-1  
 **Data da inspeção:** {{dd/mm/aaaa}}  
-**Versão inspecionada:** commit `16a5bc1`
+**Versão inspecionada:** commit `16a5bc1`  
+**Computador, tela, resolução e navegador:** {{...}}  
+**Tempo gasto na inspeção:** {{...}}
 
-### 4. Matriz de cobertura das 10 heurísticas
+### 4. Cobertura das telas, dos estados e das heurísticas
+
+#### Telas e estados examinados
+
+Os estados de cada tela são os da seção 2 ("Telas/estados"). A falta de memória no treino não pode ser provocada no equipamento: é examinada pela mensagem implementada (Entrega 11) e marcada como "examinada sem reproduzir".
+
+| Tela | Estados examinados | Examinado? | Observação (motivo, se não examinado) |
+|---|---|---|---|
+| TL01 Configuração de treino | {{...}} | sim/não | {{...}} |
+| TL02 Estado do treino (inclui treino interrompido e falta de memória) | {{...}} | sim/não | {{...}} |
+| TL03 Entradas e configurações | {{...}} | sim/não | {{...}} |
+| TL04 Processamento (inclui falha na execução) | {{...}} | sim/não | {{...}} |
+| TL05 Resultado e avaliação da imagem | {{...}} | sim/não | {{...}} |
+| TL06 Comparação na mesma imagem | {{...}} | sim/não | {{...}} |
+| TL07 Desempenho consolidado | {{...}} | sim/não | {{...}} |
+| TL08 Conclusão | {{...}} | sim/não | {{...}} |
+| TL09 Apresentação e decisão | {{...}} | sim/não | {{...}} |
+| TL10 Explicação dos termos | {{...}} | sim/não | {{...}} |
+| TL11 Datasets | {{...}} | sim/não | {{...}} |
+| Elementos de todas as telas | {{...}} | sim/não | {{...}} |
+
+#### Matriz das 10 heurísticas
 
 | Heurística | Telas/fluxos examinados | Houve violação? | IDs dos achados | Exemplo de boa prática se não violada |
 |---|---|---|---|---|
@@ -176,11 +273,25 @@ Ao justificar, considere **frequência, impacto e persistência** do problema no
 
 ### 5. Declaração de violações
 
-| ID | Heurística | Tela/estado | Problema observado | Evidência | Severidade | Justificativa da severidade | Recomendação |
-|---|---|---|---|---|---:|---|---|
-| V01 | {{H...}} | {{TL...}} | {{o que ocorre, em que ação e qual consequência}} | ![V01 (AV03)](../assets/13_heuristica/av03/v01.png) | {{0–4}} | {{frequência/impacto/persistência}} | {{correção específica}} |
+| ID | Heurística | Tela/estado | Ação ou condição | Problema observado | Consequência para quem usa | Evidência | Severidade | Justificativa da severidade | Recomendação |
+|---|---|---|---|---|---|---|---:|---|---|
+| V01 | {{H...}} | {{TL...}} | {{em que ação ou condição}} | {{o que ocorre}} | {{o que isso causa a quem usa}} | ![V01 (AV03)](../assets/13_heuristica/av03/v01.png) | {{0–4}} | {{frequência/impacto/persistência}} | {{correção específica}} |
 
 **Qualidade do relato:** o problema deve ser observável e localizado. Evite “interface confusa” sem dizer **o que**, **onde**, **quando** e **para quem**.
+
+#### Percursos de acessibilidade
+
+Os sete percursos da Entrega 11 ("Percursos completos a confirmar"), feitos de ponta a ponta. Cada problema encontrado também entra na declaração de violações.
+
+| Percurso | Só com teclado: concluído? Onde parou? | Foco visível e na ordem da tela? | Ampliação de 200%: legível, sem rolagem horizontal? | Leitor de tela: anuncia estados e mensagens? | IDs das violações |
+|---|---|---|---|---|---|
+| Configurar e iniciar um treino (TL01 → TL02) | {{...}} | {{...}} | {{...}} | {{...}} | {{...}} |
+| Enviar entradas e recuperar-se de um formato inválido (TL03 → TL04) | {{...}} | {{...}} | {{...}} | {{...}} | {{...}} |
+| Avaliar as imagens (TL05) | {{...}} | {{...}} | {{...}} | {{...}} | {{...}} |
+| Comparar configurações (TL06 → TL07) | {{...}} | {{...}} | {{...}} | {{...}} | {{...}} |
+| Registrar uma conclusão (TL08) | {{...}} | {{...}} | {{...}} | {{...}} | {{...}} |
+| Apresentar uma recomendação (TL09) | {{...}} | {{...}} | {{...}} | {{...}} | {{...}} |
+| Preparar os dados e avaliar as configurações (TL11) | {{...}} | {{...}} | {{...}} | {{...}} | {{...}} |
 
 ### 6. Boas práticas — heurísticas não violadas (atividade didática)
 
@@ -192,11 +303,11 @@ Ao justificar, considere **frequência, impacto e persistência** do problema no
 
 ## 7. Consolidação da equipe
 
-Problemas iguais ou muito semelhantes encontrados por avaliadores diferentes devem ser consolidados, preservando quem os encontrou.
+Problemas iguais ou muito semelhantes encontrados por avaliadores diferentes devem ser consolidados, preservando quem os encontrou. A consolidação só começa quando os três avaliadores terminam a inspeção individual. A heurística e a severidade que cada avaliador deu ficam registradas antes do consenso; quando não houver acordo, as posições ficam lado a lado na coluna "Divergências" (Entrega 12, E.5).
 
-| ID consolidado | Achados individuais | Heurística | Problema | Severidade final | Prioridade | Responsável pela correção |
-|---|---|---|---|---:|---|---|
-| HC01 | {{V01 (AV01), V04 (AV02)}} | {{H...}} | {{...}} | {{...}} | {{alta/média/baixa}} | {{...}} |
+| ID consolidado | Achados individuais | Heurística e severidade de cada avaliador | Problema | Severidade final | Divergências | Prioridade | Responsável pela correção |
+|---|---|---|---|---:|---|---|---|
+| HC01 | {{V01 (AV01), V04 (AV02)}} | {{AV01: H.., ..; AV02: H.., ..}} | {{...}} | {{...}} | {{...}} | {{alta/média/baixa}} | {{...}} |
 
 ## 8. Síntese e plano de melhoria
 
@@ -204,6 +315,8 @@ Problemas iguais ou muito semelhantes encontrados por avaliadores diferentes dev
 - Problemas críticos/graves que bloqueiam teste ou release.
 - Padrões recorrentes entre telas.
 - Correções que serão feitas antes/para a avaliação com usuários.
+- Respostas às perguntas QA09 a QA13 da Entrega 12 (E.5).
+- A ausência de problemas encontrados não comprova alta usabilidade: indica só que esta inspeção, com esse escopo e esses avaliadores, não revelou outros problemas.
 
 ## Checklist
 
@@ -212,6 +325,7 @@ Problemas iguais ou muito semelhantes encontrados por avaliadores diferentes dev
 - [ ] Estados administrativos, filtros, relatórios, históricos, processamento e erros foram incluídos quando existentes.
 - [ ] A inspeção avaliou a interface/protótipo, não o mérito técnico do algoritmo/modelo.
 - [ ] H1–H10 aparecem na matriz de cobertura de cada avaliador.
+- [ ] Cada avaliador fez os sete percursos de acessibilidade (teclado, ampliação de 200% e, quando possível, leitor de tela).
 - [ ] Parte de violações contém apenas violações, sem “forçar” exemplos.
 - [ ] Todo problema tem print/localização e contexto.
 - [ ] Severidade possui justificativa, não apenas número.
