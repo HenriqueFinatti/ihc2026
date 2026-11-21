@@ -119,6 +119,7 @@ Alguns itens não são correção de texto: dependem de uma decisão do grupo. V
 | INC-76 | 🟠 | E12 | Cronograma, equipamento e parâmetros ainda `[?]`: datas da inspeção, das correções, dos pilotos e das sessões; integrante do piloto técnico e pessoa do piloto de compreensão; computador, tela e navegador; épocas e batch size do treino rápido da UT04; configurações, ciclos, fotos e palavras dos cenários na folha de preparação (E.6) | Equipe | ⬜ | |
 | INC-77 | 🟠 | E13 | AV01 inspecionou pelas capturas da E11, sem executar a interface: os sete percursos de acessibilidade não foram feitos, e a QA13 fica sem a parte do AV01 | Henrique Finatti Silveira Belo Trebbi | ⬜ | |
 | INC-78 | 🟠 | E13 | AV03 inspecionou pelas capturas da E11, sem executar a interface: os sete percursos de acessibilidade não foram feitos, e a QA13 fica sem a parte do AV03 | Mateus Marana Assuena | ⬜ | |
+| INC-79 | 🟠 | E13 | AV02 inspecionou pelas capturas da E11, sem executar a interface: os sete percursos de acessibilidade não foram feitos, e a QA13 fica sem a parte do AV02 | Tiago Fagundes dos Santos | ⬜ | |
 
 **Prioridade sugerida:** resolver os 🔴 antes de fechar a E4 e começar a E5. O INC-22 é o mais sensível, porque a RC03 sustenta decisões nas três personas.
 
@@ -517,6 +518,11 @@ Alguns itens não são correção de texto: dependem de uma decisão do grupo. V
 - **Problema:** a inspeção do AV03 foi feita pelas 59 capturas da E11 (commit `16a5bc1`) e pelo código, sem executar a interface; os sete percursos ficaram como não feitos.
 - **Sugestão:** fazer os sete percursos na interface executada, sobre a cópia dos dados, antes da consolidação (seção 7), e preencher a tabela do AV03.
 
+#### INC-79 🟠 Percursos de acessibilidade do AV02 não feitos
+- **Onde:** E13, avaliador AV02, "Percursos de acessibilidade"; checklist da E13; E12, QA13.
+- **Problema:** a inspeção do AV02 foi feita pelas 59 capturas da E11 (commit `16a5bc1`) e pelo código, sem executar a interface; os sete percursos ficaram como não feitos.
+- **Sugestão:** fazer os sete percursos na interface executada, sobre a cópia dos dados, antes da consolidação (seção 7), e preencher a tabela do AV02.
+
 ## Histórico deste arquivo
 
 | Data | Alteração | Responsável |
@@ -565,3 +571,4 @@ Alguns itens não são correção de texto: dependem de uma decisão do grupo. V
 | 20/11/2026 | Parecer do professor sobre a E12 aplicado (instrumentos E.2 a E.6, MU07, MU09 e MU10 de volta na E8 e na QA14, piloto em duas passagens, versão `16a5bc1`); E13 alinhada ao formulário E.5; INC-73 e INC-75 resolvidos; criado INC-76 (cronograma, equipamento e parâmetros em aberto) | Equipe (com apoio do Claude) |
 | 20/11/2026 | Entrega 13, AV01: criado INC-77 (percursos de acessibilidade não feitos na inspeção pelas capturas) | Henrique Finatti Silveira Belo Trebbi (com apoio do Claude) |
 | 21/11/2026 | Entrega 13, AV03: criado INC-78 (percursos de acessibilidade não feitos na inspeção pelas capturas) | Mateus Marana Assuena (com apoio do Claude) |
+| 21/11/2026 | Entrega 13, AV02: criado INC-79 (percursos de acessibilidade não feitos na inspeção pelas capturas) | Tiago Fagundes dos Santos (com apoio do Claude) |

@@ -172,52 +172,62 @@ Nesta inspeção, feita pelas capturas, os percursos não foram feitos: teclado,
 ## Avaliador AV02 — Tiago Fagundes dos Santos
 
 **Autor(a):** Tiago Fagundes dos Santos — 22.123.017-0  
-**Data da inspeção:** {{dd/mm/aaaa}}  
-**Versão inspecionada:** commit `16a5bc1`  
-**Computador, tela, resolução e navegador:** {{...}}  
-**Tempo gasto na inspeção:** {{...}}
+**Data da inspeção:** 21/11/2026
+**Versão inspecionada:** commit `16a5bc1`
+**Computador, tela, resolução e navegador:** a interface não foi executada nesta inspeção. Foram inspecionadas as 59 capturas da Entrega 11 (`assets/11_figma/`), feitas em 20/11/2026 no commit `16a5bc1`: capturas da área visível com 1366 × 814 px e capturas da página inteira com 1354 px de largura. Navegador das capturas: `[?]`
+**Tempo gasto na inspeção:** não medido
+**Forma da inspeção:** pelas capturas da Entrega 11, com apoio do Claude. Todas as telas foram percorridas, com atenção maior aos fluxos do M01 (P01, Rafael): envio das imagens, processamento, avaliação imagem a imagem, comparação das duvidosas e conclusão da validação. Textos e comportamentos que as capturas não mostram foram conferidos no código da interface do mesmo commit. Como a interface não foi executada, os percursos de acessibilidade (teclado, ampliação e leitor de tela) não foram feitos.
 
 ### 4. Cobertura das telas, dos estados e das heurísticas
 
 #### Telas e estados examinados
 
-Os estados de cada tela são os da seção 2 ("Telas/estados"). A falta de memória no treino não pode ser provocada no equipamento: é examinada pela mensagem implementada (Entrega 11) e marcada como "examinada sem reproduzir".
+Os estados de cada tela são os da seção 2 ("Telas/estados"). A falta de memória no treino não pode ser provocada no equipamento: é examinada pela mensagem implementada (Entrega 11) e marcada como "examinada sem reproduzir". As capturas são citadas pela tela e pelo número, como TL02/05.
 
 | Tela | Estados examinados | Examinado? | Observação (motivo, se não examinado) |
 |---|---|---|---|
-| TL01 Configuração de treino | {{...}} | sim/não | {{...}} |
-| TL02 Estado do treino (inclui treino interrompido e falta de memória) | {{...}} | sim/não | {{...}} |
-| TL03 Entradas e configurações | {{...}} | sim/não | {{...}} |
-| TL04 Processamento (inclui falha na execução) | {{...}} | sim/não | {{...}} |
-| TL05 Resultado e avaliação da imagem | {{...}} | sim/não | {{...}} |
-| TL06 Comparação na mesma imagem | {{...}} | sim/não | {{...}} |
-| TL07 Desempenho consolidado | {{...}} | sim/não | {{...}} |
-| TL08 Conclusão | {{...}} | sim/não | {{...}} |
-| TL09 Apresentação e decisão | {{...}} | sim/não | {{...}} |
-| TL10 Explicação dos termos | {{...}} | sim/não | {{...}} |
-| TL11 Datasets | {{...}} | sim/não | {{...}} |
-| Elementos de todas as telas | {{...}} | sim/não | {{...}} |
+| TL01 Configuração de treino | Escolher o modelo e os parâmetros (TL01/01); sem dataset de treino, PA (TL01/02); nomear a configuração (TL01/03); nome repetido, RA (TL01/04) | sim | O M01 não passa pelo treino; a tela foi examinada para a cobertura completa |
+| TL02 Estado do treino (inclui treino interrompido e falta de memória) | Na fila (TL02/01); treinando (TL02/02); treino concluído e avaliação no conjunto de teste na fila (TL02/03); resultado do treino depois da avaliação (TL02/04); treino ou avaliação interrompidos, RA, com a causa "programa fechado" (TL02/05); falta de memória | sim | Falta de memória examinada sem reproduzir: a mensagem foi conferida no código (causa "faltou memória no computador" e batch size sugerido já preenchido). A avaliação no estado "processando" não foi capturada |
+| TL03 Entradas e configurações | Entradas e configurações obrigatórias, PA (TL03/01); envio das imagens, com a lista de arquivos e "Retirar", e escolha das configurações (TL03/02); arquivos fora do formato aceito, AL (TL03/03) | sim | O preenchimento inicial do ciclo de testes foi conferido no código |
+| TL04 Processamento (inclui falha na execução) | Na fila e processando (TL04/01); falha numa imagem, RA, e numa configuração inteira, CE (TL04/02); concluído (TL04/03) | sim | O efeito de "Tentar de novo" numa imagem corrompida foi conferido no código |
+| TL05 Resultado e avaliação da imagem | Sem sessão (TL05/01); sobreposição e sem métricas, PP (TL05/02); imagem original e máscara (TL05/03); região ampliada (TL05/04); avaliação registrada (TL05/05); quadro de vídeo e download do MP4 (TL05/06) | sim | O download do MP4 foi examinado só pelo link. Como a avaliação é guardada por imagem e qual imagem "Próxima imagem" abre foram conferidos no código |
+| TL06 Comparação na mesma imagem | Configuração obrigatória, PA (TL06/01); escolher as configurações a comparar, com as duvidosas marcadas (TL06/02); comparar na mesma região, com sobreposição (TL06/03) e com máscara (TL06/04) | sim | — |
+| TL07 Desempenho consolidado | Configurações obrigatórias, PA (TL07/01); sem avaliação no conjunto de teste, CE (TL07/02); conjuntos de teste diferentes, AL (TL07/03); execução faltante no ciclo, CE (TL07/04); sem valor de referência (TL07/05); valor de referência e maior valor (TL07/06); gráfico (TL07/07); a diferença importa? (TL07/08); matriz de confusão (TL07/09) | sim | O M01 não passa pela TL07; a tela foi examinada para a cobertura completa. A TL07/04 está rolada e não mostra o topo da tela |
+| TL08 Conclusão | Validação: informar (TL08/01), imagens sem avaliação, AL (TL08/02), conferir (TL08/03). Experimento: conclusão obrigatória, PA (TL08/04), informar (TL08/05), conferir (TL08/06). Recomendação: configuração obrigatória, PA (TL08/07), informar (TL08/08), conferir (TL08/09), corrigir (TL08/10) | sim | Para onde "Avaliá-las antes" leva foi conferido no código |
+| TL09 Apresentação e decisão | Sem recomendação (TL09/01); retomar a análise (TL09/02); responder a uma dúvida (TL09/03); condição obrigatória, PA (TL09/04); decisão registrada (TL09/05) | sim | — |
+| TL10 Explicação dos termos | Explicação junto do termo (TL10/01); glossário de termos (TL10/02) | sim | — |
+| TL11 Datasets | Conferir os datasets; confirmar a remontagem, AL (TL11/02); montagem na fila (TL11/03); dataset montado (TL11/04); avaliar as selecionadas, PA (TL11/05); falha na avaliação, RA e CE (TL11/06); avaliando (TL11/07); avaliação concluída (TL11/08) | sim | A TL11/01 mostra o diálogo da TL07 aberto sobre a tela Datasets, um estado que a interface não produz (`PENDENCIAS.md`, INC-74); a conferência dos datasets foi examinada nas TL11/02 a TL11/08 |
+| Elementos de todas as telas | Menu; indicador do treino e da avaliação no topo; botão "Glossário de termos"; link "←" para a cena anterior; rodapé com o que o sistema faz e a versão | sim | Examinados nas 59 capturas |
 
 #### Matriz das 10 heurísticas
 
 | Heurística | Telas/fluxos examinados | Houve violação? | IDs dos achados | Exemplo de boa prática se não violada |
 |---|---|---|---|---|
-| H1 | {{...}} | sim/não | {{V01...}} | {{...}} |
-| H2 | {{...}} | sim/não | {{V01...}} | {{...}} |
-| H3 | {{...}} | sim/não | {{V01...}} | {{...}} |
-| H4 | {{...}} | sim/não | {{V01...}} | {{...}} |
-| H5 | {{...}} | sim/não | {{V01...}} | {{...}} |
-| H6 | {{...}} | sim/não | {{V01...}} | {{...}} |
-| H7 | {{...}} | sim/não | {{V01...}} | {{...}} |
-| H8 | {{...}} | sim/não | {{V01...}} | {{...}} |
-| H9 | {{...}} | sim/não | {{V01...}} | {{...}} |
-| H10 | {{...}} | sim/não | {{V01...}} | {{...}} |
+| H1 | TL04 (estados da execução e falhas), TL05 (avaliação registrada), TL08 (conclusão registrada), indicador do topo | sim | V01, V02, V03 | — |
+| H2 | Todas as telas, com atenção às mensagens da TL03, da TL04 e da TL08 | sim | V04 | — |
+| H3 | TL03 (retirar arquivos, trocar os arquivos), TL04 (deixar de fora), TL08 ("Corrigir"), link "←", diálogos | não | — | "Retirar" em cada arquivo escolhido e "Trocar os arquivos" ou "Seguir sem eles" no alerta de formato (seção 6) |
+| H4 | Botões e rótulos da TL05 e da TL06, imagem e vídeo (TL05/06), selos de estado | sim | V05, V06 | — |
+| H5 | Ciclo de testes (TL03), campos obrigatórios (TL03, TL06, TL08), avaliação da imagem com mais de uma configuração (TL05, TL06) | sim | V07, V08 | — |
+| H6 | Conclusão da validação (TL08/01), configurações com descrição e métricas (TL03, TL06), avaliação registrada na comparação (TL06) | não | — | Na conclusão da validação, cada imagem aparece com a avaliação e a origem do problema já registradas, e as caixas vêm marcadas conforme essa origem (seção 6) |
+| H7 | Avaliação imagem a imagem (TL05), visualizador (TL05, TL06), comparação das duvidosas (TL06) | não | — | Depois do registro, o foco vai para "Próxima imagem", que abre a próxima imagem ainda sem avaliação (seção 6) |
+| H8 | Todas as telas, com atenção à TL04 e à TL05 | não | — | A TL04 concluída mostra só o resumo, o estado de cada configuração e o próximo passo (seção 6) |
+| H9 | Falha numa imagem e numa configuração inteira (TL04/02), formato não aceito (TL03/03), imagens sem avaliação (TL08/02) | sim | V09, V10 | — |
+| H10 | "?" dos termos na TL05, formatos aceitos na TL03, explicação junto do termo e glossário (TL10) | não | — | O quadro "Sem métricas" explica por que não há IoU nem acurácia, com "?" em cada termo (seção 6) |
 
 ### 5. Declaração de violações
 
 | ID | Heurística | Tela/estado | Ação ou condição | Problema observado | Consequência para quem usa | Evidência | Severidade | Justificativa da severidade | Recomendação |
 |---|---|---|---|---|---|---|---:|---|---|
-| V01 | {{H...}} | {{TL...}} | {{em que ação ou condição}} | {{o que ocorre}} | {{o que isso causa a quem usa}} | ![V01 (AV02)](../assets/13_heuristica/av02/v01.png) | {{0–4}} | {{frequência/impacto/persistência}} | {{correção específica}} |
+| V01 | H1 | TL04, falha numa imagem (TL04/02) | A execução termina com uma imagem que não pôde ser lida | O cartão da configuração mostra o selo verde "Concluído", com a caixa vermelha da falha logo abaixo, ainda esperando a decisão "Tentar de novo" ou "Deixar de fora" | Rafael pode ler o selo, achar que está tudo pronto e seguir para a avaliação sem decidir sobre a imagem que falhou | ![V01 (AV02)](../assets/13_heuristica/av02/v01.png) | 2 | Frequência baixa (só com falha); impacto moderado, porque a caixa vermelha chama a atenção; persistência baixa | Usar um selo próprio enquanto houver falha a decidir (ex.: "Concluído com 1 falha") e mudar para "Concluído" depois da decisão |
+| V02 | H1 | TL05, avaliação registrada (TL05/05) | Rafael registra a avaliação de uma imagem | A lista à esquerda e a linha "Registrado: …" mostram a avaliação, mas o selo ao lado do nome da imagem, no título, continua "sem avaliação" | Informação contraditória na mesma tela: Rafael pode registrar de novo ou duvidar de que o registro foi feito | ![V02 (AV02)](../assets/13_heuristica/av02/v02.png) | 2 | Frequência alta (todo registro); impacto baixo, porque a lista está certa; persistência baixa | Atualizar o selo do título no momento do registro |
+| V03 | H1 | TL08, conferir a conclusão da validação (TL08/03) | Rafael registra a conclusão da validação | A tela diz "Conclusão registrada" e, abaixo, pede "Confirmar" ou "Corrigir", com o texto "Confira o que foi registrado antes de sair"; não fica claro se a conclusão já está guardada ou se só fica guardada depois de "Confirmar" | Rafael pode sair sem confirmar achando que perdeu o registro, ou voltar para registrar de novo | ![V03 (AV02)](../assets/13_heuristica/av02/v03.png) | 1 | Frequência moderada (toda conclusão); impacto baixo, porque o registro já está feito; persistência baixa | Deixar claro o estado: "Conclusão registrada. Confira os dados; se algo estiver errado, corrija", com "Concluir" em vez de "Confirmar" |
+| V04 | H2 | TL03, campos obrigatórios (TL03/01) e arquivos fora do formato (TL03/03) | Mensagens que o sistema monta a partir de partes | "…ou um vídeo. escolha pelo menos uma configuração" (minúscula depois do ponto) e "1 de 5 arquivo(s) não estão em um formato aceito" (concordância errada) | A mensagem parece descuidada e pede uma segunda leitura | ![V04 (AV02)](../assets/13_heuristica/av02/v04.png) | 1 | Problema cosmético: não muda o entendimento nem a ação | Ajustar a concordância à quantidade e começar com maiúscula cada mensagem juntada no resumo "Para continuar" |
+| V05 | H4 | TL05, sobreposição e sem métricas (TL05/02) | Rafael termina de avaliar e procura como comparar | A seção "Depois de avaliar" tem dois botões de comparar com comportamentos diferentes: "Comparar as duvidosas (0)", desabilitado, e "Comparar na mesma imagem e região", habilitado. O texto abaixo diz que "Comparar fica disponível quando houver imagens duvidosas", embora um dos botões de comparar já esteja disponível | Não fica claro o que cada botão faz nem por que um está desabilitado e o outro não; Rafael pode abrir a comparação errada ou achar que precisa marcar duvidosas para comparar | ![V05 (AV02)](../assets/13_heuristica/av02/v05.png) | 2 | Frequência alta (a seção aparece em toda imagem); impacto moderado (escolha do caminho errado, com volta); persistência baixa, depois de usar os dois | Dar nomes que digam a diferença (ex.: "Executar outra configuração nas duvidosas" e "Ver as configurações já executadas lado a lado") e ligar o texto de ajuda só ao botão desabilitado |
+| V06 | H4 | TL05, quadro de vídeo (TL05/06) | Rafael avalia os quadros de um vídeo | "Próximo quadro" no navegador do vídeo e "Próxima imagem" junto de "Registrar avaliação"; a contagem diz "0 de 5 avaliadas" e, abaixo, "5 quadros · 0 avaliado(s)" | Rafael não sabe se "Próxima imagem" vai para o próximo quadro ou sai do vídeo, e pode pular quadros | ![V06 (AV02)](../assets/13_heuristica/av02/v06.png) | 2 | Frequência alta quando a entrada é vídeo; impacto moderado; persistência baixa | Usar "quadro" em todos os rótulos e contagens quando a entrada é vídeo, com um único botão de avanço |
+| V07 | H5 | TL03, campos obrigatórios (TL03/01) | Rafael abre "Segmentar imagens" para enviar as imagens de um novo teste de campo | Com o formulário vazio, o "Ciclo de testes" já vem preenchido com o ciclo anterior ("Teste de campo 13/11"); conferido no código | Se Rafael não trocar o nome, as imagens do novo teste entram no ciclo anterior, e a conclusão da validação e as comparações por ciclo passam a misturar dois testes, sem aviso | ![V07 (AV02)](../assets/13_heuristica/av02/v07.png) | 3 | Frequência alta (todo primeiro envio de um novo teste); impacto alto (erro silencioso que chega à conclusão); persistência alta, porque o campo preenchido parece certo | Começar o campo vazio e sugerir os ciclos existentes; ou destacar a sugestão como "ciclo anterior" e pedir confirmação |
+| V08 | H5 | TL05, avaliação registrada (TL05/05); TL06, comparar as máscaras (TL06/04) | Rafael avalia uma imagem numa sessão executada com mais de uma configuração | A avaliação é uma só por imagem e não diz a qual configuração se refere: a lista mostra "duvidosa · problema no modelo" e a TL06/04 mostra "Avaliação registrada desta imagem" ao lado de três configurações. Se Rafael trocar a configuração no seletor e registrar de novo, a avaliação anterior é substituída (conferido no código) | Rafael pode julgar a FCN como correta, olhar a DeepLabV3+ e registrar "duvidosa" sem perceber que apagou a primeira avaliação; a conclusão da validação passa a se apoiar numa avaliação que não diz de qual configuração é | ![V08 (AV02)](../assets/13_heuristica/av02/v08.png) | 2 | Frequência moderada (sessões com mais de uma configuração); impacto moderado, reduzido porque o formulário mostra a avaliação já registrada antes de alterar; persistência moderada | Mostrar no registro a configuração avaliada (ex.: "duvidosa · FCN – 2 épocas") e, ao registrar com outra configuração selecionada, perguntar se substitui a avaliação anterior ou se registra uma para cada configuração |
+| V09 | H9 | TL04, falha numa imagem (TL04/02) | Uma imagem enviada está corrompida | A sugestão diz "Deixe esta imagem de fora ou envie o arquivo de novo", mas a tela não oferece como enviar o arquivo de novo; o botão principal é "Tentar de novo", que processa o mesmo arquivo e, por isso, falha de novo (conferido no código) | Rafael tenta de novo, a falha se repete, e ele não encontra onde reenviar o arquivo; acaba deixando a imagem de fora sem ter tido a opção que a própria mensagem sugeriu | ![V09 (AV02)](../assets/13_heuristica/av02/v09.png) | 2 | Frequência baixa (arquivos corrompidos são raros); impacto moderado (perde a imagem ou tenta várias vezes em vão); persistência moderada | Para arquivo que não pôde ser lido, trocar "Tentar de novo" por "Enviar o arquivo de novo", com o seletor de arquivos, e manter "Deixar de fora" |
+| V10 | H9 | TL08, imagens sem avaliação (TL08/02) | Rafael registra a conclusão com uma imagem ainda sem avaliação | O alerta diz que "uma imagem ainda não tem avaliação", sem dizer qual | Para decidir entre avaliar antes ou concluir assim mesmo, Rafael não sabe se a imagem que falta importa; "Avaliá-las antes" leva à primeira sem avaliação (conferido no código), o que reduz o impacto | ![V10 (AV02)](../assets/13_heuristica/av02/v10.png) | 1 | Frequência baixa; impacto baixo; persistência baixa | Listar no alerta o nome das imagens sem avaliação |
 
 **Qualidade do relato:** o problema deve ser observável e localizado. Evite “interface confusa” sem dizer **o que**, **onde**, **quando** e **para quem**.
 
@@ -225,21 +235,27 @@ Os estados de cada tela são os da seção 2 ("Telas/estados"). A falta de memó
 
 Os sete percursos da Entrega 11 ("Percursos completos a confirmar"), feitos de ponta a ponta. Cada problema encontrado também entra na declaração de violações.
 
+Nesta inspeção, feita pelas capturas, os percursos não foram feitos: teclado, ampliação e leitor de tela exigem a interface executada. A tabela registra só o que as capturas e o código mostram, sem valer como verificação; esta avaliação não responde à QA13 (Entrega 12). A coluna "IDs das violações" cita achados da seção 5 que afetam o percurso.
+
 | Percurso | Só com teclado: concluído? Onde parou? | Foco visível e na ordem da tela? | Ampliação de 200%: legível, sem rolagem horizontal? | Leitor de tela: anuncia estados e mensagens? | IDs das violações |
 |---|---|---|---|---|---|
-| Configurar e iniciar um treino (TL01 → TL02) | {{...}} | {{...}} | {{...}} | {{...}} | {{...}} |
-| Enviar entradas e recuperar-se de um formato inválido (TL03 → TL04) | {{...}} | {{...}} | {{...}} | {{...}} | {{...}} |
-| Avaliar as imagens (TL05) | {{...}} | {{...}} | {{...}} | {{...}} | {{...}} |
-| Comparar configurações (TL06 → TL07) | {{...}} | {{...}} | {{...}} | {{...}} | {{...}} |
-| Registrar uma conclusão (TL08) | {{...}} | {{...}} | {{...}} | {{...}} | {{...}} |
-| Apresentar uma recomendação (TL09) | {{...}} | {{...}} | {{...}} | {{...}} | {{...}} |
-| Preparar os dados e avaliar as configurações (TL11) | {{...}} | {{...}} | {{...}} | {{...}} | {{...}} |
+| Configurar e iniciar um treino (TL01 → TL02) | Não feito: a interface não foi executada nesta inspeção | Não verificado (exige a interface executada). Nas capturas, o foco aparece com contorno laranja no título da tela (TL01/01) | Não verificado (exige a interface executada) | Não verificado (exige a interface executada). No código, as mensagens de estado usam uma região anunciada (`aria-live`) e os diálogos têm título ligado (`aria-labelledby`) | — |
+| Enviar entradas e recuperar-se de um formato inválido (TL03 → TL04) | Não feito: a interface não foi executada nesta inspeção | Não verificado (exige a interface executada). Nas capturas, o foco aparece com contorno laranja no campo do ciclo de testes (TL03/02) e em "Seguir sem eles" (TL03/03) | Não verificado (exige a interface executada) | Não verificado (exige a interface executada). No código, as mensagens de estado usam uma região anunciada (`aria-live`) e os diálogos têm título ligado (`aria-labelledby`); a mensagem "Falta: …" fica ligada ao campo das imagens | V04, V07, V09 |
+| Avaliar as imagens (TL05) | Não feito: a interface não foi executada nesta inspeção | Não verificado (exige a interface executada). Nas capturas, o foco aparece com contorno laranja em "Próxima imagem" depois do registro (TL05/05). O visualizador aceita + − 0 e as setas (texto da tela e código) | Não verificado (exige a interface executada) | Não verificado (exige a interface executada). No código, as mensagens de estado usam uma região anunciada (`aria-live`) e os diálogos têm título ligado (`aria-labelledby`) | V02, V05, V06, V08 |
+| Comparar configurações (TL06 → TL07) | Não feito: a interface não foi executada nesta inspeção | Não verificado (exige a interface executada). Nas capturas, o foco aparece com contorno laranja nos diálogos da TL07 (TL07/02, TL07/03) | Não verificado (exige a interface executada) | Não verificado (exige a interface executada). No código, as mensagens de estado usam uma região anunciada (`aria-live`) e os diálogos têm título ligado (`aria-labelledby`) | — |
+| Registrar uma conclusão (TL08) | Não feito: a interface não foi executada nesta inspeção | Não verificado (exige a interface executada). Nas capturas, o foco aparece com contorno laranja em "Avaliá-las antes" (TL08/02) | Não verificado (exige a interface executada) | Não verificado (exige a interface executada). No código, as mensagens de estado usam uma região anunciada (`aria-live`) e os diálogos têm título ligado (`aria-labelledby`) | V03, V10 |
+| Apresentar uma recomendação (TL09) | Não feito: a interface não foi executada nesta inspeção | Não verificado (exige a interface executada). Nas capturas, o foco aparece com contorno laranja na seção da decisão (TL09/04) | Não verificado (exige a interface executada) | Não verificado (exige a interface executada). No código, as mensagens de estado usam uma região anunciada (`aria-live`) e os diálogos têm título ligado (`aria-labelledby`) | — |
+| Preparar os dados e avaliar as configurações (TL11) | Não feito: a interface não foi executada nesta inspeção | Não verificado (exige a interface executada). Nas capturas, o foco aparece com contorno laranja em "Confirmar" no diálogo da remontagem (TL11/02) | Não verificado (exige a interface executada) | Não verificado (exige a interface executada). No código, as mensagens de estado usam uma região anunciada (`aria-live`) e os diálogos têm título ligado (`aria-labelledby`) | — |
 
 ### 6. Boas práticas — heurísticas não violadas (atividade didática)
 
 | Heurística sem violação | Exemplo no sistema | Evidência | Por que atende |
 |---|---|---|---|
-| {{H...}} | {{...}} | {{print}} | {{...}} |
+| H3 | Cada arquivo escolhido tem "Retirar" ao lado (TL03/02), e o alerta de formato oferece "Trocar os arquivos" ou "Seguir sem eles" (TL03/03) | ![Boa prática H3 (AV02)](../assets/13_heuristica/av02/bp_h3.png) | Rafael desfaz uma escolha errada antes de executar, sem recomeçar o envio, e decide o que fazer com os arquivos recusados em vez de o sistema decidir por ele |
+| H6 | Na conclusão da validação, cada imagem aparece com a avaliação e a origem do problema registradas na TL05, e as caixas vêm marcadas conforme essa origem (TL08/01) | ![Boa prática H6 (AV02)](../assets/13_heuristica/av02/bp_h6.png) | Rafael não precisa lembrar o que registrou em cada imagem: a informação de que ele precisa para concluir está na própria tela |
+| H7 | Depois de "Registrar avaliação", o foco vai para "Próxima imagem" (TL05/05), que abre a próxima imagem ainda sem avaliação, e não simplesmente a seguinte da lista (conferido no código) | ![Boa prática H7 (AV02)](../assets/13_heuristica/av02/bp_h7.png) | Quem avalia muitas imagens segue com o teclado, sem procurar na lista quais faltam; quem prefere o mouse usa a lista normalmente |
+| H8 | Com a execução concluída, a TL04 mostra só o resumo, o estado de cada configuração e o próximo passo (TL04/03) | ![Boa prática H8 (AV02)](../assets/13_heuristica/av02/bp_h8.png) | Nada compete com a informação de que a pessoa precisa naquele momento: terminou e o que fazer agora |
+| H10 | Na TL05, o quadro "Sem métricas: avaliação visual" explica por que não há IoU nem acurácia para a imagem de campo e onde ficam as métricas, com "?" em cada termo (TL05/02); na TL03, os formatos aceitos estão escritos junto da área de envio (TL03/01) | ![Boa prática H10 (AV02)](../assets/13_heuristica/av02/bp_h10.png) | A ajuda responde à dúvida no momento em que ela aparece e evita a interpretação errada de que a imagem de campo deveria ter métricas |
 
 ---
 
