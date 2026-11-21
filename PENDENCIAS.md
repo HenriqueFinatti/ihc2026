@@ -117,9 +117,10 @@ Alguns itens não são correção de texto: dependem de uma decisão do grupo. V
 | INC-74 | 🟠 | E10 → E11 | Interface implementada e capturas da E11 anteriores à revisão da E10 (O11, avaliação antes das métricas, encerramento temporário, O07.1 como diálogo) | Equipe | 🟨 | 20/11: interface ajustada no commit `16a5bc1`, 59 capturas novas numeradas por fluxo e parecer da E11 aplicado em `docs/11_figma.md`. **Falta:** refazer a captura `TL11_datasets/01_conferir_datasets.png`, que mostra sobre a tela Datasets o diálogo da TL07, um estado que a interface não produz. |
 | INC-75 | 🟠 | E12, E13 | A E12 cita a versão `d11c155` e descreve a TL11 como tela de apoio fora dos MoLIC e sem tarefa de usuário; a E11 e a E13 passaram a usar `16a5bc1` e a TL11 é a conversa O11 do M03 | Equipe | 🟩 | 20/11: E12 com a versão `16a5bc1`; a preparação dos dados (TL11, conversa O11 do M03) continua só na inspeção, porque é feita antes de cada sessão (E.6). |
 | INC-76 | 🟠 | E12 | Cronograma, equipamento e parâmetros ainda `[?]`: datas da inspeção, das correções, dos pilotos e das sessões; integrante do piloto técnico e pessoa do piloto de compreensão; computador, tela e navegador; épocas e batch size do treino rápido da UT04; configurações, ciclos, fotos e palavras dos cenários na folha de preparação (E.6) | Equipe | ⬜ | |
-| INC-77 | 🟠 | E13 | AV01 inspecionou pelas capturas da E11, sem executar a interface: os sete percursos de acessibilidade não foram feitos, e a QA13 fica sem a parte do AV01 | Henrique Finatti Silveira Belo Trebbi | ⬜ | |
-| INC-78 | 🟠 | E13 | AV03 inspecionou pelas capturas da E11, sem executar a interface: os sete percursos de acessibilidade não foram feitos, e a QA13 fica sem a parte do AV03 | Mateus Marana Assuena | ⬜ | |
-| INC-79 | 🟠 | E13 | AV02 inspecionou pelas capturas da E11, sem executar a interface: os sete percursos de acessibilidade não foram feitos, e a QA13 fica sem a parte do AV02 | Tiago Fagundes dos Santos | ⬜ | |
+| INC-77 | 🟠 | E13 | AV01 inspecionou pelas capturas da E11, sem executar a interface: os sete percursos de acessibilidade não foram feitos, e a QA13 fica sem a parte do AV01 | Henrique Finatti Silveira Belo Trebbi | 🟩 | 21/11: percursos feitos uma vez pela equipe, na interface executada (versão `16a5bc1`), só com teclado e com ampliação de 200%; resultados e violações VA01 a VA04 na E13, "Percursos de acessibilidade da equipe". |
+| INC-78 | 🟠 | E13 | AV03 inspecionou pelas capturas da E11, sem executar a interface: os sete percursos de acessibilidade não foram feitos, e a QA13 fica sem a parte do AV03 | Mateus Marana Assuena | 🟩 | 21/11: percursos feitos uma vez pela equipe, na interface executada (versão `16a5bc1`), só com teclado e com ampliação de 200%; resultados e violações VA01 a VA04 na E13, "Percursos de acessibilidade da equipe". |
+| INC-79 | 🟠 | E13 | AV02 inspecionou pelas capturas da E11, sem executar a interface: os sete percursos de acessibilidade não foram feitos, e a QA13 fica sem a parte do AV02 | Tiago Fagundes dos Santos | 🟩 | 21/11: percursos feitos uma vez pela equipe, na interface executada (versão `16a5bc1`), só com teclado e com ampliação de 200%; resultados e violações VA01 a VA04 na E13, "Percursos de acessibilidade da equipe". |
+| INC-80 | 🔴 | E13 → E14 | Três problemas de severidade 3 da inspeção (HC01 ciclo de testes preenchido com o anterior, HC02 sem cancelar treino ou fila, HC03 "Pular para o conteúdo" leva a uma tela de erro) precisam ser corrigidos antes do piloto | Equipe | ⬜ | |
 
 **Prioridade sugerida:** resolver os 🔴 antes de fechar a E4 e começar a E5. O INC-22 é o mais sensível, porque a RC03 sustenta decisões nas três personas.
 
@@ -523,6 +524,13 @@ Alguns itens não são correção de texto: dependem de uma decisão do grupo. V
 - **Problema:** a inspeção do AV02 foi feita pelas 59 capturas da E11 (commit `16a5bc1`) e pelo código, sem executar a interface; os sete percursos ficaram como não feitos.
 - **Sugestão:** fazer os sete percursos na interface executada, sobre a cópia dos dados, antes da consolidação (seção 7), e preencher a tabela do AV02.
 
+### Criados em 21/11/2026 (Entrega 13)
+
+#### INC-80 🔴 Correções de severidade 3 antes do piloto
+- **Onde:** E13, seções 7 e 8 (HC01, HC02, HC03); E12, "Cronograma, equipamento e responsáveis" (correção dos problemas de severidade 3 ou 4).
+- **Problema:** a E12 determina que problemas de severidade 3 ou 4 da inspeção sejam corrigidos antes do piloto e do teste com usuários. A E13 encontrou três: HC01 (TL03), HC02 (TL02 e TL11) e HC03 (todas as telas).
+- **Sugestão:** corrigir HC01 e HC03 na interface; para HC02, incluir o cancelamento no MoLIC M03 (E10) antes de implementar; registrar o novo commit na E12 e na E14 e refazer as capturas afetadas da E11.
+
 ## Histórico deste arquivo
 
 | Data | Alteração | Responsável |
@@ -572,3 +580,5 @@ Alguns itens não são correção de texto: dependem de uma decisão do grupo. V
 | 20/11/2026 | Entrega 13, AV01: criado INC-77 (percursos de acessibilidade não feitos na inspeção pelas capturas) | Henrique Finatti Silveira Belo Trebbi (com apoio do Claude) |
 | 21/11/2026 | Entrega 13, AV03: criado INC-78 (percursos de acessibilidade não feitos na inspeção pelas capturas) | Mateus Marana Assuena (com apoio do Claude) |
 | 21/11/2026 | Entrega 13, AV02: criado INC-79 (percursos de acessibilidade não feitos na inspeção pelas capturas) | Tiago Fagundes dos Santos (com apoio do Claude) |
+| 21/11/2026 | Entrega 13: percursos de acessibilidade feitos pela equipe; INC-77, INC-78 e INC-79 resolvidos | Equipe (com apoio do Claude) |
+| 21/11/2026 | Entrega 13 concluída: consolidação em 27 problemas (HC01 a HC27), três de severidade 3 a corrigir antes do piloto (HC01, HC02, HC03); criado INC-80 | Equipe (com apoio do Claude) |

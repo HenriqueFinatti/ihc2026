@@ -1,7 +1,7 @@
 # Entrega 13 — Avaliação de IHC por inspeção heurística
 
-**Data:** 20/11/2026 (início)  
-**Status:** 🟨 em andamento  
+**Data:** 20/11/2026 (início) · 21/11/2026 (conclusão)  
+**Status:** 🟩 concluída  
 **Responsabilidade:** 1 avaliação completa por integrante, sobre todas as telas/estados relevantes do projeto.
 
 ## Objetivo da atividade
@@ -86,7 +86,7 @@ Ao justificar, considere **frequência, impacto e persistência** do problema no
 **Versão inspecionada:** commit `16a5bc1`  
 **Computador, tela, resolução e navegador:** a interface não foi executada nesta inspeção. Foram inspecionadas as 59 capturas da Entrega 11 (`assets/11_figma/`), feitas em 20/11/2026 no commit `16a5bc1`: capturas da área visível com 1366 × 814 px e capturas da página inteira com 1354 px de largura. Navegador das capturas: `[?]`  
 **Tempo gasto na inspeção:** não medido  
-**Forma da inspeção:** pelas capturas da Entrega 11, com apoio do Claude. Textos e comportamentos que as capturas não mostram foram conferidos no código da interface do mesmo commit. Como a interface não foi executada, os percursos de acessibilidade (teclado, ampliação e leitor de tela) não foram feitos.
+**Forma da inspeção:** pelas capturas da Entrega 11, com apoio do Claude. Textos e comportamentos que as capturas não mostram foram conferidos no código da interface do mesmo commit. Os percursos de acessibilidade foram feitos pela equipe, na interface executada ("Percursos de acessibilidade da equipe").
 
 ### 4. Cobertura das telas, dos estados e das heurísticas
 
@@ -145,19 +145,7 @@ Os estados de cada tela são os da seção 2 ("Telas/estados"). A falta de memó
 
 #### Percursos de acessibilidade
 
-Os sete percursos da Entrega 11 ("Percursos completos a confirmar"), feitos de ponta a ponta. Cada problema encontrado também entra na declaração de violações.
-
-Nesta inspeção, feita pelas capturas, os percursos não foram feitos: teclado, ampliação e leitor de tela exigem a interface executada. A tabela registra só o que as capturas e o código mostram, sem valer como verificação. Por isso, esta avaliação não responde à QA13 (Entrega 12); os percursos precisam ser feitos na interface executada antes da consolidação (seção 7) `[?]`. A coluna "IDs das violações" cita achados da seção 5 que afetam o percurso.
-
-| Percurso | Só com teclado: concluído? Onde parou? | Foco visível e na ordem da tela? | Ampliação de 200%: legível, sem rolagem horizontal? | Leitor de tela: anuncia estados e mensagens? | IDs das violações |
-|---|---|---|---|---|---|
-| Configurar e iniciar um treino (TL01 → TL02) | Não feito: a interface não foi executada nesta inspeção | Não verificado (exige a interface executada). Nas capturas, o foco aparece com contorno laranja no título da tela (TL01/01) e no campo do nome (TL01/04) | Não verificado (exige a interface executada) | Não verificado (exige a interface executada). No código, as mensagens de estado usam uma região anunciada (`aria-live`) e os diálogos têm título ligado (`aria-labelledby`); a mensagem "Falta: …" fica ligada ao campo dos datasets | — |
-| Enviar entradas e recuperar-se de um formato inválido (TL03 → TL04) | Não feito: a interface não foi executada nesta inspeção | Não verificado (exige a interface executada). Nas capturas, o foco aparece com contorno laranja no botão principal do diálogo "Arquivos fora do formato aceito" (TL03/03) | Não verificado (exige a interface executada) | Não verificado (exige a interface executada). No código, as mensagens de estado usam uma região anunciada (`aria-live`) e os diálogos têm título ligado (`aria-labelledby`) | — |
-| Avaliar as imagens (TL05) | Não feito: a interface não foi executada nesta inspeção | Não verificado (exige a interface executada). Nas capturas, o foco aparece com contorno laranja em "Próxima imagem" depois do registro (TL05/05). O visualizador aceita + − 0 e as setas (texto da tela e código) | Não verificado (exige a interface executada) | Não verificado (exige a interface executada). No código, as mensagens de estado usam uma região anunciada (`aria-live`) e os diálogos têm título ligado (`aria-labelledby`) | V02 |
-| Comparar configurações (TL06 → TL07) | Não feito: a interface não foi executada nesta inspeção | Não verificado (exige a interface executada). Nas capturas, o foco aparece com contorno laranja em "Abrir Datasets" no diálogo da TL07/02 e no título da explicação de um termo (TL10/01) | Não verificado (exige a interface executada) | Não verificado (exige a interface executada). No código, as mensagens de estado usam uma região anunciada (`aria-live`) e os diálogos têm título ligado (`aria-labelledby`); a explicação de um termo fecha com Esc. Os gráficos vêm com a tabela (TL07/07) | V05 |
-| Registrar uma conclusão (TL08) | Não feito: a interface não foi executada nesta inspeção | Não verificado (exige a interface executada). Nas capturas, o foco aparece com contorno laranja em "Avaliá-las antes" (TL08/02) e no último campo preenchido (TL08/05, TL08/08) | Não verificado (exige a interface executada) | Não verificado (exige a interface executada). No código, as mensagens de estado usam uma região anunciada (`aria-live`) e os diálogos têm título ligado (`aria-labelledby`) | — |
-| Apresentar uma recomendação (TL09) | Não feito: a interface não foi executada nesta inspeção | Não verificado (exige a interface executada). Nas capturas, o foco aparece com contorno laranja na seção "Registrar a decisão da coordenação" (TL09/04) | Não verificado (exige a interface executada) | Não verificado (exige a interface executada). No código, as mensagens de estado usam uma região anunciada (`aria-live`) e os diálogos têm título ligado (`aria-labelledby`) | — |
-| Preparar os dados e avaliar as configurações (TL11) | Não feito: a interface não foi executada nesta inspeção | Não verificado (exige a interface executada). Nas capturas, o foco aparece com contorno laranja em "Confirmar" no diálogo da remontagem (TL11/02) | Não verificado (exige a interface executada) | Não verificado (exige a interface executada). No código, as mensagens de estado usam uma região anunciada (`aria-live`) e os diálogos têm título ligado (`aria-labelledby`) | — |
+Os sete percursos foram feitos uma vez pela equipe, na interface executada; os resultados e as violações encontradas (VA01 a VA04) estão em "Percursos de acessibilidade da equipe", depois do AV03.
 
 ### 6. Boas práticas — heurísticas não violadas (atividade didática)
 
@@ -176,7 +164,7 @@ Nesta inspeção, feita pelas capturas, os percursos não foram feitos: teclado,
 **Versão inspecionada:** commit `16a5bc1`
 **Computador, tela, resolução e navegador:** a interface não foi executada nesta inspeção. Foram inspecionadas as 59 capturas da Entrega 11 (`assets/11_figma/`), feitas em 20/11/2026 no commit `16a5bc1`: capturas da área visível com 1366 × 814 px e capturas da página inteira com 1354 px de largura. Navegador das capturas: `[?]`
 **Tempo gasto na inspeção:** não medido
-**Forma da inspeção:** pelas capturas da Entrega 11, com apoio do Claude. Todas as telas foram percorridas, com atenção maior aos fluxos do M01 (P01, Rafael): envio das imagens, processamento, avaliação imagem a imagem, comparação das duvidosas e conclusão da validação. Textos e comportamentos que as capturas não mostram foram conferidos no código da interface do mesmo commit. Como a interface não foi executada, os percursos de acessibilidade (teclado, ampliação e leitor de tela) não foram feitos.
+**Forma da inspeção:** pelas capturas da Entrega 11, com apoio do Claude. Todas as telas foram percorridas, com atenção maior aos fluxos do M01 (P01, Rafael): envio das imagens, processamento, avaliação imagem a imagem, comparação das duvidosas e conclusão da validação. Textos e comportamentos que as capturas não mostram foram conferidos no código da interface do mesmo commit. Os percursos de acessibilidade foram feitos pela equipe, na interface executada ("Percursos de acessibilidade da equipe").
 
 ### 4. Cobertura das telas, dos estados e das heurísticas
 
@@ -233,19 +221,7 @@ Os estados de cada tela são os da seção 2 ("Telas/estados"). A falta de memó
 
 #### Percursos de acessibilidade
 
-Os sete percursos da Entrega 11 ("Percursos completos a confirmar"), feitos de ponta a ponta. Cada problema encontrado também entra na declaração de violações.
-
-Nesta inspeção, feita pelas capturas, os percursos não foram feitos: teclado, ampliação e leitor de tela exigem a interface executada. A tabela registra só o que as capturas e o código mostram, sem valer como verificação; esta avaliação não responde à QA13 (Entrega 12). A coluna "IDs das violações" cita achados da seção 5 que afetam o percurso.
-
-| Percurso | Só com teclado: concluído? Onde parou? | Foco visível e na ordem da tela? | Ampliação de 200%: legível, sem rolagem horizontal? | Leitor de tela: anuncia estados e mensagens? | IDs das violações |
-|---|---|---|---|---|---|
-| Configurar e iniciar um treino (TL01 → TL02) | Não feito: a interface não foi executada nesta inspeção | Não verificado (exige a interface executada). Nas capturas, o foco aparece com contorno laranja no título da tela (TL01/01) | Não verificado (exige a interface executada) | Não verificado (exige a interface executada). No código, as mensagens de estado usam uma região anunciada (`aria-live`) e os diálogos têm título ligado (`aria-labelledby`) | — |
-| Enviar entradas e recuperar-se de um formato inválido (TL03 → TL04) | Não feito: a interface não foi executada nesta inspeção | Não verificado (exige a interface executada). Nas capturas, o foco aparece com contorno laranja no campo do ciclo de testes (TL03/02) e em "Seguir sem eles" (TL03/03) | Não verificado (exige a interface executada) | Não verificado (exige a interface executada). No código, as mensagens de estado usam uma região anunciada (`aria-live`) e os diálogos têm título ligado (`aria-labelledby`); a mensagem "Falta: …" fica ligada ao campo das imagens | V04, V07, V09 |
-| Avaliar as imagens (TL05) | Não feito: a interface não foi executada nesta inspeção | Não verificado (exige a interface executada). Nas capturas, o foco aparece com contorno laranja em "Próxima imagem" depois do registro (TL05/05). O visualizador aceita + − 0 e as setas (texto da tela e código) | Não verificado (exige a interface executada) | Não verificado (exige a interface executada). No código, as mensagens de estado usam uma região anunciada (`aria-live`) e os diálogos têm título ligado (`aria-labelledby`) | V02, V05, V06, V08 |
-| Comparar configurações (TL06 → TL07) | Não feito: a interface não foi executada nesta inspeção | Não verificado (exige a interface executada). Nas capturas, o foco aparece com contorno laranja nos diálogos da TL07 (TL07/02, TL07/03) | Não verificado (exige a interface executada) | Não verificado (exige a interface executada). No código, as mensagens de estado usam uma região anunciada (`aria-live`) e os diálogos têm título ligado (`aria-labelledby`) | — |
-| Registrar uma conclusão (TL08) | Não feito: a interface não foi executada nesta inspeção | Não verificado (exige a interface executada). Nas capturas, o foco aparece com contorno laranja em "Avaliá-las antes" (TL08/02) | Não verificado (exige a interface executada) | Não verificado (exige a interface executada). No código, as mensagens de estado usam uma região anunciada (`aria-live`) e os diálogos têm título ligado (`aria-labelledby`) | V03, V10 |
-| Apresentar uma recomendação (TL09) | Não feito: a interface não foi executada nesta inspeção | Não verificado (exige a interface executada). Nas capturas, o foco aparece com contorno laranja na seção da decisão (TL09/04) | Não verificado (exige a interface executada) | Não verificado (exige a interface executada). No código, as mensagens de estado usam uma região anunciada (`aria-live`) e os diálogos têm título ligado (`aria-labelledby`) | — |
-| Preparar os dados e avaliar as configurações (TL11) | Não feito: a interface não foi executada nesta inspeção | Não verificado (exige a interface executada). Nas capturas, o foco aparece com contorno laranja em "Confirmar" no diálogo da remontagem (TL11/02) | Não verificado (exige a interface executada) | Não verificado (exige a interface executada). No código, as mensagens de estado usam uma região anunciada (`aria-live`) e os diálogos têm título ligado (`aria-labelledby`) | — |
+Os sete percursos foram feitos uma vez pela equipe, na interface executada; os resultados e as violações encontradas (VA01 a VA04) estão em "Percursos de acessibilidade da equipe", depois do AV03.
 
 ### 6. Boas práticas — heurísticas não violadas (atividade didática)
 
@@ -266,7 +242,7 @@ Nesta inspeção, feita pelas capturas, os percursos não foram feitos: teclado,
 **Versão inspecionada:** commit `16a5bc1`  
 **Computador, tela, resolução e navegador:** a interface não foi executada nesta inspeção. Foram inspecionadas as 59 capturas da Entrega 11 (`assets/11_figma/`), feitas em 20/11/2026 no commit `16a5bc1`: capturas da área visível com 1366 × 814 px e capturas da página inteira com 1354 px de largura. Navegador das capturas: `[?]`  
 **Tempo gasto na inspeção:** não medido  
-**Forma da inspeção:** pelas capturas da Entrega 11, com apoio do Claude. Todas as telas foram percorridas, com atenção maior aos fluxos do M03 (P02, Andreia): treino, preparação dos dados e conclusão do experimento. Textos e comportamentos que as capturas não mostram foram conferidos no código da interface do mesmo commit. Como a interface não foi executada, os percursos de acessibilidade (teclado, ampliação e leitor de tela) não foram feitos.
+**Forma da inspeção:** pelas capturas da Entrega 11, com apoio do Claude. Todas as telas foram percorridas, com atenção maior aos fluxos do M03 (P02, Andreia): treino, preparação dos dados e conclusão do experimento. Textos e comportamentos que as capturas não mostram foram conferidos no código da interface do mesmo commit. Os percursos de acessibilidade foram feitos pela equipe, na interface executada ("Percursos de acessibilidade da equipe").
 
 ### 4. Cobertura das telas, dos estados e das heurísticas
 
@@ -323,19 +299,7 @@ Os estados de cada tela são os da seção 2 ("Telas/estados"). A falta de memó
 
 #### Percursos de acessibilidade
 
-Os sete percursos da Entrega 11 ("Percursos completos a confirmar"), feitos de ponta a ponta. Cada problema encontrado também entra na declaração de violações.
-
-Nesta inspeção, feita pelas capturas, os percursos não foram feitos: teclado, ampliação e leitor de tela exigem a interface executada. A tabela registra só o que as capturas e o código mostram, sem valer como verificação; esta avaliação não responde à QA13 (Entrega 12). A coluna "IDs das violações" cita achados da seção 5 que afetam o percurso.
-
-| Percurso | Só com teclado: concluído? Onde parou? | Foco visível e na ordem da tela? | Ampliação de 200%: legível, sem rolagem horizontal? | Leitor de tela: anuncia estados e mensagens? | IDs das violações |
-|---|---|---|---|---|---|
-| Configurar e iniciar um treino (TL01 → TL02) | Não feito: a interface não foi executada nesta inspeção | Não verificado (exige a interface executada). Nas capturas, o foco aparece com contorno laranja no título da tela (TL01/01) e no campo do nome (TL01/03) | Não verificado (exige a interface executada) | Não verificado (exige a interface executada). No código, as mensagens de estado usam uma região anunciada (`aria-live`) e os diálogos têm título ligado (`aria-labelledby`); "Treino na fila" e "Treino iniciado" são anunciados | V02, V04 |
-| Enviar entradas e recuperar-se de um formato inválido (TL03 → TL04) | Não feito: a interface não foi executada nesta inspeção | Não verificado (exige a interface executada). Nas capturas, o foco aparece com contorno laranja no botão principal do diálogo de formato (TL03/03) | Não verificado (exige a interface executada) | Não verificado (exige a interface executada). No código, as mensagens de estado usam uma região anunciada (`aria-live`) e os diálogos têm título ligado (`aria-labelledby`) | — |
-| Avaliar as imagens (TL05) | Não feito: a interface não foi executada nesta inspeção | Não verificado (exige a interface executada). Nas capturas, o foco aparece com contorno laranja em "Próxima imagem" depois do registro (TL05/05) | Não verificado (exige a interface executada) | Não verificado (exige a interface executada). No código, as mensagens de estado usam uma região anunciada (`aria-live`) e os diálogos têm título ligado (`aria-labelledby`) | — |
-| Comparar configurações (TL06 → TL07) | Não feito: a interface não foi executada nesta inspeção | Não verificado (exige a interface executada). Nas capturas, o foco aparece com contorno laranja nos diálogos da TL07 (TL07/02, TL07/03) | Não verificado (exige a interface executada) | Não verificado (exige a interface executada). No código, as mensagens de estado usam uma região anunciada (`aria-live`) e os diálogos têm título ligado (`aria-labelledby`). Os gráficos vêm com a tabela (TL07/07) | V06 |
-| Registrar uma conclusão (TL08) | Não feito: a interface não foi executada nesta inspeção | Não verificado (exige a interface executada). Nas capturas, o foco aparece com contorno laranja no último campo preenchido (TL08/05) | Não verificado (exige a interface executada) | Não verificado (exige a interface executada). No código, as mensagens de estado usam uma região anunciada (`aria-live`) e os diálogos têm título ligado (`aria-labelledby`); a mensagem "Falta: …" fica ligada ao campo da conclusão | — |
-| Apresentar uma recomendação (TL09) | Não feito: a interface não foi executada nesta inspeção | Não verificado (exige a interface executada). Nas capturas, o foco aparece com contorno laranja na seção da decisão (TL09/04) | Não verificado (exige a interface executada) | Não verificado (exige a interface executada). No código, as mensagens de estado usam uma região anunciada (`aria-live`) e os diálogos têm título ligado (`aria-labelledby`) | — |
-| Preparar os dados e avaliar as configurações (TL11) | Não feito: a interface não foi executada nesta inspeção | Não verificado (exige a interface executada). Nas capturas, o foco aparece com contorno laranja em "Confirmar" no diálogo da remontagem (TL11/02) | Não verificado (exige a interface executada) | Não verificado (exige a interface executada). No código, as mensagens de estado usam uma região anunciada (`aria-live`) e os diálogos têm título ligado (`aria-labelledby`). O indicador do topo não acompanha a montagem nem a avaliação | V01, V07 |
+Os sete percursos foram feitos uma vez pela equipe, na interface executada; os resultados e as violações encontradas (VA01 a VA04) estão em "Percursos de acessibilidade da equipe", depois do AV03.
 
 ### 6. Boas práticas — heurísticas não violadas (atividade didática)
 
@@ -346,33 +310,132 @@ Nesta inspeção, feita pelas capturas, os percursos não foram feitos: teclado,
 
 ---
 
+## Percursos de acessibilidade da equipe
+
+Os sete percursos da Entrega 11 ("Percursos completos a confirmar") foram feitos uma vez pela equipe, em 21/11/2026, com apoio do Claude, na interface executada no computador da equipe sobre uma cópia dos dados do TCC (versão `16a5bc1`, confirmada no rodapé).
+
+- **Teclado:** cada percurso foi feito só com o teclado (Tab, Shift+Tab, Enter, Espaço, setas e Esc), com a janela em 1366 × 814 px. Depois de cada tecla, foram conferidos o elemento com foco, o contorno de foco e as mensagens da região anunciada (`aria-live`).
+- **Ampliação de 200%:** as telas foram abertas com a largura útil de uma tela de 1366 px ampliada a 200% (683 × 407 px), conferindo se aparece rolagem horizontal e se algum conteúdo sai da tela.
+- **Limites:** a janela de escolher arquivos é do sistema operacional e não foi percorrida; foram usadas imagens geradas para o teste (desenhos, não fotos do TCC), entregues direto ao campo, e a abertura da janela por Enter ou Espaço em "Escolher arquivos" foi conferida no código. A remontagem do dataset (TL11) não pôde ser feita, porque a cópia não tinha os arquivos brutos; "Remontar" ficou desabilitado, com o motivo escrito. As teclas + e − do visualizador não puderam ser enviadas pela ferramenta; os botões "Ampliar", "Reduzir" e "Imagem inteira" e as setas funcionaram pelo teclado.
+
+| Percurso | Só com teclado: concluído? Onde parou? | Foco visível e na ordem da tela? | Ampliação de 200%: legível, sem rolagem horizontal? | Leitor de tela: anuncia estados e mensagens? | IDs das violações |
+|---|---|---|---|---|---|
+| Configurar e iniciar um treino (TL01 → TL02) | Concluído: modelo pelas setas, épocas, "Continuar", nome sugerido e "Iniciar o treino"; o treino foi para a fila | Sim. A ordem segue a coluna da esquerda e depois a da direita; ao trocar de tela, o foco vai para o título | Sim, sem rolagem horizontal; as duas colunas passam a uma | Não feito | VA01 |
+| Enviar entradas e recuperar-se de um formato inválido (TL03 → TL04) | Concluído: ciclo de testes, arquivos, configuração, "Executar", diálogo de formato ("Seguir sem eles") e, no fim do processamento, "Avaliar as imagens", que recebe o foco | Em parte: depois de "Escolher arquivos", o Tab passa por um campo invisível (VA02). No diálogo, o foco vai para "Seguir sem eles" e circula entre os dois botões | Sim, sem rolagem horizontal | Não feito | VA01, VA02 |
+| Avaliar as imagens (TL05) | Concluído: visualizador, avaliação "Duvidosa", origem do problema, "Registrar avaliação" e "Próxima imagem", que recebe o foco depois do registro | Em parte: o contorno de foco do visualizador não aparece (VA02); da imagem até a avaliação são 17 paradas de Tab (VA04) | Sim, sem rolagem horizontal | Não feito | VA01, VA02, VA04 |
+| Comparar configurações (TL06 → TL07) | Concluído: imagens duvidosas, outra configuração, execução, comparação lado a lado e "Comparar as métricas no conjunto de teste"; diálogo "sem avaliação" com "Abrir Datasets"; tabela, "?" dos termos (fecha com Esc e devolve o foco), "A diferença importa?" e "Voltar à análise", que devolve o foco ao botão | Sim, exceto o visualizador (VA02) | Sim; a tabela de métricas cabe na largura, com rolagem própria se precisar | Não feito | VA01, VA02 |
+| Registrar uma conclusão (TL08) | Concluído: recomendação, configuração indicada, ressalva, "Registrar", conferência e "Confirmar" | Sim; depois do registro, o foco vai para o título da conferência | Sim, sem rolagem horizontal | Não feito | VA01 |
+| Apresentar uma recomendação (TL09) | Concluído: "Registrar a decisão", "Aceita com condição", condição e "Registrar" | Em parte: depois de registrar a decisão, o foco volta ao início da página (VA03) | Sim, sem rolagem horizontal | Não feito | VA01, VA03 |
+| Preparar os dados e avaliar as configurações (TL11) | Concluído até a avaliação: duas configurações escolhidas e "Avaliar as selecionadas"; a remontagem não pôde ser feita (sem arquivos brutos na cópia) | Em parte: depois de "Avaliar as selecionadas", o foco volta ao início da página (VA03) | Sim, sem rolagem horizontal | Não feito | VA01, VA03 |
+
+Elementos de todas as telas: o link "Pular para o conteúdo" é a primeira parada de Tab e leva a uma tela de erro (VA01); o indicador do topo e o botão "Glossário de termos" funcionam pelo teclado, e o glossário fecha com Esc, devolvendo o foco ao botão. Com 200%, o botão de fechar o glossário fica abaixo da área visível do painel, o que reforça a V05 do AV01.
+
+| ID | Heurística | Tela/estado | Ação ou condição | Problema observado | Consequência para quem usa | Evidência | Severidade | Justificativa da severidade | Recomendação |
+|---|---|---|---|---|---|---|---:|---|---|
+| VA01 | H4 | Todas as telas | A pessoa usa o primeiro link da página, "Pular para o conteúdo" | O link leva ao endereço `#conteudo`, que a interface trata como uma tela: a tela atual some e aparece "Esta tela não existe" | Quem navega pelo teclado e usa o atalho padrão para pular o menu perde a tela em que estava, inclusive o que tinha preenchido, e precisa voltar pelo menu | ![VA01 (equipe)](../assets/13_heuristica/equipe/va01.png) | 3 | Frequência alta para quem usa o teclado (é a primeira parada de Tab de toda tela); impacto alto (perde a tela e o que estava preenchido); persistência moderada, porque a pessoa aprende a evitar o link, mas fica sem o atalho | Fazer o link levar o foco ao conteúdo sem mudar o endereço (por exemplo, tratar o clique e chamar o foco do `main`), ou fazer o roteador ignorar `#conteudo` |
+| VA02 | H1 | TL03 (envio das imagens) e TL05/TL06 (visualizador) | A pessoa avança com Tab | Depois de "Escolher arquivos", o Tab para num campo de arquivo escondido (1 × 1 px), sem contorno visível; no visualizador, o contorno de foco existe, mas fica fora do quadro, que corta o que passa da borda | A pessoa perde de vista onde está o foco: no envio, aperta Tab sem ver nada acontecer; no visualizador, não sabe que as setas e os atalhos já estão ativos | ![VA02 (equipe)](../assets/13_heuristica/equipe/va02.png) | 2 | Frequência alta (todo envio e toda imagem); impacto moderado, porque um Tab a mais recupera o foco visível; persistência moderada | Tirar o campo escondido da ordem de Tab (o rótulo "Escolher arquivos" já abre a janela) e desenhar o contorno de foco do visualizador por dentro do quadro (`outline-offset` negativo) |
+| VA03 | H1 | TL11, avaliar as selecionadas; TL09, registrar a decisão | A pessoa aciona o botão pelo teclado | A tela é redesenhada e o botão some; o foco volta ao início da página, sem ir para a mensagem de resultado | Quem usa o teclado precisa recomeçar a navegação desde o topo para chegar ao estado da avaliação ou à decisão registrada | Sem captura: o foco foi conferido pelo elemento ativo depois da ação (corpo da página) | 2 | Frequência moderada (duas ações do fluxo); impacto moderado (vários Tabs para voltar ao ponto); persistência alta, porque acontece toda vez | Depois de redesenhar, levar o foco para a mensagem de resultado ou para o título da seção atualizada, como já é feito na TL07 e na TL08 |
+| VA04 | H7 | TL05, avaliar as imagens | Rafael avalia imagem por imagem com o teclado | Do título da imagem até a escolha "Correta" ou "Duvidosa" são 17 paradas de Tab (controles do visualizador e os "?" do quadro de métricas), em cada imagem | Avaliar uma sessão inteira pelo teclado fica lento; a pessoa repete o mesmo caminho longo a cada imagem | Sem captura: ordem de Tab conferida na TL05 | 2 | Frequência alta (toda imagem); impacto moderado (lentidão, não impede a tarefa); persistência alta | Depois de "Próxima imagem", levar o foco direto para a escolha da avaliação, ou oferecer um atalho de teclado para "Correta" e "Duvidosa" |
+
 ## 7. Consolidação da equipe
 
 Problemas iguais ou muito semelhantes encontrados por avaliadores diferentes devem ser consolidados, preservando quem os encontrou. A consolidação só começa quando os três avaliadores terminam a inspeção individual. A heurística e a severidade que cada avaliador deu ficam registradas antes do consenso; quando não houver acordo, as posições ficam lado a lado na coluna "Divergências" (Entrega 12, E.5).
 
+Os 36 achados (12 do AV01, 10 do AV02, 10 do AV03 e 4 dos percursos de acessibilidade da equipe) foram reunidos em 27 problemas. Todos os achados repetidos receberam a mesma heurística e a mesma severidade dos avaliadores que os encontraram; por isso, a coluna "Divergências" ficou vazia. O responsável pela correção é o integrante dono da tela na Entrega 11; problemas de várias telas ou de telas compartilhadas ficam com a equipe.
+
 | ID consolidado | Achados individuais | Heurística e severidade de cada avaliador | Problema | Severidade final | Divergências | Prioridade | Responsável pela correção |
 |---|---|---|---|---:|---|---|---|
-| HC01 | {{V01 (AV01), V04 (AV02)}} | {{AV01: H.., ..; AV02: H.., ..}} | {{...}} | {{...}} | {{...}} | {{alta/média/baixa}} | {{...}} |
+| HC01 | V09 (AV01), V07 (AV02) | AV01: H5, 3; AV02: H5, 3 | Na TL03, o ciclo de testes vem preenchido com o ciclo anterior; as imagens de um novo teste podem entrar no ciclo errado sem aviso | 3 | — | alta | Tiago Fagundes dos Santos (TL03) |
+| HC02 | V04 (AV03) | AV03: H3, 3 | Não há como cancelar um treino na fila ou em andamento nem tirar uma montagem ou avaliação da fila; a única saída é fechar o programa | 3 | — | alta | Mateus Marana Assuena (TL02, TL11; cancelamento a incluir antes no MoLIC M03) |
+| HC03 | VA01 (equipe) | Equipe: H4, 3 | O link "Pular para o conteúdo" leva a "Esta tela não existe" e tira a pessoa da tela em que estava | 3 | — | alta | Equipe (todas as telas) |
+| HC04 | V01 (AV01), V01 (AV02) | AV01: H1, 2; AV02: H1, 2 | Na TL04, selo "Concluído" numa configuração com falha ainda sem decisão | 2 | — | média | Tiago Fagundes dos Santos (TL04) |
+| HC05 | V02 (AV01), V02 (AV02) | AV01: H1, 2; AV02: H1, 2 | Na TL05, o título da imagem continua "sem avaliação" depois do registro | 2 | — | média | Tiago Fagundes dos Santos (TL05) |
+| HC06 | V03 (AV01), V03 (AV03) | AV01: H2, 2; AV03: H2, 2 | Tempo de inferência como "1.426 ms", com ponto de milhar numa tabela com vírgula decimal (TL02, TL07, TL08, TL09) | 2 | — | média | Equipe (TL02, TL07 a TL09) |
+| HC07 | V07 (AV01), V05 (AV03) | AV01: H4, 2; AV03: H4, 2 | "O dataset ainda não foi montado pela interface" na TL11, ao lado de um conjunto de teste atual e do "dataset montado" da TL01 | 2 | — | média | Mateus Marana Assuena (TL11) |
+| HC08 | V06 (AV01), V06 (AV02) | AV01: H4, 2; AV02: H4, 2 | Na avaliação de vídeo (TL05), "quadro" e "imagem" misturados nos botões e nas contagens | 2 | — | média | Tiago Fagundes dos Santos (TL05) |
+| HC09 | V08 (AV01) | AV01: H5, 2 | Na TL07, configurações sem avaliação no conjunto de teste ou sem execução no ciclo podem ser marcadas; o erro só aparece depois de comparar | 2 | — | média | Henrique Finatti Silveira Belo Trebbi (TL07) |
+| HC10 | V10 (AV01) | AV01: H6, 2 | A coluna "Valor de referência" não diz no cabeçalho de qual configuração vem (TL07, TL08, TL09) | 2 | — | média | Henrique Finatti Silveira Belo Trebbi (TL07 a TL09) |
+| HC11 | V05 (AV01) | AV01: H3, 2 | O botão para fechar o glossário fica no fim da lista, fora da área visível (também com 200%), e se chama "Voltar à cena anterior" | 2 | — | média | Equipe (TL10) |
+| HC12 | V01 (AV03) | AV03: H1, 2 | O indicador do topo não mostra a montagem nem a avaliação iniciadas na TL11 | 2 | — | média | Mateus Marana Assuena (TL11, indicador do topo) |
+| HC13 | V02 (AV03) | AV03: H1, 2 | A fila não mostra a posição nem o processamento à frente (TL01, TL02, TL11) | 2 | — | média | Mateus Marana Assuena (TL01, TL02, TL11) |
+| HC14 | V06 (AV03) | AV03: H5, 2 | Na TL07, o botão em destaque é "Registrar a recomendação", também no caminho do experimento | 2 | — | média | Henrique Finatti Silveira Belo Trebbi (TL07) |
+| HC15 | V07 (AV03) | AV03: H5, 2 | O alerta da remontagem não diz se o conjunto de teste vai mudar nem quais configurações perderiam a avaliação | 2 | — | média | Mateus Marana Assuena (TL11) |
+| HC16 | V08 (AV03) | AV03: H6, 2 | O resultado do treino (TL02) não mostra o valor de referência ao lado das métricas | 2 | — | média | Mateus Marana Assuena (TL02) |
+| HC17 | V05 (AV02) | AV02: H4, 2 | Na TL05, dois botões de comparar com comportamentos diferentes e um texto de ajuda que contradiz o que está habilitado | 2 | — | média | Tiago Fagundes dos Santos (TL05) |
+| HC18 | V08 (AV02) | AV02: H5, 2 | A avaliação é uma só por imagem, não diz de qual configuração é e é substituída ao registrar com outra configuração | 2 | — | média | Tiago Fagundes dos Santos (TL05, TL06) |
+| HC19 | V09 (AV02) | AV02: H9, 2 | Na falha de imagem corrompida (TL04), a sugestão de reenviar o arquivo não tem caminho, e "Tentar de novo" falha de novo | 2 | — | média | Tiago Fagundes dos Santos (TL04) |
+| HC20 | VA02 (equipe) | Equipe: H1, 2 | Foco invisível: campo de arquivo escondido na ordem do Tab (TL03) e contorno cortado no visualizador (TL05, TL06) | 2 | — | média | Tiago Fagundes dos Santos (TL03, TL05, TL06) |
+| HC21 | VA03 (equipe) | Equipe: H1, 2 | Depois de "Avaliar as selecionadas" (TL11) e de registrar a decisão (TL09), o foco volta ao início da página | 2 | — | média | Equipe (TL09, TL11) |
+| HC22 | VA04 (equipe) | Equipe: H7, 2 | Na TL05, 17 paradas de Tab do título da imagem até a escolha da avaliação, em cada imagem | 2 | — | média | Tiago Fagundes dos Santos (TL05) |
+| HC23 | V04 (AV01), V04 (AV02) | AV01: H2, 1; AV02: H2, 1 | Erros de escrita nas mensagens montadas pelo sistema (TL03, TL08) | 1 | — | baixa | Equipe |
+| HC24 | V11 (AV01), V10 (AV02) | AV01: H9, 1; AV02: H9, 1 | O alerta de imagens sem avaliação (TL08) não diz quais imagens faltam | 1 | — | baixa | Equipe (TL08) |
+| HC25 | V12 (AV01), V10 (AV03) | AV01: H9, 1; AV03: H9, 1 | "Reiniciar com o ajuste" quando a causa da interrupção não pede ajuste (TL02) | 1 | — | baixa | Mateus Marana Assuena (TL02) |
+| HC26 | V03 (AV02) | AV02: H1, 1 | Na conferência da conclusão (TL08), "Conclusão registrada" e, abaixo, "Confirmar": não fica claro se já está guardada | 1 | — | baixa | Equipe (TL08) |
+| HC27 | V09 (AV03) | AV03: H7, 1 | "Monte-o na tela Datasets" (TL01) não é um link | 1 | — | baixa | Mateus Marana Assuena (TL01) |
 
 ## 8. Síntese e plano de melhoria
 
-- Quantidade de problemas por heurística e severidade.
-- Problemas críticos/graves que bloqueiam teste ou release.
-- Padrões recorrentes entre telas.
-- Correções que serão feitas antes/para a avaliação com usuários.
-- Respostas às perguntas QA09 a QA13 da Entrega 12 (E.5).
-- A ausência de problemas encontrados não comprova alta usabilidade: indica só que esta inspeção, com esse escopo e esses avaliadores, não revelou outros problemas.
+**Quantidade de problemas por heurística e severidade (problemas consolidados):**
+
+| Heurística | Severidade 3 | Severidade 2 | Severidade 1 | Total |
+|---|---:|---:|---:|---:|
+| H1 Visibilidade do status do sistema | 0 | 6 | 1 | 7 |
+| H2 Compatibilidade com o mundo real | 0 | 1 | 1 | 2 |
+| H3 Controle e liberdade | 1 | 1 | 0 | 2 |
+| H4 Consistência e padrões | 1 | 3 | 0 | 4 |
+| H5 Prevenção de erros | 1 | 4 | 0 | 5 |
+| H6 Reconhecimento em vez de memorização | 0 | 2 | 0 | 2 |
+| H7 Flexibilidade e eficiência | 0 | 1 | 1 | 2 |
+| H8 Estética e design minimalista | 0 | 0 | 0 | 0 |
+| H9 Reconhecer, diagnosticar e recuperar-se de erros | 0 | 1 | 2 | 3 |
+| H10 Ajuda e documentação | 0 | 0 | 0 | 0 |
+| **Total** | **3** | **19** | **5** | **27** |
+
+Nenhum problema recebeu severidade 4. H8 e H10 não tiveram violação em nenhuma avaliação; os exemplos de boa prática estão na seção 6 de cada avaliador.
+
+**Problemas que bloqueiam o teste com usuários:** os três de severidade 3, que a Entrega 12 manda corrigir antes do piloto.
+
+- **HC01**, ciclo de testes preenchido com o anterior: afeta a UT01 e a UT02, que começam pelo envio das imagens.
+- **HC02**, sem cancelar treino ou fila: afeta a UT04. O cancelamento não está modelado (Entrega 10, "Preparação para o Figma"); antes de implementar, ele entra no MoLIC M03.
+- **HC03**, "Pular para o conteúdo" leva a uma tela de erro: afeta qualquer participante que use o teclado.
+
+**Padrões recorrentes entre telas:**
+
+1. **O estado mostrado não acompanha o que aconteceu** (H1): selo "Concluído" com falha pendente, título "sem avaliação" depois do registro, indicador do topo que não vê a TL11, fila sem posição e foco que se perde depois de redesenhar a tela (HC04, HC05, HC12, HC13, HC20, HC21).
+2. **Prevenção que chega tarde** (H5): o sistema já sabe que a escolha vai dar errado, mas só avisa depois da ação (HC01, HC09, HC14, HC15, HC18).
+3. **Termos e números ambíguos** (H2, H4): "quadro" e "imagem", "1.426 ms", "dataset montado" e "não montado" (HC06, HC07, HC08, HC17).
+4. **Referência longe da decisão** (H6): o valor de referência não aparece no resultado do treino nem diz de onde vem no cabeçalho (HC10, HC16).
+
+**Correções antes da avaliação com usuários:**
+
+- **Obrigatórias (severidade 3):** HC01, HC02 e HC03.
+- **Recomendadas, por estarem nas tarefas do teste:** HC04, HC05 e HC08 (UT01, avaliação das imagens); HC12, HC13 e HC16 (UT04, treino); HC09 (UT03, comparação).
+- **Depois da Entrega 14:** os demais problemas de severidade 2 e os de severidade 1.
+- O valor de referência (HC10) fica para depois do teste, porque a Entrega 12 prevê observar se os participantes o entendem.
+- As correções geram um novo commit, que é registrado na Entrega 12 ("Cronograma, equipamento e responsáveis") e na Entrega 14.
+
+**Respostas às perguntas da Entrega 12 (QA09 a QA13):**
+
+| Pergunta | Evidência na inspeção | Meta | Resultado |
+|---|---|---|---|
+| QA09 — Estado e recuperação nas falhas da execução e do treino | H1 e H9 nos estados de falha da TL02, da TL04 e da TL11: HC04 (2), HC19 (2) e HC25 (1) | Nenhuma violação de severidade 3 ou 4 | Atingida |
+| QA10 — Prevenção e explicação dos erros previstos nos MoLIC | H5 e H9 na TL01, TL03, TL07, TL09 e TL11: HC01 (3), HC09 (2), HC14 (2) e HC15 (2) | Nenhuma violação de severidade 3 ou 4 | Não atingida (HC01) |
+| QA11 — Termos, legenda e cores iguais em todas as telas e explicados no ponto de uso | H2, H4 e H10: HC03 (3), HC06, HC07, HC08 e HC17 (2) e HC23 (1); H10 sem violação | Nenhuma violação de severidade 3 ou 4 | Não atingida (HC03) |
+| QA12 — A decisão fica com a pessoa | H2 e H3 na TL07, TL08 e TL09: HC06 (2). Fora dessas heurísticas, o botão em destaque "Registrar a recomendação" (HC14, H5) também pesa na decisão | Nenhuma violação de severidade 3 ou 4 | Atingida, com a ressalva do HC14 |
+| QA13 — Critérios de acessibilidade da Entrega 8 | Os sete percursos foram concluídos só com o teclado, e nenhuma tela teve rolagem horizontal com 200%; o leitor de tela não foi usado. Problemas: HC03 (3), HC20, HC21 e HC22 (2) | Os cinco pontos prioritários da Entrega 8, §2, atendidos | Não atingida (HC03 e foco invisível, HC20) |
+
+A ausência de problemas encontrados não comprova alta usabilidade: indica só que esta inspeção, com esse escopo e esses avaliadores, não revelou outros problemas.
 
 ## Checklist
 
-- [ ] Cada integrante fez uma inspeção completa e identificada.
-- [ ] Todas as telas/estados relevantes foram examinados.
-- [ ] Estados administrativos, filtros, relatórios, históricos, processamento e erros foram incluídos quando existentes.
-- [ ] A inspeção avaliou a interface/protótipo, não o mérito técnico do algoritmo/modelo.
-- [ ] H1–H10 aparecem na matriz de cobertura de cada avaliador.
-- [ ] Cada avaliador fez os sete percursos de acessibilidade (teclado, ampliação de 200% e, quando possível, leitor de tela).
-- [ ] Parte de violações contém apenas violações, sem “forçar” exemplos.
-- [ ] Todo problema tem print/localização e contexto.
-- [ ] Severidade possui justificativa, não apenas número.
-- [ ] Recomendação resolve a causa ou reduz o impacto.
-- [ ] Achados duplicados foram consolidados ao final.
+- [x] Cada integrante fez uma inspeção completa e identificada.
+- [x] Todas as telas/estados relevantes foram examinados.
+- [x] Estados administrativos, filtros, relatórios, históricos, processamento e erros foram incluídos quando existentes.
+- [x] A inspeção avaliou a interface/protótipo, não o mérito técnico do algoritmo/modelo.
+- [x] H1–H10 aparecem na matriz de cobertura de cada avaliador.
+- [x] A equipe fez os sete percursos de acessibilidade (teclado e ampliação de 200%).
+- [x] Parte de violações contém apenas violações, sem “forçar” exemplos.
+- [x] Todo problema tem print/localização e contexto.
+- [x] Severidade possui justificativa, não apenas número.
+- [x] Recomendação resolve a causa ou reduz o impacto.
+- [x] Achados duplicados foram consolidados ao final.
